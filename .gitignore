@@ -1,0 +1,12 @@
+# 4k gitignore file
+
+# emme binary files never get checked in, anywhere in the tree:
+emmebank
+PATHS_s*
+errors
+core_interface_log
+usemacro
+9999.db
+fort.16
+
+

@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=12_copy_trip_tables.rpt
+~/
+~/
+~/begin: 12_copy_trip_tables.mac
+~# ...call module 3.21: matrix calculations
+~/ ...copy parkride.mac output matrices to standard matrices
+3.21
+~+|1|y|mf"daleg4"|n|mf50|||y|1,%1%||%4%,%5%||2
+~+|1|y|mf"twleg4"|n|mf51|||y|%4%,%5%||1,%1%||2
+~+|1|y|md"pnrus4"|n|md50|||n|2
+q
+~#
+~/end: 12_copy_trip_tables.mac
+~/exit emme
+~/
+q

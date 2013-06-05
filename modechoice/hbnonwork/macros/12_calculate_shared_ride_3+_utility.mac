@@ -1,0 +1,33 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=12_calculate_shared_ride_3+_utility.rpt
+~/
+~/
+~/begin: 12_calculate_shared_ride_3+_utility.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate hb non-work mode choice exponentiated utilities
+3.21
+~/ ...shared ride 3+
+~+|1|y|mf"nweus3"|n
+exp
+(
+ms"asccs3"
++
+ms"autivt"*
+mf"mu3btm"
+~#(mf"mu3btm"-mf"termtm")
+~#+
+~#ms"autovt"*
+~#mf"termtm"
++
+ms"autcos"*
+mf"mu3bct"
+)
+~+|||y|1,%1%||1,%1%||2
+q
+~#
+~/end: 12_calculate_shared_ride_3+_utility.mac
+~/exit emme
+~/
+q

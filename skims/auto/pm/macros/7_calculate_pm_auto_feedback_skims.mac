@@ -1,0 +1,50 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_calculate_am_auto_feedback_skims.rpt
+~/
+~/
+~/begin: 7_calculate_am_auto_feedback_skims.mac
+~# ...call module 3.21: matrix calculations
+3.21
+~/ ...average previous and current interzonal time skims
+~+|1|y|mf"pau1tm"|n|(mf"pau1tm"+mf"pau1tp")/2|||n|2
+~+|1|y|mf"pau2tm"|n|(mf"pau2tm"+mf"pau2tp")/2|||n|2
+~+|1|y|mf"pau3tm"|n|(mf"pau3tm"+mf"pau3tp")/2|||n|2
+~+|1|y|mf"pa1tm1"|n|(mf"pa1tm1"+mf"pa1tp1")/2|||n|2
+~+|1|y|mf"pa1tm2"|n|(mf"pa1tm2"+mf"pa1tp2")/2|||n|2
+~+|1|y|mf"pa1tm3"|n|(mf"pa1tm3"+mf"pa1tp3")/2|||n|2
+~+|1|y|mf"pa1tm4"|n|(mf"pa1tm4"+mf"pa1tp4")/2|||n|2
+~+|1|y|mf"plgttm"|n|(mf"plgttm"+mf"plgttp")/2|||n|2
+~+|1|y|mf"pmedtm"|n|(mf"pmedtm"+mf"pmedtp")/2|||n|2
+~+|1|y|mf"phvytm"|n|(mf"phvytm"+mf"phvytp")/2|||n|2
+~#
+~/ ...average previous and current interzonal cost skims
+~+|1|y|mf"pau1cs"|n|(mf"pau1cs"+mf"pau1cp")/2|||n|2
+~+|1|y|mf"pau2cs"|n|(mf"pau2cs"+mf"pau2cp")/2|||n|2
+~+|1|y|mf"pau3cs"|n|(mf"pau3cs"+mf"pau3cp")/2|||n|2
+~+|1|y|mf"pa1cs1"|n|(mf"pa1cs1"+mf"pa1cp1")/2|||n|2
+~+|1|y|mf"pa1cs2"|n|(mf"pa1cs2"+mf"pa1cp2")/2|||n|2
+~+|1|y|mf"pa1cs3"|n|(mf"pa1cs3"+mf"pa1cp3")/2|||n|2
+~+|1|y|mf"pa1cs4"|n|(mf"pa1cs4"+mf"pa1cp4")/2|||n|2
+~+|1|y|mf"plgtcs"|n|(mf"plgtcs"+mf"plgtcp")/2|||n|2
+~+|1|y|mf"pmedcs"|n|(mf"pmedcs"+mf"pmedcp")/2|||n|2
+~+|1|y|mf"phvycs"|n|(mf"phvycs"+mf"phvycp")/2|||n|2
+~#
+~/ ...average previous and current interzonal distance skims
+~+|1|y|mf"pau1ds"|n|(mf"pau1ds"+mf"pau1dp")/2|||n|2
+~+|1|y|mf"pau2ds"|n|(mf"pau2ds"+mf"pau2dp")/2|||n|2
+~+|1|y|mf"pau3ds"|n|(mf"pau3ds"+mf"pau3dp")/2|||n|2
+~+|1|y|mf"pa1ds1"|n|(mf"pa1ds1"+mf"pa1dp1")/2|||n|2
+~+|1|y|mf"pa1ds2"|n|(mf"pa1ds2"+mf"pa1dp2")/2|||n|2
+~+|1|y|mf"pa1ds3"|n|(mf"pa1ds3"+mf"pa1dp3")/2|||n|2
+~+|1|y|mf"pa1ds4"|n|(mf"pa1ds4"+mf"pa1dp4")/2|||n|2
+~+|1|y|mf"plgtds"|n|(mf"plgtds"+mf"plgtdp")/2|||n|2
+~+|1|y|mf"pmedds"|n|(mf"pmedds"+mf"pmeddp")/2|||n|2
+~+|1|y|mf"phvyds"|n|(mf"phvyds"+mf"phvydp")/2|||n|2
+q
+~#
+~/end: 7_calculate_am_auto_feedback_skims.mac
+~/exit emme
+~/
+q

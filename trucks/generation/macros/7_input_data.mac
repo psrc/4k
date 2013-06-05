@@ -1,0 +1,43 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_input_data.rpt
+~/
+~/
+~/begin: 7_input_data.mac
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...input ag/forestry/fishing share of manufacturing employment
+3.11
+~+|..\..\Input\Trucks\agshar.in|2|
+~/ ...input mining share of manufacturing employment
+3.11
+~+|..\..\Input\Trucks\minshar.in|2|
+~/ ...input manufacturing-products share of manufacturing employment
+3.11
+~+|..\..\Input\Trucks\prodshar.in|2|
+~/ ...input manufacturing-equipment share of manufacturing employment
+3.11
+~+|..\..\Input\Trucks\equipshar.in|2|
+~/ ...input tcu share of wtcu employment
+3.11
+~+|..\..\Input\Trucks\tcushar.in|2|
+~/ ...input wholesale share of wtcu employment
+3.11
+~+|..\..\Input\Trucks\whlsshar.in|2|
+~/ ...input construction employment
+3.11
+~+|..\..\Input\Trucks\const.in|2|
+~/ ...input light truck special generators
+3.11
+~+|..\..\Input\SpecialGenerators\Trucks\special_gen_light_trucks.in|2|
+~/ ...input medium truck special generators
+3.11
+~+|..\..\Input\SpecialGenerators\Trucks\special_gen_medium_trucks.in|2|
+~/ ...input heavy truck special generators
+3.11
+~+|..\..\Input\SpecialGenerators\Trucks\special_gen_heavy_trucks.in|2|
+~#
+~/end: 7_input_data.mac
+~/exit emme
+~/
+q

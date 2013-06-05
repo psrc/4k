@@ -1,0 +1,798 @@
+D2461A6A-1F51-4A2C-87AC-6C3C49AA9DF7 07B0F5AD-A2A7-4B4E-B4A9-06EB441586D6 2 1 0
+# Emme worksheet generated on Thu Feb 14 10:47:12 2013
+# File: D:/PSRC_TDModel_4000/2006/Distribution/Project/Worksheets/HB_Work_Income_2.emw
+#
+# String Name: name of worksheet (tr,subst)
+Name : PlotName
+Name = HB Work Income 2 Observed vs. Estimated Distribution
+# Text Description: description of worksheet (tr,subst)
+Description : (0x800)
+Description = <h2>Comparison of matrix histograms</h2>\
+This worksheet can be used to display two matrix <i>histograms</i>,\
+one on top of the other.\
+Matrix 1 is drawn in red, with a diagonal fill style,\
+on top of matrix 2, which is drawn in green with a solid fill style.\
+<p>\
+<b>Using this worksheet</b>\
+<ul>\
+<li>Enter the data and weight matrices.\
+<li>To exclude O-D pairs, enter an expression in the <i>Filter</i> input fields.\
+<li>Adjust the ranges, using the <i>Auto Axes</i> buttons, or manually in the <i>Diagram settings</i> layer .\
+</ul>\
+<p><small>Copyright &copy; 2012, INRO. All rights reserved.</small>\
+<p>
+# Flags Flags: worksheet configuration flags
+Flags = 0x10
+# String Caption: caption that appears on window bar (tr,subst)
+Caption : //SubTitle
+Caption = %<Name>% %<SR:SubTitle>%
+# String Active: name of currently active layer
+Active = Statistics 2
+# Bool AllowReordering: Layers reordering of this configuration is permitted
+AllowReordering = 0
+# Expression Condition: indicates that the worksheet is valid only if the condition is met (tr)
+Condition = 
+
+[Background]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Background color
+# Bool CFlag: display layer controls
+CFlag = 1
+# Bool SFlag: display layer on screen
+SFlag : ShowBackColor
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag : /ShowBackColor
+MFlag = 1
+# Bool LFlag: include layer in the legend window
+LFlag = 1
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool UseWallpaper: use pixmap wallpaper to draw background
+UseWallpaper : (0x2)
+UseWallpaper = 0
+# Style Style: style for filling background when no wallpaper is used
+Style : (0x200) /BackgroundColor!/$WorksheetLoaded
+Style = 0x00000000 0x01f4f4f4 0x00000000 0x00
+# String WallpaperFile: file containing wallpaper image (subst)
+WallpaperFile : (0x2)
+WallpaperFile = 
+
+[Inclusion]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Background layer(s)
+# Text Description: user definable layer description (tr,subst)
+Description = Includes user defined layers (in application mode,\
+control shown only if a file is specified and control is substituted)
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xb800000
+# Bool CFlag: display layer controls
+CFlag = 1
+# Bool SFlag: display layer on screen
+SFlag : ShowBackInclusion
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag : /ShowBackInclusion
+MFlag = 1
+# Bool LFlag: include layer in the legend window
+LFlag = 1
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 1
+# Bool AFlag: set active flag of filtered elements
+AFlag = 0
+# Bool BFlag: include bounding box in full view
+BFlag = 0
+# Bool EnableObjects: enable included objects
+EnableObjects = 1
+# Bool SubstituteControl: display control of first visible included layer instead of inclusion layer's control
+SubstituteControl = 1
+# Bool AutoHideControl: hide unsubstituted layer control
+AutoHideControl = 1
+# String ConfigurationFile: file containing configuration to include (subst)
+ConfigurationFile : (0x200) /UserBack!/$WorksheetLoaded
+ConfigurationFile = 
+
+[Configurable control]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Statistics 2
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xbda0000
+# Bool CFlag: display layer controls
+CFlag = 1
+# Bool SFlag: display layer on screen
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag = 0
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 0
+# String Layout: layout parameters (tr)
+Layout[] = Bool0;Checkbox;Show average;show weighted average as an arrow on the x-axis;0;0;0;0;;
+Layout[] = Bool1;Checkbox;Show standard deviation;show standard deviation as brackets on the x-axis;1;1;0;0;;
+Layout[] = Integer0;Value;Filtered elements:;number of filtered elements;2;2;0;0;;
+Layout[] = Integer1;Value;below range:;number of elements below range;3;3;0;0;;
+Layout[] = Integer2;Value;above range:;number of elements above range;4;4;0;0;;
+Layout[] = Float0;Value;Total weight:;total weight of all filtered elements;5;5;0;0;;
+Layout[] = Float1;Value;below range:;weight of elements below current range;6;6;0;0;;
+Layout[] = Float2;Value;above range:;weight of elements above current range;7;7;0;0;;
+Layout[] = Float3;Value;Average:;weighted average of all filtered elements;8;8;0;0;;
+Layout[] = Float4;Value;STD:;standard deviation from weighted average value;9;9;0;0;;
+# Bool DisplayScreenFlagIcon: display screen flag icon
+DisplayScreenFlagIcon = 0
+# Bool Bool0: show weighted average as an arrow on the x-axis
+Bool0 : ShowAverage2
+Bool0 = 1
+# Bool Bool1: show standard deviation as brackets on the x-axis
+Bool1 : ShowStandardDeviation2
+Bool1 = 1
+# Integer Integer0: number of filtered elements (nosave)
+Integer0 : (0x80) /SelectedElements2
+# Integer Integer1: number of elements below range (nosave)
+Integer1 : (0x80) /ElementsBelow2
+# Integer Integer2: number of elements above range (nosave)
+Integer2 : (0x80) /ElementsAbove2
+# Float Float0: total weight of all filtered elements (nosave)
+Float0 : (0x80) /TotalWeight2
+# Float Float1: weight of elements below current range (nosave)
+Float1 : (0x80) /WeightBelow2
+# Float Float2: weight of elements above current range (nosave)
+Float2 : (0x80) /WeightAbove2
+# Float Float3: weighted average of all filtered elements (nosave)
+Float3 : (0x80) /WeightedAverage2
+# Float Float4: standard deviation from weighted average value (nosave)
+Float4 : (0x80) /StandardDeviation2
+
+[Configurable control]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Statistics 1
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xbda0000
+# Bool CFlag: display layer controls
+CFlag = 1
+# Bool SFlag: display layer on screen
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag = 0
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 0
+# String Layout: layout parameters (tr)
+Layout[] = Bool0;Checkbox;Show average;show weighted average as an arrow on the x-axis;0;0;0;0;;
+Layout[] = Bool1;Checkbox;Show STD;show standard deviation as brackets on the x-axis;1;1;0;0;;
+Layout[] = Integer0;Value;Filtered elements:;number of filtered elements;2;2;0;0;;
+Layout[] = Integer1;Value;below range:;number of elements below range;3;3;0;0;;
+Layout[] = Integer2;Value;above range:;number of elements above range;4;4;0;0;;
+Layout[] = Float0;Value;Total weight:;total weight of all filtered elements;5;5;0;0;;
+Layout[] = Float1;Value;below range:;weight of elements below current range;6;6;0;0;;
+Layout[] = Float2;Value;above range:;weight of elements above current range;7;7;0;0;;
+Layout[] = Float3;Value;Average:;weighted average of all filtered elements;8;8;0;0;;
+Layout[] = Float4;Value;STD:;standard deviation from weighted average value;9;9;0;0;;
+# Bool DisplayScreenFlagIcon: display screen flag icon
+DisplayScreenFlagIcon = 0
+# Bool Bool0: show weighted average as an arrow on the x-axis
+Bool0 : ShowAverage1
+Bool0 = 1
+# Bool Bool1: show standard deviation as brackets on the x-axis
+Bool1 : ShowStandardDeviation1
+Bool1 = 1
+# Integer Integer0: number of filtered elements (nosave)
+Integer0 : (0x80) /SelectedElements1
+# Integer Integer1: number of elements below range (nosave)
+Integer1 : (0x80) /ElementsBelow1
+# Integer Integer2: number of elements above range (nosave)
+Integer2 : (0x80) /ElementsAbove1
+# Float Float0: total weight of all filtered elements (nosave)
+Float0 : (0x80) /TotalWeight1
+# Float Float1: weight of elements below current range (nosave)
+Float1 : (0x80) /WeightBelow1
+# Float Float2: weight of elements above current range (nosave)
+Float2 : (0x80) /WeightAbove1
+# Float Float3: weighted average of all filtered elements (nosave)
+Float3 : (0x80) /WeightedAverage1
+# Float Float4: standard deviation from weighted average value (nosave)
+Float4 : (0x80) /StandardDeviation1
+
+[Parameter conversion]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = SubTitle
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xbfb0000
+# Bool CFlag: display layer controls
+CFlag = 0
+# String SA: string parameter SA (subst,nosave)
+SA : (0x80) /*Legend1
+# String SB: string parameter SB (subst,nosave)
+SB : (0x80) /*Legend2
+# String SC: string parameter SC (subst,nosave)
+SC : (0x80)
+# String SD: string parameter SD (subst,nosave)
+SD : (0x80)
+# Expression Expression: expression for parameter conversion (tr,string,max. 12 values)
+Expression = if(SA>"","("+if(SB>"",SA+") and ("+SB,SA)+")","")
+# String SR: string result (nosave)
+SR : (0x80) SubTitle/
+
+[Configurable control]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Diagram settings
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xbda0000
+# Bool CFlag: display layer controls
+CFlag = 1
+# Bool SFlag: display layer on screen
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag = 0
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 0
+# String Layout: layout parameters (tr)
+Layout[] = Bool0;Checkbox;Scale text automatically;scale text/symbol size relative to full view;0;0;0;0;;
+Layout[] = Bool3;Checkbox;Cumulative;show cumulative histogram;1;1;0;0;;
+Layout[] = Bool4;Checkbox;Relative;show relative histogram;2;2;0;0;;
+Layout[] = Float0;Multi-float;X range:;start, end and interval values on horizontal data axis;4;4;0;0;;
+Layout[] = Float1;Multi-float;Y range:;start and end values on vertical weight axis;5;5;0;0;;
+Layout[] = Float2;Spinbox;Text size:;text size used in diagram frame;6;6;0;0;0;500;
+Layout[] = Bool1;Checkbox;X value lines;draw vertical lines at values on x-axis;7;7;0;0;;
+Layout[] = Bool2;Checkbox;Y value lines;draw horizontal lines at values on y-axis;8;8;0;0;;
+Layout[] = String0;String combo;Title:;diagram title;9;9;0;0;;
+Layout[] = String1;String combo;X description:;description on horizontal axis;10;10;0;0;;
+Layout[] = String2;String combo;Y description:;description on vertical axis;11;11;0;0;;
+Layout[] = Style0;Style;Frame:;style used to draw diagram frame (0:outer frame, 1:scales, 2:inner frame, 3:zero lines);12;12;0;0;;
+Layout[] = Style1;Style;Bars:;style used for histogram bars;13;13;0;0;;
+# Bool DisplayScreenFlagIcon: display screen flag icon
+DisplayScreenFlagIcon = 0
+# Bool Bool0: scale text/symbol size relative to full view
+Bool0 : RelativeSizing
+Bool0 = 0
+# Bool Bool1: draw vertical lines at values on x-axis
+Bool1 : DrawVerticalLines
+Bool1 = 0
+# Bool Bool2: draw horizontal lines at values on y-axis
+Bool2 : DrawHorizontalLines
+Bool2 = 0
+# Bool Bool3: show cumulative histogram
+Bool3 : CumulativeHistogram
+Bool3 = 0
+# Bool Bool4: show relative histogram
+Bool4 : RelativeHistogram
+Bool4 = 1
+# Float Float0: start, end and interval values on horizontal data axis
+Float0 : XRange
+Float0[] = 0
+Float0[] = 90
+Float0[] = 1
+# Float Float1: start and end values on vertical weight axis
+Float1 : YRange
+Float1[] = 0
+Float1[] = 0.04
+# Float Float2: text size used in diagram frame
+Float2 : TextSize
+Float2 = 12
+# String String0: diagram title
+String0 : (0x0,1) Title/
+String0[] = Compare histograms
+String0[] = %<Caption>%
+String0[] = Compare histograms
+String0[] = Matrix 1: Average %<WeightedAverage:WeightedAverage1>% STD %<StandardDeviation:StandardDeviation1>%\n Matrix 2: Average %<WeightedAverage:WeightedAverage2>% STD %<StandardDeviation:StandardDeviation2>%
+# String String1: description on horizontal axis
+String1 : @XDescription/X
+String1 = 
+# String String2: description on vertical axis
+String2 : (0x0,1) YDescription/
+String2[] = Frequency
+String2[] = Frequency
+String2[] = No. of trips
+# Style Style0: style used to draw diagram frame (0:outer frame, 1:scales, 2:inner frame, 3:zero lines)
+Style0 : (0x200) FrameStyle/DiagFrame!/$WorksheetLoaded
+Style0[] = 0x00bebebe 0x01ffffff 0x48000000 0x00
+Style0[] = 0x20000000 0x00ffffff 0x00000000 0x00
+Style0[] = 0x00000000 0x00ffffff 0x00000000 0x00
+Style0[] = 0x20646464 0x00ffffff 0x00000000 0x00
+Style0[] = 0x20bebebe 0x00ffffff 0x00000000 0x00
+Style0[] = 0x20bebebe 0x00ffffff 0x00000000 0x00
+# Style Style1: style used for histogram bars
+Style1 : (0x200) HistComp!/HistComp!/$WorksheetLoaded
+Style1[] = 0x20b12d16 0x0dd1998f 0x00000000 0x05
+Style1[] = 0x20007f00 0x01c9e68c 0x00000000 0x05
+
+[Matrix histogram]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Matrix 2
+# Flags Flags: bit pattern containing layer flags
+Flags = 0x9a00000
+# Bool CFlag: display layer controls
+CFlag = 0
+# Bool SFlag: display layer on screen
+SFlag : ShowChart
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag : /ShowChart
+MFlag = 1
+# Bool LFlag: include layer in the legend window
+LFlag = 1
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 1
+# Bool AFlag: set active flag of filtered elements
+AFlag = 0
+# Bool BFlag: include bounding box in full view
+BFlag = 1
+# Float XPosition: X-coordinate of upper left corner (nosave)
+XPosition : (0x80)
+# Float YPosition: Y-coordinate of upper left corner (nosave)
+YPosition : (0x80)
+# Float Width: width of rectangle (nosave)
+Width : (0x80)
+# Float Height: height of rectangle (nosave)
+Height : (0x80)
+# Float AspectRatio: fixed aspect ratio of diagram (nosave)
+AspectRatio : (0x80)
+# Bool RelativeSizing: scale text/symbol size relative to full view
+RelativeSizing : RelativeSizing
+RelativeSizing = 0
+# Bool DrawHorizontalLines: draw horizontal lines at values on y-axis
+DrawHorizontalLines : DrawHorizontalLines
+DrawHorizontalLines = 0
+# Bool DrawVerticalLines: draw vertical lines at values on x-axis
+DrawVerticalLines : DrawVerticalLines
+DrawVerticalLines = 0
+# Style FrameStyle: style used to draw diagram frame (0:outer frame, 1:scales, 2:inner frame, 3:zero lines)
+FrameStyle : /FrameStyle
+FrameStyle[] = 0x00bebebe 0x01ffffff 0x48000000 0x00
+FrameStyle[] = 0x20000000 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x00000000 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x20646464 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x20bebebe 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x20bebebe 0x00ffffff 0x00000000 0x00
+# Float XRange: start, end and interval values on horizontal data axis
+XRange : XRange
+XRange[] = 0
+XRange[] = 90
+XRange[] = 1
+# Float YRange: start and end values on vertical weight axis
+YRange : YRange
+YRange[] = 0
+YRange[] = 0.04
+# Float TextSize: text size used in diagram frame
+TextSize : TextSize
+TextSize = 12
+# String Title: diagram title (tr,subst)
+Title : /Title
+Title[] = Compare histograms
+Title[] = %<Caption>%
+Title[] = Compare histograms
+Title[] = Matrix 1: Average %<WeightedAverage:WeightedAverage1>% STD %<StandardDeviation:StandardDeviation1>%\n Matrix 2: Average %<WeightedAverage:WeightedAverage2>% STD %<StandardDeviation:StandardDeviation2>%
+# String XDescription: description on horizontal axis (tr,subst)
+XDescription : /@XDescription
+XDescription = 
+# String YDescription: description on vertical axis (tr,subst)
+YDescription : /YDescription
+YDescription[] = Frequency
+YDescription[] = Frequency
+YDescription[] = No. of trips
+# Bool CumulativeHistogram: show cumulative histogram
+CumulativeHistogram : CumulativeHistogram
+CumulativeHistogram = 0
+# Bool RelativeHistogram: show relative histogram
+RelativeHistogram : RelativeHistogram
+RelativeHistogram = 1
+# Bool NumericValues: show numeric values
+NumericValues : NumericValues2
+NumericValues = 0
+# Bool ShowAverage: show weighted average as an arrow on the x-axis
+ShowAverage : ShowAverage2
+ShowAverage = 1
+# Bool ShowStandardDeviation: show standard deviation as brackets on the x-axis
+ShowStandardDeviation : ShowStandardDeviation2
+ShowStandardDeviation = 1
+# Click AutoPos: position histogram automatically according to current view (nosave)
+AutoPos : (0x2) //$CurrentView
+# Style BarStyle: style used for histogram bars
+BarStyle : /HistComp!
+BarStyle[] = 0x20b12d16 0x0dd1998f 0x00000000 0x05
+BarStyle[] = 0x20007f00 0x01c9e68c 0x00000000 0x05
+# Expression XValue: O-D pair expression for data value on X-axis (tr,o-d)
+XValue : XValue2
+XValue[] = [non-hbw sov generalized cost] mf2
+XValue[] = [e.g. times scenario 2] mf
+# Expression YValue: O-D pair expression for weight value on Y-axis (tr,o-d,max. 6 values)
+YValue : YValue2
+YValue[] = [nhb other/other distribution] mf8
+YValue[] = [number of O-D pairs] 1
+# Filter Filter: expression for O-D pair filtering (tr,o-d,unbuffered)
+Filter : Filter2
+Filter[] = p<3701&&q<3701
+Filter[] = [all O-D pairs] 1
+Filter[] = [e.g. more than 10 trips] mf1>10
+# Expression StyleIndex: expression for bar style index (tr)
+StyleIndex = 1
+# Expression TipExpression: expression for tip (tr,string,max. 6 values)
+TipExpression : TipExpression
+TipExpression = 
+# Integer SelectedElements: number of selected elements (ro,nosave)
+SelectedElements : SelectedElements2
+# Integer ElementsBelow: number of elements below range (ro,nosave)
+ElementsBelow : ElementsBelow2
+# Integer ElementsAbove: number of elements above range (ro,nosave)
+ElementsAbove : ElementsAbove2
+# Float TotalWeight: total weight of all selected elements (ro,nosave)
+TotalWeight : TotalWeight2
+# Float WeightBelow: weight of elements below range (ro,nosave)
+WeightBelow : WeightBelow2
+# Float WeightAbove: weight of elements above range (ro,nosave)
+WeightAbove : WeightAbove2
+# Float WeightedAverage: weighted average (ro,nosave)
+WeightedAverage : WeightedAverage2
+# Float StandardDeviation: standard deviation (ro,nosave)
+StandardDeviation : StandardDeviation2
+
+[Matrix histogram]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Matrix 1
+# Flags Flags: bit pattern containing layer flags
+Flags = 0x9a00000
+# Bool CFlag: display layer controls
+CFlag = 0
+# Bool SFlag: display layer on screen
+SFlag : ShowChart
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag : /ShowChart
+MFlag = 1
+# Bool LFlag: include layer in the legend window
+LFlag = 1
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 1
+# Bool AFlag: set active flag of filtered elements
+AFlag = 0
+# Bool BFlag: include bounding box in full view
+BFlag = 1
+# Float XPosition: X-coordinate of upper left corner (nosave)
+XPosition : (0x80)
+# Float YPosition: Y-coordinate of upper left corner (nosave)
+YPosition : (0x80)
+# Float Width: width of rectangle (nosave)
+Width : (0x80)
+# Float Height: height of rectangle (nosave)
+Height : (0x80)
+# Float AspectRatio: fixed aspect ratio of diagram (nosave)
+AspectRatio : (0x80)
+# Bool RelativeSizing: scale text/symbol size relative to full view
+RelativeSizing : RelativeSizing
+RelativeSizing = 0
+# Style FrameStyle: style used to draw diagram frame (0:outer frame, 1:scales, 2:inner frame, 3:zero lines)
+FrameStyle[] = 0x00000000 0x00c0c0c0 0x00000000 0x00
+FrameStyle[] = 0x00000000 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x00000000 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x0200ff00 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x00ff0000 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x000000ff 0x00ffffff 0x00000000 0x00
+FrameStyle[] = 0x22ff0000 0x00ffffff 0x00000000 0x00
+# Float XRange: start, end and interval values on horizontal data axis
+XRange : XRange/XRange/AutoAxes
+XRange[] = 0
+XRange[] = 90
+XRange[] = 1
+# Float YRange: start and end values on vertical weight axis
+YRange : YRange/YRange/AutoAxes
+YRange[] = 0
+YRange[] = 0.04
+# Float TextSize: text size used in diagram frame
+TextSize : TextSize
+TextSize = 12
+# String Title: diagram title (tr,subst)
+Title[] = 
+Title[] = %<Caption>%
+Title[] = Compare histograms
+Title[] = Matrix 1: Average %<WeightedAverage:WeightedAverage1>% STD %<StandardDeviation:StandardDeviation1>%\n Matrix 2: Average %<WeightedAverage:WeightedAverage2>% STD %<StandardDeviation:StandardDeviation2>%
+# String XDescription: description on horizontal axis (tr,subst)
+XDescription = 
+# String YDescription: description on vertical axis (tr,subst)
+YDescription = 
+# Bool CumulativeHistogram: show cumulative histogram
+CumulativeHistogram : CumulativeHistogram
+CumulativeHistogram = 0
+# Bool RelativeHistogram: show relative histogram
+RelativeHistogram : RelativeHistogram
+RelativeHistogram = 1
+# Bool NumericValues: show numeric values
+NumericValues : NumericValues1
+NumericValues = 0
+# Bool ShowAverage: show weighted average as an arrow on the x-axis
+ShowAverage : ShowAverage1
+ShowAverage = 1
+# Bool ShowStandardDeviation: show standard deviation as brackets on the x-axis
+ShowStandardDeviation : ShowStandardDeviation1
+ShowStandardDeviation = 1
+# Click AutoPos: position histogram automatically according to current view (nosave)
+AutoPos : (0x2) //$CurrentView
+# Style BarStyle: style used for histogram bars
+BarStyle : /HistComp!
+BarStyle[] = 0x20b12d16 0x0dd1998f 0x00000000 0x05
+BarStyle[] = 0x20007f00 0x01c9e68c 0x00000000 0x05
+# Expression XValue: O-D pair expression for data value on X-axis (tr,o-d)
+XValue : XValue1
+XValue[] = [non-hbw sov generalized cost] mf2
+XValue[] = [e.g. times scenario 1] mf
+# Expression YValue: O-D pair expression for weight value on Y-axis (tr,o-d,max. 6 values)
+YValue : YValue1
+YValue[] = [nhb other/other survey records] mf9
+YValue[] = [number of O-D pairs] 1
+# Filter Filter: expression for O-D pair filtering (tr,o-d,unbuffered)
+Filter : Filter1
+Filter[] = p<3701&&q<3701
+Filter[] = [all O-D pairs] 1
+Filter[] = [e.g. more than 10 trips] mf1>10
+# Expression StyleIndex: expression for bar style index (tr)
+StyleIndex = 0
+# Expression TipExpression: expression for tip (tr,string,max. 6 values)
+TipExpression : TipExpression
+TipExpression = 
+# Integer SelectedElements: number of selected elements (ro,nosave)
+SelectedElements : SelectedElements1
+# Integer ElementsBelow: number of elements below range (ro,nosave)
+ElementsBelow : ElementsBelow1
+# Integer ElementsAbove: number of elements above range (ro,nosave)
+ElementsAbove : ElementsAbove1
+# Float TotalWeight: total weight of all selected elements (ro,nosave)
+TotalWeight : TotalWeight1
+# Float WeightBelow: weight of elements below range (ro,nosave)
+WeightBelow : WeightBelow1
+# Float WeightAbove: weight of elements above range (ro,nosave)
+WeightAbove : WeightAbove1
+# Float WeightedAverage: weighted average (ro,nosave)
+WeightedAverage : WeightedAverage1
+# Float StandardDeviation: standard deviation (ro,nosave)
+StandardDeviation : StandardDeviation1
+
+[Configurable control]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Compare matrices
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xbd00000
+# Bool CFlag: display layer controls
+CFlag = 1
+# Bool SFlag: display layer on screen
+SFlag : ShowChart
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag : /ShowChart
+MFlag = 1
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 0
+# String Layout: layout parameters (tr)
+Layout[] = Click1;Button;Auto Axes;Adjust range on both axes to fit matrix 1 data;12;12;0;0;;
+Layout[] = Expression0;Expression;Data Matrix 1:;O-D pair expression for data value 1 on X-axis;1;1;0;0;O-D pairs;1;0
+Layout[] = Expression1;Expression;Weight Matrix 1:;O-D pair expression for weight value 1 on Y-axis;2;2;0;0;O-D pairs;1;0
+Layout[] = Filter0;Filter;Filter 1:;expression for O-D pair filter 1;3;3;0;0;O-D pairs;
+Layout[] = String0;String;Legend 1:;text to annotate matrix 1 style;4;4;0;0;;
+Layout[] = Bool0;Checkbox;Values 1;show numeric values for matrix 1;5;5;0;0;;
+Layout[] = Expression2;Expression;Data Matrix 2:;O-D pair expression for data value 2 on X-axis;7;7;0;0;O-D pairs;1;0
+Layout[] = Expression3;Expression;Weight Matrix 2:;O-D pair expression for weight value 2 on Y-axis;8;8;0;0;O-D pairs;1;0
+Layout[] = Filter1;Filter;Filter 2:;expression for O-D pair filter 2;9;9;0;0;O-D pairs;
+Layout[] = String1;String;Legend 2:;text to annotate matrix 2 style;10;10;0;0;;
+Layout[] = Bool1;Checkbox;Values 2;show numeric values for matrix 2;11;11;0;0;;
+# Bool Bool0: show numeric values for matrix 1
+Bool0 : NumericValues1
+Bool0 = 0
+# Bool Bool1: show numeric values for matrix 2
+Bool1 : NumericValues2
+Bool1 = 0
+# Click Click1: Adjust range on both axes to fit matrix 1 data (nosave)
+Click1 : AutoAxes
+# Integer Integer0: integer parameter Integer0
+Integer0 : TextSize
+Integer0 = 23
+# String String0: text to annotate matrix 1 style
+String0 : StyleLegend1/DefaultLegend1
+String0 = mf2 *  mf9
+# String String1: text to annotate matrix 2 style
+String1 : StyleLegend2/DefaultLegend2
+String1 = mf2 *  mf8
+# String String2: string parameter String2
+String2 : YDescription
+String2[] = Frequency
+String2[] = Frequency
+String2[] = No. of trips
+# Expression Expression0: O-D pair expression for data value 1 on X-axis (tr,o-d)
+Expression0 : (0x0,3) XValue1/
+Expression0[] = [non-hbw sov generalized cost] mf2
+Expression0[] = [e.g. times scenario 1] mf
+# Expression Expression1: O-D pair expression for weight value 1 on Y-axis (tr,o-d)
+Expression1 : (0x0,3) YValue1/
+Expression1[] = [nhb other/other survey records] mf9
+Expression1[] = [number of O-D pairs] 1
+# Expression Expression2: O-D pair expression for data value 2 on X-axis (tr,o-d)
+Expression2 : (0x0,3) XValue2/
+Expression2[] = [non-hbw sov generalized cost] mf2
+Expression2[] = [e.g. times scenario 2] mf
+# Expression Expression3: O-D pair expression for weight value 2 on Y-axis (tr,o-d)
+Expression3 : (0x0,3) YValue2/
+Expression3[] = [nhb other/other distribution] mf8
+Expression3[] = [number of O-D pairs] 1
+# Filter Filter0: expression for O-D pair filter 1 (tr,o-d,unbuffered)
+Filter0 : Filter1/
+Filter0[] = p<3701&&q<3701
+Filter0[] = [all O-D pairs] 1
+Filter0[] = [e.g. more than 10 trips] mf1>10
+# Filter Filter1: expression for O-D pair filter 2 (tr,o-d,unbuffered)
+Filter1 : Filter2/
+Filter1[] = p<3701&&q<3701
+Filter1[] = [all O-D pairs] 1
+Filter1[] = [e.g. more than 10 trips] mf1>10
+
+[Parameter conversion]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Default Legend 2
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xbfb0000
+# Bool CFlag: display layer controls
+CFlag = 0
+# String SA: string parameter SA (subst)
+SA : /XValue2
+SA[] = [non-hbw sov generalized cost] mf2
+SA[] = [e.g. times scenario 2] mf
+# String SB: string parameter SB (subst)
+SB : /YValue2
+SB[] = [nhb other/other distribution] mf8
+SB[] = [number of O-D pairs] 1
+# Expression Expression: expression for parameter conversion (tr,string,max. 12 values)
+Expression = strip(uncomment(SA))+if(strip(uncomment(SB))>""&&strip(uncomment(SB))!="1"," * "+uncomment(SB),"")
+# String SR: string result
+SR : DefaultLegend2
+SR = mf2 *  mf8
+
+[Parameter conversion]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Default Legend 1
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xbfb0000
+# Bool CFlag: display layer controls
+CFlag = 0
+# String SA: string parameter SA (subst)
+SA : /XValue1
+SA[] = [non-hbw sov generalized cost] mf2
+SA[] = [e.g. times scenario 1] mf
+# Box BA: box parameter BA
+BA = 0;0;0;0
+# String SB: string parameter SB (subst)
+SB : /YValue1
+SB[] = [nhb other/other survey records] mf9
+SB[] = [number of O-D pairs] 1
+# Box BB: box parameter BB
+BB = 0;0;0;0
+# Box BC: box parameter BC
+BC = 0;0;0;0
+# Box BD: box parameter BD
+BD = 0;0;0;0
+# Box BE: box parameter BE
+BE = 0;0;0;0
+# Expression Expression: expression for parameter conversion (tr,string,max. 12 values)
+Expression = strip(uncomment(SA))+if(strip(uncomment(SB))>""&&strip(uncomment(SB))!="1"," * "+uncomment(SB),"")
+# String SR: string result
+SR : DefaultLegend1
+SR = mf2 *  mf9
+# Box BR: box result
+BR = 0;0;0;0
+
+[Legend]
+# Flags Flags: bit pattern containing layer flags
+Flags = 0x1f00000
+# Bool CFlag: display layer controls
+CFlag = 0
+# Bool SFlag: display layer on screen
+SFlag : /ShowChart
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag : /ShowChart
+MFlag = 1
+# Bool LFlag: include layer in the legend window
+LFlag = 0
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool BFlag: include bounding box in full view
+BFlag = 1
+# Float TextSize: text size for scales and symbols
+TextSize = 10
+# Float TextXPos: horizontal position of text anchor
+TextXPos = 0.890747
+# Float TextYPos: vertical position of text anchor
+TextYPos = 0.104762
+# Float GraphicStyleIncrement: style index increment used for graphic part of item
+GraphicStyleIncrement = 1
+# Integer TextLayout: layout definition
+TextLayout = 397332
+# Text TextString: text that appears in item (tr,subst)
+TextString = %<String0:StyleLegend1>%\
+%<String1:StyleLegend2>%
+# Style SymbolStyle: style used for graphic part of items
+SymbolStyle : BarStyle
+SymbolStyle[] = 0x20b12d16 0x0dd1998f 0x00000000 0x05
+SymbolStyle[] = 0x20007f00 0x01c9e68c 0x00000000 0x05
+
+[Inclusion]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Foreground layer(s)
+# Text Description: user definable layer description (tr,subst)
+Description = Includes user defined layers (in application mode,\
+control shown only if a file is specified and control is substituted)
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xb800000
+# Bool CFlag: display layer controls
+CFlag = 1
+# Bool SFlag: display layer on screen
+SFlag : ShowFrontInclusion
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag : /ShowFrontInclusion
+MFlag = 1
+# Bool LFlag: include layer in the legend window
+LFlag = 1
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 1
+# Bool AFlag: set active flag of filtered elements
+AFlag = 0
+# Bool BFlag: include bounding box in full view
+BFlag = 0
+# Bool EnableObjects: enable included objects
+EnableObjects = 1
+# Bool SubstituteControl: display control of first visible included layer instead of inclusion layer's control
+SubstituteControl = 1
+# Bool AutoHideControl: hide unsubstituted layer control
+AutoHideControl = 1
+# String ConfigurationFile: file containing configuration to include (subst)
+ConfigurationFile : (0x200) /UserFront!/$WorksheetLoaded
+ConfigurationFile = 
+
+[Inclusion]
+# String Name: layer name that appears on layer control tab (tr,subst)
+Name = Other inclusion
+# Text Description: user definable layer description (tr,subst)
+Description = Includes user defined layers (in application mode,\
+control shown only if a file is specified and control is substituted)
+# Flags Flags: bit pattern containing layer flags
+Flags = 0xb800000
+# Bool CFlag: display layer controls
+CFlag = 1
+# Bool SFlag: display layer on screen
+SFlag : ShowOtherInclusion
+SFlag = 1
+# Bool MFlag: display layer under the magnifier
+MFlag : /ShowOtherInclusion
+MFlag = 1
+# Bool LFlag: include layer in the legend window
+LFlag = 1
+# Bool IFlag: allow interactive input
+IFlag = 0
+# Bool TFlag: provide tips
+TFlag = 1
+# Bool AFlag: set active flag of filtered elements
+AFlag = 0
+# Bool BFlag: include bounding box in full view
+BFlag = 0
+# Bool EnableObjects: enable included objects
+EnableObjects = 1
+# Bool SubstituteControl: display control of first visible included layer instead of inclusion layer's control
+SubstituteControl = 1
+# Bool AutoHideControl: hide unsubstituted layer control
+AutoHideControl = 1
+# String ConfigurationFile: file containing configuration to include (subst)
+ConfigurationFile : (0x200) /UserConf!/$WorksheetLoaded
+ConfigurationFile[] = 
+ConfigurationFile[] = 
+ConfigurationFile[] = %<$ProjectPath>%/Worksheets/prnlegend.eml
+ConfigurationFile[] = %<$EmmePath>%/common/transform.eml
+

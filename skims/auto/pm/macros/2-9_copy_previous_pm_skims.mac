@@ -1,0 +1,49 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2-9_copy_previous_pm_skims.rpt
+~/
+~/
+~/begin: 2-9_copy_previous_pm_skims.mac
+~# ...call module 3.12: input/modify matrices interactively
+~/ ...simple copy
+3.12
+~#
+~+|4|1|pau1tm|pau1tp|n|n
+~+|4|1|pau2tm|pau2tp|n|n
+~+|4|1|pau3tm|pau3tp|n|n
+~+|4|1|pa1tm1|pa1tp1|n|n
+~+|4|1|pa1tm2|pa1tp2|n|n
+~+|4|1|pa1tm3|pa1tp3|n|n
+~+|4|1|pa1tm4|pa1tp4|n|n
+~+|4|1|plgttm|plgttp|n|n
+~+|4|1|pmedtm|pmedtp|n|n
+~+|4|1|phvytm|phvytp|n|n
+~#
+~+|4|1|pau1cs|pau1cp|n|n
+~+|4|1|pau2cs|pau2cp|n|n
+~+|4|1|pau3cs|pau3cp|n|n
+~+|4|1|pa1cs1|pa1cp1|n|n
+~+|4|1|pa1cs2|pa1cp2|n|n
+~+|4|1|pa1cs3|pa1cp3|n|n
+~+|4|1|pa1cs4|pa1cp4|n|n
+~+|4|1|plgtcs|plgtcp|n|n
+~+|4|1|pmedcs|pmedcp|n|n
+~+|4|1|phvycs|phvycp|n|n
+~#
+~+|4|1|pau1ds|pau1dp|n|n
+~+|4|1|pau2ds|pau2dp|n|n
+~+|4|1|pau3ds|pau3dp|n|n
+~+|4|1|pa1ds1|pa1dp1|n|n
+~+|4|1|pa1ds2|pa1dp2|n|n
+~+|4|1|pa1ds3|pa1dp3|n|n
+~+|4|1|pa1ds4|pa1dp4|n|n
+~+|4|1|plgtds|plgtdp|n|n
+~+|4|1|pmedds|pmeddp|n|n
+~+|4|1|phvyds|phvydp|n|n
+q
+~#
+~/end: 2-9_copy_previous_pm_skims.mac
+~/exit emme
+~/
+q

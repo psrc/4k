@@ -1,0 +1,29 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_import_matrices_ag.rpt
+~/
+~/
+~/begin: 7_import_matrices_ag.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am auto skim emmebank
+~+|1
+..\..\Skims\Auto\AM\emmebank
+~/ ...import am hbw income 3 sov generalized cost skim matrix
+~+|2|3|3|mf"aa1cs3"|mf"aa1cs3"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open activity generation emmebank
+~+|1
+..\..\Generation\Activity\emmebank
+~/ ...import hb work income 3 distribution matrix
+~+|2|3|3|mf"hbwds3"|mf"hbwds3"|n|y
+q
+~#
+~/end: 7_import_matrices_ag.mac
+~/exit emme
+~/
+q

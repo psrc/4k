@@ -1,0 +1,30 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3_import_ev_scenario.rpt
+~/
+~/
+~/begin: 3_import_ev_scenario.mac
+~/ ...set active scenario to 9999
+s=9999
+~/ ...call module 1.22: scenario manipulations
+1.22
+~/ ...delete existing scenario 1005
+~+|2|1005|~?!e|y|~?q=0|
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open ev auto assignment emmebank
+~+|1
+..\..\..\assignments\auto\ev\emmebank
+~+|y
+~/ ...import ev network scenario (1005)
+~+|2|1|3|1005|1005|y|EV Auto Assignment
+q
+~/ ...set active scenario to 1005
+s=1005
+~#
+~/end: 3_import_ev_scenario.mac
+~/exit emme
+~/
+q

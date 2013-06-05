@@ -1,0 +1,56 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_import_matrices_tg.rpt
+~/
+~/
+~/begin: 7_import_matrices_tg.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am auto skim emmebank
+~+|1
+..\..\Skims\Auto\AM\emmebank
+~/ ...import am hbw income 3 sov generalized cost skim matrix
+~+|2|3|3|mf"aa1tm3"|mf"aa1tm3"|n|y
+~+|2|3|3|mf"aa1cs3"|mf"aa1cs3"|n|y
+~+|2|3|3|mf"aa1ds3"|mf"aa1ds3"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am/pm bidirectional skim emmebank
+~+|1
+..\..\Skims\BiDirectional\Time\emmebank
+~/ ...import am/pm income 3 bidirectional sov time skim matrix
+~+|2|3|3|mf"ah3btm"|mf"ah3btm"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am/pm bidirectional skim emmebank
+~+|1
+..\..\Skims\BiDirectional\Generalized_Cost\emmebank
+~/ ...import am/pm income 3 bidirectional sov generalized cost skim matrix
+~+|2|3|3|mf"ah3bcs"|mf"ah3bcs"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am/pm bidirectional skim emmebank
+~+|1
+..\..\Skims\BiDirectional\Distance\emmebank
+~/ ...import am/pm income 3 bidirectional sov distance skim matrix
+~+|2|3|3|mf"ah3bds"|mf"ah3bds"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open trip generation emmebank
+~+|1
+..\..\Generation\Trip\emmebank
+~/ ...import hb work income 3 production and attraction matrices
+~+|2|3|3|mo"hbwpr3"|mo"hbwpr3"|n|y
+~+|2|3|3|md"hbwat3"|md"hbwat3"|n|y
+q
+~#
+~/end: 7_import_matrices_tg.mac
+~/exit emme
+~/
+q

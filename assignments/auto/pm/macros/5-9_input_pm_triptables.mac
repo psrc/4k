@@ -1,0 +1,35 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5-9_input_pm_triptables.rpt
+~/
+~/
+~/begin: 5-9_input_pm_triptables.mac
+~# ...call module 1.31: import data from external database
+~/ ...open pm auto trip table emmebank
+1.31
+~+|1
+~/ ...import trip tables
+..\..\..\TripTables\Autos\PM\emmebank
+~+|2|3|3|mf"pvehda"|mf"pvehda"|n|y
+~+|2|3|3|mf"pvehs2"|mf"pvehs2"|n|y
+~+|2|3|3|mf"pvehs3"|mf"pvehs3"|n|y
+~+|2|3|3|mf"phbw1v"|mf"phbw1v"|n|y
+~+|2|3|3|mf"phbw2v"|mf"phbw2v"|n|y
+~+|2|3|3|mf"phbw3v"|mf"phbw3v"|n|y
+~+|2|3|3|mf"phbw4v"|mf"phbw4v"|n|y
+q
+~/ ...open pm truck trip table emmebank
+1.31
+~+|1
+~/ ...import trip tables
+..\..\..\TripTables\Trucks\emmebank
+~+|2|3|3|mf"plttrk"|mf"plttrk"|n|y
+~+|2|3|3|mf"pmdtrk"|mf"pmdtrk"|n|y
+~+|2|3|3|mf"phvtrk"|mf"phvtrk"|n|y
+q
+~#
+~/end: 5-9_input_pm_triptables.mac
+~/exit emme
+~/
+q

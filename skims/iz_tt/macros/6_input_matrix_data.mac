@@ -1,0 +1,31 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_input_matrix_data.rpt
+~/
+~/
+~/begin: 6_input_matrix_data.mac
+~/ ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input terminal times at production end
+~/ ...enter file name for batch input
+..\..\input\terminaltimes\origin_tt.in
+~/ ...write report file
+2
+3.11
+~/ ...input terminal times at attraction end
+~/ ...enter file name for batch input
+..\..\input\terminaltimes\destination_tt.in
+~/ ...write report file
+2
+3.11
+~/ ...input taz acrea (in acres)
+~/ ...enter file name for batch input
+..\..\model\taz\taz_acres.in
+~/ ...write report file
+2
+~#
+~/end: 6_input_matrix_data.mac
+~/exit emme
+~/
+q

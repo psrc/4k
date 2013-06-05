@@ -1,0 +1,24 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=15-9_calculate_col_auto_cost_skims.rpt
+~/
+~/
+~/begin: 9_calculate_auto_cost_skims.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate auto cost skims for mode choice
+3.21
+~# ...am
+~+|1|y|mf"aau1ct"|n|(mf"aau1ds"*ms"autoop")+(mf"aau1cs"-mf"aau1tm")/.0383+(md"colleg"/2)|||n|2
+~+|1|y|mf"aau2ct"|n|((mf"aau2ds"*ms"autoop")+(mf"aau2cs"-mf"aau2tm")/.0199+(md"colleg"/2))/2|||n|2
+~+|1|y|mf"aau3ct"|n|((mf"aau3ds"*ms"autoop")+(mf"aau3cs"-mf"aau3tm")/.0158+(md"colleg"/2))/3.5|||n|2
+~# ...bi-directional am
+~+|1|y|mf"au1bct"|n|(mf"au1bds"*ms"autoop")+(mf"au1bcs"-mf"au1btm")/.0383+(md"colleg"/2)|||n|2
+~+|1|y|mf"au2bct"|n|((mf"au2bds"*ms"autoop")+(mf"au2bcs"-mf"au2btm")/.0199+(md"colleg"/2))/2|||n|2
+~+|1|y|mf"au3bct"|n|((mf"au3bds"*ms"autoop")+(mf"au3bcs"-mf"au3btm")/.0158+(md"colleg"/2))/3.5|||n|2
+q
+~#
+~/end: 15-9_calculate_col_auto_cost_skims.mac
+~/exit emme
+~/
+q

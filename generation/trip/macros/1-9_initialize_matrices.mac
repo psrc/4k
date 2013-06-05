@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=1-9_initialize_matrices.rpt
+~/
+~/
+~/begin: 1-9_initialize_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize matrix directory
+3.12
+7
+~+|~?q=1|y
+~+|~?q=1|y
+q
+~#
+~/end: 1-9_initialize_matrices.mac
+~/exit emme
+~/
+q

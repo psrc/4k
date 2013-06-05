@@ -1,0 +1,18 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5_initialize_destination_matrices.rpt
+~/
+~/
+~/begin: 5_initialize_destination_matrices.mac
+~/ ...call mddule 3.12: input/modify matrices interactively
+~/ ...initialize destination matrices
+3.12
+~+|1|md01|daily|daily sov parking cost|0
+~+|1|md02|colleg|daily college sov parking cost|0
+q
+~#
+~/end: 5_initialize_destination_matrices.mac
+~/exit emme
+~/
+q

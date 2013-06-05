@@ -1,0 +1,10 @@
+REM AM
+call batchfiles\setup\freeflow\am_setup_ff.bat
+REM MD
+call batchfiles\setup\freeflow\md_setup_ff.bat
+REM PM
+call batchfiles\setup\freeflow\pm_setup_ff.bat
+REM EV
+call batchfiles\setup\freeflow\ev_setup_ff.bat
+REM NI
+call batchfiles\setup\freeflow\ni_setup_ff.bat

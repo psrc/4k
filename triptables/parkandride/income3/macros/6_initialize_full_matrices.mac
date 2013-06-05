@@ -1,0 +1,33 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_initialize_full_matrices.rpt
+~/
+~/
+~/begin: 6_initialize_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|hbwds3|hb work income 3 distribution|0
+~#
+~+|1|mf02|w3shtd|hb work-inc3 td mode share|0
+~#
+~+|1|mf03|autil3|utility of pnr lots for auto leg|0
+~+|1|mf04|tutil3|utility of pnr lots for transit leg|0
+~+|1|mf05|utprd3|auto/transit leg utility product|0
+~+|1|mf06|prdzn3|optimal pnr zone - utility product|0
+~+|1|mf07|utsum3|auto/transit leg utility sum|0
+~+|1|mf08|sumzn3|optimal pnr zone - utility sum|0
+~#
+~+|1|mf09|dapnr3|transit-drive p>a trip table|0
+~+|1|mf10|daleg3|distribution to pnr lot|0
+~+|1|mf11|twleg3|distribution from pnr lot|0
+~#
+~+|1|mf50|scrap1|parkride - distrib to pnr lot|0
+~+|1|mf51|scrap2|parkride - distrib from pnr lot|0
+q
+~#
+~/end: 6_initialize_full_matrices.mac
+~/exit emme
+~/
+q

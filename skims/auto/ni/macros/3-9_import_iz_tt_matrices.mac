@@ -1,0 +1,22 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3-9_import_iz_tt_matrices.rpt
+~/
+~/
+~/begin: 3-9_import_iz_tt_matrices.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open intrazonal/terminal time emmebank
+~+|1
+..\..\iz_tt\emmebank
+~/ ...import intrazonal/terminal time matrices
+~+|2|3|3|mf"izdist"|mf"izdist"|n|y
+~+|2|3|3|mf"izatim"|mf"izatim"|n|y
+~+|2|3|3|mf"termtm"|mf"termtm"|n|y
+q
+~#
+~/end: 3-9_import_iz_tt_matrices.mac
+~/exit emme
+~/
+q

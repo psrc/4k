@@ -1,0 +1,29 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=13_calculate_transit_walk_access_utility.rpt
+~/
+~/
+~/begin: 13_calculate_transit_walk_access_utility.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate hb work income 3 mode choice exponentiated utilities
+3.21
+~/ ...transit walk-access
+~+|1|y|mf"wkeutw"|n
+exp
+(
+ms"ascctw"
++
+ms"trwivt"*mf"aivtwa"
++
+ms"trwovt"*(mf"aauxwa"+mf"aiwtwa"+mf"axfrwa")
++
+ms"trwcos"*mf"afarwa"
+)
+~+|||y|1,%1%||1,%1%||2
+q
+~#
+~/end: 13_calculate_transit_walk_access_utility.mac
+~/exit emme
+~/
+q

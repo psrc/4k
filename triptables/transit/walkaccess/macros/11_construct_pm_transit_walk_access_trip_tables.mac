@@ -1,0 +1,61 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=11_construct_pm_transit_walk_access_trip_tables.rpt
+~/
+~/
+~/begin: 11_construct_pm_transit_walk_access_trip_tables.mac
+~# ...call module 3.21: matrix calculations
+~/ ...construct pm p-a transit walk-access person trip tables
+3.21
+~/ ...transit walk-access
+~+|1|y|mf"trwapa"|n
+mf"coldst"*mf"coshtw"*0.015*0.514+
+mf"hbodst"*mf"nwshtw"*0.073*0.542+
+mf"schdst"*mf"scshtw"*0.064*0.503+
+mf"hspdst"*mf"nwshtw"*0.019*0.391+
+mf"otodst"*mf"nhshtw"*0.230/2+
+mf"wkodst"*mf"nhshtw"*0.437/2+
+mf"hbwds1"*mf"w1shtw"*0.064*0.511+
+mf"hbwds2"*mf"w2shtw"*0.013*0.550+
+mf"hbwds3"*mf"w3shtw"*0.000*0.545+
+mf"hbwds4"*mf"w4shtw"*0.004*0.528
+~+|||n|2
+q
+~/ ...construct pm a-p transit walk-access person trip tables
+3.21
+~/ ...transit walk-access
+~+|1|y|mf"trwaap"|n
+mf"coldst"*mf"coshtw"*0.490*0.486+
+mf"hbodst"*mf"nwshtw"*0.241*0.458+
+mf"schdst"*mf"scshtw"*0.584*0.497+
+mf"hspdst"*mf"nwshtw"*0.368*0.609+
+mf"otodst"*mf"nhshtw"*0.230/2+
+mf"wkodst"*mf"nhshtw"*0.437/2+
+mf"hbwds1"*mf"w1shtw"*0.464*0.489+
+mf"hbwds2"*mf"w2shtw"*0.719*0.450+
+mf"hbwds3"*mf"w3shtw"*0.789*0.455+
+mf"hbwds4"*mf"w4shtw"*0.735*0.472
+~+|||n|2
+q
+~/ ...construct pm o-d transit walk-access trip tables
+3.21
+~/ ...transit walk-access
+~+|1|y|mf"ptrnwa"|n
+mf"trwapa"+
+mf"trwaap"'+
+mf"twleg1"*0.000*0.477+
+mf"twleg2"*0.000*0.554+
+mf"twleg3"*0.000*0.515+
+mf"twleg4"*0.006*0.571+
+mf"twleg1"'*0.531*0.523+
+mf"twleg2"'*0.834*0.446+
+mf"twleg3"'*0.875*0.485+
+mf"twleg4"'*0.763*0.429
+~+|||n|2
+q
+~#
+~/end: 11_construct_pm_transit_walk_access_trip_tables.mac
+~/exit emme
+~/
+q

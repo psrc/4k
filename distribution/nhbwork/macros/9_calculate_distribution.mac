@@ -1,0 +1,23 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=9_calculate_distribution.rpt
+~/
+~/
+~/begin: 9_calculate_distribution.mac
+~/ ...call module 3.22: matrix balancing
+~/ ...two dimensional balancing
+~/ ...matrix to be balanced: mf"wkofri"
+~/ ...totals on origins: mo"wkopro"
+~/ ...totals on destinations: md"wkoatt"
+~/ ...saved balanced matrix: mf"wkodst"
+~/ ...calculate nhb work/other distribution
+3.22
+~+|1|mf"wkofri"|mo"wkopro"|md"wkoatt"|y
+~+|1,%3%||1,%3%|||2|1|mf"wkodst"|n|2
+q
+~#
+~/end: 9_calculate_distribution.mac
+~/exit emme
+~/
+q

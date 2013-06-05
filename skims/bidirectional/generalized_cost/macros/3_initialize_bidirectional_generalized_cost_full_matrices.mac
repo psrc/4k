@@ -1,0 +1,65 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3_initialize_bidirectional_generalized_cost_matrices.rpt
+~/
+~/
+~/begin: 3_initialize_bidirectional_generalized_cost_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~#
+~+|1|mf01|aau1cs|am non-hbw sov gc|0
+~+|1|mf02|aau2cs|am hov 2 gc|0
+~+|1|mf03|aau3cs|am hov 3+ gc|0
+~+|1|mf04|aa1cs1|am hbw income 1 sov gc|0
+~+|1|mf05|aa1cs2|am hbw income 2 sov gc|0
+~+|1|mf06|aa1cs3|am hbw income 3 sov gc|0
+~+|1|mf07|aa1cs4|am hbw income 4 sov gc|0
+~+|1|mf08|algtcs|light truck gc|0
+~+|1|mf09|amedcs|medium truck gc|0
+~+|1|mf10|ahvycs|heavy truck gc|0
+~#
+~+|1|mf11|pau1cs|pm non-hbw sov gc|0
+~+|1|mf12|pau2cs|pm hov 2 gc|0
+~+|1|mf13|pau3cs|pm hov 3+ gc|0
+~+|1|mf14|pa1cs1|pm hbw income 1 sov gc|0
+~+|1|mf15|pa1cs2|pm hbw income 2 sov gc|0
+~+|1|mf16|pa1cs3|pm hbw income 3 sov gc|0
+~+|1|mf17|pa1cs4|pm hbw income 4 sov gc|0
+~+|1|mf18|plgtcs|light truck gc|0
+~+|1|mf19|pmedcs|medium truck gc|0
+~+|1|mf20|phvycs|heavy truck gc|0
+~#
+~+|1|mf21|au1bcs|non-hbw sov bidirectional gc|0
+~+|1|mf22|au2bcs|hov 2 bidirectional gc|0
+~+|1|mf23|au3bcs|hov 3+ bidirectional gc|0
+~+|1|mf24|ah1bcs|hbw income 1 sov bidirectional gc|0
+~+|1|mf25|ah2bcs|hbw income 2 sov bidirectional gc|0
+~+|1|mf26|ah3bcs|hbw income 3 sov bidirectional gc|0
+~+|1|mf27|ah4bcs|hbw income 4 sov bidirectional gc|0
+~+|1|mf28|blgtcs|light truck bidirectional gc|0
+~+|1|mf29|bmedcs|medium truck bidirectional gc|0
+~+|1|mf30|bhvycs|heavy truck bidirectional gc|0
+~#
+~+|1|mf31|mau1cs|md non-hbw sov gc|0
+~+|1|mf32|mau2cs|md hov 2 gc|0
+~+|1|mf33|mau3cs|md hov 3+ gc|0
+~+|1|mf34|ma1cs1|md hbw income 1 sov gc|0
+~+|1|mf35|ma1cs2|md hbw income 2 sov gc|0
+~+|1|mf36|ma1cs3|md hbw income 3 sov gc|0
+~+|1|mf37|ma1cs4|md hbw income 4 sov gc|0
+~#
+~+|1|mf38|mu1bcs|non-hbw sov bidirectional gc|0
+~+|1|mf39|mu2bcs|hov 2 bidirectional gc|0
+~+|1|mf40|mu3bcs|hov 3+ bidirectional gc|0
+~+|1|mf41|mh1bcs|hbw income 1 sov bidirectional gc|0
+~+|1|mf42|mh2bcs|hbw income 2 sov bidirectional gc|0
+~+|1|mf43|mh3bcs|hbw income 3 sov bidirectional gc|0
+~+|1|mf44|mh4bcs|hbw income 4 sov bidirectional gc|0
+q
+~#
+~/end: 3_initialize_bidirectional_generalized_cost_matrices.mac
+~/exit emme
+~/
+q

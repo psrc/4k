@@ -1,0 +1,30 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3_import_md_scenario.rpt
+~/
+~/
+~/begin: 3_import_md_scenario.mac
+~/ ...set active scenario to 9999
+s=9999
+~/ ...call module 1.22: scenario manipulations
+1.22
+~/ ...delete existing scenario 1004
+~+|2|1004|~?!e|y|~?q=0|
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open mid-day auto assignment emmebank
+~+|1
+..\..\..\auto\md\emmebank
+~+|y
+~/ ...import md network scenario (1004)
+~+|2|1|3|1004|1004|y|MD All-Mode Transit Assignment
+q
+~/ ...set active scenario to 1004
+s=1004
+~#
+~/end: 3_import_md_scenario.mac
+~/exit emme
+~/
+q

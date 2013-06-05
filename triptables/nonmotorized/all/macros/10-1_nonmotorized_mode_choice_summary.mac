@@ -1,0 +1,75 @@
+~?!i&32768
+~o|295
+reports=?
+~/
+~/
+~/begin: 10-1_nonmotorized_mode_choice_summary.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...report mode choice results by time of day
+3.21
+~# ...hb college p>a
+~+|1|n|mf"coldst"*mf"coshwk"*0.571*0.453|||y|1,%1%||1,%1%||||2|..\..\summaries\nonmotorized_mode_choice_summary.rpt
+~+|1|n|mf"coldst"*mf"coshbk"*0.867*0.482|||y|1,%1%||1,%1%||||2
+~# ...hb college a>p
+~+|1|n|mf"coldst"*mf"coshwk"*0.506*0.547|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"coldst"*mf"coshbk"*0.363*0.518|||y|1,%1%||1,%1%||||2
+~# ...hb other p>a
+~+|1|n|mf"hbodst"*mf"nwshwk"*0.320*0.501|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbodst"*mf"nwshbk"*0.228*0.521|||y|1,%1%||1,%1%||||2
+~# ...hb other a>p
+~+|1|n|mf"hbodst"*mf"nwshwk"*0.262*0.499|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbodst"*mf"nwshbk"*0.162*0.479|||y|1,%1%||1,%1%||||2
+~# ...hb shop p>a
+~+|1|n|mf"hspdst"*mf"nwshwk"*0.314*0.398|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hspdst"*mf"nwshbk"*0.606*0.355|||y|1,%1%||1,%1%||||2
+~# ...hb shop a>p
+~+|1|n|mf"hspdst"*mf"nwshwk"*0.312*0.602|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hspdst"*mf"nwshbk"*0.264*0.645|||y|1,%1%||1,%1%||||2
+~# ...hb school p>a
+~+|1|n|mf"schdst"*mf"scshwk"*0.109*0.437|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"schdst"*mf"scshbk"*0.212*0.507|||y|1,%1%||1,%1%||||2
+~# ...hb school a>p
+~+|1|n|mf"schdst"*mf"scshwk"*0.503*0.563|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"schdst"*mf"scshbk"*0.429*0.493|||y|1,%1%||1,%1%||||2
+~# ...hb work income 1 p>a
+~+|1|n|mf"hbwds1"*mf"w1shwk"*0.455*0.488|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds1"*mf"w1shbk"*0.389*0.690|||y|1,%1%||1,%1%||||2
+~# ...hb work income 1 a>p
+~+|1|n|mf"hbwds1"*mf"w1shwk"*0.175*0.512|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds1"*mf"w1shbk"*0.343*0.310|||y|1,%1%||1,%1%||||2
+~# ...hb work income 2 p>a
+~+|1|n|mf"hbwds2"*mf"w2shwk"*0.335*0.496|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds2"*mf"w2shbk"*0.406*0.465|||y|1,%1%||1,%1%||||2
+~# ...hb work income 2 a>p
+~+|1|n|mf"hbwds2"*mf"w2shwk"*0.283*0.504|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds2"*mf"w2shbk"*0.060*0.535|||y|1,%1%||1,%1%||||2
+~# ...hb work income 3 p>a
+~+|1|n|mf"hbwds3"*mf"w3shwk"*0.373*0.486|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds3"*mf"w3shbk"*0.207*0.529|||y|1,%1%||1,%1%||||2
+~# ...hb work income 3 a>p
+~+|1|n|mf"hbwds3"*mf"w3shwk"*0.258*0.514|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds3"*mf"w3shbk"*0.190*0.471|||y|1,%1%||1,%1%||||2
+~# ...hb work income 4 p>a
+~+|1|n|mf"hbwds4"*mf"w4shwk"*0.247*0.493|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds4"*mf"w4shbk"*0.225*0.501|||y|1,%1%||1,%1%||||2
+~# ...hb work income 4 a>p
+~+|1|n|mf"hbwds4"*mf"w4shwk"*0.080*0.507|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds4"*mf"w4shbk"*0.107*0.499|||y|1,%1%||1,%1%||||2
+~# ...nhb other/other p>a
+~+|1|n|mf"otodst"*mf"nhshwk"*0.521/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"otodst"*mf"nhshbk"*0.473/2|||y|1,%1%||1,%1%||||2
+~# ...nhb other/other a>p
+~+|1|n|mf"otodst"*mf"nhshwk"*0.521/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"otodst"*mf"nhshbk"*0.473/2|||y|1,%1%||1,%1%||||2
+~# ...nhb work/other p>a
+~+|1|n|mf"wkodst"*mf"nhshwk"*0.725/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"wkodst"*mf"nhshbk"*0.275/2|||y|1,%1%||1,%1%||||2
+~# ...nhb work/other a>p
+~+|1|n|mf"wkodst"*mf"nhshwk"*0.725/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"wkodst"*mf"nhshbk"*0.275/2|||y|1,%1%||1,%1%||||2|4
+reports=?
+~#
+~/end: 10-1_nonmotorized_mode_choice_summary.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,20 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=10_import_mode_share_matrices.rpt
+~/
+~/
+~/begin: 10_import_mode_share_matrices.mac
+~# ...call module 1.31: import data from external database
+~/ ...open daily mode share emmebanks
+1.31
+~+|1
+~/ ...hb work income 4
+..\..\..\modechoice\hbwork_inc4\emmebank
+~+|2|3|3|mf"w4shtd"|mf"w4shtd"|n|y
+q
+~#
+~/end: 10_import_mode_share_matrices.mac
+~/exit emme
+~/
+q

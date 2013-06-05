@@ -1,0 +1,90 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5-9_input_ev_triptables.rpt
+~/
+~/
+~/begin: 5-9_input_ev_triptables.mac
+~# ...call module 3.11: input matrices using batch entry
+~/ ...input ev vehicle trip tables
+3.11
+~/ ...input non-hbw sov
+~# ...enter file name for batch input
+vehtriptables\mfevehda.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input hov 2
+~# ...enter file name for batch input
+vehtriptables\mfevehs2.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input hov 3+
+~# ...enter file name for batch input
+vehtriptables\mfevehs3.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input vanpool
+~# ...enter file name for batch input
+vehtriptables\mfevpool.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input hbw sov income 1
+~# ...enter file name for batch input
+vehtriptables\mfehbw1v.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input hbw sov income 2
+~# ...enter file name for batch input
+vehtriptables\mfehbw2v.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input hbw sov income 3
+~# ...enter file name for batch input
+vehtriptables\mfehbw3v.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input hbw sov income 4
+~# ...enter file name for batch input
+vehtriptables\mfehbw4v.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input light truck
+~# ...enter file name for batch input
+vehtriptables\mfelttrk.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input medium truck
+~# ...enter file name for batch input
+vehtriptables\mfemdtrk.in
+~/ ...write report file
+2
+~# ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input heavy truck
+~# ...enter file name for batch input
+vehtriptables\mfehvtrk.in
+~/ ...write report file
+2
+~#
+~/end: 5-9_input_ev_triptables.mac
+~/exit emme
+~/
+q

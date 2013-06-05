@@ -1,0 +1,27 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2_initialize_scalars.rpt
+~/
+~/
+~/begin: 2_initialize_scalars.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize scalar matrices
+3.12
+~+|1|ms90|sca090|temp scalar 90|0
+~+|1|ms91|sca091|temp scalar 91|0
+~+|1|ms92|sca092|temp scalar 92|0
+~+|1|ms93|sca093|temp scalar 93|0
+~+|1|ms94|sca094|temp scalar 94|0
+~+|1|ms95|sca095|temp scalar 95|0
+~+|1|ms96|sca096|temp scalar 96|0
+~+|1|ms97|sca097|temp scalar 97|0
+~+|1|ms98|sca098|temp scalar 98|0
+~+|1|ms99|sca099|temp scalar 99|0
+~+|1|ms100|sca100|temp scalar 100|0
+q
+~#
+~/end: 2_initialize_scalars.mac
+~/exit emme
+~/
+q

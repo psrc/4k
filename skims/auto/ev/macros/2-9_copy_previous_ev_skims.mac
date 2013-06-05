@@ -1,0 +1,49 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2-9_copy_previous_ev_skims.rpt
+~/
+~/
+~/begin: 2-9_copy_previous_ev_skims.mac
+~# ...call module 3.12: input/modify matrices interactively
+~/ ...simple copy
+3.12
+~#
+~+|4|1|eau1tm|eau1tp|n|n
+~+|4|1|eau2tm|eau2tp|n|n
+~+|4|1|eau3tm|eau3tp|n|n
+~+|4|1|ea1tm1|ea1tp1|n|n
+~+|4|1|ea1tm2|ea1tp2|n|n
+~+|4|1|ea1tm3|ea1tp3|n|n
+~+|4|1|ea1tm4|ea1tp4|n|n
+~+|4|1|elgttm|elgttp|n|n
+~+|4|1|emedtm|emedtp|n|n
+~+|4|1|ehvytm|ehvytp|n|n
+~#
+~+|4|1|eau1cs|eau1cp|n|n
+~+|4|1|eau2cs|eau2cp|n|n
+~+|4|1|eau3cs|eau3cp|n|n
+~+|4|1|ea1cs1|ea1cp1|n|n
+~+|4|1|ea1cs2|ea1cp2|n|n
+~+|4|1|ea1cs3|ea1cp3|n|n
+~+|4|1|ea1cs4|ea1cp4|n|n
+~+|4|1|elgtcs|elgtcp|n|n
+~+|4|1|emedcs|emedcp|n|n
+~+|4|1|ehvycs|ehvycp|n|n
+~#
+~+|4|1|eau1ds|eau1dp|n|n
+~+|4|1|eau2ds|eau2dp|n|n
+~+|4|1|eau3ds|eau3dp|n|n
+~+|4|1|ea1ds1|ea1dp1|n|n
+~+|4|1|ea1ds2|ea1dp2|n|n
+~+|4|1|ea1ds3|ea1dp3|n|n
+~+|4|1|ea1ds4|ea1dp4|n|n
+~+|4|1|elgtds|elgtdp|n|n
+~+|4|1|emedds|emeddp|n|n
+~+|4|1|ehvyds|ehvydp|n|n
+q
+~#
+~/end: 2-9_copy_previous_ev_skims.mac
+~/exit emme
+~/
+q

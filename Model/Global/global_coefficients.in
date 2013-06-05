@@ -1,0 +1,6 @@
+t matrices
+c global coefficients and parameters
+c
+c 2010 auto operating cost (cents per mile, 2010$)
+m  matrix=ms"autoop"
+   all  all:  17

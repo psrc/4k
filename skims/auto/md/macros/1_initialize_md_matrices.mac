@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=1_initialize_md_matrices.rpt
+~/
+~/
+~/begin: 1_initialize_md_matrices.mac
+~/ ...set active scenario to 1004
+s=1004
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize matrix directory
+3.12
+~+|7|y
+q
+~#
+~/end: 1_initialize_md_matrices.mac
+~/exit emme
+~/
+q

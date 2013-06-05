@@ -1,0 +1,21 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4-9_import_am_inc1_auto_skims_matrices.rpt
+~/
+~/
+~/begin: 4-9_import_am_inc1_auto_skims_matrices.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am auto skim emmebank
+~+|1
+..\..\..\skims\auto\am\emmebank
+~/ ...import am inc1 auto skim matrices
+~+|2|3|3|mf"aa1ds1"|mf"aa1ds1"|n|y
+~+|2|3|3|mf"aa1tm1"|mf"aa1tm1"|n|y
+q
+~#
+~/end: 4-9_import_am_inc1_auto_skims_matrices.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,25 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=15_calculate_walk_utility.rpt
+~/
+~/
+~/begin: 15_calculate_walk_utility.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate hb non-work mode choice exponentiated utilities
+3.21
+~/ ...walk
+~+|1|y|mf"nweuwk"|n
+exp
+(
+ms"asccwk"
++
+ms"walktm"*mf"awlktm"
+)
+~+|||y|1,%1%||1,%1%||2
+q
+~#
+~/end: 15_calculate_walk_utility.mac
+~/exit emme
+~/
+q

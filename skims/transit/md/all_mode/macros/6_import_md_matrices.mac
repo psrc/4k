@@ -1,0 +1,40 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_import_md_matrices.rpt
+~/
+~/
+~/begin: 6_import_md_matrices.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open md all mode transit assignment emmebank
+~+|1
+..\..\..\..\Assignments\Transit\MD\All_Mode\emmebank
+~/ ...import md all mode transit skim matrices
+~+|2|3|3|mf"mtrnwa"|mf"mtrnwa"|n|y
+~+|2|3|3|mf"mtrtwa"|mf"mtrtwa"|n|y
+~+|2|3|3|mf"mivtwa"|mf"mivtwa"|n|y
+~+|2|3|3|mf"mauxwa"|mf"mauxwa"|n|y
+~+|2|3|3|mf"mtwtwa"|mf"mtwtwa"|n|y
+~+|2|3|3|mf"miwtwa"|mf"miwtwa"|n|y
+~+|2|3|3|mf"mbrdwa"|mf"mbrdwa"|n|y
+~+|2|3|3|mf"mnbdwa"|mf"mnbdwa"|n|y
+q
+~#
+~/ ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input walk access times at production end
+~# ...enter file name for batch input
+..\..\..\..\input\walkaccess\origin_walkaccess.in
+~/ ...write report file
+2
+3.11
+~/ ...input walk access times at attraction end
+~# ...enter file name for batch input
+..\..\..\..\input\walkaccess\destination_walkaccess.in
+~/ ...write report file
+2
+~/end: 6_import_md_matrices.mac
+~/exit emme
+~/
+q

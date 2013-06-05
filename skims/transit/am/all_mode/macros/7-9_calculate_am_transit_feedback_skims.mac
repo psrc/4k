@@ -1,0 +1,24 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7-9_calculate_am_transit_feedback_skims.rpt
+~/
+~/
+~/begin: 7-9_calculate_am_transit_feedback_skims.mac
+~# ...call module 3.21: matrix calculations
+3.21
+~/ ...average previous and current interzonal time skims
+~+|1|y|mf"atrtwa"|n|(mf"atrtwa"+mf"atrtwp")/2|||n|2
+~+|1|y|mf"aivtwa"|n|(mf"aivtwa"+mf"aivtwp")/2|||n|2
+~+|1|y|mf"aauxwa"|n|(mf"aauxwa"+mf"aauxwp")/2|||n|2
+~+|1|y|mf"atwtwa"|n|(mf"atwtwa"+mf"atwtwp")/2|||n|2
+~+|1|y|mf"aiwtwa"|n|(mf"aiwtwa"+mf"aiwtwp")/2|||n|2
+~+|1|y|mf"abrdwa"|n|(mf"abrdwa"+mf"abrdwp")/2|||n|2
+~+|1|y|mf"anbdwa"|n|(mf"anbdwa"+mf"anbdwp")/2|||n|2
+~+|1|y|mf"axfrwa"|n|(mf"axfrwa"+mf"axfrwp")/2|||n|2
+q
+~#
+~/end: 7-9_calculate_am_transit_feedback_skims.mac
+~/exit emme
+~/
+q

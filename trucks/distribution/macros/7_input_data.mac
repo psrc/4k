@@ -1,0 +1,24 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_input_data.rpt
+~/
+~/
+~/begin: 7_input_data.mac
+~/ ...call module 3.01: input/modify/output zone groups
+~/ ...initialize partitions
+~/ ...input/modify zone groups (using batch entry)
+~/ ...input 20-district ensemble
+3.01
+~+|4|ga|y| 
+~+|1|..\..\model\ensembles\districts19_ga.ens|2
+q
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...input global parameters - truck operating costs
+3.11
+~+|..\..\Model\Global\truck_operating_costs.in|2|
+~#
+~/end: 7_input_data.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,75 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_initialize_full_matrices.rpt
+~/
+~/
+~/begin: 6_initialize_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|vehmtx|auto availability cross classification|0
+~#
+~+|1|mf02|brsov|bridge flag - sov non-work|0
+~#
+~+|1|mf03|aau1dl|am sov delay|0
+~+|1|mf04|mau1dl|md sov delay|0
+~+|1|mf05|pau1dl|pm sov delay|0
+~+|1|mf06|eau1dl|ev sov delay|0
+~#
+~+|1|mf07|aau1da|am sov delay - adjusted|0
+~+|1|mf08|mau1da|md sov delay - adjusted|0
+~+|1|mf09|pau1da|pm sov delay - adjusted|0
+~+|1|mf10|eau1da|ev sov delay - adjusted|0
+~#
+~+|1|mf11|util01|utility - time period interval 01|0
+~+|1|mf12|util02|utility - time period interval 02|0
+~+|1|mf13|util03|utility - time period interval 03|0
+~+|1|mf14|util04|utility - time period interval 04|0
+~+|1|mf15|util05|utility - time period interval 05|0
+~+|1|mf16|util06|utility - time period interval 06|0
+~+|1|mf17|util07|utility - time period interval 07|0
+~+|1|mf18|util08|utility - time period interval 08|0
+~+|1|mf19|util09|utility - time period interval 09|0
+~+|1|mf20|util10|utility - time period interval 10|0
+~+|1|mf21|util11|utility - time period interval 11|0
+~+|1|mf22|util12|utility - time period interval 12|0
+~+|1|mf23|util13|utility - time period interval 13|0
+~+|1|mf24|util14|utility - time period interval 14|0
+~+|1|mf25|util15|utility - time period interval 15|0
+~+|1|mf26|util16|utility - time period interval 16|0
+~+|1|mf27|util17|utility - time period interval 17|0
+~+|1|mf28|util18|utility - time period interval 18|0
+~+|1|mf29|util19|utility - time period interval 19|0
+~+|1|mf30|util20|utility - time period interval 20|0
+~+|1|mf31|util21|utility - time period interval 21|0
+~+|1|mf32|util22|utility - time period interval 22|0
+~+|1|mf33|util23|utility - time period interval 23|0
+~+|1|mf34|util24|utility - time period interval 24|0
+~+|1|mf35|util25|utility - time period interval 25|0
+~+|1|mf36|util26|utility - time period interval 26|0
+~+|1|mf37|util27|utility - time period interval 27|0
+~+|1|mf38|util28|utility - time period interval 28|0
+~+|1|mf39|util29|utility - time period interval 29|0
+~+|1|mf40|util30|utility - time period interval 30|0
+~+|1|mf41|util31|utility - time period interval 31|0
+~+|1|mf42|util32|utility - time period interval 32|0
+~+|1|mf43|utils|sum of utilities|0
+~#
+~+|1|mf44|am3ns|sov am a-p tod share - hbshop|0
+~+|1|mf45|md3ns|sov md a-p tod share - hbshop|0
+~+|1|mf46|pm3ns|sov pm a-p tod share - hbshop|0
+~+|1|mf47|ev3ns|sov ev a-p tod share - hbshop|0
+~+|1|mf48|ni3ns|sov ni a-p tod share - hbshop|0
+~#
+~+|1|mf49|am4ns|sov am p-a tod share - hbshop|0
+~+|1|mf50|md4ns|sov md p-a tod share - hbshop|0
+~+|1|mf51|pm4ns|sov pm p-a tod share - hbshop|0
+~+|1|mf52|ev4ns|sov ev p-a tod share - hbshop|0
+~+|1|mf53|ni4ns|sov ni p-a tod share - hbshop|0
+q
+~#
+~/end: 6_initialize_full_matrices.mac
+~/exit emme
+~/
+q

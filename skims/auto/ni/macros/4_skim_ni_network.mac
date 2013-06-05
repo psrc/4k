@@ -1,0 +1,99 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4_skim_ni_network.rpt
+~/
+~/
+~/begin: 4_skim_ni_network.mac
+~/ ...set active scenario to 1006
+s=1006
+~/ ...call module 2.41: network calculations
+2.41
+~/ ...copy network attribute 'timau' to '@timau'
+~+|1|y|@timau|n|timau||*|2|2
+q
+~/ ...call module 6.16: path analysis for path-based traffic assignment
+6.16
+~# ...time (or cost) for shortest path
+1
+~/ ...skim auto vehicle classes for generalized cost
+~/ ...specify generalized cost matrices
+~+|mf"nau1cs"|n /class 1: non-work sov
+~+|mf"nau2cs"|n /class 2: hov 2
+~+|mf"nau3cs"|n /class 3: hov 3+
+~+|mf"nau4cs"|n /class 4: vanpool
+~+|mf"na1cs1"|n /class 5: hbw income 1 sov
+~+|mf"na1cs2"|n /class 6: hbw income 2 sov
+~+|mf"na1cs3"|n /class 7: hbw income 3 sov
+~+|mf"na1cs4"|n /class 8: hbw income 4 sov
+~+|mf"nlgtcs"|n /class 9: light truck
+~+|mf"nmedcs"|n /class 10: medium truck
+~+|mf"nhvycs"|n /class 11: heavy truck
+~/ ...write report file         
+2
+~#
+~/ ...skim auto vehicle classes for time
+~# ...user-defined path analysis
+4
+~# ...link attribute for path analysis
+@timau
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~/ ...specify time matrices
+~+||mf"nau1tm"|n||| /class 1: non-work sov
+~+||mf"nau2tm"|n||| /class 2: hov 2
+~+||mf"nau3tm"|n||| /class 3: hov 3+
+~+||mf"nau4tm"|n||| /class 4: vanpool
+~+||mf"na1tm1"|n||| /class 5: hbw income 1 sov
+~+||mf"na1tm2"|n||| /class 6: hbw income 2 sov
+~+||mf"na1tm3"|n||| /class 7: hbw income 3 sov
+~+||mf"na1tm4"|n||| /class 8: hbw income 4 sov
+~+||mf"nlgttm"|n||| /class 9: light truck
+~+||mf"nmedtm"|n||| /class 10: medium truck
+~+||mf"nhvytm"|n||| /class 11: heavy truck
+~/ ...write report file         
+2
+~#
+~/ ...skim auto vehicle classes for distance
+~# ...user-defined path analysis
+4
+~# ...link attribute for path analysis
+length
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~/ ...specify distance matrices
+~+||mf"nau1ds"|n||| /class 1: non-work sov
+~+||mf"nau2ds"|n||| /class 2: hov 2
+~+||mf"nau3ds"|n||| /class 3: hov 3+
+~+||mf"nau4ds"|n||| /class 4: vanpool
+~+||mf"na1ds1"|n||| /class 5: hbw income 1 sov
+~+||mf"na1ds2"|n||| /class 6: hbw income 2 sov
+~+||mf"na1ds3"|n||| /class 7: hbw income 3 sov
+~+||mf"na1ds4"|n||| /class 8: hbw income 4 sov
+~+||mf"nlgtds"|n||| /class 9: light truck
+~+||mf"nmedds"|n||| /class 10: medium truck
+~+||mf"nhvyds"|n||| /class 11: heavy truck
+~/ ...write report file         
+2
+q
+~#
+~/end: 4_skim_ni_network.mac
+~/exit emme
+~/
+q

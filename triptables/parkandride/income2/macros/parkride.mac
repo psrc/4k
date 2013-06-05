@@ -1,0 +1,313 @@
+ ~$>start
+ ********************************************************************************
+ * Macro File Name: PARKRIDE.MAC                                                *
+ * Original Date: 07/05/2006                                                    *
+ * Revised Date:                                                                *
+ * Purpose: Implements a park and ride logit intermediate destination choice    *
+ *          model using explicit park and ride lot capacities.                  *
+ * Inputs:                                                                      *
+ * Temporary:                                                                   *
+ * Outputs:                                                                     *
+ * Notes:                                                                       *
+ * Report File: PARKRIDE.RPR                                                    *
+ ********************************************************************************
+ ~:start
+ ~o=40
+ ~?!i&32768
+ ~o=295
+ ~/***********************************************************************
+ ~/**  PARKRIDE: LOGIT TYPE PARKING CHOICE MODEL WITH CAPACITY (1.2)    **
+ ~/**  (Copyright (C) 1996   -   Heinz Spiess, Aegerten, Switzerland)   **
+ ~/**            ALPHA TEST VERSION - USE ON YOUR OWN RISK !!!!         **
+ ~/**  Please report problems to heinz@spiess.ch.  The newest version   **
+ ~/**  of this macro can be obtained from http://www.spiess.ch/emme2.   **
+ ~/***********************************************************************
+ ~$>skipnotice
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+ I herewith grant the right to use this macro to all EMME/2 users, provided
+ the following conditions are met:
+ 
+   1) The macro cannot be sold for a fee (but it can be used and distributed
+      within consulting projects).
+ 
+   2) The user is aware that this macro is not a part of the EMME/2 software
+      licence and there is no explicit or implied warranty or support
+      provided with this macro.
+ 
+   3) This notice and the comments in this macro must not be removed.
+ 
+   4) Any additions or modification made by anyone else but me must be
+      clearly identified as such, including date, name and the reason
+      of the modification.
+ 
+ Aegerten, November 6, 1996                                     Heinz Spiess
+ 						
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+ ~:skipnotice
+ ~/***                                                                
+ ~/***  This EMME/2 macro implements Park&Ride logit intermediate destination
+ ~/***  choice model with explicit parking capacities.  The demand using 
+ ~/***  parking lot k as intermediate destination for a praticular O-D pair pq
+ ~/***  is given by solving the following model for a   and b :
+ ~/***                                            pq      k
+ ~/***     G     =  a  * b * U   * A  * V   
+ ~/***      pkq      pq   k   pk    k    kq
+ ~/***
+ ~/***     subject to 
+ ~/***     --                             --       <
+ ~/***     >  G      =  G         and     >  G     =   C
+ ~/***     --  pkq       pq               --  pkq       k
+ ~/***     k                              pq
+ ~/***
+ ~/***  (The mathematical details are described in the note "A Logit Parking
+ ~/***  Choice Model with Explicit Capacities" by Heinz Spiess, available from
+ ~/***  the author in PostScript or HTML format at http://www.spiess.ch/emme2)
+ ~/***
+ ~/***  Note that a similar mixed mode logit intermediate destination choice
+ ~/***  model, but *without* capacity constraints (eg K&R), is implemented
+ ~/***  in a macro named MIMOLEG.MAC, also available from the same author.
+ ~/***                                                                
+ ~/***  Requirements:
+ ~/***  - Macro is started from main menu, needs EMME/2 Release 8.0 or later.
+ ~/***  - All reports are appended to the file parkride.rep.
+ ~/***  - Zone subset for origins, intermediate zones and destinations can
+ ~/***    be specified in registers t1, t2 and t3 (default: all zones).
+ ~/***  - Max. admissible constraint violation can be specified in r1 (def. 1)
+ ~/***  - Max. number of iteration can be specified in r2 (default 20)
+ ~/***  - Origin matrix md99 is used to store the parking lot multipliers
+ ~/***
+ ~/***  Calling sequence:
+ ~/***  ~<parkride <Gpq> <Upk> <Ak> <Vkq> <Ck> <Gk> <Gpk> <Gkq>
+ ~/***  where the first 5 parameters specify the input matrices:
+ ~/***    Gpq     total demand for pakr&ride mode                   (mfXX)
+ ~/***    Upk     conductivity matrix for first leg (usually auto)  (mfXX)
+ ~/***            (for logit models usually exp(-const*upk))
+ ~/***    Ak      Attractivity factor for parking lot k             (mdXX)
+ ~/***            (1 can be specified if not needed)
+ ~/***    Vkq     conductivity matrix for second leg (transit)      (mfXX)
+ ~/***            (for logit models usually exp(-const*vkq))
+ ~/***    Ck      Parking lot capacities                            (mdXX)
+ ~/***  and the last 3 parameters specify the result matrices:
+ ~/***    Gk      Parking lot usage                                 (mdXX)
+ ~/***    Gpk     first leg demand matrix (P&R auto demand)         (mfXX)
+ ~/***    Gkq     second leg demand matrix (P&R transit demand)     (mfXX)
+ ~/***********************************************************************
+ ~x=%m%    /test if started from main menu
+ ~x+%q%
+ ~?x>0
+ ~$stop
+ ~x=%0%
+ ~?x=0
+ ~$stop
+ ~y=3       /test if enough parameters are provided
+ ~?!x=8
+ ~$error
+ c='START parkride %1% %2% %3% %4% %5% %6% %7% %8%'
+ ~p=2005
+ ~z=%p%
+ ~?t1=
+ ~t1=1,999999
+ ~?t2=
+ ~t2=1,999999
+ ~?t3=
+ ~t3=1,999999
+ ~?r1=0
+ ~r1=1
+ ~?r2=0
+ ~r2=20
+ ~/================== PARKRIDE: LOGIT PARKING CHOICE MODEL WITH CAPACITIES ====
+ ~/Input vectors:     Gpq Park&Ride demand matrix                     %1%
+ ~/                   Upk 1st leg conductivity matrix (auto):         %2%
+ ~/                   Ak  Attractivity factors for parking lots (md): %3%
+ ~/                   Vkq 2nd leg conductivity matrix (transit):      %4%
+ ~/                   Ck  Parking lot capacities (md)                 %5%
+ ~/Result matrices:   Gk  Parking lot usage (md):                     %6%
+ ~/                   Gpk First leg demand matrix (auto):             %7%
+ ~/                   Gkq Second leg demand matrix (transit):         %8%
+ ~/Zone selections:   First leg origin zones:                         %t1%
+ ~/                   Intermediate zones (e.g. parking lots):         %t2%
+ ~/                   Second leg destination zones:                   %t3%
+ ~/Stopping criteria: Maximum constraint violation:                   %r1%
+ ~/                   Maximum number of iterations:                   %r2%
+ ~/
+ ~y=-1
+ reports=PARKRIDE.RPR
+ ~/Algorithm to find optimal parking lot multipliers:
+ ~/
+ ~/Iter.  Update  Denomin 1stLeg  1stLeg Parking    Constraint Violation
+ ~/ No.   Multpl  Convol  Convol  Matrix  Totals  maximum    at      total
+ ~:start_iteration
+ ~x=0
+ ~y+1
+ ~~/%y_4%
+ ~~/      X
+ 3.21     /#### initialize parking lot multipliers to 1 (dual variables)
+ 1
+ ~+|y|md99|y|Bk%y%|Parking lot multipliers (it %y%)|~?q=0|0|~?q=1|n
+ 1
+ ~?y>0
+ .min.(%5%*md99/%6%)
+  
+ 
+ ~+|y|%t2%|
+ ~?q=2
+ 2
+ q  
+ 3.21     /#### multiply Upk*Ak*Bk 
+ 1
+ ~+|y|%8%|y|UAB|Upk*Ak*Bk|n
+ %2%*%3%*md99
+  
+ 
+ ~+|y|%t1%||%t2%|
+ ~?q=2
+ 2
+ q  
+ ~~/      X
+ 3.23     /#### compute convolution S=UV
+ 1
+ %8%
+ *
+ %4%
+ n
+ 
+ +  
+ ~+|%8%|y|UV|sumq Upk Vkq|n
+ ~+|y|%t1%||%t2%||%t3%|
+  
+ y
+ 2
+ q
+ 3.21     /#### compute apq=Gpq/Spq
+ 1
+ ~+|y|%8%|y|apq|OD-pair multipliers apq=Gpq/Spq|n
+ %1%/%8%
+  
+ 
+ ~+|y|%t1%||%t3%|
+ ~?q=2
+ 2
+ q  
+ ~~/      X
+ 3.23     /#### compute convolution  aV'
+ 1
+ %8%
+ *
+ %4%
+ y
+ 
+ +  
+ ~+|%7%|y|aV'|first leg convolution aV'|~?q=1|y|0
+ ~+|y|%t1%||%t3%||%t2%|
+  
+ y
+ 2
+ q
+ ~~/      X
+ 3.21     /#### compute Gpk = Upk*(av')pk*Ak
+ 1
+ ~+|y|%7%|y|Gpk|First leg demand matrix|n
+ %2%*%7%*%3%*md99
+  
+  
+ ~+|y|%t1%||%t2%|
+ ~?q=2
+ 2
+ q
+ ~~/      X
+ 3.21     /#### compute intermediate zone totals Gk = sump Gpk
+ 1
+ ~+|y|%6%|y|Gk|Intermediate zone totals|~?q=1|y|0  
+ %7%
+  
+  
+ ~+|y|%t1%||%t2%|
+ +
+ ~?q=2
+ 2
+ 1        /#### compute maximum and total constraint violation
+ n
+ put((put((%6%-%5%).max.0)>get(3))*(q-get(2))+get(2))+
+ (put((get(1).max.0).max.get(3))+put(get(4)+get(1)))
+ 
+ 
+ ~+|y|%t2%|
+ +
+ ~?q=2
+ 2
+ ~r12=%g2%
+ ~r13=%g3%
+ ~r14=%g4%
+ q
+ ~/%r13.2_9%%r12.0_6%%r14.2_11%
+ ~?y<%r2%
+ ~+|~?r13>%r1%|~$start_iteration
+ ~/
+ ~?!r13>%r1%
+ ~/Algorithm terminated - maximum constraint violation < %r1%
+ ~?!y<%r2%
+ ~/Algorithm terminated - maximum number of iterations reached
+ ~/
+ ~~/Computing second leg demand: 
+ ~~/ .
+ 3.12     /#### transpose a -> a'
+ 4
+ 3
+ %8%
+ ~+|%8%|y|a'|O-D multipliers transposed|n
+ q
+ ~~/ .
+ 3.23     /#### compute convolution a'U
+ 1
+ %8%
+ *
+ %2%
+ n
+ 
+ +  
+ %8%
+ ~+|y|atU|second leg convolution a'U|n
+ ~+|y|%t3%||%t1%||%t2%|
+  
+ y
+ 2
+ q
+ ~~/ .
+ 3.12     /#### transpose (a'U) -> (a'U)' = U'a
+ 4
+ 3
+ %8%
+ ~+|%8%|y|Uta|U'a|n
+ q
+ ~~/ .
+ 3.21     /#### compute second leg matrix Gkq = Bk Ak Vkq (U'a)kq
+ 1
+ ~+|y|%8%|y|Gkq|Second leg demand matrix|n
+ md99'*%4%*%8%
+ ~t4=%3%
+ ~?!t4=1
+ *%3%'
+  
+  
+ ~+|y|all|%t3%|
+ ~?q=2
+ 2
+ q
+ ~/ . done
+ reports=^
+ c='END parkride %1% %2% %3% %4% %6% %7% %8%'
+ ~+|~p=2005|~y=%%%p%%%|~y-%z%|~y/10
+ ~/
+ ~/Macro PARKRIDE terminated normally using %y% CPU seconds
+ ~/=======================================================================
+ ~$stop
+ ~:error
+ ~/
+ ~?y=3
+ ~/Invalid number of macro parameters!
+ ~:stop
+ ~o=6
+

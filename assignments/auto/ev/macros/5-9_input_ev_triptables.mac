@@ -1,0 +1,35 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5-9_input_ev_triptables.rpt
+~/
+~/
+~/begin: 5-9_input_ev_triptables.mac
+~# ...call module 1.31: import data from external database
+~/ ...open ev auto trip table emmebank
+1.31
+~+|1
+~/ ...import trip tables
+..\..\..\TripTables\Autos\EV\emmebank
+~+|2|3|3|mf"evehda"|mf"evehda"|n|y
+~+|2|3|3|mf"evehs2"|mf"evehs2"|n|y
+~+|2|3|3|mf"evehs3"|mf"evehs3"|n|y
+~+|2|3|3|mf"ehbw1v"|mf"ehbw1v"|n|y
+~+|2|3|3|mf"ehbw2v"|mf"ehbw2v"|n|y
+~+|2|3|3|mf"ehbw3v"|mf"ehbw3v"|n|y
+~+|2|3|3|mf"ehbw4v"|mf"ehbw4v"|n|y
+q
+~/ ...open ev truck trip table emmebank
+1.31
+~+|1
+~/ ...import trip tables
+..\..\..\TripTables\Trucks\emmebank
+~+|2|3|3|mf"elttrk"|mf"elttrk"|n|y
+~+|2|3|3|mf"emdtrk"|mf"emdtrk"|n|y
+~+|2|3|3|mf"ehvtrk"|mf"ehvtrk"|n|y
+q
+~#
+~/end: 5-9_input_ev_triptables.mac
+~/exit emme
+~/
+q

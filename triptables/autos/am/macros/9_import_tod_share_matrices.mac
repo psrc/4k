@@ -1,0 +1,83 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=9_import_tod_share_matrices.rpt
+~/
+~/
+~/begin: 9_import_tod_share_matrices.mac
+~# ...call module 1.31: import data from external database
+~/ ...open time of day emmebanks
+1.31
+~+|1
+~/ ...hb other hov
+..\..\..\timeofday\hbother\hov\emmebank
+~+|2|3|3|mf"am5sr2"|mf"am5sr2"|n|y
+~+|2|3|3|mf"am5sr3"|mf"am5sr3"|n|y
+~+|2|3|3|mf"am6sr2"|mf"am6sr2"|n|y
+~+|2|3|3|mf"am6sr3"|mf"am6sr3"|n|y
+q
+1.31
+~+|1
+~/ ...hb other sov
+..\..\..\timeofday\hbother\sov\emmebank
+~+|2|3|3|mf"am5ns"|mf"am5ns"|n|y
+~+|2|3|3|mf"am6ns"|mf"am6ns"|n|y
+q
+1.31
+~+|1
+~/ ...hb shop hov
+..\..\..\timeofday\hbshop\hov\emmebank
+~+|2|3|3|mf"am3sr2"|mf"am3sr2"|n|y
+~+|2|3|3|mf"am3sr3"|mf"am3sr3"|n|y
+~+|2|3|3|mf"am4sr2"|mf"am4sr2"|n|y
+~+|2|3|3|mf"am4sr3"|mf"am4sr3"|n|y
+q
+1.31
+~+|1
+~/ ...hb shop sov
+..\..\..\timeofday\hbshop\sov\emmebank
+~+|2|3|3|mf"am3ns"|mf"am3ns"|n|y
+~+|2|3|3|mf"am4ns"|mf"am4ns"|n|y
+q
+1.31
+~+|1
+~/ ...hb work hov
+..\..\..\timeofday\hbwork\hov\emmebank
+~+|2|3|3|mf"am1sr2"|mf"am1sr2"|n|y
+~+|2|3|3|mf"am1sr3"|mf"am1sr3"|n|y
+~+|2|3|3|mf"am2sr2"|mf"am2sr2"|n|y
+~+|2|3|3|mf"am2sr3"|mf"am2sr3"|n|y
+q
+1.31
+~+|1
+~/ ...hb work sov income 1
+..\..\..\timeofday\hbwork\sov\income1\emmebank
+~+|2|3|3|mf"am1ns1"|mf"am1ns1"|n|y
+~+|2|3|3|mf"am2ns1"|mf"am2ns1"|n|y
+q
+1.31
+~+|1
+~/ ...hb work sov income 2
+..\..\..\timeofday\hbwork\sov\income2\emmebank
+~+|2|3|3|mf"am1ns2"|mf"am1ns2"|n|y
+~+|2|3|3|mf"am2ns2"|mf"am2ns2"|n|y
+q
+1.31
+~+|1
+~/ ...hb work sov income 3
+..\..\..\timeofday\hbwork\sov\income3\emmebank
+~+|2|3|3|mf"am1ns3"|mf"am1ns3"|n|y
+~+|2|3|3|mf"am2ns3"|mf"am2ns3"|n|y
+q
+1.31
+~+|1
+~/ ...hb work sov income 4
+..\..\..\timeofday\hbwork\sov\income4\emmebank
+~+|2|3|3|mf"am1ns4"|mf"am1ns4"|n|y
+~+|2|3|3|mf"am2ns4"|mf"am2ns4"|n|y
+q
+~#
+~/end: 9_import_tod_share_matrices.mac
+~/exit emme
+~/
+q

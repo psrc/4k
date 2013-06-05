@@ -1,0 +1,63 @@
+~?!i&32768
+~o|295
+reports=?
+~/
+~/
+~/begin: 13-1_transit_walk_access_mode_choice_summary.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...report mode choice results by time of day
+3.21
+~# ...hb college p>a
+~+|1|n|mf"coldst"*mf"coshtw"*0.000*0.514|||y|1,%1%||1,%1%||||2|..\..\summaries\transit_walk_access_mode_choice_summary.rpt
+~# ...hb college a>p
+~+|1|n|mf"coldst"*mf"coshtw"*0.000*0.486|||y|1,%1%||1,%1%||||2
+~# ...hb other p>a
+~+|1|n|mf"hbodst"*mf"nwshtw"*0.010*0.542|||y|1,%1%||1,%1%||||2
+~# ...hb other a>p
+~+|1|n|mf"hbodst"*mf"nwshtw"*0.068*0.458|||y|1,%1%||1,%1%||||2
+~# ...hb shop p>a
+~+|1|n|mf"hspdst"*mf"nwshtw"*0.000*0.391|||y|1,%1%||1,%1%||||2
+~# ...hb shop a>p
+~+|1|n|mf"hspdst"*mf"nwshtw"*0.034*0.609|||y|1,%1%||1,%1%||||2
+~# ...hb school p>a
+~+|1|n|mf"schdst"*mf"scshtw"*0.000*0.503|||y|1,%1%||1,%1%||||2
+~# ...hb school a>p
+~+|1|n|mf"schdst"*mf"scshtw"*0.000*0.497|||y|1,%1%||1,%1%||||2
+~# ...hb work income 1 p>a
+~+|1|n|mf"hbwds1"*mf"w1shtw"*0.118*0.511|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"twleg1"*0.220*0.477|||y|%4%,%5%||1,%1%||||2
+~# ...hb work income 1 a>p
+~+|1|n|mf"hbwds1"*mf"w1shtw"*0.005*0.489|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"twleg1"*0.114*0.523|||y|%4%,%5%||1,%1%||||2
+~# ...hb work income 2 p>a
+~+|1|n|mf"hbwds2"*mf"w2shtw"*0.097*0.550|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"twleg2"*0.199*0.554|||y|%4%,%5%||1,%1%||||2
+~# ...hb work income 2 a>p
+~+|1|n|mf"hbwds2"*mf"w2shtw"*0.051*0.450|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"twleg2"*0.106*0.446|||y|%4%,%5%||1,%1%||||2
+~# ...hb work income 3 p>a
+~+|1|n|mf"hbwds3"*mf"w3shtw"*0.168*0.545|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"twleg3"*0.293*0.515|||y|%4%,%5%||1,%1%||||2
+~# ...hb work income 3 a>p
+~+|1|n|mf"hbwds3"*mf"w3shtw"*0.014*0.455|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"twleg3"*0.000*0.485|||y|%4%,%5%||1,%1%||||2
+~# ...hb work income 4 p>a
+~+|1|n|mf"hbwds4"*mf"w4shtw"*0.095*0.528|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"twleg4"*0.260*0.571|||y|%4%,%5%||1,%1%||||2
+~# ...hb work income 4 a>p
+~+|1|n|mf"hbwds4"*mf"w4shtw"*0.070*0.472|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"twleg4"*0.000*0.429|||y|%4%,%5%||1,%1%||||2
+~# ...nhb other/other p>a
+~+|1|n|mf"otodst"*mf"nhshtw"*0.034/2|||y|1,%1%||1,%1%||||2
+~# ...nhb other/other a>p
+~+|1|n|mf"otodst"*mf"nhshtw"*0.034/2|||y|1,%1%||1,%1%||||2
+~# ...nhb work/other p>a
+~+|1|n|mf"wkodst"*mf"nhshtw"*0.006/2|||y|1,%1%||1,%1%||||2
+~# ...nhb work/other a>p
+~+|1|n|mf"wkodst"*mf"nhshtw"*0.006/2|||y|1,%1%||1,%1%||||2|4
+reports=?
+~#
+~/end: 13-1_transit_walk_access_mode_choice_summary.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,22 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_input_data.rpt
+~/
+~/
+~/begin: 7_input_data.mac
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...input hhs by income-size-workers-vehicles (vehmtx.in)
+3.11
+~+|..\..\Generation\Activity\Output\vehmtx.in|2|
+~/ ...input car-person category matrix
+3.11
+~+|..\..\Model\ModeChoice\nonwork_car-person_categories.in|2|
+~#~/ ...input hb non-work market segment coefficients
+~#3.11
+~#~+|..\..\Model\ModeChoice\hb_nonwork_market_segment_coefficients.in|2|
+~#
+~/end: 7_input_data.mac
+~/exit emme
+~/
+q

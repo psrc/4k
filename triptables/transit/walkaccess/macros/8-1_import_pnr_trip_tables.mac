@@ -1,0 +1,38 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=8-1_import_pnr_trip_tables.rpt
+~/
+~/
+~/begin: 8-1_import_pnr_trip_tables.mac
+~# ...call module 1.31: import data from external database
+~/ ...open pnr trip table emmebanks
+1.31
+~+|1
+~/ ...income 1 
+..\..\..\TripTables\ParkAndRide\Income1\emmebank
+~+|2|3|3|mf"twleg1"|mf"twleg1"|n|y
+q
+1.31
+~+|1
+~/ ...income 2 
+..\..\..\TripTables\ParkAndRide\Income2\emmebank
+~+|2|3|3|mf"twleg2"|mf"twleg2"|n|y
+q
+1.31
+~+|1
+~/ ...income 3 
+..\..\..\TripTables\ParkAndRide\Income3\emmebank
+~+|2|3|3|mf"twleg3"|mf"twleg3"|n|y
+q
+1.31
+~+|1
+~/ ...income 4
+..\..\..\TripTables\ParkAndRide\Income4\emmebank
+~+|2|3|3|mf"twleg4"|mf"twleg4"|n|y
+q
+~#
+~/end: 8-1_import_pnr_trip_tables.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,10 @@
+REM AM
+call batchfiles\setup\congested\am_setup.bat
+REM MD
+call batchfiles\setup\congested\md_setup.bat
+REM PM
+call batchfiles\setup\congested\pm_setup.bat
+REM EV
+call batchfiles\setup\congested\ev_setup.bat
+REM NI
+call batchfiles\setup\congested\ni_setup.bat

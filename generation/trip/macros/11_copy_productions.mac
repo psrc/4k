@@ -1,0 +1,26 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=11_copy_productions.rpt
+~/
+~/
+~/begin: 11_copy_productions.mac
+~/ ...call module 3.12: input / modify matrices interactively
+~/ ...copy trip productions from mf"tgvect" to origin matrices 
+3.12
+~+|4|1|mf"tgvect"|mo"colpro"|n|y|*|2|*|y
+~+|4|1|mf"tgvect"|mo"hsppro"|n|y|*|3|*|y
+~+|4|1|mf"tgvect"|mo"hbopro"|n|y|*|4|*|y
+~+|4|1|mf"tgvect"|mo"schpro"|n|y|*|5|*|y
+~+|4|1|mf"tgvect"|mo"wkopro"|n|y|*|6|*|y
+~+|4|1|mf"tgvect"|mo"otopro"|n|y|*|7|*|y
+~+|4|1|mf"tgvect"|mo"hbwpr1"|n|y|*|17|*|y
+~+|4|1|mf"tgvect"|mo"hbwpr2"|n|y|*|18|*|y
+~+|4|1|mf"tgvect"|mo"hbwpr3"|n|y|*|19|*|y
+~+|4|1|mf"tgvect"|mo"hbwpr4"|n|y|*|20|*|y
+q
+~#
+~/end: 11_copy_productions.mac
+~/exit emme
+~/
+q

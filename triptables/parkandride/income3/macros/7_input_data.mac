@@ -1,0 +1,16 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_input_data.rpt
+~/
+~/
+~/begin: 7_input_data.mac
+~# ...call module 3.11: input matrices using batch entry
+~/ ...input pnr lot capacities
+3.11
+~+|..\..\..\input\pnr\pnr_lot_capacities.in|2|
+~#
+~/end: 7_input_data.mac
+~/exit emme
+~/
+q

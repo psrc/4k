@@ -1,0 +1,21 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=17_report_mode_shares.rpt
+~/
+~/
+~/begin: 17_report_mode_shares.mac
+~# ...call module 3.21: matrix calculations
+3.21
+~+|1|n|mf"nwshda"*(mf"hspdst"+mf"hbodst")|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"nwshs2"*(mf"hspdst"+mf"hbodst")|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"nwshs3"*(mf"hspdst"+mf"hbodst")|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"nwshtw"*(mf"hspdst"+mf"hbodst")|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"nwshwk"*(mf"hspdst"+mf"hbodst")|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"nwshbk"*(mf"hspdst"+mf"hbodst")|||y|1,%1%||1,%1%||||2
+q
+~#
+~/end: 17_report_mode_shares.mac
+~/exit emme
+~/
+q

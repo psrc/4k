@@ -1,0 +1,53 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5_md_extended_transit_skims.rpt
+~/
+~/
+~/begin: 5_md_extended_transit_skims.mac
+~/ ...set active scenario to 1004
+s=1004
+~/ ...call module 6.27: analysis for extended transit assignment
+6.27
+~/ ...calculate in-vehicle time by sub-mode
+~/ ...local bus
+~+|1|2|5|mfmivtb|n|n|1|b|2|q
+6.27
+~/ ...premium bus
+~+|1|2|5|mfmivtp|n|n|1|p|2|q
+6.27
+~/ ...brt
+~+|1|2|5|mfmivtd|n|n|1|d|2|q
+6.27
+~/ ...light rail
+~+|1|2|5|mfmivtr|n|n|1|r|2|q
+6.27
+~/ ...commuter rail
+~+|1|2|5|mfmivtc|n|n|1|c|2|q
+6.27
+~/ ...ferry
+~+|1|2|5|mfmivtf|n|n|1|f|2|q
+~#
+~/ ...calculate transit skim components for all sub-modes
+6.27
+~/ ...in-vehicle time
+~+|1|2|5|mfmivtwa|n|n|1|bpdrcf|2|q
+6.27
+~/ ...initial wait time
+~+|1|2|1|mfmiwtwa|n|n|1|2|q
+6.27
+~/ ...total wait time
+~+|1|2|2|mfmtwtwa|n|n|1|2|q
+6.27
+~/ ...total number of boardings
+~+|1|5|mfmnbdwa|n|n|bpdrcf|2|q
+~/ ...call module 3.21: matrix calculations
+3.21
+~/ ...calculate total transfer time (total wait time - initial wait time)
+~+|1|y|mf"mxfrwa"|n|(mf"mtwtwa"-mf"miwtwa").max.0|||n|2
+q
+~#
+~/end: 5_md_extended_transit_skims.rpt
+~/exit emme
+~/
+q

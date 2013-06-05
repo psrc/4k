@@ -1,0 +1,33 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=11_calculate_shared_ride_2_utility.rpt
+~/
+~/
+~/begin: 11_calculate_shared_ride_2_utility.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate hb work income 2 choice exponentiated utilities
+3.21
+~/ ...shared ride 2
+~+|1|y|mf"wkeus2"|n
+exp
+(
+ms"asccs2"
++
+ms"autivt"*
+mf"au2btm"
+~#(mf"au2btm"-mf"termtm")
+~#+
+~#ms"autovt"*
+~#mf"termtm"
++
+ms"autcos"*
+mf"au2bct"
+)
+~+|||y|1,%1%||1,%1%||2
+q
+~#
+~/end: 11_calculate_shared_ride_2_utility.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,53 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4_md_extended_transit_assignment.rpt
+~/
+~/
+~/begin: 4_md_extended_transit_assignment.mac
+~/ ...set active scenario to 1004
+s=1004
+~/ ...call module 5.32: extended transit assignment
+5.32
+~/ ...select optimal strategies
+~+|1
+~/ ...transit demand matrice
+~+|mf"mtrnwa"
+~/ ...active transit and auxiliary transit modes for assignment
+bcdfprwx
+~/ ...continue if auto mode not available for segments with ttfs based on auto time
+y
+~/ ...specify source for effective headways
+1     /actual line headways
+~/ ...headway fraction
+0.5
+~/ ...spread factor
+1.0
+~/ ...wait time perception factor
+2.0
+~/ ...specify source for boarding times
+1     /same value for entire network
+~/ ...enter boarding time (in minutes)
+4
+~/ ...boarding time perception factor
+1.0
+~/ ...specify source for boarding costs
+1     /same value for entire network
+~/ ...enter boarding cost
+0
+~/ ...boarding cost perception factor
+1.0
+~/ ...in-vehicle time perception factor
+1.0
+~/ ...in-vehicle cost attribute
+
+~/ ...auxiliary time perception factor
+2
+~/ ...auxiliary cost attribute
+
+~/ ...write report file
+2
+~/end: 4_md_extended_transit_assignment.mac
+~/exit emme
+~/
+q

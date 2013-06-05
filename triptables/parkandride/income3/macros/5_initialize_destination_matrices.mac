@@ -1,0 +1,24 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5_initialize_destination_matrices.rpt
+~/
+~/
+~/begin: 5_initialize_destination_matrices.mac
+~/ ...call mddule 3.12: input/modify matrices interactively
+~/ ...initialize destination matrices
+3.12
+~+|1|md01|pnrcap|pnr lot capacities|0
+~+|1|md02|pnrfac|pnr lot factor to balance usage|1
+~+|1|md03|pnrus3|pnr usage|0
+~+|1|md04|pnrbal|pnr balancing factors|0
+~+|1|md05|pnrdly|pnr delay time|0
+~+|1|md06|adjcap|adjusted pnr lot capacities|0
+~#
+~+|1|md50|scrap|parkride macro - pnr usage|0
+q
+~#
+~/end: 5_initialize_destination_matrices.mac
+~/exit emme
+~/
+q

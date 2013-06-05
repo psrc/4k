@@ -1,0 +1,62 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_initialize_full_matrices.rpt
+~/
+~/
+~/begin: 6_initialize_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~# drive alone matrices
+~+|1|mf01|coeuda|hb college sov exponentiated utility|0
+~+|1|mf02|au1bcs|am sov bi-directional gc|0
+~+|1|mf03|au1btm|am sov bi-directional time|0
+~+|1|mf04|au1bct|am sov bi-directional cost|0
+~+|1|mf05|au1bds|am sov bi-directional dist|0
+~#
+~+|1|mf06|coeus2|hb college sr 2 exponentiated utility|0
+~+|1|mf07|au2bcs|am sr 2 bi-directional gc|0
+~+|1|mf08|au2btm|am sr 2 bi-directional time|0
+~+|1|mf09|au2bct|am sr 2 bi-directional cost|0
+~+|1|mf10|au2bds|am sr 2 bi-directional dist|0
+~#
+~+|1|mf11|coeus3|hb college sr 3+ exponentiated utility|0
+~+|1|mf12|au3bcs|am sr 3+ bi-directional gc|0
+~+|1|mf13|au3btm|am sr 3+ bi-directional time|0
+~+|1|mf14|au3bct|am sr 3+ bi-directional cost|0
+~+|1|mf15|au3bds|am sr 3+ bi-directional dist|0
+~#
+~+|1|mf16|termtm|auto mode terminal time|0
+~#
+~+|1|mf17|coeutw|hb college tw exponentiated utility|0
+~+|1|mf18|aivtwa|am transit in-vehicle time|0
+~+|1|mf19|aauxwa|am auxiliary transit time|0
+~+|1|mf20|aiwtwa|am initial wait time|0
+~+|1|mf21|abrdwa|am boarding time|0
+~+|1|mf22|anbdwa|am average number of boardings|0
+~+|1|mf23|axfrwa|am total transfer time|0
+~+|1|mf24|afarbx|am transit fare - farebox|0
+~+|1|mf25|afarwa|am transit fare - average|0
+~#
+~+|1|mf26|coeubk|hb college bike exponentiated utility|0
+~+|1|mf27|abketm|am bike time|0
+~#
+~+|1|mf28|coeuwk|hb college walk exponentiated utility|0
+~+|1|mf29|awlktm|am walk time|0
+~#
+~+|1|mf30|coeusm|hb college exponentiated utility sum|0
+~+|1|mf31|coshda|hb college sov mode share|0
+~+|1|mf32|coshs2|hb college shared ride 2 mode share|0
+~+|1|mf33|coshs3|hb college shared ride 3+ mode share|0
+~+|1|mf34|coshtw|hb college tw mode share|0
+~+|1|mf35|coshbk|hb college bike mode share|0
+~+|1|mf36|coshwk|hb college walk mode share|0
+~#
+~+|1|mf37|coldst|hb college distribution|0
+q
+~#
+~/end: 6_initialize_full_matrices.mac
+~/exit emme
+~/
+q

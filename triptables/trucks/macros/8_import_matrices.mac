@@ -1,0 +1,22 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=8_import_matrices.rpt
+~/
+~/
+~/begin: 8_import_matrices.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open truck trip distribution emmebank
+~+|1
+..\..\trucks\distribution\emmebank
+~/ ...import truck distribution matrices
+~+|2|3|3|mf"lgtdis"|mf"lgtdis"|n|y
+~+|2|3|3|mf"meddis"|mf"meddis"|n|y
+~+|2|3|3|mf"hvydis"|mf"hvydis"|n|y
+q
+~#
+~/end: 8_import_matrices.mac
+~/exit emme
+~/
+q

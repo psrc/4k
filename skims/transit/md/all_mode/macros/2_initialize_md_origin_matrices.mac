@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2_initialize_md_origin_matrices.rpt
+~/
+~/
+~/begin: 2_initialize_md_origin_matrices.mac
+~/ ...set active scenario to 1004
+s=1004
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize origin matrices
+3.12
+~+|1|mo01|walkac|walk access time at production end|0
+q
+~#
+~/end: 2_initialize_md_origin_matrices.mac
+~/exit emme
+~/
+q

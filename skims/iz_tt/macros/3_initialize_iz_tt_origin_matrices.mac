@@ -1,0 +1,20 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3_initialize_iz_tt_origin_matrices.rpt
+~/
+~/
+~/begin: 3_initialize_iz_tt_origin_matrices.mac
+~/ ...set active scenario to 9999
+s=9999
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize origin matrices
+3.12
+~+|1|mo01|prodtt|terminal time at production end|0
+~+|1|mo02|tazacr|taz area (in acres)|0
+q
+~#
+~/end: 3_initialize_iz_tt_origin_matrices.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,30 @@
+c 2010 observed ferry vehicle fares
+c 2010$ (cents)
+c Kingston-Edmonds (EB)
+45113 43122 1185 1185 1185 1780 4740 8295
+c Edmonds-Kingston (WB)
+43122 45113 1185 1875 2634 1780 4740 8295
+c Bainbridge-Seattle (EB)
+81733 86547 1185 1185 1185 1780 4740 8295
+c Seattle-Bainbridge (WB)
+86547 81733 1185 1875 2634 1780 4740 8295
+c Bremerton-Seattle (EB)
+186548 86603 1185 1185 1185 1780 4740 8295
+c Seattle-Bremerton (WB)
+86603 186548 1185 1875 2634 1780 4740 8295
+c Southworth-Fauntleroy (EB)
+106246 104527 915 915 915 1375 3660 6405
+c Fauntleroy-Southworth (WB)
+104527 106246 915 1445 2028 1375 3660 6405
+c Southworth-Vashon (EB)
+106246 186103 1520 1965 2455 2280 6080 10640
+c Vashon-Southworth (WB)
+186103 106246 0 0 0 0 0 0
+c Vashon-Fauntleroy (EB)
+186103 104527 0 0 0 0 0 0
+c Fauntleroy-Vashon (WB)
+104527 186103 1520 1965 2455 2280 6080 10640
+c Talhequah-Point Defiance (EB)
+136674 139579 0 0 0 0 0 0
+c Point Defiance-Tahlequah (WB)
+139579 136674 1520 1965 2455 2280 6080 10640

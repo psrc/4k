@@ -1,0 +1,26 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2_initialize_am_full_matrices.rpt
+~/
+~/
+~/begin: 2_initialize_am_full_matrices.mac
+~/ ...set active scenario to 1002
+s=1002
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|atrnwa|am transit person trip table|0
+~+|1|mf02|atrtwa|am total transit time|0
+~+|1|mf03|aivtwa|am transit in-vehicle time|0
+~+|1|mf04|aauxwa|am auxiliary transit time|0
+~+|1|mf05|atwtwa|am total wait time|0
+~+|1|mf06|aiwtwa|am initial wait time|0
+~+|1|mf07|abrdwa|am boarding time|0
+~+|1|mf08|anbdwa|am average number of boardings|0
+q
+~#
+~/end: 2_initialize_am_full_matrices.mac
+~/exit emme
+~/
+q

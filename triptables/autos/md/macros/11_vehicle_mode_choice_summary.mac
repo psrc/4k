@@ -1,0 +1,96 @@
+~?!i&32768
+~o|295
+reports=?
+~! if exist ..\..\summaries\vehicle_mode_choice_summary_md.rpt erase ..\..\summaries\vehicle_mode_choice_summary_md.rpt
+~/
+~/
+~/begin: 11_vehicle_mode_choice_summary.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...report mode choice results by time of day
+3.21
+~# ...hb college p>a
+~+|1|n|mf"coldst"*mf"coshda"*0.415*0.514|||y|1,%1%||1,%1%||||2|..\..\summaries\vehicle_mode_choice_summary_md.rpt
+~+|1|n|mf"coldst"*mf"coshs2"*0.387*0.604|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"coldst"*mf"coshs3"*0.316*0.669|||y|1,%1%||1,%1%||||2
+~# ...hb college a>p
+~+|1|n|mf"coldst"*mf"coshda"*0.516*0.486|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"coldst"*mf"coshs2"*0.425*0.396|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"coldst"*mf"coshs3"*0.187*0.331|||y|1,%1%||1,%1%||||2
+~# ...hb other p>a
+~+|1|n|mf"hbodst"*mf"nwshda"*mf"md4ns"*0.479|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbodst"*mf"nwshs2"*mf"md4sr2"*0.506|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbodst"*mf"nwshs3"*mf"md4sr3"*0.488|||y|1,%1%||1,%1%||||2
+~# ...hb other a>p
+~+|1|n|mf"hbodst"*mf"nwshda"*mf"md3ns"*0.521|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbodst"*mf"nwshs2"*mf"md3sr2"*0.494|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbodst"*mf"nwshs3"*mf"md3sr3"*0.512|||y|1,%1%||1,%1%||||2
+~# ...hb shop p>a
+~+|1|n|mf"hspdst"*mf"nwshda"*mf"md6ns"*0.365|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hspdst"*mf"nwshs2"*mf"md6sr2"*0.383|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hspdst"*mf"nwshs3"*mf"md6sr3"*0.408|||y|1,%1%||1,%1%||||2
+~# ...hb shop a>p
+~+|1|n|mf"hspdst"*mf"nwshda"*mf"md5ns"*0.635|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hspdst"*mf"nwshs2"*mf"md5sr2"*0.617|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hspdst"*mf"nwshs3"*mf"md5sr3"*0.592|||y|1,%1%||1,%1%||||2
+~# ...hb school p>a
+~+|1|n|mf"schdst"*mf"scshda"*0.097*0.556|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"schdst"*mf"scshs2"*0.125*0.630|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"schdst"*mf"scshs3"*0.123*0.569|||y|1,%1%||1,%1%||||2
+~# ...hb school a>p
+~+|1|n|mf"schdst"*mf"scshda"*0.681*0.444|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"schdst"*mf"scshs2"*0.429*0.370|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"schdst"*mf"scshs3"*0.303*0.431|||y|1,%1%||1,%1%||||2
+~# ...hb work income 1 p>a
+~+|1|n|mf"hbwds1"*mf"w1shda"*mf"md2ns1"*0.520|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds1"*mf"w1shs2"*mf"md2sr2"*0.502|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds1"*mf"w1shs3"*mf"md2sr3"*0.759|||y|1,%1%||1,%1%||||2
+~# ...hb work income 1 a>p
+~+|1|n|mf"hbwds1"*mf"w1shda"*mf"md1ns1"*0.480|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds1"*mf"w1shs2"*mf"md1sr2"*0.498|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds1"*mf"w1shs3"*mf"md1sr3"*0.241|||y|1,%1%||1,%1%||||2
+~# ...hb work income 2 p>a
+~+|1|n|mf"hbwds2"*mf"w2shda"*mf"md2ns2"*0.538|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds2"*mf"w2shs2"*mf"md2sr2"*0.529|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds2"*mf"w2shs3"*mf"md2sr3"*0.549|||y|1,%1%||1,%1%||||2
+~# ...hb work income 2 a>p
+~+|1|n|mf"hbwds2"*mf"w2shda"*mf"md1ns2"*0.462|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds2"*mf"w2shs2"*mf"md1sr2"*0.471|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds2"*mf"w2shs3"*mf"md1sr3"*0.451|||y|1,%1%||1,%1%||||2
+~# ...hb work income 3 p>a
+~+|1|n|mf"hbwds3"*mf"w3shda"*mf"md2ns3"*0.529|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds3"*mf"w3shs2"*mf"md2sr2"*0.538|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds3"*mf"w3shs3"*mf"md2sr3"*0.512|||y|1,%1%||1,%1%||||2
+~# ...hb work income 3 a>p
+~+|1|n|mf"hbwds3"*mf"w3shda"*mf"md1ns3"*0.471|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds3"*mf"w3shs2"*mf"md1sr2"*0.462|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds3"*mf"w3shs3"*mf"md1sr3"*0.488|||y|1,%1%||1,%1%||||2
+~# ...hb work income 4 p>a
+~+|1|n|mf"hbwds4"*mf"w4shda"*mf"md2ns4"*0.532|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds4"*mf"w4shs2"*mf"md2sr2"*0.549|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds4"*mf"w4shs3"*mf"md2sr3"*0.698|||y|1,%1%||1,%1%||||2
+~# ...hb work income 4 a>p
+~+|1|n|mf"hbwds4"*mf"w4shda"*mf"md1ns4"*0.468|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds4"*mf"w4shs2"*mf"md1sr2"*0.451|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"hbwds4"*mf"w4shs3"*mf"md1sr3"*0.302|||y|1,%1%||1,%1%||||2
+~# ...nhb other/other p>a
+~+|1|n|mf"otodst"*mf"nhshda"*0.552/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"otodst"*mf"nhshs2"*0.459/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"otodst"*mf"nhshs3"*0.386/2|||y|1,%1%||1,%1%||||2
+~# ...nhb other/other a>p
+~+|1|n|mf"otodst"*mf"nhshda"*0.552/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"otodst"*mf"nhshs2"*0.459/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"otodst"*mf"nhshs3"*0.386/2|||y|1,%1%||1,%1%||||2
+~# ...nhb work/other p>a
+~+|1|n|mf"wkodst"*mf"nhshda"*0.438/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"wkodst"*mf"nhshs2"*0.390/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"wkodst"*mf"nhshs3"*0.515/2|||y|1,%1%||1,%1%||||2
+~# ...nhb work/other a>p
+~+|1|n|mf"wkodst"*mf"nhshda"*0.438/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"wkodst"*mf"nhshs2"*0.390/2|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"wkodst"*mf"nhshs3"*0.515/2|||y|1,%1%||1,%1%||||2|4
+reports=?
+~#
+~/end: 11_vehicle_mode_choice_summary.mac
+~/exit emme
+~/
+q

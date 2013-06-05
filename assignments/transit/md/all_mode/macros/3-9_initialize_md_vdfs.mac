@@ -1,0 +1,24 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3-9_initialize_md_vdfs.rpt
+~/
+~/
+~/begin: 3-9_initialize_md_vdfs.mac
+~/ ...set active scenario to 1004
+s=1004
+~/ ...call module 4.12: input/modify functions interactively
+~/ ...initialize function table
+4.12
+~+|1|y
+q
+~/ ...call module 4.11: input functions using batch entry
+~/ ...input mid-day vdfs
+4.11
+..\..\..\..\model\vdfs\md_vdfs.in
+2
+~#
+~/end: 3-9_initialize_md_vdfs.mac
+~/exit emme
+~/
+q

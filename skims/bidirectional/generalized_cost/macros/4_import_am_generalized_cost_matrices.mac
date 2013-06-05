@@ -1,0 +1,29 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4_import_am_generalized_cost_matrices.rpt
+~/
+~/
+~/begin: 4_import_am_generalized_cost_matrices.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am auto skim emmebank
+~+|1
+..\..\..\skims\auto\am\emmebank
+~/ ...import am generalized cost matrices
+~+|2|3|3|mf"aau1cs"|mf"aau1cs"|n|y
+~+|2|3|3|mf"aau2cs"|mf"aau2cs"|n|y
+~+|2|3|3|mf"aau3cs"|mf"aau3cs"|n|y
+~+|2|3|3|mf"aa1cs1"|mf"aa1cs1"|n|y
+~+|2|3|3|mf"aa1cs2"|mf"aa1cs2"|n|y
+~+|2|3|3|mf"aa1cs3"|mf"aa1cs3"|n|y
+~+|2|3|3|mf"aa1cs4"|mf"aa1cs4"|n|y
+~+|2|3|3|mf"algtcs"|mf"algtcs"|n|y
+~+|2|3|3|mf"amedcs"|mf"amedcs"|n|y
+~+|2|3|3|mf"ahvycs"|mf"ahvycs"|n|y
+q
+~#
+~/end: 4_import_am_generalized_cost_matrices.mac
+~/exit emme
+~/
+q

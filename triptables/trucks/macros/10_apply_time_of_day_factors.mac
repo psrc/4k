@@ -1,0 +1,55 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=10_apply_time_of_day_factors.rpt
+~/
+~/
+~/begin: 10_apply_time_of_day_factors.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...apply time of day factors to daily truck o-d tables
+3.21
+~/ ...am
+~/ ...light trucks
+~+|1|y|mf"alttrk"|n|mf"lgtod"*.194|||n|2
+~/ ...medium trucks
+~+|1|y|mf"amdtrk"|n|(mf"medod"*.208)*1.5|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"ahvtrk"|n|(mf"hvyod"*.209)*2.0|||n|2
+~#
+~/ ...md
+~/ ...light trucks
+~+|1|y|mf"mlttrk"|n|mf"lgtod"*.346|||n|2
+~/ ...medium trucks
+~+|1|y|mf"mmdtrk"|n|(mf"medod"*.417)*1.5|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"mhvtrk"|n|(mf"hvyod"*.468)*2.0|||n|2
+~#
+~/ ...pm
+~/ ...light trucks
+~+|1|y|mf"plttrk"|n|mf"lgtod"*.240|||n|2
+~/ ...medium trucks
+~+|1|y|mf"pmdtrk"|n|(mf"medod"*.204)*1.5|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"phvtrk"|n|(mf"hvyod"*.189)*2.0|||n|2
+~#
+~/ ...ev
+~/ ...light trucks
+~+|1|y|mf"elttrk"|n|mf"lgtod"*.126|||n|2
+~/ ...medium trucks
+~+|1|y|mf"emdtrk"|n|(mf"medod"*.095)*1.5|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"ehvtrk"|n|(mf"hvyod"*.071)*2.0|||n|2
+~#
+~/ ...ni
+~/ ...light trucks
+~+|1|y|mf"nlttrk"|n|mf"lgtod"*.094|||n|2
+~/ ...medium trucks
+~+|1|y|mf"nmdtrk"|n|(mf"medod"*.076)*1.5|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"nhvtrk"|n|(mf"hvyod"*.063)*2.0|||n|2
+q
+~#
+~/end: 10_apply_time_of_day_factors.mac
+~/exit emme
+~/
+q

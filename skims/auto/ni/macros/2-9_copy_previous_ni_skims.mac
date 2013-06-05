@@ -1,0 +1,49 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2-9_copy_previous_ni_skims.rpt
+~/
+~/
+~/begin: 2-9_copy_previous_ni_skims.mac
+~# ...call module 3.12: input/modify matrices interactively
+~/ ...simple copy
+3.12
+~#
+~+|4|1|nau1tm|nau1tp|n|n
+~+|4|1|nau2tm|nau2tp|n|n
+~+|4|1|nau3tm|nau3tp|n|n
+~+|4|1|na1tm1|na1tp1|n|n
+~+|4|1|na1tm2|na1tp2|n|n
+~+|4|1|na1tm3|na1tp3|n|n
+~+|4|1|na1tm4|na1tp4|n|n
+~+|4|1|nlgttm|nlgttp|n|n
+~+|4|1|nmedtm|nmedtp|n|n
+~+|4|1|nhvytm|nhvytp|n|n
+~#
+~+|4|1|nau1cs|nau1cp|n|n
+~+|4|1|nau2cs|nau2cp|n|n
+~+|4|1|nau3cs|nau3cp|n|n
+~+|4|1|na1cs1|na1cp1|n|n
+~+|4|1|na1cs2|na1cp2|n|n
+~+|4|1|na1cs3|na1cp3|n|n
+~+|4|1|na1cs4|na1cp4|n|n
+~+|4|1|nlgtcs|nlgtcp|n|n
+~+|4|1|nmedcs|nmedcp|n|n
+~+|4|1|nhvycs|nhvycp|n|n
+~#
+~+|4|1|nau1ds|nau1dp|n|n
+~+|4|1|nau2ds|nau2dp|n|n
+~+|4|1|nau3ds|nau3dp|n|n
+~+|4|1|na1ds1|na1dp1|n|n
+~+|4|1|na1ds2|na1dp2|n|n
+~+|4|1|na1ds3|na1dp3|n|n
+~+|4|1|na1ds4|na1dp4|n|n
+~+|4|1|nlgtds|nlgtdp|n|n
+~+|4|1|nmedds|nmeddp|n|n
+~+|4|1|nhvyds|nhvydp|n|n
+q
+~#
+~/end: 2-9_copy_previous_ni_skims.mac
+~/exit emme
+~/
+q

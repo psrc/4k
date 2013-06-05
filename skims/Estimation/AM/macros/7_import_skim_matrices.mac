@@ -1,0 +1,170 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_import_skim_matrices.rpt
+~/
+~/
+~/begin: 7_import_skim_matrices.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...am auto skim emmebank
+~+|1
+..\..\..\Skims\Auto\AM\emmebank
+~/ ...import am auto skim matrices
+~+|2|3|3|mf"aau1tm"|mf"aau1tm"|n|y
+~+|2|3|3|mf"aau2tm"|mf"aau2tm"|n|y
+~+|2|3|3|mf"aau3tm"|mf"aau3tm"|n|y
+~+|2|3|3|mf"aa1tm1"|mf"aa1tm1"|n|y
+~+|2|3|3|mf"aa1tm2"|mf"aa1tm2"|n|y
+~+|2|3|3|mf"aa1tm3"|mf"aa1tm3"|n|y
+~+|2|3|3|mf"aa1tm4"|mf"aa1tm4"|n|y
+~+|2|3|3|mf"aau1cs"|mf"aau1cs"|n|y
+~+|2|3|3|mf"aau2cs"|mf"aau2cs"|n|y
+~+|2|3|3|mf"aau3cs"|mf"aau3cs"|n|y
+~+|2|3|3|mf"aa1cs1"|mf"aa1cs1"|n|y
+~+|2|3|3|mf"aa1cs2"|mf"aa1cs2"|n|y
+~+|2|3|3|mf"aa1cs3"|mf"aa1cs3"|n|y
+~+|2|3|3|mf"aa1cs4"|mf"aa1cs4"|n|y
+~+|2|3|3|mf"aau1ds"|mf"aau1ds"|n|y
+~+|2|3|3|mf"aau2ds"|mf"aau2ds"|n|y
+~+|2|3|3|mf"aau3ds"|mf"aau3ds"|n|y
+~+|2|3|3|mf"aa1ds1"|mf"aa1ds1"|n|y
+~+|2|3|3|mf"aa1ds2"|mf"aa1ds2"|n|y
+~+|2|3|3|mf"aa1ds3"|mf"aa1ds3"|n|y
+~+|2|3|3|mf"aa1ds4"|mf"aa1ds4"|n|y
+~+|2|3|3|mf"termtm"|mf"termtm"|n|y
+q
+1.31
+~/ ...am bidirectional skim emmebank
+~+|1
+..\..\..\Skims\BiDirectional\Time\emmebank
+~/ ...import am bidirectional skim matrices
+~+|2|3|3|mf"au1btm"|mf"au1btm"|n|y
+~+|2|3|3|mf"au2btm"|mf"au2btm"|n|y
+~+|2|3|3|mf"au3btm"|mf"au3btm"|n|y
+~+|2|3|3|mf"ah1btm"|mf"ah1btm"|n|y
+~+|2|3|3|mf"ah2btm"|mf"ah2btm"|n|y
+~+|2|3|3|mf"ah3btm"|mf"ah3btm"|n|y
+~+|2|3|3|mf"ah4btm"|mf"ah4btm"|n|y
+q
+1.31
+~/ ...am bidirectional skim emmebank
+~+|1
+..\..\..\Skims\BiDirectional\Generalized_Cost\emmebank
+~/ ...import am bidirectional skim matrices
+~+|2|3|3|mf"au1bcs"|mf"au1bcs"|n|y
+~+|2|3|3|mf"au2bcs"|mf"au2bcs"|n|y
+~+|2|3|3|mf"au3bcs"|mf"au3bcs"|n|y
+~+|2|3|3|mf"ah1bcs"|mf"ah1bcs"|n|y
+~+|2|3|3|mf"ah2bcs"|mf"ah2bcs"|n|y
+~+|2|3|3|mf"ah3bcs"|mf"ah3bcs"|n|y
+~+|2|3|3|mf"ah4bcs"|mf"ah4bcs"|n|y
+q
+1.31
+~/ ...am bidirectional skim emmebank
+~+|1
+..\..\..\Skims\BiDirectional\Distance\emmebank
+~/ ...import am bidirectional skim matrices
+~+|2|3|3|mf"au1bds"|mf"au1bds"|n|y
+~+|2|3|3|mf"au2bds"|mf"au2bds"|n|y
+~+|2|3|3|mf"au3bds"|mf"au3bds"|n|y
+~+|2|3|3|mf"ah1bds"|mf"ah1bds"|n|y
+~+|2|3|3|mf"ah2bds"|mf"ah2bds"|n|y
+~+|2|3|3|mf"ah3bds"|mf"ah3bds"|n|y
+~+|2|3|3|mf"ah4bds"|mf"ah4bds"|n|y
+q
+1.31
+~/ ...am transit skim emmebank
+~+|1
+..\..\..\Skims\Transit\AM\All_Mode\emmebank
+~/ ...import am transit skim matrices
+~+|2|3|3|mf"atrtwa"|mf"atrtwa"|n|y
+~+|2|3|3|mf"aivtwa"|mf"aivtwa"|n|y
+~+|2|3|3|mf"aauxwa"|mf"aauxwa"|n|y
+~+|2|3|3|mf"atwtwa"|mf"atwtwa"|n|y
+~+|2|3|3|mf"aiwtwa"|mf"aiwtwa"|n|y
+~+|2|3|3|mf"abrdwa"|mf"abrdwa"|n|y
+~+|2|3|3|mf"anbdwa"|mf"anbdwa"|n|y
+~+|2|3|3|mf"axfrwa"|mf"axfrwa"|n|y
+~+|2|3|3|mf"afarbx"|mf"afarbx"|n|y
+~+|2|3|3|mf"afarwa"|mf"afarwa"|n|y
+q
+1.31
+~/ ...open non-motorized skim emmebank
+~+|1
+..\..\..\Skims\NonMotorized\AM\emmebank
+~/ ...import am non-motorized skims
+~+|2|3|3|mf"abketm"|mf"abketm"|n|y
+~+|2|3|3|mf"abkeds"|mf"abkeds"|n|y
+~+|2|3|3|mf"awlktm"|mf"awlktm"|n|y
+~+|2|3|3|mf"awlkds"|mf"awlkds"|n|y
+q
+1.31
+~/ ...open pnr income 1 skim emmebank
+~+|1
+..\..\..\Skims\PnR\Income1\emmebank
+~/ ...import pnr skims
+~+|2|3|3|mf"auxda1"|mf"auxda1"|n|y
+~+|2|3|3|mf"pnrds1"|mf"pnrds1"|n|y
+~+|2|3|3|mf"pnrtm1"|mf"pnrtm1"|n|y
+~+|2|3|3|mf"pnrch1"|mf"pnrch1"|n|y
+~+|2|3|3|mf"ivtda1"|mf"ivtda1"|n|y
+~+|2|3|3|mf"iwtda1"|mf"iwtda1"|n|y
+~+|2|3|3|mf"brdda1"|mf"brdda1"|n|y
+~+|2|3|3|mf"nbdda1"|mf"nbdda1"|n|y
+~+|2|3|3|mf"xfrda1"|mf"xfrda1"|n|y
+~+|2|3|3|mf"farda1"|mf"farda1"|n|y
+q
+1.31
+~/ ...open pnr income 2 skim emmebank
+~+|1
+..\..\..\Skims\PnR\Income2\emmebank
+~/ ...import pnr skims
+~+|2|3|3|mf"auxda2"|mf"auxda2"|n|y
+~+|2|3|3|mf"pnrds2"|mf"pnrds2"|n|y
+~+|2|3|3|mf"pnrtm2"|mf"pnrtm2"|n|y
+~+|2|3|3|mf"pnrch2"|mf"pnrch2"|n|y
+~+|2|3|3|mf"ivtda2"|mf"ivtda2"|n|y
+~+|2|3|3|mf"iwtda2"|mf"iwtda2"|n|y
+~+|2|3|3|mf"brdda2"|mf"brdda2"|n|y
+~+|2|3|3|mf"nbdda2"|mf"nbdda2"|n|y
+~+|2|3|3|mf"xfrda2"|mf"xfrda2"|n|y
+~+|2|3|3|mf"farda2"|mf"farda2"|n|y
+q
+1.31
+~/ ...open pnr income 3 skim emmebank
+~+|1
+..\..\..\Skims\PnR\Income3\emmebank
+~/ ...import pnr skims
+~+|2|3|3|mf"auxda3"|mf"auxda3"|n|y
+~+|2|3|3|mf"pnrds3"|mf"pnrds3"|n|y
+~+|2|3|3|mf"pnrtm3"|mf"pnrtm3"|n|y
+~+|2|3|3|mf"pnrch3"|mf"pnrch3"|n|y
+~+|2|3|3|mf"ivtda3"|mf"ivtda3"|n|y
+~+|2|3|3|mf"iwtda3"|mf"iwtda3"|n|y
+~+|2|3|3|mf"brdda3"|mf"brdda3"|n|y
+~+|2|3|3|mf"nbdda3"|mf"nbdda3"|n|y
+~+|2|3|3|mf"xfrda3"|mf"xfrda3"|n|y
+~+|2|3|3|mf"farda3"|mf"farda3"|n|y
+q
+1.31
+~/ ...open pnr income 4 skim emmebank
+~+|1
+..\..\..\Skims\PnR\Income4\emmebank
+~/ ...import pnr skims
+~+|2|3|3|mf"auxda4"|mf"auxda4"|n|y
+~+|2|3|3|mf"pnrds4"|mf"pnrds4"|n|y
+~+|2|3|3|mf"pnrtm4"|mf"pnrtm4"|n|y
+~+|2|3|3|mf"pnrch4"|mf"pnrch4"|n|y
+~+|2|3|3|mf"ivtda4"|mf"ivtda4"|n|y
+~+|2|3|3|mf"iwtda4"|mf"iwtda4"|n|y
+~+|2|3|3|mf"brdda4"|mf"brdda4"|n|y
+~+|2|3|3|mf"nbdda4"|mf"nbdda4"|n|y
+~+|2|3|3|mf"xfrda4"|mf"xfrda4"|n|y
+~+|2|3|3|mf"farda4"|mf"farda4"|n|y
+q
+~#
+~/end: 7_import_skim_matrices.mac
+~/exit emme
+~/
+q

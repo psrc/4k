@@ -1,0 +1,34 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3-9-9-9_modify_mode_x.rpt
+~/
+~/
+~/begin: 3-9-9-9_modify_mode_x.mac
+~/ ...call module 2.01: input/modify/output modes
+2.01
+~/ ...modify a mode interactively
+4
+~/ ...enter mode to be modified
+x
+~/ ...enter description
+
+~/ ...enter plot code
+
+~/ ...enter cost/time coefficient
+
+~/ ...enter cost/distance coefficient
+
+~/ ...enter energy/time coefficient
+
+~/ ...enter energy/distance coefficient
+
+~/ ...enter speed or time factor
+3
+~# ...end
+8
+~#
+~/end: 3-9-9-9_modify_mode_x.mac
+~/exit emme
+~/
+q

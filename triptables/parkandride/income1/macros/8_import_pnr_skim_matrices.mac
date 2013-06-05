@@ -1,0 +1,25 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=8_import_pnr_skim_matrices.rpt
+~/
+~/
+~/begin: 8_import_pnr_skim_matrices.mac
+~# ...call module 1.31: import data from external database
+~/ ...open pnr skim emmebanks
+1.31
+~+|1
+~/ ...income 1
+..\..\..\Skims\PnR\Income1\emmebank
+~+|2|3|3|mf"autil1"|mf"autil1"|n|y
+~+|2|3|3|mf"tutil1"|mf"tutil1"|n|y
+~+|2|3|3|mf"utprd1"|mf"utprd1"|n|y
+~+|2|3|3|mf"prdzn1"|mf"prdzn1"|n|y
+~+|2|3|3|mf"utsum1"|mf"utsum1"|n|y
+~+|2|3|3|mf"sumzn1"|mf"sumzn1"|n|y
+q
+~#
+~/end: 8_import_pnr_skim_matrices.mac
+~/exit emme
+~/
+q

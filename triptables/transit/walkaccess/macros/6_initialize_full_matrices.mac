@@ -1,0 +1,69 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_initialize_full_matrices.rpt
+~/
+~/
+~/begin: 6_initialize_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|coldst|hb college distribution|0
+~+|1|mf02|hbodst|hb other distribution|0
+~+|1|mf03|schdst|hb school distribution|0
+~+|1|mf04|hspdst|hb shop distribution|0
+~+|1|mf05|hbwds1|hb work income 1 distribution|0
+~+|1|mf06|hbwds2|hb work income 2 distribution|0
+~+|1|mf07|hbwds3|hb work income 3 distribution|0
+~+|1|mf08|hbwds4|hb work income 4 distribution|0
+~+|1|mf09|otodst|nhb other/other distribution|0
+~+|1|mf10|wkodst|nhb work/other distribution|0
+~#
+~+|1|mf11|coshtw|hb college tw mode share|0
+~+|1|mf12|nwshtw|hb non-work tw mode share|0
+~+|1|mf13|scshtw|hb school tw mode share|0
+~+|1|mf14|w1shtw|hb work-inc1 tw mode share|0
+~+|1|mf15|w2shtw|hb work-inc2 tw mode share|0
+~+|1|mf16|w3shtw|hb work-inc3 tw mode share|0
+~+|1|mf17|w4shtw|hb work-inc4 tw mode share|0
+~+|1|mf18|nhshtw|nhb tw mode share|0
+~#
+~+|1|mf19|trwapa|tw p-a trip table|0
+~+|1|mf20|trwaap|tw a-p trip table|0
+~#
+~+|1|mf21|atrnwa|am transit person trip table|0
+~+|1|mf22|mtrnwa|md transit person trip table|0
+~+|1|mf23|ptrnwa|pm transit person trip table|0
+~+|1|mf24|etrnwa|ev transit person trip table|0
+~+|1|mf25|ntrnwa|bi transit person trip table|0
+~#
+~+|1|mf26|prdzn1|optimal pnr zone - utility product|0
+~+|1|mf27|prdzn2|optimal pnr zone - utility product|0
+~+|1|mf28|prdzn3|optimal pnr zone - utility product|0
+~+|1|mf29|prdzn4|optimal pnr zone - utility product|0
+~#
+~+|1|mf30|w1shtd|hb work-inc1 td mode share|0
+~+|1|mf31|w2shtd|hb work-inc2 td mode share|0
+~+|1|mf32|w3shtd|hb work-inc3 td mode share|0
+~+|1|mf33|w4shtd|hb work-inc4 td mode share|0
+~#
+~+|1|mf34|dapnr1|transit-drive p>a trip table|0
+~+|1|mf35|dapnr2|transit-drive p>a trip table|0
+~+|1|mf36|dapnr3|transit-drive p>a trip table|0
+~+|1|mf37|dapnr4|transit-drive p>a trip table|0
+~#
+~+|1|mf38|daleg1|distribution to pnr lot|0
+~+|1|mf39|daleg2|distribution to pnr lot|0
+~+|1|mf40|daleg3|distribution to pnr lot|0
+~+|1|mf41|daleg4|distribution to pnr lot|0
+~#
+~+|1|mf42|twleg1|distribution from pnr lot|0
+~+|1|mf43|twleg2|distribution from pnr lot|0
+~+|1|mf44|twleg3|distribution from pnr lot|0
+~+|1|mf45|twleg4|distribution from pnr lot|0
+q
+~#
+~/end: 6_initialize_full_matrices.mac
+~/exit emme
+~/
+q

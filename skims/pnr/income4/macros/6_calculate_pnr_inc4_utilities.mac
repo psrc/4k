@@ -1,0 +1,20 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_calculate_pnr_inc4_utilities.rpt
+~/
+~/
+~/begin: 6_calculate_pnr_inc4_utilities.mac
+~/ ...call module 3.21: matrix calculations
+3.21
+~/ ...calculate pnr lot utilities
+~/ ...calculate utility of auto leg to pnr lot (max = 60 minutes)
+~+|1|y|mf"autil4"|n|exp(-0.199*(mf"ah4bcs"))||mf"ah4bcs"|0,60,in|y|1,%3%||%4%,%5%||2
+~/ ...calculate utility of transit leg from pnr lot (max = 180 minutes)
+~+|1|y|mf"tutil4"|n|exp(-0.034*(mf"atrtwa".min.180))||mf"atrtwa"|0,0,ex|y|%4%,%5%||1,%3%||2
+q
+~#
+~/end: 6_calculate_pnr_inc4_utilities.mac
+~/exit emme
+~/
+q

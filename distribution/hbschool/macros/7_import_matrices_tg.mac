@@ -1,0 +1,56 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_import_matrices_tg.rpt
+~/
+~/
+~/begin: 7_import_matrices_tg.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open md auto skim emmebank
+~+|1
+..\..\Skims\Auto\MD\emmebank
+~/ ...import md non-hbw sov generalized cost skim matrix
+~+|2|3|3|mf"mau1tm"|mf"mau1tm"|n|y
+~+|2|3|3|mf"mau1cs"|mf"mau1cs"|n|y
+~+|2|3|3|mf"mau1ds"|mf"mau1ds"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open md bidirectional skim emmebank
+~+|1
+..\..\Skims\BiDirectional\Time\emmebank
+~/ ...import md non-hbw bidirectional sov time skim matrix
+~+|2|3|3|mf"mu1btm"|mf"mu1btm"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open md bidirectional skim emmebank
+~+|1
+..\..\Skims\BiDirectional\Generalized_Cost\emmebank
+~/ ...import md non-hbw bidirectional sov generalized cost skim matrix
+~+|2|3|3|mf"mu1bcs"|mf"mu1bcs"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open md bidirectional skim emmebank
+~+|1
+..\..\Skims\BiDirectional\Distance\emmebank
+~/ ...import md non-hbw bidirectional sov distance skim matrix
+~+|2|3|3|mf"mu1bds"|mf"mu1bds"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open trip generation emmebank
+~+|1
+..\..\Generation\Trip\emmebank
+~/ ...import hb school production and attraction matrices
+~+|2|3|3|mo"schpro"|mo"schpro"|n|y
+~+|2|3|3|md"schatt"|md"schatt"|n|y
+q
+~#
+~/end: 7_import_matrices_tg.mac
+~/exit emme
+~/
+q

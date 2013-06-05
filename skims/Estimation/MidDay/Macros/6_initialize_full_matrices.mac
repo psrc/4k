@@ -1,0 +1,65 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_initialize_full_matrices.rpt
+~/
+~/
+~/begin: 6_initialize_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~# mid-day auto skims
+~+|1|mf01|mau1tm|non-hbw sov time|0
+~+|1|mf02|mau2tm|hov 2 time|0
+~+|1|mf03|mau3tm|hov 3+ time|0
+~+|1|mf04|mau1cs|non-hbw sov generalized cost|0
+~+|1|mf05|mau2cs|hov 2 generalized cost|0
+~+|1|mf06|mau3cs|hov 3+ generalized cost|0
+~+|1|mf07|mau1ds|non-hbw sov distance|0
+~+|1|mf08|mau2ds|hov 2 distance|0
+~+|1|mf09|mau3ds|hov 3+ distance|0
+~# md bidirectional skims
+~+|1|mf10|mu1btm|non-hbw sov bidirectional time|0
+~+|1|mf11|mu2btm|hov 2 bidirectional time|0
+~+|1|mf12|mu3btm|hov 3+ bidirectional time|0
+~+|1|mf13|mu1bcs|non-hbw sov bidirectional gc|0
+~+|1|mf14|mu2bcs|hov 2 bidirectional gc|0
+~+|1|mf15|mu3bcs|hov 3+ bidirectional gc|0
+~+|1|mf16|mu1bds|non-hbw sov bidirectional dist|0
+~+|1|mf17|mu2bds|hov 2 bidirectional dist|0
+~+|1|mf18|mu3bds|hov 3+ bidirectional dist|0
+~# md walk-access transit skims
+~+|1|mf19|mtrtwa|md total transit time|0
+~+|1|mf20|mivtwa|md transit in-vehicle time|0
+~+|1|mf21|mauxwa|md auxiliary transit time|0
+~+|1|mf22|mtwtwa|md total wait time|0
+~+|1|mf23|miwtwa|md initial wait time|0
+~+|1|mf24|mbrdwa|md boarding time|0
+~+|1|mf25|mnbdwa|md average number of boardings|0
+~+|1|mf26|mxfrwa|md total transfer time|0
+~+|1|mf27|mfarbx|md transit fare - fare box|0
+~+|1|mf28|mfarwa|md transit fare - average|0
+~# mid-day auto cost skims
+~+|1|mf29|mau1ct|non-hbw sov cost in cents|0
+~+|1|mf30|mau2ct|hov 2 cost in cents|0
+~+|1|mf31|mau3ct|hov 3+ cost in cents|0
+~+|1|mf32|mu1bct|non-hbw sov bi-cost in cents|0
+~+|1|mf33|mu2bct|hov 2 bi-cost in cents|0
+~+|1|mf34|mu3bct|hov 3+ bi-cost in cents|0
+~# non-motorized skims
+~+|1|mf35|awlkds|am walk distance|0
+~+|1|mf36|awlktm|am walk time|0
+~+|1|mf37|abkeds|am bike distance|0
+~+|1|mf38|abketm|am bike time|0
+~# terminal times
+~+|1|mf39|termtm|total terminal time|0
+~# p>a survey flags
+~+|1|mf48|schsur|sch p>a survey flag|0
+~+|1|mf49|hnwsur|hnw p>a survey flag|0
+~+|1|mf50|nhbsur|nhb p>a survey flag|0
+q
+~#
+~/end: 6_initialize_full_matrices.mac
+~/exit emme
+~/
+q

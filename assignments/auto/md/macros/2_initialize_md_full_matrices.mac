@@ -1,0 +1,29 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2_initialize_md_full_matrices.rpt
+~/
+~/
+~/begin: 2_initialize_md_full_matrices.mac
+~/ ...set active scenario to 1004
+s=1004
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|mvehda|non-hbw sov vehicle trip table|0
+~+|1|mf02|mvehs2|hov 2 vehicle trip table|0
+~+|1|mf03|mvehs3|hov 3+ vehicle trip table|0
+~+|1|mf04|mvpool|vanpool trip table|0
+~+|1|mf05|mhbw1v|hbw income 1 sov vehicle trip table|0
+~+|1|mf06|mhbw2v|hbw income 2 sov vehicle trip table|0
+~+|1|mf07|mhbw3v|hbw income 3 sov vehicle trip table|0
+~+|1|mf08|mhbw4v|hbw income 4 sov vehicle trip table|0
+~+|1|mf09|mlttrk|light truck trip table|0
+~+|1|mf10|mmdtrk|medium truck trip table|0
+~+|1|mf11|mhvtrk|heavy truck trip table|0
+q
+~#
+~/end: 2_initialize_md_full_matrices.mac
+~/exit emme
+~/
+q

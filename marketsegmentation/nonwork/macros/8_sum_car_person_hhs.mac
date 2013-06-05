@@ -1,0 +1,28 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=8_sum_car_person_hhs.rpt
+~/
+~/
+~/begin: 8_sum_car_person_hhs.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...sum zonal hhs by car-person category
+3.21
+~+|1|y|mo"hnwcp1"|n|mf"vehmtx"||mf"cpcats"|1,1,in|y|1,%1%||1,%1%|||2
+~+|1|y|mo"hnwcp2"|n|mf"vehmtx"||mf"cpcats"|2,2,in|y|1,%1%||1,%1%|||2
+~+|1|y|mo"hnwcp3"|n|mf"vehmtx"||mf"cpcats"|3,3,in|y|1,%1%||1,%1%|||2
+~+|1|y|mo"hnwcp4"|n|mf"vehmtx"||mf"cpcats"|4,4,in|y|1,%1%||1,%1%|||2
+~+|1|y|mo"hnwcp5"|n|mf"vehmtx"||mf"cpcats"|5,5,in|y|1,%1%||1,%1%|||2
+~+|1|y|mo"hnwcpt"|n|mo"hnwcp1"+mo"hnwcp2"+mo"hnwcp3"+mo"hnwcp4"+mo"hnwcp5"|||n|2
+~/ ...calculate percent of zonal hhs by car-person category
+~+|1|y|mo"nwscp1"|n|mo"hnwcp1"/mo"hnwcpt"||mo"hnwcp1"|0,0,ex|y|1,%1%||2
+~+|1|y|mo"nwscp2"|n|mo"hnwcp2"/mo"hnwcpt"||mo"hnwcp2"|0,0,ex|y|1,%1%||2
+~+|1|y|mo"nwscp3"|n|mo"hnwcp3"/mo"hnwcpt"||mo"hnwcp3"|0,0,ex|y|1,%1%||2
+~+|1|y|mo"nwscp4"|n|mo"hnwcp4"/mo"hnwcpt"||mo"hnwcp4"|0,0,ex|y|1,%1%||2
+~+|1|y|mo"nwscp5"|n|mo"hnwcp5"/mo"hnwcpt"||mo"hnwcp5"|0,0,ex|y|1,%1%||2
+q
+~#
+~/end: 8_sum_car_person_hhs.mac
+~/exit emme
+~/
+q

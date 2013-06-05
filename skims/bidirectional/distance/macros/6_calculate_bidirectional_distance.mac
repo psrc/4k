@@ -1,0 +1,34 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_calculate_bidirectional_distance.rpt
+~/
+~/
+~/begin: 6_calculate_bidirectional_distance.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate bi-directional distance
+3.21
+~+|1|y|mf"au1bds"|n|(mf"aau1ds"+mf"pau1ds"')/2|||n|2
+~+|1|y|mf"au2bds"|n|(mf"aau2ds"+mf"pau2ds"')/2|||n|2
+~+|1|y|mf"au3bds"|n|(mf"aau3ds"+mf"pau3ds"')/2|||n|2
+~+|1|y|mf"ah1bds"|n|(mf"aa1ds1"+mf"pa1ds1"')/2|||n|2
+~+|1|y|mf"ah2bds"|n|(mf"aa1ds2"+mf"pa1ds2"')/2|||n|2
+~+|1|y|mf"ah3bds"|n|(mf"aa1ds3"+mf"pa1ds3"')/2|||n|2
+~+|1|y|mf"ah4bds"|n|(mf"aa1ds4"+mf"pa1ds4"')/2|||n|2
+~+|1|y|mf"blgtds"|n|(mf"algtds"+mf"plgtds"')/2|||n|2
+~+|1|y|mf"bmedds"|n|(mf"amedds"+mf"pmedds"')/2|||n|2
+~+|1|y|mf"bhvyds"|n|(mf"ahvyds"+mf"phvyds"')/2|||n|2
+~#
+~+|1|y|mf"mu1bds"|n|(mf"mau1ds"+mf"mau1ds"')/2|||n|2
+~+|1|y|mf"mu2bds"|n|(mf"mau2ds"+mf"mau2ds"')/2|||n|2
+~+|1|y|mf"mu3bds"|n|(mf"mau3ds"+mf"mau3ds"')/2|||n|2
+~+|1|y|mf"mh1bds"|n|(mf"ma1ds1"+mf"ma1ds1"')/2|||n|2
+~+|1|y|mf"mh2bds"|n|(mf"ma1ds2"+mf"ma1ds2"')/2|||n|2
+~+|1|y|mf"mh3bds"|n|(mf"ma1ds3"+mf"ma1ds3"')/2|||n|2
+~+|1|y|mf"mh4bds"|n|(mf"ma1ds4"+mf"ma1ds4"')/2|||n|2
+q
+~#
+~/end: 6_calculate_bidirectional_distance.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,20 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5-8_input_bridge_flags.rpt
+~/
+~/
+~/begin: 5-8_input_bridge_flags.mac
+~/ ...set active scenario to 1002
+s=1002
+~/ ...call module 2.41: network calculations
+~/ ...input attribute using batch entry
+~/ ...input bridge flags
+2.41
+~+|3|@bridg|n|*|1,2,3|..\..\..\input\timeofday\bridge_flags.in|y|2|y
+q
+~#
+~/end: 5-8_input_bridge_flags.mac
+~/exit emme
+~/
+q

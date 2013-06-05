@@ -1,0 +1,28 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2-9_import_am_network.rpt
+~/
+~/
+~/begin: 2-9_import_am_network.mac
+~/ ...set active scenario to 9999
+s=9999
+~/ ...call module 1.22: scenario manipulations
+1.22
+~/ ...delete existing scenario 1002
+~+|2|1002|~?!e|y|~?q=0|
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open network emmebank
+~+|1
+..\..\..\networks\emmebank
+~#
+~/ ...import am network scenario (1002)
+~+|~?q=1|y|2|1|3|1002|1002|y|AM Auto Assignment
+q
+~#
+~/end: 2-9_import_am_network.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,17 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5_initialize_destination_matrices.rpt
+~/
+~/
+~/begin: 5_initialize_destination_matrices.mac
+~/ ...call mddule 3.12: input/modify matrices interactively
+~/ ...initialize destination matrices
+3.12
+~+|1|md01|hbwat1|hb work income 1 attractions|0
+q
+~#
+~/end: 5_initialize_destination_matrices.mac
+~/exit emme
+~/
+q

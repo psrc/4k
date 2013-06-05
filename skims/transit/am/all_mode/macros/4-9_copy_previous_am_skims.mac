@@ -1,0 +1,25 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4-9_copy_previous_am_skims.rpt
+~/
+~/
+~/begin: 4-9_copy_previous_am_skims.mac
+~# ...call module 3.12: input/modify matrices interactively
+~/ ...simple copy
+3.12
+~#
+~+|4|1|atrtwa|atrtwp|n|n
+~+|4|1|aivtwa|aivtwp|n|n
+~+|4|1|aauxwa|aauxwp|n|n
+~+|4|1|atwtwa|atwtwp|n|n
+~+|4|1|aiwtwa|aiwtwp|n|n
+~+|4|1|abrdwa|abrdwp|n|n
+~+|4|1|anbdwa|anbdwp|n|n
+~+|4|1|axfrwa|axfrwp|n|n
+q
+~#
+~/end: 4-9_copy_previous_am_skims.mac
+~/exit emme
+~/
+q

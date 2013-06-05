@@ -1,0 +1,34 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=11_calculate_pnr_trip_tables.rpt
+~/
+~/
+~/begin: 11_calculate_pnr_trip_tables.mac
+~# ...call module 3.21: matrix calculations
+3.21
+~/ ...calculate full transit drive-access trip tables
+~+|1|y|mf"dapnr2"|n|mf"hbwds2"*mf"w2shtd"|||n|2
+~/ ...double pnr lot capacities to adjust for return trip (a>p)
+~+|1|y|md"adjcap"|n|md"pnrcap"*2|||n|2
+~/ ...set pnr lot attractive factor equal to 1
+~+|1|y|md"pnrfac"|n|1|||n|2
+q
+~/ ...use INRO macro "parkride.mac" to split full trip tables into drive and transit legs
+~#
+~/ ...set parameters
+~t1=1,%1%        / origin internal taz range
+~t2=%4%,%5%      / pnr taz range
+~t3=1,%1%        / destination internal taz range
+~r1=10           / maximum constraint violation
+~r2=15           / maximum number of iterations
+~#
+~/ ...call parkride.mac
+~<macros\parkride.mac mf"dapnr2" mf"autil2" md"pnrfac" mf"tutil2" md"adjcap" md50 mf50 mf51
+~#
+~!ren parkride.rpr parkride.rpt
+~#
+~/end: 11_calculate_pnr_trip_tables.mac
+~/exit emme
+~/
+q

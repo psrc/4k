@@ -1,0 +1,78 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=11_construct_pm_nonmotorized_trip_tables.rpt
+~/
+~/
+~/begin: 11_construct_pm_nonmotorized_trip_tables.mac
+~# ...call module 3.21: matrix calculations
+~/ ...construct pm p-a non-motorized person trip tables
+3.21
+~/ ...walk
+~+|1|y|mf"walkpa"|n
+mf"coldst"*mf"coshwk"*0.118*0.453+
+mf"hbodst"*mf"nwshwk"*0.284*0.501+
+mf"schdst"*mf"scshwk"*0.002*0.437+
+mf"hspdst"*mf"nwshwk"*0.273*0.398+
+mf"otodst"*mf"nhshwk"*0.244/2+
+mf"wkodst"*mf"nhshwk"*0.135/2+
+mf"hbwds1"*mf"w1shwk"*0.033*0.488+
+mf"hbwds2"*mf"w2shwk"*0.157*0.496+
+mf"hbwds3"*mf"w3shwk"*0.034*0.486+
+mf"hbwds4"*mf"w4shwk"*0.066*0.493
+~+|||n|2
+~/ ...bike
+~+|1|y|mf"bikepa"|n
+mf"coldst"*mf"coshbk"*0.000*0.482+
+mf"hbodst"*mf"nwshbk"*0.340*0.521+
+mf"schdst"*mf"scshbk"*0.000*0.507+
+mf"hspdst"*mf"nwshbk"*0.191*0.355+
+mf"otodst"*mf"nhshbk"*0.301/2+
+mf"wkodst"*mf"nhshbk"*0.328/2+
+mf"hbwds1"*mf"w1shbk"*0.000*0.690+
+mf"hbwds2"*mf"w2shbk"*0.085*0.465+
+mf"hbwds3"*mf"w3shbk"*0.063*0.529+
+mf"hbwds4"*mf"w4shbk"*0.000*0.501
+~+|||n|2
+q
+~/ ...construct pm a-p non-motorized person trip tables
+3.21
+~/ ...walk
+~+|1|y|mf"walkap"|n
+mf"coldst"*mf"coshwk"*0.286*0.547+
+mf"hbodst"*mf"nwshwk"*0.281*0.499+
+mf"schdst"*mf"scshwk"*0.494*0.563+
+mf"hspdst"*mf"nwshwk"*0.295*0.602+
+mf"otodst"*mf"nhshwk"*0.244/2+
+mf"wkodst"*mf"nhshwk"*0.135/2+
+mf"hbwds1"*mf"w1shwk"*0.507*0.512+
+mf"hbwds2"*mf"w2shwk"*0.268*0.504+
+mf"hbwds3"*mf"w3shwk"*0.418*0.514+
+mf"hbwds4"*mf"w4shwk"*0.571*0.507
+~+|||n|2
+~/ ...bike
+~+|1|y|mf"bikeap"|n
+mf"coldst"*mf"coshbk"*0.387*0.518+
+mf"hbodst"*mf"nwshbk"*0.253*0.479+
+mf"schdst"*mf"scshbk"*0.571*0.493+
+mf"hspdst"*mf"nwshbk"*0.532*0.645+
+mf"otodst"*mf"nhshbk"*0.301/2+
+mf"wkodst"*mf"nhshbk"*0.328/2+
+mf"hbwds1"*mf"w1shbk"*0.000*0.310+
+mf"hbwds2"*mf"w2shbk"*0.293*0.535+
+mf"hbwds3"*mf"w3shbk"*0.533*0.471+
+mf"hbwds4"*mf"w4shbk"*0.565*0.499
+~+|||n|2
+q
+~/ ...construct pm o-d non-motorized trip tables
+3.21
+~/ ...bike
+~+|1|y|mf"pbike"|n|mf"bikepa"+mf"bikeap"'|||n|2
+~/ ...walk
+~+|1|y|mf"pwalk"|n|mf"walkpa"+mf"walkap"'|||n|2
+q
+~#
+~/end: 11_construct_pm_nonmotorized_trip_tables.mac
+~/exit emme
+~/
+q

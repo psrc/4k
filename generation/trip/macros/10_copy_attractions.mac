@@ -1,0 +1,40 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=10_copy_attractions.rpt
+~/
+~/
+~/begin: 10_copy_attractions.mac
+~/ ...call module 3.12: input / modify matrices interactively
+~/ ...temporarily copy trip attractions from mf"tgvect" to origin matrices 
+3.12
+~+|4|1|mf"tgvect"|mo"colpro"|n|y|*|10|*|y
+~+|4|1|mf"tgvect"|mo"hsppro"|n|y|*|11|*|y
+~+|4|1|mf"tgvect"|mo"hbopro"|n|y|*|12|*|y
+~+|4|1|mf"tgvect"|mo"schpro"|n|y|*|13|*|y
+~+|4|1|mf"tgvect"|mo"wkopro"|n|y|*|14|*|y
+~+|4|1|mf"tgvect"|mo"otopro"|n|y|*|15|*|y
+~+|4|1|mf"tgvect"|mo"hbwpr1"|n|y|*|21|*|y
+~+|4|1|mf"tgvect"|mo"hbwpr2"|n|y|*|22|*|y
+~+|4|1|mf"tgvect"|mo"hbwpr3"|n|y|*|23|*|y
+~+|4|1|mf"tgvect"|mo"hbwpr4"|n|y|*|24|*|y
+q
+~/ ...call module 3.21: matrix calculations
+~/ ...set destination matrices equal to transposed origin matrices
+3.21
+~+|1|y|md"colatt"|n|mo"colpro"'|||y|*|2
+~+|1|y|md"hspatt"|n|mo"hsppro"'|||y|*|2
+~+|1|y|md"hboatt"|n|mo"hbopro"'|||y|*|2
+~+|1|y|md"schatt"|n|mo"schpro"'|||y|*|2
+~+|1|y|md"wkoatt"|n|mo"wkopro"'|||y|*|2
+~+|1|y|md"otoatt"|n|mo"otopro"'|||y|*|2
+~+|1|y|md"hbwat1"|n|mo"hbwpr1"'|||y|*|2
+~+|1|y|md"hbwat2"|n|mo"hbwpr2"'|||y|*|2
+~+|1|y|md"hbwat3"|n|mo"hbwpr3"'|||y|*|2
+~+|1|y|md"hbwat4"|n|mo"hbwpr4"'|||y|*|2
+q
+~#
+~/end: 10_copy_attractions.mac
+~/exit emme
+~/
+q

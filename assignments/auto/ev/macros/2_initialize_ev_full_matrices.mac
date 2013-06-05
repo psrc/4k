@@ -1,0 +1,29 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2_initialize_ev_full_matrices.rpt
+~/
+~/
+~/begin: 2_initialize_ev_full_matrices.mac
+~/ ...set active scenario to 1005
+s=1005
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|evehda|non-hbw sov vehicle trip table|0
+~+|1|mf02|evehs2|hov 2 vehicle trip table|0
+~+|1|mf03|evehs3|hov 3+ vehicle trip table|0
+~+|1|mf04|evpool|vanpool trip table|0
+~+|1|mf05|ehbw1v|hbw income 1 sov vehicle trip table|0
+~+|1|mf06|ehbw2v|hbw income 2 sov vehicle trip table|0
+~+|1|mf07|ehbw3v|hbw income 3 sov vehicle trip table|0
+~+|1|mf08|ehbw4v|hbw income 4 sov vehicle trip table|0
+~+|1|mf09|elttrk|light truck trip table|0
+~+|1|mf10|emdtrk|medium truck trip table|0
+~+|1|mf11|ehvtrk|heavy truck trip table|0
+q
+~#
+~/end: 2_initialize_ev_full_matrices.mac
+~/exit emme
+~/
+q

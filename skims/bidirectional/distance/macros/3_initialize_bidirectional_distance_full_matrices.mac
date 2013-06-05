@@ -1,0 +1,65 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3_initialize_bidirectional_distance_full_matrices.rpt
+~/
+~/
+~/begin: 3_initialize_bidirectional_distance_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~#
+~+|1|mf01|aau1ds|am non-hbw sov dist|0
+~+|1|mf02|aau2ds|am hov 2 dist|0
+~+|1|mf03|aau3ds|am hov 3+ dist|0
+~+|1|mf04|aa1ds1|am hbw income 1 sov dist|0
+~+|1|mf05|aa1ds2|am hbw income 2 sov dist|0
+~+|1|mf06|aa1ds3|am hbw income 3 sov dist|0
+~+|1|mf07|aa1ds4|am hbw income 4 sov dist|0
+~+|1|mf08|algtds|light truck dist|0
+~+|1|mf09|amedds|medium truck dist|0
+~+|1|mf10|ahvyds|heavy truck dist|0
+~#
+~+|1|mf11|pau1ds|pm non-hbw sov dist|0
+~+|1|mf12|pau2ds|pm hov 2 dist|0
+~+|1|mf13|pau3ds|pm hov 3+ dist|0
+~+|1|mf14|pa1ds1|pm hbw income 1 sov dist|0
+~+|1|mf15|pa1ds2|pm hbw income 2 sov dist|0
+~+|1|mf16|pa1ds3|pm hbw income 3 sov dist|0
+~+|1|mf17|pa1ds4|pm hbw income 4 sov dist|0
+~+|1|mf18|plgtds|light truck dist|0
+~+|1|mf19|pmedds|medium truck dist|0
+~+|1|mf20|phvyds|heavy truck dist|0
+~#
+~+|1|mf21|au1bds|non-hbw sov bidirectional dist|0
+~+|1|mf22|au2bds|hov 2 bidirectional dist|0
+~+|1|mf23|au3bds|hov 3+ bidirectional dist|0
+~+|1|mf24|ah1bds|hbw income 1 sov bidirectional dist|0
+~+|1|mf25|ah2bds|hbw income 2 sov bidirectional dist|0
+~+|1|mf26|ah3bds|hbw income 3 sov bidirectional dist|0
+~+|1|mf27|ah4bds|hbw income 4 sov bidirectional dist|0
+~+|1|mf28|blgtds|light truck bidirectional dist|0
+~+|1|mf29|bmedds|medium truck bidirectional dist|0
+~+|1|mf30|bhvyds|heavy truck bidirectionaldist|0
+~#
+~+|1|mf31|mau1ds|md non-hbw sov dist|0
+~+|1|mf32|mau2ds|md hov 2 dist|0
+~+|1|mf33|mau3ds|md hov 3+ dist|0
+~+|1|mf34|ma1ds1|md hbw income 1 sov dist|0
+~+|1|mf35|ma1ds2|md hbw income 2 sov dist|0
+~+|1|mf36|ma1ds3|md hbw income 3 sov dist|0
+~+|1|mf37|ma1ds4|md hbw income 4 sov dist|0
+~#
+~+|1|mf38|mu1bds|non-hbw sov bidirectional dist|0
+~+|1|mf39|mu2bds|hov 2 bidirectional dist|0
+~+|1|mf40|mu3bds|hov 3+ bidirectional dist|0
+~+|1|mf41|mh1bds|hbw income 1 sov bidirectional dist|0
+~+|1|mf42|mh2bds|hbw income 2 sov bidirectional dist|0
+~+|1|mf43|mh3bds|hbw income 3 sov bidirectional dist|0
+~+|1|mf44|mh4bds|hbw income 4 sov bidirectional dist|0
+q
+~#
+~/end: 3_initialize_bidirectional_distance_full_matrices.mac
+~/exit emme
+~/
+q

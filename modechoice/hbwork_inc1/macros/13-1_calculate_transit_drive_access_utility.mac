@@ -1,0 +1,29 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=13-1_calculate_transit_drive_access_utility.rpt
+~/
+~/
+~/begin: 13-1_calculate_transit_drive_access_utility.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate hb work income 1 mode choice exponentiated utilities
+3.21
+~/ ...transit drive-access
+~+|1|y|mf"wkeutd"|n
+exp
+(
+ms"ascctd"
++
+ms"trdivt"*(mf"pnrtm1"+mf"ivtda1")
++
+ms"trdovt"*(mf"wlkda1"+mf"iwtda1"+mf"xfrda1")
++
+ms"trdcos"*(mf"ah1pct"+mf"farda1")
+)
+~+|||y|1,%1%||1,%1%||2
+q
+~#
+~/end: 13-1_calculate_transit_drive_access_utility.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,27 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=8_input_data.rpt
+~/
+~/
+~/begin: 8_input_data.mac
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...input global parameters
+3.11
+~+|..\..\..\Model\Global\global_coefficients.in|2|
+~/ ...input parking cost assumptions
+3.11
+~+|..\..\..\Input\Parking\daily_parking_costs.in|2|
+3.11
+~+|..\..\..\Input\Parking\college_parking_costs.in|2|
+~/ ...input hb work p>a survey record flag
+3.11
+~+|hbw_survey_od_flag.in|2|
+~/ ...input hb college p>a survey record flag
+3.11
+~+|hbcollege_survey_od_flag.in|2|
+~#
+~/end: 8_input_data.mac
+~/exit emme
+~/
+q

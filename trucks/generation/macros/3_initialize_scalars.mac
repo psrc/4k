@@ -1,0 +1,17 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3_initialize_scalars.rpt
+~/
+~/
+~/begin: 3_initialize_scalars.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize scalar matrices
+3.12
+~+|1|ms01|place|place holder|0
+q
+~#
+~/end: 3_initialize_scalars.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,47 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=8_calculate_pnr_inc1_skims.rpt
+~/
+~/
+~/begin: 8_calculate_pnr_inc1_skims.mac
+~/ ...use INRO macro "legimped" to calculate component skims
+~/ ...skims are calculated using optimal pnr matrix (based on utility sums)
+~# auto side
+~/ ...auto leg component: auxiliary transit time (save in mf"auxda1")
+~<macros\legimped.mac 1 mf"ah1bcs" mf"prdzn1" mf"auxda1"
+~/ ...auto leg component: distance to pnr lot (save in mf"pnrds1")
+~<macros\legimped.mac 1 mf"ah1bds" mf"prdzn1" mf"pnrds1"
+~/ ...auto leg component: time to pnr lot (save in mf"pnrtm1")
+~<macros\legimped.mac 1 mf"ah1btm" mf"prdzn1" mf"pnrtm1"
+~/ ...auto leg component: charge at pnr lot (save in mf"pnrch1")
+~<macros\legimped.mac 1 mf"pnrchg" mf"prdzn1" mf"pnrch1"
+~# transit side
+~/ ...transit leg component: total transit time (save in mf"trtda1")
+~<macros\legimped.mac 2 mf"atrtwa" mf"prdzn1" mf"trtda1"
+~/ ...transit leg component: in-vehicle time (save in mf"ivtda1")
+~<macros\legimped.mac 2 mf"aivtwa" mf"prdzn1" mf"ivtda1"
+~/ ...transit leg component: total wait time (save in mf"twtda1")
+~<macros\legimped.mac 2 mf"atwtwa" mf"prdzn1" mf"twtda1"
+~/ ...transit leg component: total walk time (save in mf"wlkda1")
+~<macros\legimped.mac 2 mf"aauxwa" mf"prdzn1" mf"wlkda1"
+~/ ...transit leg component: initial wait time (save in mf"iwtda1")
+~<macros\legimped.mac 2 mf"aiwtwa" mf"prdzn1" mf"iwtda1"
+~/ ...transit leg component: boarding time (save in mf"brdda1")
+~<macros\legimped.mac 2 mf"abrdwa" mf"prdzn1" mf"brdda1"
+~/ ...transit leg component: average number of boardings (save in mf"nbdda1")
+~<macros\legimped.mac 2 mf"anbdwa" mf"prdzn1" mf"nbdda1"
+~/ ...transit leg component: total transfer time (save in mf"xfrda1")
+~<macros\legimped.mac 2 mf"axfrwa" mf"prdzn1" mf"xfrda1"
+~/ ...transit leg component: average transit fare (save in mf"farda1")
+~<macros\legimped.mac 2 mf"afarwa" mf"prdzn1" mf"farda1"
+~#
+~/ ...call module 3.21: matrix calculations
+3.21
+~/ ...add auto leg time to total transit leg time for total drive access transit time
+~+|1|y|mf"trtda1"|n|mf"trtda1"+mf"auxda1"|||y|1,%3%||1,%3%||2
+q
+~/end: 8_calculate_pnr_inc1_skims.mac
+~/exit emme
+~/
+q

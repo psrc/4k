@@ -1,0 +1,17 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2_initialize_bidirectional_matrices.rpt
+~/
+~/
+~/begin: 2_initialize_bidirectional_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize matrix directory
+3.12
+~+|7|y
+q
+~#
+~/end: 2_initialize_bidirectional_matrices.mac
+~/exit emme
+~/
+q

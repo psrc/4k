@@ -1,0 +1,26 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5-9_import_md_distance_matrices.rpt
+~/
+~/
+~/begin: 5-9_import_md_distance_matrices.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open md auto skim emmebank
+~+|1
+..\..\..\skims\auto\md\emmebank
+~/ ...import md distance matrices
+~+|2|3|3|mf"mau1ds"|mf"mau1ds"|n|y
+~+|2|3|3|mf"mau2ds"|mf"mau2ds"|n|y
+~+|2|3|3|mf"mau3ds"|mf"mau3ds"|n|y
+~+|2|3|3|mf"ma1ds1"|mf"ma1ds1"|n|y
+~+|2|3|3|mf"ma1ds2"|mf"ma1ds2"|n|y
+~+|2|3|3|mf"ma1ds3"|mf"ma1ds3"|n|y
+~+|2|3|3|mf"ma1ds4"|mf"ma1ds4"|n|y
+q
+~#
+~/end: 5-9_import_md_distance_matrices.mac
+~/exit emme
+~/
+q

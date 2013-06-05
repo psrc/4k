@@ -1,0 +1,44 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_import_matrices.rpt
+~/
+~/
+~/begin: 7_import_matrices.mac
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open delay matrices emmebank
+~+|1
+..\..\delay\allpurposes\emmebank
+~/ ...import hov 2 and hov 3+ delay matrices
+~+|2|3|3|mf"aau2dl"|mf"aau2dl"|n|y
+~+|2|3|3|mf"mau2dl"|mf"mau2dl"|n|y
+~+|2|3|3|mf"pau2dl"|mf"pau2dl"|n|y
+~+|2|3|3|mf"eau2dl"|mf"eau2dl"|n|y
+~+|2|3|3|mf"aau3dl"|mf"aau3dl"|n|y
+~+|2|3|3|mf"mau3dl"|mf"mau3dl"|n|y
+~+|2|3|3|mf"pau3dl"|mf"pau3dl"|n|y
+~+|2|3|3|mf"eau3dl"|mf"eau3dl"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am auto skim emmebank
+~+|1
+..\..\..\skims\auto\am\emmebank
+~/ ...import bridge flag matrices
+~+|2|3|3|mf"brhov2"|mf"brhov2"|n|y
+~+|2|3|3|mf"brhov3"|mf"brhov3"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open auto availability cross classification emmebank
+~+|1
+..\..\..\VehicleAvailability\All\emmebank
+~/ ...import auto availability cross classification
+~+|2|3|3|mf"vehmtx"|mf"vehmtx"|n|y
+q
+~#
+~/end: 7_import_matrices.mac
+~/exit emme
+~/
+q

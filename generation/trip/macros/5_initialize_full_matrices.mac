@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5_initialize_full_matrices.rpt
+~/
+~/
+~/begin: 5_initialize_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|hhemp|household/employment data|0
+~+|1|mf02|rates|trip generation rates|0
+~+|1|mf03|tgvect|trip generation rate vectors|0
+q
+~#
+~/end: 5_initialize_full_matrices.mac
+~/exit emme
+~/
+q

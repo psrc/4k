@@ -1,0 +1,19 @@
+c 2010 bridge flags for time of day model
+c Tacoma Narrows Bridge GP (EB)
+ 145421 183636 1
+c Tacoma Narrows Bridge HOV (EB)
+ 198827 198703 1
+c Tacoma Narrows Bridge GP (wB)
+ 183637 145416 1
+c Tacoma Narrows Bridge HOV (WB)
+ 198697 198828 1
+c I90 GP (EB)
+ 89072 89381 1
+c I90 GP (wB)
+ 89337 89098 1
+c I90 HOV (wB)
+ 184308 185809 1
+c SR520 (EB)
+ 76611 184102 1
+c SR520 (wB)
+ 78764 184158 1

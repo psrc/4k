@@ -1,0 +1,46 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=9_calculate_market_segment_utility_terms.rpt
+~/
+~/
+~/begin: 9_calculate_market_segment_utility_terms.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate market segment utility terms for each mode
+~/ ...drive alone
+3.21
+~+|1|y|mf"nwmsda"|n
+ms"ecp1da"*mo"nwscp1"+ms"ecp2da"*mo"nwscp2"+ms"ecp3da"*mo"nwscp3"+
+ms"ecp4da"*mo"nwscp4"+ms"ecp5da"*mo"nwscp5"
+~+|||y|1,%1%||1,%1%||2
+~/ ...shared ride 2
+~+|1|y|mf"nwmss2"|n
+ms"ecp1s2"*mo"nwscp1"+ms"ecp2s2"*mo"nwscp2"+ms"ecp3s2"*mo"nwscp3"+
+ms"ecp4s2"*mo"nwscp4"+ms"ecp5s2"*mo"nwscp5"
+~+|||y|1,%1%||1,%1%||2
+~/ ...shared ride 3+
+~+|1|y|mf"nwmss3"|n
+ms"ecp1s3"*mo"nwscp1"+ms"ecp2s3"*mo"nwscp2"+ms"ecp3s3"*mo"nwscp3"+
+ms"ecp4s3"*mo"nwscp4"+ms"ecp5s3"*mo"nwscp5"
+~+|||y|1,%1%||1,%1%||2
+~/ ...transit-walk
+~+|1|y|mf"nwmstw"|n
+ms"ecp1tw"*mo"nwscp1"+ms"ecp2tw"*mo"nwscp2"+ms"ecp3tw"*mo"nwscp3"+
+ms"ecp4tw"*mo"nwscp4"+ms"ecp5tw"*mo"nwscp5"
+~+|||y|1,%1%||1,%1%||2
+~/ ...walk
+~+|1|y|mf"nwmswk"|n
+ms"ecp1wk"*mo"nwscp1"+ms"ecp2wk"*mo"nwscp2"+ms"ecp3wk"*mo"nwscp3"+
+ms"ecp4wk"*mo"nwscp4"+ms"ecp5wk"*mo"nwscp5"
+~+|||y|1,%1%||1,%1%||2
+~/ ...bike
+~+|1|y|mf"nwmsbk"|n
+ms"ecp1bk"*mo"nwscp1"+ms"ecp2bk"*mo"nwscp2"+ms"ecp3bk"*mo"nwscp3"+
+ms"ecp4bk"*mo"nwscp4"+ms"ecp5bk"*mo"nwscp5"
+~+|||y|1,%1%||1,%1%||2
+q
+~#
+~/end: 9_calculate_market_segment_utility_terms.mac
+~/exit emme
+~/
+q

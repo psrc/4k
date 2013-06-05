@@ -1,0 +1,12 @@
+t matrices
+c global coefficients and parameters for truck models
+c
+c light truck operating cost (cents per mile)
+m  matrix=ms"lgtop"
+   all  all:  15
+c medium truck operating cost (cents per mile)
+m  matrix=ms"medop"
+   all  all:  78
+c heavy truck operating cost (cents per mile)
+m  matrix=ms"hvyop"
+   all  all:  78

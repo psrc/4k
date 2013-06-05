@@ -1,0 +1,17 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=9_calculate_total_households.rpt
+~/
+~/
+~/begin: 9_calculate_total_households.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate total households
+3.21
+~+|1|y|mo"hhlds"|n|mf"hhemp"|||y|*|102,105||+|2
+q
+~#
+~/end: 9_calculate_total_households.mac
+~/exit emme
+~/
+q

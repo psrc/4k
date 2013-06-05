@@ -1,0 +1,50 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_input_data.rpt
+~/
+~/
+~/begin: 6_input_data.mac
+~/ ...call module 3.01: input/modify/output zone groups
+~/ ...initialize partitions
+~/ ...input/modify zone groups (using batch entry)
+~/ ...load crosswalk between 2000 pumas (in ensemble gp) and 938 zone system
+3.01
+~+|4|gp|y| 
+~+|1|..\..\model\ensembles\puma00.grp|2
+q
+~#
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...load pumshhxc_income-size-workers.ma2, puma controls for columns 1-65 of mf"hhemp"
+~/ ...hh cross-class by income (5 ranges) by size (1,2,3,4+) by workers (0,1,2,3+)
+3.11
+~+|..\..\input\tripgeneration\pums\pumshhxc2010_income-size-workers.in|2|
+~#
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...load pumshhxc_income-schoolage.ma2, puma controls for columns 66-85 of mf"hhemp"
+~/ ...hh cross-class by income (5 ranges) by school-age persons (0,1,2,3+)
+3.11
+~+|..\..\input\tripgeneration\pums\pumshhxc2010_income-k12students.in|2|
+~#
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...load pumshhxc_income-collegeage.ma2, puma controls for columns 86-100 of mf"hhemp"
+~/ ...hh cross-class by income (5 ranges) by college-age persons (0,1,2+)
+3.11
+~+|..\..\input\tripgeneration\pums\pumshhxc2010_income-collegestudents.in|2|
+~#
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...load tazdata.ma2, zonal data for columns 100-124 of mf"hhemp"
+~/ ...hhs by income (4 ranges), employment, group quarter populations, college (fte) enrollment
+3.11
+~+|..\..\input\tripgeneration\landuse\tazdata.in|2|
+~#
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...load pumshhxc_income-size-workers-vehicles.ma2, puma controls for columns 201-456 of mf"hhemp"
+~/ ...hh cross-class by income (4 ranges) by size (1,2,3,4+) by workers (0,1,2,3+) by vehicles (0,1,2,3+) 
+3.11
+~+|..\..\input\tripgeneration\pums\pumshhxc2010_income-size-workers-vehicles.in|2|
+~#
+~/end: 6_input_data.mac
+~/exit emme
+~/
+q

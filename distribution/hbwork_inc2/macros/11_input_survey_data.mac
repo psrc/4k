@@ -1,0 +1,16 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=11_input_survey_data.rpt
+~/
+~/
+~/begin: 11_input_survey_data.mac
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...load hb work income 2 survey p-a person trip records
+3.11
+~+|survey\hbwork_inc2_pa.in|2|
+~#
+~/end: 11_input_survey_data.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3-9-9_input_md_transittriptable.rpt
+~/
+~/
+~/begin: 3-9-9_input_md_transittriptable.mac
+~# ...call module 3.11: input matrices using batch entry
+~/ ...input md transit trip table
+3.11
+~# ...enter file name for batch input
+transittriptable\mfmtrnwa.in
+~/ ...write report file
+2
+~#
+~/end: 3-9-9_input_md_transittriptable.mac
+~/exit emme
+~/
+q
