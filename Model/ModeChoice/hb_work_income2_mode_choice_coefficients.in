@@ -3,52 +3,52 @@ c hb work income 2 mode choice coefficients and parameters
 c
 c hb work income 2 asc for shared ride 2
 m matrix=ms"asccs2"
-  all all: -2.9650
+  all all: -2.7667
 c hb work income 2 asc for shared ride 3+
 m matrix=ms"asccs3"
-  all all: -4.6798
+  all all: -4.6445
 c hb work income 2 asc for transit walk
 m matrix=ms"ascctw"
-  all all: -1.3382
+  all all: -1.0487
 c hb work income 2 asc for transit drive
 m matrix=ms"ascctd"
-  all all: -1.3382
+  all all: -5.5332
 c hb work income 2 asc for walk
 m matrix=ms"asccwk"
-  all all:  0.7063
+  all all:  1.2304
 c hb work income 2 asc for bike
 m matrix=ms"asccbk"
-  all all: -2.7440
+  all all: -2.2959
 c hb work income 2 auto iv-time coeff
 m matrix=ms"autivt"
-  all all: -0.0242
+  all all: -0.0250
 c hb work income 2 transit-walk iv-time coeff
 m matrix=ms"trwivt"
-  all all: -0.0242
+  all all: -0.0250
 c hb work income 2 transit-drive iv-time coeff
 m matrix=ms"trdivt"
-  all all: -0.0242
+  all all: -0.0250
 c hb work income 2 auto cost coefficient
 m matrix=ms"autcos"
-  all all: -0.0031
+  all all: -0.0030
 c hb work income 2 transit-walk cost coeff
 m matrix=ms"trwcos"
-  all all: -0.0031
+  all all: -0.0030
 c hb work income 2 transit-drive cost coeff
 m matrix=ms"trdcos"
-  all all: -0.0031
+  all all: -0.0030
 c hb work income 2 transit-walk ov-time coeff
 m matrix=ms"trwovt"
-  all all: -0.0427
+  all all: -0.0500
 c hb work income 2 transit-drive ov-time coeff
 m matrix=ms"trdovt"
-  all all: -0.0427
+  all all: -0.0500
 c hb work income 2 walk time coeff
 m matrix=ms"walktm"
-  all all: -0.1128
+  all all: -0.1139
 c hb work income 2 bike time coeff
 m matrix=ms"biketm"
-  all all: -0.0681
+  all all: -0.0675
 c hb work income 2 transit-walk aux-time coeff
 m matrix=ms"trwaux"
   all all: 0

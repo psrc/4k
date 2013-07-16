@@ -93,6 +93,10 @@ cd ../..
 cd modechoice/nhb
 if exist *.rp* erase *.rp*
 cd ../..
+REM networks
+cd networks
+if exist *.rp* erase *.rp*
+cd ..
 REM auto skims
 cd skims/auto/am
 if exist *.rp* erase *.rp*
@@ -235,5 +239,22 @@ if exist *.rp* erase *.rp*
 cd ../..
 REM vehicle availability
 cd vehicleavailability/all
+if exist *.rp* erase *.rp*
+cd ../..
+REM summary reports
+REM generation
+cd generation/trip/summaries
+if exist *.rp* erase *.rp*
+cd ../../..
+REM distribution
+cd distribution/summaries
+if exist *.rp* erase *.rp*
+cd ../..
+REM vehicle availability
+cd vehicleavailability/all/summaries
+if exist *.rp* erase *.rp*
+cd ../../..
+REM trip tables
+cd triptables/summaries
 if exist *.rp* erase *.rp*
 cd ../..

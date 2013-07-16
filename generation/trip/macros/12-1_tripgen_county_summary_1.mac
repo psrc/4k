@@ -1,0 +1,105 @@
+~?!i&32768
+~o|295
+reports=?
+~/
+~/
+~/begin: 12-1_tripgen_county_summary_1.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...report unbalanced productions and attractions
+3.21
+~#productions
+~#king county
+~+|1|n|mo"hbwpr1"|||y|gc1|||2|summaries\tripgen_county_summary.rpt
+~+|1|n|mo"hbwpr2"|||y|gc1|||2
+~+|1|n|mo"hbwpr3"|||y|gc1|||2
+~+|1|n|mo"hbwpr4"|||y|gc1|||2
+~+|1|n|mo"colpro"|||y|gc1|||2
+~+|1|n|mo"hsppro"|||y|gc1|||2
+~+|1|n|mo"hbopro"|||y|gc1|||2
+~+|1|n|mo"schpro"|||y|gc1|||2
+~+|1|n|mo"wkopro"|||y|gc1|||2
+~+|1|n|mo"otopro"|||y|gc1|||2
+~#kitsap county
+~+|1|n|mo"hbwpr1"|||y|gc4|||2
+~+|1|n|mo"hbwpr2"|||y|gc4|||2
+~+|1|n|mo"hbwpr3"|||y|gc4|||2
+~+|1|n|mo"hbwpr4"|||y|gc4|||2
+~+|1|n|mo"colpro"|||y|gc4|||2
+~+|1|n|mo"hsppro"|||y|gc4|||2
+~+|1|n|mo"hbopro"|||y|gc4|||2
+~+|1|n|mo"schpro"|||y|gc4|||2
+~+|1|n|mo"wkopro"|||y|gc4|||2
+~+|1|n|mo"otopro"|||y|gc4|||2
+~#pierce county
+~+|1|n|mo"hbwpr1"|||y|gc3|||2
+~+|1|n|mo"hbwpr2"|||y|gc3|||2
+~+|1|n|mo"hbwpr3"|||y|gc3|||2
+~+|1|n|mo"hbwpr4"|||y|gc3|||2
+~+|1|n|mo"colpro"|||y|gc3|||2
+~+|1|n|mo"hsppro"|||y|gc3|||2
+~+|1|n|mo"hbopro"|||y|gc3|||2
+~+|1|n|mo"schpro"|||y|gc3|||2
+~+|1|n|mo"wkopro"|||y|gc3|||2
+~+|1|n|mo"otopro"|||y|gc3|||2
+~#snohomish county
+~+|1|n|mo"hbwpr1"|||y|gc2|||2
+~+|1|n|mo"hbwpr2"|||y|gc2|||2
+~+|1|n|mo"hbwpr3"|||y|gc2|||2
+~+|1|n|mo"hbwpr4"|||y|gc2|||2
+~+|1|n|mo"colpro"|||y|gc2|||2
+~+|1|n|mo"hsppro"|||y|gc2|||2
+~+|1|n|mo"hbopro"|||y|gc2|||2
+~+|1|n|mo"schpro"|||y|gc2|||2
+~+|1|n|mo"wkopro"|||y|gc2|||2
+~+|1|n|mo"otopro"|||y|gc2|||2
+~#attractions
+~#king county
+~+|1|n|md"hbwat1"|||y|gc1|||2
+~+|1|n|md"hbwat2"|||y|gc1|||2
+~+|1|n|md"hbwat3"|||y|gc1|||2
+~+|1|n|md"hbwat4"|||y|gc1|||2
+~+|1|n|md"colatt"|||y|gc1|||2
+~+|1|n|md"hspatt"|||y|gc1|||2
+~+|1|n|md"hboatt"|||y|gc1|||2
+~+|1|n|md"schatt"|||y|gc1|||2
+~+|1|n|md"wkoatt"|||y|gc1|||2
+~+|1|n|md"otoatt"|||y|gc1|||2
+~#kitsap county
+~+|1|n|md"hbwat1"|||y|gc4|||2
+~+|1|n|md"hbwat2"|||y|gc4|||2
+~+|1|n|md"hbwat3"|||y|gc4|||2
+~+|1|n|md"hbwat4"|||y|gc4|||2
+~+|1|n|md"colatt"|||y|gc4|||2
+~+|1|n|md"hspatt"|||y|gc4|||2
+~+|1|n|md"hboatt"|||y|gc4|||2
+~+|1|n|md"schatt"|||y|gc4|||2
+~+|1|n|md"wkoatt"|||y|gc4|||2
+~+|1|n|md"otoatt"|||y|gc4|||2
+~#pierce county
+~+|1|n|md"hbwat1"|||y|gc3|||2
+~+|1|n|md"hbwat2"|||y|gc3|||2
+~+|1|n|md"hbwat3"|||y|gc3|||2
+~+|1|n|md"hbwat4"|||y|gc3|||2
+~+|1|n|md"colatt"|||y|gc3|||2
+~+|1|n|md"hspatt"|||y|gc3|||2
+~+|1|n|md"hboatt"|||y|gc3|||2
+~+|1|n|md"schatt"|||y|gc3|||2
+~+|1|n|md"wkoatt"|||y|gc3|||2
+~+|1|n|md"otoatt"|||y|gc3|||2
+~#snohomish county
+~+|1|n|md"hbwat1"|||y|gc2|||2
+~+|1|n|md"hbwat2"|||y|gc2|||2
+~+|1|n|md"hbwat3"|||y|gc2|||2
+~+|1|n|md"hbwat4"|||y|gc2|||2
+~+|1|n|md"colatt"|||y|gc2|||2
+~+|1|n|md"hspatt"|||y|gc2|||2
+~+|1|n|md"hboatt"|||y|gc2|||2
+~+|1|n|md"schatt"|||y|gc2|||2
+~+|1|n|md"wkoatt"|||y|gc2|||2
+~+|1|n|md"otoatt"|||y|gc2|||2|4
+reports=?
+~#
+~/end: 12-1_tripgen_county_summary_1.mac
+~/exit emme
+~/
+q

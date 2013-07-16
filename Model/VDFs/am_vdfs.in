@@ -18,7 +18,7 @@ a fd10  =.01
 a fd31 =ul2 + 0 + 60 / lanes * (sqrt(1 + (.354 * ((volau + el2) / ul1) 
         / lanes) ^ 2) - 1)
 a fd40 =ul2
-a ft4  =ul2
+a ft4  =(length * 60 / ul2)
 a ft5  =ul2
 a ft6  =0
 a ft7  =11 * length

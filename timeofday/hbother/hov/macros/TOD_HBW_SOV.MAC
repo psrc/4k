@@ -1,0 +1,1770 @@
+ ~$>start
+ ********************************************************************************
+ * Macro File Name: TOD_HBW_SOV.MAC                                             *
+ * Original Date: 08/23/2006                                                    *
+ * Revised Date:                                                                *
+ * Purpose: Computes exponential utilities and shares for time-of-day model.    *
+ *          Home-based work SOVs by income group, time period, and              *
+ *          direction of trip. (Time Periods: AM (6-9), MD (9-3), PM (3-6),     *
+ *          EV (6-10) and NI (10-6); Direction: Work-to-Home, Home-to-Work)     *
+ * Input Files: mf"aa1cs1" mf"ma1cs1" mf"pa1cs1" mf"ea1cs1" mf"na1cs1"          *
+ *              mf"aa1cs2" mf"ma1cs2" mf"pa1cs2" mf"ea1cs2" mf"na1cs2"          *
+ *              mf"aa1cs3" mf"ma1cs3" mf"pa1cs3" mf"ea1cs3" mf"na1cs3"          *
+ *              mf"aa1cs4" mf"ma1cs4" mf"pa1cs4" mf"ea1cs4" mf"na1cs4"          *
+ *              mo"hhsize" md"hhsize" mf"bridge"                                *
+ * Temporary Files: mf"utilxx"(01-32) mf"UTILS" mf"brtmp"                       *
+ *                  mf"amdly1" mf"mddly1" mf"pmdly1"                            *
+ *                  mf"amdly2" mf"mddly2" mf"pmdly2"                            *
+ *                  mf"amdly3" mf"mddly3" mf"pmdly3"                            *
+ *                  mf"amdly4" mf"mddly4" mf"pmdly4"                            *
+ *                  mf"am1" mf"md1" mf"pm1"                                     *
+ *                  mf"am2" mf"md2" mf"pm2"                                     *
+ *                  mf"am3" mf"md3" mf"pm3"                                     *
+ *                  mf"am4" mf"md4" mf"pm4"                                     *
+ * Output Files: mf"AM1ns1" mf"MD1ns1" mf"PM1ns1" mf"EV1ns1" mf"NI1ns1"         *
+ *               mf"AM1ns2" mf"MD1ns2" mf"PM1ns2" mf"EV1ns2" mf"NI1ns2"         *
+ *               mf"AM1ns3" mf"MD1ns3" mf"PM1ns3" mf"EV1ns3" mf"NI1ns3"         *
+ *               mf"AM1ns4" mf"MD1ns4" mf"PM1ns4" mf"EV1ns4" mf"NI1ns4"         *
+ *               mf"AM2ns1" mf"MD2ns1" mf"PM2ns1" mf"EV2ns1" mf"NI2ns1"         *
+ *               mf"AM2ns2" mf"MD2ns2" mf"PM2ns2" mf"EV2ns2" mf"NI2ns2"         *
+ *               mf"AM2ns3" mf"MD2ns3" mf"PM2ns3" mf"EV2ns3" mf"NI2ns3"         *
+ *               mf"AM2ns4" mf"MD2ns4" mf"PM2ns4" mf"EV2ns4" mf"NI2ns4"         *
+ * Notes: Run in \TODModel\RunTOD. 32 Time Increments.                          *
+ * Report File: TOD_HBW_SOV.RPT                                                 *
+ ********************************************************************************
+ ~:start
+ ~?!i&32768
+ ~o|295
+ reports=TOD_HBW_SOV.RPT
+ ~/
+ ~/calculate dampened delays
+ ~/
+ 3.21
+ ~x=1
+ ~:LOOP
+ ~/AM
+ ~+|1|y|mf"amdly%x%"|n
+ (mf"aa1cs%x%"-mf"na1cs%x%")
+ ~+|||n|2
+ ~/...
+ ~+|1|y|mf"amdly%x%"|n
+ 10
+ ~+||mf"amdly%x%"|0,9999,exclude|n|2 
+ ~/
+ ~/MD
+ ~+|1|y|mf"mddly%x%"|n
+ ((mf"ma1cs%x%"-mf"na1cs%x%").max.0)
+ ~+|||n|2
+ ~/
+ ~/PM
+ ~+|1|y|mf"pmdly%x%"|n
+ (mf"pa1cs%x%"-mf"na1cs%x%")
+ ~+|||n|2
+ ~/...
+ ~+|1|y|mf"pmdly%x%"|n
+ 10
+ ~+||mf"pmdly%x%"|0,9999,exclude|n|2 
+ ~/
+ ~/EV
+ ~+|1|y|mf"evdly%x%"|n
+ ((mf"ea1cs%x%"-mf"na1cs%x%").max.0)
+ ~+|||n|2
+ ~/ 
+ ~/AM 
+ ~+|1|y|mf"am%x%"|n
+ (mf"amdly%x%".min.300)
+ ~+|||n|2
+ ~/MD 
+ ~+|1|y|mf"md%x%"|n
+ (mf"mddly%x%".min.300)
+ ~+|||n|2
+ ~/PM 
+ ~+|1|y|mf"pm%x%"|n
+ (mf"pmdly%x%".min.300)
+ ~+|||n|2
+ ~/
+ ~x+1
+ ~?x<5
+ ~$LOOP
+ ~/
+ ~/ Bridge/Sound crossing flag in 0 or 1
+ ~/
+ ~+|1|y|mf"brtmp"|n|0|||n|2
+ ~+|1|y|mf"brtmp"|n|1||mf"bridge"|0,0,ex|n|2
+ q
+ ~/
+ ~/
+ ~/ ************************************************************
+ ~/ ******************* HBW WORK Shares ************************
+ ~/ ************************************************************
+ ~/
+ ~/ ******************* A to P Income Group 1 ******************
+ ~/
+ ~/ --- Compute exponential utility for each time increment
+ 3.21
+ ~/1
+ ~+|1|y|mf"util01"|n
+ exp(-4.007-0.6653 +0.83 -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/2
+ ~+|1|y|mf"util02"|n
+ exp(-6.379-0.6653 +0.83 -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/3
+ ~+|1|y|mf"util03"|n
+ exp(1.313  -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/4
+ ~+|1|y|mf"util04"|n
+ exp(1.313  -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/5
+ ~+|1|y|mf"util05"|n
+ exp(-0.074  -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/6
+ ~+|1|y|mf"util06"|n
+ exp(-1.536  -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/7
+ ~+|1|y|mf"util07"|n
+ exp(2.005 -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/8
+ ~+|1|y|mf"util08"|n
+ exp(1.718 -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/9
+ ~+|1|y|mf"util09"|n
+ exp(0.1114  -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/10
+ ~+|1|y|mf"util10"|n
+ exp(0.6078  -0.4277*mf"amdly1")
+ ~+|||n|2
+ ~/11
+ ~+|1|y|mf"util11"|n
+ exp(0.9537-0.3935*mf"mddly1"+0.618*mf"brtmp" +0.1144*mf"md1"*(-2.5) )
+ ~+|||n|2
+ ~/12
+ ~+|1|y|mf"util12"|n
+ exp(0.4837-0.3935*mf"mddly1"+0.618*mf"brtmp" +0.1144*mf"md1"*(-2.0) )
+ ~+|||n|2
+ ~/13
+ ~+|1|y|mf"util13"|n
+ exp(0.9537-0.3935*mf"mddly1"+0.618*mf"brtmp" +0.1144*mf"md1"*(-1.5))
+ ~+|||n|2
+ ~/14
+ ~+|1|y|mf"util14"|n
+ exp(1.7360-0.3935*mf"mddly1"+0.618*mf"brtmp" +0.1144*mf"md1"*(-1.0))
+ ~+|||n|2
+ ~/15
+ ~+|1|y|mf"util15"|n
+ exp(2.167-0.3935*mf"mddly1"+0.618*mf"brtmp" +0.1144*mf"md1"*(-0.5))
+ ~+|||n|2
+ ~/16
+ ~+|1|y|mf"util16"|n
+ exp(1.988-0.3935*mf"mddly1"+0.618*mf"brtmp")
+ ~+|||n|2
+ ~/17
+ ~+|1|y|mf"util17"|n
+ exp(1.742 -0.3935*mf"mddly1"+0.618*mf"brtmp")
+ ~+|||n|2
+ ~/18
+ ~+|1|y|mf"util18"|n
+ exp(2.02  -0.3935*mf"mddly1" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/19
+ ~+|1|y|mf"util19"|n
+ exp(2.235 -0.3935*mf"mddly1" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/20
+ ~+|1|y|mf"util20"|n
+ exp(2.735 -0.3935*mf"mddly1" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/21
+ ~+|1|y|mf"util21"|n
+ exp(3.282+0.1115-0.75  -(0.10+0.03)*mf"pmdly1"   
+ +0.09523*mf"pm1"*2.0-0.03593*mf"pm1"*4.0
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/22
+ ~+|1|y|mf"util22"|n
+ exp(3.571+0.1115-0.75  -(0.10+0.03)*mf"pmdly1"  
+ +0.09523*mf"pm1"*1.5 -0.03593*mf"pm1"*2.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/23
+ ~+|1|y|mf"util23"|n
+ exp(3.792+0.1115-0.75  -(0.10+0.03)*mf"pmdly1"   
+ +0.09523*mf"pm1"*1.0 -0.03593*mf"pm1"*1.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/24
+ ~+|1|y|mf"util24"|n
+ exp(4.103+0.1115 -0.75 -(0.10+0.03)*mf"pmdly1"  
+ +0.09523*mf"pm1"*0.5 -0.03593*mf"pm1"*0.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/25
+ ~+|1|y|mf"util25"|n
+ exp(4.288+0.1115-0.75 -(0.10+0.03)*mf"pmdly1"
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/26
+ ~+|1|y|mf"util26"|n
+ exp(4.070+0.1115 -0.75 -(0.10+0.03)*mf"pmdly1"
+ +0.1056*mf"pm1"*0.5 -0.03027*mf"pm1"*0.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/27
+ ~+|1|y|mf"util27"|n
+ exp(2.792+0.077  -0.1*mf"pmdly1"
+ +0.1056*mf"pm1"*1.0 -0.03027*mf"pm1"*1.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/28
+ ~+|1|y|mf"util28"|n
+ exp(1.949 +0.077 -0.1*mf"pmdly1"
+ +0.1056*mf"pm1"*1.5 -0.03027*mf"pm1"*2.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/29
+ ~+|1|y|mf"util29"|n
+ exp(1.871 +0.077 -0.1*mf"pmdly1"
+ +0.1056*mf"pm1"*2.0 -0.03027*mf"pm1"*4.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/30
+ ~+|1|y|mf"util30"|n
+ exp(1.544 +0.077 -0.1*mf"pmdly1"
+ +0.1056*mf"pm1"*2.5 -0.03027*mf"pm1"*6.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/31
+ ~+|1|y|mf"util31"|n
+ 0.5*exp(1.108 + (0.077+1.0) -(0.1714-0.1)*mf"evdly1" + ln(6))
+ ~+|||n|2
+ ~/32
+ ~+|1|y|mf"util32"|n
+ 12 + (0.505+2.0)
+ ~+|||n|2
+ ~/
+ ~/
+~/
+~/ --- Compute total utility for income group 1 ---
+ ~/
+ ~+|1|y|mf"UTILS"|n
+ mf"util01"+mf"util02"+mf"util03"+mf"util04"
+ +mf"util05"+mf"util06"+mf"util07"+
+ mf"util08"+mf"util09"+mf"util10"+mf"util11"
+ +mf"util12"+mf"util13"+mf"util14"+
+ mf"util15"+mf"util16"+mf"util17"+mf"util18"
+ ~+|||n|2
+ ~+|1|y|mf"UTILS"|n
+ mf"UTILS"+mf"util19"+mf"util20"+mf"util21"+
+ mf"util22"+mf"util23"+mf"util24"+mf"util25"
+ +mf"util26"+mf"util27"+mf"util28"+
+ mf"util29"+mf"util30"+mf"util31"+mf"util32"
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for AM ---
+ ~/
+ ~+|1|y|mf"AM1ns1"|n
+ (mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for MD ---
+ ~/
+ ~+|1|y|mf"MD1ns1"|n
+ (mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
+ +mf"util14"+mf"util15"+
+ mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for PM ---
+ ~/
+ ~+|1|y|mf"PM1ns1"|n
+ (mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for EV ---
+ ~/
+ ~+|1|y|mf"EV1ns1"|n
+ (mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for NI ---
+ ~/
+ ~+|1|y|mf"NI1ns1"|n
+ (1.0-(mf"AM1ns1"+mf"MD1ns1"+mf"PM1ns1"+mf"EV1ns1").max.0)
+ ~+|||n|2|q
+ ~/
+ ~/ ******************* A to P Income Group 2 ******************
+ ~/
+ ~/ --- Compute exponential utility for each time increment
+ 3.21
+ ~/1
+ ~+|1|y|mf"util01"|n
+ exp(-4.007-0.4670+0.83 -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/2
+ ~+|1|y|mf"util02"|n
+ exp(-6.379-0.4670+0.83 -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/3
+ ~+|1|y|mf"util03"|n
+ exp(-1.241  -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/4
+ ~+|1|y|mf"util04"|n
+ exp(-1.241  -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/5
+ ~+|1|y|mf"util05"|n
+ exp(-2.628  -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/6
+ ~+|1|y|mf"util06"|n
+ exp(-1.018  -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/7
+ ~+|1|y|mf"util07"|n
+ exp(-0.5482 -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/8
+ ~+|1|y|mf"util08"|n
+ exp(-0.8359 -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/9
+ ~+|1|y|mf"util09"|n
+ exp(0.316  -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/10
+ ~+|1|y|mf"util10"|n
+ exp(0.812  -0.4277*mf"amdly2")
+ ~+|||n|2
+ ~/11
+ ~+|1|y|mf"util11"|n
+ exp(1.158 -0.3935*mf"mddly2" +0.618*mf"brtmp" +0.1144*mf"md2"*(-2.5) )
+ ~+|||n|2
+ ~/12
+ ~+|1|y|mf"util12"|n
+ exp(0.688 -0.3935*mf"mddly2" +0.618*mf"brtmp" +0.1144*mf"md2"*(-2.0) )
+ ~+|||n|2
+ ~/13
+ ~+|1|y|mf"util13"|n
+ exp(1.158 -0.3935*mf"mddly2" +0.618*mf"brtmp" +0.1144*mf"md2"*(-1.5) )
+ ~+|||n|2
+ ~/14
+ ~+|1|y|mf"util14"|n
+ exp(1.941 -0.3935*mf"mddly2" +0.618*mf"brtmp" +0.1144*mf"md2"*(-1.0) )
+ ~+|||n|2
+ ~/15
+ ~+|1|y|mf"util15"|n
+ exp(2.472  -0.3935*mf"mddly2" +0.618*mf"brtmp" +0.1144*mf"md2"*(-0.5) )
+ ~+|||n|2
+ ~/16
+ ~+|1|y|mf"util16"|n
+ exp(2.193  -0.3935*mf"mddly2" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/17
+ ~+|1|y|mf"util17"|n
+ exp(2.047 -0.3935*mf"mddly2" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/18
+ ~+|1|y|mf"util18"|n
+ exp(2.225  -0.3935*mf"mddly2" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/19
+ ~+|1|y|mf"util19"|n
+ exp(2.440 -0.3935*mf"mddly2" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/20
+ ~+|1|y|mf"util20"|n
+ exp(2.940 -0.3935*mf"mddly2" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/21
+ ~+|1|y|mf"util21"|n
+ exp(3.282+0.0848 -0.75 -(0.10+0.03)*mf"pmdly2"   
+ +0.09523*mf"pm2"*2.0 -0.03593*mf"pm2"*4.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/22
+ ~+|1|y|mf"util22"|n
+ exp(3.571+0.0848 -0.75 -(0.10+0.03)*mf"pmdly2"   
+ +0.09523*mf"pm2"*1.5 -0.03593*mf"pm2"*2.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/23
+ ~+|1|y|mf"util23"|n
+ exp(3.792+0.0848 -0.75 -(0.10+0.03)*mf"pmdly2"   
+ +0.09523*mf"pm2"*1.0 -0.03593*mf"pm2"*1.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/24
+ ~+|1|y|mf"util24"|n
+ exp(4.103+0.0848 -0.75 -(0.10+0.03)*mf"pmdly2"   
+ +0.09523*mf"pm2"*0.5 -0.03593*mf"pm2"*0.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/25
+ ~+|1|y|mf"util25"|n
+ exp(4.288+0.0848 -0.75 -(0.10+0.05)*mf"pmdly2"
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/26
+ ~+|1|y|mf"util26"|n
+ exp(4.070+0.0848-0.75 -(0.10+0.03)*mf"pmdly2"
+ +0.1056*mf"pm2"*0.5 -0.03027*mf"pm2"*0.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/27
+ ~+|1|y|mf"util27"|n
+ exp(2.792+0.077  -(0.1+0.03)*mf"pmdly2"
+ +0.1056*mf"pm2"*1.0 -0.03027*mf"pm2"*1.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/28
+ ~+|1|y|mf"util28"|n
+ exp(1.949+0.077  -0.1*mf"pmdly2"
+ +0.1056*mf"pm2"*1.5 -0.03027*mf"pm2"*2.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/29
+ ~+|1|y|mf"util29"|n
+ exp(1.871 +0.077 -0.1*mf"pmdly2"
+ +0.1056*mf"pm2"*2.0 -0.03027*mf"pm2"*4.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/30
+ ~+|1|y|mf"util30"|n
+ exp(1.544 +0.077 -0.1*mf"pmdly2"
+ +0.1056*mf"pm2"*2.5 -0.03027*mf"pm2"*6.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/31
+ ~+|1|y|mf"util31"|n
+ 0.5*exp(1.108 +(0.077+1.0) -(0.1714-0.1)*mf"evdly2" + ln(6))
+ ~+|||n|2
+ ~/32
+ ~+|1|y|mf"util32"|n
+ 12 + (3.246+2.0)
+ ~+|||n|2
+ ~/
+~/ --- Compute total utility for income group 2 ---
+ ~/
+ ~+|1|y|mf"UTILS"|n
+ mf"util01"+mf"util02"+mf"util03"+mf"util04"
+ +mf"util05"+mf"util06"+mf"util07"+
+ mf"util08"+mf"util09"+mf"util10"+mf"util11"
+ +mf"util12"+mf"util13"+mf"util14"+
+ mf"util15"+mf"util16"+mf"util17"+mf"util18"
+ ~+|||n|2
+ ~+|1|y|mf"UTILS"|n
+ mf"UTILS"+mf"util19"+mf"util20"+mf"util21"+
+ mf"util22"+mf"util23"+mf"util24"+mf"util25"
+ +mf"util26"+mf"util27"+mf"util28"+
+ mf"util29"+mf"util30"+mf"util31"+mf"util32"
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for AM ---
+ ~/
+ ~+|1|y|mf"AM1ns2"|n
+ (mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for MD ---
+ ~/
+ ~+|1|y|mf"MD1ns2"|n
+ (mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
+ +mf"util14"+mf"util15"+
+ mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for PM ---
+ ~/
+ ~+|1|y|mf"PM1ns2"|n
+ (mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for EV ---
+ ~/
+ ~+|1|y|mf"EV1ns2"|n
+ (mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for NI ---
+ ~/
+ ~+|1|y|mf"NI1ns2"|n
+ (1.0-(mf"AM1ns2"+mf"MD1ns2"+mf"PM1ns2"+mf"EV1ns2").max.0)
+ ~+|||n|2|q
+ ~/
+
+ ~/ ******************* A to P Income Group 3 ******************
+ ~/
+ ~/ --- Compute exponential utility for each time increment
+ 3.21
+ ~/1
+ ~+|1|y|mf"util01"|n
+ exp(-4.007-0.5291+0.83 -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/2
+ ~+|1|y|mf"util02"|n
+ exp(-6.379-0.5291+0.83 -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/3
+ ~+|1|y|mf"util03"|n
+ exp(-1.241  -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/4
+ ~+|1|y|mf"util04"|n
+ exp(-1.241  -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/5
+ ~+|1|y|mf"util05"|n
+ exp(-2.628  -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/6
+ ~+|1|y|mf"util06"|n
+ exp(-1.018  -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/7
+ ~+|1|y|mf"util07"|n
+ exp(-0.5482 -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/8
+ ~+|1|y|mf"util08"|n
+ exp(-0.8359 -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/9
+ ~+|1|y|mf"util09"|n
+ exp(0.1114  -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/10
+ ~+|1|y|mf"util10"|n
+ exp(0.6078  -0.4277*mf"amdly3")
+ ~+|||n|2
+ ~/11
+ ~+|1|y|mf"util11"|n
+ exp(0.9537 -0.3935*mf"mddly3" +0.618*mf"brtmp" +0.1144*mf"md3"*(-2.5))
+ ~+|||n|2
+ ~/12
+ ~+|1|y|mf"util12"|n
+ exp(0.4837 -0.3935*mf"mddly3" +0.618*mf"brtmp" +0.1144*mf"md3"*(-2.0))
+ ~+|||n|2
+ ~/13
+ ~+|1|y|mf"util13"|n
+ exp(0.9537 -0.3935*mf"mddly3" +0.618*mf"brtmp" +0.1144*mf"md3"*(-1.5))
+ ~+|||n|2
+ ~/14
+ ~+|1|y|mf"util14"|n
+ exp(1.7360 -0.3935*mf"mddly3" +0.618*mf"brtmp" +0.1144*mf"md3"*(-1.0))
+ ~+|||n|2
+ ~/15
+ ~+|1|y|mf"util15"|n
+ exp(2.267  -0.3935*mf"mddly3" +0.618*mf"brtmp" +0.1144*mf"md3"*(-0.5))
+ ~+|||n|2
+ ~/16
+ ~+|1|y|mf"util16"|n
+ exp(1.988  -0.3935*mf"mddly3" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/17
+ ~+|1|y|mf"util17"|n
+ exp(1.842 -0.3935*mf"mddly3" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/18
+ ~+|1|y|mf"util18"|n
+ exp(2.02  -0.3935*mf"mddly3" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/19
+ ~+|1|y|mf"util19"|n
+ exp(2.235 -0.3935*mf"mddly3" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/20
+ ~+|1|y|mf"util20"|n
+ exp(2.735 -0.3935*mf"mddly3" +0.618*mf"brtmp")
+ ~+|||n|2
+ ~/21
+ ~+|1|y|mf"util21"|n
+ exp(3.282+0.1345 -0.75 -(0.10+0.03)*mf"pmdly3"   
+ +0.09523*mf"pm3"*2.0 -0.03593*mf"pm3"*4.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/22
+ ~+|1|y|mf"util22"|n
+ exp(3.571+0.1345-0.75 -(0.10+0.03)*mf"pmdly3"  
+ +0.09523*mf"pm3"*1.5 -0.03593*mf"pm3"*2.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/23
+ ~+|1|y|mf"util23"|n
+ exp(3.792+0.1345-0.75 -(0.10+0.03)*mf"pmdly3"   
+ +0.09523*mf"pm3"*1.0 -0.03593*mf"pm3"*1.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/24
+ ~+|1|y|mf"util24"|n
+ exp(4.103+0.1345 -0.75 -(0.10+0.03)*mf"pmdly3"   
+ +0.09523*mf"pm3"*0.5 -0.03593*mf"pm3"*0.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/25
+ ~+|1|y|mf"util25"|n
+ exp(4.288+0.1345-0.75 -(0.10+0.03)*mf"pmdly3"
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/26
+ ~+|1|y|mf"util26"|n
+ exp(4.070+0.1345-0.75 -(0.10+0.03)*mf"pmdly3"
+ +0.1056*mf"pm3"*0.5 -0.03027*mf"pm3"*0.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/27
+ ~+|1|y|mf"util27"|n
+ exp(2.792+0.077 -(0.1+0.03)*mf"pmdly3"
+ +0.1056*mf"pm3"*1.0 -0.03027*mf"pm3"*1.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/28
+ ~+|1|y|mf"util28"|n
+ exp(1.949+0.077  -0.1*mf"pmdly3"
+ +0.1056*mf"pm3"*1.5 -0.03027*mf"pm3"*2.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/29
+ ~+|1|y|mf"util29"|n
+ exp(1.871+0.077  -0.1*mf"pmdly3"
+ +0.1056*mf"pm3"*2.0 -0.03027*mf"pm3"*4.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/30
+ ~+|1|y|mf"util30"|n
+ exp(1.544 +0.077 -0.1*mf"pmdly3"
+ +0.1056*mf"pm3"*2.5 -0.03027*mf"pm3"*6.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp")
+ ~+|||n|2
+ ~/31
+ ~+|1|y|mf"util31"|n
+ 0.5*exp(1.108 +(0.077+1.0) -(0.1714-0.1)*mf"evdly3" + ln(6))
+ ~+|||n|2
+ ~/32
+ ~+|1|y|mf"util32"|n
+ 12 + (2.329+2.0)
+ ~+|||n|2
+ ~/
+ ~/ --- Compute total utility for income group 3 ---
+ ~/
+ ~+|1|y|mf"UTILS"|n
+ mf"util01"+mf"util02"+mf"util03"+mf"util04"
+ +mf"util05"+mf"util06"+mf"util07"+
+ mf"util08"+mf"util09"+mf"util10"+mf"util11"
+ +mf"util12"+mf"util13"+mf"util14"+
+ mf"util15"+mf"util16"+mf"util17"+mf"util18"
+ ~+|||n|2
+ ~+|1|y|mf"UTILS"|n
+ mf"UTILS"+mf"util19"+mf"util20"+mf"util21"+
+ mf"util22"+mf"util23"+mf"util24"+mf"util25"
+ +mf"util26"+mf"util27"+mf"util28"+
+ mf"util29"+mf"util30"+mf"util31"+mf"util32"
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for AM ---
+ ~/
+ ~+|1|y|mf"AM1ns3"|n
+ (mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for MD ---
+ ~/
+ ~+|1|y|mf"MD1ns3"|n
+ (mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
+ +mf"util14"+mf"util15"+
+ mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for PM ---
+ ~/
+ ~+|1|y|mf"PM1ns3"|n
+ (mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for EV ---
+ ~/
+ ~+|1|y|mf"EV1ns3"|n
+ (mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for NI ---
+ ~/
+ ~+|1|y|mf"NI1ns3"|n
+ (1.0-(mf"AM1ns3"+mf"MD1ns3"+mf"PM1ns3"+mf"EV1ns3").max.0)
+ ~+|||n|2|q
+ ~/
+ ~/
+ ~/ ******************* A to P Income Group 4 ******************
+ ~/
+ ~/ --- Compute exponential utility for each time increment
+ 3.21
+ ~/1
+ ~+|1|y|mf"util01"|n
+ exp(-2.6280-0.9734+0.83 -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/2
+ ~+|1|y|mf"util02"|n
+ exp(-5.0-0.9734+0.83 -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/3
+ ~+|1|y|mf"util03"|n
+ exp(-1.241  -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/4
+ ~+|1|y|mf"util04"|n
+ exp(-1.241  -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/5
+ ~+|1|y|mf"util05"|n
+ exp(-2.628  -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/6
+ ~+|1|y|mf"util06"|n
+ exp(-1.018  -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/7
+ ~+|1|y|mf"util07"|n
+ exp(-0.5482 -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/8
+ ~+|1|y|mf"util08"|n
+ exp(-0.8359 -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/9
+ ~+|1|y|mf"util09"|n
+ exp(-0.177  -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/10
+ ~+|1|y|mf"util10"|n
+ exp(0.319  -0.4277*mf"amdly4")
+ ~+|||n|2
+ ~/11
+ ~+|1|y|mf"util11"|n
+ exp(0.665 -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694 
+ +0.1144*mf"md4"*(-2.5))
+ ~+|||n|2
+ ~/12
+ ~+|1|y|mf"util12"|n
+ exp(0.195 -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694
+ +0.1144*mf"md4"*(-2.0))
+ ~+|||n|2
+ ~/13
+ ~+|1|y|mf"util13"|n
+ exp(0.665 -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694
+ +0.1144*mf"md4"*(-1.5))
+ ~+|||n|2
+ ~/14
+ ~+|1|y|mf"util14"|n
+ exp(1.447 -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694
+ +0.1144*mf"md4"*(-1.0))
+ ~+|||n|2
+ ~/15
+ ~+|1|y|mf"util15"|n
+ exp(1.978  -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694
+ +0.1144*mf"md4"*(-0.5))
+ ~+|||n|2
+ ~/16
+ ~+|1|y|mf"util16"|n
+ exp(1.699  -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694)
+ ~+|||n|2
+ ~/17
+ ~+|1|y|mf"util17"|n
+ exp(1.553  -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694)
+ ~+|||n|2
+ ~/18
+ ~+|1|y|mf"util18"|n
+ exp(1.731  -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694)
+ ~+|||n|2
+ ~/19
+ ~+|1|y|mf"util19"|n
+ exp(1.946  -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694)
+ ~+|||n|2
+ ~/20
+ ~+|1|y|mf"util20"|n
+ exp(2.446  -0.3935*mf"mddly4" +0.618*mf"brtmp" +.6694)
+ ~+|||n|2
+ ~/21
+ ~+|1|y|mf"util21"|n
+ exp(3.282+0.1105 -0.75-(0.10+0.03)*mf"pmdly4"
+ +0.09523*mf"pm4"*2.0 -0.03593*mf"pm4"*4.0
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" -0.2217*(2.0) +.9454)
+ ~+|||n|2
+ ~/22
+ ~+|1|y|mf"util22"|n
+ exp(3.571+0.1105-0.75 -(0.10+0.03)*mf"pmdly4"
+ +0.09523*mf"pm4"*1.5 -0.03593*mf"pm4"*2.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" -0.2217*(1.5) +.9454)
+ ~+|||n|2
+ ~/23
+ ~+|1|y|mf"util23"|n
+ exp(3.792+0.1105-0.75 -(0.10+0.03)*mf"pmdly4"
+ +0.09523*mf"pm4"*1.0 -0.03593*mf"pm4"*1.0
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" -0.2217*(1.0) +.9454)
+ ~+|||n|2
+ ~/24
+ ~+|1|y|mf"util24"|n
+ exp(4.103+0.1105-0.75 -(0.10+0.03)*mf"pmdly4"
+ +0.09523*mf"pm4"*0.5 -0.03593*mf"pm4"*0.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" -0.2217*(0.5) +.9454)
+ ~+|||n|2
+ ~/25
+ ~+|1|y|mf"util25"|n
+ exp(3.6485+0.1105-0.75 -(0.10+0.03)*mf"pmdly4" 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" +.9454)
+ ~+|||n|2
+ ~/26
+ ~+|1|y|mf"util26"|n
+ exp(4.070+0.1105-0.75 -(0.10+0.03)*mf"pmdly4"
+ +0.1056*mf"pm4"*0.5 -0.03027*mf"pm4"*0.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" +.9454)
+ ~+|||n|2
+ ~/27
+ ~+|1|y|mf"util27"|n
+ exp(2.792 +0.077 -0.1*mf"pmdly4"
+ +0.1056*mf"pm4"*1.0 -0.03027*mf"pm4"*1.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" +.9454)
+ ~+|||n|2
+ ~/28
+ ~+|1|y|mf"util28"|n
+ exp(1.949 +0.077 -0.1*mf"pmdly4"
+ +0.1056*mf"pm4"*1.5 -0.03027*mf"pm4"*2.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" +.9454)
+ ~+|||n|2
+ ~/29
+ ~+|1|y|mf"util29"|n
+ exp(1.871+0.077  -0.1*mf"pmdly4"
+ +0.1056*mf"pm4"*2.0 -0.03027*mf"pm4"*4.0 
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" +.9454)
+ ~+|||n|2
+ ~/30
+ ~+|1|y|mf"util30"|n
+ exp(1.544+0.077  -0.1*mf"pmdly4"
+ +0.1056*mf"pm4"*2.5 -0.03027*mf"pm4"*6.25
+ -0.05966*md"hhsize" +0.6383*mf"brtmp" +.9454)
+ ~+|||n|2
+ ~/31
+ ~+|1|y|mf"util31"|n
+ 0.5*exp(1.108 +(0.077+1.0) -(0.1714-0.1)*mf"evdly4" + ln(6) +.5285)
+ ~+|||n|2
+ ~/32
+ ~+|1|y|mf"util32"|n
+ 9.759 + 2.241 + 2.0
+ ~+|||n|2
+ ~/
+ ~/
+ ~/ --- Compute total utility for income group 4 ---
+ ~/
+ ~+|1|y|mf"UTILS"|n
+ mf"util01"+mf"util02"+mf"util03"+mf"util04"
+ +mf"util05"+mf"util06"+mf"util07"+
+ mf"util08"+mf"util09"+mf"util10"+mf"util11"
+ +mf"util12"+mf"util13"+mf"util14"+
+ mf"util15"+mf"util16"+mf"util17"+mf"util18"
+ ~+|||n|2
+ ~+|1|y|mf"UTILS"|n
+ mf"UTILS"+mf"util19"+mf"util20"+mf"util21"+
+ mf"util22"+mf"util23"+mf"util24"+mf"util25"
+ +mf"util26"+mf"util27"+mf"util28"+
+ mf"util29"+mf"util30"+mf"util31"+mf"util32"
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for AM ---
+ ~/
+ ~+|1|y|mf"AM1ns4"|n
+ (mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for MD ---
+ ~/
+ ~+|1|y|mf"MD1ns4"|n
+ (mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
+ +mf"util14"+mf"util15"+
+ mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for PM ---
+ ~/
+ ~+|1|y|mf"PM1ns4"|n
+ (mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for EV ---
+ ~/
+ ~+|1|y|mf"EV1ns4"|n
+ (mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for NI ---
+ ~/
+ ~+|1|y|mf"NI1ns4"|n
+ (1.0-(mf"AM1ns4"+mf"MD1ns4"+mf"PM1ns4"+mf"EV1ns4").max.0)
+ ~+|||n|2|q
+ ~/
+ ~/ *************************************************************
+ ~/ ************************ Home to Work ***********************
+ ~/ *************************************************************
+ ~/
+ ~/ ******************* P to A Income Group 1 ******************
+ ~/
+ ~/ --- Compute exponential utility for each time increment
+ 3.21
+ ~/1
+ ~+|1|y|mf"util01"|n
+ 0.25*exp(2.285 -0.5176 +0.83-0.06172*mf"amdly1"
+ +0.1121*mf"am1"*2.5 -0.01914*mf"am1"*6.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.1194*(2.5)
+ -0.4295*mf"brtmp"*(2.5))
+ ~+|||n|2
+ ~/2
+ ~+|1|y|mf"util02"|n
+ 0.25*exp(3.254 -0.5176+0.83 -0.06172*mf"amdly1"
+ +0.1121*mf"am1"*2.0 -0.01914*mf"am1"*4.0
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.1194*(2.0)
+ -0.4295*mf"brtmp"*(2.0) )
+ ~+|||n|2
+ ~/3
+ ~+|1|y|mf"util03"|n
+ exp(3.8500 -0.5176 -(0.06172+0.1)*mf"amdly1"
+ +0.1121*mf"am1"*1.5 -0.01914*mf"am1"*2.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.1194*(1.5)
+ -0.4295*mf"brtmp"*(1.5))
+ ~+|||n|2
+ ~/4
+ ~+|1|y|mf"util04"|n
+ exp(4.4990 -0.5176 -(0.06172+0.1)*mf"amdly1"
+ +0.1121*mf"am1"*1.0 -0.01914*mf"am1"*1.0
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.1194*(1.0)
+ -0.4295*mf"brtmp"*(1.0) )
+ ~+|||n|2
+ ~/5
+ ~+|1|y|mf"util05"|n
+ exp(4.7920 -0.5176 -(0.06172+0.1)*mf"amdly1"
+ +0.1121*mf"am1"*0.5 -0.01914*mf"am1"*0.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.1194*(0.5)
+ -0.4295*mf"brtmp"*(0.5))
+ ~+|||n|2
+ ~/6
+ ~+|1|y|mf"util06"|n
+ exp(5.1630 -0.5176 -(0.06172+0.1)*mf"amdly1" +0.01842*mf"am1"*(0.0)
+ -0.3419*mo"hhsize" +0.3545*mf"brtmp")
+ ~+|||n|2
+ ~/7
+ ~+|1|y|mf"util07"|n
+ exp(4.5410 -0.5176 -(0.06172+0.1)*mf"amdly1" +0.01842*mf"am1"*(0.5)
+ -0.3419*mo"hhsize" +0.03545*mf"brtmp" +0.2483*(0.5))
+ ~+|||n|2
+ ~/8
+ ~+|1|y|mf"util08"|n
+ exp(4.2740 -0.5176 -(0.06172+0.1)*mf"amdly1" +0.01842*mf"am1"*(1.0)
+ -0.3419*mo"hhsize" +0.3545*mf"brtmp"+0.2483*(1.0))
+ ~+|||n|2
+ ~/9
+ ~+|1|y|mf"util09"|n
+ exp(3.7390 -0.5176 -0.06172*mf"amdly1" +0.01842*
+ mf"am1"*(1.5) -0.3419*mo"hhsize" +0.3545*mf"brtmp"+0.2483*(1.5))
+ ~+|||n|2
+ ~/10
+ ~+|1|y|mf"util10"|n
+ exp(3.5680 -0.5176 -0.06172*mf"amdly1" +0.01842*mf"am1"*(2.0)
+ -0.3419*mo"hhsize" +0.3545*mf"brtmp"+0.2483*(2.0))
+ ~+|||n|2
+ ~/11
+ ~+|1|y|mf"util11"|n
+ exp(2.920 -0.2834*mf"mddly1" +0.1063*mf"md1"*2.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/12
+ ~+|1|y|mf"util12"|n
+ exp(2.653 -0.2834*mf"mddly1" +0.1063*mf"md1"*2 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/13
+ ~+|1|y|mf"util13"|n
+ exp(2.503  -0.2834*mf"mddly1" +0.1063*mf"md1"*1.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/14
+ ~+|1|y|mf"util14"|n
+ exp(2.802  -0.2834*mf"mddly1" +0.1063*mf"md1"*1.0 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/15
+ ~+|1|y|mf"util15"|n
+ exp(2.506  -0.2834*mf"mddly1" +0.1063*mf"md1"*0.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/16
+ ~+|1|y|mf"util16"|n
+ exp(3.06   -0.2834*mf"mddly1"  -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/17
+ ~+|1|y|mf"util17"|n
+ exp(2.783 -0.2834*mf"mddly1"  -0.3427*mo"hhsize"+0.09548*mf"md1"*.5)
+ ~+|||n|2
+ ~/18
+ ~+|1|y|mf"util18"|n
+ exp(2.780 -0.2834*mf"mddly1" -0.3427*mo"hhsize"+0.09548*mf"md1"*1.0)
+ ~+|||n|2
+ ~/19
+ ~+|1|y|mf"util19"|n
+ exp(2.437 -0.2834*mf"mddly1" -0.3427*mo"hhsize"+0.09548*mf"md1"*1.5)
+ ~+|||n|2
+ ~/20
+ ~+|1|y|mf"util20"|n
+ exp(2.799 -0.2834*mf"mddly1" -0.3427*mo"hhsize"+0.09548*mf"md1"*2.0)
+ ~+|||n|2
+ ~/21
+ ~+|1|y|mf"util21"|n
+ exp(2.156 -0.75 -0.1747*mf"pmdly1" +0.0766*mf"pm1"*2.0)
+ ~+|||n|2
+ ~/22
+ ~+|1|y|mf"util22"|n
+ exp(1.977 -0.75 -0.1747*mf"pmdly1" +0.0766*mf"pm1"*1.5)
+ ~+|||n|2
+ ~/23
+ ~+|1|y|mf"util23"|n
+ exp(1.836-0.75 -0.1747*mf"pmdly1" +0.0766*mf"pm1"*1.0)
+ ~+|||n|2
+ ~/24
+ ~+|1|y|mf"util24"|n
+ exp(2.215 -0.75-0.1747*mf"pmdly1" +0.0766*mf"pm1"*0.5)
+ ~+|||n|2
+ ~/25
+ ~+|1|y|mf"util25"|n
+ exp(2.118 -0.75-0.1747*mf"pmdly1")
+ ~+|||n|2
+ ~/26
+ ~+|1|y|mf"util26"|n
+ exp(1.814-0.75 -0.1747*mf"pmdly1" +0.05933*mf"pm1"*0.5)
+ ~+|||n|2
+ ~/27
+ ~+|1|y|mf"util27"|n
+ exp(0.3101+0.077 -0.1747*mf"pmdly1" +0.05933*mf"pm1"*1.0)
+ ~+|||n|2
+ ~/28
+ ~+|1|y|mf"util28"|n
+ exp(0.6268 +0.077-0.1747*mf"pmdly1" +0.05933*mf"pm1"*1.5)
+ ~+|||n|2
+ ~/29
+ ~+|1|y|mf"util29"|n
+ exp(-0.2381 +0.077-0.1747*mf"pmdly1" +0.05933*mf"pm1"*2.0)
+ ~+|||n|2
+ ~/30
+ ~+|1|y|mf"util30"|n
+ exp(-0.9295+0.077 -0.1747*mf"pmdly1" +0.05933*mf"pm1"*2.5)
+ ~+|||n|2
+ ~/31
+ ~+|1|y|mf"util31"|n
+ exp(-1.622 +0.077+ln(6))
+ ~+|||n|2
+ ~/32
+ ~+|1|y|mf"util32"|n
+ 26.852
+ ~+|||n|2
+ ~/
+ ~/ --- Compute total utility for income group 1 ---
+ ~/
+ ~+|1|y|mf"UTILS"|n
+ mf"util01"+mf"util02"+mf"util03"+mf"util04"
+ +mf"util05"+mf"util06"+mf"util07"+
+ mf"util08"+mf"util09"+mf"util10"+mf"util11"
+ +mf"util12"+mf"util13"+mf"util14"+
+ mf"util15"+mf"util16"+mf"util17"+mf"util18"
+ ~+|||n|2
+ ~+|1|y|mf"UTILS"|n
+ mf"UTILS"+mf"util19"+mf"util20"+mf"util21"+
+ mf"util22"+mf"util23"+mf"util24"+mf"util25"
+ +mf"util26"+mf"util27"+mf"util28"+
+ mf"util29"+mf"util30"+mf"util31"+mf"util32"
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for AM ---
+ ~/
+ ~+|1|y|mf"AM2ns1"|n
+ (mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for MD ---
+ ~/
+ ~+|1|y|mf"MD2ns1"|n
+ (mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
+ +mf"util14"+mf"util15"+
+ mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for PM ---
+ ~/
+ ~+|1|y|mf"PM2ns1"|n
+ (mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for EV ---
+ ~/
+ ~+|1|y|mf"EV2ns1"|n
+ (mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for NI ---
+ ~/
+ ~+|1|y|mf"NI2ns1"|n
+ (1.0-(mf"AM2ns1"+mf"MD2ns1"+mf"PM2ns1"+mf"EV2ns1").max.0)
+ ~+|||n|2|q
+ ~/
+ ~/ ******************* P to A Income Group 2 ******************
+ ~/
+ ~/ --- Compute exponential utility for each time increment
+ 3.21
+ ~/1
+ ~+|1|y|mf"util01"|n
+ 0.25*exp(2.5590 -0.5176 +0.83-0.06172*mf"amdly2"
+ +0.1121*mf"am2"*2.5 -0.01914*mf"am2"*6.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*2.5
+ -0.4295*mf"brtmp"*2.5 +0.1194*2.5)
+ ~+|||n|2
+ ~/2
+ ~+|1|y|mf"util02"|n
+ 0.25*exp(3.5280 -0.5176+0.83 -0.06172*mf"amdly2"
+ +0.1121*mf"am2"*2.0 -0.01914*mf"am2"*4.0
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*2.0
+ -0.4295*mf"brtmp"*2.0 +0.1194*2.0)
+ ~+|||n|2
+ ~/3
+ ~+|1|y|mf"util03"|n
+ exp(3.8500 -0.5176 -(0.06172+0.1)*mf"amdly2"
+ +0.1121*mf"am2"*1.5 -0.01914*mf"am2"*2.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*1.5
+ -0.4295*mf"brtmp"*1.5 +0.1194*1.5)
+ ~+|||n|2
+ ~/4
+ ~+|1|y|mf"util04"|n
+ exp(4.4990 -0.5176 -(0.06172+0.1)*mf"amdly2"
+ +0.1121*mf"am2"*1.0 -0.01914*mf"am2"*1.0
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*1.0
+ -0.4295*mf"brtmp"*1.0 +0.1194*1.0)
+ ~+|||n|2
+ ~/5
+ ~+|1|y|mf"util05"|n
+ exp(4.7920 -0.5176 -(0.06172+0.1)*mf"amdly2"
+ +0.1121*mf"am2"*0.5 -0.01914*mf"am2"*0.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*0.5
+ -0.4295*mf"brtmp"*0.5 +0.1194*0.5)
+ ~+|||n|2
+ ~/6
+ ~+|1|y|mf"util06"|n
+ exp(5.1630 -0.5176 -(0.06172+0.1)*mf"amdly2"
+ +0.01842*mf"am2"*0.0 -0.3419*mo"hhsize" +0.3545*mf"brtmp" )
+ ~+|||n|2
+ ~/7
+ ~+|1|y|mf"util07"|n
+ exp(4.5410 -0.5176 -(0.06172+0.1)*mf"amdly2"
+ +0.01842*mf"am2"*0.5 -0.3419*mo"hhsize" +0.3545*mf"brtmp" +0.2483*0.5)
+ ~+|||n|2
+ ~/8
+ ~+|1|y|mf"util08"|n
+ exp(4.2740 -0.5176 -(0.06172+0.1)*mf"amdly2"
+ +0.01842*mf"am2"*1.0 -0.3419*mo"hhsize" +0.3545*mf"brtmp" +0.2483*1.0)
+ ~+|||n|2
+ ~/9
+ ~+|1|y|mf"util09"|n
+ exp(3.7390 -0.5176 -0.06172*mf"amdly2"
+ +0.01842*mf"am2"*1.5 -0.3419*mo"hhsize" +0.3545*mf"brtmp" +0.2483*1.5)
+ ~+|||n|2
+ ~/10
+ ~+|1|y|mf"util10"|n
+ exp(3.5680 -0.5176 -0.06172*mf"amdly2"
+ +0.01842*mf"am2"*2.0 -0.3419*mo"hhsize" +0.3545*mf"brtmp" +0.2483*2.0)
+ ~+|||n|2
+ ~/11
+ ~+|1|y|mf"util11"|n
+ exp(2.920  -0.2834*mf"mddly2"
+ +0.1063*mf"md2"*2.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/12
+ ~+|1|y|mf"util12"|n
+ exp(2.653  -0.2834*mf"mddly2"
+ +0.1063*mf"md2"*2.0 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/13
+ ~+|1|y|mf"util13"|n
+ exp(2.503  -0.2834*mf"mddly2"
+ +0.1063*mf"md2"*1.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/14
+ ~+|1|y|mf"util14"|n
+ exp(2.802  -0.2834*mf"mddly2"
+ +0.1063*mf"md2"*1.0 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/15
+ ~+|1|y|mf"util15"|n
+ exp(2.506  -0.2834*mf"mddly2"
+ +0.1063*mf"md2"*0.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/16
+ ~+|1|y|mf"util16"|n
+ exp(3.06   -0.2834*mf"mddly2" -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/17
+ ~+|1|y|mf"util17"|n
+ exp(2.783  -0.2834*mf"mddly2" -0.3427*mo"hhsize" +0.09548*mf"md2"*0.5)
+ ~+|||n|2
+ ~/18
+ ~+|1|y|mf"util18"|n
+ exp(2.780  -0.2834*mf"mddly2" -0.3427*mo"hhsize" +0.09548*mf"md2"*1.0)
+ ~+|||n|2
+ ~/19
+ ~+|1|y|mf"util19"|n
+ exp(2.437  -0.2834*mf"mddly2" -0.3427*mo"hhsize" +0.09548*mf"md2"*1.5)
+ ~+|||n|2
+ ~/20
+ ~+|1|y|mf"util20"|n
+ exp(2.799  -0.2834*mf"mddly2" -0.3427*mo"hhsize" +0.09548*mf"md2"*2.0)
+ ~+|||n|2
+ ~/21
+ ~+|1|y|mf"util21"|n
+ exp(1.216 -0.75 -0.1747*mf"pmdly2" +0.0766*mf"pm2"*2.0)
+ ~+|||n|2
+ ~/22
+ ~+|1|y|mf"util22"|n
+ exp(1.037 -0.75 -0.1747*mf"pmdly2" +0.0766*mf"pm2"*1.5)
+ ~+|||n|2
+ ~/23
+ ~+|1|y|mf"util23"|n
+ exp(0.8968 -0.75-0.1747*mf"pmdly2" +0.0766*mf"pm2"*1.0)
+ ~+|||n|2
+ ~/24
+ ~+|1|y|mf"util24"|n
+ exp(1.2750-0.75 -0.1747*mf"pmdly2" +0.0766*mf"pm2"*0.5)
+ ~+|||n|2
+ ~/25
+ ~+|1|y|mf"util25"|n
+ exp(1.178-0.75-0.1747*mf"pmdly2")
+ ~+|||n|2
+ ~/26
+ ~+|1|y|mf"util26"|n
+ exp(0.8741-0.75 -0.1747*mf"pmdly2" +0.05933*mf"pm2"*0.5)
+ ~+|||n|2
+ ~/27
+ ~+|1|y|mf"util27"|n
+ exp(0.3101+0.077 -0.1747*mf"pmdly2" +0.05933*mf"pm2"*1.0)
+ ~+|||n|2
+ ~/28
+ ~+|1|y|mf"util28"|n
+ exp(0.6268+0.077 -0.1747*mf"pmdly2" +0.05933*mf"pm2"*1.5)
+ ~+|||n|2
+ ~/29
+ ~+|1|y|mf"util29"|n
+ exp(-0.2381+0.077 -0.1747*mf"pmdly2"+0.05933*mf"pm2"*2.0)
+ ~+|||n|2
+ ~/30
+ ~+|1|y|mf"util30"|n
+ exp(-0.9295+0.077 -0.1747*mf"pmdly2" +0.05933*mf"pm2"*2.5)
+ ~+|||n|2
+ ~/31
+ ~+|1|y|mf"util31"|n
+ exp(-1.622+0.077+ln(6))
+ ~+|||n|2
+ ~/32
+ ~+|1|y|mf"util32"|n
+ 27.48
+ ~+|||n|2
+ ~/ --- Compute total utility for income group 2 ---
+ ~/
+ ~+|1|y|mf"UTILS"|n
+ mf"util01"+mf"util02"+mf"util03"+mf"util04"
+ +mf"util05"+mf"util06"+mf"util07"+
+ mf"util08"+mf"util09"+mf"util10"+mf"util11"
+ +mf"util12"+mf"util13"+mf"util14"+
+ mf"util15"+mf"util16"+mf"util17"+mf"util18"
+ ~+|||n|2
+ ~+|1|y|mf"UTILS"|n
+ mf"UTILS"+mf"util19"+mf"util20"+mf"util21"+
+ mf"util22"+mf"util23"+mf"util24"+mf"util25"
+ +mf"util26"+mf"util27"+mf"util28"+
+ mf"util29"+mf"util30"+mf"util31"+mf"util32"
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for AM ---
+ ~/
+ ~+|1|y|mf"AM2ns2"|n
+ (mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for MD ---
+ ~/
+ ~+|1|y|mf"MD2ns2"|n
+ (mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
+ +mf"util14"+mf"util15"+
+ mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for PM ---
+ ~/
+ ~+|1|y|mf"PM2ns2"|n
+ (mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for EV ---
+ ~/
+ ~+|1|y|mf"EV2ns2"|n
+ (mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for NI ---
+ ~/
+ ~+|1|y|mf"NI2ns2"|n
+ (1.0-(mf"AM2ns2"+mf"MD2ns2"+mf"PM2ns2"+mf"EV2ns2").max.0)
+ ~+|||n|2|q
+ ~/
+
+ ~/ ******************* P to A Income Group 3 ******************
+ ~/
+ ~/ --- Compute exponential utility for each time increment
+ 3.21
+ ~/1
+ ~+|1|y|mf"util01"|n
+ 0.25*exp(2.5590+0.83 -0.06172*mf"amdly3"
+ +0.1121*mf"am3"*2.5 -0.01914*mf"am3"*6.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*2.5
+ -0.4295*mf"brtmp"*2.5 )
+ ~+|||n|2
+ ~/2
+ ~+|1|y|mf"util02"|n
+ 0.25*exp(3.5280+0.83 -0.06172*mf"amdly3"
+ +0.1121*mf"am3"*2.0 -0.01914*mf"am3"*4.0
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*2.0
+ -0.4295*mf"brtmp"*2.0 )
+ ~+|||n|2
+ ~/3
+ ~+|1|y|mf"util03"|n
+ exp(3.8500 -(0.06172+0.05)*mf"amdly3"
+ +0.1121*mf"am3"*1.5 -0.01914*mf"am3"*2.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*1.5
+ -0.4295*mf"brtmp"*1.5 )
+ ~+|||n|2
+ ~/4
+ ~+|1|y|mf"util04"|n
+ exp(4.4990 -(0.06172+0.05)*mf"amdly3"
+ +0.1121*mf"am3"*1.0 -0.01914*mf"am3"*1.0
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*1.0
+ -0.4295*mf"brtmp"*1.0 )
+ ~+|||n|2
+ ~/5
+ ~+|1|y|mf"util05"|n
+ exp(4.7920 -(0.06172+0.1)*mf"amdly3"
+ +0.1121*mf"am3"*0.5 -0.01914*mf"am3"*0.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*0.5
+ -0.4295*mf"brtmp"*0.5 )
+ ~+|||n|2
+ ~/6
+ ~+|1|y|mf"util06"|n
+ exp(5.1630 -(0.06172+0.1)*mf"amdly3" +0.01842*mf"am3"*0.0
+ -0.3419*mo"hhsize" +0.3545*mf"brtmp" )
+ ~+|||n|2
+ ~/7
+ ~+|1|y|mf"util07"|n
+ exp(4.5410 -(0.06172+0.1)*mf"amdly3" +0.01842*mf"am3"*0.5
+ -0.3419*mo"hhsize" +0.3545*mf"brtmp" )
+ ~+|||n|2
+ ~/8
+ ~+|1|y|mf"util08"|n
+ exp(4.2740 -(0.06172+0.1)*mf"amdly3" +0.01842*mf"am3"*1.0
+ -0.3419*mo"hhsize" +0.3545*mf"brtmp")
+ ~+|||n|2
+ ~/9
+ ~+|1|y|mf"util09"|n
+ exp(3.7390 -0.06172*mf"amdly3" +0.01842*mf"am3"*1.5
+ -0.3419*mo"hhsize" +0.3545*mf"brtmp")
+ ~+|||n|2
+ ~/10
+ ~+|1|y|mf"util10"|n
+ exp(3.5680 -0.06172*mf"amdly3" +0.01842*mf"am3"*2.0
+ -0.3419*mo"hhsize" +0.3545*mf"brtmp")
+ ~+|||n|2
+ ~/11
+ ~+|1|y|mf"util11"|n
+ exp(2.920  -0.2834*mf"mddly3" +0.1063*mf"md3"*2.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/12
+ ~+|1|y|mf"util12"|n
+ exp(2.653  -0.2834*mf"mddly3" +0.1063*mf"md3"*2.0 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/13
+ ~+|1|y|mf"util13"|n
+ exp(2.503  -0.2834*mf"mddly3" +0.1063*mf"md3"*1.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/14
+ ~+|1|y|mf"util14"|n
+ exp(2.802  -0.2834*mf"mddly3" +0.1063*mf"md3"*1.0 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/15
+ ~+|1|y|mf"util15"|n
+ exp(2.506  -0.2834*mf"mddly3" +0.1063*mf"md3"*0.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/16
+ ~+|1|y|mf"util16"|n
+ exp(3.06   -0.2834*mf"mddly3" -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/17
+ ~+|1|y|mf"util17"|n
+ exp(2.783 -0.2834*mf"mddly3" -0.3427*mo"hhsize"+0.09548*mf"md3"*0.5)
+ ~+|||n|2
+ ~/18
+ ~+|1|y|mf"util18"|n
+ exp(2.780 -0.2834*mf"mddly3" -0.3427*mo"hhsize"+0.09548*mf"md3"*1.0)
+ ~+|||n|2
+ ~/19
+ ~+|1|y|mf"util19"|n
+ exp(2.437 -0.2834*mf"mddly3" -0.3427*mo"hhsize"+0.09548*mf"md3"*1.5)
+ ~+|||n|2
+ ~/20
+ ~+|1|y|mf"util20"|n
+ exp(2.799 -0.2834*mf"mddly3" -0.3427*mo"hhsize"+0.09548*mf"md3"*2.0)
+ ~+|||n|2
+ ~/21
+ ~+|1|y|mf"util21"|n
+ exp(1.216 -0.75 -0.1747*mf"pmdly3" +0.0766*mf"pm3"*2.0)
+ ~+|||n|2
+ ~/22
+ ~+|1|y|mf"util22"|n
+ exp(1.037 -0.75 -0.1747*mf"pmdly3" +0.0766*mf"pm3"*1.5)
+ ~+|||n|2
+ ~/23
+ ~+|1|y|mf"util23"|n
+ exp(0.8968 -0.75-0.1747*mf"pmdly3" +0.0766*mf"pm3"*1.0)
+ ~+|||n|2
+ ~/24
+ ~+|1|y|mf"util24"|n
+ exp(1.2750-0.75 -0.1747*mf"pmdly3" +0.0766*mf"pm3"*0.5)
+ ~+|||n|2
+ ~/25
+ ~+|1|y|mf"util25"|n
+ exp(1.178-0.75 -0.1747*mf"pmdly3")
+ ~+|||n|2
+ ~/26
+ ~+|1|y|mf"util26"|n
+ exp(0.8741-0.75 -0.1747*mf"pmdly3" +0.05933*mf"pm3"*0.5)
+ ~+|||n|2
+ ~/27
+ ~+|1|y|mf"util27"|n
+ exp(0.3101+0.077 -0.1747*mf"pmdly3" +0.05933*mf"pm3"*1.0)
+ ~+|||n|2
+ ~/28
+ ~+|1|y|mf"util28"|n
+ exp(0.6268+0.077 -0.1747*mf"pmdly3" +0.05933*mf"pm3"*1.5)
+ ~+|||n|2
+ ~/29
+ ~+|1|y|mf"util29"|n
+ exp(-0.2381+0.077 -0.1747*mf"pmdly3" +0.05933*mf"pm3"*2.0)
+ ~+|||n|2
+ ~/30
+ ~+|1|y|mf"util30"|n
+ exp(-0.9295+0.077 -0.1747*mf"pmdly3" +0.05933*mf"pm3"*2.5)
+ ~+|||n|2
+ ~/31
+ ~+|1|y|mf"util31"|n
+ exp(-1.622 +0.077+ln(6))
+ ~+|||n|2
+ ~/32
+ ~+|1|y|mf"util32"|n
+ 27.48
+ ~+|||n|2
+ ~/
+ ~/
+ ~/ --- Compute total utility for income group 3 ---
+ ~/
+ ~+|1|y|mf"UTILS"|n
+ mf"util01"+mf"util02"+mf"util03"+mf"util04"
+ +mf"util05"+mf"util06"+mf"util07"+
+ mf"util08"+mf"util09"+mf"util10"+mf"util11"
+ +mf"util12"+mf"util13"+mf"util14"+
+ mf"util15"+mf"util16"+mf"util17"+mf"util18"
+ ~+|||n|2
+ ~+|1|y|mf"UTILS"|n
+ mf"UTILS"+mf"util19"+mf"util20"+mf"util21"+
+ mf"util22"+mf"util23"+mf"util24"+mf"util25"
+ +mf"util26"+mf"util27"+mf"util28"+
+ mf"util29"+mf"util30"+mf"util31"+mf"util32"
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for AM ---
+ ~/
+ ~+|1|y|mf"AM2ns3"|n
+ (mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for MD ---
+ ~/
+ ~+|1|y|mf"MD2ns3"|n
+ (mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
+ +mf"util14"+mf"util15"+
+ mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for PM ---
+ ~/
+ ~+|1|y|mf"PM2ns3"|n
+ (mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for EV ---
+ ~/
+ ~+|1|y|mf"EV2ns3"|n
+ (mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for NI ---
+ ~/
+ ~+|1|y|mf"NI2ns3"|n
+ (1.0-(mf"AM2ns3"+mf"MD2ns3"+mf"PM2ns3"+mf"EV2ns3").max.0)
+ ~+|||n|2|q
+ ~/
+ ~/
+ ~/ ******************* P to A Income Group 4 ******************
+ ~/
+ ~/ --- Compute exponential utility for each time increment
+ 3.21
+ ~/1
+ ~+|1|y|mf"util01"|n
+ 0.25*exp(2.5590 +0.515+0.83 -0.06172*mf"amdly4"
+ +0.1121*mf"am4"*2.5 -0.01914*mf"am4"*6.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*2.5
+ -0.4295*mf"brtmp"*2.5 -0.1216*2.5 )
+ ~+|||n|2
+ ~/2
+ ~+|1|y|mf"util02"|n
+ 0.25*exp(3.5280 +0.515+0.83 -0.06172*mf"amdly4"
+ +0.1121*mf"am4"*2.0 -0.01914*mf"am4"*4.0
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*2.0
+ -0.4295*mf"brtmp"*2.0 -0.1216*2.0 )
+ ~+|||n|2
+ ~/3
+ ~+|1|y|mf"util03"|n
+ exp(3.8500 +0.515 -(0.06172+0.1)*mf"amdly4"
+ +0.1121*mf"am4"*1.5 -0.01914*mf"am4"*2.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*1.5
+ -0.4295*mf"brtmp"*1.5 -0.1216*1.5 )
+ ~+|||n|2
+ ~/4
+ ~+|1|y|mf"util04"|n
+ exp(4.4990 +0.515 -(0.06172+0.1)*mf"amdly4"
+ +0.1121*mf"am4"*1.0 -0.01914*mf"am4"*1.0
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*1.0
+ -0.4295*mf"brtmp"*1.0 -0.1216*1.0 )
+ ~+|||n|2
+ ~/5
+ ~+|1|y|mf"util05"|n
+ exp(4.7920 +0.515 -(0.06172+0.1)*mf"amdly4"
+ +0.1121*mf"am4"*0.5 -0.01914*mf"am4"*0.25
+ -mo"hhsize"*0.3419 +0.3545*mf"brtmp" +0.0722*mo"hhsize"*0.5
+ -0.4295*mf"brtmp"*0.5 -0.1216*0.5 )
+ ~+|||n|2
+ ~/6
+ ~+|1|y|mf"util06"|n
+ exp(5.1630 +0.515 -(0.06172+0.1)*mf"amdly4"
+ +0.01842*mf"am4"*0.0 -0.3419*mo"hhsize" +0.3545*mf"brtmp" )
+ ~+|||n|2
+ ~/7
+ ~+|1|y|mf"util07"|n
+ exp(4.5410 +0.515 -(0.06172+0.1)*mf"amdly4"
+ +0.01842*mf"am4"*0.5 -0.3419*mo"hhsize" +0.3545*mf"brtmp" )
+ ~+|||n|2
+ ~/8
+ ~+|1|y|mf"util08"|n
+ exp(4.2740 +0.515 -(0.06172+0.1)*mf"amdly4"
+ +0.01842*mf"am4"*1.0 -0.3419*mo"hhsize" +0.3545*mf"brtmp")
+ ~+|||n|2
+ ~/9
+ ~+|1|y|mf"util09"|n
+ exp(3.7390 +0.515 -0.06172*mf"amdly4"
+ +0.01842*mf"am4"*1.5 -0.3419*mo"hhsize" +0.3545*mf"brtmp")
+ ~+|||n|2
+ ~/10
+ ~+|1|y|mf"util10"|n
+ exp(3.5680 +0.515 -0.06172*mf"amdly4"
+ +0.01842*mf"am4"*2.0 -0.3419*mo"hhsize" +0.3545*mf"brtmp")
+ ~+|||n|2
+ ~/11
+ ~+|1|y|mf"util11"|n
+ exp(2.920  +0.461 -0.2834*mf"mddly4"
+ +0.1063*mf"md4"*2.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/12
+ ~+|1|y|mf"util12"|n
+ exp(2.653  +0.461 -0.2834*mf"mddly4"
+ +0.1063*mf"md4"*2.0 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/13
+ ~+|1|y|mf"util13"|n
+ exp(2.503  +0.461 -0.2834*mf"mddly4"
+ +0.1063*mf"md4"*1.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/14
+ ~+|1|y|mf"util14"|n
+ exp(2.802  +0.461 -0.2834*mf"mddly4"
+ +0.1063*mf"md4"*1.0 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/15
+ ~+|1|y|mf"util15"|n
+ exp(2.506  +0.461 -0.2834*mf"mddly4"
+ +0.1063*mf"md4"*0.5 -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/16
+ ~+|1|y|mf"util16"|n
+ exp(3.06   +0.461 -0.2834*mf"mddly4" -0.3427*mo"hhsize")
+ ~+|||n|2
+ ~/17
+ ~+|1|y|mf"util17"|n
+ exp(2.783  +0.461 -0.2834*mf"mddly4" -0.3427*mo"hhsize"
+  +0.09548*mf"md4"*0.5)
+ ~+|||n|2
+ ~/18
+ ~+|1|y|mf"util18"|n
+ exp(2.780  +0.461 -0.2834*mf"mddly4" -0.3427*mo"hhsize"
+  +0.09548*mf"md4"*1.0)
+ ~+|||n|2
+ ~/19
+ ~+|1|y|mf"util19"|n
+ exp(2.437  +0.461 -0.2834*mf"mddly4" -0.3427*mo"hhsize"
+  +0.09548*mf"md4"*1.5)
+ ~+|||n|2
+ ~/20
+ ~+|1|y|mf"util20"|n
+ exp(2.799  +0.461 -0.2834*mf"mddly4" -0.3427*mo"hhsize"
+  +0.09548*mf"md4"*2.0)
+ ~+|||n|2
+ ~/21
+ ~+|1|y|mf"util21"|n
+ exp(1.316 -0.85 -0.1747*mf"pmdly4" +0.0766*mf"pm4"*2.0)
+ ~+|||n|2
+ ~/22
+ ~+|1|y|mf"util22"|n
+ exp(1.137 -0.85 -0.1747*mf"pmdly4" +0.0766*mf"pm4"*1.5)
+ ~+|||n|2
+ ~/23
+ ~+|1|y|mf"util23"|n
+ exp(0.9968-0.85 -0.1747*mf"pmdly4" +0.0766*mf"pm4"*1.0)
+ ~+|||n|2
+ ~/24
+ ~+|1|y|mf"util24"|n
+ exp(1.3750-0.85 -0.1747*mf"pmdly4" +0.0766*mf"pm4"*0.5)
+ ~+|||n|2
+ ~/25
+ ~+|1|y|mf"util25"|n
+ exp(1.278 -0.85-0.1747*mf"pmdly4")
+ ~+|||n|2
+ ~/26
+ ~+|1|y|mf"util26"|n
+ exp(0.9741-0.85 -0.1747*mf"pmdly4" +0.05933*mf"pm4"*0.5)
+ ~+|||n|2
+ ~/27
+ ~+|1|y|mf"util27"|n
+ exp(0.3101+0.077 -0.1747*mf"pmdly4" +0.05933*mf"pm4"*1.0)
+ ~+|||n|2
+ ~/28
+ ~+|1|y|mf"util28"|n
+ exp(0.6268+0.077 -0.1747*mf"pmdly4" +0.05933*mf"pm4"*1.5)
+ ~+|||n|2
+ ~/29
+ ~+|1|y|mf"util29"|n
+ exp(-0.2381+0.077 -0.1747*mf"pmdly4" +0.05933*mf"pm4"*2.0)
+ ~+|||n|2
+ ~/30
+ ~+|1|y|mf"util30"|n
+ exp(-0.9295+0.077 -0.1747*mf"pmdly4" +0.05933*mf"pm4"*2.5)
+ ~+|||n|2
+ ~/31
+ ~+|1|y|mf"util31"|n
+ exp(-1.622+0.077 +ln(6))
+ ~+|||n|2
+ ~/32
+ ~+|1|y|mf"util32"|n
+ 27.48
+ ~+|||n|2
+ ~/
+~/
+ ~/ --- Compute total utility for income group 4 ---
+ ~/
+ ~+|1|y|mf"UTILS"|n
+ mf"util01"+mf"util02"+mf"util03"+mf"util04"
+ +mf"util05"+mf"util06"+mf"util07"+
+ mf"util08"+mf"util09"+mf"util10"+mf"util11"
+ +mf"util12"+mf"util13"+mf"util14"+
+ mf"util15"+mf"util16"+mf"util17"+mf"util18"
+ ~+|||n|2
+ ~+|1|y|mf"UTILS"|n
+ mf"UTILS"+mf"util19"+mf"util20"+mf"util21"+
+ mf"util22"+mf"util23"+mf"util24"+mf"util25"
+ +mf"util26"+mf"util27"+mf"util28"+
+ mf"util29"+mf"util30"+mf"util31"+mf"util32"
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for AM ---
+ ~/
+ ~+|1|y|mf"AM2ns4"|n
+ (mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for MD ---
+ ~/
+ ~+|1|y|mf"MD2ns4"|n
+ (mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
+ +mf"util14"+mf"util15"+
+ mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for PM ---
+ ~/
+ ~+|1|y|mf"PM2ns4"|n
+ (mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for EV ---
+ ~/
+ ~+|1|y|mf"EV2ns4"|n
+ (mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+ /(mf"UTILS")
+ ~+|||n|2
+ ~/
+ ~/ --- Compute TOD shares for NI ---
+ ~/
+ ~+|1|y|mf"NI2ns4"|n
+ (1.0-(mf"AM2ns4"+mf"MD2ns4"+mf"PM2ns4"+mf"EV2ns4").max.0)
+ ~+|||n|2|q
+ ~/
+ ~/
+ ~/Done!
+ 

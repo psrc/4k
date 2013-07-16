@@ -26,7 +26,7 @@ q
 ~/ ...call module 3.21: matrix calculations
 ~/ ...calculate heavy truck distribution impedances
 3.21
-~+|1|y|mf"hvyimp"|n|exp(-0.008*(mf"bhvycs"+(mf"bhvyds"*ms"hvyop"*.0120)))*mf"intflg"
+~+|1|y|mf"hvyimp"|n|exp(-0.00001*(mf"bhvycs"+(mf"bhvyds"*ms"hvyop"*.0120)))*mf"intflg"
 ~+|||y|1,%3%||1,%3%||2
 q
 ~#

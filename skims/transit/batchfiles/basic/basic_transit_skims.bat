@@ -1,5 +1,5 @@
 REM begin basic transit skims
-REM AM
+REM am
 call batchfiles\basic\am_all_mode_skims.bat
-REM MD
+REM md
 call batchfiles\basic\md_all_mode_skims.bat

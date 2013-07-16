@@ -67,6 +67,15 @@ q
 ..\input\networks\am\am_transit.in
 ~/ ...write report file
 2
+~/ ...call module 2.31: input/modify/display turn table
+2.31
+~# ...input/modify turns using batch entry
+2
+~/ ...enter file name for batch input
+..\input\networks\am\am_turns.in
+~/ ...write report file
+2
+q
 ~#
 ~/ ...pm network
 ~/ ...set active scenario to 1003
@@ -100,6 +109,15 @@ q
 ..\input\networks\pm\pm_roadway.in
 ~/ ...write report file
 2
+~/ ...call module 2.31: input/modify/display turn table
+2.31
+~# ...input/modify turns using batch entry
+2
+~/ ...enter file name for batch input
+..\input\networks\pm\pm_turns.in
+~/ ...write report file
+2
+q
 ~#
 ~/ ...mid-day network
 ~/ ...set active scenario to 1004
@@ -139,6 +157,15 @@ q
 ..\input\networks\md\md_transit.in
 ~/ ...write report file
 2
+~/ ...call module 2.31: input/modify/display turn table
+2.31
+~# ...input/modify turns using batch entry
+2
+~/ ...enter file name for batch input
+..\input\networks\md\md_turns.in
+~/ ...write report file
+2
+q
 ~#
 ~/ ...evening network
 ~/ ...set active scenario to 1004
@@ -172,6 +199,15 @@ q
 ..\input\networks\ev\ev_roadway.in
 ~/ ...write report file
 2
+~/ ...call module 2.31: input/modify/display turn table
+2.31
+~# ...input/modify turns using batch entry
+2
+~/ ...enter file name for batch input
+..\input\networks\ev\ev_turns.in
+~/ ...write report file
+2
+q
 ~#
 ~/ ...night network
 ~/ ...set active scenario to 1006
@@ -205,6 +241,15 @@ q
 ..\input\networks\ni\ni_roadway.in
 ~/ ...write report file
 2
+~/ ...call module 2.31: input/modify/display turn table
+2.31
+~# ...input/modify turns using batch entry
+2
+~/ ...enter file name for batch input
+..\input\networks\ni\ni_turns.in
+~/ ...write report file
+2
+q
 ~#
 ~/end: 1_create_networks.mac
 ~/exit emme

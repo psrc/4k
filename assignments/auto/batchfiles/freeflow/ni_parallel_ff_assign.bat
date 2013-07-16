@@ -1,22 +1,19 @@
-cd NI
-REM delete existing *.rpt, errors, and reports files
-if exist *.rpt erase *.rpt
-if exist errors erase errors
-if exist reports erase reports
+cd ni
 REM record start of secondary call
-echo "NI assignment started at:" >> track5.rpt
+echo "ni assignment started at:" >> track5.rpt
 time /t >> track5.rpt
-REM call NI vehicle assignment macros
-call emme -ng --set-iks 127.0.0.1 000 -m Macros\3_initialize_ni_vdfs.mac
-call emme -ng --set-iks 127.0.0.1 000 -m Macros\4_initialize_ni_extra_attributes.mac
-call emme -ng --set-iks 127.0.0.1 000 -m Macros\5_input_ni_tolls.mac
-call emme -ng --set-iks 127.0.0.1 000 -m Macros\6_calculate_ni_arterial_delay.mac 3700 3733 3750 3751 4000
-call emme -ng --set-iks 127.0.0.1 000 -m Macros\8_ni_auto_assignment_freeflow.mac
+REM call ni vehicle assignment macros
+call emme -ng --set-iks 127.0.0.1 000 -m macros\3_initialize_ni_vdfs.mac
+call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_ni_extra_attributes.mac
+call emme -ng --set-iks 127.0.0.1 000 -m macros\5_input_ni_tolls.mac
+call emme -ng --set-iks 127.0.0.1 000 -m macros\5-7_input_ni_vot_parameters.mac
+call emme -ng --set-iks 127.0.0.1 000 -m macros\6_calculate_ni_arterial_delay.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\8_ni_auto_assignment_freeflow.mac %assigniter%
 REM record end of secondary call
-echo "NI assignment ended at:" >> track5.rpt
+echo "ni assignment ended at:" >> track5.rpt
 time /t >> track5.rpt
 cd ..
 REM create new indicator file and end
-echo "NI assignment finished at:" > doneNI.ind
-time /t >> doneNI.ind
+echo "ni assignment finished at:" > doneni.ind
+time /t >> doneni.ind
 exit

@@ -1,23 +1,23 @@
 REM construct auto trip tables in parallel
-REM AM
+REM am
 call batchfiles\am_auto_trip_tables_setup.bat
-REM MD
+REM md
 call batchfiles\md_auto_trip_tables_setup.bat
-REM PM
+REM pm
 call batchfiles\pm_auto_trip_tables_setup.bat
-REM EV
+REM ev
 call batchfiles\ev_auto_trip_tables_setup.bat
-REM NI
+REM ni
 call batchfiles\ni_auto_trip_tables_setup.bat
 REM erase all existing indicator (.ind) files
 if exist *.ind erase *.ind
-REM start AM
+REM start am
 start batchfiles\am_auto_trip_tables.bat
-REM start MD
+REM start md
 start batchfiles\md_auto_trip_tables.bat
-REM start PM
+REM start pm
 start batchfiles\pm_auto_trip_tables.bat
-REM start EV
+REM start ev
 start batchfiles\ev_auto_trip_tables.bat
-REM start NI
+REM start ni
 start batchfiles\ni_auto_trip_tables.bat

@@ -6,7 +6,7 @@ reports=2_input_fixes.rpt
 ~/
 ~/
 ~/begin: 2_input_fixes.mac
-~/ ...ferry, TNB, seatac fixes
+~/ ...ferry link modifications
 ~/ ...am network
 ~/ ...set active scenario to 1002
 s=1002
@@ -14,35 +14,6 @@ s=1002
 2.11
 ~/ ...enter file name for batch input
 fixes\ferries\AM_FerryLinkMods.in
-~/ ...write report file
-2
-~/ ...call module 2.21: input transit lines using batch entry
-2.21
-fixes\ferries\AM_FerryLineMods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\tnb\TNB_LinkMods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\seatac\AM_MD_PM_SeaTac_Adds.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\pnr\PnR_Network_Mods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\screenlines\AM_Screenline_Fix.in
 ~/ ...write report file
 2
 ~#
@@ -55,30 +26,6 @@ s=1003
 fixes\ferries\PM_FerryLinkMods.in
 ~/ ...write report file
 2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\tnb\TNB_LinkMods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\seatac\AM_MD_PM_SeaTac_Adds.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\pnr\PnR_Network_Mods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\screenlines\PM_Screenline_Fix.in
-~/ ...write report file
-2
 ~#
 ~/ ...mid-day network
 ~/ ...set active scenario to 1004
@@ -87,35 +34,6 @@ s=1004
 2.11
 ~/ ...enter file name for batch input
 fixes\ferries\MD_FerryLinkMods.in
-~/ ...write report file
-2
-~/ ...call module 2.21: input transit lines using batch entry
-2.21
-fixes\ferries\MD_FerryLineMods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\tnb\TNB_LinkMods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\seatac\AM_MD_PM_SeaTac_Adds.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\pnr\PnR_Network_Mods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\screenlines\MD_Screenline_Fix.in
 ~/ ...write report file
 2
 ~#
@@ -128,30 +46,6 @@ s=1005
 fixes\ferries\EV_FerryLinkMods.in
 ~/ ...write report file
 2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\tnb\TNB_LinkMods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\seatac\EV_SeaTac_Adds.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\pnr\PnR_Network_Mods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\screenlines\EV_Screenline_Fix.in
-~/ ...write report file
-2
 ~#
 ~/ ...night network
 ~/ ...set active scenario to 1006
@@ -160,30 +54,6 @@ s=1006
 2.11
 ~/ ...enter file name for batch input
 fixes\ferries\NI_FerryLinkMods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\tnb\TNB_LinkMods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\seatac\NI_SeaTac_Adds.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\pnr\PnR_Network_Mods.in
-~/ ...write report file
-2
-~/ ...call module 2.11: input/modify base network using batch entry
-2.11
-~/ ...enter file name for batch input
-fixes\screenlines\NI_Screenline_Fix.in
 ~/ ...write report file
 2
 ~#

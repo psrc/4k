@@ -1,0 +1,37 @@
+t matrices
+c vot assignment parameters
+c
+c md
+c sov non-work vehicle class
+m matrix=ms"mvotda"
+  all all: 0.0383
+c hov 2 vehicle class
+m matrix=ms"mvots2"
+  all all: 0.0311
+c hov3+ vehicle class
+m matrix=ms"mvots3"
+  all all: 0.0282
+c vanpool vehicle class
+m matrix=ms"mvotvp"
+  all all: 0.0000
+c sov hbw income 1 vehicle class
+m matrix=ms"mvot1v"
+  all all: 0.0627
+c sov hbw income 2 vehicle class
+m matrix=ms"mvot2v"
+  all all: 0.0340
+c sov hbw income 3 vehicle class
+m matrix=ms"mvot3v"
+  all all: 0.0233
+c sov hbw income 4 vehicle class
+m matrix=ms"mvot4v"
+  all all: 0.0180
+c light truck vehicle class
+m matrix=ms"mvotlt"
+  all all: 0.0150
+c medium truck vehicle class
+m matrix=ms"mvotmd"
+  all all: 0.0133
+c heavy truck vehicle class
+m matrix=ms"mvothv"
+  all all: 0.0120

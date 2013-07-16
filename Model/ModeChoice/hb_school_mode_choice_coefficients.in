@@ -3,34 +3,34 @@ c hb school mode choice coefficients and parameters
 c
 c hb school asc for shared ride 2
 m matrix=ms"asccs2"
-  all all:  1.2742
+  all all:  1.2125
 c hb school asc for shared ride 3+
 m matrix=ms"asccs3"
-  all all:  1.6764
+  all all:  1.6009
 c hb school asc for transit walk
 m matrix=ms"ascctw"
-  all all:  0.9619
+  all all: -0.1038
 c hb school asc for walk
 m matrix=ms"asccwk"
-  all all:  2.9279
+  all all:  3.6355
 c hb school asc for bike
 m matrix=ms"asccbk"
-  all all:  0.2767
+  all all:  0.6988
 c hb school auto iv-time coeff
 m matrix=ms"autivt"
-  all all: -0.0140
+  all all: -0.0050
 c hb school transit-walk iv-time coeff
 m matrix=ms"trwivt"
-  all all: -0.0140
+  all all: -0.0050
 c hb school transit-walk ov-time coeff
 m matrix=ms"trwovt"
-  all all: -0.0456
+  all all: -0.0500
 c hb school walk time coeff
 m matrix=ms"walktm"
-  all all: -0.0713
+  all all: -0.0698
 c hb school bike time coeff
 m matrix=ms"biketm"
-  all all: -0.1229
+  all all: -0.1182
 c hb school transit-walk aux-time coeff
 m matrix=ms"trwaux"
   all all: 0

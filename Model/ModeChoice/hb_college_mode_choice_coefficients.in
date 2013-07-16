@@ -3,40 +3,40 @@ c hb college mode choice coefficients and parameters
 c
 c hb college asc for shared ride 2
 m matrix=ms"asccs2"
-  all all: -2.3406
+  all all: -2.3063
 c hb college asc for shared ride 3+
 m matrix=ms"asccs3"
-  all all: -3.0600
+  all all: -3.0624
 c hb college asc for transit walk
 m matrix=ms"ascctw"
-  all all:  0.0727
+  all all:  0.3017
 c hb college asc for walk
 m matrix=ms"asccwk"
-  all all:  2.6022
+  all all:  2.4826
 c hb college asc for bike
 m matrix=ms"asccbk"
-  all all: -0.7790
+  all all: -0.7381
 c hb college auto iv-time coeff
 m matrix=ms"autivt"
-  all all: -0.0166
+  all all: -0.0250
 c hb college transit-walk iv-time coeff
 m matrix=ms"trwivt"
-  all all: -0.0166
+  all all: -0.0250
 c hb college auto cost coefficient
 m matrix=ms"autcos"
-  all all: -0.0009
+  all all: -0.0018
 c hb college transit-walk cost coeff
 m matrix=ms"trwcos"
-  all all: -0.0009
+  all all: -0.0018
 c hb college transit-walk ov-time coeff
 m matrix=ms"trwovt"
-  all all: -0.0415
+  all all: -0.0500
 c hb college walk time coeff
 m matrix=ms"walktm"
-  all all: -0.1616
+  all all: -0.1592
 c hb college bike time coeff
 m matrix=ms"biketm"
-  all all: -0.1223
+  all all: -0.1181
 c hb college transit-walk aux-time coeff
 m matrix=ms"trwaux"
   all all: 0

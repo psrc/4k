@@ -93,6 +93,10 @@ cd ../../..
 cd modechoice/nhb/emmemat
 if exist *.emx erase *.emx
 cd ../../..
+REM networks
+cd networks/emmemat
+if exist *.emx erase *.emx
+cd ../..
 REM auto skims
 cd skims/auto/am/emmemat
 if exist *.emx erase *.emx
