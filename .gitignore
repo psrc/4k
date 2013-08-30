@@ -8,10 +8,20 @@ core_interface_log
 usemacro
 9999.db
 fort.16
-*.rep
+*.rp*
 *.eml
 *.emt
 *.emu
 *.emlk
+*.xl*
+*.emx
+*.ind
+*.txt
+*.emw
+*.emp
+*.ema
+*.mtbx
+input/
+
 
 
