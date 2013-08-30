@@ -13,7 +13,7 @@ s=1002
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-fixes\ferries\AM_FerryLinkMods.in
+..\input\%1%\networks\fixes\ferries\AM_FerryLinkMods.in
 ~/ ...write report file
 2
 ~#
@@ -23,7 +23,7 @@ s=1003
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-fixes\ferries\PM_FerryLinkMods.in
+..\input\%1%\networks\fixes\ferries\PM_FerryLinkMods.in
 ~/ ...write report file
 2
 ~#
@@ -33,7 +33,7 @@ s=1004
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-fixes\ferries\MD_FerryLinkMods.in
+..\input\%1%\networks\fixes\ferries\MD_FerryLinkMods.in
 ~/ ...write report file
 2
 ~#
@@ -43,7 +43,7 @@ s=1005
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-fixes\ferries\EV_FerryLinkMods.in
+..\input\%1%\networks\fixes\ferries\EV_FerryLinkMods.in
 ~/ ...write report file
 2
 ~#
@@ -53,7 +53,7 @@ s=1006
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-fixes\ferries\NI_FerryLinkMods.in
+..\input\%1%\networks\fixes\ferries\NI_FerryLinkMods.in
 ~/ ...write report file
 2
 ~#

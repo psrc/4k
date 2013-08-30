@@ -15,6 +15,10 @@ cd ../../..
 cd assignments/auto/ni
 if exist errors erase errors
 cd ../../..
+REM non-motorized assignments
+cd assignments/nonmotorized/am
+if exist errors erase errors
+cd ../../..
 REM transit assignments
 cd assignments/transit/am/all_mode
 if exist errors erase errors
@@ -22,10 +26,6 @@ cd ../../../..
 cd assignments/transit/md/all_mode
 if exist errors erase errors
 cd ../../../..
-REM non-motorized assignments
-cd assignments/nonmotorized/am
-if exist errors erase errors
-cd ../../..
 REM distribution
 cd distribution/hbcollege
 if exist errors erase errors
@@ -62,10 +62,10 @@ cd generation/trip
 if exist errors erase errors
 cd ../..
 REM market segmentation
-cd marketsegmentation/work
+cd marketsegmentation/nonwork
 if exist errors erase errors
 cd ../..
-cd marketsegmentation/nonwork
+cd marketsegmentation/work
 if exist errors erase errors
 cd ../..
 REM mode choice
@@ -127,7 +127,7 @@ REM estimation skims
 cd skims/estimation/am
 if exist errors erase errors
 cd ../../..
-cd skims/estimation/midday
+cd skims/estimation/md
 if exist errors erase errors
 cd ../../..
 REM intrazonal/terminal times
@@ -231,10 +231,10 @@ cd triptables/trucks
 if exist errors erase errors
 cd ../..
 REM truck model
-cd trucks/generation
+cd trucks/distribution
 if exist errors erase errors
 cd ../..
-cd trucks/distribution
+cd trucks/generation
 if exist errors erase errors
 cd ../..
 REM vehicle availability

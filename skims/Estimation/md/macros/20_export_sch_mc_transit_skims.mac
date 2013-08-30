@@ -1,0 +1,65 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=?
+~/
+~/
+~/begin: 12_export_sch_mc_transit_skims.mac
+~/ ...call module 3.14: output matrices
+3.14
+~# ...change module parameters
+4
+~# ...dimensions for other reports and export
+2
+~# ...dimensions for in-line report, report by zones and export
+~# ...enter value width and number of decimals
+7,2
+~# ...suppress redundant blanks in export?
+n
+~# ...end
+4
+~# ...save current values of module parameters on disk?
+n
+~# ...list one or several matrices
+1
+~# ...several matrices by zones
+3
+~# ...enter matrix 1
+mf"mivtwa"
+~# ...enter matrix 2
+mf"mauxwa"
+~# ...enter matrix 3
+mf"miwtwa"
+~# ...enter matrix 4
+mf"mbrdwa"
+~# ...enter matrix 5
+mf"mnbdwa"
+~# ...enter matrix 6
+mf"mxfrwa"
+~# ...enter matrix 7
+mf"mfarbx"
+~# ...enter matrix 8
+mf"mfarwa"
+
+~# ...enter constraint matrix
+mf"schsur"
+~# ...enter constraint interval
+0,0,ex
+~# ...submatrix?
+y
+~# ...enter origins
+1,3700
+
+~# ...enter destinations
+1,3700
+
+~# ...write report
+2
+~# ...enter file name for report
+md_sch_mc_transit_skims.txt
+q
+~#
+~/end: 12_export_sch_mc_transit_skims.mac
+~/exit emme
+~/
+q

@@ -37,7 +37,7 @@ s=1002
 ~/ ...input modes using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_modes.in
+..\input\%1%\model\transit\transit_modes.in
 ~/ ...write report file
 2
 q
@@ -46,25 +46,25 @@ q
 ~/ ...input transit vehicles using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_vehicles.in
+..\input\%1%\model\transit\transit_vehicles.in
 ~/ ...write report file
 2
 q
 ~/ ...call module 4.11: input functions using batch entry
 ~/ ...input am vdfs
 4.11
-..\model\vdfs\am_vdfs.in
+..\input\%1%\model\vdfs\am_vdfs.in
 2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-..\input\networks\am\am_roadway.in
+..\input\%1%\networks\am\am_roadway.in
 ~/ ...write report file
 2
 ~/ ...call module 2.21: input transit lines using batch entry
 2.21
 ~/ ...enter file name for batch input
-..\input\networks\am\am_transit.in
+..\input\%1%\networks\am\am_transit.in
 ~/ ...write report file
 2
 ~/ ...call module 2.31: input/modify/display turn table
@@ -72,7 +72,7 @@ q
 ~# ...input/modify turns using batch entry
 2
 ~/ ...enter file name for batch input
-..\input\networks\am\am_turns.in
+..\input\%1%\networks\am\am_turns.in
 ~/ ...write report file
 2
 q
@@ -85,7 +85,7 @@ s=1003
 ~/ ...input modes using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_modes.in
+..\input\%1%\model\transit\transit_modes.in
 ~/ ...write report file
 2
 q
@@ -94,19 +94,19 @@ q
 ~/ ...input transit vehicles using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_vehicles.in
+..\input\%1%\model\transit\transit_vehicles.in
 ~/ ...write report file
 2
 q
 ~/ ...call module 4.11: input functions using batch entry
 ~/ ...input pm vdfs
 4.11
-..\model\vdfs\pm_vdfs.in
+..\input\%1%\model\vdfs\pm_vdfs.in
 2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-..\input\networks\pm\pm_roadway.in
+..\input\%1%\networks\pm\pm_roadway.in
 ~/ ...write report file
 2
 ~/ ...call module 2.31: input/modify/display turn table
@@ -114,7 +114,7 @@ q
 ~# ...input/modify turns using batch entry
 2
 ~/ ...enter file name for batch input
-..\input\networks\pm\pm_turns.in
+..\input\%1%\networks\pm\pm_turns.in
 ~/ ...write report file
 2
 q
@@ -127,7 +127,7 @@ s=1004
 ~/ ...input modes using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_modes.in
+..\input\%1%\model\transit\transit_modes.in
 ~/ ...write report file
 2
 q
@@ -136,25 +136,25 @@ q
 ~/ ...input transit vehicles using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_vehicles.in
+..\input\%1%\model\transit\transit_vehicles.in
 ~/ ...write report file
 2
 q
 ~/ ...call module 4.11: input functions using batch entry
 ~/ ...input md vdfs
 4.11
-..\model\vdfs\md_vdfs.in
+..\input\%1%\model\vdfs\md_vdfs.in
 2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-..\input\networks\md\md_roadway.in
+..\input\%1%\networks\md\md_roadway.in
 ~/ ...write report file
 2
 ~/ ...call module 2.21: input transit lines using batch entry
 2.21
 ~/ ...enter file name for batch input
-..\input\networks\md\md_transit.in
+..\input\%1%\networks\md\md_transit.in
 ~/ ...write report file
 2
 ~/ ...call module 2.31: input/modify/display turn table
@@ -162,7 +162,7 @@ q
 ~# ...input/modify turns using batch entry
 2
 ~/ ...enter file name for batch input
-..\input\networks\md\md_turns.in
+..\input\%1%\networks\md\md_turns.in
 ~/ ...write report file
 2
 q
@@ -175,7 +175,7 @@ s=1005
 ~/ ...input modes using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_modes.in
+..\input\%1%\model\transit\transit_modes.in
 ~/ ...write report file
 2
 q
@@ -184,19 +184,19 @@ q
 ~/ ...input transit vehicles using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_vehicles.in
+..\input\%1%\model\transit\transit_vehicles.in
 ~/ ...write report file
 2
 q
 ~/ ...call module 4.11: input functions using batch entry
 ~/ ...input ev vdfs
 4.11
-..\model\vdfs\ev_vdfs.in
+..\input\%1%\model\vdfs\ev_vdfs.in
 2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-..\input\networks\ev\ev_roadway.in
+..\input\%1%\networks\ev\ev_roadway.in
 ~/ ...write report file
 2
 ~/ ...call module 2.31: input/modify/display turn table
@@ -204,7 +204,7 @@ q
 ~# ...input/modify turns using batch entry
 2
 ~/ ...enter file name for batch input
-..\input\networks\ev\ev_turns.in
+..\input\%1%\networks\ev\ev_turns.in
 ~/ ...write report file
 2
 q
@@ -217,7 +217,7 @@ s=1006
 ~/ ...input modes using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_modes.in
+..\input\%1%\model\transit\transit_modes.in
 ~/ ...write report file
 2
 q
@@ -226,19 +226,19 @@ q
 ~/ ...input transit vehicles using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_vehicles.in
+..\input\%1%\model\transit\transit_vehicles.in
 ~/ ...write report file
 2
 q
 ~/ ...call module 4.11: input functions using batch entry
 ~/ ...input ni vdfs
 4.11
-..\model\vdfs\ni_vdfs.in
+..\input\%1%\model\vdfs\ni_vdfs.in
 2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
-..\input\networks\ni\ni_roadway.in
+..\input\%1%\networks\ni\ni_roadway.in
 ~/ ...write report file
 2
 ~/ ...call module 2.31: input/modify/display turn table
@@ -246,7 +246,7 @@ q
 ~# ...input/modify turns using batch entry
 2
 ~/ ...enter file name for batch input
-..\input\networks\ni\ni_turns.in
+..\input\%1%\networks\ni\ni_turns.in
 ~/ ...write report file
 2
 q

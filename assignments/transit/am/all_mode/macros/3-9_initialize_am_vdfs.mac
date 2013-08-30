@@ -15,7 +15,7 @@ q
 ~/ ...call module 4.11: input functions using batch entry
 ~/ ...input am vdfs
 4.11
-..\..\..\..\model\vdfs\am_vdfs.in
+..\..\..\..\input\%1%\model\vdfs\am_vdfs.in
 2
 ~#
 ~/end: 3-9_initialize_am_vdfs.mac

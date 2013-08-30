@@ -1,0 +1,20 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3-9-9_set_zone_system_parameters.rpt
+~/
+~/
+~/begin: 3-9-9_set_zone_system_parameters.mac
+~/ ...call module 3.21: matrix calculations
+3.21
+~+|1|y|ms"hizon"|n|%1%|||2
+~+|1|y|ms"losta"|n|%2%|||2
+~+|1|y|ms"hista"|n|%3%|||2
+~+|1|y|ms"lopnr"|n|%4%|||2
+~+|1|y|ms"hipnr"|n|%5%|||2
+q
+~#
+~/end: 3-9-9_set_zone_system_parameters.mac
+~/exit emme
+~/
+q

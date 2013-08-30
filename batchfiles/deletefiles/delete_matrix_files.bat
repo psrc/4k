@@ -15,6 +15,10 @@ cd ../../../..
 cd assignments/auto/ni/emmemat
 if exist *.emx erase *.emx
 cd ../../../..
+REM non-motorized assignments
+cd assignments/nonmotorized/am/emmemat
+if exist *.emx erase *.emx
+cd ../../../..
 REM transit assignments
 cd assignments/transit/am/all_mode/emmemat
 if exist *.emx erase *.emx
@@ -22,10 +26,6 @@ cd ../../../../..
 cd assignments/transit/md/all_mode/emmemat
 if exist *.emx erase *.emx
 cd ../../../../..
-REM non-motorized assignments
-cd assignments/nonmotorized/am/emmemat
-if exist *.emx erase *.emx
-cd ../../../..
 REM distribution
 cd distribution/hbcollege/emmemat
 if exist *.emx erase *.emx
@@ -62,10 +62,10 @@ cd generation/trip/emmemat
 if exist *.emx erase *.emx
 cd ../../..
 REM market segmentation
-cd marketsegmentation/work/emmemat
+cd marketsegmentation/nonwork/emmemat
 if exist *.emx erase *.emx
 cd ../../..
-cd marketsegmentation/nonwork/emmemat
+cd marketsegmentation/work/emmemat
 if exist *.emx erase *.emx
 cd ../../..
 REM mode choice
@@ -127,7 +127,7 @@ REM estimation skims
 cd skims/estimation/am/emmemat
 if exist *.emx erase *.emx
 cd ../../../..
-cd skims/estimation/midday/emmemat
+cd skims/estimation/md/emmemat
 if exist *.emx erase *.emx
 cd ../../../..
 REM intrazonal/terminal times
@@ -231,10 +231,10 @@ cd triptables/trucks/emmemat
 if exist *.emx erase *.emx
 cd ../../..
 REM truck model
-cd trucks/generation/emmemat
+cd trucks/distribution/emmemat
 if exist *.emx erase *.emx
 cd ../../..
-cd trucks/distribution/emmemat
+cd trucks/generation/emmemat
 if exist *.emx erase *.emx
 cd ../../..
 REM vehicle availability

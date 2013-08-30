@@ -8,7 +8,7 @@ reports=7_input_data.rpt
 ~# ...call module 3.11: input matrices using batch entry
 ~/ ...input mf"vehmtx" conversion file
 3.11
-~+|..\..\model\vehicleavailability\hhemp_to_vehmtx_conversion_file.in|2|
+~+|..\..\input\%1%\model\vehicleavailability\hhemp_to_vehmtx_conversion_file.in|2|
 ~#
 ~/end: 7_input_data.mac
 ~/exit emme

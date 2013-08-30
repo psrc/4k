@@ -20,6 +20,11 @@ cd assignments/auto/ni
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../../..
+REM non-motorized assignments
+cd assignments/nonmotorized/am
+if exist emlock* echo emlock file found, model run exited
+if exist emlock* exit /b
+cd ../../..
 REM transit assignments
 cd assignments/transit/am/all_mode
 if exist emlock* echo emlock file found, model run exited
@@ -29,11 +34,6 @@ cd assignments/transit/md/all_mode
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../../../..
-REM non-motorized assignments
-cd assignments/nonmotorized/am
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../../..
 REM distribution
 cd distribution/hbcollege
 if exist emlock* echo emlock file found, model run exited
@@ -81,11 +81,11 @@ if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..
 REM market segmentation
-cd marketsegmentation/work
+cd marketsegmentation/nonwork
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..
-cd marketsegmentation/nonwork
+cd marketsegmentation/work
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..
@@ -166,7 +166,7 @@ cd skims/estimation/am
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../../..
-cd skims/estimation/midday
+cd skims/estimation/md
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../../..
@@ -301,11 +301,11 @@ if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..
 REM truck model
-cd trucks/generation
+cd trucks/distribution
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..
-cd trucks/distribution
+cd trucks/generation
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..

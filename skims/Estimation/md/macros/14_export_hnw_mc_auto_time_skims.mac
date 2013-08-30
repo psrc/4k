@@ -1,0 +1,63 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=?
+~/
+~/
+~/begin: 11_export_hnw_mc_auto_time_skims.mac
+~/ ...call module 3.14: output matrices
+3.14
+~# ...change module parameters
+4
+~# ...dimensions for other reports and export
+2
+~# ...dimensions for in-line report, report by zones and export
+~# ...enter value width and number of decimals
+7,2
+~# ...suppress redundant blanks in export?
+n
+~# ...end
+4
+~# ...save current values of module parameters on disk?
+n
+~# ...list one or several matrices
+1
+~# ...several matrices by zones
+3
+~# ...enter matrix 1
+mf"mau1tm"
+~# ...enter matrix 2
+mf"mau2tm"
+~# ...enter matrix 3
+mf"mau3tm"
+~# ...enter matrix 4
+mf"mu1btm"
+~# ...enter matrix 5
+mf"mu2btm"
+~# ...enter matrix 6
+mf"mu3btm"
+~# ...enter matrix 7
+mf"termtm"
+
+~# ...enter constraint matrix
+mf"hnwsur"
+~# ...enter constraint interval
+0,0,ex
+~# ...submatrix?
+y
+~# ...enter origins
+1,3700
+
+~# ...enter destinations
+1,3700
+
+~# ...write report
+2
+~# ...enter file name for report
+md_hnw_mc_auto_time_skims.txt
+q
+~#
+~/end: 11_export_hnw_mc_auto_time_skims.mac
+~/exit emme
+~/
+q

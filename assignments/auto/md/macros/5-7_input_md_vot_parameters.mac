@@ -8,7 +8,7 @@ reports=5-7_input_md_vot_parameters.rpt
 ~/ ...call module 3.11: input matrices using batch entry
 ~/ ...input vot assignment parameters
 3.11
-~+|..\..\..\model\vot\md_vot_parameters.in|2|
+~+|..\..\..\input\%1%\model\vot\md_vot_parameters.in|2|
 ~#
 ~/end: 5-7_input_md_vot_parameters.mac
 ~/exit emme

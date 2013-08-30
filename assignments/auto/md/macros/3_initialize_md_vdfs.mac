@@ -15,7 +15,7 @@ q
 ~/ ...call module 4.11: input functions using batch entry
 ~/ ...input mid-day vdfs
 4.11
-..\..\..\model\vdfs\md_vdfs.in
+..\..\..\input\%1%\model\vdfs\md_vdfs.in
 2
 ~#
 ~/end: 3_initialize_md_vdfs.mac

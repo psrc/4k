@@ -25,6 +25,12 @@ cd assignments\auto\ni
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
 cd ..\..\..
+REM non-motorized assignments
+cd assignments\nonmotorized\am
+@call ..\..\..\batchfiles\nan\nan_test.bat .rpt
+if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
+if errorlevel 4 exit /b
+cd ..\..\..
 REM transit assignments
 cd assignments\transit\am\all_mode
 @call ..\..\..\..\batchfiles\nan\nan_test.bat .rpt
@@ -36,12 +42,6 @@ cd assignments\transit\md\all_mode
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
 cd ..\..\..\..
-REM non-motorized assignments
-cd assignments\nonmotorized\am
-@call ..\..\..\batchfiles\nan\nan_test.bat .rpt
-if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
-if errorlevel 4 exit /b
-cd ..\..\..
 REM distribution
 cd distribution\hbcollege
 @call ..\..\batchfiles\nan\nan_test.bat .rpt
@@ -100,12 +100,12 @@ if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
 cd ..\..
 REM market segmentation
-cd marketsegmentation\work
+cd marketsegmentation\nonwork
 @call ..\..\batchfiles\nan\nan_test.bat .rpt
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
 cd ..\..
-cd marketsegmentation\nonwork
+cd marketsegmentation\work
 @call ..\..\batchfiles\nan\nan_test.bat .rpt
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
@@ -205,7 +205,7 @@ cd skims\estimation\am
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
 cd ..\..\..
-cd skims\estimation\midday
+cd skims\estimation\md
 @call ..\..\..\batchfiles\nan\nan_test.bat .rpt
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
@@ -371,12 +371,12 @@ if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
 cd ..\..
 REM truck model
-cd trucks\generation
+cd trucks\distribution
 @call ..\..\batchfiles\nan\nan_test.bat .rpt
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
 cd ..\..
-cd trucks\distribution
+cd trucks\generation
 @call ..\..\batchfiles\nan\nan_test.bat .rpt
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b

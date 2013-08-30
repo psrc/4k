@@ -11,17 +11,17 @@ reports=8_calculate_am_fares.rpt
 ~# ...input/modify zone groups (using batch entry)
 1
 ~# ...enter file name for batch input
-..\..\..\..\model\ensembles\transit_fare_zones.grt
+..\..\..\..\input\%1%\model\ensembles\transit_fare_zones.ens
 ~/ ...write report file
 2
 1
 ~# ...enter file name for batch input
-..\..\..\..\model\ensembles\uw_gu.ens
+..\..\..\..\input\%1%\model\ensembles\uw_gu.ens
 ~/ ...write report file
 2
 1
 ~# ...enter file name for batch input
-..\..\..\..\model\ensembles\bellevuecbd_gv.ens
+..\..\..\..\input\%1%\model\ensembles\bellevuecbd_gv.ens
 ~/ ...write report file
 2
 q
@@ -29,13 +29,13 @@ q
 3.11
 ~/ ...input am fares - monthly pass
 ~# ...enter file name for batch input
-..\..\..\..\input\fares\am_fares_monthly_pass.in
+..\..\..\..\input\%1%\fares\am_fares_monthly_pass.in
 ~/ ...write report file
 2
 3.11
 ~/ ...input am fares - farebox
 ~# ...enter file name for batch input
-..\..\..\..\input\fares\am_fares_farebox.in
+..\..\..\..\input\%1%\fares\am_fares_farebox.in
 ~/ ...write report file
 2
 ~/ ...call module 3.21: matrix calculations
