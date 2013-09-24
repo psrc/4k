@@ -27,6 +27,9 @@ reports=7_input_data.rpt
 ~/ ...input parking cost assumptions
 3.11
 ~+|..\..\input\%1%\Parking\hourly_parking_costs.in|2|
+~/ ...input vot assignment parameters
+3.11
+~+|..\..\input\%1%\model\vot\md_vot_parameters.in|2|
 ~#
 ~/end: 7_input_data.mac
 ~/exit emme

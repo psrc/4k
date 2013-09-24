@@ -199,17 +199,6 @@ cd skims\bidirectional\generalized_cost
 if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
 if errorlevel 4 exit /b
 cd ..\..\..
-REM estimation skims
-cd skims\estimation\am
-@call ..\..\..\batchfiles\nan\nan_test.bat .rpt
-if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
-if errorlevel 4 exit /b
-cd ..\..\..
-cd skims\estimation\md
-@call ..\..\..\batchfiles\nan\nan_test.bat .rpt
-if errorlevel 4 (echo found "NaN") else (echo "NaN" not found)
-if errorlevel 4 exit /b
-cd ..\..\..
 REM intrazonal\terminal times
 cd skims\iz_tt
 @call ..\..\batchfiles\nan\nan_test.bat .rpt

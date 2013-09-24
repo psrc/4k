@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6-9_load_ensembles.rpt
+~/
+~/
+~/begin: 6-9_load_ensembles.mac
+~/ ...call module 3.01: input/modify/output zone groups
+~/ ...initialize partitions
+~/ ...input/modify zone groups (using batch entry)
+3.01
+~+|4|all|y
+~+|1|..\..\input\%1%\model\ensembles\parking_gz.ens|2
+q
+~#
+~/end: 6-9_load_ensembles.mac
+~/exit emme
+~/
+q

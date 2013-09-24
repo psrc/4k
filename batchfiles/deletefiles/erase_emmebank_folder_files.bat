@@ -313,23 +313,6 @@ if exist *.rp* erase *.rp*
 if exist usemacro erase usemacro
 if exist core_interface_log erase core_interface_log
 cd ..\..\..
-REM estimation skims
-cd skims\estimation\am
-if exist emmebank erase emmebank
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-if exist usemacro erase usemacro
-if exist core_interface_log erase core_interface_log
-cd ..\..\..
-cd skims\estimation\md
-if exist emmebank erase emmebank
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-if exist usemacro erase usemacro
-if exist core_interface_log erase core_interface_log
-cd ..\..\..
 REM intrazonal\terminal times
 cd skims\iz_tt
 if exist emmebank erase emmebank

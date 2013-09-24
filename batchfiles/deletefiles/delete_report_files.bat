@@ -123,13 +123,6 @@ cd ../../..
 cd skims/bidirectional/generalized_cost
 if exist *.rp* erase *.rp*
 cd ../../..
-REM estimation skims
-cd skims/estimation/am
-if exist *.rp* erase *.rp*
-cd ../../..
-cd skims/estimation/md
-if exist *.rp* erase *.rp*
-cd ../../..
 REM intrazonal/terminal times
 cd skims/iz_tt
 if exist *.rp* erase *.rp*

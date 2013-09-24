@@ -123,13 +123,6 @@ cd ../../../..
 cd skims/bidirectional/generalized_cost/emmemat
 if exist *.emx erase *.emx
 cd ../../../..
-REM estimation skims
-cd skims/estimation/am/emmemat
-if exist *.emx erase *.emx
-cd ../../../..
-cd skims/estimation/md/emmemat
-if exist *.emx erase *.emx
-cd ../../../..
 REM intrazonal/terminal times
 cd skims/iz_tt/emmemat
 if exist *.emx erase *.emx

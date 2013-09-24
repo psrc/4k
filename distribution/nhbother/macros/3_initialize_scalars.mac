@@ -8,6 +8,31 @@ reports=3_initialize_scalars.rpt
 ~/ ...call module 3.12: input/modify matrices interactively
 ~/ ...initialize scalar matrices
 3.12
+~+|1|ms01|mvotda|md sov non-work vot|0
+~+|1|ms02|mvots2|md hov 2 vot|0
+~+|1|ms03|mvots3|md hov 3+ vot|0
+~+|1|ms04|mvotvp|md vanpool vot|0
+~+|1|ms05|mvot1v|md sov hbw income 1 vot|0
+~+|1|ms06|mvot2v|md sov hbw income 2 vot|0
+~+|1|ms07|mvot3v|md sov hbw income 3 vot|0
+~+|1|ms08|mvot4v|md sov hbw income 4 vot|0
+~+|1|ms09|mvotlt|md light truck vot|0
+~+|1|ms10|mvotmd|md medium truck vot|0
+~+|1|ms11|mvothv|md heavy truck vot|0
+~#
+~+|1|ms12|autoop|auto operating cost (cents/mile)|0
+~#
+~+|1|ms13|colexp|hb college exp coefficient|0
+~+|1|ms14|hboexp|hb other exp coefficient|0
+~+|1|ms15|schexp|hb school exp coefficient|0
+~+|1|ms16|hspexp|hb shop exp coefficient|0
+~+|1|ms17|hbwex1|sov hbw income 1 exp coefficient|0
+~+|1|ms18|hbwex2|sov hbw income 2 exp coefficient|0
+~+|1|ms19|hbwex3|sov hbw income 3 exp coefficient|0
+~+|1|ms20|hbwex4|sov hbw income 4 exp coefficient|0
+~+|1|ms21|otoexp|nhb other exp coefficient|0
+~+|1|ms22|wkoexp|nhb work exp coefficient|0
+~#
 ~+|1|ms90|sca090|temp scalar 90|0
 q
 ~#

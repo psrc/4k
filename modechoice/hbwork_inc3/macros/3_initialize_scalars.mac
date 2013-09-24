@@ -122,6 +122,18 @@ reports=3_initialize_scalars.rpt
 ~+|1|ms96|unmtdd|uf coeff for td (md) - non motorized|0
 ~+|1|ms97|uretdo|uf coeff for td (mo) - retail far|0
 ~+|1|ms98|uretdd|uf coeff for td (md) - retail far|0
+~#
+~+|1|ms99|avotda|am sov non-work vot|0
+~+|1|ms100|avots2|am hov 2 vot|0
+~+|1|ms101|avots3|am hov 3+ vot|0
+~+|1|ms102|avotvp|am vanpool vot|0
+~+|1|ms103|avot1v|am sov hbw income 1 vot|0
+~+|1|ms104|avot2v|am sov hbw income 2 vot|0
+~+|1|ms105|avot3v|am sov hbw income 3 vot|0
+~+|1|ms106|avot4v|am sov hbw income 4 vot|0
+~+|1|ms107|avotlt|am light truck vot|0
+~+|1|ms108|avotmd|am medium truck vot|0
+~+|1|ms109|avothv|am heavy truck vot|0
 q
 ~#
 ~/end: 3_initialize_scalars.mac

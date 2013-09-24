@@ -161,15 +161,6 @@ cd skims/bidirectional/generalized_cost
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../../..
-REM estimation skims
-cd skims/estimation/am
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../../..
-cd skims/estimation/md
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../../..
 REM intrazonal/terminal times
 cd skims/iz_tt
 if exist emlock* echo emlock file found, model run exited

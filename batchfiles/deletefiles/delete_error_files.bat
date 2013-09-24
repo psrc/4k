@@ -123,13 +123,6 @@ cd ../../..
 cd skims/bidirectional/generalized_cost
 if exist errors erase errors
 cd ../../..
-REM estimation skims
-cd skims/estimation/am
-if exist errors erase errors
-cd ../../..
-cd skims/estimation/md
-if exist errors erase errors
-cd ../../..
 REM intrazonal/terminal times
 cd skims/iz_tt
 if exist errors erase errors

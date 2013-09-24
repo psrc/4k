@@ -123,13 +123,6 @@ cd ../../..
 cd skims/bidirectional/generalized_cost
 ren *.rpt *.rpf
 cd ../../..
-REM estimation skims
-cd skims/estimation/am
-ren *.rpt *.rpf
-cd ../../..
-cd skims/estimation/md
-ren *.rpt *.rpf
-cd ../../..
 REM intrazonal/terminal times
 cd skims/iz_tt
 ren *.rpt *.rpf

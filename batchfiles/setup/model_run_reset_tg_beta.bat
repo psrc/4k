@@ -275,21 +275,6 @@ if exist errors erase errors
 if exist *.rp* erase *.rp*
 xcopy "..\..\..\input\%highpnr%\emmebanks\skims\bidirectional\generalized_cost" /e
 cd ..\..\..
-REM estimation skims
-cd skims\estimation\am
-if exist emmebank erase emmebank
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-xcopy "..\..\..\input\%highpnr%\emmebanks\skims\estimation\am" /e
-cd ..\..\..
-cd skims\estimation\md
-if exist emmebank erase emmebank
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-xcopy "..\..\..\input\%highpnr%\emmebanks\skims\estimation\md" /e
-cd ..\..\..
 REM intrazonal\terminal times
 cd skims\iz_tt
 if exist emmebank erase emmebank
