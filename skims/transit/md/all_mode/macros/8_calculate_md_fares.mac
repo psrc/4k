@@ -7,11 +7,21 @@ reports=8_calculate_md_fares.rpt
 ~/begin: 8_calculate_md_fares.mac
 ~/ ...call module 3.01: input / modify / output zone groups
 3.01
-~/ ...input transit fare zone ensemble
+~/ ...input transit fare zone ensembles
 ~# ...input/modify zone groups (using batch entry)
 1
 ~# ...enter file name for batch input
-..\..\..\..\model\ensembles\transit_fare_zones.grt
+..\..\..\..\input\%1%\model\ensembles\transit_fare_zones.ens
+~/ ...write report file
+2
+1
+~# ...enter file name for batch input
+..\..\..\..\input\%1%\model\ensembles\uw_gu.ens
+~/ ...write report file
+2
+1
+~# ...enter file name for batch input
+..\..\..\..\input\%1%\model\ensembles\bellevuecbd_gv.ens
 ~/ ...write report file
 2
 q
@@ -19,25 +29,25 @@ q
 3.11
 ~/ ...input md fares - monthly pass
 ~# ...enter file name for batch input
-..\..\..\..\input\fares\md_fares_monthly_pass.in
+..\..\..\..\input\%1%\fares\md_fares_monthly_pass.in
 ~/ ...write report file
 2
 3.11
 ~/ ...input md fares - farebox
 ~# ...enter file name for batch input
-..\..\..\..\input\fares\md_fares_farebox.in
+..\..\..\..\input\%1%\fares\md_fares_farebox.in
 ~/ ...write report file
 2
 ~/ ...call module 3.21: matrix calculations
 3.21
 ~/ ...adjust farebox fares from everett and snohomish county to uw
-~+|1|y|mf"mfarbx"|n|1.10|||y|gt4|gt5||282|284|301|302|303|304|305||2
+~+|1|y|mf"mfarbx"|n|1.10|||y|gt4|gt5||gu1||2
 ~/ ...adjust farebox fares from everett and snohomish county to bellevue cbd
-~+|1|y|mf"mfarbx"|n|1.35|||y|gt4|gt5||1546,1557||2
+~+|1|y|mf"mfarbx"|n|1.35|||y|gt4|gt5||gv1||2
 ~/ ...adjust monthly pass fares from everett and snohomish county to uw
-~+|1|y|mf"mfarps"|n|39.25|||y|gt4|gt5||282|284|301|302|303|304|305||2
+~+|1|y|mf"mfarps"|n|39.25|||y|gt4|gt5||gu1||2
 ~/ ...adjust monthly pass fares from everett and snohomish county to bellevue cbd
-~+|1|y|mf"mfarps"|n|51.00|||y|gt4|gt5||1546,1557||2
+~+|1|y|mf"mfarps"|n|51.00|||y|gt4|gt5||gv1||2
 ~/ ...calculate weighted average per-trip walk-access fare in cents
 ~+|1|y|mf"mfarwa"|n|100*(.299*mf"mfarbx"+.701*mf"mfarps"/50)|||n|2
 ~/ ...adjust farebox fares to cents

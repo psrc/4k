@@ -11,7 +11,7 @@ s=1002
 ~/ ...input attribute using batch entry
 ~/ ...input bridge flags
 2.41
-~+|3|@bridg|n|*|1,2,3|..\..\..\input\timeofday\bridge_flags.in|y|2|y
+~+|3|@bridg|n|*|1,2,3|..\..\..\input\%1%\timeofday\bridge_flags.in|y|2|y
 q
 ~#
 ~/end: 5-8_input_bridge_flags.mac

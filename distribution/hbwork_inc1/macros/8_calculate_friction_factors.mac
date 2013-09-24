@@ -8,7 +8,7 @@ reports=8_calculate_friction_factors.rpt
 ~/ ...call module 3.21: matrix calculations
 ~/ ...calculate hb work income 1 friction factors
 3.21
-~+|1|y|mf"hbwfr1"|n|exp(-.1058*mf"aa1cs1")|||y|1,%3%||1,%3%||2
+~+|1|y|mf"hbwfr1"|n|exp(ms"hbwex1"*(mf"aa1cs1"+(mf"aa1ds1"*ms"autoop"*ms"avot1v")))|||y|1,%3%||1,%3%||2
 q
 ~#
 ~/ ...set externals to 0 to prevent e-e trips

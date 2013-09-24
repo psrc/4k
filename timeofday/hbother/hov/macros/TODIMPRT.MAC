@@ -1,0 +1,82 @@
+ ~$>start
+ ********************************************************************************
+ * Macro File Name: TODIMPRT.MAC                                                *
+ * Original Date: 08/23/2006                                                    *
+ * Revised Date:                                                                *
+ * Purpose: Imports matrices necessary for the time-of-day model.               *
+ * Input Files:                                                                 *
+ * Temporary Files:                                                             *
+ * Output Files:                                                                *
+ * Notes: Run in \TODModel\RunTOD                                               *
+ * Report File: TODIMPRT.RPT                                                    *
+ ********************************************************************************
+ ~:start
+ ~?!i&32768
+ ~o|295
+ reports=TODIMPRT.RPT
+ ~/
+ ~/ Copy matrices from Bank 1
+ ~/ --- Open an external bank in a sub-directory ..\bank1\
+ 1.31
+ ~+|1|..\bank1\emmebank
+ ~+|~?q=1|y
+ ~+|~?q=0|1002
+ ~+|~?q=1|y
+ ~/ --- Import matrices from EMME/2 Bank 1
+ ~+|2|3|3|mf"au1cos"|mf"au1cos"|n|y
+ ~+|2|3|3|mf"au2cos"|mf"au2cos"|n|y
+ ~+|2|3|3|mf"au3cos"|mf"au3cos"|n|y
+ ~+|2|3|3|mf"aa1cs1"|mf"aa1cs1"|n|y
+ ~+|2|3|3|mf"aa1cs2"|mf"aa1cs2"|n|y
+ ~+|2|3|3|mf"aa1cs3"|mf"aa1cs3"|n|y
+ ~+|2|3|3|mf"aa1cs4"|mf"aa1cs4"|n|y
+ q
+ ~/
+ ~/ Copy matrices from Bank 2
+ ~/ --- Open an external bank in a sub-directory ..\bank2\
+ 1.31
+ ~+|1|..\bank2\emmebank
+ ~+|~?q=1|y
+ ~+|~?q=0|1004
+ ~+|~?q=1|y
+ ~/ --- Import matrices from EMME/2 Bank 2
+ ~+|2|3|3|mf"off1cs"|mf"off1cs"|n|y
+ ~+|2|3|3|mf"off2cs"|mf"off2cs"|n|y
+ ~+|2|3|3|mf"off3cs"|mf"off3cs"|n|y
+ ~+|2|3|3|mf"ma1cs1"|mf"ma1cs1"|n|y
+ ~+|2|3|3|mf"ma1cs2"|mf"ma1cs2"|n|y
+ ~+|2|3|3|mf"ma1cs3"|mf"ma1cs3"|n|y
+ ~+|2|3|3|mf"ma1cs4"|mf"ma1cs4"|n|y
+ q
+ ~/
+ ~/ Copy matrices from Bank 3
+ ~/ --- Open an external bank in a sub-directory ..\bank3\
+ 1.31
+ ~+|1|..\bank3\emmebank
+ ~+|~?q=1|y
+ ~+|~?q=0|1003
+ ~+|~?q=1|y
+ ~/ --- Import matrices from EMME/2 Bank 3
+ ~+|2|3|3|mf"pau1cs"|mf"pau1cs"|n|y
+ ~+|2|3|3|mf"pau2cs"|mf"pau2cs"|n|y
+ ~+|2|3|3|mf"pau3cs"|mf"pau3cs"|n|y
+ ~+|2|3|3|mf"pa1cs1"|mf"pa1cs1"|n|y
+ ~+|2|3|3|mf"pa1cs2"|mf"pa1cs2"|n|y
+ ~+|2|3|3|mf"pa1cs3"|mf"pa1cs3"|n|y
+ ~+|2|3|3|mf"pa1cs4"|mf"pa1cs4"|n|y
+ ~+|2|3|3|mf"eau1cs"|mf"eau1cs"|n|y
+ ~+|2|3|3|mf"eau2cs"|mf"eau2cs"|n|y
+ ~+|2|3|3|mf"eau3cs"|mf"eau3cs"|n|y
+ ~+|2|3|3|mf"ea1cs1"|mf"ea1cs1"|n|y
+ ~+|2|3|3|mf"ea1cs2"|mf"ea1cs2"|n|y
+ ~+|2|3|3|mf"ea1cs3"|mf"ea1cs3"|n|y
+ ~+|2|3|3|mf"ea1cs4"|mf"ea1cs4"|n|y
+ ~+|2|3|3|mf"nau1cs"|mf"nau1cs"|n|y
+ ~+|2|3|3|mf"nau2cs"|mf"nau2cs"|n|y
+ ~+|2|3|3|mf"nau3cs"|mf"nau3cs"|n|y
+ ~+|2|3|3|mf"na1cs1"|mf"na1cs1"|n|y
+ ~+|2|3|3|mf"na1cs2"|mf"na1cs2"|n|y
+ ~+|2|3|3|mf"na1cs3"|mf"na1cs3"|n|y
+ ~+|2|3|3|mf"na1cs4"|mf"na1cs4"|n|y
+ q
+ ~/

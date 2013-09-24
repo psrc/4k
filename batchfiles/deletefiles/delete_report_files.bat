@@ -15,6 +15,10 @@ cd ../../..
 cd assignments/auto/ni
 if exist *.rp* erase *.rp*
 cd ../../..
+REM non-motorized assignments
+cd assignments/nonmotorized/am
+if exist *.rp* erase *.rp*
+cd ../../..
 REM transit assignments
 cd assignments/transit/am/all_mode
 if exist *.rp* erase *.rp*
@@ -22,10 +26,6 @@ cd ../../../..
 cd assignments/transit/md/all_mode
 if exist *.rp* erase *.rp*
 cd ../../../..
-REM non-motorized assignments
-cd assignments/nonmotorized/am
-if exist *.rp* erase *.rp*
-cd ../../..
 REM distribution
 cd distribution/hbcollege
 if exist *.rp* erase *.rp*
@@ -62,10 +62,10 @@ cd generation/trip
 if exist *.rp* erase *.rp*
 cd ../..
 REM market segmentation
-cd marketsegmentation/work
+cd marketsegmentation/nonwork
 if exist *.rp* erase *.rp*
 cd ../..
-cd marketsegmentation/nonwork
+cd marketsegmentation/work
 if exist *.rp* erase *.rp*
 cd ../..
 REM mode choice
@@ -93,6 +93,10 @@ cd ../..
 cd modechoice/nhb
 if exist *.rp* erase *.rp*
 cd ../..
+REM networks
+cd networks
+if exist *.rp* erase *.rp*
+cd ..
 REM auto skims
 cd skims/auto/am
 if exist *.rp* erase *.rp*
@@ -117,13 +121,6 @@ cd skims/bidirectional/time
 if exist *.rp* erase *.rp*
 cd ../../..
 cd skims/bidirectional/generalized_cost
-if exist *.rp* erase *.rp*
-cd ../../..
-REM estimation skims
-cd skims/estimation/am
-if exist *.rp* erase *.rp*
-cd ../../..
-cd skims/estimation/midday
 if exist *.rp* erase *.rp*
 cd ../../..
 REM intrazonal/terminal times
@@ -227,13 +224,30 @@ cd triptables/trucks
 if exist *.rp* erase *.rp*
 cd ../..
 REM truck model
-cd trucks/generation
+cd trucks/distribution
 if exist *.rp* erase *.rp*
 cd ../..
-cd trucks/distribution
+cd trucks/generation
 if exist *.rp* erase *.rp*
 cd ../..
 REM vehicle availability
 cd vehicleavailability/all
+if exist *.rp* erase *.rp*
+cd ../..
+REM summary reports
+REM generation
+cd generation/trip/summaries
+if exist *.rp* erase *.rp*
+cd ../../..
+REM distribution
+cd distribution/summaries
+if exist *.rp* erase *.rp*
+cd ../..
+REM vehicle availability
+cd vehicleavailability/all/summaries
+if exist *.rp* erase *.rp*
+cd ../../..
+REM trip tables
+cd triptables/summaries
 if exist *.rp* erase *.rp*
 cd ../..

@@ -8,12 +8,12 @@ reports=7_input_rates.rpt
 ~/ ...call module 3.11: input matrices using batch entry
 ~/ ...load hh_triprates.ma2, trip rates for columns 1-100 of mf"hhemp"
 3.11
-~+|..\..\input\tripgeneration\rates\hh_gpsexp_triprates2006.in|2|
+~+|..\..\input\%1%\tripgeneration\rates\hh_triprates.in|2|
 ~#
 ~/ ...call module 3.11: input matrices using batch entry
 ~/ ...load nonhh_triprates.ma2, trip rates for columns 109-124 of mf"hhemp"
 3.11
-~+|..\..\input\tripgeneration\rates\nonhh_triprates1999.in|2|
+~+|..\..\input\%1%\tripgeneration\rates\nonhh_triprates.in|2|
 ~/end: 7_input_rates.mac
 ~/exit emme
 ~/

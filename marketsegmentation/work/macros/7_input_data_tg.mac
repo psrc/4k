@@ -8,10 +8,10 @@ reports=7_input_data.rpt
 ~/ ...call module 3.11: input matrices using batch entry
 ~/ ...input car-worker category matrix
 3.11
-~+|..\..\Model\ModeChoice\work_car-worker_categories.in|2|
+~+|..\..\input\%1%\model\ModeChoice\work_car-worker_categories.in|2|
 ~#~/ ...input hb work market segment coefficients
 ~#3.11
-~#~+|..\..\Model\ModeChoice\hb_work_market_segment_coefficients.in|2|
+~#~+|..\..\input\%1%\model\ModeChoice\hb_work_market_segment_coefficients.in|2|
 ~#
 ~/end: 7_input_data.mac
 ~/exit emme

@@ -8,13 +8,13 @@ reports=7_input_data.rpt
 ~/ ...call module 3.11: input matrices using batch entry
 ~/ ...input heavy truck external-external trips
 3.11
-~+|..\..\Input\Externals\Trucks\heavy_trucks_reeb_ee.in|2|
+~+|..\..\input\%1%\Externals\Trucks\heavy_trucks_reeb_ee.in|2|
 ~/ ...input heavy truck external-internal trips
 3.11
-~+|..\..\Input\Externals\Trucks\heavy_trucks_reeb_ei.in|2|
+~+|..\..\input\%1%\Externals\Trucks\heavy_trucks_reeb_ei.in|2|
 ~/ ...input heavy truck internal-external trips
 3.11
-~+|..\..\Input\Externals\Trucks\heavy_trucks_reeb_ie.in|2|
+~+|..\..\input\%1%\Externals\Trucks\heavy_trucks_reeb_ie.in|2|
 ~#
 ~/end: 7_input_data.mac
 ~/exit emme

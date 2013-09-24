@@ -10,8 +10,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd hbwork_inc2
@@ -26,8 +26,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd hbwork_inc3
@@ -42,8 +42,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd hbwork_inc4
@@ -58,8 +58,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd hbcollege
@@ -74,8 +74,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd hbshop
@@ -90,8 +90,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd hbother
@@ -106,8 +106,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd hbschool
@@ -122,8 +122,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd nhbwork
@@ -138,8 +138,8 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..
 cd nhbother
@@ -154,7 +154,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\4_initialize_origin_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\5_initialize_destination_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_initialize_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\7_import_matrices_ag.mac
-call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 3700 3701 3750 3751 4000
-call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 3700 3701 3750 3751 4000
+call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_friction_factors.mac 938 939 956 1001 1200
+call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac 938 939 956 1001 1200
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac
 cd..

@@ -99,6 +99,18 @@ reports=3_initialize_scalars.rpt
 ~+|1|ms77|unmwkd|uf coeff for walk (md) - non motorized|0
 ~+|1|ms78|urewko|uf coeff for walk (mo) - retail far|0
 ~+|1|ms79|urewkd|uf coeff for walk (md) - retail far|0
+~#
+~+|1|ms80|avotda|am sov non-work vot|0
+~+|1|ms81|avots2|am hov 2 vot|0
+~+|1|ms82|avots3|am hov 3+ vot|0
+~+|1|ms83|avotvp|am vanpool vot|0
+~+|1|ms84|avot1v|am sov hbw income 1 vot|0
+~+|1|ms85|avot2v|am sov hbw income 2 vot|0
+~+|1|ms86|avot3v|am sov hbw income 3 vot|0
+~+|1|ms87|avot4v|am sov hbw income 4 vot|0
+~+|1|ms88|avotlt|am light truck vot|0
+~+|1|ms89|avotmd|am medium truck vot|0
+~+|1|ms90|avothv|am heavy truck vot|0
 q
 ~#
 ~/end: 3_initialize_scalars.mac

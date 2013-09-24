@@ -9,19 +9,19 @@ reports=6_input_matrix_data.rpt
 3.11
 ~/ ...input terminal times at production end
 ~/ ...enter file name for batch input
-..\..\input\terminaltimes\origin_tt.in
+..\..\input\%1%\terminaltimes\origin_tt.in
 ~/ ...write report file
 2
 3.11
 ~/ ...input terminal times at attraction end
 ~/ ...enter file name for batch input
-..\..\input\terminaltimes\destination_tt.in
+..\..\input\%1%\terminaltimes\destination_tt.in
 ~/ ...write report file
 2
 3.11
 ~/ ...input taz acrea (in acres)
 ~/ ...enter file name for batch input
-..\..\model\taz\taz_acres.in
+..\..\input\%1%\model\taz\taz_acres.in
 ~/ ...write report file
 2
 ~#

@@ -35,7 +35,7 @@ s=9999
 ~/ ...input modes using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_modes.in
+..\input\%1%\model\transit\transit_modes.in
 ~/ ...write report file
 2
 q
@@ -44,7 +44,7 @@ q
 ~/ ...input transit vehicles using batch entry
 1
 ~/ ...enter file name for batch input
-..\model\transit\transit_vehicles.in
+..\input\%1%\model\transit\transit_vehicles.in
 ~/ ...write report file
 2
 q

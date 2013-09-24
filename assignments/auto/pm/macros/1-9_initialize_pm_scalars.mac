@@ -1,0 +1,29 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=1-9_initialize_pm_scalars.rpt
+~/
+~/
+~/begin: 1-9_initialize_pm_scalars.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize scalar matrices
+3.12
+~# ...pm
+~# ...do not change macro numbers unless making synchronized changes in assignement macros!
+~+|1|ms01|pvotda|pm sov non-work vot|0
+~+|1|ms02|pvots2|pm hov 2 vot|0
+~+|1|ms03|pvots3|pm hov 3+ vot|0
+~+|1|ms04|pvotvp|pm vanpool vot|0
+~+|1|ms05|pvot1v|pm sov hbw income 1 vot|0
+~+|1|ms06|pvot2v|pm sov hbw income 2 vot|0
+~+|1|ms07|pvot3v|pm sov hbw income 3 vot|0
+~+|1|ms08|pvot4v|pm sov hbw income 4 vot|0
+~+|1|ms09|pvotlt|pm light truck vot|0
+~+|1|ms10|pvotmd|pm medium truck vot|0
+~+|1|ms11|pvothv|pm heavy truck vot|0
+q
+~#
+~/end: 1-9_initialize_pm_scalars.mac
+~/exit emme
+~/
+q

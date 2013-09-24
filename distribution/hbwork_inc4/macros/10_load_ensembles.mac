@@ -10,11 +10,11 @@ reports=10_load_ensembles.rpt
 ~/ ...input/modify zone groups (using batch entry)
 3.01
 ~+|4|all|y
-~+|1|..\..\model\ensembles\districts19_ga.ens|2
-~+|1|..\..\model\ensembles\seattlecbd_gb.ens|2
-~+|1|..\..\model\ensembles\counties_gc.ens|2
-~+|1|..\..\model\ensembles\districts6_gk.ens|2
-~+|1|..\..\model\ensembles\kitsap_gl.ens|2
+~+|1|..\..\input\%1%\model\ensembles\districts19_ga.ens|2
+~+|1|..\..\input\%1%\model\ensembles\seattlecbd_gb.ens|2
+~+|1|..\..\input\%1%\model\ensembles\counties_gc.ens|2
+~+|1|..\..\input\%1%\model\ensembles\districts6_gk.ens|2
+~+|1|..\..\input\%1%\model\ensembles\kitsap_gl.ens|2
 q
 ~#
 ~/end: 10_load_ensembles.mac

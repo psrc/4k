@@ -1,0 +1,112 @@
+ ~$>start
+ ********************************************************************************
+ * Macro File Name: TODINPUTS.MAC                                               *
+ * Original Date: 11/01/2005                                                    *
+ * Revised Date:                                                                *
+ * Purpose: Creates inputs (bridge and ferry flags) and calculates delay        *
+ *          for the time-of-day model (by vehicle class) for the AM Peak        *
+ *          time period.                                                        *
+ * Inputs:                                                                      *
+ * Temporary:                                                                   *
+ * Outputs:                                                                     *
+ * Notes:                                                                       *
+ * Report File: TODINPUTS.RPT, BRIDGE.RPT, FERRY.RPT                            *
+ ********************************************************************************
+ ~:start
+ ~?!i&32768
+ ~o|295
+ reports=TODINPUTS.RPT
+ ~/
+ ~/ --- Flagging Bridges
+ s=1002
+ ~#
+ ~/
+ ~/ Delete old extra attribute for bridge links
+ 2.42
+ ~+|3|@ul3|~?!e|y|~?q=0|
+ ~+|3|@bridg|~?!e|y|~?q=0|
+ ~+|3|@ferry|~?!e|y|~?q=0|
+ q
+ ~/
+ ~/ Create new attribute to store bridge links
+ ~/
+ reports=BRIDGE.RPT
+ 2.42
+ ~+|2|2|@bridg|Bridge Links|0|q
+ ~/
+ ~/ Store in bridge links into attribute
+ ~/
+ batchin=?
+ 2.41
+ ~+|3|@bridg|n|all||..\input\dbridge.in|y|2|y|q
+ ~/
+ ~######
+ 6.16
+ 4           /user-defined analysis
+ @bridg      /Link attribute for path analysis
+ 
+ .max.       /Operator to compute path attributes
+ 0.5,1.5     /Lower, upper threshold for selected paths
+ 2           /max
+ 2           /selected paths
+ ~#~+|mf"bridge"|n| | |
+ ~+| |mf"bridge"|n| |
+ ~+|' '| | |
+ ~+|' '| | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ q
+ ~+|3.21|1|y|mf"bridge"|n|0||mf"bridge"|0,9999,ex|n|2|q
+ ~######
+ ~/ Create new attribute to store ferry links
+ ~/
+ reports=FERRY.RPT
+ 2.42
+ ~+|2|2|@ferry|Ferry Links|0|q
+ ~/
+ ~/ Store in ferry links into attribute
+ ~/
+ batchin=?
+ 2.41
+ ~+|3|@ferry|n|all||..\input\dferry.in|y|2|y|q
+ ~/
+ ~######
+ 6.16
+ 4           /user-defined analysis
+ @ferry      /Link attribute for path analysis
+ 
+ .max.       /Operator to compute path attributes
+ 0.5,1.5     /Lower, upper threshold for selected paths
+ 2           /max
+ 2           /selected paths
+ ~#~+|mf"ferry"|n| | |
+ ~+| |mf"ferry"|n| |
+ ~+|' '| | |
+ ~+|' '| | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ ~+| | | |
+ q
+ ~+|3.21|1|y|mf"ferry"|n|0||mf"ferry"|0,9999,ex|n|2|q
+ ~######
+ ~/
+ ~/ ferry crossing flag in 0 or 1
+ ~/
+ 3.21
+ ~+|1|y|mf"ferry"|n|1||mf"ferry"|0,0,ex|n|2
+ q
+ ~/
+ ~/ Inputs for TOD model computed.
+ reports=
+ q

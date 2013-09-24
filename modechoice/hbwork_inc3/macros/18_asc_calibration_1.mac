@@ -1,0 +1,22 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=?
+~/
+~/
+~/begin: 18_asc_calibration_1.mac
+~# ...call module 3.21: matrix calculations
+3.21
+~+|1|n|mf"w3shda"*mf"hbwds3"|||y|1,%1%||1,%1%||||2|..\summaries\calibration\asc_calibration.rpt
+~+|1|n|mf"w3shs2"*mf"hbwds3"|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"w3shs3"*mf"hbwds3"|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"w3shtw"*mf"hbwds3"|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"w3shtd"*mf"hbwds3"|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"w3shwk"*mf"hbwds3"|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"w3shbk"*mf"hbwds3"|||y|1,%1%||1,%1%||||2
+q
+~#
+~/end: 18_asc_calibration_1.mac
+~/exit emme
+~/
+q

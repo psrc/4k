@@ -1,0 +1,27 @@
+ ~$>start
+ ********************************************************************************
+ * Macro File Name: TODMODEL.MAC                                                *
+ * Original Date: 08/23/2006                                                    *
+ * Revised Date:                                                                *
+ * Purpose: Runs time-of-day model.                                             *
+ * Input Files:                                                                 *
+ * Temporary Files:                                                             *
+ * Output Files:                                                                *
+ * Notes: Run in \TODModel\RunTOD                                               *
+ * Report File: TODMODEL.RPT                                                    *
+ ********************************************************************************
+ ~:start
+ ~?!i&32768
+ ~o|295
+ reports=TODMODEL.RPT
+ ~/
+ ~<runtod\todvecs.mac
+ ~<runtod\todimprt.mac
+ ~<runtod\hhldsize.mac
+ ~<runtod\tod_hbw_sov.mac
+ ~<runtod\tod_hbw_hov.mac
+ ~<runtod\tod_hbsh_sov.mac
+ ~<runtod\tod_hbsh_hov.mac
+ ~<runtod\tod_hbo_sov.mac
+ ~<runtod\tod_hbo_hov.mac
+ q
