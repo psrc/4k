@@ -13,6 +13,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd hbwork_inc2
 if exist *.rpt erase *.rpt
@@ -29,6 +30,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd hbwork_inc3
 if exist *.rpt erase *.rpt
@@ -45,6 +47,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd hbwork_inc4
 if exist *.rpt erase *.rpt
@@ -61,6 +64,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd hbcollege
 if exist *.rpt erase *.rpt
@@ -77,6 +81,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd hbshop
 if exist *.rpt erase *.rpt
@@ -93,6 +98,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd hbother
 if exist *.rpt erase *.rpt
@@ -109,6 +115,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd hbschool
 if exist *.rpt erase *.rpt
@@ -125,6 +132,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd nhbwork
 if exist *.rpt erase *.rpt
@@ -141,6 +149,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..
 cd nhbother
 if exist *.rpt erase *.rpt
@@ -157,4 +166,5 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\9_calculate_distribution.mac %hi
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_load_ensembles.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_input_survey_data.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_distribution_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+call emme -ng --set-iks 127.0.0.1 000 -m macros\13_distribution_externals_summary.mac
 cd ..

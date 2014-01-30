@@ -27,6 +27,11 @@ q
 ~+|1|1005|EV Roadway Network|n
 ~+|1|1006|NI Roadway Network|n
 q
+~/ ...call module 4.12: input/modify functions interactively
+~/ ...initialize function table
+4.12
+~+|1|y
+q
 ~/ ...import mode, vehicle, network files for scenarios 1002-1006
 ~#
 ~/ ...am network
@@ -50,11 +55,6 @@ q
 ~/ ...write report file
 2
 q
-~/ ...call module 4.11: input functions using batch entry
-~/ ...input am vdfs
-4.11
-..\input\%1%\model\vdfs\am_vdfs.in
-2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
@@ -98,11 +98,6 @@ q
 ~/ ...write report file
 2
 q
-~/ ...call module 4.11: input functions using batch entry
-~/ ...input pm vdfs
-4.11
-..\input\%1%\model\vdfs\pm_vdfs.in
-2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
@@ -140,11 +135,6 @@ q
 ~/ ...write report file
 2
 q
-~/ ...call module 4.11: input functions using batch entry
-~/ ...input md vdfs
-4.11
-..\input\%1%\model\vdfs\md_vdfs.in
-2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
@@ -188,11 +178,6 @@ q
 ~/ ...write report file
 2
 q
-~/ ...call module 4.11: input functions using batch entry
-~/ ...input ev vdfs
-4.11
-..\input\%1%\model\vdfs\ev_vdfs.in
-2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input
@@ -230,11 +215,6 @@ q
 ~/ ...write report file
 2
 q
-~/ ...call module 4.11: input functions using batch entry
-~/ ...input ni vdfs
-4.11
-..\input\%1%\model\vdfs\ni_vdfs.in
-2
 ~/ ...call module 2.11: input/modify base network using batch entry
 2.11
 ~/ ...enter file name for batch input

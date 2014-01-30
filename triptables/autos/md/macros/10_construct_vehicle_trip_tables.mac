@@ -12,7 +12,7 @@ reports=10_construct_vehicle_trip_tables.rpt
 ~+|1|y|mf"dapa"|n
 mf"coldst"*mf"coshda"*0.415*0.514+
 mf"hbodst"*mf"nwshda"*mf"md4ns"*0.479+
-mf"schdst"*mf"scshda"*0.097*0.556+
+mf"schdst"*0.676*mf"scshda"*0.097*0.556+
 mf"hspdst"*mf"nwshda"*mf"md6ns"*0.365+
 mf"otodst"*mf"nhshda"*0.552/2+
 mf"wkodst"*mf"nhshda"*0.438/2
@@ -21,7 +21,7 @@ mf"wkodst"*mf"nhshda"*0.438/2
 ~+|1|y|mf"sr2pa"|n
 mf"coldst"*mf"coshs2"*0.387*0.604+
 mf"hbodst"*mf"nwshs2"*mf"md4sr2"*0.506+
-mf"schdst"*mf"scshs2"*0.125*0.630+
+mf"schdst"*0.676*mf"scshs2"*0.125*0.630+
 mf"hspdst"*mf"nwshs2"*mf"md6sr2"*0.383+
 mf"otodst"*mf"nhshs2"*0.459/2+
 mf"wkodst"*mf"nhshs2"*0.390/2
@@ -37,7 +37,7 @@ mf"hbwds4"*mf"w4shs2"*mf"md2sr2"*0.549
 ~+|1|y|mf"sr3pa"|n
 mf"coldst"*mf"coshs3"*0.316*0.669+
 mf"hbodst"*mf"nwshs3"*mf"md4sr3"*0.488+
-mf"schdst"*mf"scshs3"*0.123*0.569+
+mf"schdst"*0.676*mf"scshs3"*0.123*0.569+
 mf"hspdst"*mf"nwshs3"*mf"md6sr3"*0.408+
 mf"otodst"*mf"nhshs3"*0.386/2+
 mf"wkodst"*mf"nhshs3"*0.515/2
@@ -72,7 +72,7 @@ q
 ~+|1|y|mf"daap"|n
 mf"coldst"*mf"coshda"*0.516*0.486+
 mf"hbodst"*mf"nwshda"*mf"md3ns"*0.521+
-mf"schdst"*mf"scshda"*0.681*0.444+
+mf"schdst"*0.676*mf"scshda"*0.681*0.444+
 mf"hspdst"*mf"nwshda"*mf"md5ns"*0.635+
 mf"otodst"*mf"nhshda"*0.552/2+
 mf"wkodst"*mf"nhshda"*0.438/2
@@ -81,7 +81,7 @@ mf"wkodst"*mf"nhshda"*0.438/2
 ~+|1|y|mf"sr2ap"|n
 mf"coldst"*mf"coshs2"*0.425*0.396+
 mf"hbodst"*mf"nwshs2"*mf"md3sr2"*0.494+
-mf"schdst"*mf"scshs2"*0.429*0.370+
+mf"schdst"*0.676*mf"scshs2"*0.429*0.370+
 mf"hspdst"*mf"nwshs2"*mf"md5sr2"*0.617+
 mf"otodst"*mf"nhshs2"*0.459/2+
 mf"wkodst"*mf"nhshs2"*0.390/2
@@ -97,7 +97,7 @@ mf"hbwds4"*mf"w4shs2"*mf"md1sr2"*0.451
 ~+|1|y|mf"sr3ap"|n
 mf"coldst"*mf"coshs3"*0.187*0.331+
 mf"hbodst"*mf"nwshs3"*mf"md3sr3"*0.512+
-mf"schdst"*mf"scshs3"*0.303*0.431+
+mf"schdst"*0.676*mf"scshs3"*0.303*0.431+
 mf"hspdst"*mf"nwshs3"*mf"md5sr3"*0.592+
 mf"otodst"*mf"nhshs3"*0.386/2+
 mf"wkodst"*mf"nhshs3"*0.515/2
@@ -122,14 +122,14 @@ mf"hbwds2"*mf"w2shda"*mf"md1ns2"*0.462
 mf"hbwds3"*mf"w3shda"*mf"md1ns3"*0.471
 ~+|||n|2
 ~/ ...hbw sov income 4
-~+|1|y|mf"hbw4pa"|n
+~+|1|y|mf"hbw4ap"|n
 mf"hbwds4"*mf"w4shda"*mf"md1ns4"*0.468
 ~+|||n|2
 q
 ~/ ...construct md o-d vehicle trip tables
 3.21
 ~/ ...sov non-work
-~+|1|y|mf"mvehda"|n|mf"dapa"+mf"daap"'|||n|2
+~+|1|y|mf"mvehda"|n|mf"dapa"+mf"daap"'+0.359*mf"thru"|||n|2
 ~/ ...hov 2
 ~+|1|y|mf"mvehs2"|n|(mf"sr2pa"+mf"sr2ap"')/2|||n|2
 ~/ ...hov 3+

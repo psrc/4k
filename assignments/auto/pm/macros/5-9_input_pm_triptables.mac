@@ -14,6 +14,7 @@ reports=5-9_input_pm_triptables.rpt
 ~+|2|3|3|mf"pvehda"|mf"pvehda"|n|y
 ~+|2|3|3|mf"pvehs2"|mf"pvehs2"|n|y
 ~+|2|3|3|mf"pvehs3"|mf"pvehs3"|n|y
+~+|2|3|3|mf"pvpool"|mf"pvpool"|n|y
 ~+|2|3|3|mf"phbw1v"|mf"phbw1v"|n|y
 ~+|2|3|3|mf"phbw2v"|mf"phbw2v"|n|y
 ~+|2|3|3|mf"phbw3v"|mf"phbw3v"|n|y

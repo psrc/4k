@@ -1,0 +1,41 @@
+~?!i&32768
+~o|295
+reports=?
+~/
+~/
+~/begin: 12_vehicle_external_trip_summary.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...report data from distribution models
+3.21
+~+|1|n|"evehda"|||y|gc5||gc1,gc4||||2|..\..\summaries\ev_vehicle_external_trip_summary.rpt
+~+|1|n|"evehs2"|||y|gc5||gc1,gc4||||2
+~+|1|n|"evehs3"|||y|gc5||gc1,gc4||||2
+~+|1|n|"evpool"|||y|gc5||gc1,gc4||||2
+~+|1|n|"ehbw1v"|||y|gc5||gc1,gc4||||2
+~+|1|n|"ehbw2v"|||y|gc5||gc1,gc4||||2
+~+|1|n|"ehbw3v"|||y|gc5||gc1,gc4||||2
+~+|1|n|"ehbw4v"|||y|gc5||gc1,gc4||||2
+~#
+~+|1|n|"evehda"|||y|gc1,gc4||gc5||||2
+~+|1|n|"evehs2"|||y|gc1,gc4||gc5||||2
+~+|1|n|"evehs3"|||y|gc1,gc4||gc5||||2
+~+|1|n|"evpool"|||y|gc1,gc4||gc5||||2
+~+|1|n|"ehbw1v"|||y|gc1,gc4||gc5||||2
+~+|1|n|"ehbw2v"|||y|gc1,gc4||gc5||||2
+~+|1|n|"ehbw3v"|||y|gc1,gc4||gc5||||2
+~+|1|n|"ehbw4v"|||y|gc1,gc4||gc5||||2
+~#
+~+|1|n|"evehda"|||y|gc5||gc5||||2
+~+|1|n|"evehs2"|||y|gc5||gc5||||2
+~+|1|n|"evehs3"|||y|gc5||gc5||||2
+~+|1|n|"evpool"|||y|gc5||gc5||||2
+~+|1|n|"ehbw1v"|||y|gc5||gc5||||2
+~+|1|n|"ehbw2v"|||y|gc5||gc5||||2
+~+|1|n|"ehbw3v"|||y|gc5||gc5||||2
+~+|1|n|"ehbw4v"|||y|gc5||gc5||||2|4
+reports=?
+~#
+~/end: 12_vehicle_external_trip_summary.mac
+~/exit emme
+~/
+q

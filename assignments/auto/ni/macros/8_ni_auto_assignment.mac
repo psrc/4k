@@ -32,7 +32,7 @@ el2=0
 ~+|s|@toll1|%ms01%|mf"nvehda" /class 1: non-work sov
 ~+|h|@toll2|%ms02%|mf"nvehs2" /class 2: hov 2
 ~+|i|@toll3|%ms03%|mf"nvehs3" /class 3: hov 3+
-~+|j|@toll4|%ms04%|mf"nvpool" /class 4: vanpool
+~+|j|@toll3|%ms04%|mf"nvpool" /class 4: vanpool
 ~+|s|@toll1|%ms05%|mf"nhbw1v" /class 5: hbw income 1 sov
 ~+|s|@toll1|%ms06%|mf"nhbw2v" /class 6: hbw income 2 sov
 ~+|s|@toll1|%ms07%|mf"nhbw3v" /class 7: hbw income 3 sov
@@ -56,6 +56,25 @@ el2=0
 ~/ ...run path pased assignment
 2         
 ~/ ...write report file
+~#
+~/ ...call module 6.16: path analysis for path-based traffic assignment
+6.16
+~/ ...class-specific volumes
+3
+~+|@sov|n|   /class 1: non-work sov
+~+|@hov2|n|  /class 2: hov 2
+~+|@hov3|n|  /class 3: hov 3+
+~+|@vpool|n| /class 4: vanpool
+~+|@hbw1|n|  /class 5: hbw income 1 sov
+~+|@hbw2|n|  /class 6: hbw income 2 sov
+~+|@hbw3|n|  /class 7: hbw income 3 sov
+~+|@hbw4|n|  /class 7: hbw income 3 sov
+~+|@light|n| /class 9: light truck
+~+|@mediu|n| /class 10: medium truck
+~+|@heavy|n| /class 11: heavy truck
+2
+~/ ...write report file
+q         
 ~#
 ~/end: 8_ni_auto_assignment.mac
 ~/exit emme

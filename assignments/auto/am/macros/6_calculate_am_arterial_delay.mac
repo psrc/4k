@@ -14,14 +14,14 @@ s=1002
 ~+|1|y|tmpl1|0||*|2|2
 ~+|1|y|tmpl2|0||*|2|2
 ~/ ...set tmpl1 equal to 1 for arterial links (ul3 .ne. 1,2)
-~/ ...excludes links which intersect with centroid connectors
+~/ ...excludes links which intersect with centroid connectors, freeway/expressway links, links with a length up to .01 mile
 ~+|1|y|tmpl1|1|
-~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2||2|2
+~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2|and not length=0,.015||2|2
 ~/ ...set tmpl2 equal to the minimum of 5 or lanes+2 for arterial links (ul3 .ne. 1,2)
 ~/ ...results in tmpl2 equalling 3, 4 or 5
-~/ ...excludes links which intersect with centroid connectors
+~/ ...excludes links which intersect with centroid connectors, freeway/expressway links, links with a length up to .01 mile
 ~+|1|y|tmpl2|(lan+2).min.5|
-~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2||2|2
+~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2|and not length=0,.015||2|2
 ~/ ...set tmpj1 equal to the sum of arterial links (tmpl1=1) intersecting with each j-node
 ~+|1|y|tmpj1|tmpl1||4|*|2|2
 ~/ ...set tmpj2 equal equal to the sum of tmpl2 intersecting with each j-node
@@ -34,7 +34,7 @@ s=1002
 ~/ ...calculate intersection delay factor for every link with a cycle time exceeding zero
 ~+|1|y|@rdly|n|((@red*@red)/(2*@cyclej).max.0.2).min.1.0||not @cyclej=0||2|2
 ~/ ...set intersection delay factor equal to zero for links with a length up to .01 mile
-~+|1|y|@rdly|n|0||length=0,.01||2|2
+~+|1|y|@rdly|n|0||length=0,.015||2|2
 q
 ~#
 ~/end: 6_calculate_am_arterial_delay.mac

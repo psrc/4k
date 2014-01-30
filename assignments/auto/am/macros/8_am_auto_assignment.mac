@@ -7,6 +7,11 @@ reports=8_am_auto_assignment.rpt
 ~/begin: 8_am_auto_assignment.mac
 ~/ ...set active scenario to 1002
 s=1002
+~# ...call module 2.41: network calculations
+~/ ...import am 3-hour bus-vehicle equivalent file
+2.41
+~+|3|@trnv3|n|*|1,2,3|..\..\transit\am\all_mode\am_bus_vehicle_equivalents.in|y|2|y
+q
 ~/ ...set extra function (el1, el2) parameters
 el1=@rdly
 el2=@trnv3
@@ -32,7 +37,7 @@ el2=@trnv3
 ~+|s|@toll1|%ms01%|mf"avehda" /class 1: non-work sov
 ~+|h|@toll2|%ms02%|mf"avehs2" /class 2: hov 2
 ~+|i|@toll3|%ms03%|mf"avehs3" /class 3: hov 3+
-~+|j|@toll4|%ms04%|mf"avpool" /class 4: vanpool
+~+|j|@toll3|%ms04%|mf"avpool" /class 4: vanpool
 ~+|s|@toll1|%ms05%|mf"ahbw1v" /class 5: hbw income 1 sov
 ~+|s|@toll1|%ms06%|mf"ahbw2v" /class 6: hbw income 2 sov
 ~+|s|@toll1|%ms07%|mf"ahbw3v" /class 7: hbw income 3 sov
@@ -56,6 +61,25 @@ el2=@trnv3
 ~/ ...run path pased assignment
 2         
 ~/ ...write report file
+~#
+~/ ...call module 6.16: path analysis for path-based traffic assignment
+6.16
+~/ ...class-specific volumes
+3
+~+|@sov|n|   /class 1: non-work sov
+~+|@hov2|n|  /class 2: hov 2
+~+|@hov3|n|  /class 3: hov 3+
+~+|@vpool|n| /class 4: vanpool
+~+|@hbw1|n|  /class 5: hbw income 1 sov
+~+|@hbw2|n|  /class 6: hbw income 2 sov
+~+|@hbw3|n|  /class 7: hbw income 3 sov
+~+|@hbw4|n|  /class 7: hbw income 3 sov
+~+|@light|n| /class 9: light truck
+~+|@mediu|n| /class 10: medium truck
+~+|@heavy|n| /class 11: heavy truck
+2
+~/ ...write report file
+q         
 ~#
 ~/end: 8_am_auto_assignment.mac
 ~/exit emme

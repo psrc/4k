@@ -1,0 +1,23 @@
+~?!i&32768
+~o|295
+reports=?
+~/
+~/
+~/begin: 13_distribution_externals_summary.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...report data from distribution models
+3.21
+~+|1|n|"otodst"|||y|gc5||gc1||||2|..\summaries\distribution_externals_summary.rpt
+~+|1|n|"otodst"|||y|gc5||gc2||||2
+~+|1|n|"otodst"|||y|gc5||gc3||||2
+~+|1|n|"otodst"|||y|gc5||gc4||||2
+~+|1|n|"otodst"|||y|gc5||gc5||||2
+~#
+~+|1|n|"otodst"*"mau1tm"|||y|gc5||gc1,gc4||||2
+~+|1|n|"otodst"*"mau1ds"|||y|gc5||gc1,gc4||||2|4
+reports=?
+~#
+~/end: 13_distribution_externals_summary.mac
+~/exit emme
+~/
+q

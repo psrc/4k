@@ -83,6 +83,18 @@ s=1004
 ~+|1|mf64|mlgtdp|light truck prev distance|0
 ~+|1|mf65|mmeddp|medium truck prev distance|0
 ~+|1|mf66|mhvydp|heavy truck prev distance|0
+~#
+~+|1|mf67|mau1tl|non-hbw sov toll sum|0
+~+|1|mf68|mau2tl|hov 2 toll sum|0
+~+|1|mf69|mau3tl|hov 3+ toll sum|0
+~+|1|mf70|mau4tl|vanpool toll sum|0
+~+|1|mf71|ma1tl1|hbw income 1 sov toll sum|0
+~+|1|mf72|ma1tl2|hbw income 2 sov toll sum|0
+~+|1|mf73|ma1tl3|hbw income 3 sov toll sum|0
+~+|1|mf74|ma1tl4|hbw income 4 sov toll sum|0
+~+|1|mf75|mlgttl|light truck toll sum|0
+~+|1|mf76|mmedtl|medium truck toll sum|0
+~+|1|mf77|mhvytl|heavy truck toll sum|0
 q
 ~#
 ~/end: 2_initialize_md_full_matrices.mac

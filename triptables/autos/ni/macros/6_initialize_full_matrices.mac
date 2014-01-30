@@ -125,6 +125,8 @@ reports=6_initialize_full_matrices.rpt
 ~+|1|mf100|twleg2|distribution from pnr lot|0
 ~+|1|mf101|twleg3|distribution from pnr lot|0
 ~+|1|mf102|twleg4|distribution from pnr lot|0
+~#
+~+|1|mf103|thru|daily sov e-e vehicle trips|0
 q
 ~#
 ~/end: 6_initialize_full_matrices.mac

@@ -1,0 +1,33 @@
+~?!i&32768
+~o|295
+batchin=?
+batchout=?
+reports=6_calculate_md_bus_vehicle_equivalents.rpt
+~! if exist md_bus_vehicle_equivalents.in erase md_bus_vehicle_equivalents.in
+~/
+~/
+~/begin: 6_calculate_md_bus_vehicle_equivalents.mac
+~/ ...set active scenario to 1002
+s=1004
+~/ ...call module 2.42: extra attribute manipulations
+~/ ...initialize extra attribute table 
+2.42
+~+|1|y
+~/ ...create transit equivalent extra attribute(s)
+~+|2|2|@trnv6|6hr auto bus equivalent (for am)|0
+q
+~/ ...call module 2.41: network calculations
+~/ ...calculate 6-hour bus-auto vehilce equivalent
+2.41
+~+|1|y|@trnv6|n|6*vauteq*(60/hdwy)||4|*|*|2|2
+q
+~/ ...export 3-hour bus-auto vehicle equivalent file
+~/ ...call module 2.41: network calculations
+2.41
+~+|1|n|@trnv6||*|3|md_bus_vehicle_equivalents.in
+q
+~#
+~/end: 6_calculate_md_bus_vehicle_equivalents.mac
+~/exit emme
+~/
+q

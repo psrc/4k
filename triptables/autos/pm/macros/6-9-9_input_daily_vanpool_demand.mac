@@ -1,0 +1,18 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6-9-9_input_daily_vanpool_demand.rpt
+~/
+~/
+~/begin: 6-9-9_input_daily_vanpool_demand.mac
+~# ...call module 3.11: input matrices using batch entry
+~/ ...input daily vanpool demand
+3.11
+..\..\..\input\%1%\vanpools\vanpools.in
+~/ ...write report file
+2
+~#
+~/end: 6-9-9_input_daily_vanpool_demand.mac
+~/exit emme
+~/
+q
