@@ -20,6 +20,26 @@ reports=4_initialize_origin_matrices.rpt
 ~+|1|mo09|wkscw2|% of hhs in car-worker category 2|0
 ~+|1|mo10|wkscw3|% of hhs in car-worker category 3|0
 ~+|1|mo11|wkscw4|% of hhs in car-worker category 4|0
+~#
+~+|1|mo12|wk1cw1|% of inc1 hhs in car-worker category 1|0
+~+|1|mo13|wk1cw2|% of inc1 hhs in car-worker category 2|0
+~+|1|mo14|wk1cw3|% of inc1 hhs in car-worker category 3|0
+~+|1|mo15|wk1cw4|% of inc1 hhs in car-worker category 4|0
+~#
+~+|1|mo16|wk2cw1|% of inc2 hhs in car-worker category 1|0
+~+|1|mo17|wk2cw2|% of inc2 hhs in car-worker category 2|0
+~+|1|mo18|wk2cw3|% of inc2 hhs in car-worker category 3|0
+~+|1|mo19|wk2cw4|% of inc2 hhs in car-worker category 4|0
+~#
+~+|1|mo20|wk3cw1|% of inc3 hhs in car-worker category 1|0
+~+|1|mo21|wk3cw2|% of inc3 hhs in car-worker category 2|0
+~+|1|mo22|wk3cw3|% of inc3 hhs in car-worker category 3|0
+~+|1|mo23|wk3cw4|% of inc3 hhs in car-worker category 4|0
+~#
+~+|1|mo24|wk4cw1|% of inc4 hhs in car-worker category 1|0
+~+|1|mo25|wk4cw2|% of inc4 hhs in car-worker category 2|0
+~+|1|mo26|wk4cw3|% of inc4 hhs in car-worker category 3|0
+~+|1|mo27|wk4cw4|% of inc4 hhs in car-worker category 4|0
 q
 ~#
 ~/end: 4_initialize_origin_matrices.mac

@@ -16,6 +16,10 @@ reports=6_initialize_full_matrices.rpt
 ~+|1|mf06|nwmstw|zonal market seg param - transit-walk|0
 ~+|1|mf08|nwmswk|zonal market seg param - walk|0
 ~+|1|mf09|nwmsbk|zonal market seg param - bike|0
+~+|1|mf10|inc1fl|mf"vehmtx" flag - income 1 columns|0
+~+|1|mf11|inc2fl|mf"vehmtx" flag - income 2 columns|0
+~+|1|mf12|inc3fl|mf"vehmtx" flag - income 3 columns|0
+~+|1|mf13|inc4fl|mf"vehmtx" flag - income 4 columns|0
 q
 ~#
 ~/end: 6_initialize_full_matrices.mac

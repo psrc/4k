@@ -9,7 +9,7 @@ reports=7_import_matrices_tg.rpt
 1.31
 ~/ ...open vehicle availability emmebank
 ~+|1
-..\..\VehicleAvailability\All\emmebank
+..\..\vehicleavailability\all\emmebank
 ~/ ...import vehicle availability matrix
 ~+|2|3|3|mf"vehmtx"|mf"vehmtx"|n|y
 q
