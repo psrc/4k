@@ -7,7 +7,7 @@ reports=?
 ~/ ...call module 3.21: matrix calculations
 ~/ ...report data from distribution models
 3.21
-~+|1|n|"hbodst"|||y|gc5||gc1||||2|..\summaries\distribution_externals_summary.rpt
+~+|1|n|"hbodst"|||y|gc5||gc1||||2|..\..\summaries\distribution\distribution_externals_summary.rpt
 ~+|1|n|"hbodst"|||y|gc5||gc2||||2
 ~+|1|n|"hbodst"|||y|gc5||gc3||||2
 ~+|1|n|"hbodst"|||y|gc5||gc4||||2

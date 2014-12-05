@@ -1,19 +1,18 @@
 ~?!i&32768
 ~o|295
 batchin=?
-reports=17_report_mode_shares.rpt
+reports=?
 ~/
 ~/
 ~/begin: 17_report_mode_shares.mac
 ~# ...call module 3.21: matrix calculations
 3.21
-~+|1|n|mf"scshda"*mf"schdst"|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"scshda"*mf"schdst"|||y|1,%1%||1,%1%||||2|..\..\summaries\modechoice\mode_share_summary.rpt
 ~+|1|n|mf"scshs2"*mf"schdst"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"scshs3"*mf"schdst"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"scshtw"*mf"schdst"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"scshwk"*mf"schdst"|||y|1,%1%||1,%1%||||2
-~+|1|n|mf"scshbk"*mf"schdst"|||y|1,%1%||1,%1%||||2
-q
+~+|1|n|mf"scshbk"*mf"schdst"|||y|1,%1%||1,%1%||||2|4
 ~#
 ~/end: 17_report_mode_shares.mac
 ~/exit emme

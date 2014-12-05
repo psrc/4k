@@ -1,7 +1,6 @@
 ~?!i&32768
 ~o|295
 reports=?
-~! if exist ..\..\summaries\nonmotorized_mode_choice_summary.rpt erase ..\..\summaries\nonmotorized_mode_choice_summary.rpt
 ~/
 ~/
 ~/begin: 9-1_nonmotorized_mode_choice_summary.mac
@@ -9,7 +8,7 @@ reports=?
 ~/ ...report mode choice results by time of day
 3.21
 ~# ...hb college p>a
-~+|1|n|mf"coldst"*mf"coshwk"*0.310*0.453|||y|1,%1%||1,%1%||||2|..\..\summaries\nonmotorized_mode_choice_summary.rpt
+~+|1|n|mf"coldst"*mf"coshwk"*0.310*0.453|||y|1,%1%||1,%1%||||2|..\..\..\summaries\triptables\nonmotorized_mode_choice_summary.rpt
 ~+|1|n|mf"coldst"*mf"coshbk"*0.133*0.482|||y|1,%1%||1,%1%||||2
 ~# ...hb college a>p
 ~+|1|n|mf"coldst"*mf"coshwk"*0.000*0.547|||y|1,%1%||1,%1%||||2

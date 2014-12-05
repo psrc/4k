@@ -9,7 +9,7 @@ reports=?
 3.21
 ~#productions
 ~#king (east)
-~+|1|n|mo"hbwpr1"|||y|gf3|||2|summaries\tripgen_subregion_summary.rpt
+~+|1|n|mo"hbwpr1"|||y|gf3|||2|..\..\summaries\generation\tripgen_subregion_summary.rpt
 ~+|1|n|mo"hbwpr2"|||y|gf3|||2
 ~+|1|n|mo"hbwpr3"|||y|gf3|||2
 ~+|1|n|mo"hbwpr4"|||y|gf3|||2

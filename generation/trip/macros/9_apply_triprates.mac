@@ -24,7 +24,7 @@ reports=?
 ~/ ...call module 3.21: matrix calculations
 ~/ ...report trips by purpose from household sources
 3.21
-~+|1|n|"tgvect"|||y|*|2||||2|summaries\tripgen_summary.rpt
+~+|1|n|"tgvect"|||y|*|2||||2|..\..\summaries\generation\tripgen_summary.rpt
 ~+|1|n|"tgvect"|||y|*|3||||2
 ~+|1|n|"tgvect"|||y|*|4||||2
 ~+|1|n|"tgvect"|||y|*|5||||2
@@ -64,7 +64,7 @@ reports=?
 ~/ ...call module 3.21: matrix calculations
 ~/ ...report trips by purpose from non-household sources
 3.21
-~+|1|n|"tgvect"|||y|*|2||||2|summaries\tripgen_summary.rpt
+~+|1|n|"tgvect"|||y|*|2||||2|..\..\summaries\generation\tripgen_summary.rpt
 ~+|1|n|"tgvect"|||y|*|3||||2
 ~+|1|n|"tgvect"|||y|*|4||||2
 ~+|1|n|"tgvect"|||y|*|5||||2
@@ -98,6 +98,21 @@ reports=9_apply_triprates.rpt
 3.23
 ~+|1|mf"hhemp"||mf"rates"|n|||mf"tgvect"|n
 ~+|y|*|1,124||1,24|||y|2
+q
+~/ ...call module 3.21: matrix calculations
+~/ ...adjust trips for consistency with activity generator results
+reports=adjust_trips.rpt
+3.21
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms01%|||y|*|17||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms02%|||y|*|18||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms03%|||y|*|19||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms04%|||y|*|20||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms05%|||y|*|10||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms06%|||y|*|3||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms07%|||y|*|4||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms08%|||y|*|5||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms09%|||y|*|6||2
+~+|1|y|mf"tgvect"|n|mf"tgvect"*%ms10%|||y|*|7||2
 q
 ~#
 ~/end: 9_apply_triprates.mac

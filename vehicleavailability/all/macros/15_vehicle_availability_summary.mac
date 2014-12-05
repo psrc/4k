@@ -1,7 +1,6 @@
 ~?!i&32768
 ~o|295
 reports=?
-~! if exist summaries\vehicle_availability_summary.rpt erase summaries\vehicle_availability_summary.rpt
 ~/
 ~/
 ~/begin: 15_vehicle_availability_summary.mac
@@ -9,7 +8,7 @@ reports=?
 ~/ ...report data from vehicle availability model
 3.21
 ~# HHs by Income by Size, Workers, and Vehicles
-~+|1|n|"hhemp"|||y|*|201||||2|summaries\vehicle_availability_summary.rpt
+~+|1|n|"hhemp"|||y|*|201||||2|..\..\summaries\vehicleavailability\vehicle_availability_summary.rpt
 ~+|1|n|"hhemp"|||y|*|202||||2
 ~+|1|n|"hhemp"|||y|*|203||||2
 ~+|1|n|"hhemp"|||y|*|204||||2

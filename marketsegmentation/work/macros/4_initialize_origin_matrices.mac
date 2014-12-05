@@ -8,18 +8,18 @@ reports=4_initialize_origin_matrices.rpt
 ~/ ...call module 3.12: input/modify matrices interactively
 ~/ ...initialize origin matrices
 3.12
-~+|1|mo01|hbwcw0|hhs in car-worker category 1|0
-~+|1|mo02|hbwcw1|hhs in car-worker category 2|0
-~+|1|mo03|hbwcw2|hhs in car-worker category 3|0
-~+|1|mo04|hbwcw3|hhs in car-worker category 4|0
-~+|1|mo05|hbwcw4|hhs in car-worker category 5|0
+~+|1|mo01|hbwcw0|hhs in car-worker category 0|0
+~+|1|mo02|hbwcw1|hhs in car-worker category 1|0
+~+|1|mo03|hbwcw2|hhs in car-worker category 2|0
+~+|1|mo04|hbwcw3|hhs in car-worker category 3|0
+~+|1|mo05|hbwcw4|hhs in car-worker category 4|0
 ~+|1|mo06|hbwcwt|total hhs in car-worker categories|0
 ~#
-~+|1|mo07|wkscw0|% of hhs in car-worker category 1|0
-~+|1|mo08|wkscw1|% of hhs in car-worker category 2|0
-~+|1|mo09|wkscw2|% of hhs in car-worker category 3|0
-~+|1|mo10|wkscw3|% of hhs in car-worker category 4|0
-~+|1|mo11|wkscw4|% of hhs in car-worker category 5|0
+~+|1|mo07|wkscw0|% of hhs in car-worker category 0|0
+~+|1|mo08|wkscw1|% of hhs in car-worker category 1|0
+~+|1|mo09|wkscw2|% of hhs in car-worker category 2|0
+~+|1|mo10|wkscw3|% of hhs in car-worker category 3|0
+~+|1|mo11|wkscw4|% of hhs in car-worker category 4|0
 q
 ~#
 ~/end: 4_initialize_origin_matrices.mac

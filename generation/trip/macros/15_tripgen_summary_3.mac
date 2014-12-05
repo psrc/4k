@@ -8,7 +8,7 @@ reports=?
 ~/ ...report household cross-classifications
 3.21
 ~# HHs by Income by Size and Workers
-~+|1|n|"hhemp"|||y|*|14||||2|summaries\tripgen_summary.rpt
+~+|1|n|"hhemp"|||y|*|14||||2|..\..\summaries\generation\tripgen_summary.rpt
 ~+|1|n|"hhemp"|||y|*|15||||2
 ~+|1|n|"hhemp"|||y|*|16||||2
 ~+|1|n|"hhemp"|||y|*|17||||2

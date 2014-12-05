@@ -1,7 +1,6 @@
 ~?!i&32768
 ~o|295
 reports=?
-~! if exist ..\..\summaries\vehicle_mode_choice_summary_ev.rpt erase ..\..\summaries\vehicle_mode_choice_summary_ev.rpt
 ~/
 ~/
 ~/begin: 11_vehicle_mode_choice_summary.mac
@@ -9,7 +8,7 @@ reports=?
 ~/ ...report mode choice results by time of day
 3.21
 ~# ...hb college p>a
-~+|1|n|mf"coldst"*mf"coshda"*0.043*0.514|||y|1,%1%||1,%1%||||2|..\..\summaries\vehicle_mode_choice_summary_ev.rpt
+~+|1|n|mf"coldst"*mf"coshda"*0.043*0.514|||y|1,%1%||1,%1%||||2|..\..\..\summaries\triptables\vehicle_mode_choice_summary_ev.rpt
 ~+|1|n|mf"coldst"*mf"coshs2"*0.026*0.604|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"coldst"*mf"coshs3"*0.013*0.669|||y|1,%1%||1,%1%||||2
 ~# ...hb college a>p

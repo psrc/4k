@@ -7,7 +7,7 @@ reports=?
 ~/ ...call module 3.21: matrix calculations
 ~/ ...report data from distribution models
 3.21
-~+|1|n|"nvehda"|||y|gc5||gc1,gc4||||2|..\..\summaries\ni_vehicle_external_trip_summary.rpt
+~+|1|n|"nvehda"|||y|gc5||gc1,gc4||||2|..\..\..\summaries\triptables\ni_vehicle_external_trip_summary.rpt
 ~+|1|n|"nvehs2"|||y|gc5||gc1,gc4||||2
 ~+|1|n|"nvehs3"|||y|gc5||gc1,gc4||||2
 ~+|1|n|"nvpool"|||y|gc5||gc1,gc4||||2

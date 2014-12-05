@@ -7,7 +7,7 @@ reports=?
 ~/ ...call module 3.21: matrix calculations
 ~/ ...report balanced productions and attractions
 3.21
-~+|1|n|mo"colpro"|||y|1,%1%|||2|summaries\tripgen_summary.rpt
+~+|1|n|mo"colpro"|||y|1,%1%|||2|..\..\summaries\generation\tripgen_summary.rpt
 ~+|1|n|mo"hsppro"|||y|1,%1%|||2
 ~+|1|n|mo"hbopro"|||y|1,%1%|||2
 ~+|1|n|mo"schpro"|||y|1,%1%|||2

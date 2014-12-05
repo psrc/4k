@@ -8,6 +8,17 @@ reports=2_initialize_scalars.rpt
 ~/ ...call module 3.12: input/modify matrices interactively
 ~/ ...initialize scalar matrices
 3.12
+~+|1|ms01|wk1adj|hb work inc 1 adj factor|0
+~+|1|ms02|wk2adj|hb work inc 2 adj factor|0
+~+|1|ms03|wk3adj|hb work inc 3 adj factor|0
+~+|1|ms04|wk4adj|hb work inc 4 adj factor|0
+~+|1|ms05|coladj|hb college adj factor|0
+~+|1|ms06|hspadj|hb shop adj factor|0
+~+|1|ms07|hboadj|hb other adj factor|0
+~+|1|ms08|schadj|hb school adj factor|0
+~+|1|ms09|wkoadj|nhb work adj factor|0
+~+|1|ms10|otoadj|nhb other adj factor|0
+~#
 ~+|1|ms90|sca090|temp scalar 90|0
 ~+|1|ms91|sca091|temp scalar 91|0
 ~+|1|ms92|sca092|temp scalar 92|0

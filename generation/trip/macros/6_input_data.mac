@@ -68,6 +68,9 @@ q
 ~/ ...input hb other special generator trips
 3.11
 ~+|..\..\input\%1%\specialgenerators\hbother\special_gen_hbother.in|2|
+~/ ...input adjustment factors for consistency with activity generator results
+3.11
+~+|..\..\input\%1%\tripgeneration\adjust\ag_adjustment_factors.in|2|
 ~#
 ~/end: 6_input_data.mac
 ~/exit emme
