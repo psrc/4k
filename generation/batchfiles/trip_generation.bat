@@ -16,6 +16,7 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\11_copy_productions.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_tripgen_summary_1.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12-1_tripgen_county_summary_1.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12-2_tripgen_subregion_summary_1.mac
+call emme -ng --set-iks 127.0.0.1 000 -m macros\12-8_add_special_generators.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12-9_input_external_trips.mac %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\13_balance_trips.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\14_tripgen_summary_2.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%

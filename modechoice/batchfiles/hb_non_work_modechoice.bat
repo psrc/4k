@@ -18,4 +18,5 @@ call emme -ng --set-iks 127.0.0.1 000 -m macros\14_calculate_bike_utility.mac %h
 call emme -ng --set-iks 127.0.0.1 000 -m macros\15_calculate_walk_utility.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\16_calculate_mode_shares.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\17_report_mode_shares.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\17-9_export_files_for_urbansim.mac
 cd ..

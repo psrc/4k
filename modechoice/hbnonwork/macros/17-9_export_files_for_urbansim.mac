@@ -1,0 +1,27 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=17-9_export_files_for_urbansim.rpt
+~/
+~/
+~/begin: 17-9_export_files_for_urbansim.mac
+~/ ...call module 3.14: output matrices
+~/ ...export vehicle trip tables
+batchout=?
+3.14
+~+|3|mf"nweuda"||n|n|n|mfnweuda.rpt|q
+3.14
+~+|3|mf"nweus2"||n|n|n|mfnweus2.rpt|q
+3.14
+~+|3|mf"nweus3"||n|n|n|mfnweus3.rpt|q
+3.14
+~+|3|mf"nweutw"||n|n|n|mfnweutw.rpt|q
+3.14
+~+|3|mf"nweubk"||n|n|n|mfnweubk.rpt|q
+3.14
+~+|3|mf"nweuwk"||n|n|n|mfnweuwk.rpt|q
+~#
+~/end: 17-9_export_files_for_urbansim.mac
+~/exit emme
+~/
+q

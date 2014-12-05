@@ -1,0 +1,26 @@
+~?!i&32768
+~o|295
+batchin=?
+batchout=?
+reports=batchout_truck_productions.rpt
+~/
+~/
+~/begin: batchout_truck_productions.mac
+~/ ...call module 3.14: output matrices
+3.14
+~# ...export matrices
+~+|3|mo"ltprof"||n|n|light_truck_productions.in
+q
+3.14
+~# ...export matrices
+~+|3|mo"mtprof"||n|n|medium_truck_productions.in
+q
+3.14
+~# ...export matrices
+~+|3|mo"htprof"||n|n|heavy_truck_productions.in
+q
+~#
+~/end: batchout_truck_productions.mac
+~/exit emme
+~/
+q

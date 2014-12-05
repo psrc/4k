@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_export_files_for_urbansim.rpt
+~/
+~/
+~/begin: 7_export_files_for_urbansim.mac
+~/ ...call module 3.14: output matrices
+~/ ...export vehicle trip tables
+batchout=?
+3.14
+~+|3|mf"abketm"||n|n|n|mfabketm.rpt|q
+3.14
+~+|3|mf"awlktm"||n|n|n|mfawlktm.rpt|q
+~#
+~/end: 7_export_files_for_urbansim.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,54 @@
+~?!i&32768
+~o|295
+batchin=?
+batchout=?
+reports=batchout_person_attractions.rpt
+~/
+~/
+~/begin: batchout_person_attractions.mac
+~/ ...call module 3.14: output matrices
+3.14
+~# ...export matrices
+~+|3|md"colatt"||n|n|hbcollege_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"hspatt"||n|n|hbshop_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"hboatt"||n|n|hbother_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"schatt"||n|n|hbschool_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"wkoatt"||n|n|nhbwork_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"otoatt"||n|n|nhbother_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"hbwat1"||n|n|hbwork1_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"hbwat2"||n|n|hbwork2_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"hbwat3"||n|n|hbwork3_attractions.in
+q
+3.14
+~# ...export matrices
+~+|3|md"hbwat4"||n|n|hbwork4_attractions.in
+q
+~#
+~/end: batchout_person_attractions.mac
+~/exit emme
+~/
+q

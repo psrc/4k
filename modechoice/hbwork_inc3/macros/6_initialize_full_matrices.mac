@@ -71,6 +71,8 @@ reports=6_initialize_full_matrices.rpt
 ~+|1|mf50|farda3|transit fare - drive access|0
 ~#
 ~+|1|mf51|hbwds3|hb work income 3 distribution|0
+~#
+~+|1|mf52|lsum3|hb work income 3 mode choice log sum|0
 q
 ~#
 ~/end: 6_initialize_full_matrices.mac
