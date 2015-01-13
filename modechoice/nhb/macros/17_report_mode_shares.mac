@@ -12,7 +12,7 @@ reports=?
 ~+|1|n|mf"nhshs3"*(mf"otodst"+mf"wkodst")|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"nhshtw"*(mf"otodst"+mf"wkodst")|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"nhshwk"*(mf"otodst"+mf"wkodst")|||y|1,%1%||1,%1%||||2
-~+|1|n|mf"nhshbk"*(mf"otodst"+mf"wkodst")|||y|1,%1%||1,%1%||||2|4
+~+|1|n|mf"nhshbk"*(mf"otodst"+mf"wkodst")|||y|1,%1%||1,%1%||||2|q
 ~#
 ~/end: 17_report_mode_shares.mac
 ~/exit emme

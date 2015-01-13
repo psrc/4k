@@ -26,7 +26,7 @@ reports=?
 ~+|1|n|md"hbwat1"|||y|1,%1%|||2
 ~+|1|n|md"hbwat2"|||y|1,%1%|||2
 ~+|1|n|md"hbwat3"|||y|1,%1%|||2
-~+|1|n|md"hbwat4"|||y|1,%1%|||2|4
+~+|1|n|md"hbwat4"|||y|1,%1%|||2|q
 reports=?
 ~#
 ~/end: 12_tripgen_summary_1.mac

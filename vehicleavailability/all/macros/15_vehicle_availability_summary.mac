@@ -472,7 +472,7 @@ reports=?
 ~+|1|n|"vehmtx"|||y|*|253||||2
 ~+|1|n|"vehmtx"|||y|*|254||||2
 ~+|1|n|"vehmtx"|||y|*|255||||2
-~+|1|n|"vehmtx"|||y|*|256||||2|4
+~+|1|n|"vehmtx"|||y|*|256||||2|q
 reports=?
 ~#
 ~/end: 15_vehicle_availability_summary.mac

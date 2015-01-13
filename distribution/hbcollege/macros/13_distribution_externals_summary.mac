@@ -14,7 +14,7 @@ reports=?
 ~+|1|n|"coldst"|||y|gc5||gc5||||2
 ~#
 ~+|1|n|"coldst"*"aau1tm"|||y|gc5||gc1,gc4||||2
-~+|1|n|"coldst"*"aau1ds"|||y|gc5||gc1,gc4||||2|4
+~+|1|n|"coldst"*"aau1ds"|||y|gc5||gc1,gc4||||2|q
 reports=?
 ~#
 ~/end: 13_distribution_externals_summary.mac

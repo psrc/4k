@@ -14,7 +14,7 @@ reports=?
 ~+|1|n|"hbwds3"|||y|gc5||gc5||||2
 ~#
 ~+|1|n|"hbwds3"*"aa1tm3"|||y|gc5||gc1,gc4||||2
-~+|1|n|"hbwds3"*"aa1ds3"|||y|gc5||gc1,gc4||||2|4
+~+|1|n|"hbwds3"*"aa1ds3"|||y|gc5||gc1,gc4||||2|q
 reports=?
 ~#
 ~/end: 13_distribution_externals_summary.mac

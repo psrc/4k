@@ -12,7 +12,7 @@ reports=?
 ~+|1|n|mf"scshs3"*mf"schdst"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"scshtw"*mf"schdst"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"scshwk"*mf"schdst"|||y|1,%1%||1,%1%||||2
-~+|1|n|mf"scshbk"*mf"schdst"|||y|1,%1%||1,%1%||||2|4
+~+|1|n|mf"scshbk"*mf"schdst"|||y|1,%1%||1,%1%||||2|q
 ~#
 ~/end: 17_report_mode_shares.mac
 ~/exit emme

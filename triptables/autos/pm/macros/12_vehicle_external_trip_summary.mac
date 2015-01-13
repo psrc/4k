@@ -32,7 +32,7 @@ reports=?
 ~+|1|n|"phbw1v"|||y|gc5||gc5||||2
 ~+|1|n|"phbw2v"|||y|gc5||gc5||||2
 ~+|1|n|"phbw3v"|||y|gc5||gc5||||2
-~+|1|n|"phbw4v"|||y|gc5||gc5||||2|4
+~+|1|n|"phbw4v"|||y|gc5||gc5||||2|q
 reports=?
 ~#
 ~/end: 12_vehicle_external_trip_summary.mac

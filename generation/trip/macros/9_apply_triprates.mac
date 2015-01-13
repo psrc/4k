@@ -43,7 +43,7 @@ reports=?
 ~+|1|n|"tgvect"|||y|*|21||||2
 ~+|1|n|"tgvect"|||y|*|22||||2
 ~+|1|n|"tgvect"|||y|*|23||||2
-~+|1|n|"tgvect"|||y|*|24||||2|4
+~+|1|n|"tgvect"|||y|*|24||||2|q
 ~#
 ~/ ...call module 3.23: triple-index operations
 ~/ ...compute triple-index operation
@@ -83,7 +83,7 @@ reports=?
 ~+|1|n|"tgvect"|||y|*|21||||2
 ~+|1|n|"tgvect"|||y|*|22||||2
 ~+|1|n|"tgvect"|||y|*|23||||2
-~+|1|n|"tgvect"|||y|*|24||||2|4
+~+|1|n|"tgvect"|||y|*|24||||2|q
 ~#
 ~/ ...call module 3.23: triple-index operations
 ~/ ...compute triple-index operation

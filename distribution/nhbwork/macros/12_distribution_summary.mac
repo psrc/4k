@@ -64,7 +64,7 @@ reports=?
 ~+|1|n|"wkodst"|||y|gc3||gc2||||2
 ~+|1|n|"wkosur"|||y|gc3||gc2||||2
 ~+|1|n|"wkodst"|||y|gc2||gc2||||2
-~+|1|n|"wkosur"|||y|gc2||gc2||||2|4
+~+|1|n|"wkosur"|||y|gc2||gc2||||2|q
 reports=?
 ~#
 ~/end: 12_distribution_summary.mac

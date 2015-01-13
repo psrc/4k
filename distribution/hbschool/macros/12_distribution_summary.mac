@@ -64,7 +64,7 @@ reports=?
 ~+|1|n|"schdst"|||y|gc3||gc2||||2
 ~+|1|n|"schsur"|||y|gc3||gc2||||2
 ~+|1|n|"schdst"|||y|gc2||gc2||||2
-~+|1|n|"schsur"|||y|gc2||gc2||||2|4
+~+|1|n|"schsur"|||y|gc2||gc2||||2|q
 reports=?
 ~#
 ~/end: 12_distribution_summary.mac

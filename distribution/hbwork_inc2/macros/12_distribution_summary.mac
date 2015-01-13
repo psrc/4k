@@ -64,7 +64,7 @@ reports=?
 ~+|1|n|"hbwds2"|||y|gc3||gc2||||2
 ~+|1|n|"wk2sur"|||y|gc3||gc2||||2
 ~+|1|n|"hbwds2"|||y|gc2||gc2||||2
-~+|1|n|"wk2sur"|||y|gc2||gc2||||2|4
+~+|1|n|"wk2sur"|||y|gc2||gc2||||2|q
 reports=?
 ~#
 ~/end: 12_distribution_summary.mac

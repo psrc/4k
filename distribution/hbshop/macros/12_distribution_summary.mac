@@ -64,7 +64,7 @@ reports=?
 ~+|1|n|"hspdst"|||y|gc3||gc2||||2
 ~+|1|n|"hspsur"|||y|gc3||gc2||||2
 ~+|1|n|"hspdst"|||y|gc2||gc2||||2
-~+|1|n|"hspsur"|||y|gc2||gc2||||2|4
+~+|1|n|"hspsur"|||y|gc2||gc2||||2|q
 reports=?
 ~#
 ~/end: 12_distribution_summary.mac
