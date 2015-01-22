@@ -8,10 +8,9 @@ reports=5-8_input_bridge_flags.rpt
 ~/ ...set active scenario to 1002
 s=1002
 ~/ ...call module 2.41: network calculations
-~/ ...input attribute using batch entry
-~/ ...input bridge flags
+~/ ...flag bridges using screenlines 7 (TNB) and 32 (X-LK)
 2.41
-~+|3|@bridg|n|*|1,2,3|..\..\..\input\%1%\timeofday\bridge_flags.in|y|2|y
+~+|1|y|@bridg|n|1||type=7|type=32||1|2
 q
 ~#
 ~/end: 5-8_input_bridge_flags.mac

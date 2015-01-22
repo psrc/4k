@@ -59,6 +59,19 @@ q
 3.11
 ~+|..\..\input\%1%\tripgeneration\pums\pumshhxc_income-size-workers-vehicles.in|2|
 ~#
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...input airport special generator trips
+3.11
+~+|..\..\input\%1%\specialgenerators\airport\special_gen_airport.in|2|
+~#
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...input hb other special generator trips
+3.11
+~+|..\..\input\%1%\specialgenerators\hbother\special_gen_hbother.in|2|
+~/ ...input adjustment factors for consistency with activity generator results
+3.11
+~+|..\..\input\%1%\tripgeneration\adjust\ag_adjustment_factors.in|2|
+~#
 ~/end: 6_input_data.mac
 ~/exit emme
 ~/

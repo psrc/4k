@@ -7,7 +7,7 @@ reports=?
 ~/ ...call module 3.21: matrix calculations
 ~/ ...report data from distribution models
 3.21
-~+|1|n|"schdst"*(p.ne.q)|||y|1,%1%||1,%1%||||2|..\summaries\distribution_summary.rpt
+~+|1|n|"schdst"*(p.ne.q)|||y|1,%1%||1,%1%||||2|..\..\summaries\distribution\distribution_summary.rpt
 ~+|1|n|"schsur"*(p.ne.q)|||y|1,%1%||1,%1%||||2
 ~+|1|n|"schdst"*(p.eq.q)|||y|1,%1%||1,%1%||||2
 ~+|1|n|"schsur"*(p.eq.q)|||y|1,%1%||1,%1%||||2
@@ -64,7 +64,7 @@ reports=?
 ~+|1|n|"schdst"|||y|gc3||gc2||||2
 ~+|1|n|"schsur"|||y|gc3||gc2||||2
 ~+|1|n|"schdst"|||y|gc2||gc2||||2
-~+|1|n|"schsur"|||y|gc2||gc2||||2|4
+~+|1|n|"schsur"|||y|gc2||gc2||||2|q
 reports=?
 ~#
 ~/end: 12_distribution_summary.mac

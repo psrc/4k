@@ -19,6 +19,8 @@ reports=4_initialize_destination_matrices.rpt
 ~+|1|md09|hbwat2|hb work attractions (income 2)|0
 ~+|1|md10|hbwat3|hb work attractions (income 3)|0
 ~+|1|md11|hbwat4|hb work attractions (income 4)|0
+~+|1|md12|spgapt|airport special generator trips|0
+~+|1|md13|spghbo|hb other special generator trips|0
 ~#
 ~+|1|md90|des090|temp destination matrix 90|0
 ~+|1|md91|des091|temp destination matrix 91|0

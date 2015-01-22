@@ -236,18 +236,26 @@ ren *.rpt *.rpf
 cd ../..
 REM summary reports
 REM generation
-cd generation/trip/summaries
+cd summaries/generation
 ren *.rpt *.rpf
-cd ../../..
+cd ../..
 REM distribution
-cd distribution/summaries
+cd summaries/distribution
 ren *.rpt *.rpf
 cd ../..
 REM vehicle availability
-cd vehicleavailability/all/summaries
-ren *.rpt *.rpf
-cd ../../..
-REM trip tables
-cd triptables/summaries
+cd summaries/vehicleavailability
 ren *.rpt *.rpf
 cd ../..
+REM trip tables
+cd summaries/triptables
+ren *.rpt *.rpf
+cd ../..
+REM mode choice
+cd summaries/modechoice
+ren *.rpt *.rpf
+cd ../..
+REM auto assignments
+cd summaries/assignments/auto
+ren *.rpt *.rpf
+cd ../../..

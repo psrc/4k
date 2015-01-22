@@ -41,7 +41,7 @@ el2=@trrv3
 0.0001    /stopping criterion for relative gap
 0.001     /stopping criterion for normalized pap (excess average cost)
 ~#
-~/ ...run path pased assignment
+~/ ...run path based assignment
 2         
 ~/ ...write report file
 ~#

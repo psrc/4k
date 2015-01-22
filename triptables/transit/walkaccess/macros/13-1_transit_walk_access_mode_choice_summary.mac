@@ -8,7 +8,7 @@ reports=?
 ~/ ...report mode choice results by time of day
 3.21
 ~# ...hb college p>a
-~+|1|n|mf"coldst"*mf"coshtw"*0.000*0.514|||y|1,%1%||1,%1%||||2|..\..\summaries\transit_walk_access_mode_choice_summary.rpt
+~+|1|n|mf"coldst"*mf"coshtw"*0.000*0.514|||y|1,%1%||1,%1%||||2|..\..\..\summaries\triptables\transit_walk_access_mode_choice_summary.rpt
 ~# ...hb college a>p
 ~+|1|n|mf"coldst"*mf"coshtw"*0.000*0.486|||y|1,%1%||1,%1%||||2
 ~# ...hb other p>a
@@ -54,7 +54,7 @@ reports=?
 ~# ...nhb work/other p>a
 ~+|1|n|mf"wkodst"*mf"nhshtw"*0.006/2|||y|1,%1%||1,%1%||||2
 ~# ...nhb work/other a>p
-~+|1|n|mf"wkodst"*mf"nhshtw"*0.006/2|||y|1,%1%||1,%1%||||2|4
+~+|1|n|mf"wkodst"*mf"nhshtw"*0.006/2|||y|1,%1%||1,%1%||||2|q
 reports=?
 ~#
 ~/end: 13-1_transit_walk_access_mode_choice_summary.mac

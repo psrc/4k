@@ -7,7 +7,7 @@ reports=?
 ~/ ...call module 3.21: matrix calculations
 ~/ ...report data from distribution models
 3.21
-~+|1|n|"pvehda"|||y|gc5||gc1,gc4||||2|..\..\summaries\pm_vehicle_external_trip_summary.rpt
+~+|1|n|"pvehda"|||y|gc5||gc1,gc4||||2|..\..\..\summaries\triptables\pm_vehicle_external_trip_summary.rpt
 ~+|1|n|"pvehs2"|||y|gc5||gc1,gc4||||2
 ~+|1|n|"pvehs3"|||y|gc5||gc1,gc4||||2
 ~+|1|n|"pvpool"|||y|gc5||gc1,gc4||||2
@@ -32,7 +32,7 @@ reports=?
 ~+|1|n|"phbw1v"|||y|gc5||gc5||||2
 ~+|1|n|"phbw2v"|||y|gc5||gc5||||2
 ~+|1|n|"phbw3v"|||y|gc5||gc5||||2
-~+|1|n|"phbw4v"|||y|gc5||gc5||||2|4
+~+|1|n|"phbw4v"|||y|gc5||gc5||||2|q
 reports=?
 ~#
 ~/end: 12_vehicle_external_trip_summary.mac

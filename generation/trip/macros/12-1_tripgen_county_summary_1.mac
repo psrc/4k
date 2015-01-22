@@ -9,7 +9,7 @@ reports=?
 3.21
 ~#productions
 ~#king county
-~+|1|n|mo"hbwpr1"|||y|gc1|||2|summaries\tripgen_county_summary.rpt
+~+|1|n|mo"hbwpr1"|||y|gc1|||2|..\..\summaries\generation\tripgen_county_summary.rpt
 ~+|1|n|mo"hbwpr2"|||y|gc1|||2
 ~+|1|n|mo"hbwpr3"|||y|gc1|||2
 ~+|1|n|mo"hbwpr4"|||y|gc1|||2
@@ -96,7 +96,7 @@ reports=?
 ~+|1|n|md"hboatt"|||y|gc2|||2
 ~+|1|n|md"schatt"|||y|gc2|||2
 ~+|1|n|md"wkoatt"|||y|gc2|||2
-~+|1|n|md"otoatt"|||y|gc2|||2|4
+~+|1|n|md"otoatt"|||y|gc2|||2|q
 reports=?
 ~#
 ~/end: 12-1_tripgen_county_summary_1.mac

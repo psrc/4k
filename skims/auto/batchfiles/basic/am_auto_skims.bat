@@ -5,6 +5,7 @@ time /t >> track1.rpt
 REM call am auto skim macros
 call emme -ng --set-iks 127.0.0.1 000 -m macros\4_skim_am_network.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\6_calculate_am_auto_skims.mac
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\8_export_files_for_urbansim.mac
 REM record end of secondary call
 echo "am auto skims ended at:" >> track1.rpt
 time /t >> track1.rpt

@@ -6,6 +6,7 @@ REM call emme -ng --set-iks 127.0.0.1 000 -m macros\9-9_calculate_drive_to_pnr_d
 call emme -ng --set-iks 127.0.0.1 000 -m macros\10_construct_vehicle_trip_tables.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\11_vehicle_mode_choice_summary.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
 call emme -ng --set-iks 127.0.0.1 000 -m macros\12_vehicle_external_trip_summary.mac
+REM call emme -ng --set-iks 127.0.0.1 000 -m macros\13_export_files_for_urbansim.mac
 REM record end of secondary call
 echo "am ended at:" >> track1.rpt
 time /t >> track1.rpt

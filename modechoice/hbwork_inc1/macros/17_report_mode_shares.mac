@@ -1,20 +1,19 @@
 ~?!i&32768
 ~o|295
 batchin=?
-reports=17_report_mode_shares.rpt
+reports=?
 ~/
 ~/
 ~/begin: 17_report_mode_shares.mac
 ~# ...call module 3.21: matrix calculations
 3.21
-~+|1|n|mf"w1shda"*mf"hbwds1"|||y|1,%1%||1,%1%||||2
+~+|1|n|mf"w1shda"*mf"hbwds1"|||y|1,%1%||1,%1%||||2|..\..\summaries\modechoice\mode_share_summary.rpt
 ~+|1|n|mf"w1shs2"*mf"hbwds1"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"w1shs3"*mf"hbwds1"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"w1shtw"*mf"hbwds1"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"w1shtd"*mf"hbwds1"|||y|1,%1%||1,%1%||||2
 ~+|1|n|mf"w1shwk"*mf"hbwds1"|||y|1,%1%||1,%1%||||2
-~+|1|n|mf"w1shbk"*mf"hbwds1"|||y|1,%1%||1,%1%||||2
-q
+~+|1|n|mf"w1shbk"*mf"hbwds1"|||y|1,%1%||1,%1%||||2|q
 ~#
 ~/end: 17_report_mode_shares.mac
 ~/exit emme

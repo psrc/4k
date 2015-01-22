@@ -1,0 +1,18 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=12-8_add_special_generators.rpt
+~/
+~/
+~/begin: 12-8_add_special_generators.mac
+~/ ...call module 3.21: matrix calculations
+~/ ...add special generator trips to attractions
+3.21
+~+|1|y|md"hboatt"|n|md"hboatt"+md"spghbo"+(.75*md"spgapt")|||n|2
+~+|1|y|md"wkoatt"|n|md"wkoatt"+(.25*md"spgapt")|||n|2
+q
+~#
+~/end: 12-8_add_special_generators.mac
+~/exit emme
+~/
+q

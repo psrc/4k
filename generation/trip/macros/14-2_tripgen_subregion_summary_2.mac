@@ -9,7 +9,7 @@ reports=?
 3.21
 ~#productions
 ~#king (east)
-~+|1|n|mo"hbwpr1"|||y|gf3|||2|summaries\tripgen_subregion_summary.rpt
+~+|1|n|mo"hbwpr1"|||y|gf3|||2|..\..\summaries\generation\tripgen_subregion_summary.rpt
 ~+|1|n|mo"hbwpr2"|||y|gf3|||2
 ~+|1|n|mo"hbwpr3"|||y|gf3|||2
 ~+|1|n|mo"hbwpr4"|||y|gf3|||2
@@ -140,7 +140,7 @@ reports=?
 ~+|1|n|md"hboatt"|||y|gf5|||2
 ~+|1|n|md"schatt"|||y|gf5|||2
 ~+|1|n|md"wkoatt"|||y|gf5|||2
-~+|1|n|md"otoatt"|||y|gf5|||2|4
+~+|1|n|md"otoatt"|||y|gf5|||2|q
 reports=?
 ~#
 ~/end: 14-2_tripgen_subregion_summary_2.mac

@@ -8,7 +8,7 @@ reports=?
 ~/ ...report mode choice results by time of day
 3.21
 ~# ...hb college p>a
-~+|1|n|mf"coldst"*mf"coshwk"*0.000*0.453|||y|1,%1%||1,%1%||||2|..\..\summaries\nonmotorized_mode_choice_summary.rpt
+~+|1|n|mf"coldst"*mf"coshwk"*0.000*0.453|||y|1,%1%||1,%1%||||2|..\..\..\summaries\triptables\nonmotorized_mode_choice_summary.rpt
 ~+|1|n|mf"coldst"*mf"coshbk"*0.000*0.482|||y|1,%1%||1,%1%||||2
 ~# ...hb college a>p
 ~+|1|n|mf"coldst"*mf"coshwk"*0.000*0.547|||y|1,%1%||1,%1%||||2
@@ -66,7 +66,7 @@ reports=?
 ~+|1|n|mf"wkodst"*mf"nhshbk"*0.023/2|||y|1,%1%||1,%1%||||2
 ~# ...nhb work/other a>p
 ~+|1|n|mf"wkodst"*mf"nhshwk"*0.003/2|||y|1,%1%||1,%1%||||2
-~+|1|n|mf"wkodst"*mf"nhshbk"*0.023/2|||y|1,%1%||1,%1%||||2|4
+~+|1|n|mf"wkodst"*mf"nhshbk"*0.023/2|||y|1,%1%||1,%1%||||2|q
 reports=?
 ~#
 ~/end: 13-1_nonmotorized_mode_choice_summary.mac

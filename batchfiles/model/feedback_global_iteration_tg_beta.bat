@@ -38,6 +38,7 @@ cd assignments\auto
 call batchfiles\setup\congested\congested_assignment_setup.bat
 call batchfiles\congested\parallel_congested_assign.bat
 call batchfiles\check\assignment_completion_check.bat
+call batchfiles\summaries\auto_network_summary.bat
 cd ..\..
 cd assignments\transit
 call batchfiles\congested\congested_transit_assign.bat
