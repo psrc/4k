@@ -53,8 +53,6 @@ reports=6_initialize_full_matrices.rpt
 ~+|1|mf35|nwshbk|hb non-work bike mode share|0
 ~+|1|mf36|nwshwk|hb non-work walk mode share|0
 ~#
-~+|1|mf37|hspdst|hb shop distribution|0
-~+|1|mf38|hbodst|hb other distribution|0
 q
 ~#
 ~/end: 6_initialize_full_matrices.mac

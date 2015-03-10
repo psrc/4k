@@ -53,7 +53,6 @@ reports=6_initialize_full_matrices.rpt
 ~+|1|mf35|coshbk|hb college bike mode share|0
 ~+|1|mf36|coshwk|hb college walk mode share|0
 ~#
-~+|1|mf37|coldst|hb college distribution|0
 q
 ~#
 ~/end: 6_initialize_full_matrices.mac

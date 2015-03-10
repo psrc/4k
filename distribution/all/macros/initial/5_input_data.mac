@@ -1,0 +1,84 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...call module 3.11: input matrices using batch entry
+~/ ...input exponential distribution coefficients
+3.11
+~+|..\..\input\model\distribution\distribution_coefficients_exp.in|2|
+~/
+~/ ...input global parameters
+3.11
+~+|..\..\input\model\Global\global_coefficients.in|2|
+3.11
+~+|..\..\input\model\Global\truck_operating_costs.in|2|
+~/
+~/ ...input vot assignment parameters
+3.11
+~+|..\..\input\model\vot\am_vot_parameters.in|2|
+3.11
+~+|..\..\input\model\vot\md_vot_parameters.in|2|
+~/
+~/ ... input trip ends
+3.11
+~+|..\..\input\tripends\colpro.in|2|
+3.11
+~+|..\..\input\tripends\colatt.in|2|
+3.11
+~+|..\..\input\tripends\hbopro.in|2|
+3.11
+~+|..\..\input\tripends\hboatt.in|2|
+3.11
+~+|..\..\input\tripends\schpro.in|2|
+3.11
+~+|..\..\input\tripends\schatt.in|2|
+3.11
+~+|..\..\input\tripends\hsppro.in|2|
+3.11
+~+|..\..\input\tripends\hspatt.in|2|
+3.11
+~+|..\..\input\tripends\hbwpr1.in|2|
+3.11
+~+|..\..\input\tripends\hbwat1.in|2|
+3.11
+~+|..\..\input\tripends\hbwpr2.in|2|
+3.11
+~+|..\..\input\tripends\hbwat2.in|2|
+3.11
+~+|..\..\input\tripends\hbwpr3.in|2|
+3.11
+~+|..\..\input\tripends\hbwat3.in|2|
+3.11
+~+|..\..\input\tripends\hbwpr4.in|2|
+3.11
+~+|..\..\input\tripends\hbwat4.in|2|
+3.11
+~+|..\..\input\tripends\otopro.in|2|
+3.11
+~+|..\..\input\tripends\otoatt.in|2|
+3.11
+~+|..\..\input\tripends\wkopro.in|2|
+3.11
+~+|..\..\input\tripends\wkoatt.in|2|
+3.11
+~+|..\..\input\tripends\ltprof.in|2|
+3.11
+~+|..\..\input\tripends\mtprof.in|2|
+3.11
+~+|..\..\input\tripends\htprof.in|2|
+3.11
+~+|..\..\input\tripends\ltattf.in|2|
+3.11
+~+|..\..\input\tripends\mtattf.in|2|
+3.11
+~+|..\..\input\tripends\htattf.in|2|
+
+
+
+
+~/
+~/end: 5_input_data.mac
+~/exit emme
+~/
+q

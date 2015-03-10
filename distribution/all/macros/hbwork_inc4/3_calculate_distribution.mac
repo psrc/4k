@@ -1,0 +1,21 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hbw4.rpt
+~/
+~/ ...call module 3.22: matrix balancing
+~/ ...two dimensional balancing
+~/ ...matrix to be balanced: mf"temp03"
+~/ ...totals on origins: mo"hbwpr4"
+~/ ...totals on destinations: md"hbwat4"
+~/ ...saved balanced matrix: mf"hbwds4"
+~/ ...calculate hb work income 4 distribution
+3.22
+~+|1|mf"temp03"|mo"hbwpr4"|md"hbwat4"|y
+~+|1,%3%||1,%3%|||2|1|mf"hbwds4"|n|2
+q
+~#
+~/end: 3_calculate_distribution.mac
+~/exit emme
+~/
+q

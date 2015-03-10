@@ -52,9 +52,6 @@ reports=6_initialize_full_matrices.rpt
 ~+|1|mf34|nhshtw|nhb transit-walk mode share|0
 ~+|1|mf35|nhshbk|nhb bike mode share|0
 ~+|1|mf36|nhshwk|nhb walk mode share|0
-~#
-~+|1|mf37|otodst|nhb other distribution|0
-~+|1|mf38|wkodst|nhb work distribution|0
 q
 ~#
 ~/end: 6_initialize_full_matrices.mac

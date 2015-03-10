@@ -35,48 +35,7 @@ if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../../../..
 REM distribution
-cd distribution/hbcollege
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/hbother
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/hbschool
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/hbshop
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/hbwork_inc1
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/hbwork_inc2
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/hbwork_inc3
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/hbwork_inc4
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/nhbother
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd distribution/nhbwork
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-REM trip generation
-cd generation/trip
+cd distribution/all
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..
@@ -274,11 +233,6 @@ if exist emlock* exit /b
 cd ../../..
 REM truck trip tables
 cd triptables/trucks
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-REM truck model
-cd trucks/distribution
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..

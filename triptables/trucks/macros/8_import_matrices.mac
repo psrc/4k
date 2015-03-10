@@ -9,7 +9,7 @@ reports=8_import_matrices.rpt
 1.31
 ~/ ...open truck trip distribution emmebank
 ~+|1
-..\..\trucks\distribution\emmebank
+..\..\distribution\all\emmebank
 ~/ ...import truck distribution matrices
 ~+|2|3|3|mf"lgtdis"|mf"lgtdis"|n|y
 ~+|2|3|3|mf"meddis"|mf"meddis"|n|y

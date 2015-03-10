@@ -31,34 +31,7 @@ cd assignments/transit/md/all_mode
 ren *.rpt *.rp%1%
 cd ../../../..
 REM distribution
-cd distribution/hbcollege
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/hbother
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/hbschool
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/hbshop
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/hbwork_inc1
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/hbwork_inc2
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/hbwork_inc3
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/hbwork_inc4
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/nhbother
-ren *.rpt *.rp%1%
-cd ../..
-cd distribution/nhbwork
+cd distribution/all
 ren *.rpt *.rp%1%
 cd ../..
 REM mode choice
@@ -212,24 +185,3 @@ REM truck trip tables
 cd triptables/trucks
 ren *.rpt *.rp%1%
 cd ../..
-REM truck model
-cd trucks/distribution
-ren *.rpt *.rp%1%
-cd ../..
-REM summary reports
-REM distribution
-cd summaries/distribution
-ren *.rpt *.rp%1%
-cd ../..
-REM trip tables
-cd summaries/triptables
-ren *.rpt *.rp%1%
-cd ../..
-REM mode choice
-cd summaries/modechoice
-ren *.rpt *.rp%1%
-cd ../..
-REM auto assignments
-cd summaries/assignments/auto
-ren *.rpt *.rp%1%
-cd ../../..

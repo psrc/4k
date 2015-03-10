@@ -64,6 +64,3 @@ call batchfiles\pnr_skims.bat
 call batchfiles\pnr_skim_completion_check.bat
 cd ..\..
 echo Free-Flow Park and Ride Skims completed on %date% at %time%. >> psrc_4k_log.txt
-
-
-

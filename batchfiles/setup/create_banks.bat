@@ -129,7 +129,7 @@ REM ---------------------------------------------------------------
 REM Trip Distribution
 REM ---------------------------------------------------------------
 
-cd ..\..\..\..\distribution\hbcollege
+cd ..\..\..\..\distribution\all
 
 REM Delete the Existing Files if present
 if exist emmebank erase emmebank
@@ -139,125 +139,8 @@ if exist errors erase errors
 if exist *.rp* erase *.rp*
 
 REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\hbother
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\hbschool
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\hbshop
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\hbwork_inc1
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\hbwork_inc2
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\hbwork_inc3
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\hbwork_inc4
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\nhbother
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
-cd ..\nhbwork
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
+call emme -ng newbank -m macros\initial\0-1_create_databank.mac
+call emme -ng 000 -m macros\initial\0-2_create_networks.mac
 
 REM ---------------------------------------------------------------
 REM Mode Choice
@@ -873,41 +756,7 @@ REM Run macros to create the network, initialize matrices and read in data
 call emme -ng newbank -m macros\0-1_create_databank.mac
 call emme -ng 000 -m macros\0-2_create_networks.mac
 
-REM ---------------------------------------------------------------
-REM Trucks
-REM ---------------------------------------------------------------
-
-cd ..\..\trucks\distribution
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network, initialize matrices and read in data
-call emme -ng newbank -m macros\0-1_create_databank.mac
-call emme -ng 000 -m macros\0-2_create_networks.mac
-
 REM Return to Root Directory
 cd ..\..
-
-REM ---------------------------------------------------------------
-REM Results
-REM ---------------------------------------------------------------
-
-cd results
-
-REM Delete the Existing Files if present
-if exist emmebank erase emmebank
-if exist emmemat\*.emx erase emmemat\*.emx
-if exist PATHS* erase PATHS*
-if exist errors erase errors
-if exist *.rp* erase *.rp*
-
-REM Run macros to create the network
-call emme -ng newbank -m macros\0-1_create_databank.mac
-cd ..
 
 echo Initial Setup of Databanks completed on %date% at %time%. >> psrc_4k_log.txt

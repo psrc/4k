@@ -70,8 +70,6 @@ reports=6_initialize_full_matrices.rpt
 ~+|1|mf49|xfrda1|total transfer time - drive access|0
 ~+|1|mf50|farda1|transit fare - drive access|0
 ~#
-~+|1|mf51|hbwds1|hb work income 1 distribution|0
-~#
 ~+|1|mf52|lsum1|hb work income 1 mode choice log sum|0
 q
 ~#

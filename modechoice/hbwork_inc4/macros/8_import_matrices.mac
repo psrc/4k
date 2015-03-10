@@ -89,13 +89,6 @@ q
 ~+|2|3|3|mf"xfrda4"|mf"xfrda4"|n|y
 ~+|2|3|3|mf"farda4"|mf"farda4"|n|y
 q
-1.31
-~/ ...open distribution emmebank
-~+|1
-..\..\Distribution\HBWork_Inc4\emmebank
-~/ ...import hbw matrices
-~+|2|3|3|mf"hbwds4"|mf"hbwds4"|n|y
-q
 ~#
 ~/end: 8_import_matrices.mac
 ~/exit emme

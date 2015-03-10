@@ -1,0 +1,26 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=medium_trucks.rpt
+~/
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open bidirectional distance emmebank
+~+|1
+..\..\Skims\BiDirectional\Distance\emmebank
+~/ ...import bidirectional distance matrices
+~+|2|3|3|mf"bhvyds"|mf"temp02"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open bidirectional cost emmebank
+~+|1
+..\..\Skims\BiDirectional\Generalized_Cost\emmebank
+~/ ...import bidirectional cost matrices
+~+|2|3|3|mf"bhvycs"|mf"temp01"|n|y
+q
+~#
+~/end: 1_import_matrices.mac
+~/exit emme
+~/
+q

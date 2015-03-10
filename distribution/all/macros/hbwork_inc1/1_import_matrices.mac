@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hbw1.rpt
+~/
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am auto skim emmebank
+~+|1
+..\..\Skims\Auto\AM\emmebank
+~/ ...import am hbw income 1 sov generalized cost skim matrix
+~+|2|3|3|mf"aa1cs1"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds1"|mf"temp02"|n|y
+q
+~#
+~/end: 1_import_matrices.mac
+~/exit emme
+~/
+q

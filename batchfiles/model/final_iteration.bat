@@ -8,9 +8,6 @@ REM Trip Distribution
 cd distribution
 call batchfiles\trip_distribution.bat
 cd ..
-cd trucks
-call batchfiles\truck_distribution.bat
-cd ..
 echo Final Iteration Trip Distribution completed on %date% at %time%. >> psrc_4k_log.txt
 
 REM Mode Choice

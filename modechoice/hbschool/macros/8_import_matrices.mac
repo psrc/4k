@@ -73,14 +73,6 @@ q
 ~+|2|3|3|mf"awlktm"|mf"awlktm"|n|y
 q
 ~#
-1.31
-~/ ...open distribution emmebank
-~+|1
-..\..\Distribution\HBSchool\emmebank
-~/ ...import hbschool matrices
-~+|2|3|3|mf"schdst"|mf"schdst"|n|y
-q
-~#
 ~/end: 8_import_matrices.mac
 ~/exit emme
 ~/

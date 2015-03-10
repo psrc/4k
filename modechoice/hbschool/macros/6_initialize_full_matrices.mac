@@ -53,7 +53,6 @@ reports=6_initialize_full_matrices.rpt
 ~+|1|mf35|scshbk|hb school bike mode share|0
 ~+|1|mf36|scshwk|hb school walk mode share|0
 ~#
-~+|1|mf37|schdst|hb school distribution|0
 q
 ~#
 ~/end: 6_initialize_full_matrices.mac

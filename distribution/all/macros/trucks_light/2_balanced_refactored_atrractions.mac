@@ -1,0 +1,18 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=light_trucks.rpt
+~/
+~/ ...call module 3.21: matrix calculations
+~/ ...balance refactored light truck attractions to productions
+3.21
+~+|1|y|ms"ltprof"|n|mo"ltprof"|||n||2
+~+|1|y|ms"ltattf"|n|md"ltattf"|||n||2
+~+|1|y|ms"ltatfe"|n|md"ltattf"|||y|%2%,%3%|||2
+~+|1|y|md"ltattf"|n|md"ltattf"*((ms"ltprof"-ms"ltatfe")/(ms"ltattf"-ms"ltatfe"))|||y|1,%1%||2
+q
+~#
+~/end: 2_balanced_refactored_atrractions.mac.mac
+~/exit emme
+~/
+q
