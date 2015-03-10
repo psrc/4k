@@ -5,8 +5,6 @@ reports=1_initialize_pm_matrices.rpt
 ~/
 ~/
 ~/begin: 1_initialize_pm_matrices.mac
-~/ ...set active scenario to 1003
-s=1003
 ~/ ...call module 3.12: input/modify matrices interactively
 ~/ ...initialize matrix directory
 3.12

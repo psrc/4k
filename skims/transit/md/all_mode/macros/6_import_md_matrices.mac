@@ -25,13 +25,13 @@ q
 3.11
 ~/ ...input walk access times at production end
 ~# ...enter file name for batch input
-..\..\..\..\input\%1%\walkaccess\origin_walkaccess.in
+..\..\..\..\input\walkaccess\origin_walkaccess.in
 ~/ ...write report file
 2
 3.11
 ~/ ...input walk access times at attraction end
 ~# ...enter file name for batch input
-..\..\..\..\input\%1%\walkaccess\destination_walkaccess.in
+..\..\..\..\input\walkaccess\destination_walkaccess.in
 ~/ ...write report file
 2
 ~/end: 6_import_md_matrices.mac

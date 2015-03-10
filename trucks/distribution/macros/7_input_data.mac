@@ -11,12 +11,24 @@ reports=7_input_data.rpt
 ~/ ...input 20-district ensemble
 3.01
 ~+|4|ga|y| 
-~+|1|..\..\input\%1%\model\ensembles\districts19_ga.ens|2
+~+|1|..\..\input\model\ensembles\districts19_ga.ens|2
 q
 ~/ ...call module 3.11: input matrices using batch entry
 ~/ ...input global parameters - truck operating costs
 3.11
-~+|..\..\input\%1%\model\Global\truck_operating_costs.in|2|
+~+|..\..\input\model\Global\truck_operating_costs.in|2|
+3.11
+~+|..\..\input\tripends\ltprof.in|2|
+3.11
+~+|..\..\input\tripends\mtprof.in|2|
+3.11
+~+|..\..\input\tripends\htprof.in|2|
+3.11
+~+|..\..\input\tripends\ltattf.in|2|
+3.11
+~+|..\..\input\tripends\mtattf.in|2|
+3.11
+~+|..\..\input\tripends\htattf.in|2|
 ~#
 ~/end: 7_input_data.mac
 ~/exit emme

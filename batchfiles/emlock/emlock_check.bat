@@ -80,15 +80,6 @@ cd generation/trip
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..
-REM market segmentation
-cd marketsegmentation/nonwork
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd marketsegmentation/work
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
 REM mode choice
 cd modechoice/hbcollege
 if exist emlock* echo emlock file found, model run exited
@@ -122,11 +113,6 @@ cd modechoice/nhb
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..
-REM networks
-cd networks
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ..
 REM auto skims
 cd skims/auto/am
 if exist emlock* echo emlock file found, model run exited
@@ -293,15 +279,6 @@ if exist emlock* exit /b
 cd ../..
 REM truck model
 cd trucks/distribution
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-cd trucks/generation
-if exist emlock* echo emlock file found, model run exited
-if exist emlock* exit /b
-cd ../..
-REM vehicle availability
-cd vehicleavailability/all
 if exist emlock* echo emlock file found, model run exited
 if exist emlock* exit /b
 cd ../..

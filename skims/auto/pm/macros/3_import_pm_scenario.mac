@@ -17,7 +17,6 @@ q
 ~/ ...open pm auto assignment emmebank
 ~+|1
 ..\..\..\assignments\auto\pm\emmebank
-~+|y
 ~/ ...import pm network scenario (1003)
 ~+|2|1|3|1003|1003|y|PM Auto Assignment
 q

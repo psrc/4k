@@ -11,18 +11,18 @@ s=1005
 ~/ ...input attribute using batch entry
 ~/ ...input evening tolls
 2.41
-~+|3|@toll1|n|*|1,2,3|..\..\..\input\%1%\tolls\ferry\ferry_vehicle_fares.in|y|2|y
-~+|3|@toll2|n|*|1,2,4|..\..\..\input\%1%\tolls\ferry\ferry_vehicle_fares.in|y|2|y
-~+|3|@toll3|n|*|1,2,5|..\..\..\input\%1%\tolls\ferry\ferry_vehicle_fares.in|y|2|y
-~+|3|@trkc1|n|*|1,2,6|..\..\..\input\%1%\tolls\ferry\ferry_vehicle_fares.in|y|2|y
-~+|3|@trkc2|n|*|1,2,7|..\..\..\input\%1%\tolls\ferry\ferry_vehicle_fares.in|y|2|y
-~+|3|@trkc3|n|*|1,2,8|..\..\..\input\%1%\tolls\ferry\ferry_vehicle_fares.in|y|2|y
-~+|3|@toll1|n|*|1,2,3|..\..\..\input\%1%\tolls\roadway\ev_roadway_tolls.in|y|2|y
-~+|3|@toll2|n|*|1,2,4|..\..\..\input\%1%\tolls\roadway\ev_roadway_tolls.in|y|2|y
-~+|3|@toll3|n|*|1,2,5|..\..\..\input\%1%\tolls\roadway\ev_roadway_tolls.in|y|2|y
-~+|3|@trkc1|n|*|1,2,6|..\..\..\input\%1%\tolls\roadway\ev_roadway_tolls.in|y|2|y
-~+|3|@trkc2|n|*|1,2,7|..\..\..\input\%1%\tolls\roadway\ev_roadway_tolls.in|y|2|y
-~+|3|@trkc3|n|*|1,2,8|..\..\..\input\%1%\tolls\roadway\ev_roadway_tolls.in|y|2|y
+~+|3|@toll1|n|*|1,2,3|..\..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@toll2|n|*|1,2,4|..\..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@toll3|n|*|1,2,5|..\..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@trkc1|n|*|1,2,6|..\..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@trkc2|n|*|1,2,7|..\..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@trkc3|n|*|1,2,8|..\..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@toll1|n|*|1,2,3|..\..\..\input\tolls\roadway\ev_roadway_tolls.in|y|2|y
+~+|3|@toll2|n|*|1,2,4|..\..\..\input\tolls\roadway\ev_roadway_tolls.in|y|2|y
+~+|3|@toll3|n|*|1,2,5|..\..\..\input\tolls\roadway\ev_roadway_tolls.in|y|2|y
+~+|3|@trkc1|n|*|1,2,6|..\..\..\input\tolls\roadway\ev_roadway_tolls.in|y|2|y
+~+|3|@trkc2|n|*|1,2,7|..\..\..\input\tolls\roadway\ev_roadway_tolls.in|y|2|y
+~+|3|@trkc3|n|*|1,2,8|..\..\..\input\tolls\roadway\ev_roadway_tolls.in|y|2|y
 q
 ~#
 ~/end: 5_input_ev_tolls.mac

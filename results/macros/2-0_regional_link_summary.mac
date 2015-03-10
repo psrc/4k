@@ -1,0 +1,141 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- AM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1002
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Vehicle Miles Traveled
+~+|1|n|@tveh*len||ul3=1,2||5|4|ms01|avmfwr|AM Regional VMT - Freeways|1
+~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms02|avmarr|AM Regional VMT - Arterials|1
+~+|1|n|@tveh*len||ul3=5||5|4|ms03|avmcnr|AM Regional VMT - Connectors|1
+~+|1|n|@tveh*len||ul3=1,6||5|4|ms04|avmalr|AM Regional VMT - All Facilities|1
+~/ --- Vehicle Hours Traveled
+~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms05|avhfwr|AM Regional VHT - Freeways|1
+~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms06|avharr|AM Regional VHT - Arterials|1
+~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms07|avhcnr|AM Regional VHT - Connectors|1
+~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms08|avhalr|AM Regional VHT - All Facilities|1
+~/ --- Vehicle Hours of Delay 
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms09|avdfwr|AM Regional VHD - Freeways|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms10|avdarr|AM Regional VHD - Arterials|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms11|avdcnr|AM Regional VHD - Connectors|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms12|avdalr|AM Regional VHD - All Facilities|1
+~/ --- Lane Miles
+~+|1|n|lanes*len||ul3=1,2||5|4|ms13|almfwr|AM Regional Lane Miles - Freeways|1
+~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms14|almarr|AM Regional Lane Miles - Arterials|1
+~+|1|n|lanes*len||ul3=5||5|4|ms15|almcnr|AM Regional Lane Miles - Connectors|1
+~+|1|n|lanes*len||ul3=1,6||5|4|ms16|almalr|AM Regional Lane Miles - All Facilities|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Midday Period Summary
+~/ ---------------------------------------------------------------
+s=1004
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Vehicle Miles Traveled
+~+|1|n|@tveh*len||ul3=1,2||5|4|ms17|mvmfwr|MD Regional VMT - Freeways|1
+~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms18|mvmarr|MD Regional VMT - Arterials|1
+~+|1|n|@tveh*len||ul3=5||5|4|ms19|mvmcnr|MD Regional VMT - Connectors|1
+~+|1|n|@tveh*len||ul3=1,6||5|4|ms20|mvmalr|MD Regional VMT - All Facilities|1
+~/ --- Vehicle Hours Traveled
+~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms21|mvhfwr|MD Regional VHT - Freeways|1
+~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms22|mvharr|MD Regional VHT - Arterials|1
+~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms23|mvhcnr|MD Regional VHT - Connectors|1
+~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms24|mvhalr|MD Regional VHT - All Facilities|1
+~/ --- Vehicle Hours of Delay 
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms25|mvdfwr|MD Regional VHD - Freeways|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms26|mvdarr|MD Regional VHD - Arterials|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms27|mvdcnr|MD Regional VHD - Connectors|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms28|mvdalr|MD Regional VHD - All Facilities|1
+~/ --- Lane Miles
+~+|1|n|lanes*len||ul3=1,2||5|4|ms29|mlmfwr|MD Regional Lane Miles - Freeways|1
+~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms30|mlmarr|MD Regional Lane Miles - Arterials|1
+~+|1|n|lanes*len||ul3=5||5|4|ms31|mlmcnr|MD Regional Lane Miles - Connectors|1
+~+|1|n|lanes*len||ul3=1,6||5|4|ms32|mlmalr|MD Regional Lane Miles - All Facilities|1
+q
+~/ ---------------------------------------------------------------
+~/ --- PM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1003
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Vehicle Miles Traveled
+~+|1|n|@tveh*len||ul3=1,2||5|4|ms33|pvmfwr|PM Regional VMT - Freeways|1
+~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms34|pvmarr|PM Regional VMT - Arterials|1
+~+|1|n|@tveh*len||ul3=5||5|4|ms35|pvmcnr|PM Regional VMT - Connectors|1
+~+|1|n|@tveh*len||ul3=1,6||5|4|ms36|pvmalr|PM Regional VMT - All Facilities|1
+~/ --- Vehicle Hours Traveled
+~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms37|pvhfwr|PM Regional VHT - Freeways|1
+~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms38|pvharr|PM Regional VHT - Arterials|1
+~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms39|pvhcnr|PM Regional VHT - Connectors|1
+~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms40|pvhalr|PM Regional VHT - All Facilities|1
+~/ --- Vehicle Hours of Delay 
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms41|pvdfwr|PM Regional VHD - Freeways|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms42|pvdarr|PM Regional VHD - Arterials|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms43|pvdcnr|PM Regional VHD - Connectors|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms44|pvdalr|PM Regional VHD - All Facilities|1
+~/ --- Lane Miles
+~+|1|n|lanes*len||ul3=1,2||5|4|ms45|plmfwr|PM Regional Lane Miles - Freeways|1
+~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms46|plmarr|PM Regional Lane Miles - Arterials|1
+~+|1|n|lanes*len||ul3=5||5|4|ms47|plmcnr|PM Regional Lane Miles - Connectors|1
+~+|1|n|lanes*len||ul3=1,6||5|4|ms48|plmalr|PM Regional Lane Miles - All Facilities|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Late Evening Period Summary
+~/ ---------------------------------------------------------------
+s=1005
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Vehicle Miles Traveled
+~+|1|n|@tveh*len||ul3=1,2||5|4|ms49|evmfwr|EV Regional VMT - Freeways|1
+~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms50|evmarr|EV Regional VMT - Arterials|1
+~+|1|n|@tveh*len||ul3=5||5|4|ms51|evmcnr|EV Regional VMT - Connectors|1
+~+|1|n|@tveh*len||ul3=1,6||5|4|ms52|evmalr|EV Regional VMT - All Facilities|1
+~/ --- Vehicle Hours Traveled
+~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms53|evhfwr|EV Regional VHT - Freeways|1
+~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms54|evharr|EV Regional VHT - Arterials|1
+~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms55|evhcnr|EV Regional VHT - Connectors|1
+~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms56|evhalr|EV Regional VHT - All Facilities|1
+~/ --- Vehicle Hours of Delay 
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms57|evdfwr|EV Regional VHD - Freeways|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms58|evdarr|EV Regional VHD - Arterials|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms59|evdcnr|EV Regional VHD - Connectors|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms60|evdalr|EV Regional VHD - All Facilities|1
+~/ --- Lane Miles
+~+|1|n|lanes*len||ul3=1,2||5|4|ms61|elmfwr|EV Regional Lane Miles - Freeways|1
+~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms62|elmarr|EV Regional Lane Miles - Arterials|1
+~+|1|n|lanes*len||ul3=5||5|4|ms63|elmcnr|EV Regional Lane Miles - Connectors|1
+~+|1|n|lanes*len||ul3=1,6||5|4|ms64|elmalr|EV Regional Lane Miles - All Facilities|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Overnight Period Summary
+~/ ---------------------------------------------------------------
+s=1006
+2.41
+~/ --- Vehicle Miles Traveled
+~+|1|n|@tveh*len||ul3=1,2||5|4|ms65|nvmfwr|NI Regional VMT - Freeways|1
+~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms66|nvmarr|NI Regional VMT - Arterials|1
+~+|1|n|@tveh*len||ul3=5||5|4|ms67|nvmcnr|NI Regional VMT - Connectors|1
+~+|1|n|@tveh*len||ul3=1,6||5|4|ms68|nvmalr|NI Regional VMT - All Facilities|1
+~/ --- Vehicle Hours Traveled
+~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms69|nvhfwr|NI Regional VHT - Freeways|1
+~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms70|nvharr|NI Regional VHT - Arterials|1
+~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms71|nvhcnr|NI Regional VHT - Connectors|1
+~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms72|nvhalr|NI Regional VHT - All Facilities|1
+~/ --- Vehicle Hours of Delay 
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms73|nvdfwr|NI Regional VHD - Freeways|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms74|nvdarr|NI Regional VHD - Arterials|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms75|nvdcnr|NI Regional VHD - Connectors|1
+~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms76|nvdalr|NI Regional VHD - All Facilities|1
+~/ --- Lane Miles
+~+|1|n|lanes*len||ul3=1,2||5|4|ms77|nlmfwr|NI Regional Lane Miles - Freeways|1
+~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms78|nlmarr|NI Regional Lane Miles - Arterials|1
+~+|1|n|lanes*len||ul3=5||5|4|ms79|nlmcnr|NI Regional Lane Miles - Connectors|1
+~+|1|n|lanes*len||ul3=1,6||5|4|ms80|nlmalr|NI Regional Lane Miles - All Facilities|1
+q
+~/
+~/end: 2-0_regional_link_summary.mac
+~/exit emme
+q

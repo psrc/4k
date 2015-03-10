@@ -25,26 +25,6 @@ q
 ~+|2|3|3|mf"bmedcs"|mf"bmedcs"|n|y
 ~+|2|3|3|mf"bhvycs"|mf"bhvycs"|n|y
 q
-~/ ...call module 1.31: import data from external database
-1.31
-~/ ...open truck trip generation emmebank
-~+|1
-..\..\trucks\generation\emmebank
-~/ ...import refactored productions
-~+|2|3|3|mo"ltprof"|mo"ltprof"|n|y
-~+|2|3|3|mo"mtprof"|mo"mtprof"|n|y
-~+|2|3|3|mo"htprof"|mo"htprof"|n|y
-q
-~/ ...call module 1.31: import data from external database
-1.31
-~/ ...open truck trip generation emmebank
-~+|1
-..\..\trucks\generation\emmebank
-~/ ...import refactored attractions
-~+|2|3|3|md"ltattf"|md"ltattf"|n|y
-~+|2|3|3|md"mtattf"|md"mtattf"|n|y
-~+|2|3|3|md"htattf"|md"htattf"|n|y
-q
 ~#
 ~/end: 8_import_matrices.mac
 ~/exit emme

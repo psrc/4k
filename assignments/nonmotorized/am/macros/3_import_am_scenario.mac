@@ -17,7 +17,6 @@ q
 ~/ ...open am auto assignment emmebank
 ~+|1
 ..\..\auto\am\emmebank
-~+|y
 ~/ ...import am network scenario (1002)
 ~+|2|1|3|1002|1002|y|AM Non-Motorized Assignment
 q

@@ -9,7 +9,7 @@ reports=3-9_input_pnr_lot_charges.rpt
 3.11
 ~/ ...input pnr lot charges
 ~# ...enter file name for batch input
-..\..\..\input\%1%\pnr\pnr_lot_charges.in
+..\..\..\input\pnr\pnr_lot_charges.in
 ~/ ...write report file
 2
 ~/ ...call module 3.21: matrix calculations

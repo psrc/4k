@@ -1,0 +1,565 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- Regional Trip Distribution Summary
+~/ ---------------------------------------------------------------
+~/ --- Load Ensembles
+3.01
+~+|4|all|y
+~+|1|..\input\model\ensembles\parking_gz.ens|2
+~+|1|..\input\model\ensembles\districts19_ga.ens|2
+~+|1|..\input\model\ensembles\seattlecbd_gb.ens|2
+~+|1|..\input\model\ensembles\counties_gc.ens|2
+~+|1|..\input\model\ensembles\districts6_gk.ens|2
+~+|1|..\input\model\ensembles\kitsap_gl.ens|2
+q
+~/ ---------------------------------------------------------------
+~/ --- College Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy AM SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aau1tm"|mf"temp01"|n|y
+~+|2|3|3|mf"aau1ds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbcollege\emmebank
+~+|2|3|3|mf"coldst"|mf"temp03"|n|y
+q
+~/ --- Summarize College Trips for Internal Zones
+3.21
+~+|1|y|ms388|y|col|DY College Trips|0|"temp03"|||n|||2
+~+|1|y|ms401|y|coltm1|DY Coll Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms402|y|coltm2|DY Coll Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms403|y|colds1|DY Coll Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms404|y|colds2|DY Coll Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize College Trips Destined to King County
+~+|1|y|ms405|y|clkgkg|DY Coll King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms406|y|clshkg|DY Coll Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms407|y|clpekg|DY Coll Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms408|y|clkpkg|DY Coll Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize College Trips Destined to Kitsap County
+~+|1|y|ms409|y|clkgkp|DY Coll King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms410|y|clshkp|DY Coll Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms411|y|clpekp|DY Coll Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms412|y|clkpkp|DY Coll Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize College Trips Destined to Pierce County
+~+|1|y|ms413|y|clkgpe|DY Coll King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms414|y|clshpe|DY Coll Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms415|y|clpepe|DY Coll Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms416|y|clkppe|DY Coll Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize College Trips Destined to Snohomish County
+~+|1|y|ms417|y|clkgsh|DY Coll King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms418|y|clshsh|DY Coll Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms419|y|clpesh|DY Coll Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms420|y|clkpsh|DY Coll Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Other Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\md\emmebank
+~+|2|3|3|mf"mau1tm"|mf"temp01"|n|y
+~+|2|3|3|mf"mau1ds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbother\emmebank
+~+|2|3|3|mf"hbodst"|mf"temp03"|n|y
+q
+~/ --- Summarize HBO Trips for Internal Zones
+3.21
+~+|1|y|ms389|y|hbo|DY HBO Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms421|y|hbotm1|DY HBO Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms422|y|hbotm2|DY HBO Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms423|y|hbods1|DY HBO Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms424|y|hbods2|DY HBO Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize HBO Trips Destined to King County
+~+|1|y|ms425|y|hokgkg|DY HBO King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms426|y|hoshkg|DY HBO Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms427|y|hopekg|DY HBO Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms428|y|hokpkg|DY HBO Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize HBO Trips Destined to Kitsap County
+~+|1|y|ms429|y|hokgkp|DY HBO King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms430|y|hoshkp|DY HBO Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms431|y|hopekp|DY HBO Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms432|y|hokpkp|DY HBO Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize HBO Trips Destined to Pierce County
+~+|1|y|ms433|y|hokgpe|DY HBO King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms434|y|hoshpe|DY HBO Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms435|y|hopepe|DY HBO Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms436|y|hokppe|DY HBO Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize HBO Trips Destined to Snohomish County
+~+|1|y|ms437|y|hokgsh|DY HBO King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms438|y|hoshsh|DY HBO Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms439|y|hopesh|DY HBO Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms440|y|hokpsh|DY HBO Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based School Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbschool\emmebank
+~+|2|3|3|mf"schdst"|mf"temp03"|n|y
+q
+~/ --- Summarize School Trips for Internal Zones
+3.21
+~+|1|y|ms390|y|sch|DY School Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms441|y|schtm1|DY Sch Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms442|y|schtm2|DY Sch Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms443|y|schds1|DY Sch Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms444|y|schds2|DY Sch Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize sch Trips Destined to King County
+~+|1|y|ms445|y|slkgkg|DY Sch King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms446|y|slshkg|DY Sch Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms447|y|slpekg|DY Sch Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms448|y|slkpkg|DY Sch Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize sch Trips Destined to Kitsap County
+~+|1|y|ms449|y|slkgkp|DY Sch King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms450|y|slshkp|DY Sch Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms451|y|slpekp|DY Sch Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms452|y|slkpkp|DY Sch Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize sch Trips Destined to Pierce County
+~+|1|y|ms453|y|slkgpe|DY Sch King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms454|y|slshpe|DY Sch Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms455|y|slpepe|DY Sch Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms456|y|slkppe|DY Sch Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize sch Trips Destined to Snohomish County
+~+|1|y|ms457|y|slkgsh|DY Sch King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms458|y|slshsh|DY Sch Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms459|y|slpesh|DY Sch Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms460|y|slkpsh|DY Sch Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Shopping Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbshop\emmebank
+~+|2|3|3|mf"hspdst"|mf"temp03"|n|y
+q
+~/ --- Summarize Shopping Trips for Internal Zones
+3.21
+~+|1|y|ms391|y|hsp|DY Shopping Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms461|y|hsptm1|DY Shp Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms462|y|hsptm2|DY Shp Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms463|y|hspds1|DY Shp Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms464|y|hspds2|DY Shp Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize hsp Trips Destined to King County
+~+|1|y|ms465|y|hskgkg|DY Shp King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms466|y|hsshkg|DY Shp Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms467|y|hspekg|DY Shp Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms468|y|hskpkg|DY Shp Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize hsp Trips Destined to Kitsap County
+~+|1|y|ms469|y|hskgkp|DY Shp King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms470|y|hsshkp|DY Shp Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms471|y|hspekp|DY Shp Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms472|y|hskpkp|DY Shp Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize hsp Trips Destined to Pierce County
+~+|1|y|ms473|y|hskgpe|DY Shp King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms474|y|hsshpe|DY Shp Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms475|y|hspepe|DY Shp Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms476|y|hskppe|DY Shp Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize hsp Trips Destined to Snohomish County
+~+|1|y|ms477|y|hskgsh|DY Shp King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms478|y|hsshsh|DY Shp Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms479|y|hspesh|DY Shp Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms480|y|hskpsh|DY Shp Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Other to Other Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\nhbother\emmebank
+~+|2|3|3|mf"otodst"|mf"temp03"|n|y
+q
+~/ --- Summarize OtO Trips for Internal Zones
+3.21
+~+|1|y|ms396|y|oto|DY Other to Other Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms481|y|ototm1|DY OtO Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms482|y|ototm2|DY OtO Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms483|y|otods1|DY OtO Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms484|y|otods2|DY OtO Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize oto Trips Destined to King County
+~+|1|y|ms485|y|ookgkg|DY OtO King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms486|y|ooshkg|DY OtO Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms487|y|oopekg|DY OtO Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms488|y|ookpkg|DY OtO Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize oto Trips Destined to Kitsap County
+~+|1|y|ms489|y|ookgkp|DY OtO King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms490|y|ooshkp|DY OtO Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms491|y|oopekp|DY OtO Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms492|y|ookpkp|DY OtO Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize oto Trips Destined to Pierce County
+~+|1|y|ms493|y|ookgpe|DY OtO King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms494|y|ooshpe|DY OtO Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms495|y|oopepe|DY OtO Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms496|y|ookppe|DY OtO Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize oto Trips Destined to Snohomish County
+~+|1|y|ms497|y|ookgsh|DY OtO King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms498|y|ooshsh|DY OtO Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms499|y|oopesh|DY OtO Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms500|y|ookpsh|DY OtO Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Work to Other Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\nhbwork\emmebank
+~+|2|3|3|mf"wkodst"|mf"temp03"|n|y
+q
+~/ --- Summarize wko Trips for Internal Zones
+3.21
+~+|1|y|ms397|y|wto|DY Work to Other Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms501|y|wkotm1|DY WkO Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms502|y|wkotm2|DY WkO Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms503|y|wkods1|DY WkO Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms504|y|wkods2|DY WkO Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize wko Trips Destined to King County
+~+|1|y|ms505|y|wokgkg|DY WkO King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms506|y|woshkg|DY WkO Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms507|y|wopekg|DY WkO Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms508|y|wokpkg|DY WkO Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize wko Trips Destined to Kitsap County
+~+|1|y|ms509|y|wokgkp|DY WkO King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms510|y|woshkp|DY WkO Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms511|y|wopekp|DY WkO Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms512|y|wokpkp|DY WkO Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize wko Trips Destined to Pierce County
+~+|1|y|ms513|y|wokgpe|DY WkO King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms514|y|woshpe|DY WkO Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms515|y|wopepe|DY WkO Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms516|y|wokppe|DY WkO Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize wko Trips Destined to Snohomish County
+~+|1|y|ms517|y|wokgsh|DY WkO King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms518|y|woshsh|DY WkO Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms519|y|wopesh|DY WkO Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms520|y|wokpsh|DY WkO Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Work Income #1 Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy AM SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aa1tm1"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds1"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbwork_inc1\emmebank
+~+|2|3|3|mf"hbwds1"|mf"temp03"|n|y
+q
+~/ --- Summarize hbw Trips for Internal Zones
+3.21
+~+|1|y|ms392|y|hbw1|DY HBW #1 Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms521|y|hw1tm1|DY hbw Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms522|y|hw1tm2|DY hbw Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms523|y|hw1ds1|DY hbw Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms524|y|hw1ds2|DY hbw Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize hbw Trips Destined to King County
+~+|1|y|ms525|y|w1kgkg|DY hbw King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms526|y|w1shkg|DY hbw Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms527|y|w1pekg|DY hbw Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms528|y|w1kpkg|DY hbw Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize hbw Trips Destined to Kitsap County
+~+|1|y|ms529|y|w1kgkp|DY hbw King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms530|y|w1shkp|DY hbw Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms531|y|w1pekp|DY hbw Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms532|y|w1kpkp|DY hbw Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize hbw Trips Destined to Pierce County
+~+|1|y|ms533|y|w1kgpe|DY hbw King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms534|y|w1shpe|DY hbw Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms535|y|w1pepe|DY hbw Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms536|y|w1kppe|DY hbw Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize hbw Trips Destined to Snohomish County
+~+|1|y|ms537|y|w1kgsh|DY hbw King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms538|y|w1shsh|DY hbw Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms539|y|w1pesh|DY hbw Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms540|y|w1kpsh|DY hbw Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Work Income #2 Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Fist Copy AM SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aa1tm2"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds2"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbwork_inc2\emmebank
+~+|2|3|3|mf"hbwds2"|mf"temp03"|n|y
+q
+~/ --- Summarize hbw Trips for Internal Zones
+3.21
+~+|1|y|ms393|y|hbw2|DY HBW #2 Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms541|y|hw2tm1|DY hbw Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms542|y|hw2tm2|DY hbw Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms543|y|hw2ds2|DY hbw Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms544|y|hw2ds2|DY hbw Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize hbw Trips Destined to King County
+~+|1|y|ms545|y|w2kgkg|DY hbw King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms546|y|w2shkg|DY hbw Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms547|y|w2pekg|DY hbw Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms548|y|w2kpkg|DY hbw Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize hbw Trips Destined to Kitsap County
+~+|1|y|ms549|y|w2kgkp|DY hbw King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms550|y|w2shkp|DY hbw Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms551|y|w2pekp|DY hbw Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms552|y|w2kpkp|DY hbw Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize hbw Trips Destined to Pierce County
+~+|1|y|ms553|y|w2kgpe|DY hbw King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms554|y|w2shpe|DY hbw Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms555|y|w2pepe|DY hbw Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms556|y|w2kppe|DY hbw Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize hbw Trips Destined to Snohomish County
+~+|1|y|ms557|y|w2kgsh|DY hbw King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms558|y|w2shsh|DY hbw Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms559|y|w2pesh|DY hbw Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms560|y|w2kpsh|DY hbw Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Work Income #3 Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Fist Copy AM SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aa1tm3"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds3"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbwork_inc3\emmebank
+~+|2|3|3|mf"hbwds3"|mf"temp03"|n|y
+q
+~/ --- Summarize hbw Trips for Internal Zones
+3.21
+~+|1|y|ms394|y|hbw3|DY HBW #3 Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms561|y|hw3tm1|DY hbw Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms562|y|hw3tm2|DY hbw Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms563|y|hw3ds2|DY hbw Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms564|y|hw3ds2|DY hbw Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize hbw Trips Destined to King County
+~+|1|y|ms565|y|w3kgkg|DY hbw King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms566|y|w3shkg|DY hbw Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms567|y|w3pekg|DY hbw Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms568|y|w3kpkg|DY hbw Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize hbw Trips Destined to Kitsap County
+~+|1|y|ms569|y|w3kgkp|DY hbw King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms570|y|w3shkp|DY hbw Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms571|y|w3pekp|DY hbw Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms572|y|w3kpkp|DY hbw Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize hbw Trips Destined to Pierce County
+~+|1|y|ms573|y|w3kgpe|DY hbw King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms574|y|w3shpe|DY hbw Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms575|y|w3pepe|DY hbw Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms576|y|w3kppe|DY hbw Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize hbw Trips Destined to Snohomish County
+~+|1|y|ms577|y|w3kgsh|DY hbw King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms578|y|w3shsh|DY hbw Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms579|y|w3pesh|DY hbw Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms580|y|w3kpsh|DY hbw Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Work Income #4 Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Fist Copy AM SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aa1tm4"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds4"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbwork_inc4\emmebank
+~+|2|3|3|mf"hbwds4"|mf"temp03"|n|y
+q
+~/ 
+~/ --- Summarize hbw Trips for Internal Zones
+3.21
+~+|1|y|ms395|y|hbw4|DY HBW #4 Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms581|y|hw4tm1|DY hbw Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms582|y|hw4tm2|DY hbw Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms583|y|hw4ds2|DY hbw Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms584|y|hw4ds2|DY hbw Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize hbw Trips Destined to King County
+~+|1|y|ms585|y|w4kgkg|DY hbw King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms586|y|w4shkg|DY hbw Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms587|y|w4pekg|DY hbw Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms588|y|w4kpkg|DY hbw Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize hbw Trips Destined to Kitsap County
+~+|1|y|ms589|y|w4kgkp|DY hbw King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms590|y|w4shkp|DY hbw Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms591|y|w4pekp|DY hbw Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms592|y|w4kpkp|DY hbw Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize hbw Trips Destined to Pierce County
+~+|1|y|ms593|y|w4kgpe|DY hbw King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms594|y|w4shpe|DY hbw Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms595|y|w4pepe|DY hbw Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms596|y|w4kppe|DY hbw Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize hbw Trips Destined to Snohomish County
+~+|1|y|ms597|y|w4kgsh|DY hbw King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms598|y|w4shsh|DY hbw Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms599|y|w4pesh|DY hbw Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms600|y|w4kpsh|DY hbw Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Light Truck Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy AM Light Truck Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"algttm"|mf"temp01"|n|y
+~+|2|3|3|mf"algtds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\trucks\distribution\emmebank
+~+|2|3|3|mf"lgtdis"|mf"temp03"|n|y
+q
+~/ --- Summarize Light Truck Trips for Internal Zones
+3.21
+~+|1|y|ms398|y|ltrk|DY Light Truck Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms601|y|ltktm1|DY LtTrk Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms602|y|ltktm2|DY LtTrk Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms603|y|ltkds1|DY LtTrk Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms604|y|ltkds2|DY LtTrk Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize Light Truck Trips Destined to King County
+~+|1|y|ms605|y|ltkgkg|DY LtTrk King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms606|y|ltshkg|DY LtTrk Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms607|y|ltpekg|DY LtTrk Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms608|y|ltkpkg|DY LtTrk Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize Light Truck Trips Destined to Kitsap County
+~+|1|y|ms609|y|ltkgkp|DY LtTrk King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms610|y|ltshkp|DY LtTrk Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms611|y|ltpekp|DY LtTrk Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms612|y|ltkpkp|DY LtTrk Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize Light Truck Trips Destined to Pierce County
+~+|1|y|ms613|y|ltkgpe|DY LtTrk King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms614|y|ltshpe|DY LtTrk Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms615|y|ltpepe|DY LtTrk Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms616|y|ltkppe|DY LtTrk Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize Light Truck Trips Destined to Snohomish County
+~+|1|y|ms617|y|ltkgsh|DY LtTrk King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms618|y|ltshsh|DY LtTrk Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms619|y|ltpesh|DY LtTrk Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms620|y|ltkpsh|DY LtTrk Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Medium Truck Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy AM Medium Truck Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"amedtm"|mf"temp01"|n|y
+~+|2|3|3|mf"amedds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\trucks\distribution\emmebank
+~+|2|3|3|mf"meddis"|mf"temp03"|n|y
+q
+~/ --- Summarize Medium Truck Trips for Internal Zones
+3.21
+~+|1|y|ms399|y|mtrk|DY Medium Truck Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms621|y|medtm1|DY MedTrk Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms622|y|medtm2|DY MedTrk Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms623|y|medds1|DY MedTrk Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms624|y|medds2|DY MedTrk Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize Medium Truck Trips Destined to King County
+~+|1|y|ms625|y|mtkgkg|DY MedTrk King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms626|y|mtshkg|DY MedTrk Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms627|y|mtpekg|DY MedTrk Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms628|y|mtkpkg|DY MedTrk Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize Medium Truck Trips Destined to Kitsap County
+~+|1|y|ms629|y|mtkgkp|DY MedTrk King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms630|y|mtshkp|DY MedTrk Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms631|y|mtpekp|DY MedTrk Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms632|y|mtkpkp|DY MedTrk Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize Medium Truck Trips Destined to Pierce County
+~+|1|y|ms633|y|mtkgpe|DY MedTrk King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms634|y|mtshpe|DY MedTrk Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms635|y|mtpepe|DY MedTrk Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms636|y|mtkppe|DY MedTrk Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize Medium Truck Trips Destined to Snohomish County
+~+|1|y|ms637|y|mtkgsh|DY MedTrk King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms638|y|mtshsh|DY MedTrk Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms639|y|mtpesh|DY MedTrk Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms640|y|mtkpsh|DY MedTrk Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Heavy Truck Trip Distribution Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy AM Heavy Truck Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"ahvytm"|mf"temp01"|n|y
+~+|2|3|3|mf"ahvyds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\trucks\distribution\emmebank
+~+|2|3|3|mf"hvydis"|mf"temp03"|n|y
+q
+~/ --- Summarize Heavy Truck Trips for Internal Zones
+3.21
+~+|1|y|ms400|y|htrk|DY Heavy Truck Trips|0|mf"temp03"|||n|||2
+~+|1|y|ms641|y|hvytm1|DY HvyTrk Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms642|y|hvytm2|DY HvyTrk Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms643|y|hvyds1|DY HvyTrk Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms644|y|hvyds2|DY HvyTrk Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/ --- Summarize Heavy Truck Trips Destined to King County
+~+|1|y|ms645|y|htkgkg|DY HvyTrk King to King|0|"temp03"|||y|gc1||gc1||||2
+~+|1|y|ms646|y|htshkg|DY HvyTrk Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~+|1|y|ms647|y|htpekg|DY HvyTrk Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~+|1|y|ms648|y|htkpkg|DY HvyTrk Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/ --- Summarize Heavy Truck Trips Destined to Kitsap County
+~+|1|y|ms649|y|htkgkp|DY HvyTrk King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~+|1|y|ms650|y|htshkp|DY HvyTrk Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~+|1|y|ms651|y|htpekp|DY HvyTrk Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~+|1|y|ms652|y|htkpkp|DY HvyTrk Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/ --- Summarize Heavy Truck Trips Destined to Pierce County
+~+|1|y|ms653|y|htkgpe|DY HvyTrk King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~+|1|y|ms654|y|htshpe|DY HvyTrk Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~+|1|y|ms655|y|htpepe|DY HvyTrk Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~+|1|y|ms656|y|htkppe|DY HvyTrk Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/ --- Summarize Heavy Truck Trips Destined to Snohomish County
+~+|1|y|ms657|y|htkgsh|DY HvyTrk King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~+|1|y|ms658|y|htshsh|DY HvyTrk Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~+|1|y|ms659|y|htpesh|DY HvyTrk Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~+|1|y|ms660|y|htkpsh|DY HvyTrk Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+q
+~/
+~/end: 2-3_trip_distribution_summary.mac
+~/exit emme
+q

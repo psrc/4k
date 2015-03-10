@@ -1,0 +1,105 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=summary.rpt
+~/
+~/ --- Initialize matrix directory
+3.12
+~+|7|y
+q
+~/ ---------------------------------------------------------------
+~/ --- Initialize Full matrices
+~/ ---------------------------------------------------------------
+3.12
+~/ --- AM Peak Period Trip Tables
+~+|1|mf01|avehda|AM non-hbw sov vehicle trip table|0
+~+|1|mf02|avehs2|AM hov 2 vehicle trip table|0
+~+|1|mf03|avehs3|AM hov 3+ vehicle trip table|0
+~+|1|mf04|avpool|AM vanpool trip table|0
+~+|1|mf05|ahbw1v|AM hbw income 1 sov vehicle trip table|0
+~+|1|mf06|ahbw2v|AM hbw income 2 sov vehicle trip table|0
+~+|1|mf07|ahbw3v|AM hbw income 3 sov vehicle trip table|0
+~+|1|mf08|ahbw4v|AM hbw income 4 sov vehicle trip table|0
+~+|1|mf09|alttrk|AM light truck trip table|0
+~+|1|mf10|amdtrk|AM medium truck trip table|0
+~+|1|mf11|ahvtrk|AM heavy truck trip table|0
+~+|1|mf12|awalk|AM walk person trip table|0
+~+|1|mf13|abike|AM bike person trip table|0
+~+|1|mf14|atrnwa|AM transit person trip table|0
+~/ --- Midday Period Trip Tables
+~+|1|mf15|mvehda|MD non-hbw sov vehicle trip table|0
+~+|1|mf16|mvehs2|MD hov 2 vehicle trip table|0
+~+|1|mf17|mvehs3|MD hov 3+ vehicle trip table|0
+~+|1|mf18|mvpool|MD vanpool trip table|0
+~+|1|mf19|mhbw1v|MD hbw income 1 sov vehicle trip table|0
+~+|1|mf20|mhbw2v|MD hbw income 2 sov vehicle trip table|0
+~+|1|mf21|mhbw3v|MD hbw income 3 sov vehicle trip table|0
+~+|1|mf22|mhbw4v|MD hbw income 4 sov vehicle trip table|0
+~+|1|mf23|mlttrk|MD light truck trip table|0
+~+|1|mf24|mmdtrk|MD medium truck trip table|0
+~+|1|mf25|mhvtrk|MD heavy truck trip table|0
+~+|1|mf26|mwalk|MD walk person trip table|0
+~+|1|mf27|mbike|MD bike person trip table|0
+~+|1|mf28|mtrnwa|MD transit person trip table|0
+~/ --- PM Peak Period Trip Tables
+~+|1|mf29|pvehda|PM non-hbw sov vehicle trip table|0
+~+|1|mf30|pvehs2|PM hov 2 vehicle trip table|0
+~+|1|mf31|pvehs3|PM hov 3+ vehicle trip table|0
+~+|1|mf32|pvpool|PM vanpool trip table|0
+~+|1|mf33|phbw1v|PM hbw income 1 sov vehicle trip table|0
+~+|1|mf34|phbw2v|PM hbw income 2 sov vehicle trip table|0
+~+|1|mf35|phbw3v|PM hbw income 3 sov vehicle trip table|0
+~+|1|mf36|phbw4v|PM hbw income 4 sov vehicle trip table|0
+~+|1|mf37|plttrk|PM light truck trip table|0
+~+|1|mf38|pmdtrk|PM medium truck trip table|0
+~+|1|mf39|phvtrk|PM heavy truck trip table|0
+~+|1|mf40|pwalk|PM walk person trip table|0
+~+|1|mf41|pbike|PM bike person trip table|0
+~+|1|mf42|ptrnwa|PM transit person trip table|0
+~/ --- Late Evening Period Trip Tables
+~+|1|mf43|evehda|EV non-hbw sov vehicle trip table|0
+~+|1|mf44|evehs2|EV hov 2 vehicle trip table|0
+~+|1|mf45|evehs3|EV hov 3+ vehicle trip table|0
+~+|1|mf46|evpool|EV vanpool trip table|0
+~+|1|mf47|ehbw1v|EV hbw income 1 sov vehicle trip table|0
+~+|1|mf48|ehbw2v|EV hbw income 2 sov vehicle trip table|0
+~+|1|mf49|ehbw3v|EV hbw income 3 sov vehicle trip table|0
+~+|1|mf50|ehbw4v|EV hbw income 4 sov vehicle trip table|0
+~+|1|mf51|elttrk|EV light truck trip table|0
+~+|1|mf52|emdtrk|EV medium truck trip table|0
+~+|1|mf53|ehvtrk|EV heavy truck trip table|0
+~+|1|mf54|ewalk|EV walk person trip table|0
+~+|1|mf55|ebike|EV bike person trip table|0
+~+|1|mf56|etrnwa|EV transit person trip table|0
+~/ --- Overnight Period Trip Tables
+~+|1|mf57|nvehda|NI non-hbw sov vehicle trip table|0
+~+|1|mf58|nvehs2|NI hov 2 vehicle trip table|0
+~+|1|mf59|nvehs3|NI hov 3+ vehicle trip table|0
+~+|1|mf60|nvpool|NI vanpool trip table|0
+~+|1|mf61|nhbw1v|NI hbw income 1 sov vehicle trip table|0
+~+|1|mf62|nhbw2v|NI hbw income 2 sov vehicle trip table|0
+~+|1|mf63|nhbw3v|NI hbw income 3 sov vehicle trip table|0
+~+|1|mf64|nhbw4v|NI hbw income 4 sov vehicle trip table|0
+~+|1|mf65|nlttrk|NI light truck trip table|0
+~+|1|mf66|nmdtrk|NI medium truck trip table|0
+~+|1|mf67|nhvtrk|NI heavy truck trip table|0
+~+|1|mf68|nwalk|NI walk person trip table|0
+~+|1|mf69|nbike|NI bike person trip table|0
+~+|1|mf70|ntrnwa|NI transit person trip table|0
+~/ --- Temporary Calculations
+~+|1|mf90|temp01|Temporary Matrix #1|0
+~+|1|mf91|temp02|Temporary Matrix #2|0
+~+|1|mf92|temp03|Temporary Matrix #3|0
+~+|1|mf93|temp04|Temporary Matrix #4|0
+~+|1|mf94|temp05|Temporary Matrix #5|0
+~+|1|mf95|temp06|Temporary Matrix #6|0
+~+|1|mf96|temp07|Temporary Matrix #7|0
+~+|1|mf97|temp08|Temporary Matrix #8|0
+~+|1|mf98|temp09|Temporary Matrix #9|0
+~+|1|mf99|temp10|Temporary Matrix #10|0
+q
+~/
+~/end: 1-1_initialize_matrices.mac
+~/exit emme
+~/
+q

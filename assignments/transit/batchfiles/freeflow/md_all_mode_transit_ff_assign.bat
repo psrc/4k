@@ -1,6 +1,5 @@
 cd md\all_mode
 if exist *.rpt erase *.rpt
-REM call md transit assignment macros
 call emme -ng --set-iks 127.0.0.1 000 -m macros\1_initialize_md_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\2_initialize_md_full_matrices.mac
 call emme -ng --set-iks 127.0.0.1 000 -m macros\3_import_md_scenario.mac

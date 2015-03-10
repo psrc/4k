@@ -5,8 +5,6 @@ reports=4_initialize_md_full_matrices.rpt
 ~/
 ~/
 ~/begin: 4_initialize_md_full_matrices.mac
-~/ ...set active scenario to 1004
-s=1004
 ~/ ...call module 3.12: input/modify matrices interactively
 ~/ ...initialize full matrices
 3.12

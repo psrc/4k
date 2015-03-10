@@ -8,7 +8,7 @@ reports=6-9-9_input_daily_vanpool_demand.rpt
 ~# ...call module 3.11: input matrices using batch entry
 ~/ ...input daily vanpool demand
 3.11
-..\..\..\input\%1%\vanpools\vanpools.in
+..\..\..\input\vanpools\vanpools.in
 ~/ ...write report file
 2
 ~#

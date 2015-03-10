@@ -8,7 +8,7 @@ reports=6-9-9-9_input_daily_thru_trips.rpt
 ~# ...call module 3.11: input matrices using batch entry
 ~/ ...input daily vanpool demand
 3.11
-..\..\..\input\%1%\externals\thru\thru_trips.in
+..\..\..\input\externals\thru\thru_trips.in
 ~/ ...write report file
 2
 ~#

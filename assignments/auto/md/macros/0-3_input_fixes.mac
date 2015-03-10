@@ -1,0 +1,17 @@
+~?!i&32768
+~o|295
+batchin=?
+batchout=?
+reports=initilization.rpt
+~/ ---------------------------------------------------------------
+~/ --- Ferry link modifications
+~/ ---------------------------------------------------------------
+s=1004
+2.11
+..\..\..\input\networks\fixes\ferries\MD_FerryLinkMods.in
+2
+~/
+~/end: 2_input_fixes.mac
+~/exit emme
+~/
+q

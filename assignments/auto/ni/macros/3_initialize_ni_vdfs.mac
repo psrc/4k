@@ -15,7 +15,7 @@ q
 ~/ ...call module 4.11: input functions using batch entry
 ~/ ...input night vdfs
 4.11
-..\..\..\input\%1%\model\vdfs\ni_vdfs.in
+..\..\..\input\model\vdfs\ni_vdfs.in
 2
 ~#
 ~/end: 3_initialize_ni_vdfs.mac

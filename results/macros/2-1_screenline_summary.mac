@@ -1,0 +1,229 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- AM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1002
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Auto Volume by Screenline
+~+|1|n|@tveh||type=2||5|4|ms81|avsl2|AM Screenline #2 - Vehicle|1
+~+|1|n|@tveh||type=3||5|4|ms82|avsl3|AM Screenline #3 - Vehicle|1
+~+|1|n|@tveh||type=4||5|4|ms83|avsl4|AM Screenline #4 - Vehicle|1
+~+|1|n|@tveh||type=7||5|4|ms84|avsl7|AM Screenline #7 - Vehicle|1
+~+|1|n|@tveh||type=14||5|4|ms85|avsl14|AM Screenline #14 - Vehicle|1
+~+|1|n|@tveh||type=15||5|4|ms86|avsl15|AM Screenline #15 - Vehicle|1
+~+|1|n|@tveh||type=18||5|4|ms87|avsl18|AM Screenline #18 - Vehicle|1
+~+|1|n|@tveh||type=19||5|4|ms88|avsl19|AM Screenline #19 - Vehicle|1
+~+|1|n|@tveh||type=20||5|4|ms89|avsl20|AM Screenline #20 - Vehicle|1
+~+|1|n|@tveh||type=22||5|4|ms90|avsl22|AM Screenline #22 - Vehicle|1
+~+|1|n|@tveh||type=23||5|4|ms91|avsl23|AM Screenline #23 - Vehicle|1
+~+|1|n|@tveh||type=29||5|4|ms92|avsl29|AM Screenline #29 - Vehicle|1
+~+|1|n|@tveh||type=30||5|4|ms93|avsl30|AM Screenline #30 - Vehicle|1
+~+|1|n|@tveh||type=32||5|4|ms94|avsl32|AM Screenline #32 - Vehicle|1
+~+|1|n|@tveh||type=35||5|4|ms95|avsl35|AM Screenline #35 - Vehicle|1
+~+|1|n|@tveh||type=37||5|4|ms96|avsl37|AM Screenline #37 - Vehicle|1
+~+|1|n|@tveh||type=41||5|4|ms97|avsl41|AM Screenline #41 - Vehicle|1
+~+|1|n|@tveh||type=43||5|4|ms98|avsl43|AM Screenline #43 - Vehicle|1
+~+|1|n|@tveh||type=44||5|4|ms99|avsl44|AM Screenline #44 - Vehicle|1
+~+|1|n|@tveh||type=46||5|4|ms100|avsl46|AM Screenline #46 - Vehicle|1
+~+|1|n|@tveh||type=54||5|4|ms101|avsl54|AM Screenline #54 - Vehicle|1
+~+|1|n|@tveh||type=57||5|4|ms102|avsl57|AM Screenline #57 - Vehicle|1
+~+|1|n|@tveh||type=58||5|4|ms103|avsl58|AM Screenline #58 - Vehicle|1
+~+|1|n|@tveh||type=60||5|4|ms104|avsl60|AM Screenline #60 - Vehicle|1
+~+|1|n|@tveh||type=66||5|4|ms105|avsl66|AM Screenline #66 - Vehicle|1
+~+|1|n|@tveh||type=71||5|4|ms106|avsl71|AM Screenline #71 - Vehicle|1
+~/ --- Transit Volume by Screenline
+~+|1|n|voltr||*|type=2||5|4|ms107|atsl2|AM Screenline #2 - Transit|1
+~+|1|n|voltr||*|type=3||5|4|ms108|atsl3|AM Screenline #3 - Transit|1
+~+|1|n|voltr||*|type=4||5|4|ms109|atsl4|AM Screenline #4 - Transit|1
+~+|1|n|voltr||*|type=7||5|4|ms110|atsl7|AM Screenline #7 - Transit|1
+~+|1|n|voltr||*|type=14||5|4|ms111|atsl14|AM Screenline #14 - Transit|1
+~+|1|n|voltr||*|type=15||5|4|ms112|atsl15|AM Screenline #15 - Transit|1
+~+|1|n|voltr||*|type=18||5|4|ms113|atsl18|AM Screenline #18 - Transit|1
+~+|1|n|voltr||*|type=19||5|4|ms114|atsl19|AM Screenline #19 - Transit|1
+~+|1|n|voltr||*|type=20||5|4|ms115|atsl20|AM Screenline #20 - Transit|1
+~+|1|n|voltr||*|type=22||5|4|ms116|atsl22|AM Screenline #22 - Transit|1
+~+|1|n|voltr||*|type=23||5|4|ms117|atsl23|AM Screenline #23 - Transit|1
+~+|1|n|voltr||*|type=29||5|4|ms118|atsl29|AM Screenline #29 - Transit|1
+~+|1|n|voltr||*|type=30||5|4|ms119|atsl30|AM Screenline #30 - Transit|1
+~+|1|n|voltr||*|type=32||5|4|ms120|atsl32|AM Screenline #32 - Transit|1
+~+|1|n|voltr||*|type=35||5|4|ms121|atsl35|AM Screenline #35 - Transit|1
+~+|1|n|voltr||*|type=37||5|4|ms122|atsl37|AM Screenline #37 - Transit|1
+~+|1|n|voltr||*|type=41||5|4|ms123|atsl41|AM Screenline #41 - Transit|1
+~+|1|n|voltr||*|type=43||5|4|ms124|atsl43|AM Screenline #43 - Transit|1
+~+|1|n|voltr||*|type=44||5|4|ms125|atsl44|AM Screenline #44 - Transit|1
+~+|1|n|voltr||*|type=46||5|4|ms126|atsl46|AM Screenline #46 - Transit|1
+~+|1|n|voltr||*|type=54||5|4|ms127|atsl54|AM Screenline #54 - Transit|1
+~+|1|n|voltr||*|type=57||5|4|ms128|atsl57|AM Screenline #57 - Transit|1
+~+|1|n|voltr||*|type=58||5|4|ms129|atsl58|AM Screenline #58 - Transit|1
+~+|1|n|voltr||*|type=60||5|4|ms130|atsl60|AM Screenline #60 - Transit|1
+~+|1|n|voltr||*|type=66||5|4|ms131|atsl66|AM Screenline #66 - Transit|1
+~+|1|n|voltr||*|type=71||5|4|ms132|atsl71|AM Screenline #71 - Transit|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Midday Period Summary
+~/ ---------------------------------------------------------------
+s=1004
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Auto Volume by Screenline
+~+|1|n|@tveh||type=2||5|4|ms133|mvsl2|MD Screenline #2 - Vehicle|1
+~+|1|n|@tveh||type=3||5|4|ms134|mvsl3|MD Screenline #3 - Vehicle|1
+~+|1|n|@tveh||type=4||5|4|ms135|mvsl4|MD Screenline #4 - Vehicle|1
+~+|1|n|@tveh||type=7||5|4|ms136|mvsl7|MD Screenline #7 - Vehicle|1
+~+|1|n|@tveh||type=14||5|4|ms137|mvsl14|MD Screenline #14 - Vehicle|1
+~+|1|n|@tveh||type=15||5|4|ms138|mvsl15|MD Screenline #15 - Vehicle|1
+~+|1|n|@tveh||type=18||5|4|ms139|mvsl18|MD Screenline #18 - Vehicle|1
+~+|1|n|@tveh||type=19||5|4|ms140|mvsl19|MD Screenline #19 - Vehicle|1
+~+|1|n|@tveh||type=20||5|4|ms141|mvsl20|MD Screenline #20 - Vehicle|1
+~+|1|n|@tveh||type=22||5|4|ms142|mvsl22|MD Screenline #22 - Vehicle|1
+~+|1|n|@tveh||type=23||5|4|ms143|mvsl23|MD Screenline #23 - Vehicle|1
+~+|1|n|@tveh||type=29||5|4|ms144|mvsl29|MD Screenline #29 - Vehicle|1
+~+|1|n|@tveh||type=30||5|4|ms145|mvsl30|MD Screenline #30 - Vehicle|1
+~+|1|n|@tveh||type=32||5|4|ms146|mvsl32|MD Screenline #32 - Vehicle|1
+~+|1|n|@tveh||type=35||5|4|ms147|mvsl35|MD Screenline #35 - Vehicle|1
+~+|1|n|@tveh||type=37||5|4|ms148|mvsl37|MD Screenline #37 - Vehicle|1
+~+|1|n|@tveh||type=41||5|4|ms149|mvsl41|MD Screenline #41 - Vehicle|1
+~+|1|n|@tveh||type=43||5|4|ms150|mvsl43|MD Screenline #43 - Vehicle|1
+~+|1|n|@tveh||type=44||5|4|ms151|mvsl44|MD Screenline #44 - Vehicle|1
+~+|1|n|@tveh||type=46||5|4|ms152|mvsl46|MD Screenline #46 - Vehicle|1
+~+|1|n|@tveh||type=54||5|4|ms153|mvsl54|MD Screenline #54 - Vehicle|1
+~+|1|n|@tveh||type=57||5|4|ms154|mvsl57|MD Screenline #57 - Vehicle|1
+~+|1|n|@tveh||type=58||5|4|ms155|mvsl58|MD Screenline #58 - Vehicle|1
+~+|1|n|@tveh||type=60||5|4|ms156|mvsl60|MD Screenline #60 - Vehicle|1
+~+|1|n|@tveh||type=66||5|4|ms157|mvsl66|MD Screenline #66 - Vehicle|1
+~+|1|n|@tveh||type=71||5|4|ms158|mvsl71|MD Screenline #71 - Vehicle|1
+~/ --- Transit Volume by Screenline
+~+|1|n|voltr||*|type=2||5|4|ms159|mtsl2|MD Screenline #2 - Transit|1
+~+|1|n|voltr||*|type=3||5|4|ms160|mtsl3|MD Screenline #3 - Transit|1
+~+|1|n|voltr||*|type=4||5|4|ms161|mtsl4|MD Screenline #4 - Transit|1
+~+|1|n|voltr||*|type=7||5|4|ms162|mtsl7|MD Screenline #7 - Transit|1
+~+|1|n|voltr||*|type=14||5|4|ms163|mtsl14|MD Screenline #14 - Transit|1
+~+|1|n|voltr||*|type=15||5|4|ms164|mtsl15|MD Screenline #15 - Transit|1
+~+|1|n|voltr||*|type=18||5|4|ms165|mtsl18|MD Screenline #18 - Transit|1
+~+|1|n|voltr||*|type=19||5|4|ms166|mtsl19|MD Screenline #19 - Transit|1
+~+|1|n|voltr||*|type=20||5|4|ms167|mtsl20|MD Screenline #20 - Transit|1
+~+|1|n|voltr||*|type=22||5|4|ms168|mtsl22|MD Screenline #22 - Transit|1
+~+|1|n|voltr||*|type=23||5|4|ms169|mtsl23|MD Screenline #23 - Transit|1
+~+|1|n|voltr||*|type=29||5|4|ms170|mtsl29|MD Screenline #29 - Transit|1
+~+|1|n|voltr||*|type=30||5|4|ms171|mtsl30|MD Screenline #30 - Transit|1
+~+|1|n|voltr||*|type=32||5|4|ms172|mtsl32|MD Screenline #32 - Transit|1
+~+|1|n|voltr||*|type=35||5|4|ms173|mtsl35|MD Screenline #35 - Transit|1
+~+|1|n|voltr||*|type=37||5|4|ms174|mtsl37|MD Screenline #37 - Transit|1
+~+|1|n|voltr||*|type=41||5|4|ms175|mtsl41|MD Screenline #41 - Transit|1
+~+|1|n|voltr||*|type=43||5|4|ms176|mtsl43|MD Screenline #43 - Transit|1
+~+|1|n|voltr||*|type=44||5|4|ms177|mtsl44|MD Screenline #44 - Transit|1
+~+|1|n|voltr||*|type=46||5|4|ms178|mtsl46|MD Screenline #46 - Transit|1
+~+|1|n|voltr||*|type=54||5|4|ms179|mtsl54|MD Screenline #54 - Transit|1
+~+|1|n|voltr||*|type=57||5|4|ms180|mtsl57|MD Screenline #57 - Transit|1
+~+|1|n|voltr||*|type=58||5|4|ms181|mtsl58|MD Screenline #58 - Transit|1
+~+|1|n|voltr||*|type=60||5|4|ms182|mtsl60|MD Screenline #60 - Transit|1
+~+|1|n|voltr||*|type=66||5|4|ms183|mtsl66|MD Screenline #66 - Transit|1
+~+|1|n|voltr||*|type=71||5|4|ms184|mtsl71|MD Screenline #71 - Transit|1
+q
+~/ ---------------------------------------------------------------
+~/ --- PM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1003
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Auto Volume by Screenline
+~+|1|n|@tveh||type=2||5|4|ms185|pvsl2|PM Screenline #2 - Vehicle|1
+~+|1|n|@tveh||type=3||5|4|ms186|pvsl3|PM Screenline #3 - Vehicle|1
+~+|1|n|@tveh||type=4||5|4|ms187|pvsl4|PM Screenline #4 - Vehicle|1
+~+|1|n|@tveh||type=7||5|4|ms188|pvsl7|PM Screenline #7 - Vehicle|1
+~+|1|n|@tveh||type=14||5|4|ms189|pvsl14|PM Screenline #14 - Vehicle|1
+~+|1|n|@tveh||type=15||5|4|ms190|pvsl15|PM Screenline #15 - Vehicle|1
+~+|1|n|@tveh||type=18||5|4|ms191|pvsl18|PM Screenline #18 - Vehicle|1
+~+|1|n|@tveh||type=19||5|4|ms192|pvsl19|PM Screenline #19 - Vehicle|1
+~+|1|n|@tveh||type=20||5|4|ms193|pvsl20|PM Screenline #20 - Vehicle|1
+~+|1|n|@tveh||type=22||5|4|ms194|pvsl22|PM Screenline #22 - Vehicle|1
+~+|1|n|@tveh||type=23||5|4|ms195|pvsl23|PM Screenline #23 - Vehicle|1
+~+|1|n|@tveh||type=29||5|4|ms196|pvsl29|PM Screenline #29 - Vehicle|1
+~+|1|n|@tveh||type=30||5|4|ms197|pvsl30|PM Screenline #30 - Vehicle|1
+~+|1|n|@tveh||type=32||5|4|ms198|pvsl32|PM Screenline #32 - Vehicle|1
+~+|1|n|@tveh||type=35||5|4|ms199|pvsl35|PM Screenline #35 - Vehicle|1
+~+|1|n|@tveh||type=37||5|4|ms200|pvsl37|PM Screenline #37 - Vehicle|1
+~+|1|n|@tveh||type=41||5|4|ms201|pvsl41|PM Screenline #41 - Vehicle|1
+~+|1|n|@tveh||type=43||5|4|ms202|pvsl43|PM Screenline #43 - Vehicle|1
+~+|1|n|@tveh||type=44||5|4|ms203|pvsl44|PM Screenline #44 - Vehicle|1
+~+|1|n|@tveh||type=46||5|4|ms204|pvsl46|PM Screenline #46 - Vehicle|1
+~+|1|n|@tveh||type=54||5|4|ms205|pvsl54|PM Screenline #54 - Vehicle|1
+~+|1|n|@tveh||type=57||5|4|ms206|pvsl57|PM Screenline #57 - Vehicle|1
+~+|1|n|@tveh||type=58||5|4|ms207|pvsl58|PM Screenline #58 - Vehicle|1
+~+|1|n|@tveh||type=60||5|4|ms208|pvsl60|PM Screenline #60 - Vehicle|1
+~+|1|n|@tveh||type=66||5|4|ms209|pvsl66|PM Screenline #66 - Vehicle|1
+~+|1|n|@tveh||type=71||5|4|ms210|pvsl71|PM Screenline #71 - Vehicle|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Late Evening Period Summary
+~/ ---------------------------------------------------------------
+s=1005
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Auto Volume by Screenline
+~+|1|n|@tveh||type=2||5|4|ms211|evsl2|EV Screenline #2 - Vehicle|1
+~+|1|n|@tveh||type=3||5|4|ms212|evsl3|EV Screenline #3 - Vehicle|1
+~+|1|n|@tveh||type=4||5|4|ms213|evsl4|EV Screenline #4 - Vehicle|1
+~+|1|n|@tveh||type=7||5|4|ms214|evsl7|EV Screenline #7 - Vehicle|1
+~+|1|n|@tveh||type=14||5|4|ms215|evsl14|EV Screenline #14 - Vehicle|1
+~+|1|n|@tveh||type=15||5|4|ms216|evsl15|EV Screenline #15 - Vehicle|1
+~+|1|n|@tveh||type=18||5|4|ms217|evsl18|EV Screenline #18 - Vehicle|1
+~+|1|n|@tveh||type=19||5|4|ms218|evsl19|EV Screenline #19 - Vehicle|1
+~+|1|n|@tveh||type=20||5|4|ms219|evsl20|EV Screenline #20 - Vehicle|1
+~+|1|n|@tveh||type=22||5|4|ms220|evsl22|EV Screenline #22 - Vehicle|1
+~+|1|n|@tveh||type=23||5|4|ms221|evsl23|EV Screenline #23 - Vehicle|1
+~+|1|n|@tveh||type=29||5|4|ms222|evsl29|EV Screenline #29 - Vehicle|1
+~+|1|n|@tveh||type=30||5|4|ms223|evsl30|EV Screenline #30 - Vehicle|1
+~+|1|n|@tveh||type=32||5|4|ms224|evsl32|EV Screenline #32 - Vehicle|1
+~+|1|n|@tveh||type=35||5|4|ms225|evsl35|EV Screenline #35 - Vehicle|1
+~+|1|n|@tveh||type=37||5|4|ms226|evsl37|EV Screenline #37 - Vehicle|1
+~+|1|n|@tveh||type=41||5|4|ms227|evsl41|EV Screenline #41 - Vehicle|1
+~+|1|n|@tveh||type=43||5|4|ms228|evsl43|EV Screenline #43 - Vehicle|1
+~+|1|n|@tveh||type=44||5|4|ms229|evsl44|EV Screenline #44 - Vehicle|1
+~+|1|n|@tveh||type=46||5|4|ms230|evsl46|EV Screenline #46 - Vehicle|1
+~+|1|n|@tveh||type=54||5|4|ms231|evsl54|EV Screenline #54 - Vehicle|1
+~+|1|n|@tveh||type=57||5|4|ms232|evsl57|EV Screenline #57 - Vehicle|1
+~+|1|n|@tveh||type=58||5|4|ms233|evsl58|EV Screenline #58 - Vehicle|1
+~+|1|n|@tveh||type=60||5|4|ms234|evsl60|EV Screenline #60 - Vehicle|1
+~+|1|n|@tveh||type=66||5|4|ms235|evsl66|EV Screenline #66 - Vehicle|1
+~+|1|n|@tveh||type=71||5|4|ms236|evsl71|EV Screenline #71 - Vehicle|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Overnight Period Summary
+~/ ---------------------------------------------------------------
+s=1006
+2.41
+~/ --- Auto Volume by Screenline
+~+|1|n|@tveh||type=2||5|4|ms237|nvsl3|NI Screenline #3 - Vehicle|1
+~+|1|n|@tveh||type=4||5|4|ms238|nvsl4|NI Screenline #4 - Vehicle|1
+~+|1|n|@tveh||type=7||5|4|ms239|nvsl7|NI Screenline #7 - Vehicle|1
+~+|1|n|@tveh||type=14||5|4|ms240|nvsl14|NI Screenline #14 - Vehicle|1
+~+|1|n|@tveh||type=15||5|4|ms241|nvsl15|NI Screenline #15 - Vehicle|1
+~+|1|n|@tveh||type=18||5|4|ms242|nvsl18|NI Screenline #18 - Vehicle|1
+~+|1|n|@tveh||type=19||5|4|ms243|nvsl19|NI Screenline #19 - Vehicle|1
+~+|1|n|@tveh||type=20||5|4|ms244|nvsl20|NI Screenline #20 - Vehicle|1
+~+|1|n|@tveh||type=22||5|4|ms245|nvsl22|NI Screenline #22 - Vehicle|1
+~+|1|n|@tveh||type=23||5|4|ms246|nvsl23|NI Screenline #23 - Vehicle|1
+~+|1|n|@tveh||type=29||5|4|ms247|nvsl29|NI Screenline #29 - Vehicle|1
+~+|1|n|@tveh||type=30||5|4|ms248|nvsl30|NI Screenline #30 - Vehicle|1
+~+|1|n|@tveh||type=32||5|4|ms249|nvsl32|NI Screenline #32 - Vehicle|1
+~+|1|n|@tveh||type=35||5|4|ms250|nvsl35|NI Screenline #35 - Vehicle|1
+~+|1|n|@tveh||type=37||5|4|ms251|nvsl37|NI Screenline #37 - Vehicle|1
+~+|1|n|@tveh||type=41||5|4|ms252|nvsl41|NI Screenline #41 - Vehicle|1
+~+|1|n|@tveh||type=43||5|4|ms253|nvsl43|NI Screenline #43 - Vehicle|1
+~+|1|n|@tveh||type=44||5|4|ms254|nvsl44|NI Screenline #44 - Vehicle|1
+~+|1|n|@tveh||type=46||5|4|ms255|nvsl46|NI Screenline #46 - Vehicle|1
+~+|1|n|@tveh||type=54||5|4|ms256|nvsl54|NI Screenline #54 - Vehicle|1
+~+|1|n|@tveh||type=57||5|4|ms257|nvsl57|NI Screenline #57 - Vehicle|1
+~+|1|n|@tveh||type=58||5|4|ms258|nvsl58|NI Screenline #58 - Vehicle|1
+~+|1|n|@tveh||type=60||5|4|ms259|nvsl60|NI Screenline #60 - Vehicle|1
+~+|1|n|@tveh||type=66||5|4|ms260|nvsl66|NI Screenline #66 - Vehicle|1
+~+|1|n|@tveh||type=71||5|4|ms261|nvsl71|NI Screenline #71 - Vehicle|1
+q
+~/
+~/end: 2-1_screenline_summary.mac
+~/exit emme
+q

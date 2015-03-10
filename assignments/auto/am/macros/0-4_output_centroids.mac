@@ -1,0 +1,48 @@
+~?!i&32768
+~o|295
+batchin=?
+batchout=?
+~/
+~/ --- Delete Centroid Only File if it already Exists
+~/
+~! if Not exist ..\..\..\input\networks\centroids md ..\..\..\input\networks\centroids
+~/
+~! if exist ..\..\..\input\networks\centroids\centroids.in erase ..\..\..\input\networks\centroids\centroids.in
+reports=initilization.rpt
+~/
+~/ --- Output current centroids from am (1002) scenario
+s=1002
+2.14
+5
+..\..\..\input\networks\centroids\centroids.in
+~+|n|ci=1||n|
+q
+~/
+~/ --- Import current centroids from am (1002) scenario to scenario 9999
+1.22
+~/
+~/ --- Create new scenarios 9999 
+~+|1|9999|AM Centroids Only|n
+q
+s=9999
+~/
+~/ --- Read in Modes
+2.01
+1
+..\..\..\input\model\transit\transit_modes.in
+2
+q
+~/
+~/ --- Read in Transit Vehicles
+2.02
+1
+..\..\..\input\model\transit\transit_vehicles.in
+2
+q
+2.11
+..\..\..\input\networks\centroids\centroids.in
+2
+~/end: 0-4_output_centroids.mac
+~/exit emme
+~/
+q

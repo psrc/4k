@@ -1,0 +1,53 @@
+~/ --- Number of Scenarios
+2
+~/ --- Number of Zones
+4000
+~/ --- Total Nodes (inlcuding Zones)
+35000
+~/ --- Links
+75000
+~/ --- Turns
+15000
+~/ --- Transit Vehicles
+30
+~/ --- Tranist Routes
+2500
+~/ --- Transit Segments
+150000
+~/ --- Matrices (mf, mo, md, ms)
+100, 100, 100, 5000
+~/ --- Functions
+99
+~/ --- Operators
+5000
+~/ --- Log Book
+5000
+~/ --- Entries / Demarcations
+5000
+~/ --- Extra Attributes
+5000000
+~/ --- Node Labels
+y
+~/ --- User Data Required for Transit Segments
+y
+~/ --- Class Specific VOlumes
+y
+~/ --- Project Title
+Puget Sound 4k - Skims
+~/ --- Bank Size
+y
+~/ --- Terminal Type (Type 7 is Emtool non-graphic report / 401)
+7
+~/ --- Type of Printer (Type 6 ASCII (no page / with header)
+6
+~/ --- Plotter Type (Type 1 is Emtool)
+1
+~/ --- Enter Initials
+mug
+~/ --- Dummy Scenario to Create
+9999
+~/ --- Scenario Name
+Centroid Only Network
+~/ ---
+~/ --- Exit Emme
+q

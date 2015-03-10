@@ -8,12 +8,11 @@ reports=6_initialize_full_matrices.rpt
 ~/ ...call module 3.12: input/modify matrices interactively
 ~/ ...initialize full matrices
 3.12
-~+|1|mf01|vehmtx|auto availability cross classification|0
 ~#
-~+|1|mf02|brhov2|bridge flag - hov 2|0
-~+|1|mf03|brhov3|bridge flag - hov 3+|0
+~+|1|mf01|brhov2|bridge flag - hov 2|0
+~+|1|mf02|brhov3|bridge flag - hov 3+|0
 ~#
-~+|1|mf04|aau2dl|am hov 2 delay|0
+~+|1|mf03|aau2dl|am hov 2 delay|0
 ~+|1|mf05|aau3dl|am hov 3+ delay|0
 ~+|1|mf06|mau2dl|md hov 2 delay|0
 ~+|1|mf07|mau3dl|md hov 3+ delay|0
