@@ -1,0 +1,27 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hb_school.rpt
+~/
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate hb school mode choice exponentiated utilities
+3.21
+~/ ...transit walk-access
+~+|1|y|mf"eutw"|n
+exp
+(
+ms"ascctw"
++
+ms"trwivt"*mf"ivtwa"
++
+ms"trwovt"*(mf"auxwa"+mf"iwtwa"+mf"xfrwa")
+~#+
+~#ms"trwcos"*mf"farwa"
+)
+~+|||y|1,%1%||1,%1%||2
+q
+~#
+~/end: 7_calculate_transit_walk_access_utility.mac
+~/exit emme
+~/
+q

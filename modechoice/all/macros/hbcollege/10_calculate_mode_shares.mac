@@ -1,0 +1,21 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hb_college.rpt
+~/
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate mode shares from exponentiated utilities
+3.21
+~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eubk"+mf"euwk"|||n|2 
+~+|1|y|mf"coshda"|n|mf"euda"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+~+|1|y|mf"coshs2"|n|mf"eus2"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+~+|1|y|mf"coshs3"|n|mf"eus3"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+~+|1|y|mf"coshtw"|n|mf"eutw"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+~+|1|y|mf"coshbk"|n|mf"eubk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+~+|1|y|mf"coshwk"|n|mf"euwk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+q
+~#
+~/end: 10_calculate_mode_shares.mac
+~/exit emme
+~/
+q

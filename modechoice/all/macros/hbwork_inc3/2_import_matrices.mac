@@ -1,0 +1,94 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hbw3.rpt
+~/
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open bi-directional gc skim emmebank
+~+|1
+..\..\Skims\BiDirectional\Generalized_Cost\emmebank
+~/ ...import am bi-directional gc matrix
+~+|2|3|3|mf"ah3bcs"|mf"dabcs"|n|y
+~+|2|3|3|mf"au2bcs"|mf"s2bcs"|n|y
+~+|2|3|3|mf"au3bcs"|mf"s3bcs"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open bi-directional time emmebank
+~+|1
+..\..\Skims\BiDirectional\Time\emmebank
+~/ ...import am bi-directional time matrix
+~+|2|3|3|mf"ah3btm"|mf"dabtm"|n|y
+~+|2|3|3|mf"au2btm"|mf"s2btm"|n|y
+~+|2|3|3|mf"au3btm"|mf"s3btm"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open bidirectional distance emmebank
+~+|1
+..\..\Skims\BiDirectional\Distance\emmebank
+~/ ...import am bidirectional distance matrices
+~+|2|3|3|mf"ah3bds"|mf"dabds"|n|y
+~+|2|3|3|mf"au2bds"|mf"s2bds"|n|y
+~+|2|3|3|mf"au3bds"|mf"s3bds"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am auto skim emmebank
+~+|1
+..\..\Skims\Auto\AM\emmebank
+~/ ...import am terminal time matrix
+~+|2|3|3|mf"termtm"|mf"termtm"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am transit skim emmebank
+~+|1
+..\..\Skims\Transit\AM\All_Mode\emmebank
+~/ ...import am transit skim matrices
+~+|2|3|3|mf"aivtwa"|mf"ivtwa"|n|y
+~+|2|3|3|mf"aauxwa"|mf"auxwa"|n|y
+~+|2|3|3|mf"aiwtwa"|mf"iwtwa"|n|y
+~+|2|3|3|mf"abrdwa"|mf"brdwa"|n|y
+~+|2|3|3|mf"anbdwa"|mf"nbdwa"|n|y
+~+|2|3|3|mf"axfrwa"|mf"xfrwa"|n|y
+~+|2|3|3|mf"afarbx"|mf"farbx"|n|y
+~+|2|3|3|mf"afarwa"|mf"farwa"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open non-motorized skim emmebank
+~+|1
+..\..\Skims\NonMotorized\AM\emmebank
+~/ ...import mid-day distance matrix
+~+|2|3|3|mf"abketm"|mf"bketm"|n|y
+~+|2|3|3|mf"awlktm"|mf"wlktm"|n|y
+q
+~#
+1.31
+~/ ...open pnr skim emmebank
+~+|1
+..\..\Skims\PnR\Income3\emmebank
+~/ ...import pnr skim matrices
+~+|2|3|3|mf"auxda3"|mf"auxda"|n|y
+~+|2|3|3|mf"pnrds3"|mf"pnrds"|n|y
+~+|2|3|3|mf"pnrtm3"|mf"pnrtm"|n|y
+~+|2|3|3|mf"pnrch3"|mf"pnrch"|n|y
+~+|2|3|3|mf"ivtda3"|mf"ivtda"|n|y
+~+|2|3|3|mf"iwtda3"|mf"iwtda"|n|y
+~+|2|3|3|mf"brdda3"|mf"brdda"|n|y
+~+|2|3|3|mf"nbdda3"|mf"nbdda"|n|y
+~+|2|3|3|mf"xfrda3"|mf"xfrda"|n|y
+~+|2|3|3|mf"farda3"|mf"farda"|n|y
+q
+~#
+~/end: 2_import_matrices.mac
+~/exit emme
+~/
+q

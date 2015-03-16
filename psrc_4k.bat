@@ -9,6 +9,10 @@ echo PSRC 4k Model Began on %date% at %time%. > psrc_4k_log.txt
 REM Parameters are passed to the Batch File via the Control File "4k.ctl"
 FOR /F "tokens=1* delims==" %%A IN ('FINDSTR /R /X /C:"[^=][^=]*=.*" "4k.ctl"') DO SET %%A=%%~B
 
+REM Give some basic information about the inputs used
+echo Lane used inputs are for year %LUYear%. >> psrc_4k_log.txt
+echo Inputs for this model run are located at %InputPath%. >> psrc_4k_log.txt
+
 REM Check for the Summaries Folder and Add if necessary
 set modeldir=%cd%
 if Not exist %modeldir%\summaries (
@@ -34,7 +38,7 @@ call batchfiles\reports\report_rename.bat %iternum%
 
 REM Initial Iteration
 set iternum=1
-set brgap=0.05
+set brgap=0.01
 call batchfiles\model\initial_iteration.bat
 call batchfiles\reports\report_rename.bat %iternum%
 
@@ -83,6 +87,7 @@ if %SummaryBank% == Yes (
 	 call emme -ng 000 -m macros\2-2_regional_triptable_summary.mac
 	 call emme -ng 000 -m macros\2-3_trip_distribution_summary.mac %hightaz%
 	 call emme -ng 000 -m macros\2-4_modechoice_summary.mac %hightaz%
+	 call emme -ng 000 -m macros\2-5_transit_summary.mac
 	 call emme -ng 000 -m macros\3-0_output_results.mac
 )
 cd ..

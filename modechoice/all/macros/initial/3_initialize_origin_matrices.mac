@@ -1,0 +1,24 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/
+~/begin: 4_initialize_origin_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize origin matrices
+3.12
+~+|1|mo01|intden|uf variable: intersections/sq km|0
+~+|1|mo02|usemix|uf variable: land use mix|0
+~+|1|mo03|nonmot|uf variable: non-motorized ratio|0
+~+|1|mo04|retfar|uf variable: retail far|0
+~+|1|mo05|bdflag|cbd zone flag|0
+~+|1|mo06|colleg|parking cost - hb college trips|0
+~+|1|mo07|hourly|hourly parking cost - non-work trips|0
+~+|1|mo08|daily|daily parking cost - hb work trips|0
+q
+~#
+~/end: 3_initialize_origin_matrices.mac
+~/exit emme
+~/
+q

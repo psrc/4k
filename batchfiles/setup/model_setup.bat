@@ -5,7 +5,47 @@ REM Batch file to create all necessary databanks
 REM Also runs free-flow assignments and skims
 
 REM Creates all the databanks
-call batchfiles\setup\create_banks.bat
+set modeldir=%cd%
+FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\assignment_bank_list.txt) DO (
+cd %modeldir%\%%A
+if %modeldir%\%%A == %modeldir%\assignments\auto\am (
+    set tod=AM
+	set scen=1002
+	call %cd%\batchfiles\setup\network_bank_initialization.bat
+)
+if %modeldir%\%%A == %modeldir%\assignments\auto\md (
+    set tod=MD
+	set scen=1004
+	call %modeldir%\batchfiles\setup\network_bank_initialization.bat
+)
+if %modeldir%\%%A == %modeldir%\assignments\auto\pm (
+    set tod=PM
+	set scen=1003
+	call %modeldir%\batchfiles\setup\network_bank_initialization.bat
+)
+if %modeldir%\%%A == %modeldir%\assignments\auto\ev (
+    set tod=EV
+	set scen=1005
+	call %modeldir%\batchfiles\setup\network_bank_initialization.bat
+)
+if %modeldir%\%%A == %modeldir%\assignments\auto\ni (
+    set tod=NI
+	set scen=1006
+	call %modeldir%\batchfiles\setup\network_bank_initialization.bat
+)
+REM End the Assignment Bank Initialization
+)
+REM For all other Banks it will be a centroid only network
+cd %modeldir%
+FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\other_bank_list.txt) DO (
+cd %modeldir%\%%A
+set tod=All
+set scen=9999
+call %cd%\batchfiles\setup\network_bank_initialization.bat
+)
+
+cd %modeldir%
+echo Matrix Setup completed on %date% at %time%. >> psrc_4k_log.txt
 
 REM Free-flow auto assignments
 cd assignments\auto

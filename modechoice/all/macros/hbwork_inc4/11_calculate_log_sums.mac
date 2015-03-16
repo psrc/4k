@@ -1,0 +1,15 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hbw4.rpt
+~/
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate log sums from exponentiated utilities
+3.21
+~+|1|y|mf"lsum4"|n|ln(mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eutd"+mf"eubk"+mf"euwk")|||n|2
+q
+~#
+~/end: 11_calculate_log_sums.mac
+~/exit emme
+~/
+q

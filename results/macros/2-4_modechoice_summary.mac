@@ -20,7 +20,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Mode Shares into Temporary Matrices
-..\modechoice\hbcollege\emmebank
+..\modechoice\all\emmebank
 ~+|2|3|3|mf"coshda"|mf"temp01"|n|y
 ~+|2|3|3|mf"coshs2"|mf"temp02"|n|y
 ~+|2|3|3|mf"coshs3"|mf"temp03"|n|y
@@ -49,7 +49,7 @@ q
 1.31
 ~+|1
 ~/ --- Fist Copy Mode Shares into Temporary Matrices
-..\modechoice\hbnonwork\emmebank
+..\modechoice\all\emmebank
 ~+|2|3|3|mf"nwshda"|mf"temp01"|n|y
 ~+|2|3|3|mf"nwshs2"|mf"temp02"|n|y
 ~+|2|3|3|mf"nwshs3"|mf"temp03"|n|y
@@ -84,7 +84,7 @@ q
 1.31
 ~+|1
 ~/ --- Fist Copy Mode Shares into Temporary Matrices
-..\modechoice\nhb\emmebank
+..\modechoice\all\emmebank
 ~+|2|3|3|mf"nhshda"|mf"temp01"|n|y
 ~+|2|3|3|mf"nhshs2"|mf"temp02"|n|y
 ~+|2|3|3|mf"nhshs3"|mf"temp03"|n|y
@@ -119,7 +119,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Mode Shares into Temporary Matrices
-..\modechoice\hbschool\emmebank
+..\modechoice\all\emmebank
 ~+|2|3|3|mf"scshda"|mf"temp01"|n|y
 ~+|2|3|3|mf"scshs2"|mf"temp02"|n|y
 ~+|2|3|3|mf"scshs3"|mf"temp03"|n|y
@@ -148,7 +148,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Mode Shares into Temporary Matrices
-..\modechoice\hbwork_inc1\emmebank
+..\modechoice\all\emmebank
 ~+|2|3|3|mf"w1shda"|mf"temp01"|n|y
 ~+|2|3|3|mf"w1shs2"|mf"temp02"|n|y
 ~+|2|3|3|mf"w1shs3"|mf"temp03"|n|y
@@ -179,7 +179,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Mode Shares into Temporary Matrices
-..\modechoice\hbwork_inc2\emmebank
+..\modechoice\all\emmebank
 ~+|2|3|3|mf"w2shda"|mf"temp01"|n|y
 ~+|2|3|3|mf"w2shs2"|mf"temp02"|n|y
 ~+|2|3|3|mf"w2shs3"|mf"temp03"|n|y
@@ -210,7 +210,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Mode Shares into Temporary Matrices
-..\modechoice\hbwork_inc3\emmebank
+..\modechoice\all\emmebank
 ~+|2|3|3|mf"w3shda"|mf"temp01"|n|y
 ~+|2|3|3|mf"w3shs2"|mf"temp02"|n|y
 ~+|2|3|3|mf"w3shs3"|mf"temp03"|n|y
@@ -241,7 +241,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Mode Shares into Temporary Matrices
-..\modechoice\hbwork_inc4\emmebank
+..\modechoice\all\emmebank
 ~+|2|3|3|mf"w4shda"|mf"temp01"|n|y
 ~+|2|3|3|mf"w4shs2"|mf"temp02"|n|y
 ~+|2|3|3|mf"w4shs3"|mf"temp03"|n|y

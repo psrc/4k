@@ -1,0 +1,77 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hb_school.rpt
+~/
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open bi-directional gc skim emmebank
+~+|1
+..\..\Skims\BiDirectional\Generalized_Cost\emmebank
+~/ ...import bi-directional gc matrix
+~+|2|3|3|mf"mu1bcs"|mf"dabcs"|n|y
+~+|2|3|3|mf"mu2bcs"|mf"s2bcs"|n|y
+~+|2|3|3|mf"mu3bcs"|mf"s3bcs"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open bi-directional time emmebank
+~+|1
+..\..\Skims\BiDirectional\Time\emmebank
+~/ ...import bi-directional time matrix
+~+|2|3|3|mf"mu1btm"|mf"dabtm"|n|y
+~+|2|3|3|mf"mu2btm"|mf"s2btm"|n|y
+~+|2|3|3|mf"mu3btm"|mf"s3btm"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...md bidirectional distance emmebank
+~+|1
+..\..\Skims\BiDirectional\Distance\emmebank
+~/ ...import md bidirectional distance matrices
+~+|2|3|3|mf"mu1bds"|mf"dabds"|n|y
+~+|2|3|3|mf"mu2bds"|mf"s2bds"|n|y
+~+|2|3|3|mf"mu3bds"|mf"s3bds"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open mid-day auto skim emmebank
+~+|1
+..\..\Skims\Auto\MD\emmebank
+~/ ...import mid-day terminal time matrix
+~+|2|3|3|mf"termtm"|mf"termtm"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open mid-day transit skim emmebank
+~+|1
+..\..\Skims\Transit\MD\All_Mode\emmebank
+~/ ...import mid-day distance matrix
+~+|2|3|3|mf"mivtwa"|mf"ivtwa"|n|y
+~+|2|3|3|mf"mauxwa"|mf"auxwa"|n|y
+~+|2|3|3|mf"miwtwa"|mf"iwtwa"|n|y
+~+|2|3|3|mf"mbrdwa"|mf"brdwa"|n|y
+~+|2|3|3|mf"mnbdwa"|mf"nbdwa"|n|y
+~+|2|3|3|mf"mxfrwa"|mf"xfrwa"|n|y
+~+|2|3|3|mf"mfarbx"|mf"farbx"|n|y
+~+|2|3|3|mf"mfarwa"|mf"farwa"|n|y
+q
+~#
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open non-motorized skim emmebank
+~+|1
+..\..\Skims\NonMotorized\AM\emmebank
+~/ ...import mid-day distance matrix
+~+|2|3|3|mf"abketm"|mf"bketm"|n|y
+~+|2|3|3|mf"awlktm"|mf"wlktm"|n|y
+q
+~#
+~/end: 2_import_matrices.mac
+~/exit emme
+~/
+q

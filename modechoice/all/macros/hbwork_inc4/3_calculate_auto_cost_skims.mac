@@ -1,0 +1,19 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hbw4.rpt
+~/
+~/ ...call module 3.21: matrix calculations
+~/ ...calculate auto cost skims for mode choice
+3.21
+~# ...bi-directional am
+~+|1|y|mf"dabct"|n|(mf"dabds"*ms"autoop")+(mf"dabcs"-mf"dabtm")/ms"avot4v"+(md"daily"/2)|||n|2
+~+|1|y|mf"dapct"|n|(mf"pnrds"*ms"autoop")+(mf"auxda"-mf"pnrtm")/ms"avot4v"+(md"pnrchg"/2)|||n|2
+~+|1|y|mf"s2bct"|n|((mf"s2bds"*ms"autoop")+(mf"s2bcs"-mf"s2btm")/ms"avots2"+(md"daily"/2))/2|||n|2
+~+|1|y|mf"s3bct"|n|((mf"s3bds"*ms"autoop")+(mf"s3bcs"-mf"s3btm")/ms"avots3"+(md"daily"/2))/3.5|||n|2
+q
+~#
+~/end: 3_calculate_auto_cost_skims.mac
+~/exit emme
+~/
+q
