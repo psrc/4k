@@ -1,7 +1,7 @@
 REM Puget Sound 4k: Trip Based Model
 REM Created March 2015
 REM Created by PSRC staff
-REM Model Runs with 4 Global Internal Iterations and 1 Final set of Assignments
+REM Model Runs with 4 Global Internal Iterations and a Final set of Assignments and Skims
 
 REM Start of Model Run
 echo PSRC 4k Model Began on %date% at %time%. > psrc_4k_log.txt
@@ -10,17 +10,10 @@ REM Parameters are passed to the Batch File via the Control File "4k.ctl"
 FOR /F "tokens=1* delims==" %%A IN ('FINDSTR /R /X /C:"[^=][^=]*=.*" "4k.ctl"') DO SET %%A=%%~B
 
 REM Give some basic information about the inputs used
-echo Lane used inputs are for year %LUYear%. >> psrc_4k_log.txt
+echo Land used inputs are for year %LUYear%. >> psrc_4k_log.txt
 echo Inputs for this model run are located at %InputPath%. >> psrc_4k_log.txt
 
-REM Check for the Summaries Folder and Add if necessary
 set modeldir=%cd%
-if Not exist %modeldir%\summaries (
-     mkdir %modeldir%\summaries\assignments\auto
-	 mkdir %modeldir%\summaries\distribution
-	 mkdir %modeldir%\summaries\modechoice
-	 mkdir %modeldir%\summaries\triptables
-)
 
 REM Check for the Input Folder and Add if necessary
 if Not exist %modeldir%\input (
@@ -91,4 +84,46 @@ if %SummaryBank% == Yes (
 	 call emme -ng 000 -m macros\3-0_output_results.mac
 )
 cd ..
+
+REM Remove Databanks if called for in the control file
+if %DeleteBank% == Yes (
+     set modeldir=%cd%
+	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\assignment_bank_list.txt) DO (
+	 cd %modeldir%\%%A
+
+	 REM Delete the Existing Files if present
+     if exist emmebank erase emmebank
+     if exist emmemat\*.emx erase emmemat\*.emx
+     if exist PATHS* erase PATHS*
+     if exist errors erase errors
+	 )
+	 
+	 cd %modeldir%
+	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\other_bank_list.txt) DO (
+	 cd %modeldir%\%%A
+     if exist emmebank erase emmebank
+     if exist emmemat\*.emx erase emmemat\*.emx
+     if exist PATHS* erase PATHS*
+     if exist errors erase errors
+	 )
+)
+cd %modeldir%
+
+REM Remove Internal Report Files if called for in the control file
+if %DeleteReports% == Yes (
+     set modeldir=%cd%
+	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\assignment_bank_list.txt) DO (
+	 cd %modeldir%\%%A
+
+	 REM Delete the Existing Files if present
+     if exist *.rp* erase *.rp*
+	 )
+	 
+	 cd %modeldir%
+	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\other_bank_list.txt) DO (
+	 cd %modeldir%\%%A
+     if exist *.rp* erase *.rp*
+	 )
+)
+cd %modeldir%
 echo PSRC 4k Model Ended on %date% at %time%. >> psrc_4k_log.txt

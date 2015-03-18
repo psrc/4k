@@ -30,37 +30,17 @@ call batchfiles\pnr_trip_tables_completion_check.bat
 cd ..\..
 echo Final Iteration Park and Ride Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
 
-REM Auto Trip Tables
-cd triptables\autos
-call batchfiles\auto_trip_tables.bat
-call batchfiles\auto_trip_tables_completion_check.bat
+REM Trip Tables
+cd triptables\all
+call batchfiles\trip_tables.bat
 cd ..\..
-echo Final Iteration Auto Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Transit Trip Tables
-cd triptables\transit
-call batchfiles\transit_walk_access_trip_tables.bat
-cd ..\..
-echo Final Iteration Transit Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Walk and Bike Trip Tables
-cd triptables\nonmotorized
-call batchfiles\all_nonmotorized_trip_tables.bat
-cd ..\..
-echo Final Iteration Walk and Bike Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Truck Trip Tables
-cd triptables\trucks
-call batchfiles\truck_trip_tables.bat
-cd ..\..
-echo Final Iteration Truck Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
+echo Final Iteration Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
 
 REM Auto Assignments
 cd assignments\auto
 call batchfiles\setup\congested\congested_assignment_setup.bat
 call batchfiles\congested\parallel_congested_assign.bat
 call batchfiles\check\assignment_completion_check.bat
-call batchfiles\summaries\auto_network_summary.bat
 cd ..\..
 echo Final Iteration Auto Assignments completed on %date% at %time%. >> psrc_4k_log.txt
 

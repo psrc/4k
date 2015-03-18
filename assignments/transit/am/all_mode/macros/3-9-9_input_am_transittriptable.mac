@@ -10,7 +10,7 @@ reports=3-9-9_input_am_transittriptable.rpt
 1.31
 ~+|1
 ~/ ...import trip tables
-..\..\..\..\TripTables\Transit\WalkAccess\emmebank
+..\..\..\..\TripTables\all\emmebank
 ~+|2|3|3|mf"atrnwa"|mf"atrnwa"|n|y
 q
 ~#

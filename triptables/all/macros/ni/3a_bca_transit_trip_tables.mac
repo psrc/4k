@@ -1,0 +1,154 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\initial\0_reset_matrices.mac
+~/
+reports=ni_trip_tables.rpt
+~/ ... import walk to transit mode shares
+1.31
+~+|1
+..\..\modechoice\all\emmebank
+~+|2|3|3|mf"coshtw"|mf"coll"|n|y
+~+|2|3|3|mf"nwshtw"|mf"hbo"|n|y
+~+|2|3|3|mf"scshtw"|mf"sch"|n|y
+~+|2|3|3|mf"w1shtw"|mf"w1"|n|y
+~+|2|3|3|mf"w2shtw"|mf"w2"|n|y
+~+|2|3|3|mf"w3shtw"|mf"w3"|n|y
+~+|2|3|3|mf"w4shtw"|mf"w4"|n|y
+~+|2|3|3|mf"nhshtw"|mf"nhb"|n|y
+q
+1.31
+~+|1
+~/ ...pnr
+..\ParkAndRide\Income1\emmebank
+~+|2|3|3|mf"twleg1"|mf"twleg1"|n|y
+q
+1.31
+~+|1
+~/ ...pnr
+..\ParkAndRide\Income2\emmebank
+~+|2|3|3|mf"twleg2"|mf"twleg2"|n|y
+q
+1.31
+~+|1
+~/ ...pnr
+..\ParkAndRide\Income3\emmebank
+~+|2|3|3|mf"twleg3"|mf"twleg3"|n|y
+q
+1.31
+~+|1
+~/ ...pnr
+..\ParkAndRide\Income4\emmebank
+~+|2|3|3|mf"twleg4"|mf"twleg4"|n|y
+q
+~/ ...construct purpose-specific transit trip tables for bca tool
+3.21
+~/ ...hbw 1
+~+|1|y|mf"pa"|n
+mf"hbwds1"*mf"w1"*0.118*0.511
+~+|||n|2
+q
+3.21
+~+|1|y|mf"ap"|n
+mf"hbwds1"*mf"w1"*0.005*0.489
+~+|||n|2
+q
+3.21
+~+|1|y|mf"nth1wa"|n
+mf"pa"+
+mf"ap"'+
+mf"twleg1"*0.220*0.477+
+mf"twleg1"'*0.114*0.523
+~+|||n|2
+q
+3.21
+~/ ...hbw 2
+~+|1|y|mf"pa"|n
+mf"hbwds2"*mf"w2"*0.097*0.550
+~+|||n|2
+q
+3.21
+~+|1|y|mf"ap"|n
+mf"hbwds2"*mf"w2"*0.051*0.450
+~+|||n|2
+q
+3.21
+~+|1|y|mf"nth2wa"|n
+mf"pa"+
+mf"ap"'+
+mf"twleg2"*0.199*0.554+
+mf"twleg2"'*0.106*0.446
+~+|||n|2
+q
+3.21
+~/ ...hbw 3
+~+|1|y|mf"pa"|n
+mf"hbwds3"*mf"w3"*0.168*0.545
+~+|||n|2
+q
+3.21
+~+|1|y|mf"ap"|n
+mf"hbwds3"*mf"w3"*0.014*0.455
+~+|||n|2
+q
+3.21
+~+|1|y|mf"nth3wa"|n
+mf"pa"+
+mf"ap"'+
+mf"twleg3"*0.293*0.515+
+mf"twleg3"'*0.000*0.485
+~+|||n|2
+q
+3.21
+~/ ...hbw 4
+~+|1|y|mf"pa"|n
+mf"hbwds4"*mf"w4"*0.095*0.528
+~+|||n|2
+q
+3.21
+~+|1|y|mf"ap"|n
+mf"hbwds4"*mf"w4"*0.070*0.472
+~+|||n|2
+q
+3.21
+~+|1|y|mf"nth4wa"|n
+mf"pa"+
+mf"ap"'+
+mf"twleg4"*0.260*0.571+
+mf"twleg4"'*0.000*0.429
+~+|||n|2
+q
+3.21
+~/ ...non-work
+~+|1|y|mf"pa"|n
+mf"coldst"*mf"coll"*0.000*0.514+
+mf"hbodst"*mf"hbo"*0.010*0.542+
+mf"schdst"*mf"sch"*0.000*0.503+
+mf"hspdst"*mf"hbo"*0.000*0.391+
+mf"otodst"*mf"nhb"*0.034/2+
+mf"wkodst"*mf"nhb"*0.006/2
+~+|||n|2
+q
+3.21
+~+|1|y|mf"ap"|n
+mf"coldst"*mf"coll"*0.000*0.486+
+mf"hbodst"*mf"hbo"*0.068*0.458+
+mf"schdst"*mf"sch"*0.000*0.497+
+mf"hspdst"*mf"hbo"*0.034*0.609+
+mf"otodst"*mf"nhb"*0.034/2+
+mf"wkodst"*mf"nhb"*0.006/2
+~+|||n|2
+q
+3.21
+~+|1|y|mf"ntnwwa"|n
+mf"pa"+
+mf"ap"'
+~+|||n|2
+q
+~#
+~/end: 3a_bca_transit_trip_tables.mac
+~/exit emme
+~/
+q

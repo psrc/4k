@@ -10,7 +10,7 @@ reports=5-9_input_am_triptables.rpt
 1.31
 ~+|1
 ~/ ...import trip tables
-..\..\..\TripTables\Autos\AM\emmebank
+..\..\..\TripTables\all\emmebank
 ~+|2|3|3|mf"avehda"|mf"avehda"|n|y
 ~+|2|3|3|mf"avehs2"|mf"avehs2"|n|y
 ~+|2|3|3|mf"avehs3"|mf"avehs3"|n|y
@@ -19,12 +19,6 @@ reports=5-9_input_am_triptables.rpt
 ~+|2|3|3|mf"ahbw2v"|mf"ahbw2v"|n|y
 ~+|2|3|3|mf"ahbw3v"|mf"ahbw3v"|n|y
 ~+|2|3|3|mf"ahbw4v"|mf"ahbw4v"|n|y
-q
-~/ ...open am truck trip table emmebank
-1.31
-~+|1
-~/ ...import trip tables
-..\..\..\TripTables\Trucks\emmebank
 ~+|2|3|3|mf"alttrk"|mf"alttrk"|n|y
 ~+|2|3|3|mf"amdtrk"|mf"amdtrk"|n|y
 ~+|2|3|3|mf"ahvtrk"|mf"ahvtrk"|n|y

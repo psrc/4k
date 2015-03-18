@@ -1,0 +1,39 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...initialize full matrices
+3.12
+~/ ... BCA Related Transit Trip Tables
+~+|1|mf110|ath1wa|am hbw 1 transit person trip table|0
+~+|1|mf111|ath2wa|am hbw 2 transit person trip table|0
+~+|1|mf112|ath3wa|am hbw 3 transit person trip table|0
+~+|1|mf113|ath4wa|am hbw 4 transit person trip table|0
+~+|1|mf114|atnwwa|am non-work transit person trip table|0
+~+|1|mf115|mth1wa|md hbw 1 transit person trip table|0
+~+|1|mf116|mth2wa|md hbw 2 transit person trip table|0
+~+|1|mf117|mth3wa|md hbw 3 transit person trip table|0
+~+|1|mf118|mth4wa|md hbw 4 transit person trip table|0
+~+|1|mf119|mtnwwa|md non-work transit person trip table|0
+~+|1|mf120|pth1wa|pm hbw 1 transit person trip table|0
+~+|1|mf121|pth2wa|pm hbw 2 transit person trip table|0
+~+|1|mf122|pth3wa|pm hbw 3 transit person trip table|0
+~+|1|mf123|pth4wa|pm hbw 4 transit person trip table|0
+~+|1|mf124|ptnwwa|pm non-work transit person trip table|0
+~+|1|mf125|eth1wa|ev hbw 1 transit person trip table|0
+~+|1|mf126|eth2wa|ev hbw 2 transit person trip table|0
+~+|1|mf127|eth3wa|ev hbw 3 transit person trip table|0
+~+|1|mf128|eth4wa|ev hbw 4 transit person trip table|0
+~+|1|mf129|etnwwa|ev non-work transit person trip table|0
+~+|1|mf130|nth1wa|ni hbw 1 transit person trip table|0
+~+|1|mf131|nth2wa|ni hbw 2 transit person trip table|0
+~+|1|mf132|nth3wa|ni hbw 3 transit person trip table|0
+~+|1|mf133|nth4wa|ni hbw 4 transit person trip table|0
+~+|1|mf134|ntnwwa|ni non-work transit person trip table|0
+q
+~#
+~/end: 2a_initialize_bca_matrices.mac
+~/exit emme
+~/
+q

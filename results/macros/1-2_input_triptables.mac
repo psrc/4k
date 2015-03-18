@@ -7,8 +7,8 @@ reports=summary.rpt
 ~/ ---------------------------------------------------------------
 1.31
 ~+|1
-..\triptables\autos\am\emmebank
-~/ --- AM Peak Period Auto Trip Tables
+..\triptables\all\emmebank
+~/ --- Auto Trip Tables
 ~+|2|3|3|mf"avehda"|mf"avehda"|n|y
 ~+|2|3|3|mf"avehs2"|mf"avehs2"|n|y
 ~+|2|3|3|mf"avehs3"|mf"avehs3"|n|y
@@ -17,11 +17,6 @@ reports=summary.rpt
 ~+|2|3|3|mf"ahbw2v"|mf"ahbw2v"|n|y
 ~+|2|3|3|mf"ahbw3v"|mf"ahbw3v"|n|y
 ~+|2|3|3|mf"ahbw4v"|mf"ahbw4v"|n|y
-q
-1.31
-~+|1
-..\triptables\autos\md\emmebank
-~/ --- Midday Period Auto Trip Tables
 ~+|2|3|3|mf"mvehda"|mf"mvehda"|n|y
 ~+|2|3|3|mf"mvehs2"|mf"mvehs2"|n|y
 ~+|2|3|3|mf"mvehs3"|mf"mvehs3"|n|y
@@ -30,11 +25,6 @@ q
 ~+|2|3|3|mf"mhbw2v"|mf"mhbw2v"|n|y
 ~+|2|3|3|mf"mhbw3v"|mf"mhbw3v"|n|y
 ~+|2|3|3|mf"mhbw4v"|mf"mhbw4v"|n|y
-q
-1.31
-~+|1
-..\triptables\autos\pm\emmebank
-~/ --- PM Peak Period Auto Trip Tables
 ~+|2|3|3|mf"pvehda"|mf"pvehda"|n|y
 ~+|2|3|3|mf"pvehs2"|mf"pvehs2"|n|y
 ~+|2|3|3|mf"pvehs3"|mf"pvehs3"|n|y
@@ -43,11 +33,6 @@ q
 ~+|2|3|3|mf"phbw2v"|mf"phbw2v"|n|y
 ~+|2|3|3|mf"phbw3v"|mf"phbw3v"|n|y
 ~+|2|3|3|mf"phbw4v"|mf"phbw4v"|n|y
-q
-1.31
-~+|1
-..\triptables\autos\ev\emmebank
-~/ --- Late Evening Period Auto Trip Tables
 ~+|2|3|3|mf"evehda"|mf"evehda"|n|y
 ~+|2|3|3|mf"evehs2"|mf"evehs2"|n|y
 ~+|2|3|3|mf"evehs3"|mf"evehs3"|n|y
@@ -56,11 +41,6 @@ q
 ~+|2|3|3|mf"ehbw2v"|mf"ehbw2v"|n|y
 ~+|2|3|3|mf"ehbw3v"|mf"ehbw3v"|n|y
 ~+|2|3|3|mf"ehbw4v"|mf"ehbw4v"|n|y
-q
-1.31
-~+|1
-..\triptables\autos\ni\emmebank
-~/ --- Overnight Period Auto Trip Tables
 ~+|2|3|3|mf"nvehda"|mf"nvehda"|n|y
 ~+|2|3|3|mf"nvehs2"|mf"nvehs2"|n|y
 ~+|2|3|3|mf"nvehs3"|mf"nvehs3"|n|y
@@ -69,10 +49,6 @@ q
 ~+|2|3|3|mf"nhbw2v"|mf"nhbw2v"|n|y
 ~+|2|3|3|mf"nhbw3v"|mf"nhbw3v"|n|y
 ~+|2|3|3|mf"nhbw4v"|mf"nhbw4v"|n|y
-q
-1.31
-~+|1
-..\triptables\trucks\emmebank
 ~/ --- Truck Trip Tables
 ~+|2|3|3|mf"alttrk"|mf"alttrk"|n|y
 ~+|2|3|3|mf"amdtrk"|mf"amdtrk"|n|y
@@ -89,20 +65,12 @@ q
 ~+|2|3|3|mf"nlttrk"|mf"nlttrk"|n|y
 ~+|2|3|3|mf"nmdtrk"|mf"nmdtrk"|n|y
 ~+|2|3|3|mf"nhvtrk"|mf"nhvtrk"|n|y
-q
-1.31
-~+|1
-..\triptables\transit\walkaccess\emmebank
 ~/ --- Transit Trip Tables
 ~+|2|3|3|mf"atrnwa"|mf"atrnwa"|n|y
 ~+|2|3|3|mf"mtrnwa"|mf"mtrnwa"|n|y
 ~+|2|3|3|mf"ptrnwa"|mf"ptrnwa"|n|y
 ~+|2|3|3|mf"etrnwa"|mf"etrnwa"|n|y
 ~+|2|3|3|mf"ntrnwa"|mf"ntrnwa"|n|y
-q
-1.31
-~+|1
-..\triptables\nonmotorized\all\emmebank
 ~/ --- Walk and Bike Trip Tables
 ~+|2|3|3|mf"awalk"|mf"awalk"|n|y
 ~+|2|3|3|mf"abike"|mf"abike"|n|y

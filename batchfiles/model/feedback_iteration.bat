@@ -30,30 +30,11 @@ call batchfiles\pnr_trip_tables_completion_check.bat
 cd ..\..
 echo Iteration %iternum% Park and Ride Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
 
-REM Auto Trip Tables
-cd triptables\autos
-call batchfiles\auto_trip_tables.bat
-call batchfiles\auto_trip_tables_completion_check.bat
+REM Trip Tables
+cd triptables\all
+call batchfiles\trip_tables.bat
 cd ..\..
-echo Iteration %iternum% Auto Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Transit Trip Tables
-cd triptables\transit
-call batchfiles\transit_walk_access_trip_tables.bat
-cd ..\..
-echo Iteration %iternum% Transit Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Walk and Bike Trip Tables
-cd triptables\nonmotorized
-call batchfiles\all_nonmotorized_trip_tables.bat
-cd ..\..
-echo Iteration %iternum% Walk and Bike Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Truck Trip Tables
-cd triptables\trucks
-call batchfiles\truck_trip_tables.bat
-cd ..\..
-echo Iteration %iternum% Truck Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
+echo Iteration %iternum% Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
 
 REM Auto Assignments
 cd assignments\auto

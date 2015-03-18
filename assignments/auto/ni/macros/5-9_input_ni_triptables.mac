@@ -10,7 +10,7 @@ reports=5-9_input_ni_triptables.rpt
 1.31
 ~+|1
 ~/ ...import trip tables
-..\..\..\TripTables\Autos\NI\emmebank
+..\..\..\TripTables\all\emmebank
 ~+|2|3|3|mf"nvehda"|mf"nvehda"|n|y
 ~+|2|3|3|mf"nvehs2"|mf"nvehs2"|n|y
 ~+|2|3|3|mf"nvehs3"|mf"nvehs3"|n|y
@@ -18,12 +18,6 @@ reports=5-9_input_ni_triptables.rpt
 ~+|2|3|3|mf"nhbw2v"|mf"nhbw2v"|n|y
 ~+|2|3|3|mf"nhbw3v"|mf"nhbw3v"|n|y
 ~+|2|3|3|mf"nhbw4v"|mf"nhbw4v"|n|y
-q
-~/ ...open ni truck trip table emmebank
-1.31
-~+|1
-~/ ...import trip tables
-..\..\..\TripTables\Trucks\emmebank
 ~+|2|3|3|mf"nlttrk"|mf"nlttrk"|n|y
 ~+|2|3|3|mf"nmdtrk"|mf"nmdtrk"|n|y
 ~+|2|3|3|mf"nhvtrk"|mf"nhvtrk"|n|y

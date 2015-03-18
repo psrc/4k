@@ -29,15 +29,8 @@ timeofday\hbwork\sov\income1
 timeofday\hbwork\sov\income2
 timeofday\hbwork\sov\income3
 timeofday\hbwork\sov\income4
-triptables\trucks
-triptables\autos\am
-triptables\autos\ev
-triptables\autos\md
-triptables\autos\ni
-triptables\autos\pm
-triptables\nonmotorized\all
+triptables\all
 triptables\parkandride\income1
 triptables\parkandride\income2
 triptables\parkandride\income3
 triptables\parkandride\income4
-triptables\transit\walkaccess

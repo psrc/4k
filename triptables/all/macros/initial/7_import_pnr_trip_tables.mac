@@ -1,0 +1,35 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...open pnr trip table emmebanks
+1.31
+~+|1
+~/ ...income 1 
+..\ParkAndRide\Income1\emmebank
+~+|2|3|3|mf"twleg1"|mf"twleg1"|n|y
+q
+1.31
+~+|1
+~/ ...income 2 
+..\ParkAndRide\Income2\emmebank
+~+|2|3|3|mf"twleg2"|mf"twleg2"|n|y
+q
+1.31
+~+|1
+~/ ...income 3 
+..\ParkAndRide\Income3\emmebank
+~+|2|3|3|mf"twleg3"|mf"twleg3"|n|y
+q
+1.31
+~+|1
+~/ ...income 4
+..\ParkAndRide\Income4\emmebank
+~+|2|3|3|mf"twleg4"|mf"twleg4"|n|y
+q
+~#
+~/end: 7_import_pnr_trip_tables.mac
+~/exit emme
+~/
+q
