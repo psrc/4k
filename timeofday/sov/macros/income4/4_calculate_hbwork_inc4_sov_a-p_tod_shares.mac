@@ -1,0 +1,247 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hbw4.rpt
+~/
+~/ ...calculate hbwork income 4 a-p directional time of day utilities for sov
+3.21
+~# ...am time of day periods
+~/ ...time period 1: 5:00 am - 5:29 am
+~+|1|y|mf"util01"|n
+exp(-2.6280-0.9734+0.83-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 2: 5:30 am - 5:59 am
+~+|1|y|mf"util02"|n
+exp(-5.0-0.9734+0.83-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 3: 6:00 am - 6:29 am
+~+|1|y|mf"util03"|n
+exp(-1.241-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 4: 6:30 am - 6:59 am
+~+|1|y|mf"util04"|n
+exp(-1.241-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 5: 7:00 am - 7:29 am
+~+|1|y|mf"util05"|n
+exp(-2.628-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 6: 7:30 am - 7:59 am
+~+|1|y|mf"util06"|n
+exp(-1.018-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 7: 8:00 am - 8:29 am
+~+|1|y|mf"util07"|n
+exp(-0.5482-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 8: 8:30 am - 8:59 am
+~+|1|y|mf"util08"|n
+exp(-0.8359-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 9: 9:00 am - 9:29 am
+~+|1|y|mf"util09"|n
+exp(-0.177-0.4277*mf"adly")
+~+|||n|2
+~#
+~/ ...time period 10: 9:30 am - 9:59 am
+~+|1|y|mf"util10"|n
+exp(0.319-0.4277*mf"adly")
+~+|||n|2
+~#
+~# ...md time of day periods
+~/ ...time period 11: 10:00 am - 10:29 am
+~+|1|y|mf"util11"|n
+exp(0.665-0.3935*mf"mdly"+0.618*mf"brdg"+.6694 
++0.1144*mf"madly"*(-2.5))
+~+|||n|2
+~#
+~/ ...time period 12: 10:30 am - 10:59 am
+~+|1|y|mf"util12"|n
+exp(0.195-0.3935*mf"mdly"+0.618*mf"brdg"+.6694
++0.1144*mf"madly"*(-2.0))
+~+|||n|2
+~#
+~/ ...time period 13: 11:00 am - 11:29 am
+~+|1|y|mf"util13"|n
+exp(0.665-0.3935*mf"mdly"+0.618*mf"brdg"+.6694
++0.1144*mf"madly"*(-1.5))
+~+|||n|2
+~#
+~/ ...time period 14: 11:30 am - 11:59 am
+~+|1|y|mf"util14"|n
+exp(1.447-0.3935*mf"mdly"+0.618*mf"brdg"+.6694
++0.1144*mf"madly"*(-1.0))
+~+|||n|2
+~#
+~/ ...time period 15: 12:00 pm - 12:29 pm
+~+|1|y|mf"util15"|n
+exp(1.978-0.3935*mf"mdly"+0.618*mf"brdg"+.6694
++0.1144*mf"madly"*(-0.5))
+~+|||n|2
+~#
+~/ ...time period 16: 12:30 pm - 12:59 pm
+~+|1|y|mf"util16"|n
+exp(1.699-0.3935*mf"mdly"+0.618*mf"brdg"+.6694)
+~+|||n|2
+~#
+~/ ...time period 17: 1:00 pm - 1:29 pm
+~+|1|y|mf"util17"|n
+exp(1.553-0.3935*mf"mdly"+0.618*mf"brdg"+.6694)
+~+|||n|2
+~#
+~/ ...time period 18: 1:30 pm - 1:59 pm
+~+|1|y|mf"util18"|n
+exp(1.731-0.3935*mf"mdly"+0.618*mf"brdg"+.6694)
+~+|||n|2
+~#
+~/ ...time period 19: 2:00 pm - 2:29 pm
+~+|1|y|mf"util19"|n
+exp(1.946-0.3935*mf"mdly"+0.618*mf"brdg"+.6694)
+~+|||n|2
+~#
+~/ ...time period 20: 2:30 pm - 2:59 pm
+~+|1|y|mf"util20"|n
+exp(2.446-0.3935*mf"mdly"+0.618*mf"brdg"+.6694)
+~+|||n|2
+~#
+~# ...pm time of day periods
+~/ ...time period 21: 3:00 pm - 3:29 pm
+~+|1|y|mf"util21"|n
+exp(3.282+0.1105-0.75-(0.10+0.03)*mf"pdly"
++0.09523*mf"padly"*2.0-0.03593*mf"padly"*4.0
+-0.05966*md"hhsize"+0.6383*mf"brdg"-0.2217*(2.0)+.9454)
+~+|||n|2
+~#
+~/ ...time period 22: 3:30 pm - 3:59 pm
+~+|1|y|mf"util22"|n
+exp(3.571+0.1105-0.75-(0.10+0.03)*mf"pdly"
++0.09523*mf"padly"*1.5-0.03593*mf"padly"*2.25
+-0.05966*md"hhsize"+0.6383*mf"brdg"-0.2217*(1.5)+.9454)
+~+|||n|2
+~#
+~/ ...time period 23: 4:00 pm - 4:29 pm
+~+|1|y|mf"util23"|n
+exp(3.792+0.1105-0.75-(0.10+0.03)*mf"pdly"
++0.09523*mf"padly"*1.0-0.03593*mf"padly"*1.0
+-0.05966*md"hhsize"+0.6383*mf"brdg"-0.2217*(1.0)+.9454)
+~+|||n|2
+~#
+~/ ...time period 24: 4:30 pm - 4:59 pm
+~+|1|y|mf"util24"|n
+exp(4.103+0.1105-0.75-(0.10+0.03)*mf"pdly"
++0.09523*mf"padly"*0.5-0.03593*mf"padly"*0.25
+-0.05966*md"hhsize"+0.6383*mf"brdg"-0.2217*(0.5)+.9454)
+~+|||n|2
+~#
+~/ ...time period 25: 5:00 pm - 5:29 pm
+~+|1|y|mf"util25"|n
+exp(3.6485+0.1105-0.75-(0.10+0.03)*mf"pdly" 
+-0.05966*md"hhsize"+0.6383*mf"brdg"+.9454)
+~+|||n|2
+~#
+~/ ...time period 26: 5:30 pm - 5:59 pm
+~+|1|y|mf"util26"|n
+exp(4.070+0.1105-0.75-(0.10+0.03)*mf"pdly"
++0.1056*mf"padly"*0.5-0.03027*mf"padly"*0.25
+-0.05966*md"hhsize"+0.6383*mf"brdg"+.9454)
+~+|||n|2
+~#
+~/ ...time period 27: 6:00 pm - 6:29 pm
+~+|1|y|mf"util27"|n
+exp(2.792+0.077-0.1*mf"pdly"
++0.1056*mf"padly"*1.0-0.03027*mf"padly"*1.0 
+-0.05966*md"hhsize"+0.6383*mf"brdg"+.9454)
+~+|||n|2
+~#
+~/ ...time period 28: 6:30 pm - 6:59 pm
+~+|1|y|mf"util28"|n
+exp(1.949+0.077-0.1*mf"pdly"
++0.1056*mf"padly"*1.5-0.03027*mf"padly"*2.25
+-0.05966*md"hhsize"+0.6383*mf"brdg"+.9454)
+~+|||n|2
+~#
+~/ ...time period 29: 7:00 pm - 7:29 pm
+~+|1|y|mf"util29"|n
+exp(1.871+0.077-0.1*mf"pdly"
++0.1056*mf"padly"*2.0-0.03027*mf"padly"*4.0 
+-0.05966*md"hhsize"+0.6383*mf"brdg"+.9454)
+~+|||n|2
+~#
+~/ ...time period 30: 7:30 pm - 7:59 pm
+~+|1|y|mf"util30"|n
+exp(1.544+0.077-0.1*mf"pdly"
++0.1056*mf"padly"*2.5-0.03027*mf"padly"*6.25
+-0.05966*md"hhsize"+0.6383*mf"brdg"+.9454)
+~+|||n|2
+~#
+~# ...ev time of day period
+~/ ...time period 31: 8:00 pm - 10:59 pm
+~+|1|y|mf"util31"|n
+0.5*exp(1.108+(0.077+1.0)-(0.1714-0.1)*mf"edly"+ln(6)+.5285)
+~+|||n|2
+~#
+~# ...ni time of day period
+~/ ...time period 32: 11:00 pm - 4:59 am
+~+|1|y|mf"util32"|n
+9.759+2.241+2.0
+~+|||n|2
+~#
+~/ ...sum all utilities for denominator in share calculation
+~+|1|y|mf"utils"|n
+mf"util01"+mf"util02"+mf"util03"+mf"util04"
++mf"util05"+mf"util06"+mf"util07"+
+mf"util08"+mf"util09"+mf"util10"+mf"util11"
++mf"util12"+mf"util13"+mf"util14"+
+mf"util15"+mf"util16"+mf"util17"+mf"util18"
+~+|||n|2
+~+|1|y|mf"utils"|n
+mf"utils"+mf"util19"+mf"util20"+mf"util21"+
+mf"util22"+mf"util23"+mf"util24"+mf"util25"
++mf"util26"+mf"util27"+mf"util28"+
+mf"util29"+mf"util30"+mf"util31"+mf"util32"
+~+|||n|2
+~#
+~/ ...calculate directional tod shares for application to daily vehicle trip tables
+~/ ...am
+~+|1|y|mf"am1ns4"|n
+(mf"util03"+mf"util04"+mf"util05"+mf"util06"+mf"util07"+mf"util08")
+/mf"utils"
+~+||mf"utils"|0,0,ex|n|2
+~#
+~/ ...md
+~+|1|y|mf"md1ns4"|n
+(mf"util09"+mf"util10"+mf"util11"+mf"util12"+mf"util13"
++mf"util14"+mf"util15"+mf"util16"+mf"util17"+mf"util18"+mf"util19"+mf"util20")
+/mf"utils"
+~+||mf"utils"|0,0,ex|n|2
+~#
+~/ ...pm
+~+|1|y|mf"pm1ns4"|n
+(mf"util21"+mf"util22"+mf"util23"+mf"util24"+mf"util25"+mf"util26")
+/mf"utils"
+~+||mf"utils"|0,0,ex|n|2
+~#
+~/ ...ev
+~+|1|y|mf"ev1ns4"|n
+(mf"util27"+mf"util28"+mf"util29"+mf"util30"+mf"util31"*0.80)
+/mf"utils"
+~+||mf"utils"|0,0,ex|n|2
+~#
+~/ ...ni
+~+|1|y|mf"ni1ns4"|n
+(1.0-(mf"am1ns4"+mf"md1ns4"+mf"pm1ns4"+mf"ev1ns4").max.0)
+~+|||n|2
+q
+~#
+~/end: 4_calculate_hbwork_inc4_sov_a-p_tod_shares.mac
+~/exit emme
+~/
+q

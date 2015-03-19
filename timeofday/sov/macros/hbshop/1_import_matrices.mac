@@ -1,0 +1,30 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\initial\0_reset_matrices.mac
+reports=hbshop.rpt
+~/
+1.31
+~/ ...open delay matrices emmebank
+~+|1
+..\delay\allpurposes\emmebank
+~/ ...import sov non-work delay matrices
+~+|2|3|3|mf"aau1dl"|mf"adly"|n|y
+~+|2|3|3|mf"mau1dl"|mf"mdly"|n|y
+~+|2|3|3|mf"pau1dl"|mf"pdly"|n|y
+~+|2|3|3|mf"eau1dl"|mf"edly"|n|y
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open am auto skim emmebank
+~+|1
+..\..\skims\auto\am\emmebank
+~/ ...import bridge flag matrices
+~+|2|3|3|mf"brsov"|mf"brdg"|n|y
+q
+~/end: 1_import_matrices.mac
+~/exit emme
+~/
+q

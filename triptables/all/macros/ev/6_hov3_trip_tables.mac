@@ -23,21 +23,11 @@ q
 1.31
 ~+|1
 ~/ ...hb other hov
-..\..\timeofday\hbother\hov\emmebank
+..\..\timeofday\hov\emmebank
 ~+|2|3|3|mf"ev5sr3"|mf"tod5"|n|y
 ~+|2|3|3|mf"ev6sr3"|mf"tod6"|n|y
-q
-1.31
-~+|1
-~/ ...hb shop hov
-..\..\timeofday\hbshop\hov\emmebank
 ~+|2|3|3|mf"ev3sr3"|mf"tod3"|n|y
 ~+|2|3|3|mf"ev4sr3"|mf"tod4"|n|y
-q
-1.31
-~+|1
-~/ ...hb work hov
-..\..\timeofday\hbwork\hov\emmebank
 ~+|2|3|3|mf"ev1sr3"|mf"tod1"|n|y
 ~+|2|3|3|mf"ev2sr3"|mf"tod2"|n|y
 q

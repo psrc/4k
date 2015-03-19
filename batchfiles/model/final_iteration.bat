@@ -18,8 +18,8 @@ echo Final Iteration Mode Choice completed on %date% at %time%. >> psrc_4k_log.t
 
 REM Time of Day
 cd timeofday
-call batchfiles\tod\time_of_day_model.bat
-call batchfiles\check\tod_completion_check.bat
+call batchfiles\time_of_day_model.bat
+call batchfiles\tod_completion_check.bat
 cd ..
 echo Final Iteration Time of Day completed on %date% at %time%. >> psrc_4k_log.txt
 

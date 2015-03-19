@@ -93,18 +93,22 @@ if %DeleteBank% == Yes (
 
 	 REM Delete the Existing Files if present
      if exist emmebank erase emmebank
-     if exist emmemat\*.emx erase emmemat\*.emx
+     if exist %modeldir%\%%A\emmemat rmdir %modeldir%\%%A\emmemat /s /q
      if exist PATHS* erase PATHS*
      if exist errors erase errors
+	 if exist usemacro* erase usemacro*
+     if exist *in erase *in
 	 )
 	 
 	 cd %modeldir%
 	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\other_bank_list.txt) DO (
 	 cd %modeldir%\%%A
      if exist emmebank erase emmebank
-     if exist emmemat\*.emx erase emmemat\*.emx
+     if exist %modeldir%\%%A\emmemat rmdir %modeldir%\%%A\emmemat /s /q
      if exist PATHS* erase PATHS*
      if exist errors erase errors
+	 if exist usemacro* erase usemacro*
+     if exist *in erase *in
 	 )
 )
 cd %modeldir%

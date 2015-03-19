@@ -9,6 +9,9 @@ if exist emmemat\*.emx erase emmemat\*.emx
 if exist PATHS* erase PATHS*
 if exist errors erase errors
 if exist *.rp* erase *.rp*
+if exist emlock* erase emlock*
+if exist usemacro* erase usemacro*
+if exist d002* erase d002*
 
 REM Run macros to create the network, initialize matrices and read in data
 call emme -ng newbank -m %modeldir%\batchfiles\setup\create_databank.mac

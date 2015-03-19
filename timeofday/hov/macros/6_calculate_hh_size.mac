@@ -1,0 +1,49 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...tabulate number of hhs by size catergory in zonal origin vector
+3.21
+~/ ...1 person households
+~+|1|y|mo"hhsiz1"|n|mf"vehmtx"|||y|all
+~+|1,16
+~+|65,80
+~+|129,144
+~+|193,208|||2
+~/ ...2 person households
+~+|1|y|mo"hhsiz2"|n|mf"vehmtx"|||y|all
+~+|17,32
+~+|81,96
+~+|145,160
+~+|209,224|||2
+~/ ... 3person households
+~+|1|y|mo"hhsiz3"|n|mf"vehmtx"|||y|all
+~+|33,48
+~+|97,112
+~+|161,176
+~+|225,240|||2
+~/ ... 4+ person household
+~+|1|y|mo"hhsiz4"|n|mf"vehmtx"|||y|all
+~+|49,64
+~+|113,128
+~+|177,192
+~+|241,256|||2
+~/ ...sum total households in origin vector
+~+|1|y|mo"hhtot"|n|mo"hhsiz1"+mo"hhsiz2"+mo"hhsiz3"+mo"hhsiz4"|||n|2
+~/ ...calculate average hh size in in origin vector
+~+|1|y|mo"hhsize"|n|((mo"hhsiz1"*1)+(mo"hhsiz2"*2)+(mo"hhsiz3"*3)+
+~+|(mo"hhsiz4"*4.5))/mo"hhtot"||mo"hhtot"|0,0,ex|n|2
+~/ ...zero out hhsize for calculated values exceeding 99
+~+|1|y|mo"hhsize"|n|0||mo"hhsize"|0,99,exclude|n|2
+q
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...transpose origin vector of average hh size to destination vector
+3.12
+~+|4|3|mo"hhsize"|md"hhsize"|n
+q
+~#
+~/end: 6_calculate_hh_size.mac
+~/exit emme
+~/
+q

@@ -19,14 +19,9 @@ q
 1.31
 ~+|1
 ~/ ...hb other sov
-..\..\timeofday\hbother\sov\emmebank
+..\..\timeofday\sov\emmebank
 ~+|2|3|3|mf"ev5ns"|mf"tod5"|n|y
 ~+|2|3|3|mf"ev6ns"|mf"tod6"|n|y
-q
-1.31
-~+|1
-~/ ...hb shop sov
-..\..\timeofday\hbshop\sov\emmebank
 ~+|2|3|3|mf"ev3ns"|mf"tod3"|n|y
 ~+|2|3|3|mf"ev4ns"|mf"tod4"|n|y
 q
