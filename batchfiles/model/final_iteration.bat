@@ -36,19 +36,12 @@ call batchfiles\trip_tables.bat
 cd ..\..
 echo Final Iteration Trip Tables completed on %date% at %time%. >> psrc_4k_log.txt
 
-REM Auto Assignments
-cd assignments\auto
-call batchfiles\setup\congested\congested_assignment_setup.bat
-call batchfiles\congested\parallel_congested_assign.bat
-call batchfiles\check\assignment_completion_check.bat
-cd ..\..
+REM Assignments
+cd assignments
+call batchfiles\parallel_assignment.bat
+call batchfiles\assignment_completion_check.bat
+cd ..
 echo Final Iteration Auto Assignments completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Transit Assignments
-cd assignments\transit
-call batchfiles\congested\congested_transit_assign.bat
-cd ..\..
-echo Final Iteration Transit Assignments completed on %date% at %time%. >> psrc_4k_log.txt
 
 REM Create Auto Skims (No Skim Averaging occurs in this Iteration)
 cd skims\auto

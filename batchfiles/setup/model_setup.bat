@@ -8,27 +8,27 @@ REM Creates all the databanks
 set modeldir=%cd%
 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\assignment_bank_list.txt) DO (
 cd %modeldir%\%%A
-if %modeldir%\%%A == %modeldir%\assignments\auto\am (
+if %modeldir%\%%A == %modeldir%\assignments\am (
     set tod=AM
 	set scen=1002
 	call %cd%\batchfiles\setup\network_bank_initialization.bat
 )
-if %modeldir%\%%A == %modeldir%\assignments\auto\md (
+if %modeldir%\%%A == %modeldir%\assignments\md (
     set tod=MD
 	set scen=1004
 	call %modeldir%\batchfiles\setup\network_bank_initialization.bat
 )
-if %modeldir%\%%A == %modeldir%\assignments\auto\pm (
+if %modeldir%\%%A == %modeldir%\assignments\pm (
     set tod=PM
 	set scen=1003
 	call %modeldir%\batchfiles\setup\network_bank_initialization.bat
 )
-if %modeldir%\%%A == %modeldir%\assignments\auto\ev (
+if %modeldir%\%%A == %modeldir%\assignments\ev (
     set tod=EV
 	set scen=1005
 	call %modeldir%\batchfiles\setup\network_bank_initialization.bat
 )
-if %modeldir%\%%A == %modeldir%\assignments\auto\ni (
+if %modeldir%\%%A == %modeldir%\assignments\ni (
     set tod=NI
 	set scen=1006
 	call %modeldir%\batchfiles\setup\network_bank_initialization.bat
@@ -47,25 +47,12 @@ call %cd%\batchfiles\setup\network_bank_initialization.bat
 cd %modeldir%
 echo Matrix Setup completed on %date% at %time%. >> psrc_4k_log.txt
 
-REM Free-flow auto assignments
-cd assignments\auto
-call batchfiles\setup\freeflow\ff_assignment_setup.bat
-call batchfiles\freeflow\parallel_ff_assign.bat
-call batchfiles\check\assignment_completion_check.bat
-cd ..\..
-echo Free-Flow Auto Assignments completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Free-flow transit assignments
-cd assignments\transit
-call batchfiles\freeflow\ff_transit_assign.bat
-cd ..\..
-echo Free-Flow Transit Assignments completed on %date% at %time%. >> psrc_4k_log.txt
-
-REM Free-flow non-motorized assignments
-cd assignments\nonmotorized
-call batchfiles\am_non_motorized_assignment.bat
-cd ..\..
-echo Free-Flow Walk/Bike Assignments completed on %date% at %time%. >> psrc_4k_log.txt
+REM Assignments
+cd assignments
+call batchfiles\parallel_assignment.bat
+call batchfiles\assignment_completion_check.bat
+cd ..
+echo Free-Flow Assignments completed on %date% at %time%. >> psrc_4k_log.txt
 
 REM Calculate Intrazonal Skims
 cd skims\iz_tt

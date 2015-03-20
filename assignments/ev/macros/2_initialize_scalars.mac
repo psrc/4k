@@ -1,0 +1,24 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...initialize scalar matrices
+3.12
+~+|1|ms01|evotda|ev sov non-work vot|0
+~+|1|ms02|evots2|ev hov 2 vot|0
+~+|1|ms03|evots3|ev hov 3+ vot|0
+~+|1|ms04|evotvp|ev vanpool vot|0
+~+|1|ms05|evot1v|ev sov hbw income 1 vot|0
+~+|1|ms06|evot2v|ev sov hbw income 2 vot|0
+~+|1|ms07|evot3v|ev sov hbw income 3 vot|0
+~+|1|ms08|evot4v|ev sov hbw income 4 vot|0
+~+|1|ms09|evotlt|ev light truck vot|0
+~+|1|ms10|evotmd|ev medium truck vot|0
+~+|1|ms11|evothv|ev heavy truck vot|0
+q
+~#
+~/end: 2_initialize_scalars.mac
+~/exit emme
+~/
+q

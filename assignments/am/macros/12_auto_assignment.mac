@@ -1,0 +1,102 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=assign.rpt
+~/
+~x=%3%
+~?x>0
+~$WarmStart
+~/
+s=1002
+~/ ...set extra function (el1, el2) parameters
+el1=@rdly
+el2=@trnv3
+~/ ...call module 5.25: path-based traffic assignment
+5.25
+~/ ...assignment set-up and execution: new set-up
+~+|2|1
+~/ ...enter vehicle class parameters: mode, tolls, value of time, trip table
+~+|s|@toll1|%ms01%|mf"avehda" /class 1: non-work sov
+~+|h|@toll2|%ms02%|mf"avehs2" /class 2: hov 2
+~+|i|@toll3|%ms03%|mf"avehs3" /class 3: hov 3+
+~+|j|@toll3|%ms04%|mf"avpool" /class 4: vanpool
+~+|s|@toll1|%ms05%|mf"ahbw1v" /class 5: hbw income 1 sov
+~+|s|@toll1|%ms06%|mf"ahbw2v" /class 6: hbw income 2 sov
+~+|s|@toll1|%ms07%|mf"ahbw3v" /class 7: hbw income 3 sov
+~+|s|@toll1|%ms08%|mf"ahbw4v" /class 8: hbw income 4 sov
+~+|v|@trkc1|%ms09%|mf"alttrk" /class 9: light truck
+~+|u|@trkc2|%ms10%|mf"amdtrk" /class 10: medium truck
+~+|t|@trkc3|%ms11%|mf"ahvtrk" /class 11: heavy truck
+/
+~/ ...enter assignment options/parameters
+4000      /maximum memory for paths
+0.001     /path cost equality tolerance (initial proportion)
+30        /path cost equality tolerance (refinement iteration)
+0.00001   /path cost equality tolerance (refined proportion)
+5         /number of iterations between gap computations
+%1%       /maximum number of assignment iterations
+%2%      /stopping criterion for best relative gap (%)
+0.0001    /stopping criterion for relative gap
+0.001     /stopping criterion for normalized pap (excess average cost)
+~/ ...run path based assignment
+2         
+~/ ...write report file
+~$FreeFlow
+~:WarmStart
+s=1002
+~/ ...set extra function (el1, el2) parameters
+el1=@rdly
+el2=@trnv3
+~/ ...call module 5.25: path-based traffic assignment
+5.25
+~/ ...controlled rounding for small demand
+~+|1|mf"avehda"|1|1|mf"avehda"|n|2
+~+|1|mf"avehs2"|1|1|mf"avehs2"|n|2
+~+|1|mf"avehs3"|1|1|mf"avehs3"|n|2
+~+|1|mf"ahbw1v"|1|1|mf"ahbw1v"|n|2
+~+|1|mf"ahbw2v"|1|1|mf"ahbw2v"|n|2
+~+|1|mf"ahbw3v"|1|1|mf"ahbw3v"|n|2
+~+|1|mf"ahbw4v"|1|1|mf"ahbw4v"|n|2
+~+|1|mf"alttrk"|1|1|mf"alttrk"|n|2
+~+|1|mf"amdtrk"|1|1|mf"amdtrk"|n|2
+~+|1|mf"ahvtrk"|1|1|mf"ahvtrk"|n|2
+~/ ...assignment set-up and execution
+~+|2|1|2
+4000      /maximum memory for paths
+0.001     /path cost equality tolerance (initial proportion)
+30        /path cost equality tolerance (refinement iteration)
+0.00001   /path cost equality tolerance (refined proportion)
+5         /number of iterations between gap computations
+%1%       /maximum number of assignment iterations
+%2%      /stopping criterion for best relative gap (%)
+0.0001    /stopping criterion for relative gap
+0.001     /stopping criterion for normalized pap (excess average cost)
+~#
+~/ ...run path based assignment
+2         
+~/ ...write report file
+~#
+~:FreeFlow
+~/ ...call module 6.16: path analysis for path-based traffic assignment
+6.16
+~/ ...class-specific volumes
+3
+~+|@sov|n|   /class 1: non-work sov
+~+|@hov2|n|  /class 2: hov 2
+~+|@hov3|n|  /class 3: hov 3+
+~+|@vpool|n| /class 4: vanpool
+~+|@hbw1|n|  /class 5: hbw income 1 sov
+~+|@hbw2|n|  /class 6: hbw income 2 sov
+~+|@hbw3|n|  /class 7: hbw income 3 sov
+~+|@hbw4|n|  /class 7: hbw income 3 sov
+~+|@light|n| /class 9: light truck
+~+|@mediu|n| /class 10: medium truck
+~+|@heavy|n| /class 11: heavy truck
+2
+~/ ...write report file
+q         
+~#
+~/end: 12_auto_assignment.mac
+~/exit emme
+~/
+q

@@ -54,10 +54,10 @@ call batchfiles\model\feedback_iteration.bat
 call batchfiles\reports\report_rename.bat %iternum%
 
 REM Final Iteration
-set iternum=f
+set iternum=5
 set brgap=0.01
 call batchfiles\model\final_iteration.bat
-call batchfiles\reports\report_rename.bat %iternum%
+call batchfiles\reports\report_rename.bat f
 
 REM Create the Summary Bank if called for and populate
 if %SummaryBank% == Yes (
@@ -73,8 +73,6 @@ if %SummaryBank% == Yes (
      call emme -ng 000 -m macros\1-0_import_scenarios.mac
 	 call emme -ng 000 -m macros\1-1_initialize_matrices.mac
 	 call emme -ng 000 -m macros\1-2_input_triptables.mac
-	 call emme -ng 000 -m macros\1-3_am_transit_assignment.mac
-	 call emme -ng 000 -m macros\1-4_md_transit_assignment.mac
      call emme -ng 000 -m macros\2-0_regional_link_summary.mac
 	 call emme -ng 000 -m macros\2-1_screenline_summary.mac
 	 call emme -ng 000 -m macros\2-2_regional_triptable_summary.mac

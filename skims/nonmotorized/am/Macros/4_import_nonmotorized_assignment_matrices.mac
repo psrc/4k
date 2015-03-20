@@ -9,7 +9,7 @@ reports=4_import_nonmotorized_assignment_matrices.rpt
 1.31
 ~/ ...open am non-motorized assignment emmebank
 ~+|1
-..\..\..\Assignments\NonMotorized\AM\emmebank
+..\..\..\Assignments\AM\emmebank
 ~/ ...import am non-motorized assignment matrices
 ~+|2|3|3|mf"awlktm"|mf"awlktm"|n|y
 ~+|2|3|3|mf"abketm"|mf"abketm"|n|y

@@ -1,0 +1,25 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=assign.rpt
+~/
+1.31
+~+|1
+~/ ...import trip tables
+..\..\TripTables\all\emmebank
+~+|2|3|3|mf"nvehda"|mf"nvehda"|n|y
+~+|2|3|3|mf"nvehs2"|mf"nvehs2"|n|y
+~+|2|3|3|mf"nvehs3"|mf"nvehs3"|n|y
+~+|2|3|3|mf"nhbw1v"|mf"nhbw1v"|n|y
+~+|2|3|3|mf"nhbw2v"|mf"nhbw2v"|n|y
+~+|2|3|3|mf"nhbw3v"|mf"nhbw3v"|n|y
+~+|2|3|3|mf"nhbw4v"|mf"nhbw4v"|n|y
+~+|2|3|3|mf"nlttrk"|mf"nlttrk"|n|y
+~+|2|3|3|mf"nmdtrk"|mf"nmdtrk"|n|y
+~+|2|3|3|mf"nhvtrk"|mf"nhvtrk"|n|y
+q
+~#
+~/end: 11_input_triptables.mac
+~/exit emme
+~/
+q

@@ -9,7 +9,7 @@ reports=6_import_md_matrices.rpt
 1.31
 ~/ ...open md all mode transit assignment emmebank
 ~+|1
-..\..\..\..\Assignments\Transit\MD\All_Mode\emmebank
+..\..\..\..\Assignments\MD\emmebank
 ~/ ...import md all mode transit skim matrices
 ~+|2|3|3|mf"mtrnwa"|mf"mtrnwa"|n|y
 ~+|2|3|3|mf"mtrtwa"|mf"mtrtwa"|n|y

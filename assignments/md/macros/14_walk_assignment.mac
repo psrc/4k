@@ -1,0 +1,47 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=assign.rpt
+~/
+s=1004
+5.11
+~/ ...fixed demand transit assignment
+~+|2
+~/ ...enter transit demand and component skim matrices
+~+|mf"mwalk"    /walk demand matrix
+~+|mf"mwlktm"|n /matrix to hold transit times (optional)
+~+|             /matrix to hold in-vehicle times (optional)
+~+|             /matrix to hold auxiliary transit times (optional)
+~+|             /matrix to hold total waiting times (optional)
+~+|             /matrix to hold initial waiting times (optional)
+~+|             /matrix to hold boarding times (optional)
+~+|             /matrix to hold average number of boardings (optional)
+~/ ...enter active transit and auxiliary transit modes for assignment
+wx
+~/ ...specify source for effective headways
+1     /actual line headways
+~/ ...specify source for boarding times
+1     /same value for entire network
+~/ ...enter boarding time (in minutes)
+0.00
+~/ ...specify source for wait time factors
+1     /same value for entire network
+~/ ...enter wait time factor
+1.00
+~/ ...enter wait time weight
+0.00
+~/ ...enter auxiliary transit time weight
+1.00
+~/ ...enter boarding time weight
+0.00
+~/ ...no additional options assignment
+n
+~/ ...call module 5.31: standard transit assignment
+5.31
+~/ ...write report file
+2
+~#
+~/end: 14_walk_assignment.mac
+~/exit emme
+~/
+q

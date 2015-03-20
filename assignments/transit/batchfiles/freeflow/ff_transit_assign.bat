@@ -1,2 +1,0 @@
-call batchfiles\freeflow\am_all_mode_transit_ff_assign.bat
-call batchfiles\freeflow\md_all_mode_transit_ff_assign.bat

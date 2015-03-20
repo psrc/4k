@@ -1,6 +1,3 @@
-assignments\nonmotorized\am
-assignments\transit\am\all_mode
-assignments\transit\md\all_mode
 skims\auto\am
 skims\auto\ev
 skims\auto\md

@@ -17,8 +17,8 @@ rgap=0.0001
 ngap=0.001
 
 Deletion of Interim Report Files and Emme databank
-DeleteReports=Yes
-DeleteBank=Yes
+DeleteReports=No
+DeleteBank=No
 
 Flag to Determine if you want to run the model to be compatible with Benefit Cost Analysis tool
 Running for BCA increases the storage requirements of the model.

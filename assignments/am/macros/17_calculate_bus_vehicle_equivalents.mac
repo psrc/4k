@@ -1,0 +1,15 @@
+~?!i&32768
+~o|295
+batchin=?
+batchout=?
+reports=assign.rpt
+s=1002
+~/ ...calculate 3-hour bus-auto vehilce equivalent
+2.41
+~+|1|y|@trnv3|n|3*vauteq*(60/hdwy)||4|*|*|2|2
+q
+~#
+~/end: 17_calculate_bus_vehicle_equivalents.mac
+~/exit emme
+~/
+q

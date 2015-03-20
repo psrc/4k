@@ -1,5 +1,5 @@
-assignments\auto\am
-assignments\auto\md
-assignments\auto\pm
-assignments\auto\ev
-assignments\auto\ni
+assignments\am
+assignments\md
+assignments\pm
+assignments\ev
+assignments\ni
