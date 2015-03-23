@@ -1,0 +1,32 @@
+~?!i&32768
+~o|295
+batchin=?
+batchout=?
+reports=initilization.rpt
+~/
+~/ --- set active scenario to 1 (Dummy Placeholder)
+s=9999
+~/
+~/ --- Read in Modes
+2.01
+1
+..\..\input\model\transit\transit_modes.in
+2
+q
+~/
+~/ --- Read in Transit Vehicles
+2.02
+1
+..\..\input\model\transit\transit_vehicles.in
+2
+q
+~/
+~/ --- Read in Centroid Network
+2.11
+..\..\input\networks\centroids\centroids.in
+2
+~/
+~/end: 0-2_create_networks.mac
+~/exit emme
+~/
+q

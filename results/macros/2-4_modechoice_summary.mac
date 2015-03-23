@@ -31,7 +31,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\hbcollege\emmebank
 ~+|2|3|3|mf"coldst"|mf"temp07"|n|y
 q
 ~/ --- Summarize College Trips for Internal Zones
@@ -60,13 +60,13 @@ q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\hbother\emmebank
 ~+|2|3|3|mf"hbodst"|mf"temp07"|n|y
 q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\hbshop\emmebank
 ~+|2|3|3|mf"hspdst"|mf"temp08"|n|y
 q
 ~/ --- Summarize HBO Trips for Internal Zones
@@ -95,13 +95,13 @@ q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\nhbother\emmebank
 ~+|2|3|3|mf"otodst"|mf"temp07"|n|y
 q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\nhbwork\emmebank
 ~+|2|3|3|mf"wkodst"|mf"temp08"|n|y
 q
 ~/ --- Summarize NHB Trips for Internal Zones
@@ -130,7 +130,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\hbschool\emmebank
 ~+|2|3|3|mf"schdst"|mf"temp07"|n|y
 q
 ~/ --- Summarize School Trips for Internal Zones
@@ -160,7 +160,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\hbwork_inc1\emmebank
 ~+|2|3|3|mf"hbwds1"|mf"temp08"|n|y
 q
 ~/ --- Summarize Home Based Work Income #1 Trips for Internal Zones
@@ -191,7 +191,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\hbwork_inc2\emmebank
 ~+|2|3|3|mf"hbwds2"|mf"temp08"|n|y
 q
 ~/ --- Summarize Home Based Work Income #2 Trips for Internal Zones
@@ -222,7 +222,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\hbwork_inc3\emmebank
 ~+|2|3|3|mf"hbwds3"|mf"temp08"|n|y
 q
 ~/ --- Summarize Home Based Work Income #3 Trips for Internal Zones
@@ -253,7 +253,7 @@ q
 1.31
 ~+|1
 ~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
+..\distribution\hbwork_inc4\emmebank
 ~+|2|3|3|mf"hbwds4"|mf"temp08"|n|y
 q
 ~/ --- Summarize Home Based Work Income #4 Trips for Internal Zones

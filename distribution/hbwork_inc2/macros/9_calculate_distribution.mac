@@ -1,0 +1,23 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=9_calculate_distribution.rpt
+~/
+~/
+~/begin: 9_calculate_distribution.mac
+~/ ...call module 3.22: matrix balancing
+~/ ...two dimensional balancing
+~/ ...matrix to be balanced: mf"hbwfr2"
+~/ ...totals on origins: mo"hbwpr2"
+~/ ...totals on destinations: md"hbwat2"
+~/ ...saved balanced matrix: mf"hbwds2"
+~/ ...calculate hb work income 2 distribution
+3.22
+~+|1|mf"hbwfr2"|mo"hbwpr2"|md"hbwat2"|y
+~+|1,%3%||1,%3%|||2|1|mf"hbwds2"|n|2
+q
+~#
+~/end: 9_calculate_distribution.mac
+~/exit emme
+~/
+q
