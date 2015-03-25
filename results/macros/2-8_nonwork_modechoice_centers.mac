@@ -1,0 +1,353 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- Regional Mode Choice Summary
+~/ ---------------------------------------------------------------
+~/ --- Load Ensembles
+3.01
+~+|4|all|y
+~+|1|..\input\model\ensembles\parking_gz.ens|2
+~+|1|..\input\model\ensembles\districts19_ga.ens|2
+~+|1|..\input\model\ensembles\seattlecbd_gb.ens|2
+~+|1|..\input\model\ensembles\counties_gc.ens|2
+~+|1|..\input\model\ensembles\districts6_gk.ens|2
+~+|1|..\input\model\ensembles\kitsap_gl.ens|2
+~+|1|..\input\model\ensembles\centers_gr.ens|2
+q
+~/ ---------------------------------------------------------------
+~/ --- NonWork Trips by Mode
+~/ ---------------------------------------------------------------
+~/ --- Copy NonWork Trip Distribution into Temporary Matrices
+1.31
+~+|1
+..\distribution\hbcollege\emmebank
+~+|2|3|3|mf"coldst"|mf"temp01"|n|y
+q
+1.31
+~+|1
+..\distribution\hbother\emmebank
+~+|2|3|3|mf"hbodst"|mf"temp02"|n|y
+q
+1.31
+~+|1
+..\distribution\hbshop\emmebank
+~+|2|3|3|mf"hspdst"|mf"temp03"|n|y
+q
+1.31
+~+|1
+..\distribution\hbschool\emmebank
+~+|2|3|3|mf"schdst"|mf"temp04"|n|y
+q
+1.31
+~+|1
+..\distribution\nhbother\emmebank
+~+|2|3|3|mf"otodst"|mf"temp05"|n|y
+q
+1.31
+~+|1
+..\distribution\nhbwork\emmebank
+~+|2|3|3|mf"wkodst"|mf"temp06"|n|y
+q
+~/ 
+~/ --- Copy SOV NonWork Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"coshda"|mf"temp07"|n|y
+~+|2|3|3|mf"nwshda"|mf"temp08"|n|y
+~+|2|3|3|mf"scshda"|mf"temp09"|n|y
+~+|2|3|3|mf"nhshda"|mf"temp10"|n|y
+q
+~/ --- Calculate NonWork SOV Trips
+~+|3.21|1|y|mf"sovnw"|n
+~+|(mf"temp01"*mf"temp07")+
+(mf"temp02"*mf"temp08")+
+(mf"temp03"*mf"temp08")+
+(mf"temp04"*mf"temp09")+
+(mf"temp05"*mf"temp10")+
+(mf"temp06"*mf"temp10")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy HOV 2 NonWork Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"coshs2"|mf"temp07"|n|y
+~+|2|3|3|mf"nwshs2"|mf"temp08"|n|y
+~+|2|3|3|mf"scshs2"|mf"temp09"|n|y
+~+|2|3|3|mf"nhshs2"|mf"temp10"|n|y
+q
+~/ --- Calculate NonWork HOV 2+ Trips
+~+|3.21|1|y|mf"hovnw"|n
+~+|mf"hovnw"+(mf"temp01"*mf"temp07")+
+(mf"temp02"*mf"temp08")+
+(mf"temp03"*mf"temp08")+
+(mf"temp04"*mf"temp09")+
+(mf"temp05"*mf"temp10")+
+(mf"temp06"*mf"temp10")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy HOV 3+ NonWork Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"coshs3"|mf"temp07"|n|y
+~+|2|3|3|mf"nwshs3"|mf"temp08"|n|y
+~+|2|3|3|mf"scshs3"|mf"temp09"|n|y
+~+|2|3|3|mf"nhshs3"|mf"temp10"|n|y
+q
+~/ --- Calculate NonWork HOV 2+ Trips
+~+|3.21|1|y|mf"hovnw"|n
+~+|mf"hovnw"+(mf"temp01"*mf"temp07")+
+(mf"temp02"*mf"temp08")+
+(mf"temp03"*mf"temp08")+
+(mf"temp04"*mf"temp09")+
+(mf"temp05"*mf"temp10")+
+(mf"temp06"*mf"temp10")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy Transit Walk NonWork Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"coshtw"|mf"temp07"|n|y
+~+|2|3|3|mf"nwshtw"|mf"temp08"|n|y
+~+|2|3|3|mf"scshtw"|mf"temp09"|n|y
+~+|2|3|3|mf"nhshtw"|mf"temp10"|n|y
+q
+~/ --- Calculate NonWork Transit Trips
+~+|3.21|1|y|mf"trnnw"|n
+~+|mf"trnnw"+(mf"temp01"*mf"temp07")+
+(mf"temp02"*mf"temp08")+
+(mf"temp03"*mf"temp08")+
+(mf"temp04"*mf"temp09")+
+(mf"temp05"*mf"temp10")+
+(mf"temp06"*mf"temp10")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy Walk NonWork Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"coshwk"|mf"temp07"|n|y
+~+|2|3|3|mf"nwshwk"|mf"temp08"|n|y
+~+|2|3|3|mf"scshwk"|mf"temp09"|n|y
+~+|2|3|3|mf"nhshwk"|mf"temp10"|n|y
+q
+~/ --- Calculate NonWork Walk Trips
+~+|3.21|1|y|mf"wbknw"|n
+~+|mf"wbknw"+(mf"temp01"*mf"temp07")+
+(mf"temp02"*mf"temp08")+
+(mf"temp03"*mf"temp08")+
+(mf"temp04"*mf"temp09")+
+(mf"temp05"*mf"temp10")+
+(mf"temp06"*mf"temp10")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy Bike NonWork Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"coshbk"|mf"temp07"|n|y
+~+|2|3|3|mf"nwshbk"|mf"temp08"|n|y
+~+|2|3|3|mf"scshbk"|mf"temp09"|n|y
+~+|2|3|3|mf"nhshbk"|mf"temp10"|n|y
+q
+~/ --- Calculate NonWork Transit Trips
+~+|3.21|1|y|mf"wbknw"|n
+~+|mf"wbknw"+(mf"temp01"*mf"temp07")+
+(mf"temp02"*mf"temp08")+
+(mf"temp03"*mf"temp08")+
+(mf"temp04"*mf"temp09")+
+(mf"temp05"*mf"temp10")+
+(mf"temp06"*mf"temp10")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Summarize NonWork Trip Mode Shares Destined to Regional Centers
+3.21
+~/ --- RGC 1
+~+|1|y|ms1165|y|nwda1|DY NonWork SOV - To RGC1|0|mf"sovnw"|||y|1,%1%||gr1||||2
+~+|1|y|ms1166|y|nwsr1|DY NonWork HOV 2+ - To RGC1|0|mf"hovnw"|||y|1,%1%||gr1||||2
+~+|1|y|ms1167|y|nwtr1|DY NonWork Transit - To RGC1|0|mf"trnnw"|||y|1,%1%||gr1||||2
+~+|1|y|ms1168|y|nwwb1|DY NonWork Walk-Bike - To RGC1|0|mf"wbknw"|||y|1,%1%||gr1||||2
+~/ --- RGC 2
+~+|1|y|ms1169|y|nwda2|DY NonWork SOV - To RGC2|0|mf"sovnw"|||y|1,%1%||gr2||||2
+~+|1|y|ms1170|y|nwsr2|DY NonWork HOV 2+ - To RGC2|0|mf"hovnw"|||y|1,%1%||gr2||||2
+~+|1|y|ms1171|y|nwtr2|DY NonWork Transit - To RGC2|0|mf"trnnw"|||y|1,%1%||gr2||||2
+~+|1|y|ms1172|y|nwwb2|DY NonWork Walk-Bike - To RGC2|0|mf"wbknw"|||y|1,%1%||gr2||||2
+~/ --- RGC 3
+~+|1|y|ms1173|y|nwda3|DY NonWork SOV - To RGC3|0|mf"sovnw"|||y|1,%1%||gr3||||2
+~+|1|y|ms1174|y|nwsr3|DY NonWork HOV 2+ - To RGC3|0|mf"hovnw"|||y|1,%1%||gr3||||2
+~+|1|y|ms1175|y|nwtr3|DY NonWork Transit - To RGC3|0|mf"trnnw"|||y|1,%1%||gr3||||2
+~+|1|y|ms1176|y|nwwb3|DY NonWork Walk-Bike - To RGC3|0|mf"wbknw"|||y|1,%1%||gr3||||2
+~/ --- RGC 4
+~+|1|y|ms1177|y|nwda4|DY NonWork SOV - To RGC4|0|mf"sovnw"|||y|1,%1%||gr4||||2
+~+|1|y|ms1178|y|nwsr4|DY NonWork HOV 2+ - To RGC4|0|mf"hovnw"|||y|1,%1%||gr4||||2
+~+|1|y|ms1179|y|nwtr4|DY NonWork Transit - To RGC4|0|mf"trnnw"|||y|1,%1%||gr4||||2
+~+|1|y|ms1180|y|nwwb4|DY NonWork Walk-Bike - To RGC4|0|mf"wbknw"|||y|1,%1%||gr4||||2
+~/ --- RGC 5
+~+|1|y|ms1181|y|nwda5|DY NonWork SOV - To RGC5|0|mf"sovnw"|||y|1,%1%||gr5||||2
+~+|1|y|ms1182|y|nwsr5|DY NonWork HOV 2+ - To RGC5|0|mf"hovnw"|||y|1,%1%||gr5||||2
+~+|1|y|ms1183|y|nwtr5|DY NonWork Transit - To RGC5|0|mf"trnnw"|||y|1,%1%||gr5||||2
+~+|1|y|ms1184|y|nwwb5|DY NonWork Walk-Bike - To RGC5|0|mf"wbknw"|||y|1,%1%||gr5||||2
+~/ --- RGC 6
+~+|1|y|ms1185|y|nwda6|DY NonWork SOV - To RGC6|0|mf"sovnw"|||y|1,%1%||gr6||||2
+~+|1|y|ms1186|y|nwsr6|DY NonWork HOV 2+ - To RGC6|0|mf"hovnw"|||y|1,%1%||gr6||||2
+~+|1|y|ms1187|y|nwtr6|DY NonWork Transit - To RGC6|0|mf"trnnw"|||y|1,%1%||gr6||||2
+~+|1|y|ms1188|y|nwwb6|DY NonWork Walk-Bike - To RGC6|0|mf"wbknw"|||y|1,%1%||gr6||||2
+~/ --- RGC 7
+~+|1|y|ms1189|y|nwda7|DY NonWork SOV - To RGC7|0|mf"sovnw"|||y|1,%1%||gr7||||2
+~+|1|y|ms1190|y|nwsr7|DY NonWork HOV 2+ - To RGC7|0|mf"hovnw"|||y|1,%1%||gr7||||2
+~+|1|y|ms1191|y|nwtr7|DY NonWork Transit - To RGC7|0|mf"trnnw"|||y|1,%1%||gr7||||2
+~+|1|y|ms1192|y|nwwb7|DY NonWork Walk-Bike - To RGC7|0|mf"wbknw"|||y|1,%1%||gr7||||2
+~/ --- RGC 8
+~+|1|y|ms1193|y|nwda8|DY NonWork SOV - To RGC8|0|mf"sovnw"|||y|1,%1%||gr8||||2
+~+|1|y|ms1194|y|nwsr8|DY NonWork HOV 2+ - To RGC8|0|mf"hovnw"|||y|1,%1%||gr8||||2
+~+|1|y|ms1195|y|nwtr8|DY NonWork Transit - To RGC8|0|mf"trnnw"|||y|1,%1%||gr8||||2
+~+|1|y|ms1196|y|nwwb8|DY NonWork Walk-Bike - To RGC8|0|mf"wbknw"|||y|1,%1%||gr8||||2
+~/ --- RGC 9
+~+|1|y|ms1197|y|nwda9|DY NonWork SOV - To RGC9|0|mf"sovnw"|||y|1,%1%||gr9||||2
+~+|1|y|ms1198|y|nwsr9|DY NonWork HOV 2+ - To RGC9|0|mf"hovnw"|||y|1,%1%||gr9||||2
+~+|1|y|ms1199|y|nwtr9|DY NonWork Transit - To RGC9|0|mf"trnnw"|||y|1,%1%||gr9||||2
+~+|1|y|ms1200|y|nwwb9|DY NonWork Walk-Bike - To RGC9|0|mf"wbknw"|||y|1,%1%||gr9||||2
+~/ --- RGC 10
+~+|1|y|ms1201|y|nwda10|DY NonWork SOV - To RGC10|0|mf"sovnw"|||y|1,%1%||gr10||||2
+~+|1|y|ms1202|y|nwsr10|DY NonWork HOV 2+ - To RGC10|0|mf"hovnw"|||y|1,%1%||gr10||||2
+~+|1|y|ms1203|y|nwtr10|DY NonWork Transit - To RGC10|0|mf"trnnw"|||y|1,%1%||gr10||||2
+~+|1|y|ms1204|y|nwwb10|DY NonWork Walk-Bike - To RGC10|0|mf"wbknw"|||y|1,%1%||gr10||||2
+~/ --- RGC 11
+~+|1|y|ms1205|y|nwda11|DY NonWork SOV - To RGC11|0|mf"sovnw"|||y|1,%1%||gr11||||2
+~+|1|y|ms1206|y|nwsr11|DY NonWork HOV 2+ - To RGC11|0|mf"hovnw"|||y|1,%1%||gr11||||2
+~+|1|y|ms1207|y|nwtr11|DY NonWork Transit - To RGC11|0|mf"trnnw"|||y|1,%1%||gr11||||2
+~+|1|y|ms1208|y|nwwb11|DY NonWork Walk-Bike - To RGC11|0|mf"wbknw"|||y|1,%1%||gr11||||2
+~/ --- RGC 12
+~+|1|y|ms1209|y|nwda12|DY NonWork SOV - To RGC12|0|mf"sovnw"|||y|1,%1%||gr12||||2
+~+|1|y|ms1210|y|nwsr12|DY NonWork HOV 2+ - To RGC12|0|mf"hovnw"|||y|1,%1%||gr12||||2
+~+|1|y|ms1211|y|nwtr12|DY NonWork Transit - To RGC12|0|mf"trnnw"|||y|1,%1%||gr12||||2
+~+|1|y|ms1212|y|nwwb12|DY NonWork Walk-Bike - To RGC12|0|mf"wbknw"|||y|1,%1%||gr12||||2
+~/ --- RGC 13
+~+|1|y|ms1213|y|nwda13|DY NonWork SOV - To RGC13|0|mf"sovnw"|||y|1,%1%||gr13||||2
+~+|1|y|ms1214|y|nwsr13|DY NonWork HOV 2+ - To RGC13|0|mf"hovnw"|||y|1,%1%||gr13||||2
+~+|1|y|ms1215|y|nwtr13|DY NonWork Transit - To RGC13|0|mf"trnnw"|||y|1,%1%||gr13||||2
+~+|1|y|ms1216|y|nwwb13|DY NonWork Walk-Bike - To RGC13|0|mf"wbknw"|||y|1,%1%||gr13||||2
+~/ --- RGC 14
+~+|1|y|ms1217|y|nwda14|DY NonWork SOV - To RGC14|0|mf"sovnw"|||y|1,%1%||gr14||||2
+~+|1|y|ms1218|y|nwsr14|DY NonWork HOV 2+ - To RGC14|0|mf"hovnw"|||y|1,%1%||gr14||||2
+~+|1|y|ms1219|y|nwtr14|DY NonWork Transit - To RGC14|0|mf"trnnw"|||y|1,%1%||gr14||||2
+~+|1|y|ms1220|y|nwwb14|DY NonWork Walk-Bike - To RGC14|0|mf"wbknw"|||y|1,%1%||gr14||||2
+~/ --- RGC 15
+~+|1|y|ms1221|y|nwda15|DY NonWork SOV - To RGC15|0|mf"sovnw"|||y|1,%1%||gr15||||2
+~+|1|y|ms1222|y|nwsr15|DY NonWork HOV 2+ - To RGC15|0|mf"hovnw"|||y|1,%1%||gr15||||2
+~+|1|y|ms1223|y|nwtr15|DY NonWork Transit - To RGC15|0|mf"trnnw"|||y|1,%1%||gr15||||2
+~+|1|y|ms1224|y|nwwb15|DY NonWork Walk-Bike - To RGC15|0|mf"wbknw"|||y|1,%1%||gr15||||2
+~/ --- RGC 16
+~+|1|y|ms1225|y|nwda16|DY NonWork SOV - To RGC16|0|mf"sovnw"|||y|1,%1%||gr16||||2
+~+|1|y|ms1226|y|nwsr16|DY NonWork HOV 2+ - To RGC16|0|mf"hovnw"|||y|1,%1%||gr16||||2
+~+|1|y|ms1227|y|nwtr16|DY NonWork Transit - To RGC16|0|mf"trnnw"|||y|1,%1%||gr16||||2
+~+|1|y|ms1228|y|nwwb16|DY NonWork Walk-Bike - To RGC16|0|mf"wbknw"|||y|1,%1%||gr16||||2
+~/ --- RGC 17
+~+|1|y|ms1229|y|nwda17|DY NonWork SOV - To RGC17|0|mf"sovnw"|||y|1,%1%||gr17||||2
+~+|1|y|ms1230|y|nwsr17|DY NonWork HOV 2+ - To RGC17|0|mf"hovnw"|||y|1,%1%||gr17||||2
+~+|1|y|ms1231|y|nwtr17|DY NonWork Transit - To RGC17|0|mf"trnnw"|||y|1,%1%||gr17||||2
+~+|1|y|ms1232|y|nwwb17|DY NonWork Walk-Bike - To RGC17|0|mf"wbknw"|||y|1,%1%||gr17||||2
+~/ --- RGC 18
+~+|1|y|ms1233|y|nwda18|DY NonWork SOV - To RGC18|0|mf"sovnw"|||y|1,%1%||gr18||||2
+~+|1|y|ms1234|y|nwsr18|DY NonWork HOV 2+ - To RGC18|0|mf"hovnw"|||y|1,%1%||gr18||||2
+~+|1|y|ms1235|y|nwtr18|DY NonWork Transit - To RGC18|0|mf"trnnw"|||y|1,%1%||gr18||||2
+~+|1|y|ms1236|y|nwwb18|DY NonWork Walk-Bike - To RGC18|0|mf"wbknw"|||y|1,%1%||gr18||||2
+~/ --- RGC 19
+~+|1|y|ms1237|y|nwda19|DY NonWork SOV - To RGC19|0|mf"sovnw"|||y|1,%1%||gr19||||2
+~+|1|y|ms1238|y|nwsr19|DY NonWork HOV 2+ - To RGC19|0|mf"hovnw"|||y|1,%1%||gr19||||2
+~+|1|y|ms1239|y|nwtr19|DY NonWork Transit - To RGC19|0|mf"trnnw"|||y|1,%1%||gr19||||2
+~+|1|y|ms1240|y|nwwb19|DY NonWork Walk-Bike - To RGC19|0|mf"wbknw"|||y|1,%1%||gr19||||2
+~/ --- RGC 20
+~+|1|y|ms1241|y|nwda20|DY NonWork SOV - To RGC20|0|mf"sovnw"|||y|1,%1%||gr20||||2
+~+|1|y|ms1242|y|nwsr20|DY NonWork HOV 2+ - To RGC20|0|mf"hovnw"|||y|1,%1%||gr20||||2
+~+|1|y|ms1243|y|nwtr20|DY NonWork Transit - To RGC20|0|mf"trnnw"|||y|1,%1%||gr20||||2
+~+|1|y|ms1244|y|nwwb20|DY NonWork Walk-Bike - To RGC20|0|mf"wbknw"|||y|1,%1%||gr20||||2
+~/ --- RGC 21
+~+|1|y|ms1245|y|nwda21|DY NonWork SOV - To RGC21|0|mf"sovnw"|||y|1,%1%||gr21||||2
+~+|1|y|ms1246|y|nwsr21|DY NonWork HOV 2+ - To RGC21|0|mf"hovnw"|||y|1,%1%||gr21||||2
+~+|1|y|ms1247|y|nwtr21|DY NonWork Transit - To RGC21|0|mf"trnnw"|||y|1,%1%||gr21||||2
+~+|1|y|ms1248|y|nwwb21|DY NonWork Walk-Bike - To RGC21|0|mf"wbknw"|||y|1,%1%||gr21||||2
+~/ --- RGC 22
+~+|1|y|ms1249|y|nwda22|DY NonWork SOV - To RGC22|0|mf"sovnw"|||y|1,%1%||gr22||||2
+~+|1|y|ms1250|y|nwsr22|DY NonWork HOV 2+ - To RGC22|0|mf"hovnw"|||y|1,%1%||gr22||||2
+~+|1|y|ms1251|y|nwtr22|DY NonWork Transit - To RGC22|0|mf"trnnw"|||y|1,%1%||gr22||||2
+~+|1|y|ms1252|y|nwwb22|DY NonWork Walk-Bike - To RGC22|0|mf"wbknw"|||y|1,%1%||gr22||||2
+~/ --- RGC 23
+~+|1|y|ms1253|y|nwda23|DY NonWork SOV - To RGC23|0|mf"sovnw"|||y|1,%1%||gr23||||2
+~+|1|y|ms1254|y|nwsr23|DY NonWork HOV 2+ - To RGC23|0|mf"hovnw"|||y|1,%1%||gr23||||2
+~+|1|y|ms1255|y|nwtr23|DY NonWork Transit - To RGC23|0|mf"trnnw"|||y|1,%1%||gr23||||2
+~+|1|y|ms1256|y|nwwb23|DY NonWork Walk-Bike - To RGC23|0|mf"wbknw"|||y|1,%1%||gr23||||2
+~/ --- RGC 24
+~+|1|y|ms1257|y|nwda24|DY NonWork SOV - To RGC24|0|mf"sovnw"|||y|1,%1%||gr24||||2
+~+|1|y|ms1258|y|nwsr24|DY NonWork HOV 2+ - To RGC24|0|mf"hovnw"|||y|1,%1%||gr24||||2
+~+|1|y|ms1259|y|nwtr24|DY NonWork Transit - To RGC24|0|mf"trnnw"|||y|1,%1%||gr24||||2
+~+|1|y|ms1260|y|nwwb24|DY NonWork Walk-Bike - To RGC24|0|mf"wbknw"|||y|1,%1%||gr24||||2
+~/ --- RGC 25
+~+|1|y|ms1261|y|nwda25|DY NonWork SOV - To RGC25|0|mf"sovnw"|||y|1,%1%||gr25||||2
+~+|1|y|ms1262|y|nwsr25|DY NonWork HOV 2+ - To RGC25|0|mf"hovnw"|||y|1,%1%||gr25||||2
+~+|1|y|ms1263|y|nwtr25|DY NonWork Transit - To RGC25|0|mf"trnnw"|||y|1,%1%||gr25||||2
+~+|1|y|ms1264|y|nwwb25|DY NonWork Walk-Bike - To RGC25|0|mf"wbknw"|||y|1,%1%||gr25||||2
+~/ --- RGC 26
+~+|1|y|ms1265|y|nwda26|DY NonWork SOV - To RGC26|0|mf"sovnw"|||y|1,%1%||gr26||||2
+~+|1|y|ms1266|y|nwsr26|DY NonWork HOV 2+ - To RGC26|0|mf"hovnw"|||y|1,%1%||gr26||||2
+~+|1|y|ms1267|y|nwtr26|DY NonWork Transit - To RGC26|0|mf"trnnw"|||y|1,%1%||gr26||||2
+~+|1|y|ms1268|y|nwwb26|DY NonWork Walk-Bike - To RGC26|0|mf"wbknw"|||y|1,%1%||gr26||||2
+~/ --- RGC 27
+~+|1|y|ms1269|y|nwda27|DY NonWork SOV - To RGC27|0|mf"sovnw"|||y|1,%1%||gr27||||2
+~+|1|y|ms1270|y|nwsr27|DY NonWork HOV 2+ - To RGC27|0|mf"hovnw"|||y|1,%1%||gr27||||2
+~+|1|y|ms1271|y|nwtr27|DY NonWork Transit - To RGC27|0|mf"trnnw"|||y|1,%1%||gr27||||2
+~+|1|y|ms1272|y|nwwb27|DY NonWork Walk-Bike - To RGC27|0|mf"wbknw"|||y|1,%1%||gr27||||2
+~/ --- RGC 28
+~+|1|y|ms1273|y|nwda28|DY NonWork SOV - To RGC28|0|mf"sovnw"|||y|1,%1%||gr28||||2
+~+|1|y|ms1274|y|nwsr28|DY NonWork HOV 2+ - To RGC28|0|mf"hovnw"|||y|1,%1%||gr28||||2
+~+|1|y|ms1275|y|nwtr28|DY NonWork Transit - To RGC28|0|mf"trnnw"|||y|1,%1%||gr28||||2
+~+|1|y|ms1276|y|nwwb28|DY NonWork Walk-Bike - To RGC28|0|mf"wbknw"|||y|1,%1%||gr28||||2
+~/ --- RGC 29
+~+|1|y|ms1277|y|nwda29|DY NonWork SOV - To RGC29|0|mf"sovnw"|||y|1,%1%||gr29||||2
+~+|1|y|ms1278|y|nwsr29|DY NonWork HOV 2+ - To RGC29|0|mf"hovnw"|||y|1,%1%||gr29||||2
+~+|1|y|ms1279|y|nwtr29|DY NonWork Transit - To RGC29|0|mf"trnnw"|||y|1,%1%||gr29||||2
+~+|1|y|ms1280|y|nwwb29|DY NonWork Walk-Bike - To RGC29|0|mf"wbknw"|||y|1,%1%||gr29||||2
+~/ --- RGC 30
+~+|1|y|ms1281|y|nwda30|DY NonWork SOV - To RGC30|0|mf"sovnw"|||y|1,%1%||gr30||||2
+~+|1|y|ms1282|y|nwsr30|DY NonWork HOV 2+ - To RGC30|0|mf"hovnw"|||y|1,%1%||gr30||||2
+~+|1|y|ms1283|y|nwtr30|DY NonWork Transit - To RGC30|0|mf"trnnw"|||y|1,%1%||gr30||||2
+~+|1|y|ms1284|y|nwwb30|DY NonWork Walk-Bike - To RGC30|0|mf"wbknw"|||y|1,%1%||gr30||||2
+~/ --- RGC 31
+~+|1|y|ms1285|y|nwda31|DY NonWork SOV - To RGC31|0|mf"sovnw"|||y|1,%1%||gr31||||2
+~+|1|y|ms1286|y|nwsr31|DY NonWork HOV 2+ - To RGC31|0|mf"hovnw"|||y|1,%1%||gr31||||2
+~+|1|y|ms1287|y|nwtr31|DY NonWork Transit - To RGC31|0|mf"trnnw"|||y|1,%1%||gr31||||2
+~+|1|y|ms1288|y|nwwb31|DY NonWork Walk-Bike - To RGC31|0|mf"wbknw"|||y|1,%1%||gr31||||2
+~/ --- RGC 32
+~+|1|y|ms1289|y|nwda32|DY NonWork SOV - To RGC32|0|mf"sovnw"|||y|1,%1%||gr32||||2
+~+|1|y|ms1290|y|nwsr32|DY NonWork HOV 2+ - To RGC32|0|mf"hovnw"|||y|1,%1%||gr32||||2
+~+|1|y|ms1291|y|nwtr32|DY NonWork Transit - To RGC32|0|mf"trnnw"|||y|1,%1%||gr32||||2
+~+|1|y|ms1292|y|nwwb32|DY NonWork Walk-Bike - To RGC32|0|mf"wbknw"|||y|1,%1%||gr32||||2
+~/ --- RGC 33
+~+|1|y|ms1293|y|nwda33|DY NonWork SOV - To RGC33|0|mf"sovnw"|||y|1,%1%||gr33||||2
+~+|1|y|ms1294|y|nwsr33|DY NonWork HOV 2+ - To RGC33|0|mf"hovnw"|||y|1,%1%||gr33||||2
+~+|1|y|ms1295|y|nwtr33|DY NonWork Transit - To RGC33|0|mf"trnnw"|||y|1,%1%||gr33||||2
+~+|1|y|ms1296|y|nwwb33|DY NonWork Walk-Bike - To RGC33|0|mf"wbknw"|||y|1,%1%||gr33||||2
+~/ --- RGC 34
+~+|1|y|ms1297|y|nwda34|DY NonWork SOV - To RGC34|0|mf"sovnw"|||y|1,%1%||gr34||||2
+~+|1|y|ms1298|y|nwsr34|DY NonWork HOV 2+ - To RGC34|0|mf"hovnw"|||y|1,%1%||gr34||||2
+~+|1|y|ms1299|y|nwtr34|DY NonWork Transit - To RGC34|0|mf"trnnw"|||y|1,%1%||gr34||||2
+~+|1|y|ms1300|y|nwwb34|DY NonWork Walk-Bike - To RGC34|0|mf"wbknw"|||y|1,%1%||gr34||||2
+~/ --- RGC 35
+~+|1|y|ms1301|y|nwda35|DY NonWork SOV - To RGC35|0|mf"sovnw"|||y|1,%1%||gr35||||2
+~+|1|y|ms1302|y|nwsr35|DY NonWork HOV 2+ - To RGC35|0|mf"hovnw"|||y|1,%1%||gr35||||2
+~+|1|y|ms1303|y|nwtr35|DY NonWork Transit - To RGC35|0|mf"trnnw"|||y|1,%1%||gr35||||2
+~+|1|y|ms1304|y|nwwb35|DY NonWork Walk-Bike - To RGC35|0|mf"wbknw"|||y|1,%1%||gr35||||2
+~/ --- RGC 36
+~+|1|y|ms1305|y|nwda36|DY NonWork SOV - To RGC36|0|mf"sovnw"|||y|1,%1%||gr36||||2
+~+|1|y|ms1306|y|nwsr36|DY NonWork HOV 2+ - To RGC36|0|mf"hovnw"|||y|1,%1%||gr36||||2
+~+|1|y|ms1307|y|nwtr36|DY NonWork Transit - To RGC36|0|mf"trnnw"|||y|1,%1%||gr36||||2
+~+|1|y|ms1308|y|nwwb36|DY NonWork Walk-Bike - To RGC36|0|mf"wbknw"|||y|1,%1%||gr36||||2
+q
+~/
+~/end: 2-4_mode_Choice_summary.mac
+~/exit emme
+q

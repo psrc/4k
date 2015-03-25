@@ -79,6 +79,9 @@ if %SummaryBank% == Yes (
 	 call emme -ng 000 -m macros\2-3_trip_distribution_summary.mac %hightaz%
 	 call emme -ng 000 -m macros\2-4_modechoice_summary.mac %hightaz%
 	 call emme -ng 000 -m macros\2-5_transit_summary.mac
+	 call emme -ng 000 -m macros\2-6_trip_length_distribution_summary.mac %hightaz%
+	 call emme -ng 000 -m macros\2-7_work_modechoice_centers.mac %hightaz%
+	 call emme -ng 000 -m macros\2-8_nonwork_modechoice_centers.mac %hightaz%
 	 call emme -ng 000 -m macros\3-0_output_results.mac
 )
 cd ..

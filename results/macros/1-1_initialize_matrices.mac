@@ -86,6 +86,16 @@ q
 ~+|1|mf68|nwalk|NI walk person trip table|0
 ~+|1|mf69|nbike|NI bike person trip table|0
 ~+|1|mf70|ntrnwa|NI transit person trip table|0
+~/ --- Daily Person Trips by Mode - Work Trips
+~+|1|mf71|sovwk|Daily SOV Work Trips|0
+~+|1|mf72|hovwk|Daily HOV 2+ Work Trips|0
+~+|1|mf73|trnwk|Daily Transit Work Trips|0
+~+|1|mf74|wbkwk|Daily Walk and Bike Work Trips|0
+~/ --- Daily Person Trips by Mode - Non-Work Trips
+~+|1|mf75|sovnw|Daily SOV Non-Work Trips|0
+~+|1|mf76|hovnw|Daily HOV 2+ Non-Work Trips|0
+~+|1|mf77|trnnw|Daily Transit Non-Work Trips|0
+~+|1|mf78|wbknw|Daily Walk and Bike Non-Work Trips|0
 ~/ --- Temporary Calculations
 ~+|1|mf90|temp01|Temporary Matrix #1|0
 ~+|1|mf91|temp02|Temporary Matrix #2|0
