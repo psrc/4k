@@ -1,0 +1,87 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- AM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1002
+~/ --- Store the Results in Scalars for Summary
+2.41
+~+|1|y|ut1|1||*|4
+~/ --- Central Link Light Rail
+~+|1|n|board||0890,0891||*|5|4|ms713|alrbds|AM LRT Boardings Seattle|1
+~+|1|n|timtr||0890,0891||*|5|4|ms714|alrtms|AM LRT Time Seattle|1
+~+|1|n|(speed*timtr)/60||0890,0891||*|5|4|ms715|alrlns|AM LRT Length Seattle|1
+~+|1|n|ut1||0890,0891||5|4|ms716|alrlis|AM LRT Lines Seattle|1
+~/ --- Tacoma Link Light Rail
+~+|1|n|board||0893,0894||*|5|4|ms717|alrbdt|AM LRT Boardings Tacoma|1
+~+|1|n|timtr||0893,0894||*|5|4|ms718|alrtmt|AM LRT Time Tacoma|1
+~+|1|n|(speed*timtr)/60||0893,0894||*|5|4|ms719|alrlnt|AM LRT Length Tacoma|1
+~+|1|n|ut1||0893,0894||5|4|ms720|alrlit|AM LRT Lines Tacoma|1
+~/ --- Everett Commuter Rail
+~+|1|n|board||0888,0889||*|5|4|ms721|acrbde|AM CRT Boardings Everett|1
+~+|1|n|timtr||0888,0889||*|5|4|ms722|acrtme|AM CRT Time Everett|1
+~+|1|n|(speed*timtr)/60||0888,0889||*|5|4|ms723|acrlne|AM CRT Length Everett|1
+~+|1|n|ut1||0888,0889||5|4|ms724|acrlie|AM CRT Lines Everett|1
+~/ --- Tacoma Commuter Rail
+~+|1|n|board||0892|0897||*|5|4|ms725|acrbdt|AM CRT Boardings Tacoma|1
+~+|1|n|timtr||0892|0897||*|5|4|ms726|acrtmt|AM CRT Time Tacoma|1
+~+|1|n|(speed*timtr)/60||0892|0897||*|5|4|ms727|acrlnt|AM CRT Length Tacoma|1
+~+|1|n|ut1||0892|0897||5|4|ms728|acrlit|AM CRT Lines Tacoma|1
+~/ --- Seattle Center Monorail
+~+|1|n|board||0895,0896||*|5|4|ms729|amrbds|AM Monorail Boardings|1
+~+|1|n|timtr||0895,0896||*|5|4|ms730|amrtms|AM Monorail Time|1
+~+|1|n|(speed*timtr)/60||0895,0896||*|5|4|ms731|amrlns|AM Monorail Length|1
+~+|1|n|ut1||0895,0896||5|4|ms732|amrlis|AM Monorail Lines|1
+~/ --- Buses
+~+|1|n|board||mod=b||*|5|4|ms733|absbda|AM Bus Boardings|1
+~+|1|n|timtr||mod=b||*|5|4|ms734|abstma|AM Bus Time|1
+~+|1|n|(speed*timtr)/60||mod=b||*|5|4|ms735|abslna|AM Bus Length|1
+~+|1|n|ut1||mod=b||5|4|ms736|abslia|AM Bus Lines|1
+~/ --- Ferries
+~+|1|n|board||mod=f||*|5|4|ms737|afybda|AM Ferry Boardings|1
+~+|1|n|timtr||mod=f||*|5|4|ms738|afytma|AM Ferry Time|1
+~+|1|n|(speed*timtr)/60||mod=f||*|5|4|ms739|afylna|AM Ferry Length|1
+~+|1|n|ut1||mod=f||5|4|ms740|afylia|AM Ferry Lines|1
+~/ --- Reset ut1 to zero
+~+|1|y|ut1|0||*|4
+q
+~/ ---------------------------------------------------------------
+~/ --- Midday Period Summary
+~/ ---------------------------------------------------------------
+s=1004
+~/ --- Store the Results in Scalars for Summary
+2.41
+~+|1|y|ut1|1||*|4
+~/ --- Central Link Light Rail
+~+|1|n|board||0665,0666||*|5|4|ms741|mlrbds|MD LRT Boardings Seattle|1
+~+|1|n|timtr||0665,0666||*|5|4|ms742|mlrtms|MD LRT Time Seattle|1
+~+|1|n|(speed*timtr)/60||0665,0666||*|5|4|ms743|mlrlns|MD LRT Length Seattle|1
+~+|1|n|ut1||0665,0666||5|4|ms744|mlrlis|MD LRT Lines Seattle|1
+~/ --- Tacoma Link Light Rail
+~+|1|n|board||0647,0648||*|5|4|ms745|mlrbdt|MD LRT Boardings Tacoma|1
+~+|1|n|timtr||0647,0648||*|5|4|ms746|mlrtmt|MD LRT Time Tacoma|1
+~+|1|n|(speed*timtr)/60||0647,0648||*|5|4|ms747|mlrlnt|MD LRT Length Tacoma|1
+~+|1|n|ut1||0647,0648||5|4|ms748|mlrlit|MD LRT Lines Tacoma|1
+~/ --- Seattle Center Monorail
+~+|1|n|board||0663,0664||*|5|4|ms749|mmrbds|MD Monorail Boardings|1
+~+|1|n|timtr||0663,0664||*|5|4|ms750|mmrtms|MD Monorail Time|1
+~+|1|n|(speed*timtr)/60||0663,0664||*|5|4|ms751|mmrlns|MD Monorail Length|1
+~+|1|n|ut1||0663,0664||5|4|ms752|mmrlis|MD Monorail Lines|1
+~/ --- Buses
+~+|1|n|board||mod=b||*|5|4|ms753|mbsbda|MD Bus Boardings|1
+~+|1|n|timtr||mod=b||*|5|4|ms754|mbstma|MD Bus Time|1
+~+|1|n|(speed*timtr)/60||mod=b||*|5|4|ms755|mbslna|MD Bus Length|1
+~+|1|n|ut1||mod=b||5|4|ms756|mbslia|MD Bus Lines|1
+~/ --- Ferries
+~+|1|n|board||mod=f||*|5|4|ms757|mfybda|MD Ferry Boardings|1
+~+|1|n|timtr||mod=f||*|5|4|ms758|mfytma|MD Ferry Time|1
+~+|1|n|(speed*timtr)/60||mod=f||*|5|4|ms759|mfylna|MD Ferry Length|1
+~+|1|n|ut1||mod=f||5|4|ms760|mfylia|MD Ferry Lines|1
+~/ --- Reset ut1 to zero
+~+|1|y|ut1|0||*|4
+q
+~/
+~/end: 2-5_transit_summary.mac
+~/exit emme
+q

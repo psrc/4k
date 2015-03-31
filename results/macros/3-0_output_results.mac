@@ -1,0 +1,13 @@
+~?!i&32768
+~o|295
+~/ ---------------------------------------------------------------
+~/ --- Output Scalar Matrix List to Summary Directory
+~/ ---------------------------------------------------------------
+~! if exist model_results.rpt erase model_results.rpt
+reports=model_results.rpt
+3.14
+~+|2|ms|2
+q
+~/end: 3-0_output_results.mac
+~/exit emme
+q

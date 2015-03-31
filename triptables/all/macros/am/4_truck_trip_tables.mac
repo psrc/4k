@@ -1,0 +1,38 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\initial\0_reset_matrices.mac
+~/
+reports=am_trip_tables.rpt
+~/ ...transpose daily p-a truck distribution to o-d format
+3.21
+~/ ...light trucks
+~+|1|y|mf"lgtod"|n|0.5*mf"lgtdis"+0.5*mf"lgtdis"'|||n|2
+~/ ...medium trucks
+~+|1|y|mf"medod"|n|0.5*mf"meddis"+0.5*mf"meddis"'|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"hvyod"|n|0.5*mf"hvydis"+0.5*mf"hvydis"'|||n|2
+~/ ...convert annual external heavy truck trips to daily and add to heavy truck o-d table
+~+|1|y|mf"hvyod"|n|mf"hvyod"+(mf"reebee"+mf"reebei"+mf"reebie")/264|||n|2
+~/ ...apply vehicle-equivalency factors to medium and heavy trucks
+~/ ...medium trucks
+~+|1|y|mf"medod"|n|mf"medod"*1.5|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"hvyod"|n|mf"hvyod"*2|||n|2
+q
+3.21
+~/ ...light trucks
+~+|1|y|mf"alttrk"|n|mf"lgtod"*.194|||n|2
+~/ ...medium trucks
+~+|1|y|mf"amdtrk"|n|mf"medod"*.208|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"ahvtrk"|n|mf"hvyod"*.209|||n|2
+~#
+q
+~#
+~/end: 4_truck_trip_tables.mac
+~/exit emme
+~/
+q

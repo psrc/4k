@@ -1,0 +1,132 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ... initialize full matrices
+~/ ... start with mf5 - mf1-4 saved for vehmtx
+3.12
+~/ ... bridge flags
+~+|1|mf05|brhov2|bridge flag - hov 2|0
+~+|1|mf06|brhov3|bridge flag - hov 3+|0
+~/ ... delay
+~+|1|mf07|aau2dl|am hov 2 delay|0
+~+|1|mf08|aau3dl|am hov 3+ delay|0
+~+|1|mf09|mau2dl|md hov 2 delay|0
+~+|1|mf10|mau3dl|md hov 3+ delay|0
+~+|1|mf11|pau2dl|pm hov 2 delay|0
+~+|1|mf12|pau3dl|pm hov 3+ delay|0
+~+|1|mf13|eau2dl|ev hov 2 delay|0
+~+|1|mf14|eau3dl|ev hov 3+ delay|0
+~/ ... adjusted delay
+~+|1|mf15|aau2da|am hov 2 delay - adjusted|0
+~+|1|mf16|aau3da|am hov 3+ delay - adjusted|0
+~+|1|mf17|mau2da|md hov 2 delay - adjusted|0
+~+|1|mf18|mau3da|md hov 3+ delay - adjusted|0
+~+|1|mf19|pau2da|pm hov 2 delay - adjusted|0
+~+|1|mf20|pau3da|pm hov 3+ delay - adjusted|0
+~+|1|mf21|eau2da|ev hov 2 delay - adjusted|0
+~+|1|mf22|eau3da|ev hov 3+ delay - adjusted|0
+~/ ... utilities
+~+|1|mf23|util01|utility - time period interval 01|0
+~+|1|mf24|util02|utility - time period interval 02|0
+~+|1|mf25|util03|utility - time period interval 03|0
+~+|1|mf26|util04|utility - time period interval 04|0
+~+|1|mf27|util05|utility - time period interval 05|0
+~+|1|mf28|util06|utility - time period interval 06|0
+~+|1|mf29|util07|utility - time period interval 07|0
+~+|1|mf30|util08|utility - time period interval 08|0
+~+|1|mf31|util09|utility - time period interval 09|0
+~+|1|mf32|util10|utility - time period interval 10|0
+~+|1|mf33|util11|utility - time period interval 11|0
+~+|1|mf34|util12|utility - time period interval 12|0
+~+|1|mf35|util13|utility - time period interval 13|0
+~+|1|mf36|util14|utility - time period interval 14|0
+~+|1|mf37|util15|utility - time period interval 15|0
+~+|1|mf38|util16|utility - time period interval 16|0
+~+|1|mf39|util17|utility - time period interval 17|0
+~+|1|mf40|util18|utility - time period interval 18|0
+~+|1|mf41|util19|utility - time period interval 19|0
+~+|1|mf42|util20|utility - time period interval 20|0
+~+|1|mf43|util21|utility - time period interval 21|0
+~+|1|mf44|util22|utility - time period interval 22|0
+~+|1|mf45|util23|utility - time period interval 23|0
+~+|1|mf46|util24|utility - time period interval 24|0
+~+|1|mf47|util25|utility - time period interval 25|0
+~+|1|mf48|util26|utility - time period interval 26|0
+~+|1|mf49|util27|utility - time period interval 27|0
+~+|1|mf50|util28|utility - time period interval 28|0
+~+|1|mf51|util29|utility - time period interval 29|0
+~+|1|mf52|util30|utility - time period interval 30|0
+~+|1|mf53|util31|utility - time period interval 31|0
+~+|1|mf54|util32|utility - time period interval 32|0
+~+|1|mf55|utils|sum of utilities|0
+~/ ... home based work 
+~+|1|mf56|am1sr2|sr2 am a-p tod share - hbwork|0
+~+|1|mf57|md1sr2|sr2 md a-p tod share - hbwork|0
+~+|1|mf58|pm1sr2|sr2 pm a-p tod share - hbwork|0
+~+|1|mf59|ev1sr2|sr2 ev a-p tod share - hbwork|0
+~+|1|mf60|ni1sr2|sr2 ni a-p tod share - hbwork|0
+~+|1|mf61|am1sr3|sr3+ am a-p tod share - hbwork|0
+~+|1|mf62|md1sr3|sr3+ md a-p tod share - hbwork|0
+~+|1|mf63|pm1sr3|sr3+ pm a-p tod share - hbwork|0
+~+|1|mf64|ev1sr3|sr3+ ev a-p tod share - hbwork|0
+~+|1|mf65|ni1sr3|sr3+ ni a-p tod share - hbwork|0
+~+|1|mf66|am2sr2|sr2 am p-a tod share - hbwork|0
+~+|1|mf67|md2sr2|sr2 md p-a tod share - hbwork|0
+~+|1|mf68|pm2sr2|sr2 pm p-a tod share - hbwork|0
+~+|1|mf69|ev2sr2|sr2 ev p-a tod share - hbwork|0
+~+|1|mf70|ni2sr2|sr2 ni p-a tod share - hbwork|0
+~+|1|mf71|am2sr3|sr3+ am p-a tod share - hbwork|0
+~+|1|mf72|md2sr3|sr3+ md p-a tod share - hbwork|0
+~+|1|mf73|pm2sr3|sr3+ pm p-a tod share - hbwork|0
+~+|1|mf74|ev2sr3|sr3+ ev p-a tod share - hbwork|0
+~+|1|mf75|ni2sr3|sr3+ ni p-a tod share - hbwork|0
+~/ ... home based shopping 
+~+|1|mf76|am3sr2|sr2 am a-p tod share - hbshop|0
+~+|1|mf77|md3sr2|sr2 md a-p tod share - hbshop|0
+~+|1|mf78|pm3sr2|sr2 pm a-p tod share - hbshop|0
+~+|1|mf79|ev3sr2|sr2 ev a-p tod share - hbshop|0
+~+|1|mf80|ni3sr2|sr2 ni a-p tod share - hbshop|0
+~+|1|mf81|am3sr3|sr3+ am a-p tod share - hbshop|0
+~+|1|mf82|md3sr3|sr3+ md a-p tod share - hbshop|0
+~+|1|mf83|pm3sr3|sr3+ pm a-p tod share - hbshop|0
+~+|1|mf84|ev3sr3|sr3+ ev a-p tod share - hbshop|0
+~+|1|mf85|ni3sr3|sr3+ ni a-p tod share - hbshop|0
+~+|1|mf86|am4sr2|sr2 am p-a tod share - hbshop|0
+~+|1|mf87|md4sr2|sr2 md p-a tod share - hbshop|0
+~+|1|mf88|pm4sr2|sr2 pm p-a tod share - hbshop|0
+~+|1|mf89|ev4sr2|sr2 ev p-a tod share - hbshop|0
+~+|1|mf90|ni4sr2|sr2 ni p-a tod share - hbshop|0
+~+|1|mf91|am4sr3|sr3+ am p-a tod share - hbshop|0
+~+|1|mf92|md4sr3|sr3+ md p-a tod share - hbshop|0
+~+|1|mf93|pm4sr3|sr3+ pm p-a tod share - hbshop|0
+~+|1|mf94|ev4sr3|sr3+ ev p-a tod share - hbshop|0
+~+|1|mf95|ni4sr3|sr3+ ni p-a tod share - hbshop|0
+~/ ... home based other
+~+|1|mf96|am5sr2|sr2 am a-p tod share - hbother|0
+~+|1|mf97|md5sr2|sr2 md a-p tod share - hbother|0
+~+|1|mf98|pm5sr2|sr2 pm a-p tod share - hbother|0
+~+|1|mf99|ev5sr2|sr2 ev a-p tod share - hbother|0
+~+|1|mf100|ni5sr2|sr2 ni a-p tod share - hbother|0
+~+|1|mf101|am5sr3|sr3+ am a-p tod share - hbother|0
+~+|1|mf102|md5sr3|sr3+ md a-p tod share - hbother|0
+~+|1|mf103|pm5sr3|sr3+ pm a-p tod share - hbother|0
+~+|1|mf104|ev5sr3|sr3+ ev a-p tod share - hbother|0
+~+|1|mf105|ni5sr3|sr3+ ni a-p tod share - hbother|0
+~+|1|mf106|am6sr2|sr2 am p-a tod share - hbother|0
+~+|1|mf107|md6sr2|sr2 md p-a tod share - hbother|0
+~+|1|mf108|pm6sr2|sr2 pm p-a tod share - hbother|0
+~+|1|mf109|ev6sr2|sr2 ev p-a tod share - hbother|0
+~+|1|mf110|ni6sr2|sr2 ni p-a tod share - hbother|0
+~+|1|mf111|am6sr3|sr3+ am p-a tod share - hbother|0
+~+|1|mf112|md6sr3|sr3+ md p-a tod share - hbother|0
+~+|1|mf113|pm6sr3|sr3+ pm p-a tod share - hbother|0
+~+|1|mf114|ev6sr3|sr3+ ev p-a tod share - hbother|0
+~+|1|mf115|ni6sr3|sr3+ ni p-a tod share - hbother|0
+q
+~#
+~/end: 4_initialize_full_matrices.mac
+~/exit emme
+~/
+q

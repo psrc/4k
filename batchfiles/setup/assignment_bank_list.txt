@@ -1,0 +1,5 @@
+assignments\am
+assignments\md
+assignments\pm
+assignments\ev
+assignments\ni

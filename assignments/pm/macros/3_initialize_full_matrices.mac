@@ -1,0 +1,25 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...initialize full matrices
+3.12
+~/ ...vehicle
+~+|1|mf01|pvehda|non-hbw sov vehicle trip table|0
+~+|1|mf02|pvehs2|hov 2 vehicle trip table|0
+~+|1|mf03|pvehs3|hov 3+ vehicle trip table|0
+~+|1|mf04|pvpool|vanpool trip table|0
+~+|1|mf05|phbw1v|hbw income 1 sov vehicle trip table|0
+~+|1|mf06|phbw2v|hbw income 2 sov vehicle trip table|0
+~+|1|mf07|phbw3v|hbw income 3 sov vehicle trip table|0
+~+|1|mf08|phbw4v|hbw income 4 sov vehicle trip table|0
+~+|1|mf09|plttrk|light truck trip table|0
+~+|1|mf10|pmdtrk|medium truck trip table|0
+~+|1|mf11|phvtrk|heavy truck trip table|0
+q
+~#
+~/end: 3_initialize_full_matrices.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,28 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...call module 3.21: matrix calculations
+~/ ...set matrices to 0
+3.21
+~+|1|y|mf"coll"|n|0|||n|2
+~+|1|y|mf"hbo"|n|0|||n|2
+~+|1|y|mf"sch"|n|0|||n|2
+~+|1|y|mf"w1"|n|0|||n|2
+~+|1|y|mf"w2"|n|0|||n|2
+~+|1|y|mf"w3"|n|0|||n|2
+~+|1|y|mf"w4"|n|0|||n|2
+~+|1|y|mf"nhb"|n|0|||n|2
+~+|1|y|mf"pa"|n|0|||n|2
+~+|1|y|mf"ap"|n|0|||n|2
+~+|1|y|mf"tod1"|n|0|||n|2
+~+|1|y|mf"tod2"|n|0|||n|2
+~+|1|y|mf"tod3"|n|0|||n|2
+~+|1|y|mf"tod4"|n|0|||n|2
+~+|1|y|mf"tod5"|n|0|||n|2
+~+|1|y|mf"tod6"|n|0|||n|2
+~+|1|y|mf"daleg"|n|0|||n|2
+q
+~/
+~/ ... do not exit emme from this macro

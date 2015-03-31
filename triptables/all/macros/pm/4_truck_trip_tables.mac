@@ -1,0 +1,22 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\initial\0_reset_matrices.mac
+~/
+reports=pm_trip_tables.rpt
+3.21
+~/ ...light trucks
+~+|1|y|mf"plttrk"|n|mf"lgtod"*.240|||n|2
+~/ ...medium trucks
+~+|1|y|mf"pmdtrk"|n|mf"medod"*.204|||n|2
+~/ ...heavy trucks
+~+|1|y|mf"phvtrk"|n|mf"hvyod"*.189|||n|2
+~#
+q
+~#
+~/end: 4_truck_trip_tables.mac
+~/exit emme
+~/
+q

@@ -5,8 +5,6 @@ reports=3_initialize_iz_tt_origin_matrices.rpt
 ~/
 ~/
 ~/begin: 3_initialize_iz_tt_origin_matrices.mac
-~/ ...set active scenario to 9999
-s=9999
 ~/ ...call module 3.12: input/modify matrices interactively
 ~/ ...initialize origin matrices
 3.12

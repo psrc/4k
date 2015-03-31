@@ -16,8 +16,7 @@ q
 1.31
 ~/ ...open am all mode transit assignment emmebank
 ~+|1
-..\..\..\..\Assignments\Transit\AM\All_Mode\emmebank
-~+|y
+..\..\..\..\Assignments\AM\emmebank
 ~/ ...import am network scenario (1002)
 ~+|2|1|3|1002||n
 q

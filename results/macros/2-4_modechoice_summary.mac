@@ -1,0 +1,272 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- Regional Mode Choice Summary
+~/ ---------------------------------------------------------------
+~/ --- Load Ensembles
+3.01
+~+|4|all|y
+~+|1|..\input\model\ensembles\parking_gz.ens|2
+~+|1|..\input\model\ensembles\districts19_ga.ens|2
+~+|1|..\input\model\ensembles\seattlecbd_gb.ens|2
+~+|1|..\input\model\ensembles\counties_gc.ens|2
+~+|1|..\input\model\ensembles\districts6_gk.ens|2
+~+|1|..\input\model\ensembles\kitsap_gl.ens|2
+q
+~/ ---------------------------------------------------------------
+~/ --- College Mode Choice Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Mode Shares into Temporary Matrices
+..\modechoice\all\emmebank
+~+|2|3|3|mf"coshda"|mf"temp01"|n|y
+~+|2|3|3|mf"coshs2"|mf"temp02"|n|y
+~+|2|3|3|mf"coshs3"|mf"temp03"|n|y
+~+|2|3|3|mf"coshtw"|mf"temp04"|n|y
+~+|2|3|3|mf"coshwk"|mf"temp05"|n|y
+~+|2|3|3|mf"coshbk"|mf"temp06"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\hbcollege\emmebank
+~+|2|3|3|mf"coldst"|mf"temp07"|n|y
+q
+~/ --- Summarize College Trips for Internal Zones
+3.21
+~+|1|y|ms661|y|cldar|DY Coll Drive Alone - Region|0|mf"temp01"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms662|y|cls2r|DY Coll HOV 2 - Region|0|mf"temp02"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms663|y|cls3r|DY Coll HOV 3+ - Region|0|mf"temp03"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms664|y|cltwr|DY Coll Transit Walk - Region|0|mf"temp04"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms665|y|clwkr|DY Coll Walk - Region|0|mf"temp05"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms666|y|clbkr|DY Coll Bike - Region|0|mf"temp06"*mf"temp07"|||y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Other Mode Choice Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Fist Copy Mode Shares into Temporary Matrices
+..\modechoice\all\emmebank
+~+|2|3|3|mf"nwshda"|mf"temp01"|n|y
+~+|2|3|3|mf"nwshs2"|mf"temp02"|n|y
+~+|2|3|3|mf"nwshs3"|mf"temp03"|n|y
+~+|2|3|3|mf"nwshtw"|mf"temp04"|n|y
+~+|2|3|3|mf"nwshwk"|mf"temp05"|n|y
+~+|2|3|3|mf"nwshbk"|mf"temp06"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\hbother\emmebank
+~+|2|3|3|mf"hbodst"|mf"temp07"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\hbshop\emmebank
+~+|2|3|3|mf"hspdst"|mf"temp08"|n|y
+q
+~/ --- Summarize HBO Trips for Internal Zones
+3.21
+~+|1|y|ms667|y|hodar|DY HBO Drive Alone - Region|0|mf"temp01"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms668|y|hos2r|DY HBO HOV 2 - Region|0|mf"temp02"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms669|y|hos3r|DY HBO HOV 3+ - Region|0|mf"temp03"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms670|y|hotwr|DY HBO Transit Walk - Region|0|mf"temp04"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms671|y|howkr|DY HBO Walk - Region|0|mf"temp05"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms672|y|hobkr|DY HBO Bike - Region|0|mf"temp06"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Non-Home Based Mode Choice Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Fist Copy Mode Shares into Temporary Matrices
+..\modechoice\all\emmebank
+~+|2|3|3|mf"nhshda"|mf"temp01"|n|y
+~+|2|3|3|mf"nhshs2"|mf"temp02"|n|y
+~+|2|3|3|mf"nhshs3"|mf"temp03"|n|y
+~+|2|3|3|mf"nhshtw"|mf"temp04"|n|y
+~+|2|3|3|mf"nhshwk"|mf"temp05"|n|y
+~+|2|3|3|mf"nhshbk"|mf"temp06"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\nhbother\emmebank
+~+|2|3|3|mf"otodst"|mf"temp07"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\nhbwork\emmebank
+~+|2|3|3|mf"wkodst"|mf"temp08"|n|y
+q
+~/ --- Summarize NHB Trips for Internal Zones
+3.21
+~+|1|y|ms673|y|nhdar|DY NHB Drive Alone - Region|0|mf"temp01"*(mf"temp07"+mf"temp08")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms674|y|nhs2r|DY NHB HOV 2 - Region|0|mf"temp02"*(mf"temp07"+mf"temp08")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms675|y|nhs3r|DY NHB HOV 3+ - Region|0|mf"temp03"*(mf"temp07"+mf"temp08")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms676|y|nhtwr|DY NHB Transit Walk - Region|0|mf"temp04"*(mf"temp07"+mf"temp08")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms677|y|nhwkr|DY NHB Walk - Region|0|mf"temp05"*(mf"temp07"+mf"temp08")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms678|y|nhbkr|DY NHB Bike - Region|0|mf"temp06"*(mf"temp07"+mf"temp08")|||y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- School Mode Choice Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Mode Shares into Temporary Matrices
+..\modechoice\all\emmebank
+~+|2|3|3|mf"scshda"|mf"temp01"|n|y
+~+|2|3|3|mf"scshs2"|mf"temp02"|n|y
+~+|2|3|3|mf"scshs3"|mf"temp03"|n|y
+~+|2|3|3|mf"scshtw"|mf"temp04"|n|y
+~+|2|3|3|mf"scshwk"|mf"temp05"|n|y
+~+|2|3|3|mf"scshbk"|mf"temp06"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\hbschool\emmebank
+~+|2|3|3|mf"schdst"|mf"temp07"|n|y
+q
+~/ --- Summarize School Trips for Internal Zones
+3.21
+~+|1|y|ms679|y|sldar|DY School Drive Alone - Region|0|mf"temp01"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms680|y|sls2r|DY School HOV 2 - Region|0|mf"temp02"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms681|y|sls3r|DY School HOV 3+ - Region|0|mf"temp03"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms682|y|sltwr|DY School Transit Walk - Region|0|mf"temp04"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms683|y|slwkr|DY School Walk - Region|0|mf"temp05"*mf"temp07"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms684|y|slbkr|DY School Bike - Region|0|mf"temp06"*mf"temp07"|||y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Work Income #1 Mode Choice Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Mode Shares into Temporary Matrices
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w1shda"|mf"temp01"|n|y
+~+|2|3|3|mf"w1shs2"|mf"temp02"|n|y
+~+|2|3|3|mf"w1shs3"|mf"temp03"|n|y
+~+|2|3|3|mf"w1shtw"|mf"temp04"|n|y
+~+|2|3|3|mf"w1shtd"|mf"temp05"|n|y
+~+|2|3|3|mf"w1shwk"|mf"temp06"|n|y
+~+|2|3|3|mf"w1shbk"|mf"temp07"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\hbwork_inc1\emmebank
+~+|2|3|3|mf"hbwds1"|mf"temp08"|n|y
+q
+~/ --- Summarize Home Based Work Income #1 Trips for Internal Zones
+3.21
+~+|1|y|ms685|y|w1dar|DY HBW #1 Drive Alone - Region|0|mf"temp01"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms686|y|w1s2r|DY HBW #1 HOV 2 - Region|0|mf"temp02"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms687|y|w1s3r|DY HBW #1 HOV 3+ - Region|0|mf"temp03"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms688|y|w1twr|DY HBW #1 Transit Walk - Region|0|mf"temp04"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms689|y|w1tdr|DY HBW #1 Transit Auto - Region|0|mf"temp05"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms690|y|w1wkr|DY HBW #1 Walk - Region|0|mf"temp06"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms691|y|w1bkr|DY HBW #1 Bike - Region|0|mf"temp07"*mf"temp08"|||y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Work Income #2 Mode Choice Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Mode Shares into Temporary Matrices
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w2shda"|mf"temp01"|n|y
+~+|2|3|3|mf"w2shs2"|mf"temp02"|n|y
+~+|2|3|3|mf"w2shs3"|mf"temp03"|n|y
+~+|2|3|3|mf"w2shtw"|mf"temp04"|n|y
+~+|2|3|3|mf"w2shtd"|mf"temp05"|n|y
+~+|2|3|3|mf"w2shwk"|mf"temp06"|n|y
+~+|2|3|3|mf"w2shbk"|mf"temp07"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\hbwork_inc2\emmebank
+~+|2|3|3|mf"hbwds2"|mf"temp08"|n|y
+q
+~/ --- Summarize Home Based Work Income #2 Trips for Internal Zones
+3.21
+~+|1|y|ms692|y|w2dar|DY HBW #2 Drive Alone - Region|0|mf"temp01"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms693|y|w2s2r|DY HBW #2 HOV 2 - Region|0|mf"temp02"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms694|y|w2s3r|DY HBW #2 HOV 3+ - Region|0|mf"temp03"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms695|y|w2twr|DY HBW #2 Transit Walk - Region|0|mf"temp04"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms696|y|w2tdr|DY HBW #2 Transit Auto - Region|0|mf"temp05"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms697|y|w2wkr|DY HBW #2 Walk - Region|0|mf"temp06"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms698|y|w2bkr|DY HBW #2 Bike - Region|0|mf"temp07"*mf"temp08"|||y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Work Income #3 Mode Choice Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Mode Shares into Temporary Matrices
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w3shda"|mf"temp01"|n|y
+~+|2|3|3|mf"w3shs2"|mf"temp02"|n|y
+~+|2|3|3|mf"w3shs3"|mf"temp03"|n|y
+~+|2|3|3|mf"w3shtw"|mf"temp04"|n|y
+~+|2|3|3|mf"w3shtd"|mf"temp05"|n|y
+~+|2|3|3|mf"w3shwk"|mf"temp06"|n|y
+~+|2|3|3|mf"w3shbk"|mf"temp07"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\hbwork_inc3\emmebank
+~+|2|3|3|mf"hbwds3"|mf"temp08"|n|y
+q
+~/ --- Summarize Home Based Work Income #3 Trips for Internal Zones
+3.21
+~+|1|y|ms699|y|w3dar|DY HBW #3 Drive Alone - Region|0|mf"temp01"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms700|y|w3s2r|DY HBW #3 HOV 2 - Region|0|mf"temp02"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms701|y|w3s3r|DY HBW #3 HOV 3+ - Region|0|mf"temp03"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms702|y|w3twr|DY HBW #3 Transit Walk - Region|0|mf"temp04"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms703|y|w3tdr|DY HBW #3 Transit Auto - Region|0|mf"temp05"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms704|y|w3wkr|DY HBW #3 Walk - Region|0|mf"temp06"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms705|y|w3bkr|DY HBW #3 Bike - Region|0|mf"temp07"*mf"temp08"|||y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Home Based Work Income #4 Mode Choice Summary
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy Mode Shares into Temporary Matrices
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w4shda"|mf"temp01"|n|y
+~+|2|3|3|mf"w4shs2"|mf"temp02"|n|y
+~+|2|3|3|mf"w4shs3"|mf"temp03"|n|y
+~+|2|3|3|mf"w4shtw"|mf"temp04"|n|y
+~+|2|3|3|mf"w4shtd"|mf"temp05"|n|y
+~+|2|3|3|mf"w4shwk"|mf"temp06"|n|y
+~+|2|3|3|mf"w4shbk"|mf"temp07"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution into Temporary Matrices
+..\distribution\hbwork_inc4\emmebank
+~+|2|3|3|mf"hbwds4"|mf"temp08"|n|y
+q
+~/ --- Summarize Home Based Work Income #4 Trips for Internal Zones
+3.21
+~+|1|y|ms706|y|w4dar|DY HBW #4 Drive Alone - Region|0|mf"temp01"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms707|y|w4s2r|DY HBW #4 HOV 2 - Region|0|mf"temp02"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms708|y|w4s3r|DY HBW #4 HOV 3+ - Region|0|mf"temp03"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms709|y|w4twr|DY HBW #4 Transit Walk - Region|0|mf"temp04"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms710|y|w4tdr|DY HBW #4 Transit Auto - Region|0|mf"temp05"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms711|y|w4wkr|DY HBW #4 Walk - Region|0|mf"temp06"*mf"temp08"|||y|1,%1%||1,%1%||||2
+~+|1|y|ms712|y|w4bkr|DY HBW #4 Bike - Region|0|mf"temp07"*mf"temp08"|||y|1,%1%||1,%1%||||2
+q
+~/
+~/end: 2-4_mode_Choice_summary.mac
+~/exit emme
+q

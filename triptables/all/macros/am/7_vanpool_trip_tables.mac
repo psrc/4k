@@ -1,0 +1,17 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\initial\0_reset_matrices.mac
+~/
+reports=am_trip_tables.rpt
+~/ ...construct am o-d vehicle trip tables
+3.21
+~+|1|y|mf"avpool"|n|mf"dvpool"*.125|||n|2
+q
+~#
+~/end: 7_vanpool_trip_tables.mac
+~/exit emme
+~/
+q

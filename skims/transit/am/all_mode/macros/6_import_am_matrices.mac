@@ -9,7 +9,7 @@ reports=6_import_am_matrices.rpt
 1.31
 ~/ ...open am all mode transit assignment emmebank
 ~+|1
-..\..\..\..\Assignments\Transit\AM\All_Mode\emmebank
+..\..\..\..\Assignments\AM\emmebank
 ~/ ...import am all mode transit skim matrices
 ~+|2|3|3|mf"atrnwa"|mf"atrnwa"|n|y
 ~+|2|3|3|mf"atrtwa"|mf"atrtwa"|n|y
@@ -25,13 +25,13 @@ q
 3.11
 ~/ ...input walk access times at production end
 ~# ...enter file name for batch input
-..\..\..\..\input\%1%\walkaccess\origin_walkaccess.in
+..\..\..\..\input\walkaccess\origin_walkaccess.in
 ~/ ...write report file
 2
 3.11
 ~/ ...input walk access times at attraction end
 ~# ...enter file name for batch input
-..\..\..\..\input\%1%\walkaccess\destination_walkaccess.in
+..\..\..\..\input\walkaccess\destination_walkaccess.in
 ~/ ...write report file
 2
 ~/end: 6_import_am_matrices.mac

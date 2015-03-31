@@ -1,0 +1,33 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=6_initialize_full_matrices.rpt
+~/
+~/
+~/begin: 6_initialize_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|intflg|flag=1 for non ext-ext od pairs|0
+~#
+~+|1|mf02|blgtcs|light truck bidirectional cost|0
+~+|1|mf03|bmedcs|medium truck bidirectional cost|0
+~+|1|mf04|bhvycs|heavy truck bidirectional cost|0
+~#
+~+|1|mf05|blgtds|light truck bidirectional dist|0
+~+|1|mf06|bmedds|medium truck bidirectional dist|0
+~+|1|mf07|bhvyds|heavy truck bidirectional dist|0
+~#
+~+|1|mf08|lgtimp|light truck distribution impedances|0
+~+|1|mf09|medimp|medium truck distribution impedances|0
+~+|1|mf10|hvyimp|heavy truck distribution impedances|0
+~#
+~+|1|mf11|lgtdis|light truck distribution|0
+~+|1|mf12|meddis|medium truck distribution|0
+~+|1|mf13|hvydis|heavy truck distribution|0
+q
+~#
+~/end: 6_initialize_full_matrices.mac
+~/exit emme
+~/
+q

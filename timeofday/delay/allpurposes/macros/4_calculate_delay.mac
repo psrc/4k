@@ -1,0 +1,48 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=delay.rpt
+~/
+~/ ...calculate basic delay matrices
+3.21
+~/ ...sov non-work
+~+|1|y|mf"aau1dl"|n|(mf"aau1cs"-mf"nau1cs").max.0|||n|2
+~+|1|y|mf"mau1dl"|n|(mf"mau1cs"-mf"nau1cs").max.0|||n|2
+~+|1|y|mf"pau1dl"|n|(mf"pau1cs"-mf"nau1cs").max.0|||n|2
+~+|1|y|mf"eau1dl"|n|(mf"eau1cs"-mf"nau1cs").max.0|||n|2
+~/ ...hov 2
+~+|1|y|mf"aau2dl"|n|(mf"aau2cs"-mf"nau2cs").max.0|||n|2
+~+|1|y|mf"mau2dl"|n|(mf"mau2cs"-mf"nau2cs").max.0|||n|2
+~+|1|y|mf"pau2dl"|n|(mf"pau2cs"-mf"nau2cs").max.0|||n|2
+~+|1|y|mf"eau2dl"|n|(mf"eau2cs"-mf"nau2cs").max.0|||n|2
+~/ ...hov 3+
+~+|1|y|mf"aau3dl"|n|(mf"aau3cs"-mf"nau3cs").max.0|||n|2
+~+|1|y|mf"mau3dl"|n|(mf"mau3cs"-mf"nau3cs").max.0|||n|2
+~+|1|y|mf"pau3dl"|n|(mf"pau3cs"-mf"nau3cs").max.0|||n|2
+~+|1|y|mf"eau3dl"|n|(mf"eau3cs"-mf"nau3cs").max.0|||n|2
+~/ ...hbw sov income 1
+~+|1|y|mf"aa1dl1"|n|(mf"aa1cs1"-mf"na1cs1").max.0|||n|2
+~+|1|y|mf"ma1dl1"|n|(mf"ma1cs1"-mf"na1cs1").max.0|||n|2
+~+|1|y|mf"pa1dl1"|n|(mf"pa1cs1"-mf"na1cs1").max.0|||n|2
+~+|1|y|mf"ea1dl1"|n|(mf"ea1cs1"-mf"na1cs1").max.0|||n|2
+~/ ...hbw sov income 2
+~+|1|y|mf"aa1dl2"|n|(mf"aa1cs2"-mf"na1cs2").max.0|||n|2
+~+|1|y|mf"ma1dl2"|n|(mf"ma1cs2"-mf"na1cs2").max.0|||n|2
+~+|1|y|mf"pa1dl2"|n|(mf"pa1cs2"-mf"na1cs2").max.0|||n|2
+~+|1|y|mf"ea1dl2"|n|(mf"ea1cs2"-mf"na1cs2").max.0|||n|2
+~/ ...hbw sov income 3
+~+|1|y|mf"aa1dl3"|n|(mf"aa1cs3"-mf"na1cs3").max.0|||n|2
+~+|1|y|mf"ma1dl3"|n|(mf"ma1cs3"-mf"na1cs3").max.0|||n|2
+~+|1|y|mf"pa1dl3"|n|(mf"pa1cs3"-mf"na1cs3").max.0|||n|2
+~+|1|y|mf"ea1dl3"|n|(mf"ea1cs3"-mf"na1cs3").max.0|||n|2
+~/ ...hbw sov income 4
+~+|1|y|mf"aa1dl4"|n|(mf"aa1cs4"-mf"na1cs4").max.0|||n|2
+~+|1|y|mf"ma1dl4"|n|(mf"ma1cs4"-mf"na1cs4").max.0|||n|2
+~+|1|y|mf"pa1dl4"|n|(mf"pa1cs4"-mf"na1cs4").max.0|||n|2
+~+|1|y|mf"ea1dl4"|n|(mf"ea1cs4"-mf"na1cs4").max.0|||n|2
+q
+~#
+~/end: 4_calculate_delay.mac
+~/exit emme
+~/
+q

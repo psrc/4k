@@ -1,0 +1,61 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\initial\0_reset_matrices.mac
+~/
+reports=ev_trip_tables.rpt
+~/ ... import sov nonwork mode shares
+1.31
+~+|1
+..\..\modechoice\all\emmebank
+~+|2|3|3|mf"coshda"|mf"coll"|n|y
+~+|2|3|3|mf"nwshda"|mf"hbo"|n|y
+~+|2|3|3|mf"scshda"|mf"sch"|n|y
+~+|2|3|3|mf"nhshda"|mf"nhb"|n|y
+q
+~/ ... import sov nonwork time of day shares
+1.31
+~+|1
+~/ ...hb other sov
+..\..\timeofday\sov\emmebank
+~+|2|3|3|mf"ev5ns"|mf"tod5"|n|y
+~+|2|3|3|mf"ev6ns"|mf"tod6"|n|y
+~+|2|3|3|mf"ev3ns"|mf"tod3"|n|y
+~+|2|3|3|mf"ev4ns"|mf"tod4"|n|y
+q
+~/ ...construct ev p-a person trip tables
+3.21
+~/ ...sov non-work
+~+|1|y|mf"pa"|n
+mf"coldst"*mf"coll"*0.043*0.514+
+mf"hbodst"*mf"hbo"*mf"tod4"*0.479+
+mf"schdst"*0.676*mf"sch"*0.009*0.556+
+mf"hspdst"*mf"hbo"*mf"tod6"*0.365+
+mf"otodst"*mf"nhb"*0.132/2+
+mf"wkodst"*mf"nhb"*0.064/2
+~+|||n|2
+q
+~/ ...construct ev a-p person trip tables
+3.21
+~/ ...sov non-work
+~+|1|y|mf"ap"|n
+mf"coldst"*mf"coll"*0.269*0.486+
+mf"hbodst"*mf"hbo"*mf"tod3"*0.521+
+mf"schdst"*0.676*mf"sch"*0.113*0.444+
+mf"hspdst"*mf"hbo"*mf"tod5"*0.635+
+mf"otodst"*mf"nhb"*0.132/2+
+mf"wkodst"*mf"nhb"*0.064/2
+~+|||n|2
+q
+~/ ...construct ev o-d vehicle trip tables
+3.21
+~/ ...sov non-work
+~+|1|y|mf"evehda"|n|mf"pa"+mf"ap"'+0.173*mf"thru"|||n|2
+q
+~#
+~/end: 8_sov_nw_trip_tables.mac
+~/exit emme
+~/
+q

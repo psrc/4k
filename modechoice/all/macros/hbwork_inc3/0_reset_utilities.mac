@@ -1,0 +1,25 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=hbw3.rpt
+~/
+~/ ...call module 3.21: matrix calculations
+~/ ...set exponentiated utilities to 0
+3.21
+~+|1|y|mf"euda"|n|0|||n|2
+~+|1|y|mf"eus2"|n|0|||n|2
+~+|1|y|mf"eus3"|n|0|||n|2
+~+|1|y|mf"eutw"|n|0|||n|2
+~+|1|y|mf"eutd"|n|0|||n|2
+~+|1|y|mf"eubk"|n|0|||n|2
+~+|1|y|mf"euwk"|n|0|||n|2
+~+|1|y|mf"eusm"|n|0|||n|2
+~+|1|y|mf"dabct"|n|0|||n|2
+~+|1|y|mf"s2bct"|n|0|||n|2
+~+|1|y|mf"s3bct"|n|0|||n|2
+q
+~#
+~/end: 0_reset_utilities.mac
+~/exit emme
+~/
+q

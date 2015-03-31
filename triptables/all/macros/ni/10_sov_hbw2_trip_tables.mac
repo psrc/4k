@@ -1,0 +1,51 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\initial\0_reset_matrices.mac
+~/
+reports=ni_trip_tables.rpt
+~/ ... import sov mode shares
+1.31
+~+|1
+..\..\modechoice\all\emmebank
+~+|2|3|3|mf"w2shda"|mf"w2"|n|y
+q
+1.31
+~+|1
+~/ ...hb work hov
+..\..\timeofday\sov\emmebank
+~+|2|3|3|mf"ni1ns2"|mf"tod1"|n|y
+~+|2|3|3|mf"ni2ns2"|mf"tod2"|n|y
+q
+1.31
+~+|1
+~/ ...pnr
+..\ParkAndRide\Income2\emmebank
+~+|2|3|3|mf"daleg2"|mf"daleg"|n|y
+q
+~/ ...construct ni p-a person trip tables
+3.21
+~+|1|y|mf"pa"|n
+mf"hbwds2"*mf"w2"*mf"tod2"*0.538
+~+|||n|2
+q
+~/ ...construct ni a-p person trip tables
+3.21
+~+|1|y|mf"ap"|n
+mf"hbwds2"*mf"w2"*mf"tod1"*0.462
+~+|||n|2
+q
+~/ ...construct ni o-d vehicle trip tables
+3.21
+~+|1|y|mf"nhbw2v"|n|mf"pa"+mf"ap"'+
+mf"daleg"*0.199*0.554+
+mf"daleg"'*0.106*0.446
+~+|||n|2
+q
+~#
+~/end: 10_sov_hbw2_trip_tables.mac
+~/exit emme
+~/
+q

@@ -1,0 +1,348 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- Regional Mode Choice Summary
+~/ ---------------------------------------------------------------
+~/ --- Load Ensembles
+3.01
+~+|4|all|y
+~+|1|..\input\model\ensembles\parking_gz.ens|2
+~+|1|..\input\model\ensembles\districts19_ga.ens|2
+~+|1|..\input\model\ensembles\seattlecbd_gb.ens|2
+~+|1|..\input\model\ensembles\counties_gc.ens|2
+~+|1|..\input\model\ensembles\districts6_gk.ens|2
+~+|1|..\input\model\ensembles\kitsap_gl.ens|2
+~+|1|..\input\model\ensembles\centers_gr.ens|2
+q
+~/ ---------------------------------------------------------------
+~/ --- Work Trips by Mode
+~/ ---------------------------------------------------------------
+~/ --- Copy Work Trip Distribution into Temporary Matrices
+1.31
+~+|1
+..\distribution\hbwork_inc1\emmebank
+~+|2|3|3|mf"hbwds1"|mf"temp01"|n|y
+q
+1.31
+~+|1
+..\distribution\hbwork_inc2\emmebank
+~+|2|3|3|mf"hbwds2"|mf"temp02"|n|y
+q
+1.31
+~+|1
+..\distribution\hbwork_inc2\emmebank
+~+|2|3|3|mf"hbwds2"|mf"temp03"|n|y
+q
+1.31
+~+|1
+..\distribution\hbwork_inc2\emmebank
+~+|2|3|3|mf"hbwds2"|mf"temp04"|n|y
+q
+~/ 
+~/ --- Copy SOV Work Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w1shda"|mf"temp05"|n|y
+~+|2|3|3|mf"w2shda"|mf"temp06"|n|y
+~+|2|3|3|mf"w3shda"|mf"temp07"|n|y
+~+|2|3|3|mf"w4shda"|mf"temp08"|n|y
+q
+~/ --- Calculate Work SOV Trips
+~+|3.21|1|y|mf"sovwk"|n
+~+|(mf"temp01"*mf"temp05")+
+(mf"temp02"*mf"temp06")+
+(mf"temp03"*mf"temp07")+
+(mf"temp04"*mf"temp08")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy HOV 2 Work Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w1shs2"|mf"temp05"|n|y
+~+|2|3|3|mf"w2shs2"|mf"temp06"|n|y
+~+|2|3|3|mf"w3shs2"|mf"temp07"|n|y
+~+|2|3|3|mf"w4shs2"|mf"temp08"|n|y
+q
+~/ --- Calculate Work HOV 2+ Trips
+~+|3.21|1|y|mf"hovwk"|n
+~+|mf"hovwk"+(mf"temp01"*mf"temp05")+
+(mf"temp02"*mf"temp06")+
+(mf"temp03"*mf"temp07")+
+(mf"temp04"*mf"temp08")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy HOV 3+ Work Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w1shs3"|mf"temp05"|n|y
+~+|2|3|3|mf"w2shs3"|mf"temp06"|n|y
+~+|2|3|3|mf"w3shs3"|mf"temp07"|n|y
+~+|2|3|3|mf"w4shs3"|mf"temp08"|n|y
+q
+~/ --- Calculate Work HOV 2+ Trips
+~+|3.21|1|y|mf"hovwk"|n
+~+|mf"hovwk"+(mf"temp01"*mf"temp05")+
+(mf"temp02"*mf"temp06")+
+(mf"temp03"*mf"temp07")+
+(mf"temp04"*mf"temp08")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy Transit Walk Work Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w1shtw"|mf"temp05"|n|y
+~+|2|3|3|mf"w2shtw"|mf"temp06"|n|y
+~+|2|3|3|mf"w3shtw"|mf"temp07"|n|y
+~+|2|3|3|mf"w4shtw"|mf"temp08"|n|y
+q
+~/ --- Calculate Work Transit Trips
+~+|3.21|1|y|mf"trnwk"|n
+~+|mf"trnwk"+(mf"temp01"*mf"temp05")+
+(mf"temp02"*mf"temp06")+
+(mf"temp03"*mf"temp07")+
+(mf"temp04"*mf"temp08")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy Transit Drive Work Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w1shtd"|mf"temp05"|n|y
+~+|2|3|3|mf"w2shtd"|mf"temp06"|n|y
+~+|2|3|3|mf"w3shtd"|mf"temp07"|n|y
+~+|2|3|3|mf"w4shtd"|mf"temp08"|n|y
+q
+~/ --- Calculate Work Transit Trips
+~+|3.21|1|y|mf"trnwk"|n
+~+|mf"trnwk"+(mf"temp01"*mf"temp05")+
+(mf"temp02"*mf"temp06")+
+(mf"temp03"*mf"temp07")+
+(mf"temp04"*mf"temp08")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy Walk Work Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w1shwk"|mf"temp05"|n|y
+~+|2|3|3|mf"w2shwk"|mf"temp06"|n|y
+~+|2|3|3|mf"w3shwk"|mf"temp07"|n|y
+~+|2|3|3|mf"w4shwk"|mf"temp08"|n|y
+q
+~/ --- Calculate Work Walk Trips
+~+|3.21|1|y|mf"wbkwk"|n
+~+|mf"wbkwk"+(mf"temp01"*mf"temp05")+
+(mf"temp02"*mf"temp06")+
+(mf"temp03"*mf"temp07")+
+(mf"temp04"*mf"temp08")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Copy Bike Work Mode Shares into Temporary Matrices
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"w1shbk"|mf"temp05"|n|y
+~+|2|3|3|mf"w2shbk"|mf"temp06"|n|y
+~+|2|3|3|mf"w3shbk"|mf"temp07"|n|y
+~+|2|3|3|mf"w4shbk"|mf"temp08"|n|y
+q
+~/ --- Calculate Work Transit Trips
+~+|3.21|1|y|mf"wbkwk"|n
+~+|mf"wbkwk"+(mf"temp01"*mf"temp05")+
+(mf"temp02"*mf"temp06")+
+(mf"temp03"*mf"temp07")+
+(mf"temp04"*mf"temp08")
+~+|||y|1,%1%||1,%1%||2
+q
+~/ --- Summarize Work Trip Mode Shares Destined to Regional Centers
+3.21
+~/ --- RGC 1
+~+|1|y|ms1021|y|wkda1|DY Work SOV - To RGC1|0|mf"sovwk"|||y|1,%1%||gr1||||2
+~+|1|y|ms1022|y|wksr1|DY Work HOV 2+ - To RGC1|0|mf"hovwk"|||y|1,%1%||gr1||||2
+~+|1|y|ms1023|y|wktr1|DY Work Transit - To RGC1|0|mf"trnwk"|||y|1,%1%||gr1||||2
+~+|1|y|ms1024|y|wkwb1|DY Work Walk-Bike - To RGC1|0|mf"wbkwk"|||y|1,%1%||gr1||||2
+~/ --- RGC 2
+~+|1|y|ms1025|y|wkda2|DY Work SOV - To RGC2|0|mf"sovwk"|||y|1,%1%||gr2||||2
+~+|1|y|ms1026|y|wksr2|DY Work HOV 2+ - To RGC2|0|mf"hovwk"|||y|1,%1%||gr2||||2
+~+|1|y|ms1027|y|wktr2|DY Work Transit - To RGC2|0|mf"trnwk"|||y|1,%1%||gr2||||2
+~+|1|y|ms1028|y|wkwb2|DY Work Walk-Bike - To RGC2|0|mf"wbkwk"|||y|1,%1%||gr2||||2
+~/ --- RGC 3
+~+|1|y|ms1029|y|wkda3|DY Work SOV - To RGC3|0|mf"sovwk"|||y|1,%1%||gr3||||2
+~+|1|y|ms1030|y|wksr3|DY Work HOV 2+ - To RGC3|0|mf"hovwk"|||y|1,%1%||gr3||||2
+~+|1|y|ms1031|y|wktr3|DY Work Transit - To RGC3|0|mf"trnwk"|||y|1,%1%||gr3||||2
+~+|1|y|ms1032|y|wkwb3|DY Work Walk-Bike - To RGC3|0|mf"wbkwk"|||y|1,%1%||gr3||||2
+~/ --- RGC 4
+~+|1|y|ms1033|y|wkda4|DY Work SOV - To RGC4|0|mf"sovwk"|||y|1,%1%||gr4||||2
+~+|1|y|ms1034|y|wksr4|DY Work HOV 2+ - To RGC4|0|mf"hovwk"|||y|1,%1%||gr4||||2
+~+|1|y|ms1035|y|wktr4|DY Work Transit - To RGC4|0|mf"trnwk"|||y|1,%1%||gr4||||2
+~+|1|y|ms1036|y|wkwb4|DY Work Walk-Bike - To RGC4|0|mf"wbkwk"|||y|1,%1%||gr4||||2
+~/ --- RGC 5
+~+|1|y|ms1037|y|wkda5|DY Work SOV - To RGC5|0|mf"sovwk"|||y|1,%1%||gr5||||2
+~+|1|y|ms1038|y|wksr5|DY Work HOV 2+ - To RGC5|0|mf"hovwk"|||y|1,%1%||gr5||||2
+~+|1|y|ms1039|y|wktr5|DY Work Transit - To RGC5|0|mf"trnwk"|||y|1,%1%||gr5||||2
+~+|1|y|ms1040|y|wkwb5|DY Work Walk-Bike - To RGC5|0|mf"wbkwk"|||y|1,%1%||gr5||||2
+~/ --- RGC 6
+~+|1|y|ms1041|y|wkda6|DY Work SOV - To RGC6|0|mf"sovwk"|||y|1,%1%||gr6||||2
+~+|1|y|ms1042|y|wksr6|DY Work HOV 2+ - To RGC6|0|mf"hovwk"|||y|1,%1%||gr6||||2
+~+|1|y|ms1043|y|wktr6|DY Work Transit - To RGC6|0|mf"trnwk"|||y|1,%1%||gr6||||2
+~+|1|y|ms1044|y|wkwb6|DY Work Walk-Bike - To RGC6|0|mf"wbkwk"|||y|1,%1%||gr6||||2
+~/ --- RGC 7
+~+|1|y|ms1045|y|wkda7|DY Work SOV - To RGC7|0|mf"sovwk"|||y|1,%1%||gr7||||2
+~+|1|y|ms1046|y|wksr7|DY Work HOV 2+ - To RGC7|0|mf"hovwk"|||y|1,%1%||gr7||||2
+~+|1|y|ms1047|y|wktr7|DY Work Transit - To RGC7|0|mf"trnwk"|||y|1,%1%||gr7||||2
+~+|1|y|ms1048|y|wkwb7|DY Work Walk-Bike - To RGC7|0|mf"wbkwk"|||y|1,%1%||gr7||||2
+~/ --- RGC 8
+~+|1|y|ms1049|y|wkda8|DY Work SOV - To RGC8|0|mf"sovwk"|||y|1,%1%||gr8||||2
+~+|1|y|ms1050|y|wksr8|DY Work HOV 2+ - To RGC8|0|mf"hovwk"|||y|1,%1%||gr8||||2
+~+|1|y|ms1051|y|wktr8|DY Work Transit - To RGC8|0|mf"trnwk"|||y|1,%1%||gr8||||2
+~+|1|y|ms1052|y|wkwb8|DY Work Walk-Bike - To RGC8|0|mf"wbkwk"|||y|1,%1%||gr8||||2
+~/ --- RGC 9
+~+|1|y|ms1053|y|wkda9|DY Work SOV - To RGC9|0|mf"sovwk"|||y|1,%1%||gr9||||2
+~+|1|y|ms1054|y|wksr9|DY Work HOV 2+ - To RGC9|0|mf"hovwk"|||y|1,%1%||gr9||||2
+~+|1|y|ms1055|y|wktr9|DY Work Transit - To RGC9|0|mf"trnwk"|||y|1,%1%||gr9||||2
+~+|1|y|ms1056|y|wkwb9|DY Work Walk-Bike - To RGC9|0|mf"wbkwk"|||y|1,%1%||gr9||||2
+~/ --- RGC 10
+~+|1|y|ms1057|y|wkda10|DY Work SOV - To RGC10|0|mf"sovwk"|||y|1,%1%||gr10||||2
+~+|1|y|ms1058|y|wksr10|DY Work HOV 2+ - To RGC10|0|mf"hovwk"|||y|1,%1%||gr10||||2
+~+|1|y|ms1059|y|wktr10|DY Work Transit - To RGC10|0|mf"trnwk"|||y|1,%1%||gr10||||2
+~+|1|y|ms1060|y|wkwb10|DY Work Walk-Bike - To RGC10|0|mf"wbkwk"|||y|1,%1%||gr10||||2
+~/ --- RGC 11
+~+|1|y|ms1061|y|wkda11|DY Work SOV - To RGC11|0|mf"sovwk"|||y|1,%1%||gr11||||2
+~+|1|y|ms1062|y|wksr11|DY Work HOV 2+ - To RGC11|0|mf"hovwk"|||y|1,%1%||gr11||||2
+~+|1|y|ms1063|y|wktr11|DY Work Transit - To RGC11|0|mf"trnwk"|||y|1,%1%||gr11||||2
+~+|1|y|ms1064|y|wkwb11|DY Work Walk-Bike - To RGC11|0|mf"wbkwk"|||y|1,%1%||gr11||||2
+~/ --- RGC 12
+~+|1|y|ms1065|y|wkda12|DY Work SOV - To RGC12|0|mf"sovwk"|||y|1,%1%||gr12||||2
+~+|1|y|ms1066|y|wksr12|DY Work HOV 2+ - To RGC12|0|mf"hovwk"|||y|1,%1%||gr12||||2
+~+|1|y|ms1067|y|wktr12|DY Work Transit - To RGC12|0|mf"trnwk"|||y|1,%1%||gr12||||2
+~+|1|y|ms1068|y|wkwb12|DY Work Walk-Bike - To RGC12|0|mf"wbkwk"|||y|1,%1%||gr12||||2
+~/ --- RGC 13
+~+|1|y|ms1069|y|wkda13|DY Work SOV - To RGC13|0|mf"sovwk"|||y|1,%1%||gr13||||2
+~+|1|y|ms1070|y|wksr13|DY Work HOV 2+ - To RGC13|0|mf"hovwk"|||y|1,%1%||gr13||||2
+~+|1|y|ms1071|y|wktr13|DY Work Transit - To RGC13|0|mf"trnwk"|||y|1,%1%||gr13||||2
+~+|1|y|ms1072|y|wkwb13|DY Work Walk-Bike - To RGC13|0|mf"wbkwk"|||y|1,%1%||gr13||||2
+~/ --- RGC 14
+~+|1|y|ms1073|y|wkda14|DY Work SOV - To RGC14|0|mf"sovwk"|||y|1,%1%||gr14||||2
+~+|1|y|ms1074|y|wksr14|DY Work HOV 2+ - To RGC14|0|mf"hovwk"|||y|1,%1%||gr14||||2
+~+|1|y|ms1075|y|wktr14|DY Work Transit - To RGC14|0|mf"trnwk"|||y|1,%1%||gr14||||2
+~+|1|y|ms1076|y|wkwb14|DY Work Walk-Bike - To RGC14|0|mf"wbkwk"|||y|1,%1%||gr14||||2
+~/ --- RGC 15
+~+|1|y|ms1077|y|wkda15|DY Work SOV - To RGC15|0|mf"sovwk"|||y|1,%1%||gr15||||2
+~+|1|y|ms1078|y|wksr15|DY Work HOV 2+ - To RGC15|0|mf"hovwk"|||y|1,%1%||gr15||||2
+~+|1|y|ms1079|y|wktr15|DY Work Transit - To RGC15|0|mf"trnwk"|||y|1,%1%||gr15||||2
+~+|1|y|ms1080|y|wkwb15|DY Work Walk-Bike - To RGC15|0|mf"wbkwk"|||y|1,%1%||gr15||||2
+~/ --- RGC 16
+~+|1|y|ms1081|y|wkda16|DY Work SOV - To RGC16|0|mf"sovwk"|||y|1,%1%||gr16||||2
+~+|1|y|ms1082|y|wksr16|DY Work HOV 2+ - To RGC16|0|mf"hovwk"|||y|1,%1%||gr16||||2
+~+|1|y|ms1083|y|wktr16|DY Work Transit - To RGC16|0|mf"trnwk"|||y|1,%1%||gr16||||2
+~+|1|y|ms1084|y|wkwb16|DY Work Walk-Bike - To RGC16|0|mf"wbkwk"|||y|1,%1%||gr16||||2
+~/ --- RGC 17
+~+|1|y|ms1085|y|wkda17|DY Work SOV - To RGC17|0|mf"sovwk"|||y|1,%1%||gr17||||2
+~+|1|y|ms1086|y|wksr17|DY Work HOV 2+ - To RGC17|0|mf"hovwk"|||y|1,%1%||gr17||||2
+~+|1|y|ms1087|y|wktr17|DY Work Transit - To RGC17|0|mf"trnwk"|||y|1,%1%||gr17||||2
+~+|1|y|ms1088|y|wkwb17|DY Work Walk-Bike - To RGC17|0|mf"wbkwk"|||y|1,%1%||gr17||||2
+~/ --- RGC 18
+~+|1|y|ms1089|y|wkda18|DY Work SOV - To RGC18|0|mf"sovwk"|||y|1,%1%||gr18||||2
+~+|1|y|ms1090|y|wksr18|DY Work HOV 2+ - To RGC18|0|mf"hovwk"|||y|1,%1%||gr18||||2
+~+|1|y|ms1091|y|wktr18|DY Work Transit - To RGC18|0|mf"trnwk"|||y|1,%1%||gr18||||2
+~+|1|y|ms1092|y|wkwb18|DY Work Walk-Bike - To RGC18|0|mf"wbkwk"|||y|1,%1%||gr18||||2
+~/ --- RGC 19
+~+|1|y|ms1093|y|wkda19|DY Work SOV - To RGC19|0|mf"sovwk"|||y|1,%1%||gr19||||2
+~+|1|y|ms1094|y|wksr19|DY Work HOV 2+ - To RGC19|0|mf"hovwk"|||y|1,%1%||gr19||||2
+~+|1|y|ms1095|y|wktr19|DY Work Transit - To RGC19|0|mf"trnwk"|||y|1,%1%||gr19||||2
+~+|1|y|ms1096|y|wkwb19|DY Work Walk-Bike - To RGC19|0|mf"wbkwk"|||y|1,%1%||gr19||||2
+~/ --- RGC 20
+~+|1|y|ms1097|y|wkda20|DY Work SOV - To RGC20|0|mf"sovwk"|||y|1,%1%||gr20||||2
+~+|1|y|ms1098|y|wksr20|DY Work HOV 2+ - To RGC20|0|mf"hovwk"|||y|1,%1%||gr20||||2
+~+|1|y|ms1099|y|wktr20|DY Work Transit - To RGC20|0|mf"trnwk"|||y|1,%1%||gr20||||2
+~+|1|y|ms1100|y|wkwb20|DY Work Walk-Bike - To RGC20|0|mf"wbkwk"|||y|1,%1%||gr20||||2
+~/ --- RGC 21
+~+|1|y|ms1101|y|wkda21|DY Work SOV - To RGC21|0|mf"sovwk"|||y|1,%1%||gr21||||2
+~+|1|y|ms1102|y|wksr21|DY Work HOV 2+ - To RGC21|0|mf"hovwk"|||y|1,%1%||gr21||||2
+~+|1|y|ms1103|y|wktr21|DY Work Transit - To RGC21|0|mf"trnwk"|||y|1,%1%||gr21||||2
+~+|1|y|ms1104|y|wkwb21|DY Work Walk-Bike - To RGC21|0|mf"wbkwk"|||y|1,%1%||gr21||||2
+~/ --- RGC 22
+~+|1|y|ms1105|y|wkda22|DY Work SOV - To RGC22|0|mf"sovwk"|||y|1,%1%||gr22||||2
+~+|1|y|ms1106|y|wksr22|DY Work HOV 2+ - To RGC22|0|mf"hovwk"|||y|1,%1%||gr22||||2
+~+|1|y|ms1107|y|wktr22|DY Work Transit - To RGC22|0|mf"trnwk"|||y|1,%1%||gr22||||2
+~+|1|y|ms1108|y|wkwb22|DY Work Walk-Bike - To RGC22|0|mf"wbkwk"|||y|1,%1%||gr22||||2
+~/ --- RGC 23
+~+|1|y|ms1109|y|wkda23|DY Work SOV - To RGC23|0|mf"sovwk"|||y|1,%1%||gr23||||2
+~+|1|y|ms1110|y|wksr23|DY Work HOV 2+ - To RGC23|0|mf"hovwk"|||y|1,%1%||gr23||||2
+~+|1|y|ms1111|y|wktr23|DY Work Transit - To RGC23|0|mf"trnwk"|||y|1,%1%||gr23||||2
+~+|1|y|ms1112|y|wkwb23|DY Work Walk-Bike - To RGC23|0|mf"wbkwk"|||y|1,%1%||gr23||||2
+~/ --- RGC 24
+~+|1|y|ms1113|y|wkda24|DY Work SOV - To RGC24|0|mf"sovwk"|||y|1,%1%||gr24||||2
+~+|1|y|ms1114|y|wksr24|DY Work HOV 2+ - To RGC24|0|mf"hovwk"|||y|1,%1%||gr24||||2
+~+|1|y|ms1115|y|wktr24|DY Work Transit - To RGC24|0|mf"trnwk"|||y|1,%1%||gr24||||2
+~+|1|y|ms1116|y|wkwb24|DY Work Walk-Bike - To RGC24|0|mf"wbkwk"|||y|1,%1%||gr24||||2
+~/ --- RGC 25
+~+|1|y|ms1117|y|wkda25|DY Work SOV - To RGC25|0|mf"sovwk"|||y|1,%1%||gr25||||2
+~+|1|y|ms1118|y|wksr25|DY Work HOV 2+ - To RGC25|0|mf"hovwk"|||y|1,%1%||gr25||||2
+~+|1|y|ms1119|y|wktr25|DY Work Transit - To RGC25|0|mf"trnwk"|||y|1,%1%||gr25||||2
+~+|1|y|ms1120|y|wkwb25|DY Work Walk-Bike - To RGC25|0|mf"wbkwk"|||y|1,%1%||gr25||||2
+~/ --- RGC 26
+~+|1|y|ms1121|y|wkda26|DY Work SOV - To RGC26|0|mf"sovwk"|||y|1,%1%||gr26||||2
+~+|1|y|ms1122|y|wksr26|DY Work HOV 2+ - To RGC26|0|mf"hovwk"|||y|1,%1%||gr26||||2
+~+|1|y|ms1123|y|wktr26|DY Work Transit - To RGC26|0|mf"trnwk"|||y|1,%1%||gr26||||2
+~+|1|y|ms1124|y|wkwb26|DY Work Walk-Bike - To RGC26|0|mf"wbkwk"|||y|1,%1%||gr26||||2
+~/ --- RGC 27
+~+|1|y|ms1125|y|wkda27|DY Work SOV - To RGC27|0|mf"sovwk"|||y|1,%1%||gr27||||2
+~+|1|y|ms1126|y|wksr27|DY Work HOV 2+ - To RGC27|0|mf"hovwk"|||y|1,%1%||gr27||||2
+~+|1|y|ms1127|y|wktr27|DY Work Transit - To RGC27|0|mf"trnwk"|||y|1,%1%||gr27||||2
+~+|1|y|ms1128|y|wkwb27|DY Work Walk-Bike - To RGC27|0|mf"wbkwk"|||y|1,%1%||gr27||||2
+~/ --- RGC 28
+~+|1|y|ms1129|y|wkda28|DY Work SOV - To RGC28|0|mf"sovwk"|||y|1,%1%||gr28||||2
+~+|1|y|ms1130|y|wksr28|DY Work HOV 2+ - To RGC28|0|mf"hovwk"|||y|1,%1%||gr28||||2
+~+|1|y|ms1131|y|wktr28|DY Work Transit - To RGC28|0|mf"trnwk"|||y|1,%1%||gr28||||2
+~+|1|y|ms1132|y|wkwb28|DY Work Walk-Bike - To RGC28|0|mf"wbkwk"|||y|1,%1%||gr28||||2
+~/ --- RGC 29
+~+|1|y|ms1133|y|wkda29|DY Work SOV - To RGC29|0|mf"sovwk"|||y|1,%1%||gr29||||2
+~+|1|y|ms1134|y|wksr29|DY Work HOV 2+ - To RGC29|0|mf"hovwk"|||y|1,%1%||gr29||||2
+~+|1|y|ms1135|y|wktr29|DY Work Transit - To RGC29|0|mf"trnwk"|||y|1,%1%||gr29||||2
+~+|1|y|ms1136|y|wkwb29|DY Work Walk-Bike - To RGC29|0|mf"wbkwk"|||y|1,%1%||gr29||||2
+~/ --- RGC 30
+~+|1|y|ms1137|y|wkda30|DY Work SOV - To RGC30|0|mf"sovwk"|||y|1,%1%||gr30||||2
+~+|1|y|ms1138|y|wksr30|DY Work HOV 2+ - To RGC30|0|mf"hovwk"|||y|1,%1%||gr30||||2
+~+|1|y|ms1139|y|wktr30|DY Work Transit - To RGC30|0|mf"trnwk"|||y|1,%1%||gr30||||2
+~+|1|y|ms1140|y|wkwb30|DY Work Walk-Bike - To RGC30|0|mf"wbkwk"|||y|1,%1%||gr30||||2
+~/ --- RGC 31
+~+|1|y|ms1141|y|wkda31|DY Work SOV - To RGC31|0|mf"sovwk"|||y|1,%1%||gr31||||2
+~+|1|y|ms1142|y|wksr31|DY Work HOV 2+ - To RGC31|0|mf"hovwk"|||y|1,%1%||gr31||||2
+~+|1|y|ms1143|y|wktr31|DY Work Transit - To RGC31|0|mf"trnwk"|||y|1,%1%||gr31||||2
+~+|1|y|ms1144|y|wkwb31|DY Work Walk-Bike - To RGC31|0|mf"wbkwk"|||y|1,%1%||gr31||||2
+~/ --- RGC 32
+~+|1|y|ms1145|y|wkda32|DY Work SOV - To RGC32|0|mf"sovwk"|||y|1,%1%||gr32||||2
+~+|1|y|ms1146|y|wksr32|DY Work HOV 2+ - To RGC32|0|mf"hovwk"|||y|1,%1%||gr32||||2
+~+|1|y|ms1147|y|wktr32|DY Work Transit - To RGC32|0|mf"trnwk"|||y|1,%1%||gr32||||2
+~+|1|y|ms1148|y|wkwb32|DY Work Walk-Bike - To RGC32|0|mf"wbkwk"|||y|1,%1%||gr32||||2
+~/ --- RGC 33
+~+|1|y|ms1149|y|wkda33|DY Work SOV - To RGC33|0|mf"sovwk"|||y|1,%1%||gr33||||2
+~+|1|y|ms1150|y|wksr33|DY Work HOV 2+ - To RGC33|0|mf"hovwk"|||y|1,%1%||gr33||||2
+~+|1|y|ms1151|y|wktr33|DY Work Transit - To RGC33|0|mf"trnwk"|||y|1,%1%||gr33||||2
+~+|1|y|ms1152|y|wkwb33|DY Work Walk-Bike - To RGC33|0|mf"wbkwk"|||y|1,%1%||gr33||||2
+~/ --- RGC 34
+~+|1|y|ms1153|y|wkda34|DY Work SOV - To RGC34|0|mf"sovwk"|||y|1,%1%||gr34||||2
+~+|1|y|ms1154|y|wksr34|DY Work HOV 2+ - To RGC34|0|mf"hovwk"|||y|1,%1%||gr34||||2
+~+|1|y|ms1155|y|wktr34|DY Work Transit - To RGC34|0|mf"trnwk"|||y|1,%1%||gr34||||2
+~+|1|y|ms1156|y|wkwb34|DY Work Walk-Bike - To RGC34|0|mf"wbkwk"|||y|1,%1%||gr34||||2
+~/ --- RGC 35
+~+|1|y|ms1157|y|wkda35|DY Work SOV - To RGC35|0|mf"sovwk"|||y|1,%1%||gr35||||2
+~+|1|y|ms1158|y|wksr35|DY Work HOV 2+ - To RGC35|0|mf"hovwk"|||y|1,%1%||gr35||||2
+~+|1|y|ms1159|y|wktr35|DY Work Transit - To RGC35|0|mf"trnwk"|||y|1,%1%||gr35||||2
+~+|1|y|ms1160|y|wkwb35|DY Work Walk-Bike - To RGC35|0|mf"wbkwk"|||y|1,%1%||gr35||||2
+~/ --- RGC 36
+~+|1|y|ms1161|y|wkda36|DY Work SOV - To RGC36|0|mf"sovwk"|||y|1,%1%||gr36||||2
+~+|1|y|ms1162|y|wksr36|DY Work HOV 2+ - To RGC36|0|mf"hovwk"|||y|1,%1%||gr36||||2
+~+|1|y|ms1163|y|wktr36|DY Work Transit - To RGC36|0|mf"trnwk"|||y|1,%1%||gr36||||2
+~+|1|y|ms1164|y|wkwb36|DY Work Walk-Bike - To RGC36|0|mf"wbkwk"|||y|1,%1%||gr36||||2
+q
+~/
+~/end: 2-4_mode_Choice_summary.mac
+~/exit emme
+q

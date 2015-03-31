@@ -1,0 +1,15 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...input daily vanpool demand
+3.11
+..\..\input\externals\thru\thru_trips.in
+~/ ...write report file
+2
+~#
+~/end: 5_input_daily_thru_trips.mac
+~/exit emme
+~/
+q

@@ -8,15 +8,19 @@ reports=6-9_input_data.rpt
 ~/ ...call module 3.11: input matrices using batch entry
 ~/ ...input exponential distribution coefficients
 3.11
-~+|..\..\input\%1%\model\distribution\distribution_coefficients_exp.in|2|
+~+|..\..\input\model\distribution\distribution_coefficients_exp.in|2|
 ~#
 ~/ ...input global parameters
 3.11
-~+|..\..\input\%1%\model\Global\global_coefficients.in|2|
+~+|..\..\input\model\Global\global_coefficients.in|2|
 ~#
 ~/ ...input vot assignment parameters
 3.11
-~+|..\..\input\%1%\model\vot\am_vot_parameters.in|2|
+~+|..\..\input\model\vot\am_vot_parameters.in|2|
+3.11
+~+|..\..\input\tripends\hbwpr1.in|2|
+3.11
+~+|..\..\input\tripends\hbwat1.in|2|
 ~#
 ~/end: 6-9_input_data.mac
 ~/exit emme

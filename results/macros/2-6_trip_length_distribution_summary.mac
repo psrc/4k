@@ -1,0 +1,457 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - College Trips
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy AM SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aau1tm"|mf"temp01"|n|y
+~+|2|3|3|mf"aau1ds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbcollege\emmebank
+~+|2|3|3|mf"coldst"|mf"temp03"|n|y
+q
+~/ --- Summarize College Trips for Internal Zones
+3.21
+~+|1|y|ms761|y|cods1|DY Coll Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms762|y|cods2|DY Coll Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms763|y|cods3|DY Coll Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms764|y|cods4|DY Coll Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms765|y|cods5|DY Coll Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms766|y|cods6|DY Coll Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms767|y|cods7|DY Coll Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms768|y|cods8|DY Coll Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms769|y|cods9|DY Coll Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms770|y|cods10|DY Coll Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms771|y|cods11|DY Coll Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms772|y|cods12|DY Coll Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms773|y|cods13|DY Coll Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms774|y|cods14|DY Coll Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms775|y|cods15|DY Coll Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms776|y|cods16|DY Coll Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms777|y|cods17|DY Coll Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms778|y|cods18|DY Coll Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms779|y|cods19|DY Coll Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms780|y|cods20|DY Coll Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms781|y|cods21|DY Coll Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms782|y|cods22|DY Coll Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms783|y|cods23|DY Coll Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms784|y|cods24|DY Coll Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms785|y|cods25|DY Coll Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms786|y|cods26|DY Coll Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Home Base Shopping
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\md\emmebank
+~+|2|3|3|mf"mau1tm"|mf"temp01"|n|y
+~+|2|3|3|mf"mau1ds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbshop\emmebank
+~+|2|3|3|mf"hspdst"|mf"temp03"|n|y
+q
+~/ --- Summarize Shopping Trips for Internal Zones
+3.21
+~+|1|y|ms787|y|spds1|DY Shop Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms788|y|spds2|DY Shop Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms789|y|spds3|DY Shop Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms790|y|spds4|DY Shop Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms791|y|spds5|DY Shop Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms792|y|spds6|DY Shop Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms793|y|spds7|DY Shop Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms794|y|spds8|DY Shop Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms795|y|spds9|DY Shop Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms796|y|spds10|DY Shop Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms797|y|spds11|DY Shop Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms798|y|spds12|DY Shop Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms799|y|spds13|DY Shop Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms800|y|spds14|DY Shop Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms801|y|spds15|DY Shop Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms802|y|spds16|DY Shop Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms803|y|spds17|DY Shop Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms804|y|spds18|DY Shop Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms805|y|spds19|DY Shop Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms806|y|spds20|DY Shop Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms807|y|spds21|DY Shop Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms808|y|spds22|DY Shop Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms809|y|spds23|DY Shop Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms810|y|spds24|DY Shop Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms811|y|spds25|DY Shop Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms812|y|spds26|DY Shop Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Home Base Other
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\md\emmebank
+~+|2|3|3|mf"mau1tm"|mf"temp01"|n|y
+~+|2|3|3|mf"mau1ds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbother\emmebank
+~+|2|3|3|mf"hbodst"|mf"temp03"|n|y
+q
+~/ --- Summarize Other Trips for Internal Zones
+3.21
+~+|1|y|ms813|y|hods1|DY HBO Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms814|y|hods2|DY HBO Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms815|y|hods3|DY HBO Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms816|y|hods4|DY HBO Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms817|y|hods5|DY HBO Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms818|y|hods6|DY HBO Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms819|y|hods7|DY HBO Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms820|y|hods8|DY HBO Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms821|y|hods9|DY HBO Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms822|y|hods10|DY HBO Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms823|y|hods11|DY HBO Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms824|y|hods12|DY HBO Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms825|y|hods13|DY HBO Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms826|y|hods14|DY HBO Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms827|y|hods15|DY HBO Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms828|y|hods16|DY HBO Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms829|y|hods17|DY HBO Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms830|y|hods18|DY HBO Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms831|y|hods19|DY HBO Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms832|y|hods20|DY HBO Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms833|y|hods21|DY HBO Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms834|y|hods22|DY HBO Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms835|y|hods23|DY HBO Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms836|y|hods24|DY HBO Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms837|y|hods25|DY HBO Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms838|y|hods26|DY HBO Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Non-Home Base Other
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\md\emmebank
+~+|2|3|3|mf"mau1tm"|mf"temp01"|n|y
+~+|2|3|3|mf"mau1ds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\nhbother\emmebank
+~+|2|3|3|mf"otodst"|mf"temp03"|n|y
+q
+~/ --- Summarize Other Trips for Internal Zones
+3.21
+~+|1|y|ms839|y|oods1|DY OTO Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms840|y|oods2|DY OTO Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms841|y|oods3|DY OTO Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms842|y|oods4|DY OTO Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms843|y|oods5|DY OTO Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms844|y|oods6|DY OTO Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms845|y|oods7|DY OTO Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms846|y|oods8|DY OTO Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms847|y|oods9|DY OTO Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms848|y|oods10|DY OTO Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms849|y|oods11|DY OTO Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms850|y|oods12|DY OTO Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms851|y|oods13|DY OTO Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms852|y|oods14|DY OTO Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms853|y|oods15|DY OTO Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms854|y|oods16|DY OTO Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms855|y|oods17|DY OTO Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms856|y|oods18|DY OTO Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms857|y|oods19|DY OTO Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms858|y|oods20|DY OTO Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms859|y|oods21|DY OTO Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms860|y|oods22|DY OTO Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms861|y|oods23|DY OTO Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms862|y|oods24|DY OTO Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms863|y|oods25|DY OTO Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms864|y|oods26|DY OTO Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Non-Home Base Work
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\md\emmebank
+~+|2|3|3|mf"mau1tm"|mf"temp01"|n|y
+~+|2|3|3|mf"mau1ds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\nhbwork\emmebank
+~+|2|3|3|mf"wkodst"|mf"temp03"|n|y
+q
+~/ --- Summarize Other Trips for Internal Zones
+3.21
+~+|1|y|ms865|y|wods1|DY WKO Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms866|y|wods2|DY WKO Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms867|y|wods3|DY WKO Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms868|y|wods4|DY WKO Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms869|y|wods5|DY WKO Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms870|y|wods6|DY WKO Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms871|y|wods7|DY WKO Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms872|y|wods8|DY WKO Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms873|y|wods9|DY WKO Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms874|y|wods10|DY WKO Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms875|y|wods11|DY WKO Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms876|y|wods12|DY WKO Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms877|y|wods13|DY WKO Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms878|y|wods14|DY WKO Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms879|y|wods15|DY WKO Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms880|y|wods16|DY WKO Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms881|y|wods17|DY WKO Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms882|y|wods18|DY WKO Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms883|y|wods19|DY WKO Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms884|y|wods20|DY WKO Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms885|y|wods21|DY WKO Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms886|y|wods22|DY WKO Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms887|y|wods23|DY WKO Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms888|y|wods24|DY WKO Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms889|y|wods25|DY WKO Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms890|y|wods26|DY WKO Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Home Based School
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\md\emmebank
+~+|2|3|3|mf"mau1tm"|mf"temp01"|n|y
+~+|2|3|3|mf"mau1ds"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbschool\emmebank
+~+|2|3|3|mf"schdst"|mf"temp03"|n|y
+q
+~/ --- Summarize Other Trips for Internal Zones
+3.21
+~+|1|y|ms891|y|scds1|DY Sch Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms892|y|scds2|DY Sch Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms893|y|scds3|DY Sch Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms894|y|scds4|DY Sch Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms895|y|scds5|DY Sch Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms896|y|scds6|DY Sch Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms897|y|scds7|DY Sch Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms898|y|scds8|DY Sch Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms899|y|scds9|DY Sch Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms900|y|scds10|DY Sch Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms901|y|scds11|DY Sch Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms902|y|scds12|DY Sch Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms903|y|scds13|DY Sch Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms904|y|scds14|DY Sch Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms905|y|scds15|DY Sch Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms906|y|scds16|DY Sch Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms907|y|scds17|DY Sch Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms908|y|scds18|DY Sch Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms909|y|scds19|DY Sch Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms910|y|scds20|DY Sch Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms911|y|scds21|DY Sch Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms912|y|scds22|DY Sch Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms913|y|scds23|DY Sch Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms914|y|scds24|DY Sch Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms915|y|scds25|DY Sch Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms916|y|scds26|DY Sch Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Home Based Work #1
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aa1tm1"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds1"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbwork_inc1\emmebank
+~+|2|3|3|mf"hbwds1"|mf"temp03"|n|y
+q
+~/ --- Summarize Other Trips for Internal Zones
+3.21
+~+|1|y|ms917|y|w1ds1|DY HBW1 Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms918|y|w1ds2|DY HBW1 Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms919|y|w1ds3|DY HBW1 Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms920|y|w1ds4|DY HBW1 Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms921|y|w1ds5|DY HBW1 Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms922|y|w1ds6|DY HBW1 Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms923|y|w1ds7|DY HBW1 Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms924|y|w1ds8|DY HBW1 Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms925|y|w1ds9|DY HBW1 Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms926|y|w1ds10|DY HBW1 Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms927|y|w1ds11|DY HBW1 Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms928|y|w1ds12|DY HBW1 Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms929|y|w1ds13|DY HBW1 Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms930|y|w1ds14|DY HBW1 Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms931|y|w1ds15|DY HBW1 Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms932|y|w1ds16|DY HBW1 Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms933|y|w1ds17|DY HBW1 Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms934|y|w1ds18|DY HBW1 Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms935|y|w1ds19|DY HBW1 Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms936|y|w1ds20|DY HBW1 Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms937|y|w1ds21|DY HBW1 Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms938|y|w1ds22|DY HBW1 Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms939|y|w1ds23|DY HBW1 Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms940|y|w1ds24|DY HBW1 Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms941|y|w1ds25|DY HBW1 Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms942|y|w1ds26|DY HBW1 Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Home Based Work #2
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aa1tm2"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds2"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbwork_inc2\emmebank
+~+|2|3|3|mf"hbwds2"|mf"temp03"|n|y
+q
+~/ --- Summarize Other Trips for Internal Zones
+3.21
+~+|1|y|ms943|y|w2ds1|DY HBW2 Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms944|y|w2ds2|DY HBW2 Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms945|y|w2ds3|DY HBW2 Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms946|y|w2ds4|DY HBW2 Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms947|y|w2ds5|DY HBW2 Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms948|y|w2ds6|DY HBW2 Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms949|y|w2ds7|DY HBW2 Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms950|y|w2ds8|DY HBW2 Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms951|y|w2ds9|DY HBW2 Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms952|y|w2ds10|DY HBW2 Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms953|y|w2ds11|DY HBW2 Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms954|y|w2ds12|DY HBW2 Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms955|y|w2ds13|DY HBW2 Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms956|y|w2ds14|DY HBW2 Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms957|y|w2ds15|DY HBW2 Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms958|y|w2ds16|DY HBW2 Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms959|y|w2ds17|DY HBW2 Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms960|y|w2ds18|DY HBW2 Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms961|y|w2ds19|DY HBW2 Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms962|y|w2ds20|DY HBW2 Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms963|y|w2ds21|DY HBW2 Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms964|y|w2ds22|DY HBW2 Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms965|y|w2ds23|DY HBW2 Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms966|y|w2ds24|DY HBW2 Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms967|y|w2ds25|DY HBW2 Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms968|y|w2ds26|DY HBW2 Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Home Based Work #3
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aa1tm3"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds3"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbwork_inc3\emmebank
+~+|2|3|3|mf"hbwds3"|mf"temp03"|n|y
+q
+~/ --- Summarize Other Trips for Internal Zones
+3.21
+~+|1|y|ms969|y|w3ds1|DY HBW3 Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms970|y|w3ds2|DY HBW3 Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms971|y|w3ds3|DY HBW3 Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms972|y|w3ds4|DY HBW3 Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms973|y|w3ds5|DY HBW3 Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms974|y|w3ds6|DY HBW3 Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms975|y|w3ds7|DY HBW3 Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms976|y|w3ds8|DY HBW3 Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms977|y|w3ds9|DY HBW3 Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms978|y|w3ds10|DY HBW3 Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms979|y|w3ds11|DY HBW3 Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms980|y|w3ds12|DY HBW3 Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms981|y|w3ds13|DY HBW3 Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms982|y|w3ds14|DY HBW3 Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms983|y|w3ds15|DY HBW3 Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms984|y|w3ds16|DY HBW3 Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms985|y|w3ds17|DY HBW3 Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms986|y|w3ds18|DY HBW3 Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms987|y|w3ds19|DY HBW3 Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms988|y|w3ds20|DY HBW3 Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms989|y|w3ds21|DY HBW3 Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms990|y|w3ds22|DY HBW3 Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms991|y|w3ds23|DY HBW3 Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms992|y|w3ds24|DY HBW3 Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms993|y|w3ds25|DY HBW3 Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms994|y|w3ds26|DY HBW3 Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/ ---------------------------------------------------------------
+~/ --- Trip Length Frequency Distribution - Home Based Work #4
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aa1tm4"|mf"temp01"|n|y
+~+|2|3|3|mf"aa1ds4"|mf"temp02"|n|y
+q
+1.31
+~+|1
+~/ --- Copy Distribution Matrix into a Temporary Matrix
+..\distribution\hbwork_inc4\emmebank
+~+|2|3|3|mf"hbwds4"|mf"temp03"|n|y
+q
+~/ --- Summarize Other Trips for Internal Zones
+3.21
+~+|1|y|ms995|y|w4ds1|DY HBW4 Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms996|y|w4ds2|DY HBW4 Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms997|y|w4ds3|DY HBW4 Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms998|y|w4ds4|DY HBW4 Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms999|y|w4ds5|DY HBW4 Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1000|y|w4ds6|DY HBW4 Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1001|y|w4ds7|DY HBW4 Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1002|y|w4ds8|DY HBW4 Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1003|y|w4ds9|DY HBW4 Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1004|y|w4ds10|DY HBW4 Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1005|y|w4ds11|DY HBW4 Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1006|y|w4ds12|DY HBW4 Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1007|y|w4ds13|DY HBW4 Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1008|y|w4ds14|DY HBW4 Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1009|y|w4ds15|DY HBW4 Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1010|y|w4ds16|DY HBW4 Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1011|y|w4ds17|DY HBW4 Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1012|y|w4ds18|DY HBW4 Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1013|y|w4ds19|DY HBW4 Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1014|y|w4ds20|DY HBW4 Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1015|y|w4ds21|DY HBW4 Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1016|y|w4ds22|DY HBW4 Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1017|y|w4ds23|DY HBW4 Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1018|y|w4ds24|DY HBW4 Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1019|y|w4ds25|DY HBW4 Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
+~+|1|y|ms1020|y|w4ds26|DY HBW4 Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
+q
+~/
+~/end: 2-6_trip_length_distribution_summary.mac
+~/exit emme
+q

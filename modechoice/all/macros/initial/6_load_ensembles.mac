@@ -1,0 +1,22 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...call module 3.01: input/modify/output zone groups
+~/ ...initialize partitions
+~/ ...input/modify zone groups (using batch entry)
+3.01
+~+|4|all|y
+~+|1|..\..\input\model\ensembles\parking_gz.ens|2
+~+|1|..\..\input\model\ensembles\districts19_ga.ens|2
+~+|1|..\..\input\model\ensembles\seattlecbd_gb.ens|2
+~+|1|..\..\input\model\ensembles\counties_gc.ens|2
+~+|1|..\..\input\model\ensembles\districts6_gk.ens|2
+~+|1|..\..\input\model\ensembles\kitsap_gl.ens|2
+q
+~#
+~/end: 6_load_ensembles.mac
+~/exit emme
+~/
+q

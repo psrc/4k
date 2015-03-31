@@ -5,8 +5,6 @@ reports=2_initialize_ni_full_matrices.rpt
 ~/
 ~/
 ~/begin: 2_initialize_ni_full_matrices.mac
-~/ ...set active scenario to 1006
-s=1006
 ~/ ...call module 3.12: input/modify matrices interactively
 ~/ ...initialize full matrices
 3.12

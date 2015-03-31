@@ -1,0 +1,90 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- Open trip table emmebank
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+..\triptables\all\emmebank
+~/ --- Auto Trip Tables
+~+|2|3|3|mf"avehda"|mf"avehda"|n|y
+~+|2|3|3|mf"avehs2"|mf"avehs2"|n|y
+~+|2|3|3|mf"avehs3"|mf"avehs3"|n|y
+~+|2|3|3|mf"avpool"|mf"avpool"|n|y
+~+|2|3|3|mf"ahbw1v"|mf"ahbw1v"|n|y
+~+|2|3|3|mf"ahbw2v"|mf"ahbw2v"|n|y
+~+|2|3|3|mf"ahbw3v"|mf"ahbw3v"|n|y
+~+|2|3|3|mf"ahbw4v"|mf"ahbw4v"|n|y
+~+|2|3|3|mf"mvehda"|mf"mvehda"|n|y
+~+|2|3|3|mf"mvehs2"|mf"mvehs2"|n|y
+~+|2|3|3|mf"mvehs3"|mf"mvehs3"|n|y
+~+|2|3|3|mf"mvpool"|mf"mvpool"|n|y
+~+|2|3|3|mf"mhbw1v"|mf"mhbw1v"|n|y
+~+|2|3|3|mf"mhbw2v"|mf"mhbw2v"|n|y
+~+|2|3|3|mf"mhbw3v"|mf"mhbw3v"|n|y
+~+|2|3|3|mf"mhbw4v"|mf"mhbw4v"|n|y
+~+|2|3|3|mf"pvehda"|mf"pvehda"|n|y
+~+|2|3|3|mf"pvehs2"|mf"pvehs2"|n|y
+~+|2|3|3|mf"pvehs3"|mf"pvehs3"|n|y
+~+|2|3|3|mf"pvpool"|mf"pvpool"|n|y
+~+|2|3|3|mf"phbw1v"|mf"phbw1v"|n|y
+~+|2|3|3|mf"phbw2v"|mf"phbw2v"|n|y
+~+|2|3|3|mf"phbw3v"|mf"phbw3v"|n|y
+~+|2|3|3|mf"phbw4v"|mf"phbw4v"|n|y
+~+|2|3|3|mf"evehda"|mf"evehda"|n|y
+~+|2|3|3|mf"evehs2"|mf"evehs2"|n|y
+~+|2|3|3|mf"evehs3"|mf"evehs3"|n|y
+~+|2|3|3|mf"evpool"|mf"evpool"|n|y
+~+|2|3|3|mf"ehbw1v"|mf"ehbw1v"|n|y
+~+|2|3|3|mf"ehbw2v"|mf"ehbw2v"|n|y
+~+|2|3|3|mf"ehbw3v"|mf"ehbw3v"|n|y
+~+|2|3|3|mf"ehbw4v"|mf"ehbw4v"|n|y
+~+|2|3|3|mf"nvehda"|mf"nvehda"|n|y
+~+|2|3|3|mf"nvehs2"|mf"nvehs2"|n|y
+~+|2|3|3|mf"nvehs3"|mf"nvehs3"|n|y
+~+|2|3|3|mf"nvpool"|mf"nvpool"|n|y
+~+|2|3|3|mf"nhbw1v"|mf"nhbw1v"|n|y
+~+|2|3|3|mf"nhbw2v"|mf"nhbw2v"|n|y
+~+|2|3|3|mf"nhbw3v"|mf"nhbw3v"|n|y
+~+|2|3|3|mf"nhbw4v"|mf"nhbw4v"|n|y
+~/ --- Truck Trip Tables
+~+|2|3|3|mf"alttrk"|mf"alttrk"|n|y
+~+|2|3|3|mf"amdtrk"|mf"amdtrk"|n|y
+~+|2|3|3|mf"ahvtrk"|mf"ahvtrk"|n|y
+~+|2|3|3|mf"mlttrk"|mf"mlttrk"|n|y
+~+|2|3|3|mf"mmdtrk"|mf"mmdtrk"|n|y
+~+|2|3|3|mf"mhvtrk"|mf"mhvtrk"|n|y
+~+|2|3|3|mf"plttrk"|mf"plttrk"|n|y
+~+|2|3|3|mf"pmdtrk"|mf"pmdtrk"|n|y
+~+|2|3|3|mf"phvtrk"|mf"phvtrk"|n|y
+~+|2|3|3|mf"elttrk"|mf"elttrk"|n|y
+~+|2|3|3|mf"emdtrk"|mf"emdtrk"|n|y
+~+|2|3|3|mf"ehvtrk"|mf"ehvtrk"|n|y
+~+|2|3|3|mf"nlttrk"|mf"nlttrk"|n|y
+~+|2|3|3|mf"nmdtrk"|mf"nmdtrk"|n|y
+~+|2|3|3|mf"nhvtrk"|mf"nhvtrk"|n|y
+~/ --- Transit Trip Tables
+~+|2|3|3|mf"atrnwa"|mf"atrnwa"|n|y
+~+|2|3|3|mf"mtrnwa"|mf"mtrnwa"|n|y
+~+|2|3|3|mf"ptrnwa"|mf"ptrnwa"|n|y
+~+|2|3|3|mf"etrnwa"|mf"etrnwa"|n|y
+~+|2|3|3|mf"ntrnwa"|mf"ntrnwa"|n|y
+~/ --- Walk and Bike Trip Tables
+~+|2|3|3|mf"awalk"|mf"awalk"|n|y
+~+|2|3|3|mf"abike"|mf"abike"|n|y
+~+|2|3|3|mf"mwalk"|mf"mwalk"|n|y
+~+|2|3|3|mf"mbike"|mf"mbike"|n|y
+~+|2|3|3|mf"pwalk"|mf"pwalk"|n|y
+~+|2|3|3|mf"pbike"|mf"pbike"|n|y
+~+|2|3|3|mf"ewalk"|mf"ewalk"|n|y
+~+|2|3|3|mf"ebike"|mf"ebike"|n|y
+~+|2|3|3|mf"nwalk"|mf"nwalk"|n|y
+~+|2|3|3|mf"nbike"|mf"nbike"|n|y
+q
+~/
+~/end: 1-2_input_triptables.mac
+~/exit emme
+~/
+q
