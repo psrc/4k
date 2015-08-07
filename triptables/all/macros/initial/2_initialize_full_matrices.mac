@@ -130,6 +130,89 @@ reports=initialization.rpt
 ~+|1|mf110|nwalk|walk person trip table|0
 ~+|1|mf111|nbike|bike person trip table|0
 ~+|1|mf112|ntrnwa|transit person trip table|0
+~/ ... misc trip tables
+~+|1|mf138|temp01|Temporary Matrix|0
+~/ ... Scalar Matrices to Transit Time of Day Factors
+~/ ... Trip Percentages - P-A
+~+|1|ms01|coltpa|College Trip P-A|0
+~+|1|ms02|hbotpa|HBO Trip P-A|0
+~+|1|ms03|schtpa|School Trip P-A|0
+~+|1|ms04|hsptpa|Shopping Trip P-A|0
+~+|1|ms05|ototpa|Other to Other Trip P-A|0
+~+|1|ms06|wtotpa|Work to Other Trip P-A|0
+~+|1|ms07|wk1tpa|Work #1 Trip P-A|0
+~+|1|ms08|wk2tpa|Work #2 Trip P-A|0
+~+|1|ms09|wk3tpa|Work #3 Trip P-A|0
+~+|1|ms10|wk4tpa|Work #4 Trip P-A|0
+~+|1|ms11|tw1tpa|PnR #1 Trip P-A|0
+~+|1|ms12|tw2tpa|PnR #2 Trip P-A|0
+~+|1|ms13|tw3tpa|PnR #3 Trip P-A|0
+~+|1|ms14|tw4tpa|PnR #4 Trip P-A|0
+~/ ... Trip Percentages - A-P
+~+|1|ms15|coltap|College Trip A-P|0
+~+|1|ms16|hbotap|HBO Trip A-P|0
+~+|1|ms17|schtap|School Trip A-P|0
+~+|1|ms18|hsptap|Shopping Trip A-P|0
+~+|1|ms19|ototap|Other to Other Trip A-P|0
+~+|1|ms20|wtotap|Work to Other Trip A-P|0
+~+|1|ms21|wk1tap|Work #1 Trip A-P|0
+~+|1|ms22|wk2tap|Work #2 Trip A-P|0
+~+|1|ms23|wk3tap|Work #3 Trip A-P|0
+~+|1|ms24|wk4tap|Work #4 Trip A-P|0
+~+|1|ms25|tw1tap|PnR #1 Trip A-P|0
+~+|1|ms26|tw2tap|PnR #2 Trip A-P|0
+~+|1|ms27|tw3tap|PnR #3 Trip A-P|0
+~+|1|ms28|tw4tap|PnR #4 Trip A-P|0
+~/ ... Time of Day Factors - P-A
+~+|1|ms29|colpa|College TOD P-A|0
+~+|1|ms30|hbopa|HBO TOD P-A|0
+~+|1|ms31|schpa|School TOD P-A|0
+~+|1|ms32|hsppa|Shopping TOD P-A|0
+~+|1|ms33|otopa|Other to Other TOD P-A|0
+~+|1|ms34|wtopa|Work to Other TOD P-A|0
+~+|1|ms35|wk1pa|Work #1 TOD P-A|0
+~+|1|ms36|wk2pa|Work #2 TOD P-A|0
+~+|1|ms37|wk3pa|Work #3 TOD P-A|0
+~+|1|ms38|wk4pa|Work #4 TOD P-A|0
+~+|1|ms39|tw1pa|PnR #1 TOD P-A|0
+~+|1|ms40|tw2pa|PnR #2 TOD P-A|0
+~+|1|ms41|tw3pa|PnR #3 TOD P-A|0
+~+|1|ms42|tw4pa|PnR #4 TOD P-A|0
+~/ ... Time of Day Factors - A-P
+~+|1|ms43|colap|College TOD A-P|0
+~+|1|ms44|hboap|HBO TOD A-P|0
+~+|1|ms45|schap|School TOD A-P|0
+~+|1|ms46|hspap|Shopping TOD A-P|0
+~+|1|ms47|otoap|Other to Other TOD A-P|0
+~+|1|ms48|wtoap|Work to Other TOD A-P|0
+~+|1|ms49|wk1ap|Work #1 TOD A-P|0
+~+|1|ms50|wk2ap|Work #2 TOD A-P|0
+~+|1|ms51|wk3ap|Work #3 TOD A-P|0
+~+|1|ms52|wk4ap|Work #4 TOD A-P|0
+~+|1|ms53|tw1ap|PnR #1 TOD A-P|0
+~+|1|ms54|tw2ap|PnR #2 TOD A-P|0
+~+|1|ms55|tw3ap|PnR #3 TOD A-P|0
+~+|1|ms56|tw4ap|PnR #4 TOD A-P|0
+~/ ... Time of Day Factors - Light Trucks
+~+|1|ms57|ltrkam|Light Trucks - AM|0
+~+|1|ms58|ltrkmd|Light Trucks - MD|0
+~+|1|ms59|ltrkpm|Light Trucks - PM|0
+~+|1|ms60|ltrkev|Light Trucks - EV|0
+~+|1|ms61|ltrkni|Light Trucks - NI|0
+~/ ... Time of Day Factors - Medium Trucks
+~+|1|ms62|mtrkam|Medium Trucks - AM|0
+~+|1|ms63|mtrkmd|Medium Trucks - MD|0
+~+|1|ms64|mtrkpm|Medium Trucks - PM|0
+~+|1|ms65|mtrkev|Medium Trucks - EV|0
+~+|1|ms66|mtrkni|Medium Trucks - NI|0
+~/ ... Time of Day Factors - Heavy Trucks
+~+|1|ms67|htrkam|Heavy Trucks - AM|0
+~+|1|ms68|htrkmd|Heavy Trucks - MD|0
+~+|1|ms69|htrkpm|Heavy Trucks - PM|0
+~+|1|ms70|htrkev|Heavy Trucks - EV|0
+~+|1|ms71|htrkni|Heavy Trucks - NI|0
+~/ ... Time of Day Factors - Thru
+~+|1|ms72|thru|Thru Trips|0
 q
 ~?x=No
 ~$NoBCA

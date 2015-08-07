@@ -1,0 +1,111 @@
+~/~?!i&32768
+~/~o=295
+~$>end_of_copyright
+~/!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+~/Copyright (C) Heinz Spiess, CH-2558 Aegerten, 2003.  All rights reserved.
+~/
+~/The right to use this macro is granted to all EMME/2 users, provided the
+~/following conditions are met:
+~/   1) The macro cannot be sold for a fee (but it can be used and distributed
+~/      without charge within consulting projects).
+~/   2) The user is aware that this macro is not a part of the EMME/2 software
+~/      licence and there is no explicit or implied warranty or support
+~/      provided with this macro.
+~/   3) The comments in this macros must not be removed and any additions or
+~/      modification must be appropriately identified as such and give at least
+~/      date, name and the reason of the modification.
+~/!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+~:end_of_copyright
+~/#############################################################################
+~/# CALIGRAV 1.3: calibrate exponential gravity model to average trip time
+~/# (Heinz Spiess, EMME/2 Support Center, CH-2558 Aegerten - 2003-05-07)
+~/#
+~/# Initial version - not tested - use entirely at your own risk!!!!
+~/#
+~/# calling sequence:
+~/#
+~/# ~<caligrav <avgtim> <prod> <attr> <upqau> <gpqau> [<iter> <eps> <alpha>]
+~/#
+~x=%0%
+~?x>4
+~$Start
+~/# <avgtim>    average trip time target in minutes
+~/# <prod>      origin matrix containing produnctions (moXX)
+~/# <attr>      destination matrix containing attractions  (mdXX)
+~/# <upgau>     full matrix containing travel times in minutes (mfXX)
+~/# <gpqau>     result matrix to which gravity demand is written (mfXX)
+~/# <iter>      maximum number of iterations (default 100)
+~/# <eps>       maximum allowable time difference in minutes (default 0.001)
+~/# <alpha>     exponent of adjustment factor (default 2);
+~/# 
+~/# Notes:
+~/#
+~/# - The macro uses the scalars ms97, ms98 and ms99 for storing
+~/#   the total number of trips, the current average trip time and
+~/#   the current gravity coefficient.
+~/# 
+~/# - The macro starts using the average target trip time as initial
+~/#   gravity coefficient and then iteratively computes the corresponding
+~/#   gravity distribution and resulting average trip time.  The gravity
+~/#   coefficient is then computed as follows:
+~/#    new_coeff = old_coeff * ((current_avg_time)/(target_avg_tim))^alpha
+~/#
+~/#############################################################################
+~o|39
+~?x<6
+~$>Done
+~:Start
+~/#############################################################################
+~r10=%6% 100
+~r11=%7% 0.001
+~r12=%8% 2
+~/
+~/Average trip time:    %1%
+~+|~/Productions:          %2% %%%%2%.n%%% %%%%2%.d%%%
+~+|~/Attractions:          %3% %%%%3%.n%%% %%%%3%.d%%%
+~+|~/Trip times:           %4% %%%%4%.n%%% %%%%4%.d%%%
+~/
+~/Result matrix:        %5%
+~/
+~/Max. no. iterations:  %r10%
+~/Max. time difference: %r11%
+~/Adjustment exponent:  %r12%
+~/
+~/#############################################################################
+~/
+reports=caligrav.rep
+~x=0   / iteration counter
+3.21 / #### 3.21 #### initialize gravity coefficient
+~+|1|y|ms97|y|gtot|caligrav total demand|~?q=1|y|0|%2%|||n|+|~?q=2|2
+~+|1|y|ms99|y|gcoeff|caligrav gravity coeff (it%x%)|~?q=1|y|0|%1%|||~?q=2|2
+q
+~:NextIteration
+~x+1
+3.21 /#### 3.21 #### compute exponential conductivity matrix
+~+|1|y|%5%|y|rpq%x%|conductivity at iteration %x%|~?q=1|y|0|exp(0-%4%/ms99)||
+~+|n|~?q=2|2
+q
+3.22 /#### 3.22 #### two-dimensional balancing
+~+|1|%5%|%2%|%3%|n||~?q=2|2
+~+|1|%5%|y|gpqgr|caligrav demand matrix (it%x%)|~?q=1|n|~?q=2|2
+q
+3.21 /#### 3.21 #### compute average trip times
+~+|1|y|ms98|n
+~+|%5%*%4%/ms97|||n|+|+|~?q=2|2
+~+|1|y|ms99|y|gcoeff|gravity coefficient at iteration %x%|~?q=1|n
+~+|ms99*(%1%/ms98)^%r12%|||~?q=2|2
+q
+~/Iteration%x_3%: average trip time: %ms98.3_7%   gravity fct: exp(0-%4%/%ms99%)
+~r1=%1%
+~r1-%ms98%
+~?!x<%r10%
+~$>Done
+~?r1>%r11%
+~$NextIteration
+~?r1<-%r11%
+~$NextIteration
+~/
+~/#############################################################################
+~:Done
+reports=^
+~o=6

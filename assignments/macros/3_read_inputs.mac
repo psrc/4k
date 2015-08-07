@@ -1,0 +1,32 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+s=%2%
+~/
+~/ ...input %1% tolls
+2.41
+~+|3|@toll1|n|*|1,2,3|..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@toll2|n|*|1,2,4|..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@toll3|n|*|1,2,5|..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@trkc1|n|*|1,2,6|..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@trkc2|n|*|1,2,7|..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@trkc3|n|*|1,2,8|..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
+~+|3|@toll1|n|*|1,2,3|..\..\input\tolls\roadway\%1%_roadway_tolls.in|y|2|y
+~+|3|@toll2|n|*|1,2,4|..\..\input\tolls\roadway\%1%_roadway_tolls.in|y|2|y
+~+|3|@toll3|n|*|1,2,5|..\..\input\tolls\roadway\%1%_roadway_tolls.in|y|2|y
+~+|3|@trkc1|n|*|1,2,6|..\..\input\tolls\roadway\%1%_roadway_tolls.in|y|2|y
+~+|3|@trkc2|n|*|1,2,7|..\..\input\tolls\roadway\%1%_roadway_tolls.in|y|2|y
+~+|3|@trkc3|n|*|1,2,8|..\..\input\tolls\roadway\%1%_roadway_tolls.in|y|2|y
+q
+~/
+~/ ...input vot assignment parameters
+~+|3.11|..\..\input\model\vot\%1%_vot_parameters.in|2|
+~/
+~/ ...flag bridges using screenlines 7 (TNB) and 32 (X-LK)
+~+|2.41|1|y|@bridg|n|1||type=7|type=32||1|2|q
+~/
+~/end: 3_read_inputs.mac
+~/exit emme
+~/
+q

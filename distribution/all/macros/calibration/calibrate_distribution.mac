@@ -1,0 +1,138 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=calibrate_trip_distribution.rpt
+~/
+~/ ...home based college
+~/ ...import am cost and distance skims for sov nonwork
+~+|1.31|1|..\..\Skims\Auto\AM\emmebank
+~+|2|3|3|mf"aau1cs"|mf"cost"|n|y
+~+|2|3|3|mf"aau1ds"|mf"dist"|n|y|q
+~/
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo2|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md2|n|0|||y|3751,4000||2|q
+~/
+~/ ...set the time matrix to the cost and distance used in trip distribution
+~+|3.21|1|y|mf"time"|n|mf"cost"+(mf"dist"*ms"autoop"*ms"avotda")|||y|1,3750||1,3750||2|q
+~/
+~/ ...adjust college trip distribution
+~<macros\caligrav.mac 29.909 mo2 md2 mf18 mf4
+~!ren caligrav.rep college.rpt
+~/
+~/ ...non-work trips using midday skims
+~/ ...import midday time skim for nonwork purposes
+~+|1.31|1|..\..\Skims\Auto\MD\emmebank
+~+|2|3|3|mf"mau1cs"|mf"cost"|n|y
+~+|2|3|3|mf"mau1ds"|mf"dist"|n|y|q
+~/
+~/ ...home based other
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo4|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md4|n|0|||y|3751,4000||2|q
+~/
+~/ ...set the time matrix to the cost and distance used in trip distribution
+~+|3.21|1|y|mf"time"|n|mf"cost"+(mf"dist"*ms"autoop"*ms"mvotda")|||y|1,3750||1,3750||2|q
+~/
+~/ ...adjust home based other trip distribution
+~<macros\caligrav.mac 16.274 mo4 md4 mf18 mf5
+~!ren caligrav.rep hbo.rpt
+~/
+~/ ...wko
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo6|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md6|n|0|||y|3751,4000||2|q
+~/
+~/ ...adjust wto trip distribution
+~<macros\caligrav.mac 19.570 mo6 md6 mf18 mf13
+~!ren caligrav.rep wko.rpt
+~/
+~/ ...oto
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo7|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md7|n|0|||y|3751,4000||2|q
+~/
+~/ ...adjust oto trip distribution
+~<macros\caligrav.mac 14.187 mo7 md7 mf18 mf12
+~!ren caligrav.rep oto.rpt
+~/
+~/ ...school
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo5|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md5|n|0|||y|3751,4000||2|q
+~/
+~/ ...adjust oto trip distribution
+~<macros\caligrav.mac 18.738 mo5 md5 mf18 mf6
+~!ren caligrav.rep school.rpt
+~/
+~/ ...home based work #1
+~/ ...import am time skim for sov work
+~+|1.31|1|..\..\Skims\Auto\AM\emmebank
+~+|2|3|3|mf"aa1cs1"|mf"cost"|n|y
+~+|2|3|3|mf"aa1ds1"|mf"dist"|n|y|q
+~/
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo8|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md8|n|0|||y|3751,4000||2|q
+~/
+~/ ...set the time matrix to the cost and distance used in trip distribution
+~+|3.21|1|y|mf"time"|n|mf"cost"+(mf"dist"*ms"autoop"*ms"avot1v")|||y|1,3750||1,3750||2|q
+~/
+~/ ...adjust trip distribution
+~<macros\caligrav.mac 32.588 mo8 md8 mf18 mf8
+~!ren caligrav.rep hbw1.rpt
+~/
+~/ ...home based work #2
+~/ ...import am time skim for sov work
+~+|1.31|1|..\..\Skims\Auto\AM\emmebank
+~+|2|3|3|mf"aa1cs2"|mf"cost"|n|y
+~+|2|3|3|mf"aa1ds2"|mf"dist"|n|y|q
+~/
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo9|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md9|n|0|||y|3751,4000||2|q
+~/
+~/ ...set the time matrix to the cost and distance used in trip distribution
+~+|3.21|1|y|mf"time"|n|mf"cost"+(mf"dist"*ms"autoop"*ms"avot2v")|||y|1,3750||1,3750||2|q
+~/
+~/ ...adjust trip distribution
+~<macros\caligrav.mac 31.304 mo9 md9 mf18 mf9
+~!ren caligrav.rep hbw2.rpt
+~/
+~/ ...home based work #3
+~/ ...import am time skim for sov work
+~+|1.31|1|..\..\Skims\Auto\AM\emmebank
+~+|2|3|3|mf"aa1cs3"|mf"cost"|n|y
+~+|2|3|3|mf"aa1ds3"|mf"dist"|n|y|q
+~/
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo10|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md10|n|0|||y|3751,4000||2|q
+~/
+~/ ...set the time matrix to the cost and distance used in trip distribution
+~+|3.21|1|y|mf"time"|n|mf"cost"+(mf"dist"*ms"autoop"*ms"avot3v")|||y|1,3750||1,3750||2|q
+~/
+~/ ...adjust trip distribution
+~<macros\caligrav.mac 32.506 mo10 md10 mf18 mf10
+~!ren caligrav.rep hbw3.rpt
+~/
+~/ ...home based work #4
+~/ ...import am time skim for sov work
+~+|1.31|1|..\..\Skims\Auto\AM\emmebank
+~+|2|3|3|mf"aa1cs4"|mf"cost"|n|y
+~+|2|3|3|mf"aa1ds4"|mf"dist"|n|y|q
+~/
+~/ ...set productions and attractions for park and ride trips to 0
+~+|3.21|1|y|mo11|n|0|||y|3751,4000||2|q
+~+|3.21|1|y|md11|n|0|||y|3751,4000||2|q
+~/
+~/ ...set the time matrix to the cost and distance used in trip distribution
+~+|3.21|1|y|mf"time"|n|mf"cost"+(mf"dist"*ms"autoop"*ms"avot4v")|||y|1,3750||1,3750||2|q
+~/
+~/ ...adjust trip distribution
+~<macros\caligrav.mac 32.102 mo11 md11 mf18 mf11
+~!ren caligrav.rep hbw4.rpt
+~/
+~/ ...exit emme
+~/
+q

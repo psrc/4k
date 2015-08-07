@@ -8,19 +8,19 @@ if exist *.ind erase *.ind
 
 if %iternum% GTR 0 (
      cd am
-	 call emme -ng 000 -m macros\11_input_triptables.mac
+	 call emme -ng 000 -m ..\macros\4_input_triptables.mac a 1002
 	 cd ..
 	 cd md
-	 call emme -ng 000 -m macros\11_input_triptables.mac
+	 call emme -ng 000 -m ..\macros\4_input_triptables.mac m 1004
 	 cd ..
 	 cd pm
-	 call emme -ng 000 -m macros\11_input_triptables.mac
+	 call emme -ng 000 -m ..\macros\4_input_triptables.mac p 1003
 	 cd ..
 	 cd ev
-	 call emme -ng 000 -m macros\11_input_triptables.mac
+	 call emme -ng 000 -m ..\macros\4_input_triptables.mac e 1005
 	 cd ..
 	 cd ni
-	 call emme -ng 000 -m macros\11_input_triptables.mac
+	 call emme -ng 000 -m ..\macros\4_input_triptables.mac n 1006
 	 cd ..
 )
 

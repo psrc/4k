@@ -21,22 +21,10 @@ q
 ~/ --- Copy Work Trip Distribution into Temporary Matrices
 1.31
 ~+|1
-..\distribution\hbwork_inc1\emmebank
+..\distribution\all\emmebank
 ~+|2|3|3|mf"hbwds1"|mf"temp01"|n|y
-q
-1.31
-~+|1
-..\distribution\hbwork_inc2\emmebank
 ~+|2|3|3|mf"hbwds2"|mf"temp02"|n|y
-q
-1.31
-~+|1
-..\distribution\hbwork_inc2\emmebank
 ~+|2|3|3|mf"hbwds2"|mf"temp03"|n|y
-q
-1.31
-~+|1
-..\distribution\hbwork_inc2\emmebank
 ~+|2|3|3|mf"hbwds2"|mf"temp04"|n|y
 q
 ~/ 

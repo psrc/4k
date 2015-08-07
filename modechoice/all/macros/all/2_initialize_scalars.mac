@@ -1,0 +1,187 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initilization.rpt
+~/
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize scalar matrices
+3.12
+~+|1|ms01|autoop|auto operating cost (cents/mile)|0
+~#
+~+|1|ms02|asccs2|asc for shared ride 2|0
+~+|1|ms03|asccs3|asc for shared ride 3+|0
+~+|1|ms04|ascctw|asc for transit walk|0
+~+|1|ms05|asccbk|asc for bike|0
+~+|1|ms06|asccwk|asc for walk|0
+~#
+~+|1|ms07|autivt|auto iv-time coeff|0
+~+|1|ms08|trwivt|tw iv-time coeff|0
+~+|1|ms09|biketm|bike time coeff|0
+~+|1|ms10|walktm|walk time coeff|0
+~#
+~+|1|ms11|autovt|auto ov-time coeff|0
+~+|1|ms12|trwovt|tw ov-time coeff|0
+~#
+~+|1|ms13|trwaux|tw aux-time coeff|0
+~+|1|ms14|trwiwt|tw iw-time coeff|0
+~+|1|ms15|trwxfr|tw xfr-time coeff|0
+~+|1|ms16|trwbrd|tw brd-time coeff|0
+~+|1|ms17|trwnbd|tw nbd coeff|0
+~#
+~+|1|ms18|autcos|auto cost coefficient|0
+~+|1|ms19|trwcos|tw cost coeff|0
+~#
+~+|1|ms20|bdsovo|cbd coeff for sov (mo)|0
+~+|1|ms21|bdsovd|cbd coeff for sov (md)|0
+~+|1|ms22|bdsr2o|cbd coeff for sr2 (mo)|0
+~+|1|ms23|bdsr2d|cbd coeff for sr2 (md)|0
+~+|1|ms24|bdsr3o|cbd coeff for sr3 (mo)|0
+~+|1|ms25|bdsr3d|cbd coeff for sr3 (md)|0
+~+|1|ms26|bdtrwo|cbd coeff for tw (mo)|0
+~+|1|ms27|bdtrwd|cbd coeff for tw (md)|0
+~+|1|ms28|bdbiko|cbd coeff for bike (mo)|0
+~+|1|ms29|bdbikd|cbd coeff for bike (md)|0
+~+|1|ms30|bdwlko|cbd coeff for walk (mo)|0
+~+|1|ms31|bdwlkd|cbd coeff for walk (md)|0
+~#
+~+|1|ms32|uidsvo|uf coeff for sov (mo) - int density|0
+~+|1|ms33|uidsvd|uf coeff for sov (md) - int density|0
+~+|1|ms34|umxsvo|uf coeff for sov (mo) - lu mix|0
+~+|1|ms35|umxsvd|uf coeff for sov (md) - lu mix|0
+~+|1|ms36|unmsvo|uf coeff for sov (mo) - non motorized|0
+~+|1|ms37|unmsvd|uf coeff for sov (md) - non motorized|0
+~+|1|ms38|uresvo|uf coeff for sov (mo) - retail far|0
+~+|1|ms39|uresvd|uf coeff for sov (md) - retail far|0
+~#
+~+|1|ms40|uids2o|uf coeff for sr2 (mo) - int density|0
+~+|1|ms41|uids2d|uf coeff for sr2 (md) - int density|0
+~+|1|ms42|umxs2o|uf coeff for sr2 (mo) - lu mix|0
+~+|1|ms43|umxs2d|uf coeff for sr2 (md) - lu mix|0
+~+|1|ms44|unms2o|uf coeff for sr2 (mo) - non motorized|0
+~+|1|ms45|unms2d|uf coeff for sr2 (md) - non motorized|0
+~+|1|ms46|ures2o|uf coeff for sr2 (mo) - retail far|0
+~+|1|ms47|ures2d|uf coeff for sr2 (md) - retail far|0
+~#
+~+|1|ms48|uids3o|uf coeff for sr3 (mo) - int density|0
+~+|1|ms49|uids3d|uf coeff for sr3 (md) - int density|0
+~+|1|ms50|umxs3o|uf coeff for sr3 (mo) - lu mix|0
+~+|1|ms51|umxs3d|uf coeff for sr3 (md) - lu mix|0
+~+|1|ms52|unms3o|uf coeff for sr3 (mo) - non motorized|0
+~+|1|ms53|unms3d|uf coeff for sr3 (md) - non motorized|0
+~+|1|ms54|ures3o|uf coeff for sr3 (mo) - retail far|0
+~+|1|ms55|ures3d|uf coeff for sr3 (md) - retail far|0
+~#
+~+|1|ms56|uidtwo|uf coeff for tw (mo) - int density|0
+~+|1|ms57|uidtwd|uf coeff for tw (md) - int density|0
+~+|1|ms58|umxtwo|uf coeff for tw (mo) - lu mix|0
+~+|1|ms59|umxtwd|uf coeff for tw (md) - lu mix|0
+~+|1|ms60|unmtwo|uf coeff for tw (mo) - non motorized|0
+~+|1|ms61|unmtwd|uf coeff for tw (md) - non motorized|0
+~+|1|ms62|uretwo|uf coeff for tw (mo) - retail far|0
+~+|1|ms63|uretwd|uf coeff for tw (md) - retail far|0
+~#
+~+|1|ms64|uidbko|uf coeff for bike (mo) - int density|0
+~+|1|ms65|uidbkd|uf coeff for bike (md) - int density|0
+~+|1|ms66|umxbko|uf coeff for bike (mo) - lu mix|0
+~+|1|ms67|umxbkd|uf coeff for bike (md) - lu mix|0
+~+|1|ms68|unmbko|uf coeff for bike (mo) - non motorized|0
+~+|1|ms69|unmbkd|uf coeff for bike (md) - non motorized|0
+~+|1|ms70|urebko|uf coeff for bike (mo) - retail far|0
+~+|1|ms71|urebkd|uf coeff for bike (md) - retail far|0
+~#
+~+|1|ms72|uidwko|uf coeff for walk (mo) - int density|0
+~+|1|ms73|uidwkd|uf coeff for walk (md) - int density|0
+~+|1|ms74|umxwko|uf coeff for walk (mo) - lu mix|0
+~+|1|ms75|umxwkd|uf coeff for walk (md) - lu mix|0
+~+|1|ms76|unmwko|uf coeff for walk (mo) - non motorized|0
+~+|1|ms77|unmwkd|uf coeff for walk (md) - non motorized|0
+~+|1|ms78|urewko|uf coeff for walk (mo) - retail far|0
+~+|1|ms79|urewkd|uf coeff for walk (md) - retail far|0
+~#
+~+|1|ms80|ascctd|hb work-inc1 asc for transit walk|0
+~+|1|ms81|trdivt|hb work-inc1 td iv-time coeff|0
+~+|1|ms82|trdovt|hb work-inc1 td ov-time coeff|0
+~+|1|ms83|trdcos|hb work-inc1 td cost coeff|0
+~#
+~+|1|ms84|trdaux|hb work-inc1 td aux-time coeff|0
+~+|1|ms85|trdiwt|hb work-inc1 td iw-time coeff|0
+~+|1|ms86|trdxfr|hb work-inc1 td xfr-time coeff|0
+~+|1|ms87|trdbrd|hb work-inc1 td brd-time coeff|0
+~+|1|ms88|trdnbd|hb work-inc1 td nbd coeff|0
+~#
+~+|1|ms89|bdtrdo|hb work-inc1 cbd coeff for td (mo)|0
+~+|1|ms90|bdtrdd|hb work-inc1 cbd coeff for td (md)|0
+~#
+~+|1|ms91|uidtdo|uf coeff for td (mo) - int density|0
+~+|1|ms92|uidtdd|uf coeff for td (md) - int density|0
+~+|1|ms93|umxtdo|uf coeff for td (mo) - lu mix|0
+~+|1|ms94|umxtdd|uf coeff for td (md) - lu mix|0
+~+|1|ms95|unmtdo|uf coeff for td (mo) - non motorized|0
+~+|1|ms96|unmtdd|uf coeff for td (md) - non motorized|0
+~+|1|ms97|uretdo|uf coeff for td (mo) - retail far|0
+~+|1|ms98|uretdd|uf coeff for td (md) - retail far|0
+~#
+~+|1|ms99|avotda|am sov non-work vot|0
+~+|1|ms100|avots2|am hov 2 vot|0
+~+|1|ms101|avots3|am hov 3+ vot|0
+~+|1|ms102|avotvp|am vanpool vot|0
+~+|1|ms103|avot1v|am sov hbw income 1 vot|0
+~+|1|ms104|avot2v|am sov hbw income 2 vot|0
+~+|1|ms105|avot3v|am sov hbw income 3 vot|0
+~+|1|ms106|avot4v|am sov hbw income 4 vot|0
+~+|1|ms107|avotlt|am light truck vot|0
+~+|1|ms108|avotmd|am medium truck vot|0
+~+|1|ms109|avothv|am heavy truck vot|0
+~/#
+~+|1|ms110|mvotda|md sov non-work vot|0
+~+|1|ms111|mvots2|md hov 2 vot|0
+~+|1|ms112|mvots3|md hov 3+ vot|0
+~+|1|ms113|mvotvp|md vanpool vot|0
+~+|1|ms114|mvot1v|md sov hbw income 1 vot|0
+~+|1|ms115|mvot2v|md sov hbw income 2 vot|0
+~+|1|ms116|mvot3v|md sov hbw income 3 vot|0
+~+|1|ms117|mvot4v|md sov hbw income 4 vot|0
+~+|1|ms118|mvotlt|md light truck vot|0
+~+|1|ms119|mvotmd|md medium truck vot|0
+~+|1|ms120|mvothv|md heavy truck vot|0
+~/ ------------------------------------
+~/ --- Scalars for Market Segmentation
+~/ ------------------------------------
+~+|1|ms23|ecp1da|hb non-work c-p 1 coeff - drive alone|0
+~+|1|ms24|ecp2da|hb non-work c-p 2 coeff - drive alone|0
+~+|1|ms25|ecp3da|hb non-work c-p 3 coeff - drive alone|0
+~+|1|ms26|ecp4da|hb non-work c-p 4 coeff - drive alone|0
+~+|1|ms27|ecp5da|hb non-work c-p 5 coeff - drive alone|0
+~+|1|ms28|ecp1s2|hb non-work c-p 1 coeff - shared ride 2|0
+~+|1|ms29|ecp2s2|hb non-work c-p 2 coeff - shared ride 2|0
+~+|1|ms30|ecp3s2|hb non-work c-p 3 coeff - shared ride 2|0
+~+|1|ms31|ecp4s2|hb non-work c-p 4 coeff - shared ride 2|0
+~+|1|ms32|ecp5s2|hb non-work c-p 5 coeff - shared ride 2|0
+~+|1|ms33|ecp1s3|hb non-work c-p 1 coeff - shared ride 3+|0
+~+|1|ms34|ecp2s3|hb non-work c-p 2 coeff - shared ride 3+|0
+~+|1|ms35|ecp3s3|hb non-work c-p 3 coeff - shared ride 3+|0
+~+|1|ms36|ecp4s3|hb non-work c-p 4 coeff - shared ride 3+|0
+~+|1|ms37|ecp5s3|hb non-work c-p 5 coeff - shared ride 3+|0
+~+|1|ms38|ecp1tw|hb non-work c-p 1 coeff - transit-walk|0
+~+|1|ms39|ecp2tw|hb non-work c-p 2 coeff - transit-walk|0
+~+|1|ms40|ecp3tw|hb non-work c-p 3 coeff - transit-walk|0
+~+|1|ms41|ecp4tw|hb non-work c-p 4 coeff - transit-walk|0
+~+|1|ms42|ecp5tw|hb non-work c-p 5 coeff - transit-walk|0
+~+|1|ms43|ecp1wk|hb non-work c-p 1 coeff - walk|0
+~+|1|ms44|ecp2wk|hb non-work c-p 2 coeff - walk|0
+~+|1|ms45|ecp3wk|hb non-work c-p 3 coeff - walk|0
+~+|1|ms46|ecp4wk|hb non-work c-p 4 coeff - walk|0
+~+|1|ms47|ecp5wk|hb non-work c-p 5 coeff - walk|0
+~+|1|ms48|ecp1bk|hb non-work c-p 1 coeff - bike|0
+~+|1|ms49|ecp2bk|hb non-work c-p 2 coeff - bike|0
+~+|1|ms50|ecp3bk|hb non-work c-p 3 coeff - bike|0
+~+|1|ms51|ecp4bk|hb non-work c-p 4 coeff - bike|0
+~+|1|ms52|ecp5bk|hb non-work c-p 5 coeff - bike|0
+
+
+q
+~#
+~/end: 3_initialize_scalars.mac
+~/exit emme
+~/
+q

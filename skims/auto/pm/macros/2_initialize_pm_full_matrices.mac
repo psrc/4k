@@ -81,18 +81,6 @@ reports=2_initialize_pm_full_matrices.rpt
 ~+|1|mf64|plgtdp|light truck prev distance|0
 ~+|1|mf65|pmeddp|medium truck prev distance|0
 ~+|1|mf66|phvydp|heavy truck prev distance|0
-~#
-~+|1|mf67|pau1tl|non-hbw sov toll sum|0
-~+|1|mf68|pau2tl|hov 2 toll sum|0
-~+|1|mf69|pau3tl|hov 3+ toll sum|0
-~+|1|mf70|pau4tl|vanpool toll sum|0
-~+|1|mf71|pa1tl1|hbw income 1 sov toll sum|0
-~+|1|mf72|pa1tl2|hbw income 2 sov toll sum|0
-~+|1|mf73|pa1tl3|hbw income 3 sov toll sum|0
-~+|1|mf74|pa1tl4|hbw income 4 sov toll sum|0
-~+|1|mf75|plgttl|light truck toll sum|0
-~+|1|mf76|pmedtl|medium truck toll sum|0
-~+|1|mf77|phvytl|heavy truck toll sum|0
 q
 ~#
 ~/end: 2_initialize_pm_full_matrices.mac

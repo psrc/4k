@@ -7,18 +7,6 @@ reports=7_calculate_ev_auto_feedback_skims.rpt
 ~/begin: 7_calculate_ev_auto_feedback_skims.mac
 ~# ...call module 3.21: matrix calculations
 3.21
-~/ ...average previous and current interzonal time skims
-~+|1|y|mf"eau1tm"|n|(mf"eau1tm"+mf"eau1tp")/2|||n|2
-~+|1|y|mf"eau2tm"|n|(mf"eau2tm"+mf"eau2tp")/2|||n|2
-~+|1|y|mf"eau3tm"|n|(mf"eau3tm"+mf"eau3tp")/2|||n|2
-~+|1|y|mf"ea1tm1"|n|(mf"ea1tm1"+mf"ea1tp1")/2|||n|2
-~+|1|y|mf"ea1tm2"|n|(mf"ea1tm2"+mf"ea1tp2")/2|||n|2
-~+|1|y|mf"ea1tm3"|n|(mf"ea1tm3"+mf"ea1tp3")/2|||n|2
-~+|1|y|mf"ea1tm4"|n|(mf"ea1tm4"+mf"ea1tp4")/2|||n|2
-~+|1|y|mf"elgttm"|n|(mf"elgttm"+mf"elgttp")/2|||n|2
-~+|1|y|mf"emedtm"|n|(mf"emedtm"+mf"emedtp")/2|||n|2
-~+|1|y|mf"ehvytm"|n|(mf"ehvytm"+mf"ehvytp")/2|||n|2
-~#
 ~/ ...average previous and current interzonal cost skims
 ~+|1|y|mf"eau1cs"|n|(mf"eau1cs"+mf"eau1cp")/2|||n|2
 ~+|1|y|mf"eau2cs"|n|(mf"eau2cs"+mf"eau2cp")/2|||n|2
@@ -30,18 +18,6 @@ reports=7_calculate_ev_auto_feedback_skims.rpt
 ~+|1|y|mf"elgtcs"|n|(mf"elgtcs"+mf"elgtcp")/2|||n|2
 ~+|1|y|mf"emedcs"|n|(mf"emedcs"+mf"emedcp")/2|||n|2
 ~+|1|y|mf"ehvycs"|n|(mf"ehvycs"+mf"ehvycp")/2|||n|2
-~#
-~/ ...average previous and current interzonal distance skims
-~+|1|y|mf"eau1ds"|n|(mf"eau1ds"+mf"eau1dp")/2|||n|2
-~+|1|y|mf"eau2ds"|n|(mf"eau2ds"+mf"eau2dp")/2|||n|2
-~+|1|y|mf"eau3ds"|n|(mf"eau3ds"+mf"eau3dp")/2|||n|2
-~+|1|y|mf"ea1ds1"|n|(mf"ea1ds1"+mf"ea1dp1")/2|||n|2
-~+|1|y|mf"ea1ds2"|n|(mf"ea1ds2"+mf"ea1dp2")/2|||n|2
-~+|1|y|mf"ea1ds3"|n|(mf"ea1ds3"+mf"ea1dp3")/2|||n|2
-~+|1|y|mf"ea1ds4"|n|(mf"ea1ds4"+mf"ea1dp4")/2|||n|2
-~+|1|y|mf"elgtds"|n|(mf"elgtds"+mf"elgtdp")/2|||n|2
-~+|1|y|mf"emedds"|n|(mf"emedds"+mf"emeddp")/2|||n|2
-~+|1|y|mf"ehvyds"|n|(mf"ehvyds"+mf"ehvydp")/2|||n|2
 q
 ~#
 ~/end: 7_calculate_ev_auto_feedback_skims.mac
