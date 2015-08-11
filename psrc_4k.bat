@@ -10,19 +10,25 @@ REM Parameters are passed to the Batch File via the Control File "4k.ctl"
 for /f "tokens=1,2 delims==" %%a in (4k.ctl) do SET %%a=%%b
 
 REM Give some basic information about the inputs used
-REM echo Land used inputs are for year %LUYear%. >> psrc_4k_log.txt
-REM echo Inputs for this model run are located at %InputPath%. >> psrc_4k_log.txt
+echo Land used inputs are for year %LUYear%. >> psrc_4k_log.txt
+echo Inputs for this model run are located at %InputPath%. >> psrc_4k_log.txt
 
 set modeldir=%cd%
 
 REM Check for the Input Folder and Add if necessary
-REM if Not exist %modeldir%\input (
-REM     mkdir %modeldir%\input
-REM )
+if Not exist %modeldir%\input mkdir %modeldir%\input
+
+REM Check for the Assignment Folders and Add if they do not exist
+if Not exist %modeldir%\assignments\am mkdir %modeldir%\assignments\am
+if Not exist %modeldir%\assignments\md mkdir %modeldir%\assignments\md
+if Not exist %modeldir%\assignments\pm mkdir %modeldir%\assignments\pm
+if Not exist %modeldir%\assignments\ev mkdir %modeldir%\assignments\ev
+if Not exist %modeldir%\assignments\ni mkdir %modeldir%\assignments\ni
+
 REM Copy the inputs to the local directory
-REM cd input
-REM xcopy "%InputPath%\*" /s /i /y
-REM cd ..
+cd input
+xcopy "%InputPath%\*" /s /i /y
+cd ..
 
 REM Model Setup and Free-Flow Iteration
 set iternum=0
@@ -54,6 +60,14 @@ set iternum=5
 call batchfiles\model\final_iteration.bat
 call batchfiles\reports\report_rename.bat f
 
+REM Save Toll Skim Matrices if User Selected
+if %TollSkim% == Yes (  
+	 cd skims\auto
+     call batchfiles\toll_skims\toll_skims.bat
+     call batchfiles\toll_skims\toll_skim_completion_check.bat
+)
+cd ..\..
+
 REM Create the Summary Bank if called for and populate
 if %SummaryBank% == Yes (
      cd results
@@ -67,7 +81,9 @@ if %SummaryBank% == Yes (
      call emme -ng newbank -m macros\0-1_create_databank.mac
      call emme -ng 000 -m macros\1-0_import_scenarios.mac
 	 call emme -ng 000 -m macros\1-1_initialize_matrices.mac
+	 if %USim% == Yes call emme -ng 000 -m macros\1-1a_initialize_usim_matrices.mac
 	 call emme -ng 000 -m macros\1-2_input_triptables.mac
+	 if %USim% == Yes call emme -ng 000 -m macros\1-2a_input_usim_triptables.mac
      call emme -ng 000 -m macros\2-0_regional_link_summary.mac
 	 call emme -ng 000 -m macros\2-1_screenline_summary.mac
 	 call emme -ng 000 -m macros\2-2_regional_triptable_summary.mac

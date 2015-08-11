@@ -198,7 +198,7 @@ s=1006
 2.41
 ~/ --- Auto Volume by Screenline
 ~+|1|n|@tveh||type=2||5|4|ms237|nvsl2|NI Screenline #2 - Vehicle|1
-~+|1|n|@tveh||type=2||5|4|ms238|nvsl3|NI Screenline #3 - Vehicle|1
+~+|1|n|@tveh||type=3||5|4|ms238|nvsl3|NI Screenline #3 - Vehicle|1
 ~+|1|n|@tveh||type=4||5|4|ms239|nvsl4|NI Screenline #4 - Vehicle|1
 ~+|1|n|@tveh||type=7||5|4|ms240|nvsl7|NI Screenline #7 - Vehicle|1
 ~+|1|n|@tveh||type=14||5|4|ms241|nvsl14|NI Screenline #14 - Vehicle|1

@@ -2,7 +2,7 @@ Puget Sound 4k Trip Based Model Control File
 
 Network and Land Use Source and Year
 LUYear=2010
-InputPath=D:\Inputs\2010_DistAdj
+InputPath=K:\4K\Inputs\Network\2010LUV
 
 TAZ values for the zone system for this model version
 hightaz=3700
@@ -24,6 +24,9 @@ ni_iter=25
 Deletion of Interim Report Files and Emme databank
 DeleteReports=No
 DeleteBank=No
+
+Toll Matrices for use in BCA, UrbanSim and other Applications
+TollSkim=Yes
 
 Flag to Determine if you want to run the model to be compatible with Benefit Cost Analysis tool
 Running for BCA increases the storage requirements of the model.

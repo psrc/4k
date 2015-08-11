@@ -1,0 +1,47 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- Import am auto skims
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+..\skims\auto\am\emmebank
+~+|2|3|3|mf"aau1tm"|mf"aau1tm"|n|y
+~+|2|3|3|mf"aau1tl"|mf"aau1tl"|n|y
+~+|2|3|3|mf"aau1cs"|mf"aau1cs"|n|y
+~+|2|3|3|mf"aau1ds"|mf"aau1ds"|n|y
+q
+~/ ---------------------------------------------------------------
+~/ --- Import am walk skim
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+..\skims\nonmotorized\am\emmebank
+~+|2|3|3|mf"awlktm"|mf"awlktm"|n|y
+q
+~/
+~/ ---------------------------------------------------------------
+~/ --- Import am transit skim
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+..\skims\transit\am\all_mode\emmebank
+~+|2|3|3|mf"atrtwa"|mf"atrtwa"|n|y
+q
+~/ ---------------------------------------------------------------
+~/ --- Import Logsums
+~/ ---------------------------------------------------------------
+1.31
+~+|1
+..\modechoice\all\emmebank
+~+|2|3|3|mf"lsum1"|mf"lsum1"|n|y
+~+|2|3|3|mf"lsum2"|mf"lsum2"|n|y
+~+|2|3|3|mf"lsum3"|mf"lsum3"|n|y
+~+|2|3|3|mf"lsum4"|mf"lsum4"|n|y
+q
+~/end: 1-2a_input_usim_triptables.mac
+~/exit emme
+~/
+q

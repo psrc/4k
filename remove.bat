@@ -9,47 +9,42 @@ for /f "tokens=1,2 delims==" %%a in (4k.ctl) do SET %%a=%%b
 set modeldir=%cd%
 
 REM Remove Databanks if called for in the control file
-if %DeleteBank% == Yes (
-     set modeldir=%cd%
-	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\assignment_bank_list.txt) DO (
-	 cd %modeldir%\%%A
+FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\assignment_bank_list.txt) DO (
+cd %modeldir%\%%A
 
-	 REM Delete the Existing Files if present
-     if exist emmebank erase emmebank
-     if exist %modeldir%\%%A\emmemat rmdir %modeldir%\%%A\emmemat /s /q
-     if exist PATHS* erase PATHS*
-     if exist errors erase errors
-	 if exist usemacro* erase usemacro*
-     if exist *in erase *in
-	 )
-	 
-	 cd %modeldir%
-	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\other_bank_list.txt) DO (
-	 cd %modeldir%\%%A
-     if exist emmebank erase emmebank
-     if exist %modeldir%\%%A\emmemat rmdir %modeldir%\%%A\emmemat /s /q
-     if exist PATHS* erase PATHS*
-     if exist errors erase errors
-	 if exist usemacro* erase usemacro*
-     if exist *in erase *in
-	 )
+REM Delete the Existing Files if present
+if exist emmebank erase emmebank
+if exist %modeldir%\%%A\emmemat rmdir %modeldir%\%%A\emmemat /s /q
+if exist PATHS* erase PATHS*
+if exist errors erase errors
+if exist usemacro* erase usemacro*
+if exist *in erase *in
 )
+
 cd %modeldir%
-
-REM Remove Internal Report Files if called for in the control file
-if %DeleteReports% == Yes (
-     set modeldir=%cd%
-	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\assignment_bank_list.txt) DO (
-	 cd %modeldir%\%%A
-
-	 REM Delete the Existing Files if present
-     if exist *.rp* erase *.rp*
-	 )
-	 
-	 cd %modeldir%
-	 FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\other_bank_list.txt) DO (
-	 cd %modeldir%\%%A
-     if exist *.rp* erase *.rp*
-	 )
+FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\other_bank_list.txt) DO (
+cd %modeldir%\%%A
+if exist emmebank erase emmebank
+if exist %modeldir%\%%A\emmemat rmdir %modeldir%\%%A\emmemat /s /q
+if exist PATHS* erase PATHS*
+if exist errors erase errors
+if exist usemacro* erase usemacro*
+if exist *in erase *in
 )
+
+cd %modeldir%
+REM Remove Internal Report Files if called for in the control file
+set modeldir=%cd%
+FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\assignment_bank_list.txt) DO (
+cd %modeldir%\%%A
+REM Delete the Existing Files if present
+if exist *.rp* erase *.rp*
+)
+
+cd %modeldir%
+FOR /F "tokens=*" %%A IN (%cd%%\batchfiles\setup\other_bank_list.txt) DO (
+cd %modeldir%\%%A
+if exist *.rp* erase *.rp*
+)
+
 cd %modeldir%
