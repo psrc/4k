@@ -1,0 +1,85 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+reports=walk.rpt
+~/
+~/ ...Reset Temporary Storage Matrices to 0
+~<macros\0_reset_matrices.mac
+~/
+~/ ... Read in Walk modeshare data
+1.31
+~+|1
+..\..\modechoice\all\emmebank
+~+|2|3|3|mf"coshwk"|mf"coll"|n|y
+~+|2|3|3|mf"nwshwk"|mf"hbo"|n|y
+~+|2|3|3|mf"scshwk"|mf"sch"|n|y
+~+|2|3|3|mf"w1shwk"|mf"w1"|n|y
+~+|2|3|3|mf"w2shwk"|mf"w2"|n|y
+~+|2|3|3|mf"w3shwk"|mf"w3"|n|y
+~+|2|3|3|mf"w4shwk"|mf"w4"|n|y
+~+|2|3|3|mf"nhshwk"|mf"nhb"|n|y
+q
+~/
+~/ ...Run Walk Trip Table Creation for each time Period
+~/ ...Loop over the Parameter Files
+~x=1
+~y=6
+~:LOOP
+~/ 
+~/ ...Set pa and ap to 0 for calculations
+3.21
+~+|1|y|mf"pa"|n|0|||n|2
+~+|1|y|mf"ap"|n|0|||n|2
+q
+~/
+~/ ...Input %%x%% walk time of day factors
+~+|3.11|..\..\input\model\timeofday\%%x%%_walk_tod.in|2|
+~/
+~/ ...Construct %%x%%  p-a walk person trip tables
+~+|3.21|1|y|mf"pa"|n
+mf"coldst"*mf"coll"*ms"coltpa"*ms"colpa"+
+mf"schdst"*mf"sch"*ms"schtpa"*ms"schpa"
+~+|||n|2|q
+~+|3.21|1|y|mf"pa"|n|mf"pa"+
+mf"hbodst"*mf"hbo"*ms"hbotpa"*ms"hbopa"+
+mf"hspdst"*mf"hbo"*ms"hsptpa"*ms"hsppa"+
+mf"otodst"*mf"nhb"*ms"ototpa"*ms"otopa"+
+mf"wkodst"*mf"nhb"*ms"wtotpa"*ms"wtopa"
+~+|||n|2|q
+~+|3.21|1|y|mf"pa"|n|mf"pa"+
+mf"hbwds1"*mf"w1"*ms"wk1tpa"*ms"wk1pa"+
+mf"hbwds2"*mf"w2"*ms"wk2tpa"*ms"wk2pa"+
+mf"hbwds3"*mf"w3"*ms"wk3tpa"*ms"wk3pa"+
+mf"hbwds4"*mf"w4"*ms"wk4tpa"*ms"wk4pa"
+~+|||n|2|q
+~/ ...Construct %%x%% a-p walk person trip tables
+~+|3.21|1|y|mf"ap"|n
+mf"coldst"*mf"coll"*ms"coltap"*ms"colap"+
+mf"schdst"*mf"sch"*ms"schtap"*ms"schap"
+~+|||n|2|q
+~+|3.21|1|y|mf"ap"|n|mf"ap"+
+mf"hbodst"*mf"hbo"*ms"hbotap"*ms"hboap"+
+mf"hspdst"*mf"hbo"*ms"hsptap"*ms"hspap"+
+mf"otodst"*mf"nhb"*ms"ototap"*ms"otoap"+
+mf"wkodst"*mf"nhb"*ms"wtotap"*ms"wtoap"
+~+|||n|2|q
+~+|3.21|1|y|mf"ap"|n|mf"ap"+
+mf"hbwds1"*mf"w1"*ms"wk1tap"*ms"wk1ap"+
+mf"hbwds2"*mf"w2"*ms"wk2tap"*ms"wk2ap"+
+mf"hbwds3"*mf"w3"*ms"wk3tap"*ms"wk3ap"+
+mf"hbwds4"*mf"w4"*ms"wk4tap"*ms"wk4ap"
+~+|||n|2|q
+~/
+~/ ...Construct %%x%% o-d walk trip tables
+~+|3.21|1|y|mf"%%y%%walk"|n|mf"pa"+mf"ap"'|||n|2|q
+~x+1
+~y+1
+~?x<6
+~$LOOP
+~/ ...Exit Loop
+~/
+~/end: 2_walk_trip_tables.mac
+~/exit emme
+~/
+q

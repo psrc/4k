@@ -1,0 +1,61 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=transit_assignment.rpt
+~/
+~x=%2%
+s=%2%
+~/ ---------------------------------------------------------------------
+~/ --- Transit Assignment
+~/ ---------------------------------------------------------------------
+5.11
+~/ ...fixed demand transit assignment
+~+|2|2
+~/ ...enter transit demand and component skim matrices
+~+|mf"%1%trnwa"   /transit demand matrix
+~+|mf"%1%trtwa"|n /matrix to hold transit times (optional)
+~+|mf"%1%ivtwa"|n /matrix to hold in-vehicle times (optional)
+~+|mf"%1%auxwa"|n /matrix to hold auxiliary transit times (optional)
+~+|mf"%1%twtwa"|n /matrix to hold total waiting times (optional)
+~+|mf"%1%iwtwa"|n /matrix to hold initial waiting times (optional)
+~+|mf"%1%brdwa"|n /matrix to hold boarding times (optional)
+~+|mf"%1%nbdwa"|n /matrix to hold average number of boardings (optional)
+~/ ...enter active transit and auxiliary transit modes for assignment
+bcrfpwx
+~/ ...compute auxiliary transit time, in-vehicle time and number of boardings on a subset of active modes
+y
+~/ ...enter subset of active modes to be included in trip component matrices
+bcrfpw
+~/ ...specify source for effective headways
+1     /actual line headways
+~/ ...specify source for boarding times
+1     /same value for entire network
+~/ ...enter boarding time (in minutes)
+4
+~/ ...specify source for wait time factors
+1     /same value for entire network
+~/ ...enter wait time factor
+.5
+~/ ...enter wait time weight
+2
+~/ ...enter auxiliary transit time weight
+2
+~/ ...enter boarding time weight
+1
+~/ ...no additional options assignment
+n
+~/ ...call module 5.31: standard transit assignment
+5.31
+~/ ...write report file
+2
+~/
+~/ ...calculate bus-auto vehicle equivalent
+~?x=1002
+~+|2.41|1|y|@trnv3|n|3*vauteq*(60/hdwy)||4|*|*|2|2|q
+~?x=1004
+~+|2.41|1|y|@trnv6|n|6*vauteq*(60/hdwy)||4|*|*|2|2|q
+~/
+~/end: 7_transit_assignment.mac
+~/exit emme
+~/
+q

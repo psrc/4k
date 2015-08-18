@@ -8,19 +8,13 @@ REM Utilizes warm starts for all iterations
 
 cd pm
 if %iternum% == 0 (
-     call emme -ng 000 -m macros\1_initialize_matrices.mac
-	 call emme -ng 000 -m macros\2_initialize_scalars.mac
-     call emme -ng 000 -m macros\3_initialize_full_matrices.mac
-     call emme -ng 000 -m macros\4_initialize_vdfs.mac
-     call emme -ng 000 -m macros\5_initialize_extra_attributes.mac
-     call emme -ng 000 -m macros\6_input_tolls.mac
-     call emme -ng 000 -m macros\7_input_vot_parameters.mac
-     call emme -ng 000 -m macros\8_input_bridge_flags.mac
-     call emme -ng 000 -m macros\9_calculate_arterial_delay.mac
+     call emme -ng 000 -m ..\macros\1_initialize_matrices.mac p 1003
+     call emme -ng 000 -m ..\macros\2_initialize_networks.mac pm 1003 %highpnr%
+     call emme -ng 000 -m ..\macros\3_read_inputs.mac pm 1003
 )
 
-call emme -ng 000 -m macros\12_auto_assignment.mac %assigniter% %brgap% %iternum%
-call emme -ng 000 -m macros\13_calculate_total_vehicles.mac
+call emme -ng 000 -m ..\macros\5_auto_assignment.mac %pm_iter% %brgap% %iternum% 1003 p
+call emme -ng 000 -m ..\macros\8_calculate_total_vehicles.mac 1003
 
 cd ..
 echo "PM assignment finished" > donePM.ind

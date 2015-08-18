@@ -1,0 +1,28 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=assign.rpt
+~/
+~x=%1%
+s=%1%
+~/
+~/ ...sum total sov work vehicles
+~+|2.41|1|y|@sovw|n|@hbw1+@hbw2+@hbw3+@hbw4||*|2|2|q
+~/
+~/ ...calculate medium and heavy truck vehicles
+~+|2.41|1|y|@mveh|n|@mediu/1.5||*|2|2|q
+~+|2.41|1|y|@hveh|n|@heavy/2||*|2|2|q
+~/
+~/ ...calculate bus vehicles
+~?x=1002
+~+|2.41|1|y|@bveh|n|@trnv3/2||*|2|2|q
+~?x=1004
+~+|2.41|1|y|@bveh|n|@trnv6/2||*|2|2|q
+~/
+~/ ...sum total vehicles on links
+~+|2.41|1|y|@tveh|n|@sov+@sovw+@hov2+@hov3+@vpool+@light+@mveh+@hveh+@bveh||*|2|2|q
+~/
+~/end: 8_calculate_total_vehicles.mac
+~/exit emme
+~/
+q

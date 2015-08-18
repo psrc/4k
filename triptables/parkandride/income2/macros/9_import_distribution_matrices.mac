@@ -10,7 +10,7 @@ reports=9_import_distribution_matrices.rpt
 1.31
 ~+|1
 ~/ ...hb work income 2
-..\..\..\distribution\hbwork_inc2\emmebank
+..\..\..\distribution\all\emmebank
 ~+|2|3|3|mf"hbwds2"|mf"hbwds2"|n|y
 q
 ~#

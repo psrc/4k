@@ -1,0 +1,77 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- AM Peak Period Boardings by Mode and Operator
+~/ ---------------------------------------------------------------
+s=1002
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Light Rail
+~+|1|n|board||mod=r|&ut3=1||*|5|4|ms1309|arbdkc|AM LRail Boardings KCM|1
+~+|1|n|board||mod=r|&ut3=2||*|5|4|ms1310|arbdpt|AM LRail Boardings PT|1
+~+|1|n|board||mod=r|&ut3=3||*|5|4|ms1311|arbdct|AM LRail Boardings CT|1
+~+|1|n|board||mod=r|&ut3=4||*|5|4|ms1312|arbdkt|AM LRail Boardings KT|1
+~+|1|n|board||mod=r|&ut3=5||*|5|4|ms1313|arbdwf|AM LRail Boardings WSF|1
+~+|1|n|board||mod=r|&ut3=6||*|5|4|ms1314|arbdst|AM LRail Boardings ST|1
+~/ --- Commuter Rail
+~+|1|n|board||mod=c|&ut3=1||*|5|4|ms1315|acbdkc|AM CRail Boardings KCM|1
+~+|1|n|board||mod=c|&ut3=2||*|5|4|ms1316|acbdpt|AM CRail Boardings PT|1
+~+|1|n|board||mod=c|&ut3=3||*|5|4|ms1317|acbdct|AM CRail Boardings CT|1
+~+|1|n|board||mod=c|&ut3=4||*|5|4|ms1318|acbdkt|AM CRail Boardings KT|1
+~+|1|n|board||mod=c|&ut3=5||*|5|4|ms1319|acbdwf|AM CRail Boardings WSF|1
+~+|1|n|board||mod=c|&ut3=6||*|5|4|ms1320|acbdst|AM CRail Boardings ST|1
+~/ --- Buses
+~+|1|n|board||mod=b,p|&ut3=1||*|5|4|ms1321|abbdkc|AM Bus Boardings KCM|1
+~+|1|n|board||mod=b,p|&ut3=2||*|5|4|ms1322|abbdpt|AM Bus Boardings PT|1
+~+|1|n|board||mod=b,p|&ut3=3||*|5|4|ms1323|abbdct|AM Bus Boardings CT|1
+~+|1|n|board||mod=b,p|&ut3=4||*|5|4|ms1324|abbdkt|AM Bus Boardings KT|1
+~+|1|n|board||mod=b,p|&ut3=5||*|5|4|ms1325|abbdwf|AM Bus Boardings WSF|1
+~+|1|n|board||mod=b,p|&ut3=6||*|5|4|ms1326|abbdst|AM Bus Boardings ST|1
+~/ --- Ferry
+~+|1|n|board||mod=f|&ut3=1||*|5|4|ms1327|afbdkc|AM Ferry Boardings KCM|1
+~+|1|n|board||mod=f|&ut3=2||*|5|4|ms1328|afbdpt|AM Ferry Boardings PT|1
+~+|1|n|board||mod=f|&ut3=3||*|5|4|ms1329|afbdct|AM Ferry Boardings CT|1
+~+|1|n|board||mod=f|&ut3=4||*|5|4|ms1330|afbdkt|AM Ferry Boardings KT|1
+~+|1|n|board||mod=f|&ut3=5||*|5|4|ms1331|afbdwf|AM Ferry Boardings WSF|1
+~+|1|n|board||mod=f|&ut3=6||*|5|4|ms1332|afbdst|AM Ferry Boardings ST|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Midday Period Boardings by Mode and Operator
+~/ ---------------------------------------------------------------
+s=1004
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Light Rail
+~+|1|n|board||mod=r|&ut3=1||*|5|4|ms1333|mrbdkc|MD LRail Boardings KCM|1
+~+|1|n|board||mod=r|&ut3=2||*|5|4|ms1334|mrbdpt|MD LRail Boardings PT|1
+~+|1|n|board||mod=r|&ut3=3||*|5|4|ms1335|mrbdct|MD LRail Boardings CT|1
+~+|1|n|board||mod=r|&ut3=4||*|5|4|ms1336|mrbdkt|MD LRail Boardings KT|1
+~+|1|n|board||mod=r|&ut3=5||*|5|4|ms1337|mrbdwf|MD LRail Boardings WSF|1
+~+|1|n|board||mod=r|&ut3=6||*|5|4|ms1338|mrbdst|MD LRail Boardings ST|1
+~/ --- Commuter Rail
+~+|1|n|board||mod=c|&ut3=1||*|5|4|ms1339|mcbdkc|MD CRail Boardings KCM|1
+~+|1|n|board||mod=c|&ut3=2||*|5|4|ms1340|mcbdpt|MD CRail Boardings PT|1
+~+|1|n|board||mod=c|&ut3=3||*|5|4|ms1341|mcbdct|MD CRail Boardings CT|1
+~+|1|n|board||mod=c|&ut3=4||*|5|4|ms1342|mcbdkt|MD CRail Boardings KT|1
+~+|1|n|board||mod=c|&ut3=5||*|5|4|ms1343|mcbdwf|MD CRail Boardings WSF|1
+~+|1|n|board||mod=c|&ut3=6||*|5|4|ms1344|mcbdst|MD CRail Boardings ST|1
+~/ --- Buses
+~+|1|n|board||mod=b,p|&ut3=1||*|5|4|ms1345|mbbdkc|MD Bus Boardings KCM|1
+~+|1|n|board||mod=b,p|&ut3=2||*|5|4|ms1346|mbbdpt|MD Bus Boardings PT|1
+~+|1|n|board||mod=b,p|&ut3=3||*|5|4|ms1347|mbbdct|MD Bus Boardings CT|1
+~+|1|n|board||mod=b,p|&ut3=4||*|5|4|ms1348|mbbdkt|MD Bus Boardings KT|1
+~+|1|n|board||mod=b,p|&ut3=5||*|5|4|ms1349|mbbdwf|MD Bus Boardings WSF|1
+~+|1|n|board||mod=b,p|&ut3=6||*|5|4|ms1350|mbbdst|MD Bus Boardings ST|1
+~/ --- Ferry
+~+|1|n|board||mod=f|&ut3=1||*|5|4|ms1351|mfbdkc|MD Ferry Boardings KCM|1
+~+|1|n|board||mod=f|&ut3=2||*|5|4|ms1352|mfbdpt|MD Ferry Boardings PT|1
+~+|1|n|board||mod=f|&ut3=3||*|5|4|ms1353|mfbdct|MD Ferry Boardings CT|1
+~+|1|n|board||mod=f|&ut3=4||*|5|4|ms1354|mfbdkt|MD Ferry Boardings KT|1
+~+|1|n|board||mod=f|&ut3=5||*|5|4|ms1355|mfbdwf|MD Ferry Boardings WSF|1
+~+|1|n|board||mod=f|&ut3=6||*|5|4|ms1356|mfbdst|MD Ferry Boardings ST|1
+q
+~/
+~/end: 2-9_transit_operators.mac
+~/exit emme
+q

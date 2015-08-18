@@ -1,0 +1,82 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+reports=sov_nonwork.rpt
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\0_reset_matrices.mac
+~/
+~/ ... Read in sov nonwork modeshare data
+1.31
+~+|1
+..\..\modechoice\all\emmebank
+~+|2|3|3|mf"coshda"|mf"coll"|n|y
+~+|2|3|3|mf"nwshda"|mf"hbo"|n|y
+~+|2|3|3|mf"scshda"|mf"sch"|n|y
+~+|2|3|3|mf"nhshda"|mf"nhb"|n|y
+q
+~/
+~/ ...Run SOV NonWork Trip Table Creation for each time Period
+~/ ...Loop over the Parameter Files
+~x=1
+~y=6
+~:LOOP
+~/ 
+~/ ...set pa and ap and TOD to 0 for calculations
+3.21
+~+|1|y|mf"pa"|n|0|||n|2
+~+|1|y|mf"ap"|n|0|||n|2
+~+|1|y|mf"tod3"|n|0|||n|2
+~+|1|y|mf"tod4"|n|0|||n|2
+~+|1|y|mf"tod5"|n|0|||n|2
+~+|1|y|mf"tod6"|n|0|||n|2
+q
+~/
+~/ ... Import sov nonwork time of day shares
+1.31
+~+|1
+..\..\timeofday\sov\emmebank
+~+|2|3|3|mf"%%x%%5ns"|mf"tod5"|n|y
+~+|2|3|3|mf"%%x%%6ns"|mf"tod6"|n|y
+~+|2|3|3|mf"%%x%%3ns"|mf"tod3"|n|y
+~+|2|3|3|mf"%%x%%4ns"|mf"tod4"|n|y
+q
+~/ ...input %x% sov nonwork time of day factors
+~+|3.11|..\..\input\model\timeofday\%%x%%_sov_nw_tod.in|2|
+~/
+~/ ...construct p-a sov nonwork person trip tables
+~+|3.21|1|y|mf"pa"|n
+mf"coldst"*mf"coll"*ms"coltpa"*ms"colpa"+
+mf"schdst"*0.676*mf"sch"*ms"schtpa"*ms"schpa"
+~+|||n|2|q
+~+|3.21|1|y|mf"pa"|n|mf"pa"+
+mf"hbodst"*mf"hbo"*ms"hbotpa"*mf"tod4"+
+mf"hspdst"*mf"hbo"*ms"hsptpa"*mf"tod6"+
+mf"otodst"*mf"nhb"*ms"ototpa"*ms"otopa"+
+mf"wkodst"*mf"nhb"*ms"wtotpa"*ms"wtopa"
+~+|||n|2|q
+~/ ...construct a-p sov nonwork person trip tables
+~+|3.21|1|y|mf"ap"|n
+mf"coldst"*mf"coll"*ms"coltap"*ms"colap"+
+mf"schdst"*0.676*mf"sch"*ms"schtap"*ms"schap"
+~+|||n|2|q
+~+|3.21|1|y|mf"ap"|n|mf"ap"+
+mf"hbodst"*mf"hbo"*ms"hbotap"*mf"tod3"+
+mf"hspdst"*mf"hbo"*ms"hsptap"*mf"tod5"+
+mf"otodst"*mf"nhb"*ms"ototap"*ms"otoap"+
+mf"wkodst"*mf"nhb"*ms"wtotap"*ms"wtoap"
+~+|||n|2|q
+~/
+~/ ...construct o-d sov nonwork trip tables
+~+|3.21|1|y|mf"%%y%%vehda"|n|mf"pa"+mf"ap"'+ms"thru"*mf"thru"|||n|2|q
+~x+1
+~y+1
+~?x<6
+~$LOOP
+~/ ...Exit Loop
+~/
+~/end: 6_sov_nw_trip_tables.mac
+~/exit emme
+~/
+q

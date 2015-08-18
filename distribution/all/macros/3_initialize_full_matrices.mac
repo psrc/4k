@@ -1,0 +1,35 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=trip_distribution.rpt
+~/
+~/ ...initialize full matrices
+3.12
+~/ ...am sov non-work
+~+|1|mf01|cost|generalized cost skim|0
+~+|1|mf02|dist|distance skim|0
+~/ ...friction factors
+~+|1|mf03|fri|hb college friction factor|0
+~/ ...trip distribution
+~+|1|mf04|coldst|hb college distribution|0
+~+|1|mf05|hbodst|hb other distribution|0
+~+|1|mf06|schdst|hb school distribution|0
+~+|1|mf07|hspdst|hb shop distribution|0
+~+|1|mf08|hbwds1|hb work income 1 distribution|0
+~+|1|mf09|hbwds2|hb work income 2 distribution|0
+~+|1|mf10|hbwds3|hb work income 3 distribution|0
+~+|1|mf11|hbwds4|hb work income 4 distribution|0
+~+|1|mf12|otodst|nhb other/other distribution|0
+~+|1|mf13|wkodst|nhb work/other distribution|0
+~+|1|mf14|lgtdis|light truck distribution|0
+~+|1|mf15|meddis|medium truck distribution|0
+~+|1|mf16|hvydis|heavy truck distribution|0
+~/ ...misc
+~+|1|mf17|intflg|flag=1 for non ext-ext od pairs|1
+~+|1|mf99|brdg|flag=1 for TNB or Crosslake|0
+q
+~#
+~/end: 3_initialize_full_matrices.mac
+~/exit emme
+~/
+q

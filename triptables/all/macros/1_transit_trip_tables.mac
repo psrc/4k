@@ -1,0 +1,113 @@
+~?!i&32768
+~o|295
+batchin=?
+~/
+reports=transit.rpt
+~/
+~/ ... Reset Temporary Storage Matrices to 0
+~<macros\0_reset_matrices.mac
+~/
+~/ ... Read in transit modeshare data
+1.31
+~+|1
+..\..\modechoice\all\emmebank
+~+|2|3|3|mf"coshtw"|mf"coll"|n|y
+~+|2|3|3|mf"nwshtw"|mf"hbo"|n|y
+~+|2|3|3|mf"scshtw"|mf"sch"|n|y
+~+|2|3|3|mf"w1shtw"|mf"w1"|n|y
+~+|2|3|3|mf"w2shtw"|mf"w2"|n|y
+~+|2|3|3|mf"w3shtw"|mf"w3"|n|y
+~+|2|3|3|mf"w4shtw"|mf"w4"|n|y
+~+|2|3|3|mf"nhshtw"|mf"nhb"|n|y
+q
+~/
+~/ ... Read in the Transit Portion of the Park and Ride Trips
+~+|1.31|1|..\ParkAndRide\Income1\emmebank|2|3|3|mf"twleg1"|mf"twleg1"|n|y|q
+~+|1.31|1|..\ParkAndRide\Income2\emmebank|2|3|3|mf"twleg2"|mf"twleg2"|n|y|q
+~+|1.31|1|..\ParkAndRide\Income3\emmebank|2|3|3|mf"twleg3"|mf"twleg3"|n|y|q
+~+|1.31|1|..\ParkAndRide\Income4\emmebank|2|3|3|mf"twleg4"|mf"twleg4"|n|y|q
+~/
+~/ ...Run Transit Trip Table Creation for each time Period
+~/ ...Loop over the Parameter Files
+~x=1
+~y=6
+~:LOOP
+~/ 
+~/ ...set pa and ap to 0 for calculations
+3.21
+~+|1|y|mf"pa"|n|0|||n|2
+~+|1|y|mf"ap"|n|0|||n|2
+q
+~/
+~/ ...input %x% transit time of day factors
+~+|3.11|..\..\input\model\timeofday\%%x%%_transit_tod.in|2|
+~/
+~/ ...construct p-a transit walk-access person trip tables
+~+|3.21|1|y|mf"pa"|n
+mf"coldst"*mf"coll"*ms"coltpa"*ms"colpa"+
+mf"schdst"*mf"sch"*ms"schtpa"*ms"schpa"
+~+|||n|2|q
+~+|3.21|1|y|mf"pa"|n|mf"pa"+
+mf"hbodst"*mf"hbo"*ms"hbotpa"*ms"hbopa"+
+mf"hspdst"*mf"hbo"*ms"hsptpa"*ms"hsppa"+
+mf"otodst"*mf"nhb"*ms"ototpa"*ms"otopa"+
+mf"wkodst"*mf"nhb"*ms"wtotpa"*ms"wtopa"
+~+|||n|2|q
+~+|3.21|1|y|mf"pa"|n|mf"pa"+
+mf"hbwds1"*mf"w1"*ms"wk1tpa"*ms"wk1pa"+
+mf"hbwds2"*mf"w2"*ms"wk2tpa"*ms"wk2pa"+
+mf"hbwds3"*mf"w3"*ms"wk3tpa"*ms"wk3pa"+
+mf"hbwds4"*mf"w4"*ms"wk4tpa"*ms"wk4pa"
+~+|||n|2|q
+~/ ...construct a-p transit walk-access person trip tables
+~+|3.21|1|y|mf"ap"|n
+mf"coldst"*mf"coll"*ms"coltap"*ms"colap"+
+mf"schdst"*mf"sch"*ms"schtap"*ms"schap"
+~+|||n|2|q
+~+|3.21|1|y|mf"ap"|n|mf"ap"+
+mf"hbodst"*mf"hbo"*ms"hbotap"*ms"hboap"+
+mf"hspdst"*mf"hbo"*ms"hsptap"*ms"hspap"+
+mf"otodst"*mf"nhb"*ms"ototap"*ms"otoap"+
+mf"wkodst"*mf"nhb"*ms"wtotap"*ms"wtoap"
+~+|||n|2|q
+~+|3.21|1|y|mf"ap"|n|mf"ap"+
+mf"hbwds1"*mf"w1"*ms"wk1tap"*ms"wk1ap"+
+mf"hbwds2"*mf"w2"*ms"wk2tap"*ms"wk2ap"+
+mf"hbwds3"*mf"w3"*ms"wk3tap"*ms"wk3ap"+
+mf"hbwds4"*mf"w4"*ms"wk4tap"*ms"wk4ap"
+~+|||n|2|q
+~/
+~/ ...construct o-d transit walk-access trip tables
+~+|3.21|1|y|mf"temp01"|n
+mf"pa"+
+mf"ap"'
+~+|||n|2|q
+~+|3.21|1|y|mf"temp01"|n
+mf"temp01"+
+mf"twleg1"*ms"tw1tpa"*ms"tw1pa"+
+mf"twleg2"*ms"tw2tpa"*ms"tw2pa"+
+mf"twleg3"*ms"tw3tpa"*ms"tw3pa"+
+mf"twleg4"*ms"tw4tpa"*ms"tw4pa"
+~+|||n|2|q
+~+|3.21|1|y|mf"temp01"|n
+mf"temp01"+
+mf"twleg1"'*ms"tw1tap"*ms"tw1ap"+
+mf"twleg2"'*ms"tw2tap"*ms"tw2ap"+
+mf"twleg3"'*ms"tw3tap"*ms"tw3ap"+
+mf"twleg4"'*ms"tw4tap"*ms"tw4ap"
+~+|||n|2|q
+~/
+~/ ... Now Store Result in Final Matrix
+~+|3.21|1|y|mf"%%y%%trnwa"|n
+mf"temp01"
+~+|||n|2|q
+~x+1
+~y+1
+~?x<6
+~$LOOP
+~/ ...Exit Loop
+~/
+~/end: 1_transit_trip_tables.mac
+~/exit emme
+~/
+q

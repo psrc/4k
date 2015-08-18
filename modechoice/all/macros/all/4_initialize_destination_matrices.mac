@@ -1,0 +1,23 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ ...call mddule 3.12: input/modify matrices interactively
+~/ ...initialize destination matrices
+3.12
+~+|1|md01|intden|uf variable: intersections/sq km|0
+~+|1|md02|usemix|uf variable: land use mix|0
+~+|1|md03|nonmot|uf variable: non-motorized ratio|0
+~+|1|md04|retfar|uf variable: retail far|0
+~+|1|md05|bdflag|cbd zone flag|0
+~+|1|md06|colleg|parking cost - hb college trips|0
+~+|1|md07|hourly|hourly parking cost - non-work trips|0
+~+|1|md08|daily|daily parking cost - hb work trips|0
+~+|1|md09|pnrchg|pnr lot parking cost|0
+q
+~#
+~/end: 4_initialize_destination_matrices.mac
+~/exit emme
+~/
+q

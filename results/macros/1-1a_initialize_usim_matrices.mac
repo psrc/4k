@@ -1,0 +1,26 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=summary.rpt
+~/
+~/ ---------------------------------------------------------------
+~/ --- Initialize Full matrices for UrbanSim
+~/ ---------------------------------------------------------------
+3.12
+~/ --- UrbanSim Results
+~+|1|mf79|aau1tm|AM SOV Time Skim|0
+~+|1|mf80|aau1tl|AM SOV Toll Skim|0
+~+|1|mf81|aau1cs|AM SOV Cost Skim|0
+~+|1|mf82|aau1ds|AM SOV Distance Skim|0
+~+|1|mf83|awlktm|AM Walk Time|0
+~+|1|mf84|atrtwa|AM Walk to Transit Total Time|0
+~+|1|mf85|lsum1|Logsum Income #1|0
+~+|1|mf86|lsum2|Logsum Income #2|0
+~+|1|mf87|lsum3|Logsum Income #3|0
+~+|1|mf88|lsum4|Logsum Income #4|0
+q
+~/
+~/end: 1-1a_initialize_usim_matrices.mac
+~/exit emme
+~/
+q

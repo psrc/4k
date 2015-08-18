@@ -1,0 +1,206 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=toll_skims.rpt
+~/
+~/ ...initialize toll skims matrices
+3.12
+~+|1|mf81|%1%au1tl|non-hbw sov time|0
+~+|1|mf82|%1%au2tl|hov 2 time|0
+~+|1|mf83|%1%au3tl|hov 3+ time|0
+~+|1|mf84|%1%au4tl|vanpool time|0
+~+|1|mf85|%1%a1tl1|hbw income 1 sov time|0
+~+|1|mf86|%1%a1tl2|hbw income 2 sov time|0
+~+|1|mf87|%1%a1tl3|hbw income 3 sov time|0
+~+|1|mf88|%1%a1tl4|hbw income 4 sov time|0
+~+|1|mf89|%1%lgttl|light truck time|0
+~+|1|mf90|%1%medtl|medium truck time|0
+~+|1|mf91|%1%hvytl|heavy truck time|0
+q
+~/
+~/ ...skims for toll attributes by vehicle class
+6.16
+~# ...user-defined path analysis
+4
+~# ...link attribute for path analysis
+@toll1
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3
+~# ...paths considered in O-D attribute
+1
+~/ ...specify toll matrices
+~+||mf"%1%au1tl"|n||| /class 1: non-work sov
+~+|||||             /class 2: hov 2
+~+|||||             /class 3: hov 3+
+~+|||||             /class 4: vanpool
+~+||mf"%1%a1tl1"|n||| /class 5: hbw income 1 sov
+~+||mf"%1%a1tl2"|n||| /class 6: hbw income 2 sov
+~+||mf"%1%a1tl3"|n||| /class 7: hbw income 3 sov
+~+||mf"%1%a1tl4"|n||| /class 8: hbw income 4 sov
+~+|||||             /class 9: light truck
+~+|||||             /class 10: medium truck
+~+|||||             /class 11: heavy truck
+~/ ...write report file         
+2
+~#
+~/ ...skim hov 2 vehicle classes for tolls
+~# ...user-defined path analysis
+4
+~# ...link attribute for path analysis
+@toll2
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~/ ...specify toll matrices
+~+|||||             /class 1: non-work sov
+~+||mf"%1%au2tl"|n||| /class 2: hov 2
+~+|||||             /class 3: hov 3+
+~+|||||             /class 4: vanpool
+~+|||||             /class 5: hbw income 1 sov
+~+|||||             /class 6: hbw income 2 sov
+~+|||||             /class 7: hbw income 3 sov
+~+|||||             /class 8: hbw income 4 sov
+~+|||||             /class 9: light truck
+~+|||||             /class 10: medium truck
+~+|||||             /class 11: heavy truck
+~/ ...write report file         
+2
+~#
+~/ ...skim hov 3+ vehicle classes for tolls
+~# ...user-defined path analysis
+4
+~# ...link attribute for path analysis
+@toll3
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~/ ...specify toll matrices
+~+|||||             /class 1: non-work sov
+~+|||||             /class 2: hov 2
+~+||mf"%1%au3tl"|n||| /class 3: hov 3+
+~+||mf"%1%au4tl"|n||| /class 4: vanpool
+~+|||||             /class 5: hbw income 1 sov
+~+|||||             /class 6: hbw income 2 sov
+~+|||||             /class 7: hbw income 3 sov
+~+|||||             /class 8: hbw income 4 sov
+~+|||||             /class 9: light truck
+~+|||||             /class 10: medium truck
+~+|||||             /class 11: heavy truck
+~/ ...write report file         
+2
+~#
+~/ ...skim light truck vehicle classes for tolls
+~# ...user-defined path analysis
+4
+~# ...link attribute for path analysis
+@trkc1
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~/ ...specify toll matrices
+~+|||||             /class 1: non-work sov
+~+|||||             /class 2: hov 2
+~+|||||             /class 3: hov 3+
+~+|||||             /class 4: vanpool
+~+|||||             /class 5: hbw income 1 sov
+~+|||||             /class 6: hbw income 2 sov
+~+|||||             /class 7: hbw income 3 sov
+~+|||||             /class 8: hbw income 4 sov
+~+||mf"%1%lgttl"|n||| /class 9: light truck
+~+|||||             /class 10: medium truck
+~+|||||             /class 11: heavy truck
+~/ ...write report file         
+2
+~#
+~/ ...skim medium truck vehicle classes for tolls
+~# ...user-defined path analysis
+4
+~# ...link attribute for path analysis
+@trkc2
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~/ ...specify toll matrices
+~+|||||             /class 1: non-work sov
+~+|||||             /class 2: hov 2
+~+|||||             /class 3: hov 3+
+~+|||||             /class 4: vanpool
+~+|||||             /class 5: hbw income 1 sov
+~+|||||             /class 6: hbw income 2 sov
+~+|||||             /class 7: hbw income 3 sov
+~+|||||             /class 8: hbw income 4 sov
+~+|||||             /class 9: light truck
+~+||mf"%1%medtl"|n||| /class 10: medium truck
+~+|||||             /class 11: heavy truck
+~/ ...write report file         
+2
+~#
+~/ ...skim heavy truck vehicle classes for tolls
+~# ...user-defined path analysis
+4
+~# ...link attribute for path analysis
+@trkc3
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~/ ...specify toll matrices
+~+|||||             /class 1: non-work sov
+~+|||||             /class 2: hov 2
+~+|||||             /class 3: hov 3+
+~+|||||             /class 4: vanpool
+~+|||||             /class 5: hbw income 1 sov
+~+|||||             /class 6: hbw income 2 sov
+~+|||||             /class 7: hbw income 3 sov
+~+|||||             /class 8: hbw income 4 sov
+~+|||||             /class 9: light truck
+~+|||||             /class 10: medium truck
+~+||mf"%1%hvytl"|n||| /class 11: heavy truck
+~/ ...write report file         
+2
+q
+~#
+~/end: toll_skims.mac
+~/exit emme
+~/
+q

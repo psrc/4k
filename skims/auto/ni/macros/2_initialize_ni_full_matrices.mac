@@ -9,90 +9,32 @@ reports=2_initialize_ni_full_matrices.rpt
 ~/ ...initialize full matrices
 3.12
 ~#
-~+|1|mf01|nau1tm|non-hbw sov time|0
-~+|1|mf02|nau2tm|hov 2 time|0
-~+|1|mf03|nau3tm|hov 3+ time|0
-~+|1|mf04|nau4tm|vanpool time|0
-~+|1|mf05|na1tm1|hbw income 1 sov time|0
-~+|1|mf06|na1tm2|hbw income 2 sov time|0
-~+|1|mf07|na1tm3|hbw income 3 sov time|0
-~+|1|mf08|na1tm4|hbw income 4 sov time|0
-~+|1|mf09|nlgttm|light truck time|0
-~+|1|mf10|nmedtm|medium truck time|0
-~+|1|mf11|nhvytm|heavy truck time|0
+~+|1|mf01|nau1cs|non-hbw sov generalized cost|0
+~+|1|mf02|nau2cs|hov 2 generalized cost|0
+~+|1|mf03|nau3cs|hov 3+ generalized cost|0
+~+|1|mf04|nau4cs|vanpool generalized cost|0
+~+|1|mf05|na1cs1|hbw income 1 sov generalized cost|0
+~+|1|mf06|na1cs2|hbw income 2 sov generalized cost|0
+~+|1|mf07|na1cs3|hbw income 3 sov generalized cost|0
+~+|1|mf08|na1cs4|hbw income 4 sov generalized cost|0
+~+|1|mf09|nlgtcs|light truck cost|0
+~+|1|mf10|nmedcs|medium truck cost|0
+~+|1|mf11|nhvycs|heavy truck cost|0
 ~#
-~+|1|mf12|nau1cs|non-hbw sov generalized cost|0
-~+|1|mf13|nau2cs|hov 2 generalized cost|0
-~+|1|mf14|nau3cs|hov 3+ generalized cost|0
-~+|1|mf15|nau4cs|vanpool generalized cost|0
-~+|1|mf16|na1cs1|hbw income 1 sov generalized cost|0
-~+|1|mf17|na1cs2|hbw income 2 sov generalized cost|0
-~+|1|mf18|na1cs3|hbw income 3 sov generalized cost|0
-~+|1|mf19|na1cs4|hbw income 4 sov generalized cost|0
-~+|1|mf20|nlgtcs|light truck cost|0
-~+|1|mf21|nmedcs|medium truck cost|0
-~+|1|mf22|nhvycs|heavy truck cost|0
+~+|1|mf12|izdist|intrazonal distance|0
+~+|1|mf13|izatim|intrazonal time (auto) @ 15 mph|0
+~+|1|mf14|termtm|total terminal time|0
 ~#
-~+|1|mf23|nau1ds|non-hbw sov distance|0
-~+|1|mf24|nau2ds|hov 2 distance|0
-~+|1|mf25|nau3ds|hov 3+ distance|0
-~+|1|mf26|nau4ds|vanpool distance|0
-~+|1|mf27|na1ds1|hbw income 1 sov distance|0
-~+|1|mf28|na1ds2|hbw income 2 sov distance|0
-~+|1|mf29|na1ds3|hbw income 3 sov distance|0
-~+|1|mf30|na1ds4|hbw income 4 sov distance|0
-~+|1|mf31|nlgtds|light truck distance|0
-~+|1|mf32|nmedds|medium truck distance|0
-~+|1|mf33|nhvyds|heavy truck distance|0
-~#
-~+|1|mf34|izdist|intrazonal distance|0
-~+|1|mf35|izatim|intrazonal time (auto) @ 15 mph|0
-~+|1|mf36|termtm|total terminal time|0
-~#
-~+|1|mf37|nau1tp|non-hbw sov prev time|0
-~+|1|mf38|nau2tp|hov 2 prev time|0
-~+|1|mf39|nau3tp|hov 3+ prev time|0
-~+|1|mf40|na1tp1|hbw income 1 sov prev time|0
-~+|1|mf41|na1tp2|hbw income 2 sov prev time|0
-~+|1|mf42|na1tp3|hbw income 3 sov prev time|0
-~+|1|mf43|na1tp4|hbw income 4 sov prev time|0
-~+|1|mf44|nlgttp|light truck prev time|0
-~+|1|mf45|nmedtp|medium truck prev time|0
-~+|1|mf46|nhvytp|heavy truck prev time|0
-~#
-~+|1|mf47|nau1cp|non-hbw sov prev generalized cost|0
-~+|1|mf48|nau2cp|hov 2 prev generalized cost|0
-~+|1|mf49|nau3cp|hov 3+ generalized cost|0
-~+|1|mf50|na1cp1|hbw income 1 sov prev generalized cost|0
-~+|1|mf51|na1cp2|hbw income 2 sov prev generalized cost|0
-~+|1|mf52|na1cp3|hbw income 3 sov prev generalized cost|0
-~+|1|mf53|na1cp4|hbw income 4 sov prev generalized cost|0
-~+|1|mf54|nlgtcp|light truck prev cost|0
-~+|1|mf55|nmedcp|medium truck prev cost|0
-~+|1|mf56|nhvycp|heavy truck prev cost|0
-~#
-~+|1|mf57|nau1dp|non-hbw sov prev distance|0
-~+|1|mf58|nau2dp|hov 2 prev distance|0
-~+|1|mf59|nau3dp|hov 3+ prev distance|0
-~+|1|mf60|na1dp1|hbw income 1 sov prev distance|0
-~+|1|mf61|na1dp2|hbw income 2 sov prev distance|0
-~+|1|mf62|na1dp3|hbw income 3 sov prev distance|0
-~+|1|mf63|na1dp4|hbw income 4 sov prev distance|0
-~+|1|mf64|nlgtdp|light truck prev distance|0
-~+|1|mf65|nmeddp|medium truck prev distance|0
-~+|1|mf66|nhvydp|heavy truck prev distance|0
-~#
-~+|1|mf67|nau1tl|non-hbw sov toll sum|0
-~+|1|mf68|nau2tl|hov 2 toll sum|0
-~+|1|mf69|nau3tl|hov 3+ toll sum|0
-~+|1|mf70|nau4tl|vanpool toll sum|0
-~+|1|mf71|na1tl1|hbw income 1 sov toll sum|0
-~+|1|mf72|na1tl2|hbw income 2 sov toll sum|0
-~+|1|mf73|na1tl3|hbw income 3 sov toll sum|0
-~+|1|mf74|na1tl4|hbw income 4 sov toll sum|0
-~+|1|mf75|nlgttl|light truck toll sum|0
-~+|1|mf76|nmedtl|medium truck toll sum|0
-~+|1|mf77|nhvytl|heavy truck toll sum|0
+~+|1|mf15|nau1cp|non-hbw sov prev generalized cost|0
+~+|1|mf16|nau2cp|hov 2 prev generalized cost|0
+~+|1|mf17|nau3cp|hov 3+ generalized cost|0
+~+|1|mf18|na1cp1|hbw income 1 sov prev generalized cost|0
+~+|1|mf19|na1cp2|hbw income 2 sov prev generalized cost|0
+~+|1|mf20|na1cp3|hbw income 3 sov prev generalized cost|0
+~+|1|mf21|na1cp4|hbw income 4 sov prev generalized cost|0
+~+|1|mf22|nlgtcp|light truck prev cost|0
+~+|1|mf23|nmedcp|medium truck prev cost|0
+~+|1|mf24|nhvycp|heavy truck prev cost|0
 q
 ~#
 ~/end: 2_initialize_ni_full_matrices.mac
