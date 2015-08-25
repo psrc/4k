@@ -1,0 +1,287 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- AM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1002
+~/ ---------------------------------------------------------------
+~/ ...Initialize extra attribute for corridors
+~+|2.42|2|2|@corr1|Arterial Travel Time Corridor Flags|0|q
+~/ ---------------------------------------------------------------
+~/ --- Input Travel Time Corridor Flags
+~/ ---------------------------------------------------------------
+~+|2.41|3|@corr1|n|*|1,2,3|..\input\travel_time\corridor_1.in|y|2|y|q
+~/ ---------------------------------------------------------------
+~/ --- Store the Travel Results in Scalars for Summary
+~/ ---------------------------------------------------------------
+2.41
+~/ --- Auto Travel Time by Travel Time Corridor
+~+|1|n|timau||@corr1=1||5|4|ms1618|amtt01|AM Corridor #1 - Incr.|1
+~+|1|n|timau||@corr1=2||5|4|ms1619|amtt02|AM Corridor #1 - Decr.|1
+~+|1|n|timau||@corr1=3||5|4|ms1620|amtt03|AM Corridor #2 - Incr.|1
+~+|1|n|timau||@corr1=4||5|4|ms1621|amtt04|AM Corridor #2 - Decr.|1
+~+|1|n|timau||@corr1=5||5|4|ms1622|amtt05|AM Corridor #3 - Incr.|1
+~+|1|n|timau||@corr1=6||5|4|ms1623|amtt06|AM Corridor #3 - Decr.|1
+~+|1|n|timau||@corr1=7||5|4|ms1624|amtt07|AM Corridor #4 - Incr.|1
+~+|1|n|timau||@corr1=8||5|4|ms1625|amtt08|AM Corridor #4 - Decr.|1
+~+|1|n|timau||@corr1=9||5|4|ms1626|amtt09|AM Corridor #5 - Incr.|1
+~+|1|n|timau||@corr1=10||5|4|ms1627|amtt10|AM Corridor #5 - Decr.|1
+~+|1|n|timau||@corr1=11||5|4|ms1628|amtt11|AM Corridor #6 - Incr.|1
+~+|1|n|timau||@corr1=12||5|4|ms1629|amtt12|AM Corridor #6 - Decr.|1
+~+|1|n|timau||@corr1=13||5|4|ms1630|amtt13|AM Corridor #7 - Incr.|1
+~+|1|n|timau||@corr1=14||5|4|ms1631|amtt14|AM Corridor #7 - Decr.|1
+~+|1|n|timau||@corr1=15||5|4|ms1632|amtt15|AM Corridor #8 - Incr.|1
+~+|1|n|timau||@corr1=16||5|4|ms1633|amtt16|AM Corridor #8 - Decr.|1
+~+|1|n|timau||@corr1=17||5|4|ms1634|amtt17|AM Corridor #9 - Incr.|1
+~+|1|n|timau||@corr1=18||5|4|ms1635|amtt18|AM Corridor #9 - Decr.|1
+~+|1|n|timau||@corr1=19||5|4|ms1636|amtt19|AM Corridor #10 - Incr.|1
+~+|1|n|timau||@corr1=20||5|4|ms1637|amtt20|AM Corridor #10 - Decr.|1
+~+|1|n|timau||@corr1=21||5|4|ms1638|amtt21|AM Corridor #11 - Incr.|1
+~+|1|n|timau||@corr1=22||5|4|ms1639|amtt22|AM Corridor #11 - Decr.|1
+~+|1|n|timau||@corr1=23||5|4|ms1640|amtt23|AM Corridor #12 - Incr.|1
+~+|1|n|timau||@corr1=24||5|4|ms1641|amtt24|AM Corridor #12 - Decr.|1
+~+|1|n|timau||@corr1=25||5|4|ms1642|amtt25|AM Corridor #13 - Incr.|1
+~+|1|n|timau||@corr1=26||5|4|ms1643|amtt26|AM Corridor #13 - Decr.|1
+~+|1|n|timau||@corr1=27||5|4|ms1644|amtt27|AM Corridor #14 - Incr.|1
+~+|1|n|timau||@corr1=28||5|4|ms1645|amtt28|AM Corridor #14 - Decr.|1
+~+|1|n|timau||@corr1=29||5|4|ms1646|amtt29|AM Corridor #15 - Incr.|1
+~+|1|n|timau||@corr1=30||5|4|ms1647|amtt30|AM Corridor #15 - Decr.|1
+~+|1|n|timau||@corr1=31||5|4|ms1648|amtt31|AM Corridor #16 - Incr.|1
+~+|1|n|timau||@corr1=32||5|4|ms1649|amtt32|AM Corridor #16 - Decr.|1
+~+|1|n|timau||@corr1=33||5|4|ms1650|amtt33|AM Corridor #17 - Incr.|1
+~+|1|n|timau||@corr1=34||5|4|ms1651|amtt34|AM Corridor #17 - Decr.|1
+~+|1|n|timau||@corr1=35||5|4|ms1652|amtt35|AM Corridor #18 - Incr.|1
+~+|1|n|timau||@corr1=36||5|4|ms1653|amtt36|AM Corridor #18 - Decr.|1
+~+|1|n|timau||@corr1=37||5|4|ms1654|amtt37|AM Corridor #19 - Incr.|1
+~+|1|n|timau||@corr1=38||5|4|ms1655|amtt38|AM Corridor #19 - Decr.|1
+~+|1|n|timau||@corr1=39||5|4|ms1656|amtt39|AM Corridor #20 - Incr.|1
+~+|1|n|timau||@corr1=40||5|4|ms1657|amtt40|AM Corridor #20 - Decr.|1
+~+|1|n|timau||@corr1=41||5|4|ms1658|amtt41|AM Corridor #21 - Incr.|1
+~+|1|n|timau||@corr1=42||5|4|ms1659|amtt42|AM Corridor #21 - Decr.|1
+~+|1|n|timau||@corr1=43||5|4|ms1660|amtt43|AM Corridor #22 - Incr.|1
+~+|1|n|timau||@corr1=44||5|4|ms1661|amtt44|AM Corridor #22 - Decr.|1
+~+|1|n|timau||@corr1=45||5|4|ms1662|amtt45|AM Corridor #23 - Incr.|1
+~+|1|n|timau||@corr1=46||5|4|ms1663|amtt46|AM Corridor #23 - Decr.|1
+~+|1|n|timau||@corr1=47||5|4|ms1664|amtt47|AM Corridor #24 - Incr.|1
+~+|1|n|timau||@corr1=48||5|4|ms1665|amtt48|AM Corridor #24 - Decr.|1
+~+|1|n|timau||@corr1=49||5|4|ms1666|amtt49|AM Corridor #25 - Incr.|1
+~+|1|n|timau||@corr1=50||5|4|ms1667|amtt50|AM Corridor #25 - Decr.|1
+~+|1|n|timau||@corr1=51||5|4|ms1668|amtt51|AM Corridor #26 - Incr.|1
+~+|1|n|timau||@corr1=52||5|4|ms1669|amtt52|AM Corridor #26 - Decr.|1
+~+|1|n|timau||@corr1=53||5|4|ms1670|amtt53|AM Corridor #27 - Incr.|1
+~+|1|n|timau||@corr1=54||5|4|ms1671|amtt54|AM Corridor #27 - Decr.|1
+~+|1|n|timau||@corr1=55||5|4|ms1672|amtt55|AM Corridor #28 - Incr.|1
+~+|1|n|timau||@corr1=56||5|4|ms1673|amtt56|AM Corridor #28 - Decr.|1
+~+|1|n|timau||@corr1=57||5|4|ms1674|amtt57|AM Corridor #29 - Incr.|1
+~+|1|n|timau||@corr1=58||5|4|ms1675|amtt58|AM Corridor #29 - Decr.|1
+~+|1|n|timau||@corr1=59||5|4|ms1676|amtt59|AM Corridor #30 - Incr.|1
+~+|1|n|timau||@corr1=60||5|4|ms1677|amtt60|AM Corridor #30 - Decr.|1
+~+|1|n|timau||@corr1=61||5|4|ms1678|amtt61|AM Corridor #31 - Incr.|1
+~+|1|n|timau||@corr1=62||5|4|ms1679|amtt62|AM Corridor #31 - Decr.|1
+~+|1|n|timau||@corr1=63||5|4|ms1680|amtt63|AM Corridor #32 - Incr.|1
+~+|1|n|timau||@corr1=64||5|4|ms1681|amtt64|AM Corridor #32 - Decr.|1
+~+|1|n|timau||@corr1=65||5|4|ms1682|amtt65|AM Corridor #33 - Incr.|1
+~+|1|n|timau||@corr1=66||5|4|ms1683|amtt66|AM Corridor #33 - Decr.|1
+~+|1|n|timau||@corr1=67||5|4|ms1684|amtt67|AM Corridor #34 - Incr.|1
+~+|1|n|timau||@corr1=68||5|4|ms1685|amtt68|AM Corridor #34 - Decr.|1
+~+|1|n|timau||@corr1=69||5|4|ms1686|amtt69|AM Corridor #35 - Incr.|1
+~+|1|n|timau||@corr1=70||5|4|ms1687|amtt70|AM Corridor #35 - Decr.|1
+~+|1|n|timau||@corr1=71||5|4|ms1688|amtt71|AM Corridor #36 - Incr.|1
+~+|1|n|timau||@corr1=72||5|4|ms1689|amtt72|AM Corridor #36 - Decr.|1
+~+|1|n|timau||@corr1=73||5|4|ms1690|amtt73|AM Corridor #37 - Incr.|1
+~+|1|n|timau||@corr1=74||5|4|ms1691|amtt74|AM Corridor #37 - Decr.|1
+~+|1|n|timau||@corr1=75||5|4|ms1692|amtt75|AM Corridor #38 - Incr.|1
+~+|1|n|timau||@corr1=76||5|4|ms1693|amtt76|AM Corridor #38 - Decr.|1
+~+|1|n|timau||@corr1=77||5|4|ms1694|amtt77|AM Corridor #39 - Incr.|1
+~+|1|n|timau||@corr1=78||5|4|ms1695|amtt78|AM Corridor #39 - Decr.|1
+~+|1|n|timau||@corr1=79||5|4|ms1696|amtt79|AM Corridor #40 - Incr.|1
+~+|1|n|timau||@corr1=80||5|4|ms1697|amtt80|AM Corridor #40 - Decr.|1
+q
+~/ ---------------------------------------------------------------
+~/ --- PM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1003
+~/ ---------------------------------------------------------------
+~/ ...Initialize extra attribute for corridors
+~+|2.42|2|2|@corr1|Travel Time Corridor Flags|0|q
+~/ ---------------------------------------------------------------
+~/ --- Input Travel Time Corridor Flags
+~/ ---------------------------------------------------------------
+~+|2.41|3|@corr1|n|*|1,2,3|..\input\travel_time\corridor_1.in|y|2|y|q
+~/ ---------------------------------------------------------------
+~/ --- Store the Travel Results in Scalars for Summary
+~/ ---------------------------------------------------------------
+2.41
+~/ --- Auto Travel Time by Travel Time Corridor
+~+|1|n|timau||@corr1=1||5|4|ms1698|pmtt01|PM Corridor #1 - Incr.|1
+~+|1|n|timau||@corr1=2||5|4|ms1699|pmtt02|PM Corridor #1 - Decr.|1
+~+|1|n|timau||@corr1=3||5|4|ms1700|pmtt03|PM Corridor #2 - Incr.|1
+~+|1|n|timau||@corr1=4||5|4|ms1701|pmtt04|PM Corridor #2 - Decr.|1
+~+|1|n|timau||@corr1=5||5|4|ms1702|pmtt05|PM Corridor #3 - Incr.|1
+~+|1|n|timau||@corr1=6||5|4|ms1703|pmtt06|PM Corridor #3 - Decr.|1
+~+|1|n|timau||@corr1=7||5|4|ms1704|pmtt07|PM Corridor #4 - Incr.|1
+~+|1|n|timau||@corr1=8||5|4|ms1705|pmtt08|PM Corridor #4 - Decr.|1
+~+|1|n|timau||@corr1=9||5|4|ms1706|pmtt09|PM Corridor #5 - Incr.|1
+~+|1|n|timau||@corr1=10||5|4|ms1707|pmtt10|PM Corridor #5 - Decr.|1
+~+|1|n|timau||@corr1=11||5|4|ms1708|pmtt11|PM Corridor #6 - Incr.|1
+~+|1|n|timau||@corr1=12||5|4|ms1709|pmtt12|PM Corridor #6 - Decr.|1
+~+|1|n|timau||@corr1=13||5|4|ms1710|pmtt13|PM Corridor #7 - Incr.|1
+~+|1|n|timau||@corr1=14||5|4|ms1711|pmtt14|PM Corridor #7 - Decr.|1
+~+|1|n|timau||@corr1=15||5|4|ms1712|pmtt15|PM Corridor #8 - Incr.|1
+~+|1|n|timau||@corr1=16||5|4|ms1713|pmtt16|PM Corridor #8 - Decr.|1
+~+|1|n|timau||@corr1=17||5|4|ms1714|pmtt17|PM Corridor #9 - Incr.|1
+~+|1|n|timau||@corr1=18||5|4|ms1715|pmtt18|PM Corridor #9 - Decr.|1
+~+|1|n|timau||@corr1=19||5|4|ms1716|pmtt19|PM Corridor #10 - Incr.|1
+~+|1|n|timau||@corr1=20||5|4|ms1717|pmtt20|PM Corridor #10 - Decr.|1
+~+|1|n|timau||@corr1=21||5|4|ms1718|pmtt21|PM Corridor #11 - Incr.|1
+~+|1|n|timau||@corr1=22||5|4|ms1719|pmtt22|PM Corridor #11 - Decr.|1
+~+|1|n|timau||@corr1=23||5|4|ms1720|pmtt23|PM Corridor #12 - Incr.|1
+~+|1|n|timau||@corr1=24||5|4|ms1721|pmtt24|PM Corridor #12 - Decr.|1
+~+|1|n|timau||@corr1=25||5|4|ms1722|pmtt25|PM Corridor #13 - Incr.|1
+~+|1|n|timau||@corr1=26||5|4|ms1723|pmtt26|PM Corridor #13 - Decr.|1
+~+|1|n|timau||@corr1=27||5|4|ms1724|pmtt27|PM Corridor #14 - Incr.|1
+~+|1|n|timau||@corr1=28||5|4|ms1725|pmtt28|PM Corridor #14 - Decr.|1
+~+|1|n|timau||@corr1=29||5|4|ms1726|pmtt29|PM Corridor #15 - Incr.|1
+~+|1|n|timau||@corr1=30||5|4|ms1727|pmtt30|PM Corridor #15 - Decr.|1
+~+|1|n|timau||@corr1=31||5|4|ms1728|pmtt31|PM Corridor #16 - Incr.|1
+~+|1|n|timau||@corr1=32||5|4|ms1729|pmtt32|PM Corridor #16 - Decr.|1
+~+|1|n|timau||@corr1=33||5|4|ms1730|pmtt33|PM Corridor #17 - Incr.|1
+~+|1|n|timau||@corr1=34||5|4|ms1731|pmtt34|PM Corridor #17 - Decr.|1
+~+|1|n|timau||@corr1=35||5|4|ms1732|pmtt35|PM Corridor #18 - Incr.|1
+~+|1|n|timau||@corr1=36||5|4|ms1733|pmtt36|PM Corridor #18 - Decr.|1
+~+|1|n|timau||@corr1=37||5|4|ms1734|pmtt37|PM Corridor #19 - Incr.|1
+~+|1|n|timau||@corr1=38||5|4|ms1735|pmtt38|PM Corridor #19 - Decr.|1
+~+|1|n|timau||@corr1=39||5|4|ms1736|pmtt39|PM Corridor #20 - Incr.|1
+~+|1|n|timau||@corr1=40||5|4|ms1737|pmtt40|PM Corridor #20 - Decr.|1
+~+|1|n|timau||@corr1=41||5|4|ms1738|pmtt41|PM Corridor #21 - Incr.|1
+~+|1|n|timau||@corr1=42||5|4|ms1739|pmtt42|PM Corridor #21 - Decr.|1
+~+|1|n|timau||@corr1=43||5|4|ms1740|pmtt43|PM Corridor #22 - Incr.|1
+~+|1|n|timau||@corr1=44||5|4|ms1741|pmtt44|PM Corridor #22 - Decr.|1
+~+|1|n|timau||@corr1=45||5|4|ms1742|pmtt45|PM Corridor #23 - Incr.|1
+~+|1|n|timau||@corr1=46||5|4|ms1743|pmtt46|PM Corridor #23 - Decr.|1
+~+|1|n|timau||@corr1=47||5|4|ms1744|pmtt47|PM Corridor #24 - Incr.|1
+~+|1|n|timau||@corr1=48||5|4|ms1745|pmtt48|PM Corridor #24 - Decr.|1
+~+|1|n|timau||@corr1=49||5|4|ms1746|pmtt49|PM Corridor #25 - Incr.|1
+~+|1|n|timau||@corr1=50||5|4|ms1747|pmtt50|PM Corridor #25 - Decr.|1
+~+|1|n|timau||@corr1=51||5|4|ms1748|pmtt51|PM Corridor #26 - Incr.|1
+~+|1|n|timau||@corr1=52||5|4|ms1749|pmtt52|PM Corridor #26 - Decr.|1
+~+|1|n|timau||@corr1=53||5|4|ms1750|pmtt53|PM Corridor #27 - Incr.|1
+~+|1|n|timau||@corr1=54||5|4|ms1751|pmtt54|PM Corridor #27 - Decr.|1
+~+|1|n|timau||@corr1=55||5|4|ms1752|pmtt55|PM Corridor #28 - Incr.|1
+~+|1|n|timau||@corr1=56||5|4|ms1753|pmtt56|PM Corridor #28 - Decr.|1
+~+|1|n|timau||@corr1=57||5|4|ms1754|pmtt57|PM Corridor #29 - Incr.|1
+~+|1|n|timau||@corr1=58||5|4|ms1755|pmtt58|PM Corridor #29 - Decr.|1
+~+|1|n|timau||@corr1=59||5|4|ms1756|pmtt59|PM Corridor #30 - Incr.|1
+~+|1|n|timau||@corr1=60||5|4|ms1757|pmtt60|PM Corridor #30 - Decr.|1
+~+|1|n|timau||@corr1=61||5|4|ms1758|pmtt61|PM Corridor #31 - Incr.|1
+~+|1|n|timau||@corr1=62||5|4|ms1759|pmtt62|PM Corridor #31 - Decr.|1
+~+|1|n|timau||@corr1=63||5|4|ms1760|pmtt63|PM Corridor #32 - Incr.|1
+~+|1|n|timau||@corr1=64||5|4|ms1761|pmtt64|PM Corridor #32 - Decr.|1
+~+|1|n|timau||@corr1=65||5|4|ms1762|pmtt65|PM Corridor #33 - Incr.|1
+~+|1|n|timau||@corr1=66||5|4|ms1763|pmtt66|PM Corridor #33 - Decr.|1
+~+|1|n|timau||@corr1=67||5|4|ms1764|pmtt67|PM Corridor #34 - Incr.|1
+~+|1|n|timau||@corr1=68||5|4|ms1765|pmtt68|PM Corridor #34 - Decr.|1
+~+|1|n|timau||@corr1=69||5|4|ms1766|pmtt69|PM Corridor #35 - Incr.|1
+~+|1|n|timau||@corr1=70||5|4|ms1767|pmtt70|PM Corridor #35 - Decr.|1
+~+|1|n|timau||@corr1=71||5|4|ms1768|pmtt71|PM Corridor #36 - Incr.|1
+~+|1|n|timau||@corr1=72||5|4|ms1769|pmtt72|PM Corridor #36 - Decr.|1
+~+|1|n|timau||@corr1=73||5|4|ms1770|pmtt73|PM Corridor #37 - Incr.|1
+~+|1|n|timau||@corr1=74||5|4|ms1771|pmtt74|PM Corridor #37 - Decr.|1
+~+|1|n|timau||@corr1=75||5|4|ms1772|pmtt75|PM Corridor #38 - Incr.|1
+~+|1|n|timau||@corr1=76||5|4|ms1773|pmtt76|PM Corridor #38 - Decr.|1
+~+|1|n|timau||@corr1=77||5|4|ms1774|pmtt77|PM Corridor #39 - Incr.|1
+~+|1|n|timau||@corr1=78||5|4|ms1775|pmtt78|PM Corridor #39 - Decr.|1
+~+|1|n|timau||@corr1=79||5|4|ms1776|pmtt79|PM Corridor #40 - Incr.|1
+~+|1|n|timau||@corr1=80||5|4|ms1777|pmtt80|PM Corridor #40 - Decr.|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Store the Corr. Lens in Scalars for Summary
+~/ ---------------------------------------------------------------
+2.41
+~/ --- Auto Travel Time by Travel Time Corridor
+~+|1|n|length||@corr1=1||5|4|ms1778|ttln01|Corr. length #1 - Incr.|1
+~+|1|n|length||@corr1=2||5|4|ms1779|ttln02|Corr. length #1 - Decr.|1
+~+|1|n|length||@corr1=3||5|4|ms1800|ttln03|Corr. length #2 - Incr.|1
+~+|1|n|length||@corr1=4||5|4|ms1801|ttln04|Corr. length #2 - Decr.|1
+~+|1|n|length||@corr1=5||5|4|ms1802|ttln05|Corr. length #3 - Incr.|1
+~+|1|n|length||@corr1=6||5|4|ms1803|ttln06|Corr. length #3 - Decr.|1
+~+|1|n|length||@corr1=7||5|4|ms1804|ttln07|Corr. length #4 - Incr.|1
+~+|1|n|length||@corr1=8||5|4|ms1805|ttln08|Corr. length #4 - Decr.|1
+~+|1|n|length||@corr1=9||5|4|ms1806|ttln09|Corr. length #5 - Incr.|1
+~+|1|n|length||@corr1=10||5|4|ms1807|ttln10|Corr. length #5 - Decr.|1
+~+|1|n|length||@corr1=11||5|4|ms1808|ttln11|Corr. length #6 - Incr.|1
+~+|1|n|length||@corr1=12||5|4|ms1809|ttln12|Corr. length #6 - Decr.|1
+~+|1|n|length||@corr1=13||5|4|ms1810|ttln13|Corr. length #7 - Incr.|1
+~+|1|n|length||@corr1=14||5|4|ms1811|ttln14|Corr. length #7 - Decr.|1
+~+|1|n|length||@corr1=15||5|4|ms1812|ttln15|Corr. length #8 - Incr.|1
+~+|1|n|length||@corr1=16||5|4|ms1813|ttln16|Corr. length #8 - Decr.|1
+~+|1|n|length||@corr1=17||5|4|ms1814|ttln17|Corr. length #9 - Incr.|1
+~+|1|n|length||@corr1=18||5|4|ms1815|ttln18|Corr. length #9 - Decr.|1
+~+|1|n|length||@corr1=19||5|4|ms1816|ttln19|Corr. length #10 - Incr.|1
+~+|1|n|length||@corr1=20||5|4|ms1817|ttln20|Corr. length #10 - Decr.|1
+~+|1|n|length||@corr1=21||5|4|ms1818|ttln21|Corr. length #11 - Incr.|1
+~+|1|n|length||@corr1=22||5|4|ms1819|ttln22|Corr. length #11 - Decr.|1
+~+|1|n|length||@corr1=23||5|4|ms1820|ttln23|Corr. length #12 - Incr.|1
+~+|1|n|length||@corr1=24||5|4|ms1821|ttln24|Corr. length #12 - Decr.|1
+~+|1|n|length||@corr1=25||5|4|ms1822|ttln25|Corr. length #13 - Incr.|1
+~+|1|n|length||@corr1=26||5|4|ms1823|ttln26|Corr. length #13 - Decr.|1
+~+|1|n|length||@corr1=27||5|4|ms1824|ttln27|Corr. length #14 - Incr.|1
+~+|1|n|length||@corr1=28||5|4|ms1825|ttln28|Corr. length #14 - Decr.|1
+~+|1|n|length||@corr1=29||5|4|ms1826|ttln29|Corr. length #15 - Incr.|1
+~+|1|n|length||@corr1=30||5|4|ms1827|ttln30|Corr. length #15 - Decr.|1
+~+|1|n|length||@corr1=31||5|4|ms1828|ttln31|Corr. length #16 - Incr.|1
+~+|1|n|length||@corr1=32||5|4|ms1829|ttln32|Corr. length #16 - Decr.|1
+~+|1|n|length||@corr1=33||5|4|ms1830|ttln33|Corr. length #17 - Incr.|1
+~+|1|n|length||@corr1=34||5|4|ms1831|ttln34|Corr. length #17 - Decr.|1
+~+|1|n|length||@corr1=35||5|4|ms1832|ttln35|Corr. length #18 - Incr.|1
+~+|1|n|length||@corr1=36||5|4|ms1833|ttln36|Corr. length #18 - Decr.|1
+~+|1|n|length||@corr1=37||5|4|ms1834|ttln37|Corr. length #19 - Incr.|1
+~+|1|n|length||@corr1=38||5|4|ms1835|ttln38|Corr. length #19 - Decr.|1
+~+|1|n|length||@corr1=39||5|4|ms1836|ttln39|Corr. length #20 - Incr.|1
+~+|1|n|length||@corr1=40||5|4|ms1837|ttln40|Corr. length #20 - Decr.|1
+~+|1|n|length||@corr1=41||5|4|ms1838|ttln41|Corr. length #21 - Incr.|1
+~+|1|n|length||@corr1=42||5|4|ms1839|ttln42|Corr. length #21 - Decr.|1
+~+|1|n|length||@corr1=43||5|4|ms1840|ttln43|Corr. length #22 - Incr.|1
+~+|1|n|length||@corr1=44||5|4|ms1841|ttln44|Corr. length #22 - Decr.|1
+~+|1|n|length||@corr1=45||5|4|ms1842|ttln45|Corr. length #23 - Incr.|1
+~+|1|n|length||@corr1=46||5|4|ms1843|ttln46|Corr. length #23 - Decr.|1
+~+|1|n|length||@corr1=47||5|4|ms1844|ttln47|Corr. length #24 - Incr.|1
+~+|1|n|length||@corr1=48||5|4|ms1845|ttln48|Corr. length #24 - Decr.|1
+~+|1|n|length||@corr1=49||5|4|ms1846|ttln49|Corr. length #25 - Incr.|1
+~+|1|n|length||@corr1=50||5|4|ms1847|ttln50|Corr. length #25 - Decr.|1
+~+|1|n|length||@corr1=51||5|4|ms1848|ttln51|Corr. length #26 - Incr.|1
+~+|1|n|length||@corr1=52||5|4|ms1849|ttln52|Corr. length #26 - Decr.|1
+~+|1|n|length||@corr1=53||5|4|ms1850|ttln53|Corr. length #27 - Incr.|1
+~+|1|n|length||@corr1=54||5|4|ms1851|ttln54|Corr. length #27 - Decr.|1
+~+|1|n|length||@corr1=55||5|4|ms1852|ttln55|Corr. length #28 - Incr.|1
+~+|1|n|length||@corr1=56||5|4|ms1853|ttln56|Corr. length #28 - Decr.|1
+~+|1|n|length||@corr1=57||5|4|ms1854|ttln57|Corr. length #29 - Incr.|1
+~+|1|n|length||@corr1=58||5|4|ms1855|ttln58|Corr. length #29 - Decr.|1
+~+|1|n|length||@corr1=59||5|4|ms1856|ttln59|Corr. length #30 - Incr.|1
+~+|1|n|length||@corr1=60||5|4|ms1857|ttln60|Corr. length #30 - Decr.|1
+~+|1|n|length||@corr1=61||5|4|ms1858|ttln61|Corr. length #31 - Incr.|1
+~+|1|n|length||@corr1=62||5|4|ms1859|ttln62|Corr. length #31 - Decr.|1
+~+|1|n|length||@corr1=63||5|4|ms1860|ttln63|Corr. length #32 - Incr.|1
+~+|1|n|length||@corr1=64||5|4|ms1861|ttln64|Corr. length #32 - Decr.|1
+~+|1|n|length||@corr1=65||5|4|ms1862|ttln65|Corr. length #33 - Incr.|1
+~+|1|n|length||@corr1=66||5|4|ms1863|ttln66|Corr. length #33 - Decr.|1
+~+|1|n|length||@corr1=67||5|4|ms1864|ttln67|Corr. length #34 - Incr.|1
+~+|1|n|length||@corr1=68||5|4|ms1865|ttln68|Corr. length #34 - Decr.|1
+~+|1|n|length||@corr1=69||5|4|ms1866|ttln69|Corr. length #35 - Incr.|1
+~+|1|n|length||@corr1=70||5|4|ms1867|ttln70|Corr. length #35 - Decr.|1
+~+|1|n|length||@corr1=71||5|4|ms1868|ttln71|Corr. length #36 - Incr.|1
+~+|1|n|length||@corr1=72||5|4|ms1869|ttln72|Corr. length #36 - Decr.|1
+~+|1|n|length||@corr1=73||5|4|ms1870|ttln73|Corr. length #37 - Incr.|1
+~+|1|n|length||@corr1=74||5|4|ms1871|ttln74|Corr. length #37 - Decr.|1
+~+|1|n|length||@corr1=75||5|4|ms1872|ttln75|Corr. length #38 - Incr.|1
+~+|1|n|length||@corr1=76||5|4|ms1873|ttln76|Corr. length #38 - Decr.|1
+~+|1|n|length||@corr1=77||5|4|ms1874|ttln77|Corr. length #39 - Incr.|1
+~+|1|n|length||@corr1=78||5|4|ms1875|ttln78|Corr. length #39 - Decr.|1
+~+|1|n|length||@corr1=79||5|4|ms1876|ttln79|Corr. length #40 - Incr.|1
+~+|1|n|length||@corr1=80||5|4|ms1877|ttln80|Corr. length #40 - Decr.|1
+q
+~/
+~/end: 2-10_travel_times.mac
+~/exit emme
+q

@@ -94,6 +94,11 @@ if %SummaryBank% == Yes (
 	 call emme -ng 000 -m macros\2-7_work_modechoice_centers.mac %hightaz%
 	 call emme -ng 000 -m macros\2-8_nonwork_modechoice_centers.mac %hightaz%
 	 call emme -ng 000 -m macros\2-9_transit_operators.mac
+	 call emme -ng 000 -m macros\2-10_arterial_travel_times.mac
+	 call emme -ng 000 -m macros\2-11_freeway_travel_times.mac
+	 call emme -ng 000 -m macros\2-12_accident_costs.mac
+	 call emme -ng 000 -m macros\2-13_emission_costs.mac
+	 call emme -ng 000 -m macros\2-14_noise_costs.mac
 	 call emme -ng 000 -m macros\3-0_output_results.mac
 )
 cd ..
