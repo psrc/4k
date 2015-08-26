@@ -10,7 +10,7 @@ reports=initialization.rpt
 ~+|4.11|..\..\input\model\vdfs\%1%_vdfs.in|2
 ~/
 s=%2%
-~/ ...initialize extra attribute table 
+~/ ...initialize extra attribute table
 2.42
 ~+|1|y
 ~/ ...create toll extra attribute(s)
@@ -63,19 +63,19 @@ q
 ~/ ...set tmpl1 equal to 1 for arterial links (ul3 .ne. 1,2)
 ~/ ...excludes links which intersect with centroid connectors, freeway/expressway links
 ~+|1|y|tmpl1|1|
-~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2|and not ul3=5||2|2
+~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2|and not ul3=0|and not ul3=5||2|2
 ~/
 ~/ ...set tmpl2 equal to the minimum of 5 or lanes+2 for arterial links (ul3 .ne. 1,2)
 ~/ ...results in tmpl2 equalling 3, 4 or 5
 ~/ ...excludes links which intersect with centroid connectors, freeway/expressway links
 ~+|1|y|tmpl2|(lan+2).min.5|
-~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2|and not ul3=5||2|2
+~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2|and not ul3=0|and not ul3=5||2|2
 ~/
 ~/ ...set tmpl3 equal to the minimum of 5*lanecap or (lanes+2)*lanecap for arterial links (ul3 .ne. 1,2)
 ~/ ...results in tmpl2 equalling (3, 4 or 5)*lanecap
 ~/ ...excludes links which intersect with centroid connectors, freeway/expressway links
 ~+|1|y|tmpl3|((lan+2).min.5)*ul1|
-~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2|and not ul3=5|and not ul1=0||2|2
+~+|mod=a|and not i=1,%3%|and not j=1,%3%|and not ul3=1,2|and not ul3=0|and not ul3=5||2|2
 ~/
 ~/ ...set tmpl4 equal to the 1 for one-way arterials (ul3=4), 0 for all others
 ~+|1|y|tmpl4|1|
@@ -96,7 +96,7 @@ q
 ~/
 ~/ ...calculate red time (in minutes) at j-node of every arterial link (ul3 .ne. 1,2)
 ~+|1|y|@red|n|1.2*@cyclej*(1-(tmpj1*tmpl3)/(2*tmpj3))|
-~+|mod=a|and not i=1,%3%|and not j=1,%3%| and not ul3=1,2|and not ul3=5|and not ul1=0|and not @cyclej=0||2|2
+~+|mod=a|and not i=1,%3%|and not j=1,%3%| and not ul3=1,2|and not ul3=0|and not ul3=5|and not @cyclej=0||2|2
 ~/
 ~/ ...calculate intersection delay factor for every link with a cycle time exceeding zero
 ~+|1|y|@rdly|n|((@red*@red)/(2*@cyclej).max.0.2).min.1.0||not @cyclej=0||2|2
