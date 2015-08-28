@@ -4,7 +4,7 @@ batchin=?
 reports=initialization.rpt
 s=%2%
 ~/
-~/ ...input %1% tolls
+~/ ...input tolls
 2.41
 ~+|3|@toll1|n|*|1,2,3|..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
 ~+|3|@toll2|n|*|1,2,4|..\..\input\tolls\ferry\ferry_vehicle_fares.in|y|2|y
@@ -21,7 +21,7 @@ s=%2%
 q
 ~/
 ~/ ...input vot assignment parameters
-~+|3.11|..\..\input\model\vot\%1%_vot_parameters.in|2|
+~+|3.11|..\..\parameters\vot\%1%_vot_parameters.in|2|
 ~/
 ~/ ...flag bridges using screenlines 7 (TNB) and 32 (X-LK)
 ~+|2.41|1|y|@bridg|n|1||type=7|type=32||1|2|q

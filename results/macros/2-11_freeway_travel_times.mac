@@ -7,7 +7,7 @@ reports=summary.rpt
 s=1002
 ~+|2.42|2|2|@corr2|Everett to Seattle|0|q
 2.41
-~+|3|@corr2|n|*|1,2,3|..\input\travel_time\corridor_2.in|y|2|y
+~+|3|@corr2|n|*|1,2,3|..\input\corridors\corridor_2.in|y|2|y
 ~+|1|n|timau||@corr2=1||5|4|ms1878|acr201|Sea-Evt NB|1
 ~+|1|n|timau||@corr2=2||5|4|ms1879|acr202|Sea-Evt SB|1
 ~+|1|n|length||@corr2=1||5|4|ms1880|lcr201|Sea-Evt NB Length|1
@@ -16,7 +16,7 @@ q
 s=1003
 ~+|2.42|2|2|@corr2|Everett to Seattle|0|q
 2.41
-~+|3|@corr2|n|*|1,2,3|..\input\travel_time\corridor_2.in|y|2|y
+~+|3|@corr2|n|*|1,2,3|..\input\corridors\corridor_2.in|y|2|y
 ~+|1|n|timau||@corr2=1||5|4|ms1882|pcr201|Sea-Evt NB|1
 ~+|1|n|timau||@corr2=2||5|4|ms1883|pcr202|Sea-Evt SB|1
 q
@@ -26,7 +26,7 @@ q
 s=1002
 ~+|2.42|2|2|@corr3|Fed Way to Seattle|0|q
 2.41
-~+|3|@corr3|n|*|1,2,3|..\input\travel_time\corridor_3.in|y|2|y
+~+|3|@corr3|n|*|1,2,3|..\input\corridors\corridor_3.in|y|2|y
 ~+|1|n|timau||@corr3=1||5|4|ms1884|acr301|Sea-FW NB|1
 ~+|1|n|timau||@corr3=2||5|4|ms1885|acr302|Sea-FW SB|1
 ~+|1|n|length||@corr3=1||5|4|ms1886|lcr301|Sea-FW NB Length|1
@@ -35,7 +35,7 @@ q
 s=1003
 ~+|2.42|2|2|@corr3|Fed Way to Seattle|0|q
 2.41
-~+|3|@corr3|n|*|1,2,3|..\input\travel_time\corridor_3.in|y|2|y
+~+|3|@corr3|n|*|1,2,3|..\input\corridors\corridor_3.in|y|2|y
 ~+|1|n|timau||@corr3=1||5|4|ms1888|pcr301|Sea-FW NB|1
 ~+|1|n|timau||@corr3=2||5|4|ms1889|pcr302|Sea-FW SB|1
 q
@@ -45,7 +45,7 @@ q
 s=1002
 ~+|2.42|2|2|@corr4|Lynnwood to Bellevue|0|q
 2.41
-~+|3|@corr4|n|*|1,2,3|..\input\travel_time\corridor_4.in|y|2|y
+~+|3|@corr4|n|*|1,2,3|..\input\corridors\corridor_4.in|y|2|y
 ~+|1|n|timau||@corr4=1||5|4|ms1890|acr401|Lynn-Bell NB|1
 ~+|1|n|timau||@corr4=2||5|4|ms1891|acr402|Lynn-Bell SB|1
 ~+|1|n|length||@corr4=1||5|4|ms1892|lcr401|Lynn-Bell NB Length|1
@@ -54,7 +54,7 @@ q
 s=1003
 ~+|2.42|2|2|@corr4|Lynnwood to Bellevue|0|q
 2.41
-~+|3|@corr4|n|*|1,2,3|..\input\travel_time\corridor_4.in|y|2|y
+~+|3|@corr4|n|*|1,2,3|..\input\corridors\corridor_4.in|y|2|y
 ~+|1|n|timau||@corr4=1||5|4|ms1894|pcr401|Lynn-Bell NB|1
 ~+|1|n|timau||@corr4=2||5|4|ms1895|pcr402|Lynn-Bell SB|1
 q
@@ -64,7 +64,7 @@ q
 s=1002
 ~+|2.42|2|2|@corr5|Tukwila to Bellevue|0|q
 2.41
-~+|3|@corr5|n|*|1,2,3|..\input\travel_time\corridor_5.in|y|2|y
+~+|3|@corr5|n|*|1,2,3|..\input\corridors\corridor_5.in|y|2|y
 ~+|1|n|timau||@corr5=1||5|4|ms1896|acr501|Tuk-Bell NB|1
 ~+|1|n|timau||@corr5=2||5|4|ms1897|acr502|Tuk-Bell SB|1
 ~+|1|n|length||@corr5=1||5|4|ms1898|lcr501|Tuk-Bell NB Length|1
@@ -73,7 +73,7 @@ q
 s=1003
 ~+|2.42|2|2|@corr5|Tukwila to Bellevue|0|q
 2.41
-~+|3|@corr5|n|*|1,2,3|..\input\travel_time\corridor_5.in|y|2|y
+~+|3|@corr5|n|*|1,2,3|..\input\corridors\corridor_5.in|y|2|y
 ~+|1|n|timau||@corr5=1||5|4|ms1900|pcr501|Tuk-Bell NB|1
 ~+|1|n|timau||@corr5=2||5|4|ms1901|pcr502|Tuk-Bell SB|1
 q
@@ -83,7 +83,7 @@ q
 s=1002
 ~+|2.42|2|2|@corr6|Renton to Auburn|0|q
 2.41
-~+|3|@corr6|n|*|1,2,3|..\input\travel_time\corridor_6.in|y|2|y
+~+|3|@corr6|n|*|1,2,3|..\input\corridors\corridor_6.in|y|2|y
 ~+|1|n|timau||@corr6=1||5|4|ms1902|acr601|Rent-Aub NB|1
 ~+|1|n|timau||@corr6=2||5|4|ms1903|acr602|Rent-Aub SB|1
 ~+|1|n|length||@corr6=1||5|4|ms1904|lcr601|Rent-Aub NB Length|1
@@ -92,7 +92,7 @@ q
 s=1003
 ~+|2.42|2|2|@corr6|Renton to Auburn|0|q
 2.41
-~+|3|@corr6|n|*|1,2,3|..\input\travel_time\corridor_6.in|y|2|y
+~+|3|@corr6|n|*|1,2,3|..\input\corridors\corridor_6.in|y|2|y
 ~+|1|n|timau||@corr6=1||5|4|ms1906|pcr601|Rent-Aub NB|1
 ~+|1|n|timau||@corr6=2||5|4|ms1907|pcr602|Rent-Aub SB|1
 q
@@ -102,7 +102,7 @@ q
 s=1002
 ~+|2.42|2|2|@corr7|Seattle to Redmond|0|q
 2.41
-~+|3|@corr7|n|*|1,2,3|..\input\travel_time\corridor_7.in|y|2|y
+~+|3|@corr7|n|*|1,2,3|..\input\corridors\corridor_7.in|y|2|y
 ~+|1|n|timau||@corr7=1||5|4|ms1908|acr701|Red-Sea NB|1
 ~+|1|n|timau||@corr7=2||5|4|ms1909|acr702|Red-Sea SB|1
 ~+|1|n|length||@corr7=1||5|4|ms1910|lcr701|Red-Sea NB Length|1
@@ -111,7 +111,7 @@ q
 s=1003
 ~+|2.42|2|2|@corr7|Seattle to Redmond|0|q
 2.41
-~+|3|@corr7|n|*|1,2,3|..\input\travel_time\corridor_7.in|y|2|y
+~+|3|@corr7|n|*|1,2,3|..\input\corridors\corridor_7.in|y|2|y
 ~+|1|n|timau||@corr7=1||5|4|ms1912|pcr701|Red-Sea NB|1
 ~+|1|n|timau||@corr7=2||5|4|ms1913|pcr702|Red-Sea SB|1
 q
@@ -121,7 +121,7 @@ q
 s=1002
 ~+|2.42|2|2|@corr8|Bellevue to Redmond|0|q
 2.41
-~+|3|@corr8|n|*|1,2,3|..\input\travel_time\corridor_8.in|y|2|y
+~+|3|@corr8|n|*|1,2,3|..\input\corridors\corridor_8.in|y|2|y
 ~+|1|n|timau||@corr8=1||5|4|ms1914|acr801|Red-Bell NB|1
 ~+|1|n|timau||@corr8=2||5|4|ms1915|acr802|Red-Bell SB|1
 ~+|1|n|length||@corr8=1||5|4|ms1916|lcr801|Red-Bell NB Length|1
@@ -130,7 +130,7 @@ q
 s=1003
 ~+|2.42|2|2|@corr8|Bellevue to Redmond|0|q
 2.41
-~+|3|@corr8|n|*|1,2,3|..\input\travel_time\corridor_8.in|y|2|y
+~+|3|@corr8|n|*|1,2,3|..\input\corridors\corridor_8.in|y|2|y
 ~+|1|n|timau||@corr8=1||5|4|ms1918|pcr801|Red-Bell NB|1
 ~+|1|n|timau||@corr8=2||5|4|ms1919|pcr802|Red-Bell SB|1
 q
@@ -140,7 +140,7 @@ q
 s=1002
 ~+|2.42|2|2|@corr9|Bellevue to Issaquah|0|q
 2.41
-~+|3|@corr9|n|*|1,2,3|..\input\travel_time\corridor_9.in|y|2|y
+~+|3|@corr9|n|*|1,2,3|..\input\corridors\corridor_9.in|y|2|y
 ~+|1|n|timau||@corr9=1||5|4|ms1920|acr901|Iss-Bell NB|1
 ~+|1|n|timau||@corr9=2||5|4|ms1921|acr902|Iss-Bell SB|1
 ~+|1|n|length||@corr9=1||5|4|ms1922|lcr901|Iss-Bell NB Length|1
@@ -149,7 +149,7 @@ q
 s=1003
 ~+|2.42|2|2|@corr9|Bellevue to Issaquah|0|q
 2.41
-~+|3|@corr9|n|*|1,2,3|..\input\travel_time\corridor_9.in|y|2|y
+~+|3|@corr9|n|*|1,2,3|..\input\corridors\corridor_9.in|y|2|y
 ~+|1|n|timau||@corr9=1||5|4|ms1924|pcr901|Iss-Bell NB|1
 ~+|1|n|timau||@corr9=2||5|4|ms1925|pcr902|Iss-Bell SB|1
 q
@@ -159,7 +159,7 @@ q
 s=1002
 ~+|2.42|2|2|@cor10|Bellevue to Seattle via SR 520|0|q
 2.41
-~+|3|@cor10|n|*|1,2,3|..\input\travel_time\corridor_10.in|y|2|y
+~+|3|@cor10|n|*|1,2,3|..\input\corridors\corridor_10.in|y|2|y
 ~+|1|n|timau||@cor10=1||5|4|ms1926|acr101|Bell-Sea NB|1
 ~+|1|n|timau||@cor10=2||5|4|ms1927|acr102|Bell-Sea SB|1
 ~+|1|n|length||@cor10=1||5|4|ms1928|lcr101|Bell-Sea NB Length|1
@@ -168,7 +168,7 @@ q
 s=1003
 ~+|2.42|2|2|@cor10|Bellevue to Seattle via SR 520|0|q
 2.41
-~+|3|@cor10|n|*|1,2,3|..\input\travel_time\corridor_10.in|y|2|y
+~+|3|@cor10|n|*|1,2,3|..\input\corridors\corridor_10.in|y|2|y
 ~+|1|n|timau||@cor10=1||5|4|ms1930|pcr101|Bell-Sea NB|1
 ~+|1|n|timau||@cor10=2||5|4|ms1931|pcr102|Bell-Sea SB|1
 q
@@ -178,7 +178,7 @@ q
 s=1002
 ~+|2.42|2|2|@cor11|Bellevue to Seattle via I-90|0|q
 2.41
-~+|3|@cor11|n|*|1,2,3|..\input\travel_time\corridor_11.in|y|2|y
+~+|3|@cor11|n|*|1,2,3|..\input\corridors\corridor_11.in|y|2|y
 ~+|1|n|timau||@cor11=1||5|4|ms1932|acr111|Bell-Sea NB|1
 ~+|1|n|timau||@cor11=2||5|4|ms1933|acr112|Bell-Sea SB|1
 ~+|1|n|length||@cor11=1||5|4|ms1934|lcr111|Bell-Sea NB Length|1
@@ -187,7 +187,7 @@ q
 s=1003
 ~+|2.42|2|2|@cor11|Bellevue to Seattle via I-90|0|q
 2.41
-~+|3|@cor11|n|*|1,2,3|..\input\travel_time\corridor_11.in|y|2|y
+~+|3|@cor11|n|*|1,2,3|..\input\corridors\corridor_11.in|y|2|y
 ~+|1|n|timau||@cor11=1||5|4|ms1936|pcr111|Bell-Sea NB|1
 ~+|1|n|timau||@cor11=2||5|4|ms1937|pcr112|Bell-Sea SB|1
 q
@@ -197,7 +197,7 @@ q
 s=1002
 ~+|2.42|2|2|@cor12|Issaquah to Seattle via I-90|0|q
 2.41
-~+|3|@cor12|n|*|1,2,3|..\input\travel_time\corridor_12.in|y|2|y
+~+|3|@cor12|n|*|1,2,3|..\input\corridors\corridor_12.in|y|2|y
 ~+|1|n|timau||@cor12=1||5|4|ms1938|acr121|Iss-Sea NB|1
 ~+|1|n|timau||@cor12=2||5|4|ms1939|acr122|Iss-Sea SB|1
 ~+|1|n|length||@cor12=1||5|4|ms1940|lcr121|Iss-Sea NB Length|1
@@ -206,7 +206,7 @@ q
 s=1003
 ~+|2.42|2|2|@cor12|Issaquah to Seattle via I-90|0|q
 2.41
-~+|3|@cor12|n|*|1,2,3|..\input\travel_time\corridor_12.in|y|2|y
+~+|3|@cor12|n|*|1,2,3|..\input\corridors\corridor_12.in|y|2|y
 ~+|1|n|timau||@cor12=1||5|4|ms1942|pcr121|Iss-Sea NB|1
 ~+|1|n|timau||@cor12=2||5|4|ms1943|pcr122|Iss-Sea SB|1
 q

@@ -1,0 +1,69 @@
+t matrices
+c hb non-work market segment coefficients
+c
+c drive alone
+m  matrix=ms"ecp1da"
+   all  all:  0.0
+m  matrix=ms"ecp2da"
+   all  all:  -0.2
+m  matrix=ms"ecp3da"
+   all  all:  0.3
+m  matrix=ms"ecp4da"
+   all  all:  1.1
+m  matrix=ms"ecp5da"
+   all  all:  0.0
+c shared-ride 2
+m  matrix=ms"ecp1s2"
+   all  all:  -0.1
+m  matrix=ms"ecp2s2"
+   all  all:  -0.3
+m  matrix=ms"ecp3s2"
+   all  all:  -0.5
+m  matrix=ms"ecp4s2"
+   all  all:   0.8
+m  matrix=ms"ecp5s2"
+   all  all:  -4.9
+c shared-ride 3+
+m  matrix=ms"ecp1s3"
+   all  all:  -0.1
+m  matrix=ms"ecp2s3"
+   all  all:   1.4
+m  matrix=ms"ecp3s3"
+   all  all:  -0.9
+m  matrix=ms"ecp4s3"
+   all  all:  -0.5
+m  matrix=ms"ecp5s3"
+   all  all:  -5.0
+c transit walk access
+m  matrix=ms"ecp1tw"
+   all  all:  2.6
+m  matrix=ms"ecp2tw"
+   all  all:  -1.0
+m  matrix=ms"ecp3tw"
+   all  all:  -1.4
+m  matrix=ms"ecp4tw"
+   all  all:  -0.5
+m  matrix=ms"ecp5tw"
+   all  all:  -4.6
+c walk
+m  matrix=ms"ecp1wk"
+   all  all:  0.5
+m  matrix=ms"ecp2wk"
+   all  all:  0.1
+m  matrix=ms"ecp3wk"
+   all  all:  -1.2
+m  matrix=ms"ecp4wk"
+   all  all:  -0.1
+m  matrix=ms"ecp5wk"
+   all  all:  -4.4
+c bike
+m  matrix=ms"ecp1bk"
+   all  all:  0.1
+m  matrix=ms"ecp2bk"
+   all  all:  -0.3
+m  matrix=ms"ecp3bk"
+   all  all:  -0.3
+m  matrix=ms"ecp4bk"
+   all  all:  0.0
+m  matrix=ms"ecp5bk"
+   all  all:  -4.5

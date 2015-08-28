@@ -34,7 +34,7 @@ q
 q
 ~/
 ~/ ...Input %%x%% walk time of day factors
-~+|3.11|..\..\input\model\timeofday\%%x%%_walk_tod.in|2|
+~+|3.11|..\..\parameters\timeofday\%%x%%_walk_tod.in|2|
 ~/
 ~/ ...Construct %%x%%  p-a walk person trip tables
 ~+|3.21|1|y|mf"pa"|n

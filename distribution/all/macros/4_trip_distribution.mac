@@ -1,0 +1,125 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=trip_distribution.rpt
+~/
+~/ ... set Flag for External to External Trips to Zero
+~+|3.21|1|y|mf"intflg"|n|0|||y|ga20||ga20||2|q
+~/
+~/ ... set maxium iterations to 100 and max error to 0.0001 for Trip Distribution
+~+|3.22|3|100|0.0001|y|q
+~/
+~/ ...import am bi-directional cost and distance skims for sov nonwork
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"au1bcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"au1bds"|mf"dist"|n|y|q
+~+|1.31|1|..\..\Skims\Auto\AM\emmebank|2|3|3|mf"brsov"|mf"brdg"|n|y|q
+~/
+~/ ...calculate College Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"colexp"*(mf"cost"+(mf"dist"*ms"autoop"*ms"avotda")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"colpro"|md"colatt"|y|1,%3%||1,%3%|||2|1|mf"coldst"|n|2|q
+~/
+~/ ...import am bi-directional cost and distance skims for sov work income #1
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"ah1bcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"ah1bds"|mf"dist"|n|y|q
+~/
+~/ ...calculate Home Based Work Income #1 Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"hbwex1"*(mf"cost"+(mf"dist"*ms"autoop"*ms"avot1v")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"hbwpr1"|md"hbwat1"|y|1,%3%||1,%3%|||2|1|mf"hbwds1"|n|2|q
+~/
+~/ ...import am bi-directional cost and distance skims for sov work income #2
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"ah2bcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"ah2bds"|mf"dist"|n|y|q
+~/
+~/ ...calculate Home Based Work Income #2 Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"hbwex2"*(mf"cost"+(mf"dist"*ms"autoop"*ms"avot2v")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"hbwpr2"|md"hbwat2"|y|1,%3%||1,%3%|||2|1|mf"hbwds2"|n|2|q
+~/
+~/ ...import am bi-directional cost and distance skims for sov work income #3
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"ah3bcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"ah3bds"|mf"dist"|n|y|q
+~/
+~/ ...calculate Home Based Work Income #3 Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"hbwex3"*(mf"cost"+(mf"dist"*ms"autoop"*ms"avot3v")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"hbwpr3"|md"hbwat3"|y|1,%3%||1,%3%|||2|1|mf"hbwds3"|n|2|q
+~/
+~/ ...import am bi-directional cost and distance skims for sov work income #4
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"ah4bcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"ah4bds"|mf"dist"|n|y|q
+~/
+~/ ...calculate Home Based Work Income #4 Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"hbwex4"*(mf"cost"+(mf"dist"*ms"autoop"*ms"avot4v")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"hbwpr4"|md"hbwat4"|y|1,%3%||1,%3%|||2|1|mf"hbwds4"|n|2|q
+~/
+~/ ...import midday bi-directional cost and distance skims for nonwork purposes
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"mu1bcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"mu1bds"|mf"dist"|n|y|q
+~/
+~/ ...calculate Home Based Other Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"hboexp"*(mf"cost"+(mf"dist"*ms"autoop"*ms"mvotda")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"hbopro"|md"hboatt"|y|1,%3%||1,%3%|||2|1|mf"hbodst"|n|2|q
+~/
+~/ ...calculate Home Based School Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"schexp"*(mf"cost"+(mf"dist"*ms"autoop"*ms"mvotda")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"schpro"|md"schatt"|y|1,%3%||1,%3%|||2|1|mf"schdst"|n|2|q
+~/
+~/ ...calculate Home Based Shopping Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"hspexp"*(mf"cost"+(mf"dist"*ms"autoop"*ms"mvotda")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"hsppro"|md"hspatt"|y|1,%3%||1,%3%|||2|1|mf"hspdst"|n|2|q
+~/
+~/ ...calculate Non-Home Other to Other Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"otoexp"*(mf"cost"+(mf"dist"*ms"autoop"*ms"mvotda")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"otopro"|md"otoatt"|y|1,%3%||1,%3%|||2|1|mf"otodst"|n|2|q
+~/
+~/ ...calculate Non-Home Work to Other Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(ms"wkoexp"*(mf"cost"+(mf"dist"*ms"autoop"*ms"mvotda")+3*mf"brdg"))|||y|1,%3%||1,%3%||2|q
+~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
+~+|3.22|1|mf"fri"|mo"wkopro"|md"wkoatt"|y|1,%3%||1,%3%|||2|1|mf"wkodst"|n|2|q
+~/
+~/ ...import light truck cost and distance skims
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"blgtcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"blgtds"|mf"dist"|n|y|q
+~/ ...calculate Light Truck Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(-0.04585*(mf"cost"+(mf"dist"*ms"lgtop"*.0150)))*mf"intflg"|||y|1,%3%||1,%3%||2|q
+~+|3.22|1|mf"fri"|mo"ltprof"|md"ltattf"|y|1,%3%||1,%3%||~?q=3|2||2|1|mf"lgtdis"|n|2|q
+~/
+~/ ...import medium truck cost and distance skims
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"bmedcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"bmedds"|mf"dist"|n|y|q
+~/
+~/ ...calculate Medium Truck Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(-0.0053*(mf"cost"+(mf"dist"*ms"medop"*.0133)))*mf"intflg"|||y|1,%3%||1,%3%||2|q
+~+|3.22|1|mf"fri"|mo"mtprof"|md"mtattf"|y|1,%3%||1,%3%||~?q=3|2||2|1|mf"meddis"|n|2|q
+~/
+~/ ...import heavy truck cost and distance skims
+~+|1.31|1|..\..\Skims\BiDirectional\Generalized_Cost\emmebank|2|3|3|mf"bhvycs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\Distance\emmebank|2|3|3|mf"bhvyds"|mf"dist"|n|y|q
+~/
+~/ ...calculate Heavy Truck Trip Distribution
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(-0.00001*(mf"cost"+(mf"dist"*ms"hvyop"*.0120)))*mf"intflg"|||y|1,%3%||1,%3%||2|q
+~+|3.22|1|mf"fri"|mo"htprof"|md"htattf"|y|1,%3%||1,%3%||~?q=3|2||2|1|mf"hvydis"|n|2|q
+~/
+~/exit emme
+~/
+q

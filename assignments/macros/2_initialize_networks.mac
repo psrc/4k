@@ -7,51 +7,63 @@ reports=initialization.rpt
 ~+|4.12|1|y|q
 ~/
 ~/ ...input %1% vdfs
-~+|4.11|..\..\input\model\vdfs\%1%_vdfs.in|2
+~+|4.11|..\..\parameters\vdfs\%1%_vdfs.in|2
 ~/
 s=%2%
 ~/ ...initialize extra attribute table
-2.42
-~+|1|y
+~+|2.42|1|y|q
 ~/ ...create toll extra attribute(s)
-~+|2|2|@toll1|sov toll|0
-~+|2|2|@toll2|hov 2 toll|0
-~+|2|2|@toll3|hov 3+ toll|0
-~+|2|2|@toll4|vanpool toll|0
-~+|2|2|@trkc1|light truck toll|0
-~+|2|2|@trkc2|medium truck toll|0
-~+|2|2|@trkc3|heavy truck toll|0
+~+|2.42|2|2|@toll1|sov toll|0|q
+~+|2.42|2|2|@toll2|hov 2 toll|0|q
+~+|2.42|2|2|@toll3|hov 3+ toll|0|q
+~+|2.42|2|2|@toll4|vanpool toll|0|q
+~+|2.42|2|2|@trkc1|light truck toll|0|q
+~+|2.42|2|2|@trkc2|medium truck toll|0|q
+~+|2.42|2|2|@trkc3|heavy truck toll|0|q
 ~/ ...create vehicle class extra attribute(s)
-~+|2|2|@sov|sov volume|0
-~+|2|2|@hov2|hov 2 volume|0
-~+|2|2|@hov3|hov 3+ volume|0
-~+|2|2|@vpool|vanpool volume|0
-~+|2|2|@hbw1|hbw1 sov volume|0
-~+|2|2|@hbw2|hbw2 sov volume|0
-~+|2|2|@hbw3|hbw3 sov volume|0
-~+|2|2|@hbw4|hbw4 sov volume|0
-~+|2|2|@light|light truck volume|0
-~+|2|2|@mediu|medium truck volume|0
-~+|2|2|@heavy|heavy truck volume|0
+~+|2.42|2|2|@sov|sov volume|0|q
+~+|2.42|2|2|@hov2|hov 2 volume|0|q
+~+|2.42|2|2|@hov3|hov 3+ volume|0|q
+~+|2.42|2|2|@vpool|vanpool volume|0|q
+~+|2.42|2|2|@hbw1|hbw1 sov volume|0|q
+~+|2.42|2|2|@hbw2|hbw2 sov volume|0|q
+~+|2.42|2|2|@hbw3|hbw3 sov volume|0|q
+~+|2.42|2|2|@hbw4|hbw4 sov volume|0|q
+~+|2.42|2|2|@light|light truck volume|0|q
+~+|2.42|2|2|@mediu|medium truck volume|0|q
+~+|2.42|2|2|@heavy|heavy truck volume|0|q
 ~/ ...create intersection delay extra attribute(s)
-~+|2|1|@cycle|signal cycle time (minutes)|0
-~+|2|2|@red|signal red time (minutes)|0
-~+|2|2|@rdly|intersection delay factor|0
+~+|2.42|2|1|@cycle|signal cycle time (minutes)|0|q
+~+|2.42|2|2|@red|signal red time (minutes)|0|q
+~+|2.42|2|2|@rdly|intersection delay factor|0|q
 ~/ ...create transit equivalent extra attribute(s)
-~+|2|2|@trnv3|3hr auto bus equivalent (for am)|0
-~+|2|2|@trnv6|6hr auto bus equivalent (for md)|0
-~+|2|2|@trrv3|reverse of '@trnv3' (for pm)|0
+~+|2.42|2|2|@trnv3|3hr auto bus equivalent (for am)|0|q
+~+|2.42|2|2|@trnv6|6hr auto bus equivalent (for md)|0|q
+~+|2.42|2|2|@trrv3|reverse of '@trnv3' (for pm)|0|q
 ~/ ...create other extra attribute(s)
-~+|2|2|@timau|copy 'timau' for skimming|0
+~+|2.42|2|2|@timau|copy 'timau' for skimming|0|q
 ~/ ...create time of day model extra attribute(s)
-~+|2|2|@bridg|bridge link flag|0
+~+|2.42|2|2|@bridg|bridge link flag|0|q
 ~/ ...create total vehicles extra link attributes
-~+|2|2|@bveh|bus vehicles|0
-~+|2|2|@sovw|sov work vehicles|0
-~+|2|2|@mveh|medium truck vehicles|0
-~+|2|2|@hveh|heavy truck vehicles|0
-~+|2|2|@tveh|total vehicles|0
-q
+~+|2.42|2|2|@bveh|bus vehicles|0|q
+~+|2.42|2|2|@sovw|sov work vehicles|0|q
+~+|2.42|2|2|@mveh|medium truck vehicles|0|q
+~+|2.42|2|2|@hveh|heavy truck vehicles|0|q
+~+|2.42|2|2|@tveh|total vehicles|0|q
+~+|2.42|2|2|@cars|Number of Cars|0|q
+~+|2.42|2|2|@truck|Number of Trucks|0|q
+~+|2.42|2|2|@vc|Volume to Capacity Ratio|0|q
+~+|2.42|2|2|@speed|Congested Speed|0|q
+~/ --- Create collision related link attributes
+~+|2.42|2|2|@pdo|Predicted Property Damage Collisions|0|q
+~+|2.42|2|2|@inj|Predicted Injury Collisions|0|q
+~+|2.42|2|2|@ftl|Predicted Fatal Collisions|0|q
+~/ --- Create emission related link attributes
+~+|2.42|2|2|@co2|Carbon Dioxide|0|q
+~+|2.42|2|2|@co|Carbon Monoxide|0|q
+~+|2.42|2|2|@nox|Nitrogen Oxide|0|q
+~+|2.42|2|2|@voc|Volatile Organic Compound|0|q
+~+|2.42|2|2|@pam|Particualte Matter|0|q
 ~/
 ~/ ...set temporary link attributes (tmpl1,2,3) equal to zero
 2.41

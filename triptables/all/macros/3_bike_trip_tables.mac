@@ -34,7 +34,7 @@ q
 q
 ~/
 ~/ ...Input %%x%% Bike time of day factors
-~+|3.11|..\..\input\model\timeofday\%%x%%_bike_tod.in|2|
+~+|3.11|..\..\parameters\timeofday\%%x%%_bike_tod.in|2|
 ~/
 ~/ ...Construct %%x%%  p-a bike person trip tables
 ~+|3.21|1|y|mf"pa"|n

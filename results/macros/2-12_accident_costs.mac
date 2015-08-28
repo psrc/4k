@@ -8,13 +8,7 @@ reports=summary.rpt
 ~/ --- AM Peak Period
 ~/ ---------------------------------------------------------------
 s=1002
-~+|2.42|2|2|@vc|Volume to Capacity Ratio|0|q
-~+|2.42|2|2|@pdo|Predicted Property Damage Collisions|0|q
-~+|2.42|2|2|@inj|Predicted Injury Collisions|0|q
-~+|2.42|2|2|@ftl|Predicted Fatal Collisions|0|q
 2.41
-~/ --- Store Volume to Capacity Ratio
-~+|1|y|@vc|n|volau/(ul1*3)||ul1=0.001,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Property Damage
 ~/ ---------------------------------------------------------------
@@ -122,13 +116,7 @@ q
 ~/ --- Midday Period
 ~/ ---------------------------------------------------------------
 s=1004
-~+|2.42|2|2|@vc|Volume to Capacity Ratio|0|q
-~+|2.42|2|2|@pdo|Predicted Property Damage Collisions|0|q
-~+|2.42|2|2|@inj|Predicted Injury Collisions|0|q
-~+|2.42|2|2|@ftl|Predicted Fatal Collisions|0|q
 2.41
-~/ --- Store Volume to Capacity Ratio
-~+|1|y|@vc|n|volau/(ul1*6)||ul1=0.001,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Property Damage
 ~/ ---------------------------------------------------------------
@@ -236,13 +224,7 @@ q
 ~/ --- PM Peak Period
 ~/ ---------------------------------------------------------------
 s=1003
-~+|2.42|2|2|@vc|Volume to Capacity Ratio|0|q
-~+|2.42|2|2|@pdo|Predicted Property Damage Collisions|0|q
-~+|2.42|2|2|@inj|Predicted Injury Collisions|0|q
-~+|2.42|2|2|@ftl|Predicted Fatal Collisions|0|q
 2.41
-~/ --- Store Volume to Capacity Ratio
-~+|1|y|@vc|n|volau/(ul1*3)||ul1=0.001,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Property Damage
 ~/ ---------------------------------------------------------------
@@ -350,13 +332,7 @@ q
 ~/ --- Late Evening Period
 ~/ ---------------------------------------------------------------
 s=1005
-~+|2.42|2|2|@vc|Volume to Capacity Ratio|0|q
-~+|2.42|2|2|@pdo|Predicted Property Damage Collisions|0|q
-~+|2.42|2|2|@inj|Predicted Injury Collisions|0|q
-~+|2.42|2|2|@ftl|Predicted Fatal Collisions|0|q
 2.41
-~/ --- Store Volume to Capacity Ratio
-~+|1|y|@vc|n|volau/(ul1*4)||ul1=0.001,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Property Damage
 ~/ ---------------------------------------------------------------
@@ -464,13 +440,7 @@ q
 ~/ --- Overnight Period
 ~/ ---------------------------------------------------------------
 s=1006
-~+|2.42|2|2|@vc|Volume to Capacity Ratio|0|q
-~+|2.42|2|2|@pdo|Predicted Property Damage Collisions|0|q
-~+|2.42|2|2|@inj|Predicted Injury Collisions|0|q
-~+|2.42|2|2|@ftl|Predicted Fatal Collisions|0|q
 2.41
-~/ --- Store Volume to Capacity Ratio
-~+|1|y|@vc|n|volau/(ul1*8)||ul1=0.001,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Property Damage
 ~/ ---------------------------------------------------------------

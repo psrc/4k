@@ -1,0 +1,245 @@
+c 4k
+t matrices
+c hb non-work mode choice coefficients and parameters
+c
+c hb non-work asc for shared ride 2
+m matrix=ms"asccs2"
+  all all: -0.3985
+c hb non-work asc for shared ride 3+
+m matrix=ms"asccs3"
+  all all: -0.5327
+c hb non-work asc for transit walk
+m matrix=ms"ascctw"
+  all all: -2.2497
+c hb non-work asc for walk
+m matrix=ms"asccwk"
+  all all:  1.8960
+c hb non-work asc for bike
+m matrix=ms"asccbk"
+  all all: -3.4304
+c hb non-work auto iv-time coeff
+m matrix=ms"autivt"
+  all all: -0.0150
+c hb non-work transit-walk iv-time coeff
+m matrix=ms"trwivt"
+  all all: -0.0150
+c hb non-work auto cost coefficient
+m matrix=ms"autcos"
+  all all: -0.0015
+c hb non-work transit-walk cost coeff
+m matrix=ms"trwcos"
+  all all: -0.0015
+c hb non-work transit-walk ov-time coeff
+m matrix=ms"trwovt"
+  all all: -0.0300
+c hb non-work walk time coeff
+m matrix=ms"walktm"
+  all all: -0.0923
+c hb non-work bike time coeff
+m matrix=ms"biketm"
+  all all: -0.0342
+c hb non-work transit-walk aux-time coeff
+m matrix=ms"trwaux"
+  all all: 0
+c hb non-work transit-walk iw-time coeff
+m matrix=ms"trwiwt"
+  all all: 0
+c hb non-work transit-walk xfr-time coeff
+m matrix=ms"trwxfr"
+  all all: 0
+c hb non-work auto ov-time coeff
+m matrix=ms"autovt"
+  all all: 0
+c hb non-work transit-walk brd-time coeff
+m matrix=ms"trwbrd"
+  all all: 0
+c hb non-work transit-walk nbd coeff
+m matrix=ms"trwnbd"
+  all all: 0
+c hb non-work cbd coeff for sov (mo)
+m matrix=ms"bdsovo"
+  all all: 0
+c hb non-work cbd coeff for sov (md)
+m matrix=ms"bdsovd"
+  all all: 0
+c hb non-work cbd coeff for sr2 (mo)
+m matrix=ms"bdsr2o"
+  all all: 0
+c hb non-work cbd coeff for sr2 (md)
+m matrix=ms"bdsr2d"
+  all all: 0
+c hb non-work cbd coeff for sr3 (mo)
+m matrix=ms"bdsr3o"
+  all all: 0
+c hb non-work cbd coeff for sr3 (md)
+m matrix=ms"bdsr3d"
+  all all: 0
+c hb non-work cbd coeff for transit-walk (mo)
+m matrix=ms"bdtrwo"
+  all all: 0
+c hb non-work cbd coeff for transit-walk (md)
+m matrix=ms"bdtrwd"
+  all all: 0
+c hb non-work cbd coeff for bike (mo)
+m matrix=ms"bdbiko"
+  all all: 0
+c hb non-work cbd coeff for bike (md)
+m matrix=ms"bdbikd"
+  all all: 0
+c hb non-work cbd coeff for walk (mo)
+m matrix=ms"bdwlko"
+  all all: 0
+c hb non-work cbd coeff for walk (md)
+m matrix=ms"bdwlkd"
+  all all: 0
+c uf coeff for sov (mo) - int density
+m matrix=ms"uidsvo"
+  all all: 0
+c uf coeff for sov (md) - int density
+m matrix=ms"uidsvd"
+  all all: 0
+c uf coeff for sov (mo) - lu mix
+m matrix=ms"umxsvo"
+  all all: 0
+c uf coeff for sov (md) - lu mix
+m matrix=ms"umxsvd"
+  all all: 0
+c uf coeff for sov (mo) - non motorized
+m matrix=ms"unmsvo"
+  all all: 0
+c uf coeff for sov (md) - non motorized
+m matrix=ms"unmsvd"
+  all all: 0
+c uf coeff for sov (mo) - retail far
+m matrix=ms"uresvo"
+  all all: 0
+c uf coeff for sov (md) - retail far
+m matrix=ms"uresvd"
+  all all: 0
+c uf coeff for sr2 (mo) - int density
+m matrix=ms"uids2o"
+  all all: 0
+c uf coeff for sr2 (md) - int density
+m matrix=ms"uids2d"
+  all all: 0
+c uf coeff for sr2 (mo) - lu mix
+m matrix=ms"umxs2o"
+  all all: 0
+c uf coeff for sr2 (md) - lu mix
+m matrix=ms"umxs2d"
+  all all: 0
+c uf coeff for sr2 (mo) - non motorized
+m matrix=ms"unms2o"
+  all all: 0
+c uf coeff for sr2 (md) - non motorized
+m matrix=ms"unms2d"
+  all all: 0
+c uf coeff for sr2 (mo) - retail far
+m matrix=ms"ures2o"
+  all all: 0
+c uf coeff for sr2 (md) - retail far
+m matrix=ms"ures2d"
+  all all: 0
+c uf coeff for sr3 (mo) - int density
+m matrix=ms"uids3o"
+  all all: 0
+c uf coeff for sr3 (md) - int density
+m matrix=ms"uids3d"
+  all all: 0
+c uf coeff for sr3 (mo) - lu mix
+m matrix=ms"umxs3o"
+  all all: 0
+c uf coeff for sr3 (md) - lu mix
+m matrix=ms"umxs3d"
+  all all: 0
+c uf coeff for sr3 (mo) - non motorized
+m matrix=ms"unms3o"
+  all all: 0
+c uf coeff for sr3 (md) - non motorized
+m matrix=ms"unms3d"
+  all all: 0
+c uf coeff for sr3 (mo) - retail far
+m matrix=ms"ures3o"
+  all all: 0
+c uf coeff for sr3 (md) - retail far
+m matrix=ms"ures3d"
+  all all: 0
+c uf coeff for tw (mo) - int density
+m matrix=ms"uidtwo"
+  all all: 0
+c uf coeff for tw (md) - int density
+m matrix=ms"uidtwd"
+  all all: 0
+c uf coeff for tw (mo) - lu mix
+m matrix=ms"umxtwo"
+  all all: 0
+c uf coeff for tw (md) - lu mix
+m matrix=ms"umxtwd"
+  all all: 0
+c uf coeff for tw (mo) - non motorized
+m matrix=ms"unmtwo"
+  all all: 0
+c uf coeff for tw (md) - non motorized
+m matrix=ms"unmtwd"
+  all all: 0
+c uf coeff for tw (mo) - retail far
+m matrix=ms"uretwo"
+  all all: 0
+c uf coeff for tw (md) - retail far
+m matrix=ms"uretwd"
+  all all: 0
+c uf coeff for bike (mo) - int density
+m matrix=ms"uidbko"
+  all all: 0
+c uf coeff for bike (md) - int density
+m matrix=ms"uidbkd"
+  all all: 0
+c uf coeff for bike (mo) - lu mix
+m matrix=ms"umxbko"
+  all all: 0
+c uf coeff for bike (md) - lu mix
+m matrix=ms"umxbkd"
+  all all: 0
+c uf coeff for bike (mo) - non motorized
+m matrix=ms"unmbko"
+  all all: 0
+c uf coeff for bike (md) - non motorized
+m matrix=ms"unmbkd"
+  all all: 0
+c uf coeff for bike (mo) - retail far
+m matrix=ms"urebko"
+  all all: 0
+c uf coeff for bike (md) - retail far
+m matrix=ms"urebkd"
+  all all: 0
+c uf coeff for walk (mo) - int density
+m matrix=ms"uidwko"
+  all all: 0
+c uf coeff for walk (md) - int density
+m matrix=ms"uidwkd"
+  all all: 0
+c uf coeff for walk (mo) - lu mix
+m matrix=ms"umxwko"
+  all all: 0
+c uf coeff for walk (md) - lu mix
+m matrix=ms"umxwkd"
+  all all: 0
+c uf coeff for walk (mo) - non motorized
+m matrix=ms"unmwko"
+  all all: 0
+c uf coeff for walk (md) - non motorized
+m matrix=ms"unmwkd"
+  all all: 0
+c uf coeff for walk (mo) - retail far
+m matrix=ms"urewko"
+  all all: 0
+c uf coeff for walk (md) - retail far
+m matrix=ms"urewkd"
+  all all: 0
+
+
+
+
+
+
+

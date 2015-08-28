@@ -40,7 +40,7 @@ q
 q
 ~/
 ~/ ...input %x% transit time of day factors
-~+|3.11|..\..\input\model\timeofday\%%x%%_transit_tod.in|2|
+~+|3.11|..\..\parameters\timeofday\%%x%%_transit_tod.in|2|
 ~/
 ~/ ...construct p-a transit walk-access person trip tables
 ~+|3.21|1|y|mf"pa"|n

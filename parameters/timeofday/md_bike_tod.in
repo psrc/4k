@@ -1,0 +1,87 @@
+c Time of Day Factors for Bike
+c Midday Period (9am to 3pm)
+t matrices
+c Share of Trips: Production to Attractions
+m matrix=ms"coltpa"
+  all all: 0.482
+m matrix=ms"hbotpa"
+  all all: 0.521
+m matrix=ms"schtpa"
+  all all: 0.507
+m matrix=ms"hsptpa"
+  all all: 0.355
+m matrix=ms"ototpa"
+  all all: 0.500
+m matrix=ms"wtotpa"
+  all all: 0.500
+m matrix=ms"wk1tpa"
+  all all: 0.690
+m matrix=ms"wk2tpa"
+  all all: 0.465
+m matrix=ms"wk3tpa"
+  all all: 0.529
+m matrix=ms"wk4tpa"
+  all all: 0.501
+c Share of Trips: Attractions to Productions
+m matrix=ms"coltap"
+  all all: 0.518
+m matrix=ms"hbotap"
+  all all: 0.479
+m matrix=ms"schtap"
+  all all: 0.493
+m matrix=ms"hsptap"
+  all all: 0.645
+m matrix=ms"ototap"
+  all all: 0.500
+m matrix=ms"wtotap"
+  all all: 0.500
+m matrix=ms"wk1tap"
+  all all: 0.310
+m matrix=ms"wk2tap"
+  all all: 0.535
+m matrix=ms"wk3tap"
+  all all: 0.471
+m matrix=ms"wk4tap"
+  all all: 0.499
+c Time of Day Factors: Production to Attractions
+m matrix=ms"colpa"
+  all all: 0.867
+m matrix=ms"hbopa"
+  all all: 0.228
+m matrix=ms"schpa"
+  all all: 0.212
+m matrix=ms"hsppa"
+  all all: 0.606
+m matrix=ms"otopa"
+  all all: 0.473
+m matrix=ms"wtopa"
+  all all: 0.275
+m matrix=ms"wk1pa"
+  all all: 0.389
+m matrix=ms"wk2pa"
+  all all: 0.406
+m matrix=ms"wk3pa"
+  all all: 0.207
+m matrix=ms"wk4pa"
+  all all: 0.225
+c Time of Day Factors: Attractions to Productions
+m matrix=ms"colap"
+  all all: 0.363
+m matrix=ms"hboap"
+  all all: 0.162
+m matrix=ms"schap"
+  all all: 0.429
+m matrix=ms"hspap"
+  all all: 0.264
+m matrix=ms"otoap"
+  all all: 0.473
+m matrix=ms"wtoap"
+  all all: 0.275
+m matrix=ms"wk1ap"
+  all all: 0.343
+m matrix=ms"wk2ap"
+  all all: 0.060
+m matrix=ms"wk3ap"
+  all all: 0.190
+m matrix=ms"wk4ap"
+  all all: 0.107

@@ -5,7 +5,7 @@ batchin=?
 reports=trucks.rpt
 ~/
 ~/ ...input truck time of day factors
-~+|3.11|..\..\input\model\timeofday\truck_tod.in|2|
+~+|3.11|..\..\parameters\timeofday\truck_tod.in|2|
 ~/
 ~/ ...Transpose daily p-a truck distribution to o-d format
 ~+|3.21|1|y|mf"lgtod"|n|0.5*mf"lgtdis"+0.5*mf"lgtdis"'|||n|2|q

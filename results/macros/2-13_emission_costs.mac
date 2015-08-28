@@ -8,16 +8,7 @@ reports=summary.rpt
 ~/ --- AM Peak Period
 ~/ ---------------------------------------------------------------
 s=1002
-~+|2.42|2|2|@co2|Carbon Dioxide|0|q
-~+|2.42|2|2|@co|Carbon Monoxide|0|q
-~+|2.42|2|2|@nox|Nitrogen Oxide|0|q
-~+|2.42|2|2|@voc|Volatile Organic Compound|0|q
-~+|2.42|2|2|@pam|Particualte Matter|0|q
-~+|2.42|2|2|@cars|Number of Cars|0|q
-~+|2.42|2|2|@speed|Congested Speed|0|q
 2.41
-~+|1|y|@cars|n|@sov+@sovw+@hov2+@hov3+@vpool||*|4
-~+|1|y|@speed|n|(len/timau)*60||timau=0.01,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Carbon Dioxide
 ~/ ---------------------------------------------------------------
@@ -213,16 +204,7 @@ q
 ~/ --- Midday Period
 ~/ ---------------------------------------------------------------
 s=1004
-~+|2.42|2|2|@co2|Carbon Dioxide|0|q
-~+|2.42|2|2|@co|Carbon Monoxide|0|q
-~+|2.42|2|2|@nox|Nitrogen Oxide|0|q
-~+|2.42|2|2|@voc|Volatile Organic Compound|0|q
-~+|2.42|2|2|@pam|Particualte Matter|0|q
-~+|2.42|2|2|@cars|Number of Cars|0|q
-~+|2.42|2|2|@speed|Congested Speed|0|q
 2.41
-~+|1|y|@cars|n|@sov+@sovw+@hov2+@hov3+@vpool||*|4
-~+|1|y|@speed|n|(len/timau)*60||timau=0.01,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Carbon Dioxide
 ~/ ---------------------------------------------------------------
@@ -418,16 +400,7 @@ q
 ~/ --- PM Peak Period
 ~/ ---------------------------------------------------------------
 s=1003
-~+|2.42|2|2|@co2|Carbon Dioxide|0|q
-~+|2.42|2|2|@co|Carbon Monoxide|0|q
-~+|2.42|2|2|@nox|Nitrogen Oxide|0|q
-~+|2.42|2|2|@voc|Volatile Organic Compound|0|q
-~+|2.42|2|2|@pam|Particualte Matter|0|q
-~+|2.42|2|2|@cars|Number of Cars|0|q
-~+|2.42|2|2|@speed|Congested Speed|0|q
 2.41
-~+|1|y|@cars|n|@sov+@sovw+@hov2+@hov3+@vpool||*|4
-~+|1|y|@speed|n|(len/timau)*60||timau=0.01,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Carbon Dioxide
 ~/ ---------------------------------------------------------------
@@ -623,16 +596,7 @@ q
 ~/ --- Late Evening Period
 ~/ ---------------------------------------------------------------
 s=1005
-~+|2.42|2|2|@co2|Carbon Dioxide|0|q
-~+|2.42|2|2|@co|Carbon Monoxide|0|q
-~+|2.42|2|2|@nox|Nitrogen Oxide|0|q
-~+|2.42|2|2|@voc|Volatile Organic Compound|0|q
-~+|2.42|2|2|@pam|Particualte Matter|0|q
-~+|2.42|2|2|@cars|Number of Cars|0|q
-~+|2.42|2|2|@speed|Congested Speed|0|q
 2.41
-~+|1|y|@cars|n|@sov+@sovw+@hov2+@hov3+@vpool||*|4
-~+|1|y|@speed|n|(len/timau)*60||timau=0.01,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Carbon Dioxide
 ~/ ---------------------------------------------------------------
@@ -828,16 +792,7 @@ q
 ~/ --- Overnight Period
 ~/ ---------------------------------------------------------------
 s=1006
-~+|2.42|2|2|@co2|Carbon Dioxide|0|q
-~+|2.42|2|2|@co|Carbon Monoxide|0|q
-~+|2.42|2|2|@nox|Nitrogen Oxide|0|q
-~+|2.42|2|2|@voc|Volatile Organic Compound|0|q
-~+|2.42|2|2|@pam|Particualte Matter|0|q
-~+|2.42|2|2|@cars|Number of Cars|0|q
-~+|2.42|2|2|@speed|Congested Speed|0|q
 2.41
-~+|1|y|@cars|n|@sov+@sovw+@hov2+@hov3+@vpool||*|4
-~+|1|y|@speed|n|(len/timau)*60||timau=0.01,999999||4
 ~/ ---------------------------------------------------------------
 ~/ --- Carbon Dioxide
 ~/ ---------------------------------------------------------------

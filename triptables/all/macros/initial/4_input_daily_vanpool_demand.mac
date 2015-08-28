@@ -5,7 +5,7 @@ reports=initialization.rpt
 ~/
 ~/ ...input daily vanpool demand
 3.11
-..\..\input\vanpools\vanpools.in
+..\..\parameters\vanpools\vanpools.in
 ~/ ...write report file
 2
 ~#

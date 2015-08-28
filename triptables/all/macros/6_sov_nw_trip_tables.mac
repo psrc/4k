@@ -43,7 +43,7 @@ q
 ~+|2|3|3|mf"%%x%%4ns"|mf"tod4"|n|y
 q
 ~/ ...input %x% sov nonwork time of day factors
-~+|3.11|..\..\input\model\timeofday\%%x%%_sov_nw_tod.in|2|
+~+|3.11|..\..\parameters\timeofday\%%x%%_sov_nw_tod.in|2|
 ~/
 ~/ ...construct p-a sov nonwork person trip tables
 ~+|3.21|1|y|mf"pa"|n

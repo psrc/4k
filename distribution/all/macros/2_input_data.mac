@@ -1,0 +1,45 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=trip_distribution.rpt
+~/
+~/ ... input ensembles
+~+|3.01|4|all|y|1|..\..\parameters\ensembles\districts19_ga.ens|2|q
+~/ ... input basic model inputs (VOT and Co-Efficients)
+~+|3.11|..\..\parameters\distribution\distribution_coefficients_exp.in|2|
+~+|3.11|..\..\parameters\Global\global_coefficients.in|2|
+~+|3.11|..\..\parameters\Global\truck_operating_costs.in|2|
+~+|3.11|..\..\parameters\vot\am_vot_parameters.in|2|
+~+|3.11|..\..\parameters\vot\md_vot_parameters.in|2|
+~/ ... input production trip ends
+~+|3.11|..\..\input\tripends\colpro.in|2|
+~+|3.11|..\..\input\tripends\hbopro.in|2|
+~+|3.11|..\..\input\tripends\schpro.in|2|
+~+|3.11|..\..\input\tripends\hsppro.in|2|
+~+|3.11|..\..\input\tripends\hbwpr1.in|2|
+~+|3.11|..\..\input\tripends\hbwpr2.in|2|
+~+|3.11|..\..\input\tripends\hbwpr3.in|2|
+~+|3.11|..\..\input\tripends\hbwpr4.in|2|
+~+|3.11|..\..\input\tripends\otopro.in|2|
+~+|3.11|..\..\input\tripends\wkopro.in|2|
+~+|3.11|..\..\input\tripends\ltprof.in|2|
+~+|3.11|..\..\input\tripends\mtprof.in|2|
+~+|3.11|..\..\input\tripends\htprof.in|2|
+~/ ... input attraction trip ends
+~+|3.11|..\..\input\tripends\colatt.in|2|
+~+|3.11|..\..\input\tripends\hboatt.in|2|
+~+|3.11|..\..\input\tripends\schatt.in|2|
+~+|3.11|..\..\input\tripends\hspatt.in|2|
+~+|3.11|..\..\input\tripends\hbwat1.in|2|
+~+|3.11|..\..\input\tripends\hbwat2.in|2|
+~+|3.11|..\..\input\tripends\hbwat3.in|2|
+~+|3.11|..\..\input\tripends\hbwat4.in|2|
+~+|3.11|..\..\input\tripends\otoatt.in|2|
+~+|3.11|..\..\input\tripends\wkoatt.in|2|
+~+|3.11|..\..\input\tripends\ltattf.in|2|
+~+|3.11|..\..\input\tripends\mtattf.in|2|
+~+|3.11|..\..\input\tripends\htattf.in|2|
+~/
+~/exit emme
+~/
+q
