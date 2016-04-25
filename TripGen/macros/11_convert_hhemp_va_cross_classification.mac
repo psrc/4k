@@ -1,0 +1,16 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=vehilcle_available.rpt
+~/ ---------------------------------------------------------------------
+~/  --- Sbmatrices: orgins zones=all; intermediate zones=201,456; destination zones=1,24
+~/ --- Convert mf"hhemp" va format in columns 201-456 to mf"vehmtx" va format in columns 1-256 
+~/ ---------------------------------------------------------------------
+3.23
+~+|1|mf"hhemp"||mf"vacon"|n|||mf"vehmtx"|n
+~+|y|*|201,456||1,256|||y|2
+q
+~/ ---------------------------------------------------------------------
+~/ --- Exit emme
+~/ ---------------------------------------------------------------------
+q

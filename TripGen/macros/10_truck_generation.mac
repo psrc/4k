@@ -1,0 +1,176 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=truck_generation.rpt
+~/ ---------------------------------------------------------------------
+~/ --- Calculate Truck Productions - Light Trucks
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|mo"ltpro"|n|ms"lpresc"*mo"agffsh"
++ms"lpmine"*mo"mining"
++ms"lpcons"*mo"const"
++ms"lpmanp"*mo"manu-p"
++ms"lpmane"*mo"manu-e"
+~+|||n|2|q
+3.21
+~+|1|y|mo"ltpro"|n|mo"ltpro"
++ms"lptu"*mo"tu"
++ms"lpwhls"*mo"whls"
++ms"lpret"*mo"retail"
++ms"lpfire"*mo"fires"
++ms"lpgovt"*mo"govedu"
++ms"lphhdl"*mo"hhlds"
+~+|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Calculate Truck Productions - Medium Trucks
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|mo"mtpro"|n|ms"mpresc"*mo"agffsh"
++ms"mpmine"*mo"mining"
++ms"mpcons"*mo"const"
++ms"mpmanp"*mo"manu-p"
++ms"mpmane"*mo"manu-e"
++ms"mptu"*mo"tu"
+~+|||n|2|q
+3.21
+~+|1|y|mo"mtpro"|n|mo"mtpro"
++ms"mpwhls"*mo"whls"
++ms"mpret"*mo"retail"
++ms"mpfire"*mo"fires"
++ms"mpgovt"*mo"govedu"
++ms"mphhdl"*mo"hhlds"
+~+|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Calculate Truck Productions - Heavy Trucks
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|mo"htpro"|n|ms"hpresc"*mo"agffsh"
++ms"hpmine"*mo"mining"
++ms"hpcons"*mo"const"
++ms"hpmanp"*mo"manu-p"
++ms"hpmane"*mo"manu-e"
+~+|||n|2|q
+3.21
+~+|1|y|mo"htpro"|n|mo"htpro"
++ms"hptu"*mo"tu"
++ms"hpwhls"*mo"whls"
++ms"hpret"*mo"retail"
++ms"hpfire"*mo"fires"
++ms"hpgovt"*mo"govedu"
++ms"hphhdl"*mo"hhlds"
+~+|||n|2|q
+3.21
+~+|1|y|mo"htpro"|n|mo"htpro"*mo"truck"
+~+|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Calculate Truck Attractions - Light Trucks
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|mo"ltatt"|n|ms"laresc"*mo"agffsh"
++ms"lamine"*mo"mining"
++ms"lacons"*mo"const"
++ms"lamanp"*mo"manu-p"
++ms"lamane"*mo"manu-e"
+~+|||n|2|q
+3.21
+~+|1|y|mo"ltatt"|n|mo"ltatt"
++ms"latu"*mo"tu"
++ms"lawhls"*mo"whls"
++ms"laret"*mo"retail"
++ms"lafire"*mo"fires"
++ms"lagovt"*mo"govedu"
++ms"lahhdl"*mo"hhlds"
+~+|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Calculate Truck Attractions - Medium Trucks
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|mo"mtatt"|n|ms"maresc"*mo"agffsh"
++ms"mamine"*mo"mining"
++ms"macons"*mo"const"
++ms"mamanp"*mo"manu-p"
++ms"mamane"*mo"manu-e"
+~+|||n|2|q
+3.21
+~+|1|y|mo"mtatt"|n|mo"mtatt"
++ms"matu"*mo"tu"
++ms"mawhls"*mo"whls"
++ms"maret"*mo"retail"
++ms"mafire"*mo"fires"
++ms"magovt"*mo"govedu"
++ms"mahhdl"*mo"hhlds"
+~+|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Calculate Truck Attractions - Heavy Trucks
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|mo"htatt"|n|ms"haresc"*mo"agffsh"
++ms"hamine"*mo"mining"
++ms"hacons"*mo"const"
++ms"hamanp"*mo"manu-p"
++ms"hamane"*mo"manu-e"
+~+|||n|2|q
+3.21
+~+|1|y|mo"htatt"|n|mo"htatt"
++ms"hatu"*mo"tu"
++ms"hawhls"*mo"whls"
++ms"haret"*mo"retail"
++ms"hafire"*mo"fires"
++ms"hagovt"*mo"govedu"
++ms"hahhdl"*mo"hhlds"
+~+|||n|2|q
+3.21
+~+|1|y|mo"htatt"|n|mo"htatt"*mo"truck"
+~+|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Tranpose Truck Attractions from Origin Vectors
+~/ ---------------------------------------------------------------------
+~+|3.21|1|y|md"ltatt"|n|mo"ltatt"'|||y|*|2|q
+~+|3.21|1|y|md"mtatt"|n|mo"mtatt"'|||y|*|2|q
+~+|3.21|1|y|md"htatt"|n|mo"htatt"'|||y|*|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Add Special Generators for Light, Medium and Heavy Trucks
+~/ ---------------------------------------------------------------------
+~+|3.21|1|y|md"ltatt"|n|md"ltatt"+md"spllgt"|||n|2|q
+~+|3.21|1|y|md"mtatt"|n|md"mtatt"+md"splmed"|||n|2|q
+~+|3.21|1|y|md"htatt"|n|md"htatt"+md"splhvy"|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Adjust P's and A's for Light, Medium and Heavy Trucks
+~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mo"ltpro"|n|mo"ltpro"*ms"ltadjp"|||n|2|q
+~+|3.21|1|y|mo"mtpro"|n|mo"mtpro"*ms"mtadjp"|||n|2|q
+~+|3.21|1|y|mo"htpro"|n|mo"htpro"*ms"htadjp"|||n|2|q
+~+|3.21|1|y|md"ltatt"|n|md"ltatt"*ms"ltadja"|||n|2|q
+~+|3.21|1|y|md"mtatt"|n|md"mtatt"*ms"mtadja"|||n|2|q
+~+|3.21|1|y|md"htatt"|n|md"htatt"*ms"htadja"|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Balance Light Truck Attractions and Truck Productions (no externals)
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|ms"ltpro"|n|mo"ltpro"|||n||2
+~+|1|y|ms"ltatt"|n|md"ltatt"|||n||2
+~+|1|y|ms"ltate"|n|md"ltatt"|||y|%2%,%3%|||2
+~+|1|y|md"ltatt"|n|md"ltatt"*((ms"ltpro"-ms"ltate")/(ms"ltatt"-ms"ltate"))|||y|1,%1%||2
+q
+~/ ---------------------------------------------------------------------
+~/ --- Balance Medium Truck Attractions and Truck Productions (no externals)
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|ms"mtpro"|n|mo"mtpro"|||n||2
+~+|1|y|ms"mtatt"|n|md"mtatt"|||n||2
+~+|1|y|ms"mtate"|n|md"mtatt"|||y|%2%,%3%|||2
+~+|1|y|md"mtatt"|n|md"mtatt"*((ms"mtpro"-ms"mtate")/(ms"mtatt"-ms"mtate"))|||y|1,%1%||2
+q
+~/ ---------------------------------------------------------------------
+~/ --- Balance Heavy Truck Attractions and Truck Productions (no externals)
+~/ ---------------------------------------------------------------------
+3.21
+~+|1|y|ms"htpro"|n|mo"htpro"|||n||2
+~+|1|y|ms"htatt"|n|md"htatt"|||n||2
+~+|1|y|ms"htate"|n|md"htatt"|||y|%2%,%3%|||2
+~+|1|y|md"htatt"|n|md"htatt"*((ms"htpro"-ms"htate")/(ms"htatt"-ms"htate"))|||y|1,%1%||2
+q
+~/ ---------------------------------------------------------------------
+~/ --- Exit Emme
+~/ ---------------------------------------------------------------------
+q

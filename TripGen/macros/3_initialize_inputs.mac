@@ -1,0 +1,1112 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/ ----------------------------------------------------------------------
+~/ --- Initialize matrix directory to ensure zone system matches network
+~/ ----------------------------------------------------------------------
+~+|3.12|7|y|q
+~/ ----------------------------------------------------------------------
+~/ --- Initialize Scalar Matrices
+~/ ----------------------------------------------------------------------
+3.12
+~/ ----------------------------------------------------------------------
+~/ --- Scalars to adjust Regional Trip Generation
+~/ ----------------------------------------------------------------------
+~+|1|ms01|wk1adj|hb work inc 1 adj factor|0
+~+|1|ms02|wk2adj|hb work inc 2 adj factor|0
+~+|1|ms03|wk3adj|hb work inc 3 adj factor|0
+~+|1|ms04|wk4adj|hb work inc 4 adj factor|0
+~+|1|ms05|coladj|hb college adj factor|0
+~+|1|ms06|hspadj|hb shop adj factor|0
+~+|1|ms07|hboadj|hb other adj factor|0
+~+|1|ms08|schadj|hb school adj factor|0
+~+|1|ms09|wkoadj|nhb work adj factor|0
+~+|1|ms10|otoadj|nhb other adj factor|0
+~/ ----------------------------------------------------------------------
+~/ --- Scalars to adjust Kitsap Trip Generation - Productions
+~/ ----------------------------------------------------------------------
+~+|1|ms11|ktwk1p|kitsap work inc 1 adj p|0
+~+|1|ms12|ktwk2p|kistap work inc 2 adj p|0
+~+|1|ms13|ktwk3p|kitsap work inc 3 adj p|0
+~+|1|ms14|ktwk4p|kitsap work inc 4 adj p|0
+~+|1|ms15|ktcolp|kitsap college adj p|0
+~+|1|ms16|kthspp|kitsap shop adj p|0
+~+|1|ms17|kthbop|kitsap other adj p|0
+~+|1|ms18|ktschp|kitsap school adj p|0
+~+|1|ms19|ktwkop|kitsap nhb work adj p|0
+~+|1|ms20|ktotop|kitsap nhb other adj p|0
+~/ ----------------------------------------------------------------------
+~/ --- Scalars to adjust Kitsap Trip Generation - Attractions
+~/ ----------------------------------------------------------------------
+~+|1|ms21|ktwk1a|kitsap work inc 1 adj a|0
+~+|1|ms22|ktwk2a|kistap work inc 2 adj a|0
+~+|1|ms23|ktwk3a|kitsap work inc 3 adj a|0
+~+|1|ms24|ktwk4a|kitsap work inc 4 adj a|0
+~+|1|ms25|ktcola|kitsap college adj a|0
+~+|1|ms26|kthspa|kitsap shop adj a|0
+~+|1|ms27|kthboa|kitsap other adj a|0
+~+|1|ms28|ktscha|kitsap school adj a|0
+~+|1|ms29|ktwkoa|kitsap nhb work adj a|0
+~+|1|ms30|ktotoa|kitsap nhb other adj a|0
+~/ ----------------------------------------------------------------------
+~/ --- Scalars for Truck Balancing
+~/ ----------------------------------------------------------------------
+~+|1|ms31|ltpro|lgt trk prods|0
+~+|1|ms32|mtpro|med trk prods|0
+~+|1|ms33|htpro|hvy trk prods|0
+~+|1|ms34|ltatt|lgt trk attrs|0
+~+|1|ms35|mtatt|med trk attrs|0
+~+|1|ms36|htatt|hvy trk attrs|0
+~+|1|ms37|ltpre|lgt trk prods - exts|0
+~+|1|ms38|mtpre|med trk prods - exts|0
+~+|1|ms39|htpre|hvy trk prods - exts|0
+~+|1|ms40|ltate|lgt trk attrs - exts|0
+~+|1|ms41|mtate|med trk attrs - exts|0
+~+|1|ms42|htate|hvy trk attrs - exts|0
+~/ ---------------------------------------------------------------------
+~/ --- Initialize Light Truck Trip Rates - Productions
+~/ ---------------------------------------------------------------------
+~+|1|ms43|lpresc|LT Production Rate - Resource|0
+~+|1|ms44|lpmine|LT Production Rate - Mining|0
+~+|1|ms45|lpcons|LT Production Rate - Construction|0
+~+|1|ms46|lpmanp|LT Production Rate - Manu. - Product|0
+~+|1|ms47|lpmane|LT Production Rate - Manu. - Equipment|0
+~+|1|ms48|lptu|LT Production Rate - Tran/Util|0
+~+|1|ms49|lpwhls|LT Production Rate - Wholesale|0
+~+|1|ms50|lpret|LT Production Rate - Retail|0
+~+|1|ms51|lpfire|LT Production Rate - FIRES|0
+~+|1|ms52|lpgovt|LT Production Rate - Govt + Edu|0
+~+|1|ms53|lphhdl|LT Production Rate - HH's|0
+~/ ---------------------------------------------------------------------
+~/ --- Initialize Light Truck Trip Rates - Attractions
+~/ ---------------------------------------------------------------------
+~+|1|ms54|laresc|LT Attraction Rate - Resource|0
+~+|1|ms55|lamine|LT Attraction Rate - Mining|0
+~+|1|ms56|lacons|LT Attraction Rate - Construction|0
+~+|1|ms57|lamanp|LT Attraction Rate - Manu. - Product|0
+~+|1|ms58|lamane|LT Attraction Rate - Manu. - Equipment|0
+~+|1|ms59|latu|LT Attraction Rate - Tran/Util|0
+~+|1|ms60|lawhls|LT Attraction Rate - Wholesale|0
+~+|1|ms61|laret|LT Attraction Rate - Retail|0
+~+|1|ms62|lafire|LT Attraction Rate - FIRES|0
+~+|1|ms63|lagovt|LT Attraction Rate - Govt + Edu|0
+~+|1|ms64|lahhdl|LT Attraction Rate - HH's|0
+~/ ---------------------------------------------------------------------
+~/ --- Initialize Medium Truck Trip Rates - Productions
+~/ ---------------------------------------------------------------------
+~+|1|ms65|mpresc|MT Production Rate - Resource|0
+~+|1|ms66|mpmine|MT Production Rate - Mining|0
+~+|1|ms67|mpcons|MT Production Rate - Construction|0
+~+|1|ms68|mpmanp|MT Production Rate - Manu. - Product|0
+~+|1|ms69|mpmane|MT Production Rate - Manu. - Equipment|0
+~+|1|ms70|mptu|MT Production Rate - Tran/Util|0
+~+|1|ms71|mpwhls|MT Production Rate - Wholesale|0
+~+|1|ms72|mpret|MT Production Rate - Retail|0
+~+|1|ms73|mpfire|MT Production Rate - FIRES|0
+~+|1|ms74|mpgovt|MT Production Rate - Govt + Edu|0
+~+|1|ms75|mphhdl|MT Production Rate - HH's|0
+~/ ---------------------------------------------------------------------
+~/ --- Initialize Medium Truck Trip Rates - Attractions
+~/ ---------------------------------------------------------------------
+~+|1|ms76|maresc|MT Attraction Rate - Resource|0
+~+|1|ms77|mamine|MT Attraction Rate - Mining|0
+~+|1|ms78|macons|MT Attraction Rate - Construction|0
+~+|1|ms79|mamanp|MT Attraction Rate - Manu. - Product|0
+~+|1|ms80|mamane|MT Attraction Rate - Manu. - Equipment|0
+~+|1|ms81|matu|MT Attraction Rate - Tran/Util|0
+~+|1|ms82|mawhls|MT Attraction Rate - Wholesale|0
+~+|1|ms83|maret|MT Attraction Rate - Retail|0
+~+|1|ms84|mafire|MT Attraction Rate - FIRES|0
+~+|1|ms85|magovt|MT Attraction Rate - Govt + Edu|0
+~+|1|ms86|mahhdl|MT Attraction Rate - HH's|0
+~/ ---------------------------------------------------------------------
+~/ --- Initialize Heavy Truck Trip Rates - Productions
+~/ ---------------------------------------------------------------------
+~+|1|ms87|hpresc|HT Production Rate - Resource|0
+~+|1|ms88|hpmine|HT Production Rate - Mining|0
+~+|1|ms89|hpcons|HT Production Rate - Construction|0
+~+|1|ms90|hpmanp|HT Production Rate - hanu. - Product|0
+~+|1|ms91|hpmane|HT Production Rate - hanu. - Equipment|0
+~+|1|ms92|hptu|HT Production Rate - Tran/Util|0
+~+|1|ms93|hpwhls|HT Production Rate - Wholesale|0
+~+|1|ms94|hpret|HT Production Rate - Retail|0
+~+|1|ms95|hpfire|HT Production Rate - FIRES|0
+~+|1|ms96|hpgovt|HT Production Rate - Govt + Edu|0
+~+|1|ms97|hphhdl|HT Production Rate - HH's|0
+~/ ---------------------------------------------------------------------
+~/ --- Initialize Heavy Truck Trip Rates - Attractions
+~/ ---------------------------------------------------------------------
+~+|1|ms98|haresc|HT Attraction Rate - Resource|0
+~+|1|ms99|hamine|HT Attraction Rate - Mining|0
+~+|1|ms100|hacons|HT Attraction Rate - Construction|0
+~+|1|ms101|hamanp|HT Attraction Rate - hanu. - Product|0
+~+|1|ms102|hamane|HT Attraction Rate - hanu. - Equipment|0
+~+|1|ms103|hatu|HT Attraction Rate - Tran/Util|0
+~+|1|ms104|hawhls|HT Attraction Rate - Wholesale|0
+~+|1|ms105|haret|HT Attraction Rate - Retail|0
+~+|1|ms106|hafire|HT Attraction Rate - FIRES|0
+~+|1|ms107|hagovt|HT Attraction Rate - Govt + Edu|0
+~+|1|ms108|hahhdl|HT Attraction Rate - HH's|0
+~/ ---------------------------------------------------------------------
+~/ --- Initialize Truck Adjustment Factors - Productions
+~/ ---------------------------------------------------------------------
+~+|1|ms109|ltadjp|LT Adjustment - P's|0
+~+|1|ms110|mtadjp|MT Adjustment - P's|0
+~+|1|ms111|htadjp|MT Adjustment - P's|0
+~/ ---------------------------------------------------------------------
+~/ --- Initialize Truck Adjustment Factors - Attractions
+~/ ---------------------------------------------------------------------
+~+|1|ms112|ltadja|LT Adjustment - A's|0
+~+|1|ms113|mtadja|MT Adjustment - A's|0
+~+|1|ms114|htadja|MT Adjustment - A's|0
+~/ ---------------------------------------------------------------------
+~/ --- Trip Generation Rates - Production Rates
+~/ ---------------------------------------------------------------------
+~+|1|ms200|H1I1W0_HBW1_Pro|H1I1W0 HBW #1 Production Rate|0.073
+~+|1|ms201|H1I1W1_HBW1_Pro|H1I1W1 HBW #1 Production Rate|1.261
+~+|1|ms202|H2I1W0_HBW1_Pro|H2I1W0 HBW #1 Production Rate|0.117
+~+|1|ms203|H2I1W1_HBW1_Pro|H2I1W1 HBW #1 Production Rate|1.202
+~+|1|ms204|H2I1W2_HBW1_Pro|H2I1W2 HBW #1 Production Rate|2.786
+~+|1|ms205|H3I1W0_HBW1_Pro|H3I1W0 HBW #1 Production Rate|0.085
+~+|1|ms206|H3I1W1_HBW1_Pro|H3I1W1 HBW #1 Production Rate|1.255
+~+|1|ms207|H3I1W2_HBW1_Pro|H3I1W2 HBW #1 Production Rate|2.166
+~+|1|ms208|H3I1W3_HBW1_Pro|H3I1W3 HBW #1 Production Rate|5.105
+~+|1|ms209|H4I1W0_HBW1_Pro|H4I1W0 HBW #1 Production Rate|0.534
+~+|1|ms210|H4I1W1_HBW1_Pro|H4I1W1 HBW #1 Production Rate|1.443
+~+|1|ms211|H4I1W2_HBW1_Pro|H4I1W2 HBW #1 Production Rate|1.643
+~+|1|ms212|H4I1W3_HBW1_Pro|H4I1W3 HBW #1 Production Rate|4.787
+~+|1|ms213|H1I1W0_Shop_Pro|H1I1W0 Shopping Production Rate|0.559
+~+|1|ms214|H1I1W1_Shop_Pro|H1I1W1 Shopping Production Rate|0.346
+~+|1|ms215|H2I1W0_Shop_Pro|H2I1W0 Shopping Production Rate|1.25
+~+|1|ms216|H2I1W1_Shop_Pro|H2I1W1 Shopping Production Rate|0.62
+~+|1|ms217|H2I1W2_Shop_Pro|H2I1W2 Shopping Production Rate|1.676
+~+|1|ms218|H3I1W0_Shop_Pro|H3I1W0 Shopping Production Rate|0.474
+~+|1|ms219|H3I1W1_Shop_Pro|H3I1W1 Shopping Production Rate|0.812
+~+|1|ms220|H3I1W2_Shop_Pro|H3I1W2 Shopping Production Rate|0.579
+~+|1|ms221|H3I1W3_Shop_Pro|H3I1W3 Shopping Production Rate|1.974
+~+|1|ms222|H4I1W0_Shop_Pro|H4I1W0 Shopping Production Rate|0.746
+~+|1|ms223|H4I1W1_Shop_Pro|H4I1W1 Shopping Production Rate|0.905
+~+|1|ms224|H4I1W2_Shop_Pro|H4I1W2 Shopping Production Rate|1.631
+~+|1|ms225|H4I1W3_Shop_Pro|H4I1W3 Shopping Production Rate|0.815
+~+|1|ms226|H1I1W0_Other_Pro|H1I1W0 Other Production Rate|1.479
+~+|1|ms227|H1I1W1_Other_Pro|H1I1W1 Other Production Rate|0.98
+~+|1|ms228|H2I1W0_Other_Pro|H2I1W0 Other Production Rate|3.651
+~+|1|ms229|H2I1W1_Other_Pro|H2I1W1 Other Production Rate|2.928
+~+|1|ms230|H2I1W2_Other_Pro|H2I1W2 Other Production Rate|3.464
+~+|1|ms231|H3I1W0_Other_Pro|H3I1W0 Other Production Rate|2.793
+~+|1|ms232|H3I1W1_Other_Pro|H3I1W1 Other Production Rate|4.881
+~+|1|ms233|H3I1W2_Other_Pro|H3I1W2 Other Production Rate|3.805
+~+|1|ms234|H3I1W3_Other_Pro|H3I1W3 Other Production Rate|1.378
+~+|1|ms235|H4I1W0_Other_Pro|H4I1W0 Other Production Rate|8.517
+~+|1|ms236|H4I1W1_Other_Pro|H4I1W1 Other Production Rate|6.012
+~+|1|ms237|H4I1W2_Other_Pro|H4I1W2 Other Production Rate|9.515
+~+|1|ms238|H4I1W3_Other_Pro|H4I1W3 Other Production Rate|2.601
+~+|1|ms239|H1I1W0_OtO_Pro|H1I1W0 OtO Production Rate|0.793
+~+|1|ms240|H1I1W1_OtO_Pro|H1I1W1 OtO Production Rate|0.801
+~+|1|ms241|H2I1W0_OtO_Pro|H2I1W0 OtO Production Rate|2.675
+~+|1|ms242|H2I1W1_OtO_Pro|H2I1W1 OtO Production Rate|1.66
+~+|1|ms243|H2I1W2_OtO_Pro|H2I1W2 OtO Production Rate|2.204
+~+|1|ms244|H3I1W0_OtO_Pro|H3I1W0 OtO Production Rate|2.031
+~+|1|ms245|H3I1W1_OtO_Pro|H3I1W1 OtO Production Rate|2.354
+~+|1|ms246|H3I1W2_OtO_Pro|H3I1W2 OtO Production Rate|1.805
+~+|1|ms247|H3I1W3_OtO_Pro|H3I1W3 OtO Production Rate|0.86
+~+|1|ms248|H4I1W0_OtO_Pro|H4I1W0 OtO Production Rate|4.403
+~+|1|ms249|H4I1W1_OtO_Pro|H4I1W1 OtO Production Rate|3.937
+~+|1|ms250|H4I1W2_OtO_Pro|H4I1W2 OtO Production Rate|5.156
+~+|1|ms251|H4I1W3_OtO_Pro|H4I1W3 OtO Production Rate|1.387
+~+|1|ms252|H1I1W0_WtO_Pro|H1I1W0 WtO Production Rate|0.039
+~+|1|ms253|H1I1W1_WtO_Pro|H1I1W1 WtO Production Rate|0.658
+~+|1|ms254|H2I1W0_WtO_Pro|H2I1W0 WtO Production Rate|0.007
+~+|1|ms255|H2I1W1_WtO_Pro|H2I1W1 WtO Production Rate|0.7
+~+|1|ms256|H2I1W2_WtO_Pro|H2I1W2 WtO Production Rate|0.878
+~+|1|ms257|H3I1W0_WtO_Pro|H3I1W0 WtO Production Rate|0
+~+|1|ms258|H3I1W1_WtO_Pro|H3I1W1 WtO Production Rate|0.633
+~+|1|ms259|H3I1W2_WtO_Pro|H3I1W2 WtO Production Rate|1.278
+~+|1|ms260|H3I1W3_WtO_Pro|H3I1W3 WtO Production Rate|0.552
+~+|1|ms261|H4I1W0_WtO_Pro|H4I1W0 WtO Production Rate|0.521
+~+|1|ms262|H4I1W1_WtO_Pro|H4I1W1 WtO Production Rate|0.359
+~+|1|ms263|H4I1W2_WtO_Pro|H4I1W2 WtO Production Rate|2.28
+~+|1|ms264|H4I1W3_WtO_Pro|H4I1W3 WtO Production Rate|0.887
+~+|1|ms265|H1I2W0_HBW2_Pro|H1I2W0 HBW #2 Production Rate|0.054
+~+|1|ms266|H1I2W1_HBW2_Pro|H1I2W1 HBW #2 Production Rate|1.257
+~+|1|ms267|H2I2W0_HBW2_Pro|H2I2W0 HBW #2 Production Rate|0.079
+~+|1|ms268|H2I2W1_HBW2_Pro|H2I2W1 HBW #2 Production Rate|1.35
+~+|1|ms269|H2I2W2_HBW2_Pro|H2I2W2 HBW #2 Production Rate|2.916
+~+|1|ms270|H3I2W0_HBW2_Pro|H3I2W0 HBW #2 Production Rate|0.284
+~+|1|ms271|H3I2W1_HBW2_Pro|H3I2W1 HBW #2 Production Rate|1.463
+~+|1|ms272|H3I2W2_HBW2_Pro|H3I2W2 HBW #2 Production Rate|2.41
+~+|1|ms273|H3I2W3_HBW2_Pro|H3I2W3 HBW #2 Production Rate|3.694
+~+|1|ms274|H4I2W0_HBW2_Pro|H4I2W0 HBW #2 Production Rate|0
+~+|1|ms275|H4I2W1_HBW2_Pro|H4I2W1 HBW #2 Production Rate|1.261
+~+|1|ms276|H4I2W2_HBW2_Pro|H4I2W2 HBW #2 Production Rate|2.313
+~+|1|ms277|H4I2W3_HBW2_Pro|H4I2W3 HBW #2 Production Rate|4.489
+~+|1|ms278|H1I2W0_Shop_Pro|H1I2W0 Shopping Production Rate|0.58
+~+|1|ms279|H1I2W1_Shop_Pro|H1I2W1 Shopping Production Rate|0.344
+~+|1|ms280|H2I2W0_Shop_Pro|H2I2W0 Shopping Production Rate|1.277
+~+|1|ms281|H2I2W1_Shop_Pro|H2I2W1 Shopping Production Rate|0.998
+~+|1|ms282|H2I2W2_Shop_Pro|H2I2W2 Shopping Production Rate|0.549
+~+|1|ms283|H3I2W0_Shop_Pro|H3I2W0 Shopping Production Rate|0.58
+~+|1|ms284|H3I2W1_Shop_Pro|H3I2W1 Shopping Production Rate|0.929
+~+|1|ms285|H3I2W2_Shop_Pro|H3I2W2 Shopping Production Rate|0.704
+~+|1|ms286|H3I2W3_Shop_Pro|H3I2W3 Shopping Production Rate|1.013
+~+|1|ms287|H4I2W0_Shop_Pro|H4I2W0 Shopping Production Rate|0.787
+~+|1|ms288|H4I2W1_Shop_Pro|H4I2W1 Shopping Production Rate|1.495
+~+|1|ms289|H4I2W2_Shop_Pro|H4I2W2 Shopping Production Rate|1.557
+~+|1|ms290|H4I2W3_Shop_Pro|H4I2W3 Shopping Production Rate|2.296
+~+|1|ms291|H1I2W0_Other_Pro|H1I2W0 Other Production Rate|1.782
+~+|1|ms292|H1I2W1_Other_Pro|H1I2W1 Other Production Rate|0.952
+~+|1|ms293|H2I2W0_Other_Pro|H2I2W0 Other Production Rate|3.645
+~+|1|ms294|H2I2W1_Other_Pro|H2I2W1 Other Production Rate|2.883
+~+|1|ms295|H2I2W2_Other_Pro|H2I2W2 Other Production Rate|2.094
+~+|1|ms296|H3I2W0_Other_Pro|H3I2W0 Other Production Rate|8.976999
+~+|1|ms297|H3I2W1_Other_Pro|H3I2W1 Other Production Rate|5.114
+~+|1|ms298|H3I2W2_Other_Pro|H3I2W2 Other Production Rate|4.423
+~+|1|ms299|H3I2W3_Other_Pro|H3I2W3 Other Production Rate|3.614
+~+|1|ms300|H4I2W0_Other_Pro|H4I2W0 Other Production Rate|6.627
+~+|1|ms301|H4I2W1_Other_Pro|H4I2W1 Other Production Rate|7.786
+~+|1|ms302|H4I2W2_Other_Pro|H4I2W2 Other Production Rate|8.468
+~+|1|ms303|H4I2W3_Other_Pro|H4I2W3 Other Production Rate|8.943
+~+|1|ms304|H1I2W0_OtO_Pro|H1I2W0 OtO Production Rate|1.393
+~+|1|ms305|H1I2W1_OtO_Pro|H1I2W1 OtO Production Rate|0.638
+~+|1|ms306|H2I2W0_OtO_Pro|H2I2W0 OtO Production Rate|2.817
+~+|1|ms307|H2I2W1_OtO_Pro|H2I2W1 OtO Production Rate|1.97
+~+|1|ms308|H2I2W2_OtO_Pro|H2I2W2 OtO Production Rate|1.245
+~+|1|ms309|H3I2W0_OtO_Pro|H3I2W0 OtO Production Rate|5.137
+~+|1|ms310|H3I2W1_OtO_Pro|H3I2W1 OtO Production Rate|3.501
+~+|1|ms311|H3I2W2_OtO_Pro|H3I2W2 OtO Production Rate|2.144
+~+|1|ms312|H3I2W3_OtO_Pro|H3I2W3 OtO Production Rate|2.348
+~+|1|ms313|H4I2W0_OtO_Pro|H4I2W0 OtO Production Rate|1.362
+~+|1|ms314|H4I2W1_OtO_Pro|H4I2W1 OtO Production Rate|3.829
+~+|1|ms315|H4I2W2_OtO_Pro|H4I2W2 OtO Production Rate|4.42
+~+|1|ms316|H4I2W3_OtO_Pro|H4I2W3 OtO Production Rate|5.127
+~+|1|ms317|H1I2W0_WtO_Pro|H1I2W0 WtO Production Rate|0.041
+~+|1|ms318|H1I2W1_WtO_Pro|H1I2W1 WtO Production Rate|0.802
+~+|1|ms319|H2I2W0_WtO_Pro|H2I2W0 WtO Production Rate|0.044
+~+|1|ms320|H2I2W1_WtO_Pro|H2I2W1 WtO Production Rate|0.89
+~+|1|ms321|H2I2W2_WtO_Pro|H2I2W2 WtO Production Rate|1.3
+~+|1|ms322|H3I2W0_WtO_Pro|H3I2W0 WtO Production Rate|0.211
+~+|1|ms323|H3I2W1_WtO_Pro|H3I2W1 WtO Production Rate|0.778
+~+|1|ms324|H3I2W2_WtO_Pro|H3I2W2 WtO Production Rate|1.92
+~+|1|ms325|H3I2W3_WtO_Pro|H3I2W3 WtO Production Rate|2.807
+~+|1|ms326|H4I2W0_WtO_Pro|H4I2W0 WtO Production Rate|0
+~+|1|ms327|H4I2W1_WtO_Pro|H4I2W1 WtO Production Rate|0.561
+~+|1|ms328|H4I2W2_WtO_Pro|H4I2W2 WtO Production Rate|1.551
+~+|1|ms329|H4I2W3_WtO_Pro|H4I2W3 WtO Production Rate|3.38
+~+|1|ms330|H1I3W0_HBW3_Pro|H1I3W0 HBW #3 Production Rate|0.025
+~+|1|ms331|H1I3W1_HBW3_Pro|H1I3W1 HBW #3 Production Rate|1.313
+~+|1|ms332|H2I3W0_HBW3_Pro|H2I3W0 HBW #3 Production Rate|0.198
+~+|1|ms333|H2I3W1_HBW3_Pro|H2I3W1 HBW #3 Production Rate|1.47
+~+|1|ms334|H2I3W2_HBW3_Pro|H2I3W2 HBW #3 Production Rate|3.037
+~+|1|ms335|H3I3W0_HBW3_Pro|H3I3W0 HBW #3 Production Rate|0.651
+~+|1|ms336|H3I3W1_HBW3_Pro|H3I3W1 HBW #3 Production Rate|1.281
+~+|1|ms337|H3I3W2_HBW3_Pro|H3I3W2 HBW #3 Production Rate|2.732
+~+|1|ms338|H3I3W3_HBW3_Pro|H3I3W3 HBW #3 Production Rate|3.885
+~+|1|ms339|H4I3W0_HBW3_Pro|H4I3W0 HBW #3 Production Rate|0
+~+|1|ms340|H4I3W1_HBW3_Pro|H4I3W1 HBW #3 Production Rate|1.597
+~+|1|ms341|H4I3W2_HBW3_Pro|H4I3W2 HBW #3 Production Rate|2.182
+~+|1|ms342|H4I3W3_HBW3_Pro|H4I3W3 HBW #3 Production Rate|4.124
+~+|1|ms343|H1I3W0_Shop_Pro|H1I3W0 Shopping Production Rate|0.629
+~+|1|ms344|H1I3W1_Shop_Pro|H1I3W1 Shopping Production Rate|0.334
+~+|1|ms345|H2I3W0_Shop_Pro|H2I3W0 Shopping Production Rate|1.243
+~+|1|ms346|H2I3W1_Shop_Pro|H2I3W1 Shopping Production Rate|0.931
+~+|1|ms347|H2I3W2_Shop_Pro|H2I3W2 Shopping Production Rate|0.673
+~+|1|ms348|H3I3W0_Shop_Pro|H3I3W0 Shopping Production Rate|2.759
+~+|1|ms349|H3I3W1_Shop_Pro|H3I3W1 Shopping Production Rate|1.065
+~+|1|ms350|H3I3W2_Shop_Pro|H3I3W2 Shopping Production Rate|1.081
+~+|1|ms351|H3I3W3_Shop_Pro|H3I3W3 Shopping Production Rate|1.036
+~+|1|ms352|H4I3W0_Shop_Pro|H4I3W0 Shopping Production Rate|0.434
+~+|1|ms353|H4I3W1_Shop_Pro|H4I3W1 Shopping Production Rate|1.138
+~+|1|ms354|H4I3W2_Shop_Pro|H4I3W2 Shopping Production Rate|1.004
+~+|1|ms355|H4I3W3_Shop_Pro|H4I3W3 Shopping Production Rate|1.657
+~+|1|ms356|H1I3W0_Other_Pro|H1I3W0 Other Production Rate|2.064
+~+|1|ms357|H1I3W1_Other_Pro|H1I3W1 Other Production Rate|0.968
+~+|1|ms358|H2I3W0_Other_Pro|H2I3W0 Other Production Rate|4.269
+~+|1|ms359|H2I3W1_Other_Pro|H2I3W1 Other Production Rate|3.112
+~+|1|ms360|H2I3W2_Other_Pro|H2I3W2 Other Production Rate|2.213
+~+|1|ms361|H3I3W0_Other_Pro|H3I3W0 Other Production Rate|3.501
+~+|1|ms362|H3I3W1_Other_Pro|H3I3W1 Other Production Rate|4.907
+~+|1|ms363|H3I3W2_Other_Pro|H3I3W2 Other Production Rate|5.194
+~+|1|ms364|H3I3W3_Other_Pro|H3I3W3 Other Production Rate|3.484
+~+|1|ms365|H4I3W0_Other_Pro|H4I3W0 Other Production Rate|9.945999
+~+|1|ms366|H4I3W1_Other_Pro|H4I3W1 Other Production Rate|9.585999
+~+|1|ms367|H4I3W2_Other_Pro|H4I3W2 Other Production Rate|7.35
+~+|1|ms368|H4I3W3_Other_Pro|H4I3W3 Other Production Rate|9.21
+~+|1|ms369|H1I3W0_OtO_Pro|H1I3W0 OtO Production Rate|1.374
+~+|1|ms370|H1I3W1_OtO_Pro|H1I3W1 OtO Production Rate|0.539
+~+|1|ms371|H2I3W0_OtO_Pro|H2I3W0 OtO Production Rate|2.917
+~+|1|ms372|H2I3W1_OtO_Pro|H2I3W1 OtO Production Rate|2.065
+~+|1|ms373|H2I3W2_OtO_Pro|H2I3W2 OtO Production Rate|0.883
+~+|1|ms374|H3I3W0_OtO_Pro|H3I3W0 OtO Production Rate|3.271
+~+|1|ms375|H3I3W1_OtO_Pro|H3I3W1 OtO Production Rate|2.8
+~+|1|ms376|H3I3W2_OtO_Pro|H3I3W2 OtO Production Rate|2.495
+~+|1|ms377|H3I3W3_OtO_Pro|H3I3W3 OtO Production Rate|1.258
+~+|1|ms378|H4I3W0_OtO_Pro|H4I3W0 OtO Production Rate|2.884
+~+|1|ms379|H4I3W1_OtO_Pro|H4I3W1 OtO Production Rate|5.116
+~+|1|ms380|H4I3W2_OtO_Pro|H4I3W2 OtO Production Rate|3.879
+~+|1|ms381|H4I3W3_OtO_Pro|H4I3W3 OtO Production Rate|4.671
+~+|1|ms382|H1I3W0_WtO_Pro|H1I3W0 WtO Production Rate|0.025
+~+|1|ms383|H1I3W1_WtO_Pro|H1I3W1 WtO Production Rate|0.735
+~+|1|ms384|H2I3W0_WtO_Pro|H2I3W0 WtO Production Rate|0.132
+~+|1|ms385|H2I3W1_WtO_Pro|H2I3W1 WtO Production Rate|1.331
+~+|1|ms386|H2I3W2_WtO_Pro|H2I3W2 WtO Production Rate|1.764
+~+|1|ms387|H3I3W0_WtO_Pro|H3I3W0 WtO Production Rate|0.245
+~+|1|ms388|H3I3W1_WtO_Pro|H3I3W1 WtO Production Rate|0.672
+~+|1|ms389|H3I3W2_WtO_Pro|H3I3W2 WtO Production Rate|2.601
+~+|1|ms390|H3I3W3_WtO_Pro|H3I3W3 WtO Production Rate|3.208
+~+|1|ms391|H4I3W0_WtO_Pro|H4I3W0 WtO Production Rate|0
+~+|1|ms392|H4I3W1_WtO_Pro|H4I3W1 WtO Production Rate|0.828
+~+|1|ms393|H4I3W2_WtO_Pro|H4I3W2 WtO Production Rate|2.093
+~+|1|ms394|H4I3W3_WtO_Pro|H4I3W3 WtO Production Rate|2.174
+~+|1|ms395|H1I4W0_HBW4_Pro|H1I4W0 HBW #4 Production Rate|0.095
+~+|1|ms396|H1I4W1_HBW4_Pro|H1I4W1 HBW #4 Production Rate|1.206
+~+|1|ms397|H2I4W0_HBW4_Pro|H2I4W0 HBW #4 Production Rate|0.193
+~+|1|ms398|H2I4W1_HBW4_Pro|H2I4W1 HBW #4 Production Rate|1.427
+~+|1|ms399|H2I4W2_HBW4_Pro|H2I4W2 HBW #4 Production Rate|2.81
+~+|1|ms400|H3I4W0_HBW4_Pro|H3I4W0 HBW #4 Production Rate|0.102
+~+|1|ms401|H3I4W1_HBW4_Pro|H3I4W1 HBW #4 Production Rate|1.2
+~+|1|ms402|H3I4W2_HBW4_Pro|H3I4W2 HBW #4 Production Rate|2.405
+~+|1|ms403|H3I4W3_HBW4_Pro|H3I4W3 HBW #4 Production Rate|3.29
+~+|1|ms404|H4I4W0_HBW4_Pro|H4I4W0 HBW #4 Production Rate|0.305
+~+|1|ms405|H4I4W1_HBW4_Pro|H4I4W1 HBW #4 Production Rate|1.436
+~+|1|ms406|H4I4W2_HBW4_Pro|H4I4W2 HBW #4 Production Rate|2.107
+~+|1|ms407|H4I4W3_HBW4_Pro|H4I4W3 HBW #4 Production Rate|4.331
+~+|1|ms408|H1I4W0_Shop_Pro|H1I4W0 Shopping Production Rate|0.499
+~+|1|ms409|H1I4W1_Shop_Pro|H1I4W1 Shopping Production Rate|0.326
+~+|1|ms410|H2I4W0_Shop_Pro|H2I4W0 Shopping Production Rate|1.345
+~+|1|ms411|H2I4W1_Shop_Pro|H2I4W1 Shopping Production Rate|1.002
+~+|1|ms412|H2I4W2_Shop_Pro|H2I4W2 Shopping Production Rate|0.732
+~+|1|ms413|H3I4W0_Shop_Pro|H3I4W0 Shopping Production Rate|2.018
+~+|1|ms414|H3I4W1_Shop_Pro|H3I4W1 Shopping Production Rate|1.336
+~+|1|ms415|H3I4W2_Shop_Pro|H3I4W2 Shopping Production Rate|0.812
+~+|1|ms416|H3I4W3_Shop_Pro|H3I4W3 Shopping Production Rate|1.271
+~+|1|ms417|H4I4W0_Shop_Pro|H4I4W0 Shopping Production Rate|1.466
+~+|1|ms418|H4I4W1_Shop_Pro|H4I4W1 Shopping Production Rate|0.929
+~+|1|ms419|H4I4W2_Shop_Pro|H4I4W2 Shopping Production Rate|1.055
+~+|1|ms420|H4I4W3_Shop_Pro|H4I4W3 Shopping Production Rate|1.449
+~+|1|ms421|H1I4W0_Other_Pro|H1I4W0 Other Production Rate|1.506
+~+|1|ms422|H1I4W1_Other_Pro|H1I4W1 Other Production Rate|0.885
+~+|1|ms423|H2I4W0_Other_Pro|H2I4W0 Other Production Rate|4.35
+~+|1|ms424|H2I4W1_Other_Pro|H2I4W1 Other Production Rate|2.61
+~+|1|ms425|H2I4W2_Other_Pro|H2I4W2 Other Production Rate|2.231
+~+|1|ms426|H3I4W0_Other_Pro|H3I4W0 Other Production Rate|6.57
+~+|1|ms427|H3I4W1_Other_Pro|H3I4W1 Other Production Rate|5.965
+~+|1|ms428|H3I4W2_Other_Pro|H3I4W2 Other Production Rate|4.834001
+~+|1|ms429|H3I4W3_Other_Pro|H3I4W3 Other Production Rate|3.262
+~+|1|ms430|H4I4W0_Other_Pro|H4I4W0 Other Production Rate|13.259
+~+|1|ms431|H4I4W1_Other_Pro|H4I4W1 Other Production Rate|9.538
+~+|1|ms432|H4I4W2_Other_Pro|H4I4W2 Other Production Rate|7.685
+~+|1|ms433|H4I4W3_Other_Pro|H4I4W3 Other Production Rate|6.519
+~+|1|ms434|H1I4W0_OtO_Pro|H1I4W0 OtO Production Rate|1.236
+~+|1|ms435|H1I4W1_OtO_Pro|H1I4W1 OtO Production Rate|0.507
+~+|1|ms436|H2I4W0_OtO_Pro|H2I4W0 OtO Production Rate|3.036
+~+|1|ms437|H2I4W1_OtO_Pro|H2I4W1 OtO Production Rate|2.122
+~+|1|ms438|H2I4W2_OtO_Pro|H2I4W2 OtO Production Rate|1.129
+~+|1|ms439|H3I4W0_OtO_Pro|H3I4W0 OtO Production Rate|7.065
+~+|1|ms440|H3I4W1_OtO_Pro|H3I4W1 OtO Production Rate|3.231
+~+|1|ms441|H3I4W2_OtO_Pro|H3I4W2 OtO Production Rate|2.459
+~+|1|ms442|H3I4W3_OtO_Pro|H3I4W3 OtO Production Rate|1.723
+~+|1|ms443|H4I4W0_OtO_Pro|H4I4W0 OtO Production Rate|8.68
+~+|1|ms444|H4I4W1_OtO_Pro|H4I4W1 OtO Production Rate|4.102
+~+|1|ms445|H4I4W2_OtO_Pro|H4I4W2 OtO Production Rate|4.364
+~+|1|ms446|H4I4W3_OtO_Pro|H4I4W3 OtO Production Rate|2.613
+~+|1|ms447|H1I4W0_WtO_Pro|H1I4W0 WtO Production Rate|0.038
+~+|1|ms448|H1I4W1_WtO_Pro|H1I4W1 WtO Production Rate|0.994
+~+|1|ms449|H2I4W0_WtO_Pro|H2I4W0 WtO Production Rate|0.234
+~+|1|ms450|H2I4W1_WtO_Pro|H2I4W1 WtO Production Rate|1.213
+~+|1|ms451|H2I4W2_WtO_Pro|H2I4W2 WtO Production Rate|1.913
+~+|1|ms452|H3I4W0_WtO_Pro|H3I4W0 WtO Production Rate|0.114
+~+|1|ms453|H3I4W1_WtO_Pro|H3I4W1 WtO Production Rate|0.988
+~+|1|ms454|H3I4W2_WtO_Pro|H3I4W2 WtO Production Rate|2.064
+~+|1|ms455|H3I4W3_WtO_Pro|H3I4W3 WtO Production Rate|2.462
+~+|1|ms456|H4I4W0_WtO_Pro|H4I4W0 WtO Production Rate|0.37
+~+|1|ms457|H4I4W1_WtO_Pro|H4I4W1 WtO Production Rate|0.98
+~+|1|ms458|H4I4W2_WtO_Pro|H4I4W2 WtO Production Rate|2.116
+~+|1|ms459|H4I4W3_WtO_Pro|H4I4W3 WtO Production Rate|2.247
+~+|1|ms460|I1S0_Sch_Pro|I1S0 School Production Rate|0.043
+~+|1|ms461|I1S1_Sch_Pro|I1S1 School Production Rate|2.049
+~+|1|ms462|I1S2_Sch_Pro|I1S2 School Production Rate|3.826
+~+|1|ms463|I1S3_Sch_Pro|I1S3 School Production Rate|5.919
+~+|1|ms464|I2S0_Sch_Pro|I2S0 School Production Rate|0.057
+~+|1|ms465|I2S1_Sch_Pro|I2S1 School Production Rate|1.831
+~+|1|ms466|I2S2_Sch_Pro|I2S2 School Production Rate|3.666
+~+|1|ms467|I2S3_Sch_Pro|I2S3 School Production Rate|6.169
+~+|1|ms468|I3S0_Sch_Pro|I3S0 School Production Rate|0.199
+~+|1|ms469|I3S1_Sch_Pro|I3S1 School Production Rate|1.888
+~+|1|ms470|I3S2_Sch_Pro|I3S2 School Production Rate|3.47
+~+|1|ms471|I3S3_Sch_Pro|I3S3 School Production Rate|6.583
+~+|1|ms472|I4S0_Sch_Pro|I4S0 School Production Rate|0.232
+~+|1|ms473|I4S1_Sch_Pro|I4S1 School Production Rate|1.9
+~+|1|ms474|I4S2_Sch_Pro|I4S2 School Production Rate|3.54
+~+|1|ms475|I4S3_Sch_Pro|I4S3 School Production Rate|5.378
+~+|1|ms476|I1C0_Coll_Pro|I1C0 College Production Rate|0.001
+~+|1|ms477|I1C1_Coll_Pro|I1C1 College Production Rate|0.911
+~+|1|ms478|I1C2_Coll_Pro|I1C2 College Production Rate|3.22
+~+|1|ms479|I2C0_Coll_Pro|I2C0 College Production Rate|0.002
+~+|1|ms480|I2C1_Coll_Pro|I2C1 College Production Rate|0.914
+~+|1|ms481|I2C2_Coll_Pro|I2C2 College Production Rate|3.124
+~+|1|ms482|I3C0_Coll_Pro|I3C0 College Production Rate|0.006
+~+|1|ms483|I3C1_Coll_Pro|I3C1 College Production Rate|0.702
+~+|1|ms484|I3C2_Coll_Pro|I3C2 College Production Rate|1.52
+~+|1|ms485|I4C0_Coll_Pro|I4C0 College Production Rate|0.007
+~+|1|ms486|I4C1_Coll_Pro|I4C1 College Production Rate|0.716
+~+|1|ms487|I4C2_Coll_Pro|I4C2 College Production Rate|0.972
+~+|1|ms488|GQ_Dorms_HBW1_Pro|Dorm HBW 1 Production Rate|0
+~+|1|ms489|GQ_Dorms_HBW2_Pro|Dorm HBW 1 Production Rate|0
+~+|1|ms490|GQ_Dorms_HBW3_Pro|Dorm HBW 1 Production Rate|0
+~+|1|ms491|GQ_Dorms_HBW4_Pro|Dorm HBW 1 Production Rate|0
+~+|1|ms492|GQ_Dorms_Coll_Pro|Dorm College Production Rate|1.18
+~+|1|ms493|GQ_Dorms_Shop_Pro|Dorm Shopping Production Rate|0.4
+~+|1|ms494|GQ_Dorms_Other_Pro|Dorm Other Production Rate|1.24
+~+|1|ms495|GQ_Dorms_Sch_Pro|Dorm School Production Rate|0
+~+|1|ms496|GQ_Dorms_OtO_Pro|Dorm OtO Production Rate|0.7
+~+|1|ms497|GQ_Dorms_WtO_Pro|Dorm WtO Production Rate|0.3
+~+|1|ms498|GQ_Military_HBW1_Pro|Military HBW 1 Production Rate|0.37
+~+|1|ms499|GQ_Military_HBW2_Pro|Military HBW 1 Production Rate|0
+~+|1|ms500|GQ_Military_HBW3_Pro|Military HBW 1 Production Rate|0
+~+|1|ms501|GQ_Military_HBW4_Pro|Military HBW 1 Production Rate|0
+~+|1|ms502|GQ_Military_Coll_Pro|Military College Production Rate|0
+~+|1|ms503|GQ_Military_Shop_Pro|Military Shopping Production Rate|0.74
+~+|1|ms504|GQ_Military_Other_Pro|Military Other Production Rate|1.09
+~+|1|ms505|GQ_Military_Sch_Pro|Military School Production Rate|0
+~+|1|ms506|GQ_Military_OtO_Pro|Military OtO Production Rate|0.53
+~+|1|ms507|GQ_Military_WtO_Pro|Military WtO Production Rate|0.23
+~+|1|ms508|GQ_Other_HBW1_Pro|Other HBW 1 Production Rate|0.1
+~+|1|ms509|GQ_Other_HBW2_Pro|Other HBW 1 Production Rate|0
+~+|1|ms510|GQ_Other_HBW3_Pro|Other HBW 1 Production Rate|0
+~+|1|ms511|GQ_Other_HBW4_Pro|Other HBW 1 Production Rate|0
+~+|1|ms512|GQ_Other_Coll_Pro|Other College Production Rate|0
+~+|1|ms513|GQ_Other_Shop_Pro|Other Shopping Production Rate|0.7
+~+|1|ms514|GQ_Other_Other_Pro|Other Other Production Rate|1.49
+~+|1|ms515|GQ_Other_Sch_Pro|Other School Production Rate|0.03
+~+|1|ms516|GQ_Other_OtO_Pro|Other OtO Production Rate|0.73
+~+|1|ms517|GQ_Other_WtO_Pro|Other WtO Production Rate|0.31
+~/ ---------------------------------------------------------------------
+~/ --- Trip Generation Rates - Attraction Rates
+~/ ---------------------------------------------------------------------
+~+|1|ms518|H1I1W0_HBW1_Att|H1I1W0 HBW #1 Attraction Rate|0.01
+~+|1|ms519|H1I1W1_HBW1_Att|H1I1W1 HBW #1 Attraction Rate|0.01
+~+|1|ms520|H2I1W0_HBW1_Att|H2I1W0 HBW #1 Attraction Rate|0.01
+~+|1|ms521|H2I1W1_HBW1_Att|H2I1W1 HBW #1 Attraction Rate|0.01
+~+|1|ms522|H2I1W2_HBW1_Att|H2I1W2 HBW #1 Attraction Rate|0.01
+~+|1|ms523|H3I1W0_HBW1_Att|H3I1W0 HBW #1 Attraction Rate|0.01
+~+|1|ms524|H3I1W1_HBW1_Att|H3I1W1 HBW #1 Attraction Rate|0.01
+~+|1|ms525|H3I1W2_HBW1_Att|H3I1W2 HBW #1 Attraction Rate|0.01
+~+|1|ms526|H3I1W3_HBW1_Att|H3I1W3 HBW #1 Attraction Rate|0.01
+~+|1|ms527|H4I1W0_HBW1_Att|H4I1W0 HBW #1 Attraction Rate|0.01
+~+|1|ms528|H4I1W1_HBW1_Att|H4I1W1 HBW #1 Attraction Rate|0.01
+~+|1|ms529|H4I1W2_HBW1_Att|H4I1W2 HBW #1 Attraction Rate|0.01
+~+|1|ms530|H4I1W3_HBW1_Att|H4I1W3 HBW #1 Attraction Rate|0.01
+~+|1|ms531|H1I1W0_Other_Att|H1I1W0 Other Attraction Rate|2.848
+~+|1|ms532|H1I1W1_Other_Att|H1I1W1 Other Attraction Rate|2.848
+~+|1|ms533|H2I1W0_Other_Att|H2I1W0 Other Attraction Rate|2.848
+~+|1|ms534|H2I1W1_Other_Att|H2I1W1 Other Attraction Rate|2.848
+~+|1|ms535|H2I1W2_Other_Att|H2I1W2 Other Attraction Rate|2.848
+~+|1|ms536|H3I1W0_Other_Att|H3I1W0 Other Attraction Rate|2.848
+~+|1|ms537|H3I1W1_Other_Att|H3I1W1 Other Attraction Rate|2.848
+~+|1|ms538|H3I1W2_Other_Att|H3I1W2 Other Attraction Rate|2.848
+~+|1|ms539|H3I1W3_Other_Att|H3I1W3 Other Attraction Rate|2.848
+~+|1|ms540|H4I1W0_Other_Att|H4I1W0 Other Attraction Rate|2.848
+~+|1|ms541|H4I1W1_Other_Att|H4I1W1 Other Attraction Rate|2.848
+~+|1|ms542|H4I1W2_Other_Att|H4I1W2 Other Attraction Rate|2.848
+~+|1|ms543|H4I1W3_Other_Att|H4I1W3 Other Attraction Rate|2.848
+~+|1|ms544|H1I1W0_OtO_Att|H1I1W0 OtO Attraction Rate|1.35
+~+|1|ms545|H1I1W1_OtO_Att|H1I1W1 OtO Attraction Rate|1.35
+~+|1|ms546|H2I1W0_OtO_Att|H2I1W0 OtO Attraction Rate|1.35
+~+|1|ms547|H2I1W1_OtO_Att|H2I1W1 OtO Attraction Rate|1.35
+~+|1|ms548|H2I1W2_OtO_Att|H2I1W2 OtO Attraction Rate|1.35
+~+|1|ms549|H3I1W0_OtO_Att|H3I1W0 OtO Attraction Rate|1.35
+~+|1|ms550|H3I1W1_OtO_Att|H3I1W1 OtO Attraction Rate|1.35
+~+|1|ms551|H3I1W2_OtO_Att|H3I1W2 OtO Attraction Rate|1.35
+~+|1|ms552|H3I1W3_OtO_Att|H3I1W3 OtO Attraction Rate|1.35
+~+|1|ms553|H4I1W0_OtO_Att|H4I1W0 OtO Attraction Rate|1.35
+~+|1|ms554|H4I1W1_OtO_Att|H4I1W1 OtO Attraction Rate|1.35
+~+|1|ms555|H4I1W2_OtO_Att|H4I1W2 OtO Attraction Rate|1.35
+~+|1|ms556|H4I1W3_OtO_Att|H4I1W3 OtO Attraction Rate|1.35
+~+|1|ms557|H1I1W0_WtO_Att|H1I1W0 WtO Attraction Rate|0.153
+~+|1|ms558|H1I1W1_WtO_Att|H1I1W1 WtO Attraction Rate|0.153
+~+|1|ms559|H2I1W0_WtO_Att|H2I1W0 WtO Attraction Rate|0.153
+~+|1|ms560|H2I1W1_WtO_Att|H2I1W1 WtO Attraction Rate|0.153
+~+|1|ms561|H2I1W2_WtO_Att|H2I1W2 WtO Attraction Rate|0.153
+~+|1|ms562|H3I1W0_WtO_Att|H3I1W0 WtO Attraction Rate|0.153
+~+|1|ms563|H3I1W1_WtO_Att|H3I1W1 WtO Attraction Rate|0.153
+~+|1|ms564|H3I1W2_WtO_Att|H3I1W2 WtO Attraction Rate|0.153
+~+|1|ms565|H3I1W3_WtO_Att|H3I1W3 WtO Attraction Rate|0.153
+~+|1|ms566|H4I1W0_WtO_Att|H4I1W0 WtO Attraction Rate|0.153
+~+|1|ms567|H4I1W1_WtO_Att|H4I1W1 WtO Attraction Rate|0.153
+~+|1|ms568|H4I1W2_WtO_Att|H4I1W2 WtO Attraction Rate|0.153
+~+|1|ms569|H4I1W3_WtO_Att|H4I1W3 WtO Attraction Rate|0.153
+~+|1|ms570|H1I2W0_HBW2_Att|H1I2W0 HBW #2 Attraction Rate|0.02
+~+|1|ms571|H1I2W1_HBW2_Att|H1I2W1 HBW #2 Attraction Rate|0.02
+~+|1|ms572|H2I2W0_HBW2_Att|H2I2W0 HBW #2 Attraction Rate|0.02
+~+|1|ms573|H2I2W1_HBW2_Att|H2I2W1 HBW #2 Attraction Rate|0.02
+~+|1|ms574|H2I2W2_HBW2_Att|H2I2W2 HBW #2 Attraction Rate|0.02
+~+|1|ms575|H3I2W0_HBW2_Att|H3I2W0 HBW #2 Attraction Rate|0.02
+~+|1|ms576|H3I2W1_HBW2_Att|H3I2W1 HBW #2 Attraction Rate|0.02
+~+|1|ms577|H3I2W2_HBW2_Att|H3I2W2 HBW #2 Attraction Rate|0.02
+~+|1|ms578|H3I2W3_HBW2_Att|H3I2W3 HBW #2 Attraction Rate|0.02
+~+|1|ms579|H4I2W0_HBW2_Att|H4I2W0 HBW #2 Attraction Rate|0.02
+~+|1|ms580|H4I2W1_HBW2_Att|H4I2W1 HBW #2 Attraction Rate|0.02
+~+|1|ms581|H4I2W2_HBW2_Att|H4I2W2 HBW #2 Attraction Rate|0.02
+~+|1|ms582|H4I2W3_HBW2_Att|H4I2W3 HBW #2 Attraction Rate|0.02
+~+|1|ms583|H1I2W0_Other_Att|H1I2W0 Other Attraction Rate|2.848
+~+|1|ms584|H1I2W1_Other_Att|H1I2W1 Other Attraction Rate|2.848
+~+|1|ms585|H2I2W0_Other_Att|H2I2W0 Other Attraction Rate|2.848
+~+|1|ms586|H2I2W1_Other_Att|H2I2W1 Other Attraction Rate|2.848
+~+|1|ms587|H2I2W2_Other_Att|H2I2W2 Other Attraction Rate|2.848
+~+|1|ms588|H3I2W0_Other_Att|H3I2W0 Other Attraction Rate|2.848
+~+|1|ms589|H3I2W1_Other_Att|H3I2W1 Other Attraction Rate|2.848
+~+|1|ms590|H3I2W2_Other_Att|H3I2W2 Other Attraction Rate|2.848
+~+|1|ms591|H3I2W3_Other_Att|H3I2W3 Other Attraction Rate|2.848
+~+|1|ms592|H4I2W0_Other_Att|H4I2W0 Other Attraction Rate|2.848
+~+|1|ms593|H4I2W1_Other_Att|H4I2W1 Other Attraction Rate|2.848
+~+|1|ms594|H4I2W2_Other_Att|H4I2W2 Other Attraction Rate|2.848
+~+|1|ms595|H4I2W3_Other_Att|H4I2W3 Other Attraction Rate|2.848
+~+|1|ms596|H1I2W0_OtO_Att|H1I2W0 OtO Attraction Rate|1.35
+~+|1|ms597|H1I2W1_OtO_Att|H1I2W1 OtO Attraction Rate|1.35
+~+|1|ms598|H2I2W0_OtO_Att|H2I2W0 OtO Attraction Rate|1.35
+~+|1|ms599|H2I2W1_OtO_Att|H2I2W1 OtO Attraction Rate|1.35
+~+|1|ms600|H2I2W2_OtO_Att|H2I2W2 OtO Attraction Rate|1.35
+~+|1|ms601|H3I2W0_OtO_Att|H3I2W0 OtO Attraction Rate|1.35
+~+|1|ms602|H3I2W1_OtO_Att|H3I2W1 OtO Attraction Rate|1.35
+~+|1|ms603|H3I2W2_OtO_Att|H3I2W2 OtO Attraction Rate|1.35
+~+|1|ms604|H3I2W3_OtO_Att|H3I2W3 OtO Attraction Rate|1.35
+~+|1|ms605|H4I2W0_OtO_Att|H4I2W0 OtO Attraction Rate|1.35
+~+|1|ms606|H4I2W1_OtO_Att|H4I2W1 OtO Attraction Rate|1.35
+~+|1|ms607|H4I2W2_OtO_Att|H4I2W2 OtO Attraction Rate|1.35
+~+|1|ms608|H4I2W3_OtO_Att|H4I2W3 OtO Attraction Rate|1.35
+~+|1|ms609|H1I2W0_WtO_Att|H1I2W0 WtO Attraction Rate|0.153
+~+|1|ms610|H1I2W1_WtO_Att|H1I2W1 WtO Attraction Rate|0.153
+~+|1|ms611|H2I2W0_WtO_Att|H2I2W0 WtO Attraction Rate|0.153
+~+|1|ms612|H2I2W1_WtO_Att|H2I2W1 WtO Attraction Rate|0.153
+~+|1|ms613|H2I2W2_WtO_Att|H2I2W2 WtO Attraction Rate|0.153
+~+|1|ms614|H3I2W0_WtO_Att|H3I2W0 WtO Attraction Rate|0.153
+~+|1|ms615|H3I2W1_WtO_Att|H3I2W1 WtO Attraction Rate|0.153
+~+|1|ms616|H3I2W2_WtO_Att|H3I2W2 WtO Attraction Rate|0.153
+~+|1|ms617|H3I2W3_WtO_Att|H3I2W3 WtO Attraction Rate|0.153
+~+|1|ms618|H4I2W0_WtO_Att|H4I2W0 WtO Attraction Rate|0.153
+~+|1|ms619|H4I2W1_WtO_Att|H4I2W1 WtO Attraction Rate|0.153
+~+|1|ms620|H4I2W2_WtO_Att|H4I2W2 WtO Attraction Rate|0.153
+~+|1|ms621|H4I2W3_WtO_Att|H4I2W3 WtO Attraction Rate|0.153
+~+|1|ms622|H1I3W0_HBW3_Att|H1I3W0 HBW #3 Attraction Rate|0.03
+~+|1|ms623|H1I3W1_HBW3_Att|H1I3W1 HBW #3 Attraction Rate|0.03
+~+|1|ms624|H2I3W0_HBW3_Att|H2I3W0 HBW #3 Attraction Rate|0.03
+~+|1|ms625|H2I3W1_HBW3_Att|H2I3W1 HBW #3 Attraction Rate|0.03
+~+|1|ms626|H2I3W2_HBW3_Att|H2I3W2 HBW #3 Attraction Rate|0.03
+~+|1|ms627|H3I3W0_HBW3_Att|H3I3W0 HBW #3 Attraction Rate|0.03
+~+|1|ms628|H3I3W1_HBW3_Att|H3I3W1 HBW #3 Attraction Rate|0.03
+~+|1|ms629|H3I3W2_HBW3_Att|H3I3W2 HBW #3 Attraction Rate|0.03
+~+|1|ms630|H3I3W3_HBW3_Att|H3I3W3 HBW #3 Attraction Rate|0.03
+~+|1|ms631|H4I3W0_HBW3_Att|H4I3W0 HBW #3 Attraction Rate|0.03
+~+|1|ms632|H4I3W1_HBW3_Att|H4I3W1 HBW #3 Attraction Rate|0.03
+~+|1|ms633|H4I3W2_HBW3_Att|H4I3W2 HBW #3 Attraction Rate|0.03
+~+|1|ms634|H4I3W3_HBW3_Att|H4I3W3 HBW #3 Attraction Rate|0.03
+~+|1|ms635|H1I3W0_Other_Att|H1I3W0 Other Attraction Rate|2.848
+~+|1|ms636|H1I3W1_Other_Att|H1I3W1 Other Attraction Rate|2.848
+~+|1|ms637|H2I3W0_Other_Att|H2I3W0 Other Attraction Rate|2.848
+~+|1|ms638|H2I3W1_Other_Att|H2I3W1 Other Attraction Rate|2.848
+~+|1|ms639|H2I3W2_Other_Att|H2I3W2 Other Attraction Rate|2.848
+~+|1|ms640|H3I3W0_Other_Att|H3I3W0 Other Attraction Rate|2.848
+~+|1|ms641|H3I3W1_Other_Att|H3I3W1 Other Attraction Rate|2.848
+~+|1|ms642|H3I3W2_Other_Att|H3I3W2 Other Attraction Rate|2.848
+~+|1|ms643|H3I3W3_Other_Att|H3I3W3 Other Attraction Rate|2.848
+~+|1|ms644|H4I3W0_Other_Att|H4I3W0 Other Attraction Rate|2.848
+~+|1|ms645|H4I3W1_Other_Att|H4I3W1 Other Attraction Rate|2.848
+~+|1|ms646|H4I3W2_Other_Att|H4I3W2 Other Attraction Rate|2.848
+~+|1|ms647|H4I3W3_Other_Att|H4I3W3 Other Attraction Rate|2.848
+~+|1|ms648|H1I3W0_OtO_Att|H1I3W0 OtO Attraction Rate|1.35
+~+|1|ms649|H1I3W1_OtO_Att|H1I3W1 OtO Attraction Rate|1.35
+~+|1|ms650|H2I3W0_OtO_Att|H2I3W0 OtO Attraction Rate|1.35
+~+|1|ms651|H2I3W1_OtO_Att|H2I3W1 OtO Attraction Rate|1.35
+~+|1|ms652|H2I3W2_OtO_Att|H2I3W2 OtO Attraction Rate|1.35
+~+|1|ms653|H3I3W0_OtO_Att|H3I3W0 OtO Attraction Rate|1.35
+~+|1|ms654|H3I3W1_OtO_Att|H3I3W1 OtO Attraction Rate|1.35
+~+|1|ms655|H3I3W2_OtO_Att|H3I3W2 OtO Attraction Rate|1.35
+~+|1|ms656|H3I3W3_OtO_Att|H3I3W3 OtO Attraction Rate|1.35
+~+|1|ms657|H4I3W0_OtO_Att|H4I3W0 OtO Attraction Rate|1.35
+~+|1|ms658|H4I3W1_OtO_Att|H4I3W1 OtO Attraction Rate|1.35
+~+|1|ms659|H4I3W2_OtO_Att|H4I3W2 OtO Attraction Rate|1.35
+~+|1|ms660|H4I3W3_OtO_Att|H4I3W3 OtO Attraction Rate|1.35
+~+|1|ms661|H1I3W0_WtO_Att|H1I3W0 WtO Attraction Rate|0.153
+~+|1|ms662|H1I3W1_WtO_Att|H1I3W1 WtO Attraction Rate|0.153
+~+|1|ms663|H2I3W0_WtO_Att|H2I3W0 WtO Attraction Rate|0.153
+~+|1|ms664|H2I3W1_WtO_Att|H2I3W1 WtO Attraction Rate|0.153
+~+|1|ms665|H2I3W2_WtO_Att|H2I3W2 WtO Attraction Rate|0.153
+~+|1|ms666|H3I3W0_WtO_Att|H3I3W0 WtO Attraction Rate|0.153
+~+|1|ms667|H3I3W1_WtO_Att|H3I3W1 WtO Attraction Rate|0.153
+~+|1|ms668|H3I3W2_WtO_Att|H3I3W2 WtO Attraction Rate|0.153
+~+|1|ms669|H3I3W3_WtO_Att|H3I3W3 WtO Attraction Rate|0.153
+~+|1|ms670|H4I3W0_WtO_Att|H4I3W0 WtO Attraction Rate|0.153
+~+|1|ms671|H4I3W1_WtO_Att|H4I3W1 WtO Attraction Rate|0.153
+~+|1|ms672|H4I3W2_WtO_Att|H4I3W2 WtO Attraction Rate|0.153
+~+|1|ms673|H4I3W3_WtO_Att|H4I3W3 WtO Attraction Rate|0.153
+~+|1|ms674|H1I4W0_HBW4_Att|H1I4W0 HBW #4 Attraction Rate|0.04
+~+|1|ms675|H1I4W1_HBW4_Att|H1I4W1 HBW #4 Attraction Rate|0.04
+~+|1|ms676|H2I4W0_HBW4_Att|H2I4W0 HBW #4 Attraction Rate|0.04
+~+|1|ms677|H2I4W1_HBW4_Att|H2I4W1 HBW #4 Attraction Rate|0.04
+~+|1|ms678|H2I4W2_HBW4_Att|H2I4W2 HBW #4 Attraction Rate|0.04
+~+|1|ms679|H3I4W0_HBW4_Att|H3I4W0 HBW #4 Attraction Rate|0.04
+~+|1|ms680|H3I4W1_HBW4_Att|H3I4W1 HBW #4 Attraction Rate|0.04
+~+|1|ms681|H3I4W2_HBW4_Att|H3I4W2 HBW #4 Attraction Rate|0.04
+~+|1|ms682|H3I4W3_HBW4_Att|H3I4W3 HBW #4 Attraction Rate|0.04
+~+|1|ms683|H4I4W0_HBW4_Att|H4I4W0 HBW #4 Attraction Rate|0.04
+~+|1|ms684|H4I4W1_HBW4_Att|H4I4W1 HBW #4 Attraction Rate|0.04
+~+|1|ms685|H4I4W2_HBW4_Att|H4I4W2 HBW #4 Attraction Rate|0.04
+~+|1|ms686|H4I4W3_HBW4_Att|H4I4W3 HBW #4 Attraction Rate|0.04
+~+|1|ms687|H1I4W0_Other_Att|H1I4W0 Other Attraction Rate|2.848
+~+|1|ms688|H1I4W1_Other_Att|H1I4W1 Other Attraction Rate|2.848
+~+|1|ms689|H2I4W0_Other_Att|H2I4W0 Other Attraction Rate|2.848
+~+|1|ms690|H2I4W1_Other_Att|H2I4W1 Other Attraction Rate|2.848
+~+|1|ms691|H2I4W2_Other_Att|H2I4W2 Other Attraction Rate|2.848
+~+|1|ms692|H3I4W0_Other_Att|H3I4W0 Other Attraction Rate|2.848
+~+|1|ms693|H3I4W1_Other_Att|H3I4W1 Other Attraction Rate|2.848
+~+|1|ms694|H3I4W2_Other_Att|H3I4W2 Other Attraction Rate|2.848
+~+|1|ms695|H3I4W3_Other_Att|H3I4W3 Other Attraction Rate|2.848
+~+|1|ms696|H4I4W0_Other_Att|H4I4W0 Other Attraction Rate|2.848
+~+|1|ms697|H4I4W1_Other_Att|H4I4W1 Other Attraction Rate|2.848
+~+|1|ms698|H4I4W2_Other_Att|H4I4W2 Other Attraction Rate|2.848
+~+|1|ms699|H4I4W3_Other_Att|H4I4W3 Other Attraction Rate|2.848
+~+|1|ms700|H1I4W0_OtO_Att|H1I4W0 OtO Attraction Rate|1.35
+~+|1|ms701|H1I4W1_OtO_Att|H1I4W1 OtO Attraction Rate|1.35
+~+|1|ms702|H2I4W0_OtO_Att|H2I4W0 OtO Attraction Rate|1.35
+~+|1|ms703|H2I4W1_OtO_Att|H2I4W1 OtO Attraction Rate|1.35
+~+|1|ms704|H2I4W2_OtO_Att|H2I4W2 OtO Attraction Rate|1.35
+~+|1|ms705|H3I4W0_OtO_Att|H3I4W0 OtO Attraction Rate|1.35
+~+|1|ms706|H3I4W1_OtO_Att|H3I4W1 OtO Attraction Rate|1.35
+~+|1|ms707|H3I4W2_OtO_Att|H3I4W2 OtO Attraction Rate|1.35
+~+|1|ms708|H3I4W3_OtO_Att|H3I4W3 OtO Attraction Rate|1.35
+~+|1|ms709|H4I4W0_OtO_Att|H4I4W0 OtO Attraction Rate|1.35
+~+|1|ms710|H4I4W1_OtO_Att|H4I4W1 OtO Attraction Rate|1.35
+~+|1|ms711|H4I4W2_OtO_Att|H4I4W2 OtO Attraction Rate|1.35
+~+|1|ms712|H4I4W3_OtO_Att|H4I4W3 OtO Attraction Rate|1.35
+~+|1|ms713|H1I4W0_WtO_Att|H1I4W0 WtO Attraction Rate|0.153
+~+|1|ms714|H1I4W1_WtO_Att|H1I4W1 WtO Attraction Rate|0.153
+~+|1|ms715|H2I4W0_WtO_Att|H2I4W0 WtO Attraction Rate|0.153
+~+|1|ms716|H2I4W1_WtO_Att|H2I4W1 WtO Attraction Rate|0.153
+~+|1|ms717|H2I4W2_WtO_Att|H2I4W2 WtO Attraction Rate|0.153
+~+|1|ms718|H3I4W0_WtO_Att|H3I4W0 WtO Attraction Rate|0.153
+~+|1|ms719|H3I4W1_WtO_Att|H3I4W1 WtO Attraction Rate|0.153
+~+|1|ms720|H3I4W2_WtO_Att|H3I4W2 WtO Attraction Rate|0.153
+~+|1|ms721|H3I4W3_WtO_Att|H3I4W3 WtO Attraction Rate|0.153
+~+|1|ms722|H4I4W0_WtO_Att|H4I4W0 WtO Attraction Rate|0.153
+~+|1|ms723|H4I4W1_WtO_Att|H4I4W1 WtO Attraction Rate|0.153
+~+|1|ms724|H4I4W2_WtO_Att|H4I4W2 WtO Attraction Rate|0.153
+~+|1|ms725|H4I4W3_WtO_Att|H4I4W3 WtO Attraction Rate|0.153
+~+|1|ms726|RETAIL_HBW1_Att|RETAIL HBW1 Attraction Rate|0.214
+~+|1|ms727|RETAIL_HBW2_Att|RETAIL HBW2 Attraction Rate|0.298
+~+|1|ms728|RETAIL_HBW3_Att|RETAIL HBW3 Attraction Rate|0.446
+~+|1|ms729|RETAIL_HBW4_Att|RETAIL HBW4 Attraction Rate|0.502
+~+|1|ms730|RETAIL_Shop_Att|RETAIL Shop Attraction Rate|3.64
+~+|1|ms731|RETAIL_Other_Att|RETAIL Other Attraction Rate|3.762
+~+|1|ms732|RETAIL_OtO_Att|RETAIL OtO Attraction Rate|3.55
+~+|1|ms733|RETAIL_WtO_Att|RETAIL WtO Attraction Rate|1.649
+~+|1|ms734|FIRES_HBW1_Att|FIRES HBW1 Attraction Rate|0.187
+~+|1|ms735|FIRES_HBW2_Att|FIRES HBW2 Attraction Rate|0.243
+~+|1|ms736|FIRES_HBW3_Att|FIRES HBW3 Attraction Rate|0.346
+~+|1|ms737|FIRES_HBW4_Att|FIRES HBW4 Attraction Rate|0.486
+~+|1|ms738|FIRES_Other_Att|FIRES Other Attraction Rate|0.032
+~+|1|ms739|FIRES_OtO_Att|FIRES Other Attraction Rate|0
+~+|1|ms740|FIRES_WtO_Att|FIRES WtO Attraction Rate|0.793
+~+|1|ms741|GOVT_HBW1_Att|GOVT HBW1 Attraction Rate|0.19
+~+|1|ms742|GOVT_HBW2_Att|GOVT HBW2 Attraction Rate|0.177
+~+|1|ms743|GOVT_HBW3_Att|GOVT HBW3 Attraction Rate|0.245
+~+|1|ms744|GOVT_HBW4_Att|GOVT HBW4 Attraction Rate|0.306
+~+|1|ms745|GOVT_Other_Att|GOVT Other Attraction Rate|0
+~+|1|ms746|GOVT_OtO_Att|GOVT Other Attraction Rate|0
+~+|1|ms747|GOVT_WtO_Att|GOVT WtO Attraction Rate|0.282
+~+|1|ms748|EDU_HBW1_Att|EDU HBW1 Attraction Rate|0.194
+~+|1|ms749|EDU_HBW2_Att|EDU HBW2 Attraction Rate|0.265
+~+|1|ms750|EDU_HBW3_Att|EDU HBW3 Attraction Rate|0.448
+~+|1|ms751|EDU_HBW4_Att|EDU HBW4 Attraction Rate|0.601
+~+|1|ms752|EDU_Sch_Att|EDU SchoolAttraction Rate|12.81
+~+|1|ms753|MANU_HBW1_Att|MANU HBW1 Attraction Rate|0.058
+~+|1|ms754|MANU_HBW2_Att|MANU HBW2 Attraction Rate|0.117
+~+|1|ms755|MANU_HBW3_Att|MANU HBW3 Attraction Rate|0.228
+~+|1|ms756|MANU_HBW4_Att|MANU HBW4 Attraction Rate|0.306
+~+|1|ms757|FTE_Coll_Att|FTE College Attraction Rate|0.88
+~/ ---------------------------------------------------------------------
+~/ --- SeaTac Airport
+~/ ---------------------------------------------------------------------
+~+|1|ms758|airport|SeaTac airport daily passengers|0
+~/ ---------------------------------------------------------------------
+~/ --- Temporary Scalars
+~/ ---------------------------------------------------------------------
+~+|1|ms990|scl990|temp scalar 1|0
+~+|1|ms991|scl991|temp scalar 2|0
+~+|1|ms992|scl992|temp scalar 3|0
+~+|1|ms993|scl993|temp scalar 4|0
+~+|1|ms994|scl994|temp scalar 5|0
+~+|1|ms995|scl995|temp scalar 6|0
+~+|1|ms996|scl996|temp scalar 7|0
+~+|1|ms997|scl997|temp scalar 8|0
+~+|1|ms998|scl998|temp scalar 9|0
+~+|1|ms999|scl999|temp scalar 10|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Matrices - Household Trip Generation
+~/ ---------------------------------------------------------------------
+~+|1|mo01|colpro|college productions|0
+~+|1|mo02|hsppro|hb shopping productions|0
+~+|1|mo03|hbopro|hb other productions|0
+~+|1|mo04|schpro|hb school productions|0
+~+|1|mo05|wkopro|nhb work-other productions|0
+~+|1|mo06|otopro|nbw other-other productions|0
+~+|1|mo07|hbwpr1|hb work productions (income 1)|0
+~+|1|mo08|hbwpr2|hb work productions (income 2)|0
+~+|1|mo09|hbwpr3|hb work productions (income 3)|0
+~+|1|mo10|hbwpr4|hb work productions (income 4)|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Matrices - Truck Trip Generation
+~/ ---------------------------------------------------------------------
+~+|1|mo11|hhlds|Total Households|0
+~+|1|mo12|retail|retail employment|0
+~+|1|mo13|fires|fires employment|0
+~+|1|mo14|gov|government employment|0
+~+|1|mo15|edu|education employment|0
+~+|1|mo16|manu|manufacturing employment|0
+~+|1|mo17|wtu|wtu employment|0
+~+|1|mo18|fte|Full Time College Students|0
+~+|1|mo19|agshar|agffish shares|0
+~+|1|mo20|agffsh|ag/farm/fishing employment|0
+~+|1|mo21|minshr|mining shares|0
+~+|1|mo22|mining|mining employment|0
+~+|1|mo23|prodsh|manufacturing-products shares|0
+~+|1|mo24|manu-p|manufacturing-products employment|0
+~+|1|mo25|eqshar|manufacturing-equipment shares|0
+~+|1|mo26|manu-e|manufacturing-equipment employment|0
+~+|1|mo27|tushr|tu shares|0
+~+|1|mo28|tu|tu employment|0
+~+|1|mo29|whlssh|wholesale shares|0
+~+|1|mo30|whls|wholesale employment|0
+~+|1|mo31|govedu|government and education employment|0
+~+|1|mo32|const|construction employment|0
+~+|1|mo33|ltpro|light truck productions|0
+~+|1|mo34|mtpro|medium truck productions|0
+~+|1|mo35|htpro|heavy truck productions|0
+~+|1|mo36|ltatt|light truck attractions|0
+~+|1|mo37|mtatt|medium truck attractions|0
+~+|1|mo38|htatt|heavy truck attractions|0
+~+|1|mo39|truck|Industrial Zone Flag|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Matrices for School District Balancing
+~/ ---------------------------------------------------------------------
+~+|1|mo40|schdst|School Districts|0
+~/ ---------------------------------------------------------------------
+~/ --- Total Households by Income Classification
+~/ ---------------------------------------------------------------------
+~+|1|mo41|i1|Income 1|0
+~+|1|mo42|i2|Income 2|0
+~+|1|mo43|i3|Income 3|0
+~+|1|mo44|i4|Income 4|0
+~/ ---------------------------------------------------------------------
+~/ --- Total Households by Income Classification from PUMAs
+~/ ---------------------------------------------------------------------
+~+|1|mo45|puma1|PUMA Income 1|0
+~+|1|mo46|puma2|PUMA Income 2|0
+~+|1|mo47|puma3|PUMA Income 3|0
+~+|1|mo48|puma4|PUMA Income 4|0
+~/ ---------------------------------------------------------------------
+~/ --- Share ot Total Households by Income Classification to PUMAs
+~/ ---------------------------------------------------------------------
+~+|1|mo49|pumsh1|PUMA Share Income 1|0
+~+|1|mo50|pumsh2|PUMA Share Income 2|0
+~+|1|mo51|pumsh3|PUMA Share Income 3|0
+~+|1|mo52|pumsh4|PUMA Share Income 4|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #1 HH Cross Classification
+~/ ---------------------------------------------------------------------
+~+|1|mo53|h1i1w0|1 Person, Income 1, 0 Workers|0
+~+|1|mo54|h1i1w1|1 Person, Income 1, 1 Worker|0
+~+|1|mo55|h2i1w0|2 Persons, Income 1, 0 Workers|0
+~+|1|mo56|h2i1w1|2 Persons, Income 1, 1 Worker|0
+~+|1|mo57|h2i1w2|2 Persons, Income 1, 2 Workers|0
+~+|1|mo58|h3i1w0|3 Persons, Income 1, 0 Workers|0
+~+|1|mo59|h3i1w1|3 Persons, Income 1, 1 Worker|0
+~+|1|mo60|h3i1w2|3 Persons, Income 1, 2 Workers|0
+~+|1|mo61|h3i1w3|3 Persons, Income 1, 3+ Workers|0
+~+|1|mo62|h4i1w0|4 Persons, Income 1, 0 Workers|0
+~+|1|mo63|h4i1w1|4 Persons, Income 1, 1 Worker|0
+~+|1|mo64|h4i1w2|4 Persons, Income 1, 2 Workers|0
+~+|1|mo65|h4i1w3|4 Persons, Income 1, 3+ Workers|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #2 HH Cross Classification
+~/ ---------------------------------------------------------------------
+~+|1|mo66|h1i2w0|1 Person, Income 2, 0 Workers|0
+~+|1|mo67|h1i2w1|1 Person, Income 2, 1 Worker|0
+~+|1|mo68|h2i2w0|2 Persons, Income 2, 0 Workers|0
+~+|1|mo69|h2i2w1|2 Persons, Income 2, 1 Worker|0
+~+|1|mo70|h2i2w2|2 Persons, Income 2, 2 Workers|0
+~+|1|mo71|h3i2w0|3 Persons, Income 2, 0 Workers|0
+~+|1|mo72|h3i2w1|3 Persons, Income 2, 1 Worker|0
+~+|1|mo73|h3i2w2|3 Persons, Income 2, 2 Workers|0
+~+|1|mo74|h3i2w3|3 Persons, Income 2, 3+ Workers|0
+~+|1|mo75|h4i2w0|4 Persons, Income 2, 0 Workers|0
+~+|1|mo76|h4i2w1|4 Persons, Income 2, 1 Worker|0
+~+|1|mo77|h4i2w2|4 Persons, Income 2, 2 Workers|0
+~+|1|mo78|h4i2w3|4 Persons, Income 2, 3+ Workers|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #3 HH Cross Classification
+~/ ---------------------------------------------------------------------
+~+|1|mo79|h1i3w0|1 Person, Income 3, 0 Workers|0
+~+|1|mo80|h1i3w1|1 Person, Income 3, 1 Worker|0
+~+|1|mo81|h2i3w0|2 Persons, Income 3, 0 Workers|0
+~+|1|mo82|h2i3w1|2 Persons, Income 3, 1 Worker|0
+~+|1|mo83|h2i3w2|2 Persons, Income 3, 2 Workers|0
+~+|1|mo84|h3i3w0|3 Persons, Income 3, 0 Workers|0
+~+|1|mo85|h3i3w1|3 Persons, Income 3, 1 Worker|0
+~+|1|mo86|h3i3w2|3 Persons, Income 3, 2 Workers|0
+~+|1|mo87|h3i3w3|3 Persons, Income 3, 3+ Workers|0
+~+|1|mo88|h4i3w0|4 Persons, Income 3, 0 Workers|0
+~+|1|mo89|h4i3w1|4 Persons, Income 3, 1 Worker|0
+~+|1|mo90|h4i3w2|4 Persons, Income 3, 2 Workers|0
+~+|1|mo91|h4i3w3|4 Persons, Income 3, 3+ Workers|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #4 HH Cross Classification
+~/ ---------------------------------------------------------------------
+~+|1|mo92|h1i4w0|1 Person, Income 4, 0 Workers|0
+~+|1|mo93|h1i4w1|1 Person, Income 4, 1 Worker|0
+~+|1|mo94|h2i4w0|2 Persons, Income 4, 0 Workers|0
+~+|1|mo95|h2i4w1|2 Persons, Income 4, 1 Worker|0
+~+|1|mo96|h2i4w2|2 Persons, Income 4, 2 Workers|0
+~+|1|mo97|h3i4w0|3 Persons, Income 4, 0 Workers|0
+~+|1|mo98|h3i4w1|3 Persons, Income 4, 1 Worker|0
+~+|1|mo99|h3i4w2|3 Persons, Income 4, 2 Workers|0
+~+|1|mo100|h3i4w3|3 Persons, Income 4, 3+ Workers|0
+~+|1|mo101|h4i4w0|4 Persons, Income 4, 0 Workers|0
+~+|1|mo102|h4i4w1|4 Persons, Income 4, 1 Worker|0
+~+|1|mo103|h4i4w2|4 Persons, Income 4, 2 Workers|0
+~+|1|mo104|h4i4w3|4 Persons, Income 4, 3+ Workers|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #1 School Age Children
+~/ ---------------------------------------------------------------------
+~+|1|mo105|i1s0|Income 1, 0 Kids|0
+~+|1|mo106|i1s1|Income 1, 1 Kid|0
+~+|1|mo107|i1s2|Income 1, 2 Kids|0
+~+|1|mo108|i1s3|Income 1, 3+ Kids|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #2 School Age Children
+~/ ---------------------------------------------------------------------
+~+|1|mo109|i2s0|Income 2, 0 Kids|0
+~+|1|mo110|i2s1|Income 2, 1 Kid|0
+~+|1|mo111|i2s2|Income 2, 2 Kids|0
+~+|1|mo112|i2s3|Income 2, 3+ Kids|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #3 School Age Children
+~/ ---------------------------------------------------------------------
+~+|1|mo113|i3s0|Income 3, 0 Kids|0
+~+|1|mo114|i3s1|Income 3, 1 Kid|0
+~+|1|mo115|i3s2|Income 3, 2 Kids|0
+~+|1|mo116|i3s3|Income 3, 3+ Kids|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #4 School Age Children
+~/ ---------------------------------------------------------------------
+~+|1|mo117|i4s0|Income 4, 0 Kids|0
+~+|1|mo118|i4s1|Income 4, 1 Kid|0
+~+|1|mo119|i4s2|Income 4, 2 Kids|0
+~+|1|mo120|i4s3|Income 4, 3+ Kids|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #1 College Age
+~/ ---------------------------------------------------------------------
+~+|1|mo121|i1c0|Income 1, 0 College Age|0
+~+|1|mo122|i1c1|Income 1, 1 College Age|0
+~+|1|mo123|i1c2|Income 1, 2+ College Age|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #2 College Age
+~/ ---------------------------------------------------------------------
+~+|1|mo124|i2c0|Income 2, 0 College Age|0
+~+|1|mo125|i2c1|Income 2, 1 College Age|0
+~+|1|mo126|i2c2|Income 2, 2+ College Age|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #3 College Age
+~/ ---------------------------------------------------------------------
+~+|1|mo127|i3c0|Income 3, 0 College Age|0
+~+|1|mo128|i3c1|Income 3, 1 College Age|0
+~+|1|mo129|i3c2|Income 3, 2+ College Age|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Income #4 College Age
+~/ ---------------------------------------------------------------------
+~+|1|mo130|i4c0|Income 4, 0 College Age|0
+~+|1|mo131|i4c1|Income 4, 1 College Age|0
+~+|1|mo132|i4c2|Income 4, 2+ College Age|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors for Group Quarters
+~/ ---------------------------------------------------------------------
+~+|1|mo133|GQDORM|Group Quarters - Dorms|0
+~+|1|mo134|GQMILT|Group Quarters - Military|0
+~+|1|mo135|GQOTHR|Group Quarters - Other|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors - Household Trip Generation Attractions 
+~/ --- These are Transposed into Destination Vectors
+~/ ---------------------------------------------------------------------
+~+|1|mo136|colatt|college attractions|0
+~+|1|mo137|hspatt|shopping attractions|0
+~+|1|mo138|hboatt|other attractions|0
+~+|1|mo139|schatt|hb school attractions|0
+~+|1|mo140|wkoatt|nhb work-other attractions|0
+~+|1|mo141|otoatt|nbw other-other attractions|0
+~+|1|mo142|hbwat1|hb work attractions (income 1)|0
+~+|1|mo143|hbwat2|hb work attractions (income 2)|0
+~+|1|mo144|hbwat3|hb work attractions (income 3)|0
+~+|1|mo145|hbwat4|hb work attractions (income 4)|0
+~/ ---------------------------------------------------------------------
+~/ --- Origin Vectors - SeaTac Airport
+~/ ---------------------------------------------------------------------
+~+|1|mo146|population|Total Population by TAZ|0
+~+|1|mo147|employment|Total Employment by TAZ|0
+~+|1|mo148|airport|Trips going to airport (daily)|0
+~/ ---------------------------------------------------------------------
+~/ --- Temporary Origin Matrices
+~/ ---------------------------------------------------------------------
+~+|1|mo190|ori090|temp origin matrix 90|0
+~+|1|mo191|ori091|temp origin matrix 91|0
+~+|1|mo192|ori092|temp origin matrix 92|0
+~+|1|mo193|ori093|temp origin matrix 93|0
+~+|1|mo194|ori094|temp origin matrix 94|0
+~+|1|mo195|ori095|temp origin matrix 95|0
+~+|1|mo196|ori096|temp origin matrix 96|0
+~+|1|mo197|ori097|temp origin matrix 97|0
+~+|1|mo198|ori098|temp origin matrix 98|0
+~+|1|mo199|ori099|temp origin matrix 99|0
+~+|1|mo200|ori100|temp origin matrix 100|0
+~/ ---------------------------------------------------------------------
+~/ --- Destination Matrices for Household Trip Generation
+~/ ---------------------------------------------------------------------
+~+|1|md01|hbwatt|total hb work attractions|0
+~+|1|md02|colatt|college attractions|0
+~+|1|md03|hspatt|hb shopping attractions|0
+~+|1|md04|hboatt|hb other attractions|0
+~+|1|md05|schatt|hb school attractions|0
+~+|1|md06|wkoatt|nhb work-other attractions|0
+~+|1|md07|otoatt|nbw other-other attractions|0
+~+|1|md08|hbwat1|hb work attractions (income 1)|0
+~+|1|md09|hbwat2|hb work attractions (income 2)|0
+~+|1|md10|hbwat3|hb work attractions (income 3)|0
+~+|1|md11|hbwat4|hb work attractions (income 4)|0
+~+|1|md12|spgapt|airport special generator trips|0
+~+|1|md13|spghbo|hb other special generator trips|0
+~/ ---------------------------------------------------------------------
+~/ --- Destination Matrices for Truck Generation
+~/ ---------------------------------------------------------------------
+~+|1|md14|ltatt|light truck attractions|0
+~+|1|md15|mtatt|medium truck attractions|0
+~+|1|md16|htatt|heavy truck attractions|0
+~+|1|md17|spllgt|special generators - light trucks|0 
+~+|1|md18|splmed|special generators - medium trucks|0
+~+|1|md19|splhvy|special generators - heavy trucks|0
+~/ ---------------------------------------------------------------------
+~/ --- Destination Matrices for School District Balancing
+~/ ---------------------------------------------------------------------
+~+|1|md20|schdst|School Districts|0
+~/ ---------------------------------------------------------------------
+~/ --- Destination Matrices for SeaTac Airport
+~/ ---------------------------------------------------------------------
+~+|1|md21|airport|Trips returning from Airport|0
+~/ ---------------------------------------------------------------------
+~/ --- Full Matrices for Trip Generation
+~/ ---------------------------------------------------------------------
+~+|1|mf01|hhemp|household/employment data|0
+~/ ---------------------------------------------------------------------
+~/ --- Full Matrices for Vehicle Availability
+~/ ---------------------------------------------------------------------
+~+|1|mf02|vehmtx|vehicle availability cross class|0
+~+|1|mf03|vacon|conversion from hhemp to vehmtx format|0
+~/ ---------------------------------------------------------------------
+~/ --- SeaTac Airport OD Trip Table
+~/ ---------------------------------------------------------------------
+~+|1|mf25|airport|SeaTac Airport OD Trip Table|0
+q
+~/ ---------------------------------------------------------------------
+~/ --- Input ensembles
+~/ ---------------------------------------------------------------------
+~+|3.01|4|all|y|q
+~+|3.01|1|%1%\ensembles\districts19_ga.ens|2|q
+~+|3.01|1|%1%\ensembles\counties_gc.ens|2|q
+~+|3.01|1|%1%\ensembles\kitpen_districts6_gf.ens|2|q
+~+|3.01|1|%1%\ensembles\centers_gr.ens|2|q
+~+|3.01|1|%1%\ensembles\seattlecbd_gb.ens|2|q
+~+|3.01|1|%1%\ensembles\districts6_gk.ens|2|q
+~+|3.01|1|%1%\ensembles\kitsap_gl.ens|2|q
+~+|3.01|1|%1%\ensembles\puma00.ens|2|q
+~+|3.01|1|%1%\ensembles\districts45_gx.ens|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Household Inputs
+~/ ---------------------------------------------------------------------
+~+|3.11|%1%\pums\pumshhxc_income-size-workers.in|2|
+~+|3.11|%1%\pums\pumshhxc_income-k12students.in|2|
+~+|3.11|%1%\pums\pumshhxc_income-collegestudents.in|2|
+~+|3.11|%1%\pums\pumshhxc_income-size-workers-vehicles.in|2|
+~+|3.11|%1%\landuse\tazdata.in|2|
+~+|3.11|%1%\specialgenerators\airport\seatac_emplanements.in|2|
+~+|3.11|%1%\specialgenerators\hbother\special_gen_hbother.in|2|
+~+|3.11|%1%\schooldistricts\school_districts.in|2|
+~/ ---------------------------------------------------------------------
+~/ --- Truck Inputs
+~/ ---------------------------------------------------------------------
+~+|3.11|%1%\shares\agshar.in|2|
+~+|3.11|%1%\shares\minshar.in|2|
+~+|3.11|%1%\shares\prodshar.in|2|
+~+|3.11|%1%\shares\equipshar.in|2|
+~+|3.11|%1%\shares\tcushar.in|2|
+~+|3.11|%1%\shares\whlsshar.in|2|
+~+|3.11|%1%\shares\const.in|2|
+~+|3.11|%1%\SpecialGenerators\trucks\special_gen_light_trucks.in|2|
+~+|3.11|%1%\SpecialGenerators\trucks\special_gen_medium_trucks.in|2|
+~+|3.11|%1%\SpecialGenerators\trucks\special_gen_heavy_trucks.in|2|
+~+|3.11|%1%\rates\truck_rates.in|2|
+~+|3.11|%1%\trucks\trucks.in|2|
+~/ ---------------------------------------------------------------------
+~/ --- Vehicle Availability Data
+~/ ---------------------------------------------------------------------
+~+|3.11|%1%\vehicleavailability\hhemp_to_vehmtx_conversion_file.in|2|
+~/ ---------------------------------------------------------------------
+~/ --- Input Adjustment Factors - Overall Trip Making
+~/ ---------------------------------------------------------------------
+~+|3.11|%1%\adjust\ag_adjustment_factors.in|2|
+~/ ---------------------------------------------------------------------
+~/ --- Input Adjustment Factors - Kitsap County Trip Making
+~/ ---------------------------------------------------------------------
+~+|3.11|%1%\adjust\kitsap_adjustment_factors.in|2|
+~/ ---------------------------------------------------------------------
+~/ --- Calculate total households
+~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mo"hhlds"|n|mf"hhemp"|||y|*|102,105||+|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Copy employment data from mf"hhemp" to origin vectors
+~/ ---------------------------------------------------------------------
+~+|3.12|4|1|mf"hhemp"|mo"retail"|n|y|*|109|*|y|q
+~+|3.12|4|1|mf"hhemp"|mo"fires"|n|y|*|112|*|y|q
+~+|3.12|4|1|mf"hhemp"|mo"gov"|n|y|*|115|*|y|q
+~+|3.12|4|1|mf"hhemp"|mo"edu"|n|y|*|118|*|y|q
+~+|3.12|4|1|mf"hhemp"|mo"wtu"|n|y|*|119|*|y|q
+~+|3.12|4|1|mf"hhemp"|mo"manu"|n|y|*|120|*|y|q
+~/ ---------------------------------------------------------------------
+~/ --- Calculate truck employment
+~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mo"agffsh"|n|mo"agshar"*mo"manu"|||n|2|q
+~+|3.21|1|y|mo"mining"|n|mo"minshr"*mo"manu"|||n|2|q
+~+|3.21|1|y|mo"manu-p"|n|mo"prodsh"*mo"manu"|||n|2|q
+~+|3.21|1|y|mo"manu-e"|n|mo"eqshar"*mo"manu"|||n|2|q
+~+|3.21|1|y|mo"tu"|n|mo"tushr"*mo"wtu"|||n|2|q
+~+|3.21|1|y|mo"whls"|n|mo"whlssh"*mo"wtu"|||n|2|q
+~+|3.21|1|y|mo"govedu"|n|mo"gov"+mo"edu"|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Copy Group Quarters data from mf"hhemp" to origin vectors
+~/ ---------------------------------------------------------------------
+~+|3.12|4|1|mf"hhemp"|mo"GQDORM"|n|y|*|122|*|y|q
+~+|3.12|4|1|mf"hhemp"|mo"GQMILT"|n|y|*|123|*|y|q
+~+|3.12|4|1|mf"hhemp"|mo"GQOTHR"|n|y|*|124|*|y|q
+~/ ---------------------------------------------------------------------
+~/ --- College FTE data from mf"hhemp" to origin vectors
+~/ ---------------------------------------------------------------------
+~+|3.12|4|1|mf"hhemp"|mo"fte"|n|y|*|121|*|y|q
+~/ ---------------------------------------------------------------------
+~/ --- Population from mf"hhemp" to origin vectors
+~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mo"population"|n|mf"hhemp"|||y|*|108||+|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Total Employmemnt by TAZ
+~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mo"employment"|n|mo"retail"+mo"fires"+mo"gov"+mo"edu"+mo"wtu"+mo"manu"|||n|2|q
+~/ ---------------------------------------------------------------------
+~/ --- Exit Emme
+~/ ---------------------------------------------------------------------
+q

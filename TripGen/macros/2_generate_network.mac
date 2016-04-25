@@ -1,0 +1,24 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/
+~/ --- Set active scenario to 1
+s=1
+~/ --- Set Modes
+2.01
+~+|1|%1%\network\transit_modes.in|2
+q
+~/ --- Set Transit Vehicles
+2.02
+~+|1|%1%\network\transit_vehicles.in|2
+q
+~/ --- Read in Centroid Network
+2.11
+%1%\network\centroids.in
+2
+~/
+~/end: 2_generate_network.mac
+~/exit emme
+~/
+q
