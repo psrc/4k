@@ -84,7 +84,9 @@ if %SummaryBank% == Yes (
 	 if %USim% == Yes call emme -ng 000 -m macros\1-1a_initialize_usim_matrices.mac
 	 call emme -ng 000 -m macros\1-2_input_triptables.mac
 	 if %USim% == Yes call emme -ng 000 -m macros\1-2a_input_usim_triptables.mac
-     call emme -ng 000 -m macros\2-0_regional_link_summary.mac
+     
+	 REM Summary Results
+	 call emme -ng 000 -m macros\2-0_regional_link_summary.mac
 	 call emme -ng 000 -m macros\2-1_screenline_summary.mac
 	 call emme -ng 000 -m macros\2-2_regional_triptable_summary.mac
 	 call emme -ng 000 -m macros\2-3_trip_distribution_summary.mac %hightaz%
@@ -99,7 +101,19 @@ if %SummaryBank% == Yes (
 	 call emme -ng 000 -m macros\2-12_accident_costs.mac
 	 call emme -ng 000 -m macros\2-13_emission_costs.mac
 	 call emme -ng 000 -m macros\2-14_noise_costs.mac
+	 call emme -ng 000 -m macros\2-15_input_summary.mac 
+	 call emme -ng 000 -m macros\2-16_daily_count.mac 
+	 
+	 REM Create macro, input and error list files
+	 if %SummaryBank% == Yes (
+      dir *.mac /s > results\macro_list.txt
+      dir input /s > results\input_list.txt
+      dir errors/s > results\error_list.txt
+	)
+
 	 call emme -ng 000 -m macros\3-0_output_results.mac
+	 
+	 
 )
 cd ..
 

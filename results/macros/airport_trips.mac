@@ -1,0 +1,60 @@
+~/------------------------------------------------------------------------------
+~/ Create Vectors to Show Trips coming and going to SeaTac Aiport
+~/------------------------------------------------------------------------------
+~?!i&32768
+~o|295
+reports=seatac.rpt
+~/ ---------------------------------------------------------------
+~/ --- Delete matrices
+~/ ---------------------------------------------------------------
+~+|3.12|2|mo50|y|q
+~+|3.12|2|md50|y|q
+~/ ---------------------------------------------------------------
+~/ --- Add matrices
+~/ ---------------------------------------------------------------
+~+|3.12|1|mo50|airport_origins|Origins of daily trips to the airport|0|q
+~+|3.12|1|md50|airport_destinations|Destinations of daily trips to the airport|0|q
+~/ ---------------------------------------------------------------
+~/ --- Origins for Daily Airport Trips - AM Peak
+~/ ---------------------------------------------------------------
+~+|3.21|1|y|mo"airport_origins"|n
+~+|mo"airport_origins"+mf"avehda"+(mf"avehs2"*2)+(mf"avehs3"*3.5)+(mf"avpool"*6)+
+mf"ahbw1v"+mf"ahbw2v"+mf"ahbw3v"+mf"ahbw4v"+
+mf"awalk"+mf"abike"+mf"atrnwa"
+~+|||y|1,%1%||983||+|2|q
+~/ ---------------------------------------------------------------
+~/ --- Origins for Daily Airport Trips - Midday
+~/ ---------------------------------------------------------------
+~+|3.21|1|y|mo"airport_origins"|n
+~+|mo"airport_origins"+mf"mvehda"+(mf"mvehs2"*2)+(mf"mvehs3"*3.5)+(mf"mvpool"*6)+
+mf"mhbw1v"+mf"mhbw2v"+mf"mhbw3v"+mf"mhbw4v"+
+mf"mwalk"+mf"mbike"+mf"mtrnwa"
+~+|||y|1,%1%||983||+|2|q
+~/ ---------------------------------------------------------------
+~/ --- Origins for Daily Airport Trips - PM Peak
+~/ ---------------------------------------------------------------
+~+|3.21|1|y|mo"airport_origins"|n
+~+|mo"airport_origins"+mf"pvehda"+(mf"pvehs2"*2)+(mf"pvehs3"*3.5)+(mf"pvpool"*6)+
+mf"phbw1v"+mf"phbw2v"+mf"phbw3v"+mf"phbw4v"+
+mf"pwalk"+mf"pbike"+mf"ptrnwa"
+~+|||y|1,%1%||983||+|2|q
+~/ ---------------------------------------------------------------
+~/ --- Origins for Daily Airport Trips - Late Evening
+~/ ---------------------------------------------------------------
+~+|3.21|1|y|mo"airport_origins"|n
+~+|mo"airport_origins"+mf"evehda"+(mf"evehs2"*2)+(mf"evehs3"*3.5)+(mf"evpool"*6)+
+mf"ehbw1v"+mf"ehbw2v"+mf"ehbw3v"+mf"ehbw4v"+
+mf"ewalk"+mf"ebike"+mf"etrnwa"
+~+|||y|1,%1%||983||+|2|q
+~/ ---------------------------------------------------------------
+~/ --- Origins for Daily Airport Trips - Overnight
+~/ ---------------------------------------------------------------
+~+|3.21|1|y|mo"airport_origins"|n
+~+|mo"airport_origins"+mf"nvehda"+(mf"nvehs2"*2)+(mf"nvehs3"*3.5)+(mf"nvpool"*6)+
+mf"nhbw1v"+mf"nhbw2v"+mf"nhbw3v"+mf"nhbw4v"+
+mf"nwalk"+mf"nbike"+mf"ntrnwa"
+~+|||y|1,%1%||983||+|2|q
+~/ ---------------------------------------------------------------
+~/ --- Exit Emme
+~/ ---------------------------------------------------------------
+q

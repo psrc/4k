@@ -1,0 +1,726 @@
+~?!i&32768
+~o|295
+reports=summary.rpt
+~/
+~/ =====
+~/ Read in Parking Costs
+~/ =====
+~+|3.11|..\input\Parking\daily_parking_costs.in|2|
+~+|3.11|..\input\Parking\hourly_parking_costs.in|2|
+~+|3.11|..\input\Parking\college_parking_costs.in|2|
+~/ =====
+~/ Read in Park and Ride Data
+~/ =====
+~+|3.11|..\input\pnr\pnr_lot_capacities.in|2|
+~+|3.11|..\input\pnr\pnr_lot_charges.in|2|
+~/ =====
+~/ Read in Mode Choice Data
+~/ =====
+~+|3.11|..\input\modechoice\intersectionspersqkm.in|2|
+~+|3.11|..\input\modechoice\landusemix.in|2|
+~+|3.11|..\input\modechoice\nonmotorized.in|2|
+~+|3.11|..\input\modechoice\retailfar.in|2|
+~/ =====
+~/ Read in Terminal Times
+~/ =====
+~+|3.11|..\input\walkaccess\origin_walkaccess.in|2|
+~+|3.11|..\input\walkaccess\destination_walkaccess.in|2|
+~/ =====
+~/ Read in Trip Productions
+~/ =====
+~+|3.11|..\input\tripends\ltpro.in|2|
+~+|3.11|..\input\tripends\mtpro.in|2|
+~+|3.11|..\input\tripends\htpro.in|2|
+~+|3.11|..\input\tripends\colpro.in|2|
+~+|3.11|..\input\tripends\hbopro.in|2|
+~+|3.11|..\input\tripends\schpro.in|2|
+~+|3.11|..\input\tripends\hsppro.in|2|
+~+|3.11|..\input\tripends\hbwpr1.in|2|
+~+|3.11|..\input\tripends\hbwpr2.in|2|
+~+|3.11|..\input\tripends\hbwpr3.in|2|
+~+|3.11|..\input\tripends\hbwpr4.in|2|
+~+|3.11|..\input\tripends\otopro.in|2|
+~+|3.11|..\input\tripends\wkopro.in|2|
+~/ =====
+~/ Read in Trip Attractions
+~/ =====
+~+|3.11|..\input\tripends\ltatt.in|2|
+~+|3.11|..\input\tripends\mtatt.in|2|
+~+|3.11|..\input\tripends\htatt.in|2|
+~+|3.11|..\input\tripends\colatt.in|2|
+~+|3.11|..\input\tripends\hboatt.in|2|
+~+|3.11|..\input\tripends\schatt.in|2|
+~+|3.11|..\input\tripends\hspatt.in|2|
+~+|3.11|..\input\tripends\hbwat1.in|2|
+~+|3.11|..\input\tripends\hbwat2.in|2|
+~+|3.11|..\input\tripends\hbwat3.in|2|
+~+|3.11|..\input\tripends\hbwat4.in|2|
+~+|3.11|..\input\tripends\otoatt.in|2|
+~+|3.11|..\input\tripends\wkoatt.in|2|
+~/ =====
+~/ Tolls
+~/ =====
+~/
+~/      ---------------------
+~/      AM Toll Input Summary
+~/      ---------------------
+~/
+s=1002
+2.41
+~/           @toll1
+~+|1|n|@toll1||ul3=0||5|4|ms4110|atl1f0|AM @toll1 sum - ul3=0|1
+~+|1|n|@toll1||ul3=1||5|4|ms4111|atl1f1|AM @toll1 sum - ul3=1|1
+~+|1|n|@toll1||ul3=2||5|4|ms4112|atl1f2|AM @toll1 sum - ul3=2|1
+~+|1|n|@toll1||ul3=3||5|4|ms4113|atl1f3|AM @toll1 sum - ul3=3|1
+~+|1|n|@toll1||ul3=4||5|4|ms4114|atl1f4|AM @toll1 sum - ul3=4|1
+~+|1|n|@toll1||ul3=5||5|4|ms4115|atl1f5|AM @toll1 sum - ul3=5|1
+~+|1|n|@toll1||ul3=6||5|4|ms4116|atl1f6|AM @toll1 sum - ul3=6|1
+~/            @toll2
+~+|1|n|@toll2||ul3=0||5|4|ms4117|atl2f0|AM @toll2 sum - ul3=0|1
+~+|1|n|@toll2||ul3=1||5|4|ms4118|atl2f1|AM @toll2 sum - ul3=1|1
+~+|1|n|@toll2||ul3=2||5|4|ms4119|atl2f2|AM @toll2 sum - ul3=2|1
+~+|1|n|@toll2||ul3=3||5|4|ms4120|atl2f3|AM @toll2 sum - ul3=3|1
+~+|1|n|@toll2||ul3=4||5|4|ms4121|atl2f4|AM @toll2 sum - ul3=4|1
+~+|1|n|@toll2||ul3=5||5|4|ms4122|atl2f5|AM @toll2 sum - ul3=5|1
+~+|1|n|@toll2||ul3=6||5|4|ms4123|atl2f6|AM @toll2 sum - ul3=6|1
+~/             @toll3
+~+|1|n|@toll3||ul3=0||5|4|ms4124|atl3f0|AM @toll3 sum - ul3=0|1
+~+|1|n|@toll3||ul3=1||5|4|ms4125|atl3f1|AM @toll3 sum - ul3=1|1
+~+|1|n|@toll3||ul3=2||5|4|ms4126|atl3f2|AM @toll3 sum - ul3=2|1
+~+|1|n|@toll3||ul3=3||5|4|ms4127|atl3f3|AM @toll3 sum - ul3=3|1
+~+|1|n|@toll3||ul3=4||5|4|ms4128|atl3f4|AM @toll3 sum - ul3=4|1
+~+|1|n|@toll3||ul3=5||5|4|ms4129|atl3f5|AM @toll3 sum - ul3=5|1
+~+|1|n|@toll3||ul3=6||5|4|ms4130|atl3f6|AM @toll3 sum - ul3=6|1
+~/              @trkc1
+~+|1|n|@trkc1||ul3=0||5|4|ms4131|atl4f0|AM @trkc1 sum - ul3=0|1
+~+|1|n|@trkc1||ul3=1||5|4|ms4132|atl4f1|AM @trkc1 sum - ul3=1|1
+~+|1|n|@trkc1||ul3=2||5|4|ms4133|atl4f2|AM @trkc1 sum - ul3=2|1
+~+|1|n|@trkc1||ul3=3||5|4|ms4134|atl4f3|AM @trkc1 sum - ul3=3|1
+~+|1|n|@trkc1||ul3=4||5|4|ms4135|atl4f4|AM @trkc1 sum - ul3=4|1
+~+|1|n|@trkc1||ul3=5||5|4|ms4136|atl4f5|AM @trkc1 sum - ul3=5|1
+~+|1|n|@trkc1||ul3=6||5|4|ms4137|atl4f6|AM @trkc1 sum - ul3=6|1
+~/               @trkc2
+~+|1|n|@trkc2||ul3=0||5|4|ms4138|atl5f0|AM @trkc2 sum - ul3=0|1
+~+|1|n|@trkc2||ul3=1||5|4|ms4139|atl5f1|AM @trkc2 sum - ul3=1|1
+~+|1|n|@trkc2||ul3=2||5|4|ms4140|atl5f2|AM @trkc2 sum - ul3=2|1
+~+|1|n|@trkc2||ul3=3||5|4|ms4141|atl5f3|AM @trkc2 sum - ul3=3|1
+~+|1|n|@trkc2||ul3=4||5|4|ms4142|atl5f4|AM @trkc2 sum - ul3=4|1
+~+|1|n|@trkc2||ul3=5||5|4|ms4143|atl5f5|AM @trkc2 sum - ul3=5|1
+~+|1|n|@trkc2||ul3=6||5|4|ms4144|atl5f6|AM @trkc2 sum - ul3=6|1
+~/                @trkc3
+~+|1|n|@trkc3||ul3=0||5|4|ms4145|atl6f0|AM @trkc3 sum - ul3=0|1
+~+|1|n|@trkc3||ul3=1||5|4|ms4146|atl6f1|AM @trkc3 sum - ul3=1|1
+~+|1|n|@trkc3||ul3=2||5|4|ms4147|atl6f2|AM @trkc3 sum - ul3=2|1
+~+|1|n|@trkc3||ul3=3||5|4|ms4148|atl6f3|AM @trkc3 sum - ul3=3|1
+~+|1|n|@trkc3||ul3=4||5|4|ms4149|atl6f4|AM @trkc3 sum - ul3=4|1
+~+|1|n|@trkc3||ul3=5||5|4|ms4150|atl6f5|AM @trkc3 sum - ul3=5|1
+~+|1|n|@trkc3||ul3=6||5|4|ms4151|atl6f6|AM @trkc3 sum - ul3=6|1
+q
+~/
+~/      ---------------------
+~/      MD Toll Input Summary
+~/      ---------------------
+~/
+s=1004
+2.41
+~/           @toll1
+~+|1|n|@toll1||ul3=0||5|4|ms4152|mtl1f0|MD @toll1 sum - ul3=0|1
+~+|1|n|@toll1||ul3=1||5|4|ms4153|mtl1f1|MD @toll1 sum - ul3=1|1
+~+|1|n|@toll1||ul3=2||5|4|ms4154|mtl1f2|MD @toll1 sum - ul3=2|1
+~+|1|n|@toll1||ul3=3||5|4|ms4155|mtl1f3|MD @toll1 sum - ul3=3|1
+~+|1|n|@toll1||ul3=4||5|4|ms4156|mtl1f4|MD @toll1 sum - ul3=4|1
+~+|1|n|@toll1||ul3=5||5|4|ms4157|mtl1f5|MD @toll1 sum - ul3=5|1
+~+|1|n|@toll1||ul3=6||5|4|ms4158|mtl1f6|MD @toll1 sum - ul3=6|1
+~/            @toll2
+~+|1|n|@toll2||ul3=0||5|4|ms4159|mtl2f0|MD @toll2 sum - ul3=0|1
+~+|1|n|@toll2||ul3=1||5|4|ms4160|mtl2f1|MD @toll2 sum - ul3=1|1
+~+|1|n|@toll2||ul3=2||5|4|ms4161|mtl2f2|MD @toll2 sum - ul3=2|1
+~+|1|n|@toll2||ul3=3||5|4|ms4162|mtl2f3|MD @toll2 sum - ul3=3|1
+~+|1|n|@toll2||ul3=4||5|4|ms4163|mtl2f4|MD @toll2 sum - ul3=4|1
+~+|1|n|@toll2||ul3=5||5|4|ms4164|mtl2f5|MD @toll2 sum - ul3=5|1
+~+|1|n|@toll2||ul3=6||5|4|ms4165|mtl2f6|MD @toll2 sum - ul3=6|1
+~/             @toll3
+~+|1|n|@toll3||ul3=0||5|4|ms4166|mtl3f0|MD @toll3 sum - ul3=0|1
+~+|1|n|@toll3||ul3=1||5|4|ms4167|mtl3f1|MD @toll3 sum - ul3=1|1
+~+|1|n|@toll3||ul3=2||5|4|ms4168|mtl3f2|MD @toll3 sum - ul3=2|1
+~+|1|n|@toll3||ul3=3||5|4|ms4169|mtl3f3|MD @toll3 sum - ul3=3|1
+~+|1|n|@toll3||ul3=4||5|4|ms4170|mtl3f4|MD @toll3 sum - ul3=4|1
+~+|1|n|@toll3||ul3=5||5|4|ms4171|mtl3f5|MD @toll3 sum - ul3=5|1
+~+|1|n|@toll3||ul3=6||5|4|ms4172|mtl3f6|MD @toll3 sum - ul3=6|1
+~/              @trkc1
+~+|1|n|@trkc1||ul3=0||5|4|ms4173|mtl4f0|MD @trkc1 sum - ul3=0|1
+~+|1|n|@trkc1||ul3=1||5|4|ms4174|mtl4f1|MD @trkc1 sum - ul3=1|1
+~+|1|n|@trkc1||ul3=2||5|4|ms4175|mtl4f2|MD @trkc1 sum - ul3=2|1
+~+|1|n|@trkc1||ul3=3||5|4|ms4176|mtl4f3|MD @trkc1 sum - ul3=3|1
+~+|1|n|@trkc1||ul3=4||5|4|ms4177|mtl4f4|MD @trkc1 sum - ul3=4|1
+~+|1|n|@trkc1||ul3=5||5|4|ms4178|mtl4f5|MD @trkc1 sum - ul3=5|1
+~+|1|n|@trkc1||ul3=6||5|4|ms4179|mtl4f6|MD @trkc1 sum - ul3=6|1
+~/               @trkc2
+~+|1|n|@trkc2||ul3=0||5|4|ms4180|mtl5f0|MD @trkc2 sum - ul3=0|1
+~+|1|n|@trkc2||ul3=1||5|4|ms4181|mtl5f1|MD @trkc2 sum - ul3=1|1
+~+|1|n|@trkc2||ul3=2||5|4|ms4182|mtl5f2|MD @trkc2 sum - ul3=2|1
+~+|1|n|@trkc2||ul3=3||5|4|ms4183|mtl5f3|MD @trkc2 sum - ul3=3|1
+~+|1|n|@trkc2||ul3=4||5|4|ms4184|mtl5f4|MD @trkc2 sum - ul3=4|1
+~+|1|n|@trkc2||ul3=5||5|4|ms4185|mtl5f5|MD @trkc2 sum - ul3=5|1
+~+|1|n|@trkc2||ul3=6||5|4|ms4186|mtl5f6|MD @trkc2 sum - ul3=6|1
+~/                @trkc3
+~+|1|n|@trkc3||ul3=0||5|4|ms4187|mtl6f0|MD @trkc3 sum - ul3=0|1
+~+|1|n|@trkc3||ul3=1||5|4|ms4188|mtl6f1|MD @trkc3 sum - ul3=1|1
+~+|1|n|@trkc3||ul3=2||5|4|ms4189|mtl6f2|MD @trkc3 sum - ul3=2|1
+~+|1|n|@trkc3||ul3=3||5|4|ms4190|mtl6f3|MD @trkc3 sum - ul3=3|1
+~+|1|n|@trkc3||ul3=4||5|4|ms4191|mtl6f4|MD @trkc3 sum - ul3=4|1
+~+|1|n|@trkc3||ul3=5||5|4|ms4192|mtl6f5|MD @trkc3 sum - ul3=5|1
+~+|1|n|@trkc3||ul3=6||5|4|ms4193|mtl6f6|MD @trkc3 sum - ul3=6|1
+q
+~/
+~/      ---------------------
+~/      PM Toll Input Summary
+~/      ---------------------
+~/
+s=1003
+2.41
+~/           @toll1
+~+|1|n|@toll1||ul3=0||5|4|ms4194|ptl1f0|PM @toll1 sum - ul3=0|1
+~+|1|n|@toll1||ul3=1||5|4|ms4195|ptl1f1|PM @toll1 sum - ul3=1|1
+~+|1|n|@toll1||ul3=2||5|4|ms4196|ptl1f2|PM @toll1 sum - ul3=2|1
+~+|1|n|@toll1||ul3=3||5|4|ms4197|ptl1f3|PM @toll1 sum - ul3=3|1
+~+|1|n|@toll1||ul3=4||5|4|ms4198|ptl1f4|PM @toll1 sum - ul3=4|1
+~+|1|n|@toll1||ul3=5||5|4|ms4199|ptl1f5|PM @toll1 sum - ul3=5|1
+~+|1|n|@toll1||ul3=6||5|4|ms4200|ptl1f6|PM @toll1 sum - ul3=6|1
+~/            @toll2
+~+|1|n|@toll2||ul3=0||5|4|ms4201|ptl2f0|PM @toll2 sum - ul3=0|1
+~+|1|n|@toll2||ul3=1||5|4|ms4202|ptl2f1|PM @toll2 sum - ul3=1|1
+~+|1|n|@toll2||ul3=2||5|4|ms4203|ptl2f2|PM @toll2 sum - ul3=2|1
+~+|1|n|@toll2||ul3=3||5|4|ms4204|ptl2f3|PM @toll2 sum - ul3=3|1
+~+|1|n|@toll2||ul3=4||5|4|ms4205|ptl2f4|PM @toll2 sum - ul3=4|1
+~+|1|n|@toll2||ul3=5||5|4|ms4206|ptl2f5|PM @toll2 sum - ul3=5|1
+~+|1|n|@toll2||ul3=6||5|4|ms4207|ptl2f6|PM @toll2 sum - ul3=6|1
+~/             @toll3
+~+|1|n|@toll3||ul3=0||5|4|ms4208|ptl3f0|PM @toll3 sum - ul3=0|1
+~+|1|n|@toll3||ul3=1||5|4|ms4209|ptl3f1|PM @toll3 sum - ul3=1|1
+~+|1|n|@toll3||ul3=2||5|4|ms4210|ptl3f2|PM @toll3 sum - ul3=2|1
+~+|1|n|@toll3||ul3=3||5|4|ms4211|ptl3f3|PM @toll3 sum - ul3=3|1
+~+|1|n|@toll3||ul3=4||5|4|ms4212|ptl3f4|PM @toll3 sum - ul3=4|1
+~+|1|n|@toll3||ul3=5||5|4|ms4213|ptl3f5|PM @toll3 sum - ul3=5|1
+~+|1|n|@toll3||ul3=6||5|4|ms4214|ptl3f6|PM @toll3 sum - ul3=6|1
+~/              @trkc1
+~+|1|n|@trkc1||ul3=0||5|4|ms4215|ptl4f0|PM @trkc1 sum - ul3=0|1
+~+|1|n|@trkc1||ul3=1||5|4|ms4216|ptl4f1|PM @trkc1 sum - ul3=1|1
+~+|1|n|@trkc1||ul3=2||5|4|ms4217|ptl4f2|PM @trkc1 sum - ul3=2|1
+~+|1|n|@trkc1||ul3=3||5|4|ms4218|ptl4f3|PM @trkc1 sum - ul3=3|1
+~+|1|n|@trkc1||ul3=4||5|4|ms4219|ptl4f4|PM @trkc1 sum - ul3=4|1
+~+|1|n|@trkc1||ul3=5||5|4|ms4220|ptl4f5|PM @trkc1 sum - ul3=5|1
+~+|1|n|@trkc1||ul3=6||5|4|ms4221|ptl4f6|PM @trkc1 sum - ul3=6|1
+~/               @trkc2
+~+|1|n|@trkc2||ul3=0||5|4|ms4222|ptl5f0|PM @trkc2 sum - ul3=0|1
+~+|1|n|@trkc2||ul3=1||5|4|ms4223|ptl5f1|PM @trkc2 sum - ul3=1|1
+~+|1|n|@trkc2||ul3=2||5|4|ms4224|ptl5f2|PM @trkc2 sum - ul3=2|1
+~+|1|n|@trkc2||ul3=3||5|4|ms4225|ptl5f3|PM @trkc2 sum - ul3=3|1
+~+|1|n|@trkc2||ul3=4||5|4|ms4226|ptl5f4|PM @trkc2 sum - ul3=4|1
+~+|1|n|@trkc2||ul3=5||5|4|ms4227|ptl5f5|PM @trkc2 sum - ul3=5|1
+~+|1|n|@trkc2||ul3=6||5|4|ms4228|ptl5f6|PM @trkc2 sum - ul3=6|1
+~/                @trkc3
+~+|1|n|@trkc3||ul3=0||5|4|ms4229|ptl6f0|PM @trkc3 sum - ul3=0|1
+~+|1|n|@trkc3||ul3=1||5|4|ms4230|ptl6f1|PM @trkc3 sum - ul3=1|1
+~+|1|n|@trkc3||ul3=2||5|4|ms4231|ptl6f2|PM @trkc3 sum - ul3=2|1
+~+|1|n|@trkc3||ul3=3||5|4|ms4232|ptl6f3|PM @trkc3 sum - ul3=3|1
+~+|1|n|@trkc3||ul3=4||5|4|ms4233|ptl6f4|PM @trkc3 sum - ul3=4|1
+~+|1|n|@trkc3||ul3=5||5|4|ms4234|ptl6f5|PM @trkc3 sum - ul3=5|1
+~+|1|n|@trkc3||ul3=6||5|4|ms4235|ptl6f6|PM @trkc3 sum - ul3=6|1
+q
+~/
+~/      ---------------------
+~/      EV Toll Input Summary
+~/      ---------------------
+~/
+s=1005
+2.41
+~/           @toll1
+~+|1|n|@toll1||ul3=0||5|4|ms4236|etl1f0|EV @toll1 sum - ul3=0|1
+~+|1|n|@toll1||ul3=1||5|4|ms4237|etl1f1|EV @toll1 sum - ul3=1|1
+~+|1|n|@toll1||ul3=2||5|4|ms4238|etl1f2|EV @toll1 sum - ul3=2|1
+~+|1|n|@toll1||ul3=3||5|4|ms4239|etl1f3|EV @toll1 sum - ul3=3|1
+~+|1|n|@toll1||ul3=4||5|4|ms4240|etl1f4|EV @toll1 sum - ul3=4|1
+~+|1|n|@toll1||ul3=5||5|4|ms4241|etl1f5|EV @toll1 sum - ul3=5|1
+~+|1|n|@toll1||ul3=6||5|4|ms4242|etl1f6|EV @toll1 sum - ul3=6|1
+~/            @toll2
+~+|1|n|@toll2||ul3=0||5|4|ms4243|etl2f0|EV @toll2 sum - ul3=0|1
+~+|1|n|@toll2||ul3=1||5|4|ms4244|etl2f1|EV @toll2 sum - ul3=1|1
+~+|1|n|@toll2||ul3=2||5|4|ms4245|etl2f2|EV @toll2 sum - ul3=2|1
+~+|1|n|@toll2||ul3=3||5|4|ms4246|etl2f3|EV @toll2 sum - ul3=3|1
+~+|1|n|@toll2||ul3=4||5|4|ms4247|etl2f4|EV @toll2 sum - ul3=4|1
+~+|1|n|@toll2||ul3=5||5|4|ms4248|etl2f5|EV @toll2 sum - ul3=5|1
+~+|1|n|@toll2||ul3=6||5|4|ms4249|etl2f6|EV @toll2 sum - ul3=6|1
+~/             @toll3
+~+|1|n|@toll3||ul3=0||5|4|ms4250|etl3f0|EV @toll3 sum - ul3=0|1
+~+|1|n|@toll3||ul3=1||5|4|ms4251|etl3f1|EV @toll3 sum - ul3=1|1
+~+|1|n|@toll3||ul3=2||5|4|ms4252|etl3f2|EV @toll3 sum - ul3=2|1
+~+|1|n|@toll3||ul3=3||5|4|ms4253|etl3f3|EV @toll3 sum - ul3=3|1
+~+|1|n|@toll3||ul3=4||5|4|ms4254|etl3f4|EV @toll3 sum - ul3=4|1
+~+|1|n|@toll3||ul3=5||5|4|ms4255|etl3f5|EV @toll3 sum - ul3=5|1
+~+|1|n|@toll3||ul3=6||5|4|ms4256|etl3f6|EV @toll3 sum - ul3=6|1
+~/              @trkc1
+~+|1|n|@trkc1||ul3=0||5|4|ms4257|etl4f0|EV @trkc1 sum - ul3=0|1
+~+|1|n|@trkc1||ul3=1||5|4|ms4258|etl4f1|EV @trkc1 sum - ul3=1|1
+~+|1|n|@trkc1||ul3=2||5|4|ms4259|etl4f2|EV @trkc1 sum - ul3=2|1
+~+|1|n|@trkc1||ul3=3||5|4|ms4260|etl4f3|EV @trkc1 sum - ul3=3|1
+~+|1|n|@trkc1||ul3=4||5|4|ms4261|etl4f4|EV @trkc1 sum - ul3=4|1
+~+|1|n|@trkc1||ul3=5||5|4|ms4262|etl4f5|EV @trkc1 sum - ul3=5|1
+~+|1|n|@trkc1||ul3=6||5|4|ms4263|etl4f6|EV @trkc1 sum - ul3=6|1
+~/               @trkc2
+~+|1|n|@trkc2||ul3=0||5|4|ms4264|etl5f0|EV @trkc2 sum - ul3=0|1
+~+|1|n|@trkc2||ul3=1||5|4|ms4265|etl5f1|EV @trkc2 sum - ul3=1|1
+~+|1|n|@trkc2||ul3=2||5|4|ms4266|etl5f2|EV @trkc2 sum - ul3=2|1
+~+|1|n|@trkc2||ul3=3||5|4|ms4267|etl5f3|EV @trkc2 sum - ul3=3|1
+~+|1|n|@trkc2||ul3=4||5|4|ms4268|etl5f4|EV @trkc2 sum - ul3=4|1
+~+|1|n|@trkc2||ul3=5||5|4|ms4269|etl5f5|EV @trkc2 sum - ul3=5|1
+~+|1|n|@trkc2||ul3=6||5|4|ms4270|etl5f6|EV @trkc2 sum - ul3=6|1
+~/                @trkc3
+~+|1|n|@trkc3||ul3=0||5|4|ms4271|etl6f0|EV @trkc3 sum - ul3=0|1
+~+|1|n|@trkc3||ul3=1||5|4|ms4272|etl6f1|EV @trkc3 sum - ul3=1|1
+~+|1|n|@trkc3||ul3=2||5|4|ms4273|etl6f2|EV @trkc3 sum - ul3=2|1
+~+|1|n|@trkc3||ul3=3||5|4|ms4274|etl6f3|EV @trkc3 sum - ul3=3|1
+~+|1|n|@trkc3||ul3=4||5|4|ms4275|etl6f4|EV @trkc3 sum - ul3=4|1
+~+|1|n|@trkc3||ul3=5||5|4|ms4276|etl6f5|EV @trkc3 sum - ul3=5|1
+~+|1|n|@trkc3||ul3=6||5|4|ms4277|etl6f6|EV @trkc3 sum - ul3=6|1
+q
+~/
+~/      ---------------------
+~/      NI Toll Input Summary
+~/      ---------------------
+~/
+s=1006
+2.41
+~/           @toll1
+~+|1|n|@toll1||ul3=0||5|4|ms4278|ntl1f0|NI @toll1 sum - ul3=0|1
+~+|1|n|@toll1||ul3=1||5|4|ms4279|ntl1f1|NI @toll1 sum - ul3=1|1
+~+|1|n|@toll1||ul3=2||5|4|ms4280|ntl1f2|NI @toll1 sum - ul3=2|1
+~+|1|n|@toll1||ul3=3||5|4|ms4281|ntl1f3|NI @toll1 sum - ul3=3|1
+~+|1|n|@toll1||ul3=4||5|4|ms4282|ntl1f4|NI @toll1 sum - ul3=4|1
+~+|1|n|@toll1||ul3=5||5|4|ms4283|ntl1f5|NI @toll1 sum - ul3=5|1
+~+|1|n|@toll1||ul3=6||5|4|ms4284|ntl1f6|NI @toll1 sum - ul3=6|1
+~/            @toll2
+~+|1|n|@toll2||ul3=0||5|4|ms4285|ntl2f0|NI @toll2 sum - ul3=0|1
+~+|1|n|@toll2||ul3=1||5|4|ms4286|ntl2f1|NI @toll2 sum - ul3=1|1
+~+|1|n|@toll2||ul3=2||5|4|ms4287|ntl2f2|NI @toll2 sum - ul3=2|1
+~+|1|n|@toll2||ul3=3||5|4|ms4288|ntl2f3|NI @toll2 sum - ul3=3|1
+~+|1|n|@toll2||ul3=4||5|4|ms4289|ntl2f4|NI @toll2 sum - ul3=4|1
+~+|1|n|@toll2||ul3=5||5|4|ms4290|ntl2f5|NI @toll2 sum - ul3=5|1
+~+|1|n|@toll2||ul3=6||5|4|ms4291|ntl2f6|NI @toll2 sum - ul3=6|1
+~/             @toll3
+~+|1|n|@toll3||ul3=0||5|4|ms4292|ntl3f0|NI @toll3 sum - ul3=0|1
+~+|1|n|@toll3||ul3=1||5|4|ms4293|ntl3f1|NI @toll3 sum - ul3=1|1
+~+|1|n|@toll3||ul3=2||5|4|ms4294|ntl3f2|NI @toll3 sum - ul3=2|1
+~+|1|n|@toll3||ul3=3||5|4|ms4295|ntl3f3|NI @toll3 sum - ul3=3|1
+~+|1|n|@toll3||ul3=4||5|4|ms4296|ntl3f4|NI @toll3 sum - ul3=4|1
+~+|1|n|@toll3||ul3=5||5|4|ms4297|ntl3f5|NI @toll3 sum - ul3=5|1
+~+|1|n|@toll3||ul3=6||5|4|ms4298|ntl3f6|NI @toll3 sum - ul3=6|1
+~/              @trkc1
+~+|1|n|@trkc1||ul3=0||5|4|ms4299|ntl4f0|NI @trkc1 sum - ul3=0|1
+~+|1|n|@trkc1||ul3=1||5|4|ms4300|ntl4f1|NI @trkc1 sum - ul3=1|1
+~+|1|n|@trkc1||ul3=2||5|4|ms4301|ntl4f2|NI @trkc1 sum - ul3=2|1
+~+|1|n|@trkc1||ul3=3||5|4|ms4302|ntl4f3|NI @trkc1 sum - ul3=3|1
+~+|1|n|@trkc1||ul3=4||5|4|ms4303|ntl4f4|NI @trkc1 sum - ul3=4|1
+~+|1|n|@trkc1||ul3=5||5|4|ms4304|ntl4f5|NI @trkc1 sum - ul3=5|1
+~+|1|n|@trkc1||ul3=6||5|4|ms4305|ntl4f6|NI @trkc1 sum - ul3=6|1
+~/               @trkc2
+~+|1|n|@trkc2||ul3=0||5|4|ms4306|ntl5f0|NI @trkc2 sum - ul3=0|1
+~+|1|n|@trkc2||ul3=1||5|4|ms4307|ntl5f1|NI @trkc2 sum - ul3=1|1
+~+|1|n|@trkc2||ul3=2||5|4|ms4308|ntl5f2|NI @trkc2 sum - ul3=2|1
+~+|1|n|@trkc2||ul3=3||5|4|ms4309|ntl5f3|NI @trkc2 sum - ul3=3|1
+~+|1|n|@trkc2||ul3=4||5|4|ms4310|ntl5f4|NI @trkc2 sum - ul3=4|1
+~+|1|n|@trkc2||ul3=5||5|4|ms4311|ntl5f5|NI @trkc2 sum - ul3=5|1
+~+|1|n|@trkc2||ul3=6||5|4|ms4312|ntl5f6|NI @trkc2 sum - ul3=6|1
+~/                @trkc3
+~+|1|n|@trkc3||ul3=0||5|4|ms4313|ntl6f0|NI @trkc3 sum - ul3=0|1
+~+|1|n|@trkc3||ul3=1||5|4|ms4314|ntl6f1|NI @trkc3 sum - ul3=1|1
+~+|1|n|@trkc3||ul3=2||5|4|ms4315|ntl6f2|NI @trkc3 sum - ul3=2|1
+~+|1|n|@trkc3||ul3=3||5|4|ms4316|ntl6f3|NI @trkc3 sum - ul3=3|1
+~+|1|n|@trkc3||ul3=4||5|4|ms4317|ntl6f4|NI @trkc3 sum - ul3=4|1
+~+|1|n|@trkc3||ul3=5||5|4|ms4318|ntl6f5|NI @trkc3 sum - ul3=5|1
+~+|1|n|@trkc3||ul3=6||5|4|ms4319|ntl6f6|NI @trkc3 sum - ul3=6|1
+q
+~/
+~/ ==============
+~/ Arterial Delay
+~/ ==============
+~/
+~/      ----------------
+~/      AM @rdly Summary
+~/      ----------------
+~/
+s=1002
+2.41
+~+|1|n|@rdly||ul3=0||5|4|ms4320|ardly0|AM @rdly sum - ul3=0|1
+~+|1|n|@rdly||ul3=1||5|4|ms4321|ardly1|AM @rdly sum - ul3=1|1
+~+|1|n|@rdly||ul3=2||5|4|ms4322|ardly2|AM @rdly sum - ul3=2|1
+~+|1|n|@rdly||ul3=3||5|4|ms4323|ardly3|AM @rdly sum - ul3=3|1
+~+|1|n|@rdly||ul3=4||5|4|ms4324|ardly4|AM @rdly sum - ul3=4|1
+~+|1|n|@rdly||ul3=5||5|4|ms4325|ardly5|AM @rdly sum - ul3=5|1
+~+|1|n|@rdly||ul3=6||5|4|ms4326|ardly6|AM @rdly sum - ul3=6|1
+q
+~/      ----------------
+~/      MD @rdly Summary
+~/      ----------------
+~/
+s=1004
+2.41
+~+|1|n|@rdly||ul3=0||5|4|ms4327|mrdly0|MD @rdly sum - ul3=0|1
+~+|1|n|@rdly||ul3=1||5|4|ms4328|mrdly1|MD @rdly sum - ul3=1|1
+~+|1|n|@rdly||ul3=2||5|4|ms4329|mrdly2|MD @rdly sum - ul3=2|1
+~+|1|n|@rdly||ul3=3||5|4|ms4330|mrdly3|MD @rdly sum - ul3=3|1
+~+|1|n|@rdly||ul3=4||5|4|ms4331|mrdly4|MD @rdly sum - ul3=4|1
+~+|1|n|@rdly||ul3=5||5|4|ms4332|mrdly5|MD @rdly sum - ul3=5|1
+~+|1|n|@rdly||ul3=6||5|4|ms4333|mrdly6|MD @rdly sum - ul3=6|1
+q
+~/      ----------------
+~/      PM @rdly Summary
+~/      ----------------
+~/
+s=1003
+2.41
+~+|1|n|@rdly||ul3=0||5|4|ms4334|prdly0|PM @rdly sum - ul3=0|1
+~+|1|n|@rdly||ul3=1||5|4|ms4335|prdly1|PM @rdly sum - ul3=1|1
+~+|1|n|@rdly||ul3=2||5|4|ms4336|prdly2|PM @rdly sum - ul3=2|1
+~+|1|n|@rdly||ul3=3||5|4|ms4337|prdly3|PM @rdly sum - ul3=3|1
+~+|1|n|@rdly||ul3=4||5|4|ms4338|prdly4|PM @rdly sum - ul3=4|1
+~+|1|n|@rdly||ul3=5||5|4|ms4339|prdly5|PM @rdly sum - ul3=5|1
+~+|1|n|@rdly||ul3=6||5|4|ms4340|prdly6|PM @rdly sum - ul3=6|1
+q
+~/      ----------------
+~/      EV @rdly Summary
+~/      ----------------
+~/
+s=1005
+2.41
+~+|1|n|@rdly||ul3=0||5|4|ms4341|erdly0|EV @rdly sum - ul3=0|1
+~+|1|n|@rdly||ul3=1||5|4|ms4342|erdly1|EV @rdly sum - ul3=1|1
+~+|1|n|@rdly||ul3=2||5|4|ms4343|erdly2|EV @rdly sum - ul3=2|1
+~+|1|n|@rdly||ul3=3||5|4|ms4344|erdly3|EV @rdly sum - ul3=3|1
+~+|1|n|@rdly||ul3=4||5|4|ms4345|erdly4|EV @rdly sum - ul3=4|1
+~+|1|n|@rdly||ul3=5||5|4|ms4346|erdly5|EV @rdly sum - ul3=5|1
+~+|1|n|@rdly||ul3=6||5|4|ms4347|erdly6|EV @rdly sum - ul3=6|1
+q
+~/      ----------------
+~/      NI @rdly Summary
+~/      ----------------
+~/
+s=1006
+2.41
+~+|1|n|@rdly||ul3=0||5|4|ms4348|nrdly0|NI @rdly sum - ul3=0|1
+~+|1|n|@rdly||ul3=1||5|4|ms4349|nrdly1|NI @rdly sum - ul3=1|1
+~+|1|n|@rdly||ul3=2||5|4|ms4350|nrdly2|NI @rdly sum - ul3=2|1
+~+|1|n|@rdly||ul3=3||5|4|ms4351|nrdly3|NI @rdly sum - ul3=3|1
+~+|1|n|@rdly||ul3=4||5|4|ms4352|nrdly4|NI @rdly sum - ul3=4|1
+~+|1|n|@rdly||ul3=5||5|4|ms4353|nrdly5|NI @rdly sum - ul3=5|1
+~+|1|n|@rdly||ul3=6||5|4|ms4354|nrdly6|NI @rdly sum - ul3=6|1
+q
+~/ =========
+~/ Externals
+~/ =========
+~/
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4355|y|excolp|External Col Productions|0|mo"colpro"|||y|3733,3750|||2
+~+|1|y|ms4356|y|exhbop|External HBO Productions|0|mo"hbopro"|||y|3733,3750|||2
+~+|1|y|ms4357|y|exschp|External Sch Productions|0|mo"schpro"|||y|3733,3750|||2
+~+|1|y|ms4358|y|exhspp|External HSP Productions|0|mo"hsppro"|||y|3733,3750|||2
+~+|1|y|ms4359|y|exhw1p|External HBW1 Productions|0|mo"hbwpr1"|||y|3733,3750|||2
+~+|1|y|ms4360|y|exhw2p|External HBW2 Productions|0|mo"hbwpr2"|||y|3733,3750|||2
+~+|1|y|ms4361|y|exhw3p|External HBW3 Productions|0|mo"hbwpr3"|||y|3733,3750|||2
+~+|1|y|ms4362|y|exhw4p|External HBW4 Productions|0|mo"hbwpr4"|||y|3733,3750|||2
+~+|1|y|ms4363|y|exotop|External OTO Productions|0|mo"otopro"|||y|3733,3750|||2
+~+|1|y|ms4364|y|exwkop|External WKO Productions|0|mo"wkopro"|||y|3733,3750|||2
+~+|1|y|ms4365|y|excola|External Col Attractions|0|md"colatt"|||y|3733,3750|||2
+~+|1|y|ms4366|y|exhboa|External HBO Attractions|0|md"hboatt"|||y|3733,3750|||2
+~+|1|y|ms4367|y|exscha|External Sch Attractions|0|md"schatt"|||y|3733,3750|||2
+~+|1|y|ms4368|y|exhspa|External HSP Attractions|0|md"hspatt"|||y|3733,3750|||2
+~+|1|y|ms4369|y|exhw1a|External HBW1 Attractions|0|md"hbwat1"|||y|3733,3750|||2
+~+|1|y|ms4370|y|exhw2a|External HBW2 Attractions|0|md"hbwat2"|||y|3733,3750|||2
+~+|1|y|ms4371|y|exhw3a|External HBW3 Attractions|0|md"hbwat3"|||y|3733,3750|||2
+~+|1|y|ms4372|y|exhw4a|External HBW4 Attractions|0|md"hbwat4"|||y|3733,3750|||2
+~+|1|y|ms4373|y|exotoa|External OTO Attractions|0|md"otoatt"|||y|3733,3750|||2
+~+|1|y|ms4374|y|exwkoa|External WKO Attractions|0|md"wkoatt"|||y|3733,3750|||2
+q
+~/ ==========
+~/ Thru Trips
+~/ ==========
+~/
+3.12
+~+|1|mf100|thru|thru trips|0
+q
+~/      ---------------
+~/      Load thru trips
+~/      ---------------
+~/
+3.11
+~+|..\input\externals\thru\thru_trips.in|2|
+~#
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4375|y|exthru|External Thru Trips|0|mf"thru"|||n|||2
+q
+~/      --------------------
+~/      Remove temp matrices
+~/      --------------------
+~/
+3.12
+~+|2|mf100|y
+q
+~/ ====================
+~/ Heavy Truck External Trips
+~/ ====================
+~/
+3.12
+~+|1|mf100|hvyee|truck ext-ext trips|0
+~+|1|mf101|hvyei|truck ext-int trips|0
+~+|1|mf102|hvyie|truck int-ext trips|0
+q
+~/      -------------------------
+~/      Load truck external trips
+~/      -------------------------
+~/
+3.11
+~+|..\input\externals\trucks\heavy_trucks_ee.in|2|
+~#
+3.11
+~+|..\input\externals\trucks\heavy_trucks_ei.in|2|
+~#
+3.11
+~+|..\input\externals\trucks\heavy_trucks_ie.in|2|
+~#
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4376|y|reebee|Truck ext-ext Thru Trips|0|mf"hvyee"|||n|||2
+~+|1|y|ms4377|y|reebei|Truck ext-int Thru Trips|0|mf"hvyei"|||n|||2
+~+|1|y|ms4378|y|reebie|Truck int-ext Thru Trips|0|mf"hvyie"|||n|||2
+q
+~/      --------------------
+~/      Remove temp matrices
+~/      --------------------
+~/
+3.12
+~+|2|mf100|y
+~+|2|mf101|y
+~+|2|mf102|y
+q
+~/ =============
+~/ Transit Fares
+~/ =============
+~/
+3.12
+~+|1|mf100|afarbx|am fare box|0
+~+|1|mf101|mfarbx|md fare box|0
+~+|1|mf102|afarps|am fare pass|0
+~+|1|mf103|mfarps|md fare pass|0
+q
+~/      ------------------
+~/      Load fare ensemble
+~/      ------------------
+~/
+3.01
+~+|1|..\parameters\ensembles\transit_fare_zones.ens|2
+q
+~/      ------------------
+~/      Load transit fares
+~/      ------------------
+~/
+3.11
+~+|..\input\fares\am_fares_farebox.in|2|
+~#
+3.11
+~+|..\input\fares\md_fares_farebox.in|2|
+~#
+3.11
+~+|..\input\fares\am_fares_monthly_pass.in|2|
+~#
+3.11
+~+|..\input\fares\md_fares_monthly_pass.in|2|
+~#
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4379|y|afareb|AM fare box|0|mf"afarbx"|||n|||2
+~+|1|y|ms4380|y|mfareb|MD fare box|0|mf"mfarbx"|||n|||2
+~+|1|y|ms4381|y|afarep|AM fare monthly pass|0|mf"afarps"|||n|||2
+~+|1|y|ms4382|y|mfarep|MD fare monthly pass|0|mf"mfarps"|||n|||2
+q
+~/      --------------------
+~/      Remove temp matrices
+~/      --------------------
+~/
+3.12
+~+|2|mf100|y
+~+|2|mf101|y
+~+|2|mf102|y
+~+|2|mf103|y
+q
+~/ ===========
+~/ Mode Choice
+~/ ===========
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4383|y|intden|Intersection density|0|mo"intden"|||n||2
+~+|1|y|ms4384|y|usemix|Land use mix|0|mo"usemix"|||n||2
+~+|1|y|ms4385|y|nonmot|Ratio of nonmotor facilities|0|mo"nonmot"|||n||2
+~+|1|y|ms4386|y|retfar|Retail intensity|0|mo"retfar"|||n||2
+q
+~/ ========
+~/ Vanpools
+~/ ========
+~/
+3.12
+~+|1|mf100|dvpool|Daily vanpool demand|0
+q
+~/      -------------
+~/      Load vanpools
+~/      -------------
+~/
+3.11
+~+|..\parameters\vanpools\vanpools.in|2|
+~#
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4387|y|dvpool|Daily vanpool trips|0|mf"dvpool"|||n|||2
+q
+~/      --------------------
+~/      Remove temp matrices
+~/      --------------------
+~/
+3.12
+~+|2|mf100|y
+q
+~/ =============
+~/ Parking Costs
+~/ =============
+~/
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4388|y|parkda|Daily parking cost|0|md"daily"|||n||2
+~+|1|y|ms4389|y|parkhr|Hourly parking cost|0|md"hourly"|||n||2
+~+|1|y|ms4390|y|parkco|College parking cost|0|md"colleg"|||n||2
+q
+~/ ===========
+~/ Park-&-Ride
+~/ ===========
+
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4391|y|pnrcap|P&R capacity|0|md"pnrcap"|||n||2
+~+|1|y|ms4392|y|pnrchg|P&R charge|0|md"pnrchg"|||n||2
+q
+~/ =========
+~/ Trip Ends
+~/ =========
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4393|y|colpro|Col Productions|0|mo"colpro"|||y|1,3750|||2
+~+|1|y|ms4394|y|hbopro|HBO Productions|0|mo"hbopro"|||y|1,3750|||2
+~+|1|y|ms4395|y|schpro|Sch Productions|0|mo"schpro"|||y|1,3750|||2
+~+|1|y|ms4396|y|hsppr1|HSP Productions|0|mo"hsppro"|||y|1,3750|||2
+~+|1|y|ms4397|y|hbwpr1|HBW1 Productions|0|mo"hbwpr1"|||y|1,3750|||2
+~+|1|y|ms4398|y|hbwpr2|HBW2 Productions|0|mo"hbwpr2"|||y|1,3750|||2
+~+|1|y|ms4399|y|hbwpr3|HBW3 Productions|0|mo"hbwpr3"|||y|1,3750|||2
+~+|1|y|ms4400|y|hbwpr4|HBW4 Productions|0|mo"hbwpr4"|||y|1,3750|||2
+~+|1|y|ms4401|y|otopro|OTO Productions|0|mo"otopro"|||y|1,3750|||2
+~+|1|y|ms4402|y|wkopro|WKO Productions|0|mo"wkopro"|||y|1,3750|||2
+~+|1|y|ms4403|y|ltpro|Light Truck Productions|0|mo"ltpro"|||y|1,3750|||2
+~+|1|y|ms4404|y|mtpro|Medium Truck Productions|0|mo"mtpro"|||y|1,3750|||2
+~+|1|y|ms4405|y|htpro|Heavy Truck Productions|0|mo"htpro"|||y|1,3750|||2
+~+|1|y|ms4406|y|colatt|Col Attractions|0|md"colatt"|||y|1,3750|||2
+~+|1|y|ms4407|y|hboatt|HBO Attractions|0|md"hboatt"|||y|1,3750|||2
+~+|1|y|ms4408|y|schatt|Sch Attractions|0|md"schatt"|||y|1,3750|||2
+~+|1|y|ms4409|y|hspatt|HSP Attractions|0|md"hspatt"|||y|1,3750|||2
+~+|1|y|ms4410|y|hbwat1|HBW1 Attractions|0|md"hbwat1"|||y|1,3750|||2
+~+|1|y|ms4411|y|hbwat2|HBW2 Attractions|0|md"hbwat2"|||y|1,3750|||2
+~+|1|y|ms4412|y|hbwat3|HBW3 Attractions|0|md"hbwat3"|||y|1,3750|||2
+~+|1|y|ms4413|y|hbwat4|HBW4 Attractions|0|md"hbwat4"|||y|1,3750|||2
+~+|1|y|ms4414|y|otoatt|OTO Attractions|0|md"otoatt"|||y|1,3750|||2
+~+|1|y|ms4415|y|wkoatt|WKO Attractions|0|md"wkoatt"|||y|1,3750|||2
+~+|1|y|ms4416|y|ltatt|Light Truck Attractions|0|md"ltatt"|||y|1,3750|||2
+~+|1|y|ms4417|y|mtatt|Medium Truck Attractions|0|md"mtatt"|||y|1,3750|||2
+~+|1|y|ms4418|y|htatt|Heavy Truck Attractions|0|md"htatt"|||y|1,3750|||2
+q
+~/ ====================
+~/ Vehicle Availability
+~/ ====================
+~/
+~/      -------------------------------
+~/      Rearrange existing matrices
+~/      -------------------------------
+~/
+3.12
+~+|4|1|mf02|mf100|y|avehs2|AM HOV 2+ trip table|0|n
+~+|2|mf02|y
+q
+~/      -------------------------
+~/      Load vehicle availability
+~/      -------------------------
+~/
+3.11
+~+|..\input\vehicleavailability\vehmtx.in|2|
+~#
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4419|y|vehmtx|Vehicle availability|0|mf"vehmtx"|||n|||2
+q
+~/      --------------------
+~/      Remove temp matrices
+~/      --------------------
+~/
+3.12
+~+|2|mf02|y
+q
+~/      ------------------------------------
+~/      Shift matrices to original locations
+~/      ------------------------------------
+~/
+3.12
+~+|4|1|mf100|mf02|y|avehs2|AM HOV 2+ trip table|0|n
+~+|2|mf100|y
+q
+~/ ===========
+~/ Walk Access
+~/ ===========
+~/
+~/      ------------------------------------------------
+~/      Aggregate matrices to scalars for summary report
+~/      ------------------------------------------------
+~/
+3.21
+~+|1|y|ms4420|y|wkacco|Walk access - origin|0|mo"walkac"|||n||2
+~+|1|y|ms4421|y|wkaccd|Walk access - destination|0|md"walkac"|||n||2
+q
+~/
+~/end: 2-17_input_summary.mac
+~/exit emme
+q

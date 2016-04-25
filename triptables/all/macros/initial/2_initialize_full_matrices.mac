@@ -50,9 +50,6 @@ reports=initialization.rpt
 ~+|1|mf36|medod|medium truck daily o-d trips|0
 ~+|1|mf37|hvyod|heavy truck daily o-d trips|0
 ~/ ... misc input files
-~+|1|mf38|reebee|heavy truck ext-ext trips|0
-~+|1|mf39|reebei|heavy truck ext-int trips|0
-~+|1|mf40|reebie|heavy truck int-ext trips|0
 ~+|1|mf41|dvpool|daily vanpool demand|0
 ~+|1|mf42|thru|daily sov e-e vehicle trips|0
 ~/ ... am peak period final trip tables
@@ -132,6 +129,13 @@ reports=initialization.rpt
 ~+|1|mf112|ntrnwa|transit person trip table|0
 ~/ ... misc trip tables
 ~+|1|mf138|temp01|Temporary Matrix|0
+~/ ... truck externals
+~+|1|mf139|medee|heavy truck ext-ext trips|0
+~+|1|mf140|medei|heavy truck ext-int trips|0
+~+|1|mf141|medie|heavy truck int-ext trips|0
+~+|1|mf142|hvyee|heavy truck ext-ext trips|0
+~+|1|mf143|hvyei|heavy truck ext-int trips|0
+~+|1|mf144|hvyie|heavy truck int-ext trips|0
 ~/ ... Scalar Matrices to Transit Time of Day Factors
 ~/ ... Trip Percentages - P-A
 ~+|1|ms01|coltpa|College Trip P-A|0

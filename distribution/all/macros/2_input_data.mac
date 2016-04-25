@@ -22,9 +22,9 @@ reports=trip_distribution.rpt
 ~+|3.11|..\..\input\tripends\hbwpr4.in|2|
 ~+|3.11|..\..\input\tripends\otopro.in|2|
 ~+|3.11|..\..\input\tripends\wkopro.in|2|
-~+|3.11|..\..\input\tripends\ltprof.in|2|
-~+|3.11|..\..\input\tripends\mtprof.in|2|
-~+|3.11|..\..\input\tripends\htprof.in|2|
+~+|3.11|..\..\input\tripends\ltpro.in|2|
+~+|3.11|..\..\input\tripends\mtpro.in|2|
+~+|3.11|..\..\input\tripends\htpro.in|2|
 ~/ ... input attraction trip ends
 ~+|3.11|..\..\input\tripends\colatt.in|2|
 ~+|3.11|..\..\input\tripends\hboatt.in|2|
@@ -36,9 +36,11 @@ reports=trip_distribution.rpt
 ~+|3.11|..\..\input\tripends\hbwat4.in|2|
 ~+|3.11|..\..\input\tripends\otoatt.in|2|
 ~+|3.11|..\..\input\tripends\wkoatt.in|2|
-~+|3.11|..\..\input\tripends\ltattf.in|2|
-~+|3.11|..\..\input\tripends\mtattf.in|2|
-~+|3.11|..\..\input\tripends\htattf.in|2|
+~+|3.11|..\..\input\tripends\ltatt.in|2|
+~+|3.11|..\..\input\tripends\mtatt.in|2|
+~+|3.11|..\..\input\tripends\htatt.in|2|
+~/ ... input airport od trip table
+~+|3.11|..\..\input\tripends\airport.in|2|
 ~/
 ~/exit emme
 ~/
