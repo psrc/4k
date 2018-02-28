@@ -9,15 +9,8 @@ reports=trucks.rpt
 ~/ ---------------------------------------------------------------------
 ~/ --- Transpose daily p-a truck distribution to o-d format
 ~/ ---------------------------------------------------------------------
-~+|3.21|1|y|mf"lgtod"|n|0.5*mf"lgtdis"+0.5*mf"lgtdis"'|||n|2|q
 ~+|3.21|1|y|mf"medod"|n|0.5*mf"meddis"+0.5*mf"meddis"'|||n|2|q
 ~+|3.21|1|y|mf"hvyod"|n|0.5*mf"hvydis"+0.5*mf"hvydis"'|||n|2|q
-~/ ---------------------------------------------------------------------
-~/ --- Convert annual external heavy truck trips to daily 
-~/ --- and add to heavy truck o-d table
-~/ ---------------------------------------------------------------------
-~+|3.21|1|y|mf"medod"|n|mf"medod"+(mf"medee"+mf"medei"+mf"medie")/264|||n|2|q
-~+|3.21|1|y|mf"hvyod"|n|mf"hvyod"+(mf"hvyee"+mf"hvyei"+mf"hvyie")/264|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- Apply vehicle-equivalency factors to medium and heavy trucks
 ~/ ---------------------------------------------------------------------
@@ -26,31 +19,26 @@ reports=trucks.rpt
 ~/ ---------------------------------------------------------------------
 ~/ --- AM Peak Period Truck Trip Table
 ~/ ---------------------------------------------------------------------
-~+|3.21|1|y|mf"alttrk"|n|mf"lgtod"*ms"ltrkam"|||n|2|q
 ~+|3.21|1|y|mf"amdtrk"|n|mf"medod"*ms"mtrkam"|||n|2|q
 ~+|3.21|1|y|mf"ahvtrk"|n|mf"hvyod"*ms"htrkam"|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- Midday Truck Trip Table
 ~/ ---------------------------------------------------------------------
-~+|3.21|1|y|mf"mlttrk"|n|mf"lgtod"*ms"ltrkmd"|||n|2|q
 ~+|3.21|1|y|mf"mmdtrk"|n|mf"medod"*ms"mtrkmd"|||n|2|q
 ~+|3.21|1|y|mf"mhvtrk"|n|mf"hvyod"*ms"htrkmd"|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- PM Peak Period Truck Trip Table
 ~/ ---------------------------------------------------------------------
-~+|3.21|1|y|mf"plttrk"|n|mf"lgtod"*ms"ltrkpm"|||n|2|q
 ~+|3.21|1|y|mf"pmdtrk"|n|mf"medod"*ms"mtrkpm"|||n|2|q
 ~+|3.21|1|y|mf"phvtrk"|n|mf"hvyod"*ms"htrkpm"|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- Late Evening Truck Trip Table
 ~/ ---------------------------------------------------------------------
-~+|3.21|1|y|mf"elttrk"|n|mf"lgtod"*ms"ltrkev"|||n|2|q
 ~+|3.21|1|y|mf"emdtrk"|n|mf"medod"*ms"mtrkev"|||n|2|q
 ~+|3.21|1|y|mf"ehvtrk"|n|mf"hvyod"*ms"htrkev"|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- Overnight Truck Trip Table
 ~/ ---------------------------------------------------------------------
-~+|3.21|1|y|mf"nlttrk"|n|mf"lgtod"*ms"ltrkni"|||n|2|q
 ~+|3.21|1|y|mf"nmdtrk"|n|mf"medod"*ms"mtrkni"|||n|2|q
 ~+|3.21|1|y|mf"nhvtrk"|n|mf"hvyod"*ms"htrkni"|||n|2|q
 ~/ ---------------------------------------------------------------------

@@ -398,7 +398,7 @@ q
 ..\distribution\all\emmebank
 ~+|2|3|3|mf"hbwds4"|mf"temp03"|n|y
 q
-~/ 
+~/
 ~/ --- Summarize hbw Trips for Internal Zones
 3.21
 ~+|1|y|ms395|y|hbw4|DY HBW #4 Trips|0|mf"temp03"|||n|||2
@@ -430,47 +430,47 @@ q
 ~/ ---------------------------------------------------------------
 ~/ --- Light Truck Trip Distribution Summary
 ~/ ---------------------------------------------------------------
-1.31
-~+|1
-~/ --- Copy AM Light Truck Time and Distance Skims into Temporary Matrices
-..\skims\auto\am\emmebank
-~+|2|3|3|mf"algttm"|mf"temp01"|n|y
-~+|2|3|3|mf"algtds"|mf"temp02"|n|y
-q
-1.31
-~+|1
-~/ --- Copy Distribution Matrix into a Temporary Matrix
-..\distribution\all\emmebank
-~+|2|3|3|mf"lgtdis"|mf"temp03"|n|y
-q
+~/1.31
+~/~+|1
+~/~/ --- Copy AM Light Truck Time and Distance Skims into Temporary Matrices
+~/..\skims\auto\am\emmebank
+~/~+|2|3|3|mf"algttm"|mf"temp01"|n|y
+~/~+|2|3|3|mf"algtds"|mf"temp02"|n|y
+~/q
+~/1.31
+~/~+|1
+~/~/ --- Copy Distribution Matrix into a Temporary Matrix
+~/..\distribution\all\emmebank
+~/~+|2|3|3|mf"lgtdis"|mf"temp03"|n|y
+~/q
 ~/ --- Summarize Light Truck Trips for Internal Zones
-3.21
-~+|1|y|ms398|y|ltrk|DY Light Truck Trips|0|mf"temp03"|||n|||2
-~+|1|y|ms601|y|ltktm1|DY LtTrk Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
-~+|1|y|ms602|y|ltktm2|DY LtTrk Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
-~+|1|y|ms603|y|ltkds1|DY LtTrk Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
-~+|1|y|ms604|y|ltkds2|DY LtTrk Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
-~/ --- Summarize Light Truck Trips Destined to King County
-~+|1|y|ms605|y|ltkgkg|DY LtTrk King to King|0|"temp03"|||y|gc1||gc1||||2
-~+|1|y|ms606|y|ltshkg|DY LtTrk Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
-~+|1|y|ms607|y|ltpekg|DY LtTrk Pierce to King|0|"temp03"|||y|gc3||gc1||||2
-~+|1|y|ms608|y|ltkpkg|DY LtTrk Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
-~/ --- Summarize Light Truck Trips Destined to Kitsap County
-~+|1|y|ms609|y|ltkgkp|DY LtTrk King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
-~+|1|y|ms610|y|ltshkp|DY LtTrk Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
-~+|1|y|ms611|y|ltpekp|DY LtTrk Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
-~+|1|y|ms612|y|ltkpkp|DY LtTrk Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
-~/ --- Summarize Light Truck Trips Destined to Pierce County
-~+|1|y|ms613|y|ltkgpe|DY LtTrk King to Pierce|0|"temp03"|||y|gc1||gc3||||2
-~+|1|y|ms614|y|ltshpe|DY LtTrk Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
-~+|1|y|ms615|y|ltpepe|DY LtTrk Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
-~+|1|y|ms616|y|ltkppe|DY LtTrk Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
-~/ --- Summarize Light Truck Trips Destined to Snohomish County
-~+|1|y|ms617|y|ltkgsh|DY LtTrk King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
-~+|1|y|ms618|y|ltshsh|DY LtTrk Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
-~+|1|y|ms619|y|ltpesh|DY LtTrk Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
-~+|1|y|ms620|y|ltkpsh|DY LtTrk Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
-q
+~/3.21
+~/~+|1|y|ms398|y|ltrk|DY Light Truck Trips|0|mf"temp03"|||n|||2
+~/~+|1|y|ms601|y|ltktm1|DY LtTrk Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~/~+|1|y|ms602|y|ltktm2|DY LtTrk Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
+~/~+|1|y|ms603|y|ltkds1|DY LtTrk Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/~+|1|y|ms604|y|ltkds2|DY LtTrk Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
+~/~/ --- Summarize Light Truck Trips Destined to King County
+~/~+|1|y|ms605|y|ltkgkg|DY LtTrk King to King|0|"temp03"|||y|gc1||gc1||||2
+~/~+|1|y|ms606|y|ltshkg|DY LtTrk Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
+~/~+|1|y|ms607|y|ltpekg|DY LtTrk Pierce to King|0|"temp03"|||y|gc3||gc1||||2
+~/~+|1|y|ms608|y|ltkpkg|DY LtTrk Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
+~/~/ --- Summarize Light Truck Trips Destined to Kitsap County
+~/~+|1|y|ms609|y|ltkgkp|DY LtTrk King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
+~/~+|1|y|ms610|y|ltshkp|DY LtTrk Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
+~/~+|1|y|ms611|y|ltpekp|DY LtTrk Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
+~/~+|1|y|ms612|y|ltkpkp|DY LtTrk Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
+~/~/ --- Summarize Light Truck Trips Destined to Pierce County
+~/~+|1|y|ms613|y|ltkgpe|DY LtTrk King to Pierce|0|"temp03"|||y|gc1||gc3||||2
+~/~+|1|y|ms614|y|ltshpe|DY LtTrk Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
+~/~+|1|y|ms615|y|ltpepe|DY LtTrk Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
+~/~+|1|y|ms616|y|ltkppe|DY LtTrk Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
+~/~/ --- Summarize Light Truck Trips Destined to Snohomish County
+~/~+|1|y|ms617|y|ltkgsh|DY LtTrk King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
+~/~+|1|y|ms618|y|ltshsh|DY LtTrk Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
+~/~+|1|y|ms619|y|ltpesh|DY LtTrk Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
+~/~+|1|y|ms620|y|ltkpsh|DY LtTrk Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
+~/q
 ~/ ---------------------------------------------------------------
 ~/ --- Medium Truck Trip Distribution Summary
 ~/ ---------------------------------------------------------------

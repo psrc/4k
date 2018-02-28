@@ -9,9 +9,7 @@ skims\transit\md\all_mode
 distribution\all
 modechoice\all
 skims\iz_tt
-skims\bidirectional\distance
-skims\bidirectional\generalized_cost
-skims\bidirectional\time
+skims\bidirectional\all
 skims\pnr\income1
 skims\pnr\income2
 skims\pnr\income3

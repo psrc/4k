@@ -1,0 +1,108 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5_skim_network.rpt
+s=%2%
+~/ ------------------------------------------
+~/ --- Copy Time to an extra attribute for skimming
+~/ ------------------------------------------
+~+|2.41|1|y|@timau|n|timau||*|2|2|q
+~/ ------------------------------------------
+~/ --- Generalized Cost Skims
+~/ ------------------------------------------
+6.16
+~# ...time (or cost) for shortest path
+1
+~+|mf"%1%au1cs"|n 
+~+|mf"%1%au2cs"|n 
+~+|mf"%1%au3cs"|n 
+~+|mf"%1%a1cs1"|n 
+~+|mf"%1%a1cs2"|n 
+~+|mf"%1%a1cs3"|n 
+~+|mf"%1%a1cs4"|n 
+~+|mf"%1%medcs"|n 
+~+|mf"%1%hvycs"|n 
+2
+~/ ------------------------------------------
+~/ --- Time Skims
+~/ ------------------------------------------
+4
+~# ...link attribute for path analysis
+@timau
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~+||mf"%1%au1tm"|n||| 
+~+||mf"%1%au2tm"|n||| 
+~+||mf"%1%au3tm"|n||| 
+~+||mf"%1%a1tm1"|n||| 
+~+||mf"%1%a1tm2"|n||| 
+~+||mf"%1%a1tm3"|n||| 
+~+||mf"%1%a1tm4"|n||| 
+~+||mf"%1%medtm"|n||| 
+~+||mf"%1%hvytm"|n|||        
+2
+~/ ------------------------------------------
+~/ --- Distance Skims
+~/ ------------------------------------------
+4
+~# ...link attribute for path analysis
+length
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
++
+~# ...lower, upper threshold for selected paths
+
+~# ...aggregation for O-D attribute
+3  /average   
+~# ...paths considered in O-D attribute
+1  /all paths 
+~+||mf"%1%au1ds"|n||| 
+~+||mf"%1%au2ds"|n||| 
+~+||mf"%1%au3ds"|n||| 
+~+||mf"%1%a1ds1"|n||| 
+~+||mf"%1%a1ds2"|n||| 
+~+||mf"%1%a1ds3"|n||| 
+~+||mf"%1%a1ds4"|n||| 
+~+||mf"%1%medds"|n||| 
+~+||mf"%1%hvyds"|n|||      
+2
+~/ ------------------------------------------
+~/ --- Bridge Crossing Skims
+~/ ------------------------------------------
+4
+~# ...link attribute for path analysis
+@bridg
+~# ...turn attribute for path analysis
+
+~# ...operator to compute path attributes
+.max.
+~# ...lower, upper threshold for selected paths
+0.5,1.5
+~# ...aggregation for O-D attribute
+2  /max   
+~# ...paths considered in O-D attribute
+2  /selected paths 
+~+||mf"brsov"|n|||  
+~+||mf"brhov2"|n||| 
+~+||mf"brhov3"|n||| 
+~+||mf"brhbw1"|n||| 
+~+||mf"brhbw2"|n||| 
+~+||mf"brhbw3"|n||| 
+~+||mf"brhbw4"|n||| 
+~+|||||             /medium truck not skimmed
+~+|||||             /heavy truck not skimmed    
+2
+q
+~/ ------------------------------------------
+~/ --- Exit Emme
+~/ ------------------------------------------
+q

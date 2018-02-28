@@ -1,16 +1,5 @@
 c Time of Day Factors for Trucks
 t matrices
-c Light Truck Factors
-m matrix=ms"ltrkam"
-  all all: 0.194
-m matrix=ms"ltrkmd"
-  all all: 0.346
-m matrix=ms"ltrkpm"
-  all all: 0.240
-m matrix=ms"ltrkev"
-  all all: 0.126
-m matrix=ms"ltrkni"
-  all all: 0.094
 c Medium Truck Factors
 m matrix=ms"mtrkam"
   all all: 0.208

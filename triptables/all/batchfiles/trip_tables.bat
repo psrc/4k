@@ -7,16 +7,13 @@ REM First Set-up the bank
 call emme -ng 000 -m macros\initial\1_initialize_matrices.mac %BCA%
 call emme -ng 000 -m macros\initial\2_initialize_full_matrices.mac
 call emme -ng 000 -m macros\initial\3_load_ensembles.mac
-call emme -ng 000 -m macros\initial\4_input_daily_vanpool_demand.mac
 call emme -ng 000 -m macros\initial\5_input_daily_thru_trips.mac
 call emme -ng 000 -m macros\initial\6_import_distribution_matrices.mac
-call emme -ng 000 -m macros\initial\7_input_data.mac
 
 REM Create Trip Tables by Time of Day - Fixed Time of Day Factors
 call emme -ng 000 -m macros\1_transit_trip_tables.mac am md pm ev ni a m p e n
 call emme -ng 000 -m macros\2_walk_trip_tables.mac am md pm ev ni a m p e n
 call emme -ng 000 -m macros\3_bike_trip_tables.mac am md pm ev ni a m p e n
-call emme -ng 000 -m macros\4_vanpool_trip_tables.mac
 call emme -ng 000 -m macros\5_truck_trip_tables.mac
 call emme -ng 000 -m macros\6_sov_nw_trip_tables.mac am md pm ev ni a m p e n
 

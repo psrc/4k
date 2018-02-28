@@ -1,0 +1,69 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2_calculate_bidirectional_distance.rpt
+~/ ------------------------------------------
+~/ --- Copy In AM, PM and MD Auto Skim Matrices
+~/ ------------------------------------------
+1.31
+~+|1
+..\..\..\skims\auto\am\emmebank
+~+|2|3|3|mf"aau1ds"|mf"aau1"|n|y
+~+|2|3|3|mf"aau2ds"|mf"aau2"|n|y
+~+|2|3|3|mf"aau3ds"|mf"aau3"|n|y
+~+|2|3|3|mf"aa1ds1"|mf"aa1"|n|y
+~+|2|3|3|mf"aa1ds2"|mf"aa2"|n|y
+~+|2|3|3|mf"aa1ds3"|mf"aa3"|n|y
+~+|2|3|3|mf"aa1ds4"|mf"aa4"|n|y
+~+|2|3|3|mf"amedds"|mf"amed"|n|y
+~+|2|3|3|mf"ahvyds"|mf"ahvy"|n|y
+q
+1.31
+~+|1
+..\..\..\skims\auto\pm\emmebank
+~+|2|3|3|mf"pau1ds"|mf"pau1"|n|y
+~+|2|3|3|mf"pau2ds"|mf"pau2"|n|y
+~+|2|3|3|mf"pau3ds"|mf"pau3"|n|y
+~+|2|3|3|mf"pa1ds1"|mf"pa1"|n|y
+~+|2|3|3|mf"pa1ds2"|mf"pa2"|n|y
+~+|2|3|3|mf"pa1ds3"|mf"pa3"|n|y
+~+|2|3|3|mf"pa1ds4"|mf"pa4"|n|y
+~+|2|3|3|mf"pmedds"|mf"pmed"|n|y
+~+|2|3|3|mf"phvyds"|mf"phvy"|n|y
+q
+1.31
+~+|1
+..\..\..\skims\auto\md\emmebank
+~+|2|3|3|mf"mau1ds"|mf"mau1"|n|y
+~+|2|3|3|mf"mau2ds"|mf"mau2"|n|y
+~+|2|3|3|mf"mau3ds"|mf"mau3"|n|y
+~+|2|3|3|mf"ma1ds1"|mf"ma1"|n|y
+~+|2|3|3|mf"ma1ds2"|mf"ma2"|n|y
+~+|2|3|3|mf"ma1ds3"|mf"ma3"|n|y
+~+|2|3|3|mf"ma1ds4"|mf"ma4"|n|y
+q
+~/ ------------------------------------------
+~/ --- Calculate Bi-Directional Skims
+~/ ------------------------------------------
+3.21
+~+|1|y|mf"au1bds"|n|(mf"aau1"+mf"pau1"')/2|||n|2
+~+|1|y|mf"au2bds"|n|(mf"aau2"+mf"pau2"')/2|||n|2
+~+|1|y|mf"au3bds"|n|(mf"aau3"+mf"pau3"')/2|||n|2
+~+|1|y|mf"ah1bds"|n|(mf"aa1"+mf"pa1"')/2|||n|2
+~+|1|y|mf"ah2bds"|n|(mf"aa2"+mf"pa2"')/2|||n|2
+~+|1|y|mf"ah3bds"|n|(mf"aa3"+mf"pa3"')/2|||n|2
+~+|1|y|mf"ah4bds"|n|(mf"aa4"+mf"pa4"')/2|||n|2
+~+|1|y|mf"bmedds"|n|(mf"amed"+mf"pmed"')/2|||n|2
+~+|1|y|mf"bhvyds"|n|(mf"ahvy"+mf"phvy"')/2|||n|2
+~+|1|y|mf"mu1bds"|n|(mf"mau1"+mf"mau1"')/2|||n|2
+~+|1|y|mf"mu2bds"|n|(mf"mau2"+mf"mau2"')/2|||n|2
+~+|1|y|mf"mu3bds"|n|(mf"mau3"+mf"mau3"')/2|||n|2
+~+|1|y|mf"mh1bds"|n|(mf"ma1"+mf"ma1"')/2|||n|2
+~+|1|y|mf"mh2bds"|n|(mf"ma2"+mf"ma2"')/2|||n|2
+~+|1|y|mf"mh3bds"|n|(mf"ma3"+mf"ma3"')/2|||n|2
+~+|1|y|mf"mh4bds"|n|(mf"ma4"+mf"ma4"')/2|||n|2
+q
+~/ ------------------------------------------
+~/ --- Exit Emme
+~/ ------------------------------------------
+q

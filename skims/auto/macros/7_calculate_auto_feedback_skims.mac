@@ -1,0 +1,46 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_calculate_auto_feedback_skims.rpt
+3.21
+~/ ------------------------------------------
+~/ --- Average previous and current interzonal time skims
+~/ ------------------------------------------
+~+|1|y|mf"%1%au1tm"|n|(mf"%1%au1tm"+mf"%1%au1tp")/2|||n|2
+~+|1|y|mf"%1%au2tm"|n|(mf"%1%au2tm"+mf"%1%au2tp")/2|||n|2
+~+|1|y|mf"%1%au3tm"|n|(mf"%1%au3tm"+mf"%1%au3tp")/2|||n|2
+~+|1|y|mf"%1%a1tm1"|n|(mf"%1%a1tm1"+mf"%1%a1tp1")/2|||n|2
+~+|1|y|mf"%1%a1tm2"|n|(mf"%1%a1tm2"+mf"%1%a1tp2")/2|||n|2
+~+|1|y|mf"%1%a1tm3"|n|(mf"%1%a1tm3"+mf"%1%a1tp3")/2|||n|2
+~+|1|y|mf"%1%a1tm4"|n|(mf"%1%a1tm4"+mf"%1%a1tp4")/2|||n|2
+~+|1|y|mf"%1%medtm"|n|(mf"%1%medtm"+mf"%1%medtp")/2|||n|2
+~+|1|y|mf"%1%hvytm"|n|(mf"%1%hvytm"+mf"%1%hvytp")/2|||n|2
+~/ ------------------------------------------
+~/ --- Average previous and current interzonal cost skims
+~/ ------------------------------------------
+~+|1|y|mf"%1%au1cs"|n|(mf"%1%au1cs"+mf"%1%au1cp")/2|||n|2
+~+|1|y|mf"%1%au2cs"|n|(mf"%1%au2cs"+mf"%1%au2cp")/2|||n|2
+~+|1|y|mf"%1%au3cs"|n|(mf"%1%au3cs"+mf"%1%au3cp")/2|||n|2
+~+|1|y|mf"%1%a1cs1"|n|(mf"%1%a1cs1"+mf"%1%a1cp1")/2|||n|2
+~+|1|y|mf"%1%a1cs2"|n|(mf"%1%a1cs2"+mf"%1%a1cp2")/2|||n|2
+~+|1|y|mf"%1%a1cs3"|n|(mf"%1%a1cs3"+mf"%1%a1cp3")/2|||n|2
+~+|1|y|mf"%1%a1cs4"|n|(mf"%1%a1cs4"+mf"%1%a1cp4")/2|||n|2
+~+|1|y|mf"%1%medcs"|n|(mf"%1%medcs"+mf"%1%medcp")/2|||n|2
+~+|1|y|mf"%1%hvycs"|n|(mf"%1%hvycs"+mf"%1%hvycp")/2|||n|2
+~/ ------------------------------------------
+~/ --- Average previous and current interzonal distance skims
+~/ ------------------------------------------
+~+|1|y|mf"%1%au1ds"|n|(mf"%1%au1ds"+mf"%1%au1dp")/2|||n|2
+~+|1|y|mf"%1%au2ds"|n|(mf"%1%au2ds"+mf"%1%au2dp")/2|||n|2
+~+|1|y|mf"%1%au3ds"|n|(mf"%1%au3ds"+mf"%1%au3dp")/2|||n|2
+~+|1|y|mf"%1%a1ds1"|n|(mf"%1%a1ds1"+mf"%1%a1dp1")/2|||n|2
+~+|1|y|mf"%1%a1ds2"|n|(mf"%1%a1ds2"+mf"%1%a1dp2")/2|||n|2
+~+|1|y|mf"%1%a1ds3"|n|(mf"%1%a1ds3"+mf"%1%a1dp3")/2|||n|2
+~+|1|y|mf"%1%a1ds4"|n|(mf"%1%a1ds4"+mf"%1%a1dp4")/2|||n|2
+~+|1|y|mf"%1%medds"|n|(mf"%1%medds"+mf"%1%meddp")/2|||n|2
+~+|1|y|mf"%1%hvyds"|n|(mf"%1%hvyds"+mf"%1%hvydp")/2|||n|2
+q
+~/ ------------------------------------------
+~/ --- Exit Emme
+~/ ------------------------------------------
+q

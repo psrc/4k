@@ -1,7 +1,9 @@
 cd income2
-call emme -ng --set-iks 127.0.0.1 000 -m macros\6_calculate_pnr_inc2_utilities.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
-call emme -ng --set-iks 127.0.0.1 000 -m macros\7_select_optimal_pnr_inc2_zones.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
-call emme -ng --set-iks 127.0.0.1 000 -m macros\8_calculate_pnr_inc2_skims.mac %hightaz% %lowstation% %highstation% %lowpnr% %highpnr%
+
+call emme -ng 000 -m ..\macros\2_calculate_pnr_utilities.mac 2 %highstation% %lowpnr% %highpnr%
+call emme -ng 000 -m ..\macros\3_select_optimal_pnr_zones.mac 2 %highstation% %lowpnr% %highpnr%
+call emme -ng 000 -m ..\macros\4_calculate_pnr_skims.mac 2 %highstation%
+
 cd ..
-echo "income 2 pnr skims finished" > doneinc2_pnrskims.ind
+echo "income 2 pnr skims finished" > doneInc2_pnrskims.ind
 exit

@@ -1,9 +1,6 @@
 c 2010 (2010$)
 c global coefficients and parameters for truck models
 t matrices
-c light truck operating cost (cents per mile)
-m matrix=ms"lgtop"
- all all: 16.75
 c medium truck operating cost (cents per mile)
 m matrix=ms"medop"
  all all: 99

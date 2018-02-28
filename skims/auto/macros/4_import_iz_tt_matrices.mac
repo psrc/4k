@@ -1,0 +1,18 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4_import_iz_tt_matrices.rpt
+~/ ------------------------------------------
+~/ --- Import intrazonal/terminal time matrices
+~/ ------------------------------------------
+1.31
+~+|1
+..\..\iz_tt\emmebank
+~+|2|3|3|mf"izdist"|mf"izdist"|n|y
+~+|2|3|3|mf"izatim"|mf"izatim"|n|y
+~+|2|3|3|mf"termtm"|mf"termtm"|n|y
+q
+~/ ------------------------------------------
+~/ --- Exit Emme
+~/ ------------------------------------------
+q

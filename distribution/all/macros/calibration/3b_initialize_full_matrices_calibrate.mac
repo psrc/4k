@@ -21,7 +21,6 @@ reports=trip_distribution.rpt
 ~+|1|mf11|hbwds4|hb work income 4 distribution|0
 ~+|1|mf12|otodst|nhb other/other distribution|0
 ~+|1|mf13|wkodst|nhb work/other distribution|0
-~+|1|mf14|lgtdis|light truck distribution|0
 ~+|1|mf15|meddis|medium truck distribution|0
 ~+|1|mf16|hvydis|heavy truck distribution|0
 ~/ ...misc

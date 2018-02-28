@@ -62,8 +62,8 @@ echo Free-Flow Intrazonal Skims completed on %date% at %time%. >> psrc_4k_log.tx
 
 REM Calculate Auto Skims
 cd skims\auto
-call batchfiles\basic\auto_skims.bat
-call batchfiles\check\auto_skim_completion_check.bat
+call batchfiles\auto_skims.bat
+call batchfiles\auto_skim_completion_check.bat
 cd ..\..
 echo Free-Flow Auto Skims completed on %date% at %time%. >> psrc_4k_log.txt
 

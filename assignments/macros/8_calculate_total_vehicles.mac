@@ -20,13 +20,13 @@ s=%1%
 ~+|2.41|1|y|@bveh|n|@trnv6/2||*|2|2|q
 ~/
 ~/ --- Total vehicles on links
-~+|2.41|1|y|@tveh|n|@sov+@sovw+@hov2+@hov3+@vpool+@light+@mveh+@hveh+@bveh||*|2|2|q
+~+|2.41|1|y|@tveh|n|@sov+@sovw+@hov2+@hov3+@mveh+@hveh+@bveh||*|2|2|q
 ~/
 ~/ --- Total Cars on Links
-~+|2.41|1|y|@cars|n|@sov+@sovw+@hov2+@hov3+@vpool||*|4|q
+~+|2.41|1|y|@cars|n|@sov+@sovw+@hov2+@hov3||*|4|q
 ~/
 ~/ --- Total Trucks on Links
-~+|2.41|1|y|@truck|n|@light+@mveh+@hveh||*|4|q
+~+|2.41|1|y|@truck|n|@mveh+@hveh||*|4|q
 ~/
 ~/ --- Congested Speed on Links
 ~+|2.41|1|y|@speed|n|(len/timau)*60||timau=0.01,999999||4|q

@@ -31,31 +31,17 @@ q
 ~+|3.11|..\..\input\PnR\pnr_lot_charges.in|2|
 ~+|3.11|..\..\parameters\vot\am_vot_parameters.in|2|
 ~/ ----------------------------------------
-~/ --- Bi-directional cost skim emmebank
+~/ --- Bi-directional skims
 ~/ ----------------------------------------
 1.31
 ~+|1
-..\..\Skims\BiDirectional\Generalized_Cost\emmebank
+..\..\Skims\BiDirectional\all\emmebank
 ~+|2|3|3|mf"ah1bcs"|mf"dabcs"|n|y
 ~+|2|3|3|mf"au2bcs"|mf"s2bcs"|n|y
 ~+|2|3|3|mf"au3bcs"|mf"s3bcs"|n|y
-q
-~/ ----------------------------------------
-~/ --- Bi-directional time skim emmebank
-~/ ----------------------------------------
-1.31
-~+|1
-..\..\Skims\BiDirectional\Time\emmebank
 ~+|2|3|3|mf"ah1btm"|mf"dabtm"|n|y
 ~+|2|3|3|mf"au2btm"|mf"s2btm"|n|y
 ~+|2|3|3|mf"au3btm"|mf"s3btm"|n|y
-q
-~/ ----------------------------------------
-~/ --- Bi-directional distance skim emmebank
-~/ ----------------------------------------
-1.31
-~+|1
-..\..\Skims\BiDirectional\Distance\emmebank
 ~+|2|3|3|mf"ah1bds"|mf"dabds"|n|y
 ~+|2|3|3|mf"au2bds"|mf"s2bds"|n|y
 ~+|2|3|3|mf"au3bds"|mf"s3bds"|n|y

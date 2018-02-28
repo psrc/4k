@@ -25,6 +25,19 @@ if Not exist %modeldir%\assignments\pm mkdir %modeldir%\assignments\pm
 if Not exist %modeldir%\assignments\ev mkdir %modeldir%\assignments\ev
 if Not exist %modeldir%\assignments\ni mkdir %modeldir%\assignments\ni
 
+REM Check for the Auto Skim Folders and Add if they do not exist
+if Not exist %modeldir%\skims\auto\am mkdir %modeldir%\skims\auto\am
+if Not exist %modeldir%\skims\auto\md mkdir %modeldir%\skims\auto\md
+if Not exist %modeldir%\skims\auto\pm mkdir %modeldir%\skims\auto\pm
+if Not exist %modeldir%\skims\auto\ev mkdir %modeldir%\skims\auto\ev
+if Not exist %modeldir%\skims\auto\ni mkdir %modeldir%\skims\auto\ni
+
+REM Check for the PnR Skim Folders and Add if they do not exist
+if Not exist %modeldir%\skims\pnr\income1 mkdir %modeldir%\skims\pnr\income1
+if Not exist %modeldir%\skims\pnr\income2 mkdir %modeldir%\skims\pnr\income2
+if Not exist %modeldir%\skims\pnr\income3 mkdir %modeldir%\skims\pnr\income3
+if Not exist %modeldir%\skims\pnr\income4 mkdir %modeldir%\skims\pnr\income4
+
 REM Copy the inputs to the local directory
 cd input
 xcopy "%InputPath%\*" /s /i /y
@@ -59,14 +72,6 @@ REM Final Iteration
 set iternum=5
 call batchfiles\model\final_iteration.bat
 call batchfiles\reports\report_rename.bat f
-
-REM Save Toll Skim Matrices if User Selected
-if %TollSkim% == Yes (  
-	 cd skims\auto
-     call batchfiles\toll_skims\toll_skims.bat
-     call batchfiles\toll_skims\toll_skim_completion_check.bat
-)
-cd ..\..
 
 REM Create the Summary Bank if called for and populate
 if %SummaryBank% == Yes (

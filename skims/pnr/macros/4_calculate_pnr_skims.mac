@@ -1,0 +1,32 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4_calculate_pnr_skims.rpt
+~/ ------------------------------------------
+~/ --- Add auto leg time to total transit leg time for total drive access transit time
+~/ --- Auto Side
+~/ ------------------------------------------
+~<..\macros\legimped.mac 1 mf"ah%1%bcs" mf"prdzn%1%" mf"auxda%1%"
+~<..\macros\legimped.mac 1 mf"ah%1%bds" mf"prdzn%1%" mf"pnrds%1%"
+~<..\macros\legimped.mac 1 mf"ah%1%btm" mf"prdzn%1%" mf"pnrtm%1%"
+~<..\macros\legimped.mac 1 mf"pnrchg" mf"prdzn%1%" mf"pnrch%1%"
+~/ ------------------------------------------
+~/ --- Transit Side
+~/ ------------------------------------------
+~<..\macros\legimped.mac 2 mf"atrtwa" mf"prdzn%1%" mf"trtda%1%"
+~<..\macros\legimped.mac 2 mf"aivtwa" mf"prdzn%1%" mf"ivtda%1%"
+~<..\macros\legimped.mac 2 mf"atwtwa" mf"prdzn%1%" mf"twtda%1%"
+~<..\macros\legimped.mac 2 mf"aauxwa" mf"prdzn%1%" mf"wlkda%1%"
+~<..\macros\legimped.mac 2 mf"aiwtwa" mf"prdzn%1%" mf"iwtda%1%"
+~<..\macros\legimped.mac 2 mf"abrdwa" mf"prdzn%1%" mf"brdda%1%"
+~<..\macros\legimped.mac 2 mf"anbdwa" mf"prdzn%1%" mf"nbdda%1%"
+~<..\macros\legimped.mac 2 mf"axfrwa" mf"prdzn%1%" mf"xfrda%1%"
+~<..\macros\legimped.mac 2 mf"afarwa" mf"prdzn%1%" mf"farda%1%"
+~/ ------------------------------------------
+~/ --- Add auto leg time to total transit leg time for total drive access transit time
+~/ ------------------------------------------
+~+|3.21|1|y|mf"trtda%1%"|n|mf"trtda%1%"+mf"auxda%1%"|||y|1,%2%||1,%2%||2|q
+~/ ------------------------------------------
+~/ --- Exit Emme
+~/ ------------------------------------------
+q

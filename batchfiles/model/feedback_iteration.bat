@@ -45,8 +45,8 @@ echo Iteration %iternum% Assignments completed on %date% at %time%. >> psrc_4k_l
 
 REM Create Auto Skims (Skim Averaging occurs in this Iteration)
 cd skims\auto
-call batchfiles\feedback\auto_feedback_skims.bat
-call batchfiles\check\auto_skim_completion_check.bat
+call batchfiles\auto_skims_feedback.bat
+call batchfiles\auto_skim_completion_check.bat
 cd ..\..
 echo Iteration %iternum% Auto Skims completed on %date% at %time%. >> psrc_4k_log.txt
 

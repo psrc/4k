@@ -11,12 +11,10 @@ reports=assign.rpt
 ~+|2|3|3|mf"%1%vehda"|mf"%1%vehda"|n|y
 ~+|2|3|3|mf"%1%vehs2"|mf"%1%vehs2"|n|y
 ~+|2|3|3|mf"%1%vehs3"|mf"%1%vehs3"|n|y
-~+|2|3|3|mf"%1%vpool"|mf"%1%vpool"|n|y
 ~+|2|3|3|mf"%1%hbw1v"|mf"%1%hbw1v"|n|y
 ~+|2|3|3|mf"%1%hbw2v"|mf"%1%hbw2v"|n|y
 ~+|2|3|3|mf"%1%hbw3v"|mf"%1%hbw3v"|n|y
 ~+|2|3|3|mf"%1%hbw4v"|mf"%1%hbw4v"|n|y
-~+|2|3|3|mf"%1%lttrk"|mf"%1%lttrk"|n|y
 ~+|2|3|3|mf"%1%mdtrk"|mf"%1%mdtrk"|n|y
 ~+|2|3|3|mf"%1%hvtrk"|mf"%1%hvtrk"|n|y
 q
