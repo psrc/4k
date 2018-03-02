@@ -32,6 +32,9 @@ if Not exist %modeldir%\skims\auto\pm mkdir %modeldir%\skims\auto\pm
 if Not exist %modeldir%\skims\auto\ev mkdir %modeldir%\skims\auto\ev
 if Not exist %modeldir%\skims\auto\ni mkdir %modeldir%\skims\auto\ni
 
+REM Check for the Bi-Directional Skim Folders and Add if it does not exist
+if Not exist %modeldir%\skims\bidirectional\all mkdir %modeldir%\skims\bidirectional\all
+
 REM Check for the PnR Skim Folders and Add if they do not exist
 if Not exist %modeldir%\skims\pnr\income1 mkdir %modeldir%\skims\pnr\income1
 if Not exist %modeldir%\skims\pnr\income2 mkdir %modeldir%\skims\pnr\income2

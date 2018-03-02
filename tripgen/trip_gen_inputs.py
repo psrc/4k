@@ -3,17 +3,20 @@
 # November 2017
 
 # Input Files
-model_directory = '//file2/Model/e2projects_two/4K/Testing/TripGen'
+model_directory = 'C:/coding/4k/tripgen'
+input_directory = '//file2/Model/e2projects_two/4K/Testing/inputs'
+gis_directory = '//file2/Gisapps/geodata'
+
 model_year = 2014
 taz_system = 'PSRC 3700 Zone System'
 land_use_product = 'Land Use Vision 2.0'
 
 # Person, Household, Parcel and Block Level input files
-hh_person = model_directory+'/inputs/hh_and_persons.h5'
-parcel_file = model_directory+'/inputs/parcels_urbansim.txt'
-model_files = model_directory+'/inputs/travel_model_inputs.db'
-heavy_truck_internal_file = model_directory+'/inputs/atri__heavy_trucks_internals.csv'
-heavy_truck_external_file = model_directory+'/inputs/atri__heavy_trucks_externals.csv'
+hh_person = input_directory+'/hh_and_persons.h5'
+parcel_file = input_directory+'/parcels_urbansim.txt'
+model_files = input_directory+'/travel_model_inputs.db'
+heavy_truck_internal_file = input_directory+'/atri__heavy_trucks_internals.csv'
+heavy_truck_external_file = input_directory+'/atri__heavy_trucks_externals.csv'
 
 # Growth Rates to use for adjsuting input files for specific forecast years
 special_generator_rate = 0.0096
@@ -30,10 +33,10 @@ gq_rates = model_directory+'/rates/gq_rates.csv'
 enlisted_rates = model_directory+'/rates/enlisted_rates.csv'
 
 # GIS layers for spatial joins
-taz_shapefile = '//file2/Gisapps/geodata/forecast/taz2010.shp'
-block_shapefile = '//file2/Gisapps/geodata/census//Block/block2010.shp'
-county_shapefile = '//file2/Gisapps/geodata/political/regcnty.shp'
-atri_shapefile = '//file2/Model/e2projects_two/4K/Testing/TripGen/inputs/gis/zones.shp'
+taz_shapefile = gis_directory+'/forecast/taz2010.shp'
+block_shapefile = gis_directory+'/census//Block/block2010.shp'
+county_shapefile = gis_directory+'/political/countybackground.shp'
+atri_shapefile = input_directory+'/atri/zones.shp'
 state_plane = 'epsg:2285'
 
 # Break points for classifications

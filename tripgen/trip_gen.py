@@ -58,7 +58,7 @@ def create_emme_vectors(working_df, trip_types, matrix_type):
     matrix_start = 1
     
     for purposes in trip_types:
-        working_file = open(purposes[0]+'.in', "w")
+        working_file = open(model_directory+'/output/'+purposes[0]+'.in', "w")
         working_file.write('c ' + str(model_year) + ' Trip Generation' + '\n')
         working_file.write('c Trip Generation is based on '+ land_use_product + ' using the '+ taz_system + '\n')
         working_file.write('t matrices' + '\n')
@@ -454,10 +454,10 @@ fields_to_remove = ['Parcel-ID','XCoord','YCoord','Education','Food-Services','G
 df_taz = df_taz.drop(fields_to_remove,axis=1)
 
 # Add the County Name to the TAZ Dataframe. 
-keep_columns = ['TAZ','NAME']
+keep_columns = ['TAZ','COUNTY_NM']
 taz_layer = create_point_from_polygon(taz_shapefile,state_plane)
 merged_taz = gp_join(taz_layer,county_shapefile,state_plane,keep_columns)
-merged_taz.rename(columns={'NAME': 'County'}, inplace=True)
+merged_taz.rename(columns={'COUNTY_NM': 'County'}, inplace=True)
 
 # Now merge County name into the TAZ dataframe
 df_taz = pd.merge(df_taz,merged_taz,on='TAZ',suffixes=('_x','_y'),how='left')
@@ -520,7 +520,7 @@ create_emme_vectors(balanced_df,productions_4k,'mo')
 create_emme_vectors(balanced_df,attractions_4k,'md')
 
 # Create Airport Input File for use in Emme
-working_file = open('airport.in', "w")
+working_file = open(model_directory+'/output/airport.in', "w")
 working_file.write('c ' + str(model_year) + ' Trip Generation' + '\n')
 working_file.write('c Trip Generation is based on '+ land_use_product + ' using the '+ taz_system + '\n')
 working_file.write('t matrices' + '\n')
