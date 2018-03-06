@@ -44,6 +44,7 @@ reports=trip_distribution.rpt
 ~+|1|ms29|mvothv|md heavy truck vot|0
 ~+|1|ms30|medop|medium truck op cost (cents/mile)|0
 ~+|1|ms31|hvyop|heavy truck op cost (cents/mile)|0
+~+|1|ms98|avgtm|average time|0
 ~/ ----------------------------------------------------
 ~/ --- Full Matrices
 ~/ ----------------------------------------------------
