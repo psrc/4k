@@ -1,19 +1,27 @@
 # Inputs for the Trip Generation by Parcel and Households
 # Created by Puget Sound Regional Council Staff
-# November 2017
+# March 2018
+
+import os
+
+# Land Use Information
+model_year = 2014
+taz_system = 'PSRC 3700 Zone System'
+land_use_product = 'Land Use Vision 2.0'
 
 # Input Files
 model_directory = 'C:/coding/4k/tripgen'
 input_directory = '//file2/Model/e2projects_two/4K/Testing/inputs'
 gis_directory = '//file2/Gisapps/geodata'
+output_directory = model_directory+'/output/'+str(model_year)
 
-model_year = 2014
-taz_system = 'PSRC 3700 Zone System'
-land_use_product = 'Land Use Vision 2.0'
+# Create the output directory for the trip generation results
+if not os.path.exists(output_directory):
+    os.makedirs(output_directory)
 
 # Person, Household, Parcel and Block Level input files
-hh_person = input_directory+'/hh_and_persons.h5'
-parcel_file = input_directory+'/parcels_urbansim.txt'
+hh_person = input_directory+'/hh_and_persons_'+str(model_year)+'.h5'
+parcel_file = input_directory+'/parcels_urbansim_'+str(model_year)+'.txt'
 model_files = input_directory+'/travel_model_inputs.db'
 heavy_truck_internal_file = input_directory+'/atri__heavy_trucks_internals.csv'
 heavy_truck_external_file = input_directory+'/atri__heavy_trucks_externals.csv'

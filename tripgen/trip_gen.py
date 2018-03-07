@@ -1,7 +1,7 @@
 ﻿# This script completes trip generation using a parcel input for aggregation to any zone system
 # Spatial joins for block, taz and parcel inputs are all performed programatically using geopandas
 # Created by Puget Sound Regional Council Staff
-# November 2017
+# March 2018
 
 import ast
 import h5py
@@ -58,7 +58,7 @@ def create_emme_vectors(working_df, trip_types, matrix_type):
     matrix_start = 1
     
     for purposes in trip_types:
-        working_file = open(model_directory+'/output/'+purposes[0]+'.in', "w")
+        working_file = open(output_directory+'/'+purposes[0]+'.in', "w")
         working_file.write('c ' + str(model_year) + ' Trip Generation' + '\n')
         working_file.write('c Trip Generation is based on '+ land_use_product + ' using the '+ taz_system + '\n')
         working_file.write('t matrices' + '\n')
@@ -466,25 +466,25 @@ df_taz = pd.merge(df_taz,merged_taz,on='TAZ',suffixes=('_x','_y'),how='left')
 df_taz['Kitsap-Flag']=0
 df_taz.loc[df_taz['County'] == 'Kitsap', 'Kitsap-Flag'] = 1
 df_taz.set_index('TAZ', inplace=True)
-df_taz.to_csv('1_unadjusted_unbalanced.csv',index=True)
+df_taz.to_csv(output_directory+'/1_unadjusted_unbalanced.csv',index=True)
 
 # Add in the Group Quarters to Trip Productions   
 for purpose in trip_productions:
     df_taz[purpose] = df_taz[purpose] + df_gq_taz[purpose]
-df_taz.to_csv('2_add_group_quarters.csv',index=True)
+df_taz.to_csv(output_directory+'/2_add_group_quarters.csv',index=True)
 
 # Add in the Enlisted Personnel to Trip Attractions
 for purpose in trip_attractions:
     df_taz[purpose] = df_taz[purpose] + enlisted_blocks_taz[purpose]
-df_taz.to_csv('3_add_enlisted_personnel.csv',index=True)
+df_taz.to_csv(output_directory+'/3_add_enlisted_personnel.csv',index=True)
 
 # Add in the Special Generators to Trip Attractions
 df_taz['hboatt'] = df_taz['hboatt'] + special_blocks_taz['hboatt']
-df_taz.to_csv('4_add_special_generators.csv',index=True)
+df_taz.to_csv(output_directory+'/4_add_special_generators.csv',index=True)
 
 # Add in the External Trips
 df_taz = df_taz.append(df_external)
-df_taz.to_csv('5_add_externals.csv',index=True)
+df_taz.to_csv(output_directory+'/5_add_externals.csv',index=True)
 
 # Add in Heavy Truck Trips
 df_taz = df_taz.reset_index()
@@ -495,17 +495,17 @@ df_heavy_trucks.fillna(0,inplace=True)
 df_taz = pd.merge(df_taz,df_heavy_trucks,on='TAZ',suffixes=('_x','_y'),how='left')
 df_taz.fillna(0,inplace=True)
 df_taz.set_index('TAZ', inplace=True)
-df_taz.to_csv('6_add_atri_heavy_trucks.csv',index=True)
+df_taz.to_csv(output_directory+'/6_add_atri_heavy_trucks.csv',index=True)
 
 # Adjust the taz level data based on trip rate adjustments
 adjusted_df = adjust_trips(df_taz, regional_attraction_adjustments, kitsap_attraction_adjustments)
 adjusted_df = adjust_trips(df_taz, regional_production_adjustments, kitsap_production_adjustments)
-adjusted_df.to_csv('7_adjust_trip_ends.csv',index=True)
+adjusted_df.to_csv(output_directory+'/7_adjust_trip_ends.csv',index=True)
 
 # Balance the taz dataframe
 balanced_df = balance_trips(adjusted_df, balance_to_productions, 'pro')
 balanced_df = balance_trips(adjusted_df, balance_to_attractions, 'att')
-balanced_df.to_csv('8_balance_trip_ends.csv',index=True)
+balanced_df.to_csv(output_directory+'/8_balance_trip_ends.csv',index=True)
 
 ###########################################################
 ###########################################################
@@ -520,7 +520,7 @@ create_emme_vectors(balanced_df,productions_4k,'mo')
 create_emme_vectors(balanced_df,attractions_4k,'md')
 
 # Create Airport Input File for use in Emme
-working_file = open(model_directory+'/output/airport.in', "w")
+working_file = open(output_directory+'/airport.in', "w")
 working_file.write('c ' + str(model_year) + ' Trip Generation' + '\n')
 working_file.write('c Trip Generation is based on '+ land_use_product + ' using the '+ taz_system + '\n')
 working_file.write('t matrices' + '\n')
@@ -536,5 +536,5 @@ working_file.close()
 
 end_of_production = time.time()
 print 'The Total Time for all processes took', (end_of_production-start_of_production)/60, 'minutes to execute.'
-#exit()
+exit()
              
