@@ -63,20 +63,14 @@ q
 ..\distribution\all\emmebank
 ~+|2|3|3|mf"hbodst"|mf"temp07"|n|y
 q
-1.31
-~+|1
-~/ --- Copy Distribution into Temporary Matrices
-..\distribution\all\emmebank
-~+|2|3|3|mf"hspdst"|mf"temp08"|n|y
-q
 ~/ --- Summarize HBO Trips for Internal Zones
 3.21
-~+|1|y|ms667|y|hodar|DY HBO Drive Alone - Region|0|mf"temp01"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
-~+|1|y|ms668|y|hos2r|DY HBO HOV 2 - Region|0|mf"temp02"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
-~+|1|y|ms669|y|hos3r|DY HBO HOV 3+ - Region|0|mf"temp03"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
-~+|1|y|ms670|y|hotwr|DY HBO Transit Walk - Region|0|mf"temp04"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
-~+|1|y|ms671|y|howkr|DY HBO Walk - Region|0|mf"temp05"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
-~+|1|y|ms672|y|hobkr|DY HBO Bike - Region|0|mf"temp06"*(mf"temp08"+mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms667|y|hodar|DY HBO Drive Alone - Region|0|mf"temp01"*(mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms668|y|hos2r|DY HBO HOV 2 - Region|0|mf"temp02"*(mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms669|y|hos3r|DY HBO HOV 3+ - Region|0|mf"temp03"*(mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms670|y|hotwr|DY HBO Transit Walk - Region|0|mf"temp04"*(mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms671|y|howkr|DY HBO Walk - Region|0|mf"temp05"*(mf"temp07")|||y|1,%1%||1,%1%||||2
+~+|1|y|ms672|y|hobkr|DY HBO Bike - Region|0|mf"temp06"*(mf"temp07")|||y|1,%1%||1,%1%||||2
 q
 ~/ ---------------------------------------------------------------
 ~/ --- Non-Home Based Mode Choice Summary

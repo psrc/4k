@@ -10,7 +10,6 @@ reports=initialization.rpt
 ~+|2|3|3|mf"coldst"|mf"coldst"|n|y
 ~+|2|3|3|mf"hbodst"|mf"hbodst"|n|y
 ~+|2|3|3|mf"schdst"|mf"schdst"|n|y
-~+|2|3|3|mf"hspdst"|mf"hspdst"|n|y
 ~+|2|3|3|mf"hbwds1"|mf"hbwds1"|n|y
 ~+|2|3|3|mf"hbwds2"|mf"hbwds2"|n|y
 ~+|2|3|3|mf"hbwds3"|mf"hbwds3"|n|y

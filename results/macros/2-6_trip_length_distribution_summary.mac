@@ -47,51 +47,6 @@ q
 ~+|1|y|ms786|y|cods26|DY Coll Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
 q
 ~/ ---------------------------------------------------------------
-~/ --- Trip Length Frequency Distribution - Home Base Shopping
-~/ ---------------------------------------------------------------
-1.31
-~+|1
-~/ --- Copy MD SOV Time and Distance Skims into Temporary Matrices
-..\skims\auto\md\emmebank
-~+|2|3|3|mf"mau1tm"|mf"temp01"|n|y
-~+|2|3|3|mf"mau1ds"|mf"temp02"|n|y
-q
-1.31
-~+|1
-~/ --- Copy Distribution Matrix into a Temporary Matrix
-..\distribution\all\emmebank
-~+|2|3|3|mf"hspdst"|mf"temp03"|n|y
-q
-~/ --- Summarize Shopping Trips for Internal Zones
-3.21
-~+|1|y|ms787|y|spds1|DY Shop Dist 1mi|0|"temp03"||mf"temp02"|0,1,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms788|y|spds2|DY Shop Dist 2mi|0|"temp03"||mf"temp02"|1.001,2,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms789|y|spds3|DY Shop Dist 3mi|0|"temp03"||mf"temp02"|2.001,3,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms790|y|spds4|DY Shop Dist 4mi|0|"temp03"||mf"temp02"|3.001,4,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms791|y|spds5|DY Shop Dist 5mi|0|"temp03"||mf"temp02"|4.001,5,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms792|y|spds6|DY Shop Dist 6mi|0|"temp03"||mf"temp02"|5.001,6,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms793|y|spds7|DY Shop Dist 7mi|0|"temp03"||mf"temp02"|6.001,7,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms794|y|spds8|DY Shop Dist 8mi|0|"temp03"||mf"temp02"|7.001,8,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms795|y|spds9|DY Shop Dist 9mi|0|"temp03"||mf"temp02"|8.001,9,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms796|y|spds10|DY Shop Dist 10mi|0|"temp03"||mf"temp02"|9.001,10,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms797|y|spds11|DY Shop Dist 11mi|0|"temp03"||mf"temp02"|10.001,11,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms798|y|spds12|DY Shop Dist 12mi|0|"temp03"||mf"temp02"|11.001,12,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms799|y|spds13|DY Shop Dist 13mi|0|"temp03"||mf"temp02"|12.001,13,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms800|y|spds14|DY Shop Dist 14mi|0|"temp03"||mf"temp02"|13.001,14,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms801|y|spds15|DY Shop Dist 15mi|0|"temp03"||mf"temp02"|14.001,15,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms802|y|spds16|DY Shop Dist 16mi|0|"temp03"||mf"temp02"|15.001,16,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms803|y|spds17|DY Shop Dist 17mi|0|"temp03"||mf"temp02"|16.001,17,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms804|y|spds18|DY Shop Dist 18mi|0|"temp03"||mf"temp02"|17.001,18,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms805|y|spds19|DY Shop Dist 19mi|0|"temp03"||mf"temp02"|18.001,19,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms806|y|spds20|DY Shop Dist 20mi|0|"temp03"||mf"temp02"|19.001,20,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms807|y|spds21|DY Shop Dist 21mi|0|"temp03"||mf"temp02"|20.001,21,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms808|y|spds22|DY Shop Dist 22mi|0|"temp03"||mf"temp02"|21.001,22,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms809|y|spds23|DY Shop Dist 23mi|0|"temp03"||mf"temp02"|22.001,23,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms810|y|spds24|DY Shop Dist 24mi|0|"temp03"||mf"temp02"|23.001,24,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms811|y|spds25|DY Shop Dist 25mi|0|"temp03"||mf"temp02"|24.001,25,include|y|1,%1%||1,%1%||||2
-~+|1|y|ms812|y|spds26|DY Shop Dist >25mi|0|"temp03"||mf"temp02"|25.001,99999,include|y|1,%1%||1,%1%||||2
-q
-~/ ---------------------------------------------------------------
 ~/ --- Trip Length Frequency Distribution - Home Base Other
 ~/ ---------------------------------------------------------------
 1.31

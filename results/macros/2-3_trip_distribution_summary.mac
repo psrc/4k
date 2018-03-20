@@ -140,43 +140,6 @@ q
 ~+|1|y|ms460|y|slkpsh|DY Sch Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
 q
 ~/ ---------------------------------------------------------------
-~/ --- Home Based Shopping Trip Distribution Summary
-~/ ---------------------------------------------------------------
-1.31
-~+|1
-~/ --- Copy Distribution Matrix into a Temporary Matrix
-..\distribution\all\emmebank
-~+|2|3|3|mf"hspdst"|mf"temp03"|n|y
-q
-~/ --- Summarize Shopping Trips for Internal Zones
-3.21
-~+|1|y|ms391|y|hsp|DY Shopping Trips|0|mf"temp03"|||n|||2
-~+|1|y|ms461|y|hsptm1|DY Shp Dist by Time Inter|0|"temp03"*(p.ne.q)*"temp01"|||y|1,%1%||1,%1%||||2
-~+|1|y|ms462|y|hsptm2|DY Shp Dist by Time Intra|0|"temp03"*(p.eq.q)*"temp01"|||y|1,%1%||1,%1%||||2
-~+|1|y|ms463|y|hspds1|DY Shp Dist by Distance Inter|0|"temp03"*(p.ne.q)*"temp02"|||y|1,%1%||1,%1%||||2
-~+|1|y|ms464|y|hspds2|DY Shp Dist by Distance Intra|0|"temp03"*(p.eq.q)*"temp02"|||y|1,%1%||1,%1%||||2
-~/ --- Summarize hsp Trips Destined to King County
-~+|1|y|ms465|y|hskgkg|DY Shp King to King|0|"temp03"|||y|gc1||gc1||||2
-~+|1|y|ms466|y|hsshkg|DY Shp Snohomish to King|0|"temp03"|||y|gc2||gc1||||2
-~+|1|y|ms467|y|hspekg|DY Shp Pierce to King|0|"temp03"|||y|gc3||gc1||||2
-~+|1|y|ms468|y|hskpkg|DY Shp Kitsap to King|0|"temp03"|||y|gc4||gc1||||2
-~/ --- Summarize hsp Trips Destined to Kitsap County
-~+|1|y|ms469|y|hskgkp|DY Shp King to Kitsap|0|"temp03"|||y|gc1||gc4||||2
-~+|1|y|ms470|y|hsshkp|DY Shp Snohomish to Kitsap|0|"temp03"|||y|gc2||gc4||||2
-~+|1|y|ms471|y|hspekp|DY Shp Pierce to Kitsap|0|"temp03"|||y|gc3||gc4||||2
-~+|1|y|ms472|y|hskpkp|DY Shp Kitsap to Kitsap|0|"temp03"|||y|gc4||gc4||||2
-~/ --- Summarize hsp Trips Destined to Pierce County
-~+|1|y|ms473|y|hskgpe|DY Shp King to Pierce|0|"temp03"|||y|gc1||gc3||||2
-~+|1|y|ms474|y|hsshpe|DY Shp Snohomish to Pierce|0|"temp03"|||y|gc2||gc3||||2
-~+|1|y|ms475|y|hspepe|DY Shp Pierce to Pierce|0|"temp03"|||y|gc3||gc3||||2
-~+|1|y|ms476|y|hskppe|DY Shp Kitsap to Pierce|0|"temp03"|||y|gc4||gc3||||2
-~/ --- Summarize hsp Trips Destined to Snohomish County
-~+|1|y|ms477|y|hskgsh|DY Shp King to Snohomish|0|"temp03"|||y|gc1||gc2||||2
-~+|1|y|ms478|y|hsshsh|DY Shp Snohomish to Snohomish|0|"temp03"|||y|gc2||gc2||||2
-~+|1|y|ms479|y|hspesh|DY Shp Pierce to Snohomish|0|"temp03"|||y|gc3||gc2||||2
-~+|1|y|ms480|y|hskpsh|DY Shp Kitsap to Snohomish|0|"temp03"|||y|gc4||gc2||||2
-q
-~/ ---------------------------------------------------------------
 ~/ --- Other to Other Trip Distribution Summary
 ~/ ---------------------------------------------------------------
 1.31

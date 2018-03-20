@@ -8,8 +8,6 @@ m matrix=ms"hbotpa"
   all all: 0.521
 m matrix=ms"schtpa"
   all all: 0.507
-m matrix=ms"hsptpa"
-  all all: 0.355
 m matrix=ms"ototpa"
   all all: 0.500
 m matrix=ms"wtotpa"
@@ -29,8 +27,6 @@ m matrix=ms"hbotap"
   all all: 0.479
 m matrix=ms"schtap"
   all all: 0.493
-m matrix=ms"hsptap"
-  all all: 0.645
 m matrix=ms"ototap"
   all all: 0.500
 m matrix=ms"wtotap"
@@ -49,8 +45,6 @@ m matrix=ms"colpa"
 m matrix=ms"hbopa"
   all all: 0.009
 m matrix=ms"schpa"
-  all all: 0.000
-m matrix=ms"hsppa"
   all all: 0.000
 m matrix=ms"otopa"
   all all: 0.010
@@ -71,8 +65,6 @@ m matrix=ms"hboap"
   all all: 0.013
 m matrix=ms"schap"
   all all: 0.000
-m matrix=ms"hspap"
-  all all: 0.057
 m matrix=ms"otoap"
   all all: 0.010
 m matrix=ms"wtoap"

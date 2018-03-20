@@ -1,24 +1,51 @@
 ~?!i&32768
 ~o|295
 batchin=?
-reports=initialization.rpt
-~/
-~/ ...initialize full matrices
-~/ ...skips mf 1-4 - vehmtx copies into mf4
+reports=tod_sov.rpt
+~/ ----------------------------------------------------
+~/ --- Initialize matrix directory
+~/ ----------------------------------------------------
+~+|3.12|7|y|q
+~/ ----------------------------------------------------
+~/ --- Initialize Matrices
+~/ ----------------------------------------------------
 3.12
+~/ ----------------------------------------------------
+~/ --- Origin Matrices
+~/ ----------------------------------------------------
+~+|1|mo01|hhsiz1|1 person hhs|0
+~+|1|mo02|hhsiz2|2 person hhs|0
+~+|1|mo03|hhsiz3|3 person hhs|0
+~+|1|mo04|hhsiz4|4+ person hhs|0
+~+|1|mo05|hhtot|total hhs|0
+~+|1|mo06|hhsize|average hh size|0
+~/ ----------------------------------------------------
+~/ --- Destination Matrices
+~/ ----------------------------------------------------
+~+|1|md01|hhsize|average hh size|0
+~/ ----------------------------------------------------
+~/ --- Full Matrices
+~/ ----------------------------------------------------
 ~/ ... Bridge Flags
+~/ ----------------------------------------------------
 ~+|1|mf05|brdg|bridge flag|0
-~/ ... Original Delay
+~/ ----------------------------------------------------
+~/ --- Original Delay
+~/ ----------------------------------------------------
 ~+|1|mf06|adly|am delay|0
 ~+|1|mf07|mdly|md delay|0
 ~+|1|mf08|pdly|pm delay|0
 ~+|1|mf09|edly|ev delay|0
-~/ ... Adjusted Delay
+~/ ----------------------------------------------------
+~/ -- Adjusted Delay
+~/ ----------------------------------------------------
 ~+|1|mf10|aadly|am delay - adjusted|0
 ~+|1|mf11|madly|md delay - adjusted|0
 ~+|1|mf12|padly|pm delay - adjusted|0
 ~+|1|mf13|eadly|ev delay - adjusted|0
-~/ ... Utilities
+~/ ----------------------------------------------------
+~/ -- Utilities
+~/ ----------------------------------------------------
 ~+|1|mf14|util01|utility - time period interval 01|0
 ~+|1|mf15|util02|utility - time period interval 02|0
 ~+|1|mf16|util03|utility - time period interval 03|0
@@ -52,7 +79,9 @@ reports=initialization.rpt
 ~+|1|mf44|util31|utility - time period interval 31|0
 ~+|1|mf45|util32|utility - time period interval 32|0
 ~+|1|mf46|utils|sum of utilities|0
-~/ ... Time of Day Share
+~/ ----------------------------------------------------
+~/ --- Time of Day Share
+~/ ----------------------------------------------------
 ~+|1|mf47|am1ns1|sov am a-p tod share - hbwork 1|0
 ~+|1|mf48|md1ns1|sov md a-p tod share - hbwork 1|0
 ~+|1|mf49|pm1ns1|sov pm a-p tod share - hbwork 1|0
@@ -103,19 +132,54 @@ reports=initialization.rpt
 ~+|1|mf94|pm6ns|sov pm p-a tod share - hbother|0
 ~+|1|mf95|ev6ns|sov ev p-a tod share - hbother|0
 ~+|1|mf96|ni6ns|sov ni p-a tod share - hbother|0
-~+|1|mf97|am3ns|sov am a-p tod share - hbshop|0
-~+|1|mf98|md3ns|sov md a-p tod share - hbshop|0
-~+|1|mf99|pm3ns|sov pm a-p tod share - hbshop|0
-~+|1|mf100|ev3ns|sov ev a-p tod share - hbshop|0
-~+|1|mf101|ni3ns|sov ni a-p tod share - hbshop|0
-~+|1|mf102|am4ns|sov am p-a tod share - hbshop|0
-~+|1|mf103|md4ns|sov md p-a tod share - hbshop|0
-~+|1|mf104|pm4ns|sov pm p-a tod share - hbshop|0
-~+|1|mf105|ev4ns|sov ev p-a tod share - hbshop|0
-~+|1|mf106|ni4ns|sov ni p-a tod share - hbshop|0
 q
-~#
-~/end: 4_initialize_full_matrices.mac
-~/exit emme
-~/
+~/ ----------------------------------------------------
+~/ --- Import Vehicle Availability Data
+~/ ----------------------------------------------------
+~+|3.11|..\..\input\vehicleavailability\vehmtx.in|2|
+~/ ----------------------------------------------------
+~/ --- Calculate HH Size
+~/ ----------------------------------------------------
+~/ ...tabulate number of hhs by size catergory in zonal origin vector
+3.21
+~/ ...1 person households
+~+|1|y|mo"hhsiz1"|n|mf"vehmtx"|||y|all
+~+|1,16
+~+|65,80
+~+|129,144
+~+|193,208|||2
+~/ ...2 person households
+~+|1|y|mo"hhsiz2"|n|mf"vehmtx"|||y|all
+~+|17,32
+~+|81,96
+~+|145,160
+~+|209,224|||2
+~/ ... 3person households
+~+|1|y|mo"hhsiz3"|n|mf"vehmtx"|||y|all
+~+|33,48
+~+|97,112
+~+|161,176
+~+|225,240|||2
+~/ ... 4+ person household
+~+|1|y|mo"hhsiz4"|n|mf"vehmtx"|||y|all
+~+|49,64
+~+|113,128
+~+|177,192
+~+|241,256|||2
+~/ ...sum total households in origin vector
+~+|1|y|mo"hhtot"|n|mo"hhsiz1"+mo"hhsiz2"+mo"hhsiz3"+mo"hhsiz4"|||n|2
+~/ ...calculate average hh size in in origin vector
+~+|1|y|mo"hhsize"|n|((mo"hhsiz1"*1)+(mo"hhsiz2"*2)+(mo"hhsiz3"*3)+
+~+|(mo"hhsiz4"*4.5))/mo"hhtot"||mo"hhtot"|0,0,ex|n|2
+~/ ...zero out hhsize for calculated values exceeding 99
+~+|1|y|mo"hhsize"|n|0||mo"hhsize"|0,99,exclude|n|2
+q
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...transpose origin vector of average hh size to destination vector
+3.12
+~+|4|3|mo"hhsize"|md"hhsize"|n
+q
+~/ ----------------------------------------------------
+~/ --- Exit Emme
+~/ ----------------------------------------------------
 q

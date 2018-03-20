@@ -8,8 +8,6 @@ m matrix=ms"hbotpa"
   all all: 0.479
 m matrix=ms"schtpa"
   all all: 0.556
-m matrix=ms"hsptpa"
-  all all: 0.365
 m matrix=ms"ototpa"
   all all: 0.500
 m matrix=ms"wtotpa"
@@ -21,8 +19,6 @@ m matrix=ms"hbotap"
   all all: 0.521
 m matrix=ms"schtap"
   all all: 0.444
-m matrix=ms"hsptap"
-  all all: 0.635
 m matrix=ms"ototap"
   all all: 0.500
 m matrix=ms"wtotap"

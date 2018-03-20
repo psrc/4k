@@ -10,7 +10,6 @@ reports=initialization.rpt
 ~+|1|mf01|coldst|hb college distribution|0
 ~+|1|mf02|hbodst|hb other distribution|0
 ~+|1|mf03|schdst|hb school distribution|0
-~+|1|mf04|hspdst|hb shop distribution|0
 ~+|1|mf05|hbwds1|hb work income 1 distribution|0
 ~+|1|mf06|hbwds2|hb work income 2 distribution|0
 ~+|1|mf07|hbwds3|hb work income 3 distribution|0
@@ -30,11 +29,9 @@ reports=initialization.rpt
 ~+|1|mf21|nhb|nhb mode share|0
 ~/ ... time of day shares
 ~+|1|mf22|tod1|a-p tod share - hbwork|0
-~+|1|mf23|tod3|a-p tod share - hbshop|0
 ~+|1|mf24|tod5|a-p tod share - hbother|0
 ~/ ... production to attraction
 ~+|1|mf25|tod2|p-a tod share - hbwork|0
-~+|1|mf26|tod4|p-a tod share - hbshop|0
 ~+|1|mf27|tod6|p-a tod share - hbother|0
 ~/ ... park and ride
 ~+|1|mf28|daleg|auto portion of pnr trip|0
@@ -121,7 +118,6 @@ reports=initialization.rpt
 ~+|1|ms01|coltpa|College Trip P-A|0
 ~+|1|ms02|hbotpa|HBO Trip P-A|0
 ~+|1|ms03|schtpa|School Trip P-A|0
-~+|1|ms04|hsptpa|Shopping Trip P-A|0
 ~+|1|ms05|ototpa|Other to Other Trip P-A|0
 ~+|1|ms06|wtotpa|Work to Other Trip P-A|0
 ~+|1|ms07|wk1tpa|Work #1 Trip P-A|0
@@ -136,7 +132,6 @@ reports=initialization.rpt
 ~+|1|ms15|coltap|College Trip A-P|0
 ~+|1|ms16|hbotap|HBO Trip A-P|0
 ~+|1|ms17|schtap|School Trip A-P|0
-~+|1|ms18|hsptap|Shopping Trip A-P|0
 ~+|1|ms19|ototap|Other to Other Trip A-P|0
 ~+|1|ms20|wtotap|Work to Other Trip A-P|0
 ~+|1|ms21|wk1tap|Work #1 Trip A-P|0
@@ -151,7 +146,6 @@ reports=initialization.rpt
 ~+|1|ms29|colpa|College TOD P-A|0
 ~+|1|ms30|hbopa|HBO TOD P-A|0
 ~+|1|ms31|schpa|School TOD P-A|0
-~+|1|ms32|hsppa|Shopping TOD P-A|0
 ~+|1|ms33|otopa|Other to Other TOD P-A|0
 ~+|1|ms34|wtopa|Work to Other TOD P-A|0
 ~+|1|ms35|wk1pa|Work #1 TOD P-A|0
@@ -166,7 +160,6 @@ reports=initialization.rpt
 ~+|1|ms43|colap|College TOD A-P|0
 ~+|1|ms44|hboap|HBO TOD A-P|0
 ~+|1|ms45|schap|School TOD A-P|0
-~+|1|ms46|hspap|Shopping TOD A-P|0
 ~+|1|ms47|otoap|Other to Other TOD A-P|0
 ~+|1|ms48|wtoap|Work to Other TOD A-P|0
 ~+|1|ms49|wk1ap|Work #1 TOD A-P|0

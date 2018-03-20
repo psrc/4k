@@ -1,0 +1,226 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=tod_hov.rpt
+~/ ----------------------------------------------------
+~/ --- Initialize matrix directory
+~/ ----------------------------------------------------
+~+|3.12|7|y|q
+~/ ----------------------------------------------------
+~/ --- Initialize Matrices
+~/ ----------------------------------------------------
+3.12
+~/ ----------------------------------------------------
+~/ --- Origin Matrices
+~/ ----------------------------------------------------
+~+|1|mo01|hhsiz1|1 person hhs|0
+~+|1|mo02|hhsiz2|2 person hhs|0
+~+|1|mo03|hhsiz3|3 person hhs|0
+~+|1|mo04|hhsiz4|4+ person hhs|0
+~+|1|mo05|hhtot|total hhs|0
+~+|1|mo06|hhsize|average hh size|0
+~/ ----------------------------------------------------
+~/ --- Destination Matrices
+~/ ----------------------------------------------------
+~+|1|md01|hhsize|average hh size|0
+~/ ----------------------------------------------------
+~/ --- Full Matrices
+~/ ----------------------------------------------------
+~/ --- bridge flags
+~/ ----------------------------------------------------
+~+|1|mf05|brhov2|bridge flag - hov 2|0
+~+|1|mf06|brhov3|bridge flag - hov 3+|0
+~/ ----------------------------------------------------
+~/ --- delay
+~/ ----------------------------------------------------
+~+|1|mf07|aau2dl|am hov 2 delay|0
+~+|1|mf08|aau3dl|am hov 3+ delay|0
+~+|1|mf09|mau2dl|md hov 2 delay|0
+~+|1|mf10|mau3dl|md hov 3+ delay|0
+~+|1|mf11|pau2dl|pm hov 2 delay|0
+~+|1|mf12|pau3dl|pm hov 3+ delay|0
+~+|1|mf13|eau2dl|ev hov 2 delay|0
+~+|1|mf14|eau3dl|ev hov 3+ delay|0
+~/ ----------------------------------------------------
+~/ --- adjusted delay
+~/ ----------------------------------------------------
+~+|1|mf15|aau2da|am hov 2 delay - adjusted|0
+~+|1|mf16|aau3da|am hov 3+ delay - adjusted|0
+~+|1|mf17|mau2da|md hov 2 delay - adjusted|0
+~+|1|mf18|mau3da|md hov 3+ delay - adjusted|0
+~+|1|mf19|pau2da|pm hov 2 delay - adjusted|0
+~+|1|mf20|pau3da|pm hov 3+ delay - adjusted|0
+~+|1|mf21|eau2da|ev hov 2 delay - adjusted|0
+~+|1|mf22|eau3da|ev hov 3+ delay - adjusted|0
+~/ ----------------------------------------------------
+~/ --- utilities
+~/ ----------------------------------------------------
+~+|1|mf23|util01|utility - time period interval 01|0
+~+|1|mf24|util02|utility - time period interval 02|0
+~+|1|mf25|util03|utility - time period interval 03|0
+~+|1|mf26|util04|utility - time period interval 04|0
+~+|1|mf27|util05|utility - time period interval 05|0
+~+|1|mf28|util06|utility - time period interval 06|0
+~+|1|mf29|util07|utility - time period interval 07|0
+~+|1|mf30|util08|utility - time period interval 08|0
+~+|1|mf31|util09|utility - time period interval 09|0
+~+|1|mf32|util10|utility - time period interval 10|0
+~+|1|mf33|util11|utility - time period interval 11|0
+~+|1|mf34|util12|utility - time period interval 12|0
+~+|1|mf35|util13|utility - time period interval 13|0
+~+|1|mf36|util14|utility - time period interval 14|0
+~+|1|mf37|util15|utility - time period interval 15|0
+~+|1|mf38|util16|utility - time period interval 16|0
+~+|1|mf39|util17|utility - time period interval 17|0
+~+|1|mf40|util18|utility - time period interval 18|0
+~+|1|mf41|util19|utility - time period interval 19|0
+~+|1|mf42|util20|utility - time period interval 20|0
+~+|1|mf43|util21|utility - time period interval 21|0
+~+|1|mf44|util22|utility - time period interval 22|0
+~+|1|mf45|util23|utility - time period interval 23|0
+~+|1|mf46|util24|utility - time period interval 24|0
+~+|1|mf47|util25|utility - time period interval 25|0
+~+|1|mf48|util26|utility - time period interval 26|0
+~+|1|mf49|util27|utility - time period interval 27|0
+~+|1|mf50|util28|utility - time period interval 28|0
+~+|1|mf51|util29|utility - time period interval 29|0
+~+|1|mf52|util30|utility - time period interval 30|0
+~+|1|mf53|util31|utility - time period interval 31|0
+~+|1|mf54|util32|utility - time period interval 32|0
+~+|1|mf55|utils|sum of utilities|0
+~/ ----------------------------------------------------
+~/ --- home based work 
+~/ ----------------------------------------------------
+~+|1|mf56|am1sr2|sr2 am a-p tod share - hbwork|0
+~+|1|mf57|md1sr2|sr2 md a-p tod share - hbwork|0
+~+|1|mf58|pm1sr2|sr2 pm a-p tod share - hbwork|0
+~+|1|mf59|ev1sr2|sr2 ev a-p tod share - hbwork|0
+~+|1|mf60|ni1sr2|sr2 ni a-p tod share - hbwork|0
+~+|1|mf61|am1sr3|sr3+ am a-p tod share - hbwork|0
+~+|1|mf62|md1sr3|sr3+ md a-p tod share - hbwork|0
+~+|1|mf63|pm1sr3|sr3+ pm a-p tod share - hbwork|0
+~+|1|mf64|ev1sr3|sr3+ ev a-p tod share - hbwork|0
+~+|1|mf65|ni1sr3|sr3+ ni a-p tod share - hbwork|0
+~+|1|mf66|am2sr2|sr2 am p-a tod share - hbwork|0
+~+|1|mf67|md2sr2|sr2 md p-a tod share - hbwork|0
+~+|1|mf68|pm2sr2|sr2 pm p-a tod share - hbwork|0
+~+|1|mf69|ev2sr2|sr2 ev p-a tod share - hbwork|0
+~+|1|mf70|ni2sr2|sr2 ni p-a tod share - hbwork|0
+~+|1|mf71|am2sr3|sr3+ am p-a tod share - hbwork|0
+~+|1|mf72|md2sr3|sr3+ md p-a tod share - hbwork|0
+~+|1|mf73|pm2sr3|sr3+ pm p-a tod share - hbwork|0
+~+|1|mf74|ev2sr3|sr3+ ev p-a tod share - hbwork|0
+~+|1|mf75|ni2sr3|sr3+ ni p-a tod share - hbwork|0
+~/ ----------------------------------------------------
+~/ --- home based other
+~/ ----------------------------------------------------
+~+|1|mf76|am5sr2|sr2 am a-p tod share - hbother|0
+~+|1|mf77|md5sr2|sr2 md a-p tod share - hbother|0
+~+|1|mf78|pm5sr2|sr2 pm a-p tod share - hbother|0
+~+|1|mf79|ev5sr2|sr2 ev a-p tod share - hbother|0
+~+|1|mf80|ni5sr2|sr2 ni a-p tod share - hbother|0
+~+|1|mf81|am5sr3|sr3+ am a-p tod share - hbother|0
+~+|1|mf82|md5sr3|sr3+ md a-p tod share - hbother|0
+~+|1|mf83|pm5sr3|sr3+ pm a-p tod share - hbother|0
+~+|1|mf84|ev5sr3|sr3+ ev a-p tod share - hbother|0
+~+|1|mf85|ni5sr3|sr3+ ni a-p tod share - hbother|0
+~+|1|mf86|am6sr2|sr2 am p-a tod share - hbother|0
+~+|1|mf87|md6sr2|sr2 md p-a tod share - hbother|0
+~+|1|mf88|pm6sr2|sr2 pm p-a tod share - hbother|0
+~+|1|mf89|ev6sr2|sr2 ev p-a tod share - hbother|0
+~+|1|mf90|ni6sr2|sr2 ni p-a tod share - hbother|0
+~+|1|mf91|am6sr3|sr3+ am p-a tod share - hbother|0
+~+|1|mf92|md6sr3|sr3+ md p-a tod share - hbother|0
+~+|1|mf93|pm6sr3|sr3+ pm p-a tod share - hbother|0
+~+|1|mf94|ev6sr3|sr3+ ev p-a tod share - hbother|0
+~+|1|mf95|ni6sr3|sr3+ ni p-a tod share - hbother|0
+q
+~/ ----------------------------------------------------
+~/ --- Import Vehicle Availability Data
+~/ ----------------------------------------------------
+~+|3.11|..\..\input\vehicleavailability\vehmtx.in|2|
+~/ ----------------------------------------------------
+~/ --- Calculate HH Size
+~/ ----------------------------------------------------
+~/ ...tabulate number of hhs by size catergory in zonal origin vector
+3.21
+~/ ...1 person households
+~+|1|y|mo"hhsiz1"|n|mf"vehmtx"|||y|all
+~+|1,16
+~+|65,80
+~+|129,144
+~+|193,208|||2
+~/ ...2 person households
+~+|1|y|mo"hhsiz2"|n|mf"vehmtx"|||y|all
+~+|17,32
+~+|81,96
+~+|145,160
+~+|209,224|||2
+~/ ... 3person households
+~+|1|y|mo"hhsiz3"|n|mf"vehmtx"|||y|all
+~+|33,48
+~+|97,112
+~+|161,176
+~+|225,240|||2
+~/ ... 4+ person household
+~+|1|y|mo"hhsiz4"|n|mf"vehmtx"|||y|all
+~+|49,64
+~+|113,128
+~+|177,192
+~+|241,256|||2
+~/ ...sum total households in origin vector
+~+|1|y|mo"hhtot"|n|mo"hhsiz1"+mo"hhsiz2"+mo"hhsiz3"+mo"hhsiz4"|||n|2
+~/ ...calculate average hh size in in origin vector
+~+|1|y|mo"hhsize"|n|((mo"hhsiz1"*1)+(mo"hhsiz2"*2)+(mo"hhsiz3"*3)+
+~+|(mo"hhsiz4"*4.5))/mo"hhtot"||mo"hhtot"|0,0,ex|n|2
+~/ ...zero out hhsize for calculated values exceeding 99
+~+|1|y|mo"hhsize"|n|0||mo"hhsize"|0,99,exclude|n|2
+q
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...transpose origin vector of average hh size to destination vector
+3.12
+~+|4|3|mo"hhsize"|md"hhsize"|n
+q
+~/ ----------------------------------------------------
+~/ --- Import Delay Matrices
+~/ ----------------------------------------------------
+1.31
+~+|1
+..\delay\emmebank
+~+|2|3|3|mf"aau2dl"|mf"aau2dl"|n|y
+~+|2|3|3|mf"mau2dl"|mf"mau2dl"|n|y
+~+|2|3|3|mf"pau2dl"|mf"pau2dl"|n|y
+~+|2|3|3|mf"eau2dl"|mf"eau2dl"|n|y
+~+|2|3|3|mf"aau3dl"|mf"aau3dl"|n|y
+~+|2|3|3|mf"mau3dl"|mf"mau3dl"|n|y
+~+|2|3|3|mf"pau3dl"|mf"pau3dl"|n|y
+~+|2|3|3|mf"eau3dl"|mf"eau3dl"|n|y
+q
+~/ ----------------------------------------------------
+~/ --- Import Bridge Flag Matrices
+~/ ----------------------------------------------------
+1.31
+~+|1
+..\..\skims\auto\am\emmebank
+~/ ...import bridge flag matrices
+~+|2|3|3|mf"brhov2"|mf"brhov2"|n|y
+~+|2|3|3|mf"brhov3"|mf"brhov3"|n|y
+q
+~/ ----------------------------------------------------
+~/ --- Calculated Adjusted Delay (capped at 300  minutes)
+~/ ----------------------------------------------------
+~+|3.21|1|y|mf"aau2da"|n|(mf"aau2dl".min.300)|||n|2|q
+~+|3.21|1|y|mf"aau3da"|n|(mf"aau3dl".min.300)|||n|2|q
+~+|3.21|1|y|mf"mau2da"|n|(mf"mau2dl".min.300)|||n|2|q
+~+|3.21|1|y|mf"mau3da"|n|(mf"mau3dl".min.300)|||n|2|q
+~+|3.21|1|y|mf"pau2da"|n|(mf"pau2dl".min.300)|||n|2|q
+~+|3.21|1|y|mf"pau3da"|n|(mf"pau3dl".min.300)|||n|2|q
+~/ ----------------------------------------------------
+~/ --- Make sure Bridge Flag is 1
+~/ ----------------------------------------------------
+~+|3.21|1|y|mf"brhov2"|n|1||mf"brhov2"|0,0,ex|n|2|q
+~+|3.21|1|y|mf"brhov3"|n|1||mf"brhov3"|0,0,ex|n|2|q
+~/ ----------------------------------------------------
+~/ --- Exit Emme
+~/ ----------------------------------------------------
+q

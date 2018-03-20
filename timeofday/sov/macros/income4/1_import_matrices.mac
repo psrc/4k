@@ -8,7 +8,7 @@ reports=hbw4.rpt
 1.31
 ~/ ...open delay matrices emmebank
 ~+|1
-..\delay\allpurposes\emmebank
+..\delay\emmebank
 ~/ ...import hbwork sov delay matrices
 ~+|2|3|3|mf"aa1dl4"|mf"adly"|n|y
 ~+|2|3|3|mf"ma1dl4"|mf"mdly"|n|y

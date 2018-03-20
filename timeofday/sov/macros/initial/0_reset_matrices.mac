@@ -1,7 +1,7 @@
 ~?!i&32768
 ~o|295
 batchin=?
-reports=initialization.rpt
+reports=tod_sov.rpt
 ~/
 ~/ ...call module 3.21: matrix calculations
 ~/ ...set matrices to 0
