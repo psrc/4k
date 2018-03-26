@@ -29,17 +29,8 @@ reports=calibrate_trip_distribution.rpt
 ~+|3.21|1|y|md8|n|0|||y|3751,4000||2|q
 ~/
 ~/ ...adjust home based other trip distribution
-~<macros\calibration\caligrav.mac 15.098 mo8 md8 mf18 mf5
+~<macros\calibration\caligrav.mac 14.2 mo8 md8 mf18 mf5
 ~!ren caligrav.rep hbo.rpt
-~/
-~/ ...home based shopping
-~/ ...set productions and attractions for park and ride trips to 0
-~/~+|3.21|1|y|mo6|n|0|||y|3751,4000||2|q
-~/~+|3.21|1|y|md6|n|0|||y|3751,4000||2|q
-~/
-~/ ...adjust home based other trip distribution
-~/~<macros\calibration\caligrav.mac 12.645 mo6 md6 mf18 mf7
-~/~!ren caligrav.rep hbshp.rpt
 ~/
 ~/ ...wko
 ~/ ...set productions and attractions for park and ride trips to 0
@@ -47,7 +38,7 @@ reports=calibrate_trip_distribution.rpt
 ~+|3.21|1|y|md10|n|0|||y|3751,4000||2|q
 ~/
 ~/ ...adjust wto trip distribution
-~<macros\calibration\caligrav.mac 16.035 mo10 md10 mf18 mf13
+~<macros\calibration\caligrav.mac 15.9 mo10 md10 mf18 mf13
 ~!ren caligrav.rep wko.rpt
 ~/
 ~/ ...oto
@@ -56,7 +47,7 @@ reports=calibrate_trip_distribution.rpt
 ~+|3.21|1|y|md9|n|0|||y|3751,4000||2|q
 ~/
 ~/ ...adjust oto trip distribution
-~<macros\calibration\caligrav.mac 13.014 mo9 md9 mf18 mf12
+~<macros\calibration\caligrav.mac 12.7 mo9 md9 mf18 mf12
 ~!ren caligrav.rep oto.rpt
 ~/
 ~/ ...home based work #1
@@ -69,7 +60,7 @@ reports=calibrate_trip_distribution.rpt
 ~+|3.21|1|y|md1|n|0|||y|3751,4000||2|q
 ~/
 ~/ ...adjust trip distribution
-~<macros\calibration\caligrav.mac 21.551 mo1 md1 mf18 mf8
+~<macros\calibration\caligrav.mac 21.4 mo1 md1 mf18 mf8
 ~!ren caligrav.rep hbw1.rpt
 ~/
 ~/ ...home based work #2
@@ -82,7 +73,7 @@ reports=calibrate_trip_distribution.rpt
 ~+|3.21|1|y|md2|n|0|||y|3751,4000||2|q
 ~/
 ~/ ...adjust trip distribution
-~<macros\calibration\caligrav.mac 24.182 mo2 md2 mf18 mf9
+~<macros\calibration\caligrav.mac 24.2 mo2 md2 mf18 mf9
 ~!ren caligrav.rep hbw2.rpt
 ~/
 ~/ ...home based work #3
@@ -95,7 +86,7 @@ reports=calibrate_trip_distribution.rpt
 ~+|3.21|1|y|md3|n|0|||y|3751,4000||2|q
 ~/
 ~/ ...adjust trip distribution
-~<macros\calibration\caligrav.mac 27.982 mo3 md3 mf18 mf10
+~<macros\calibration\caligrav.mac 26.4 mo3 md3 mf18 mf10
 ~!ren caligrav.rep hbw3.rpt
 ~/
 ~/ ...home based work #4
@@ -108,7 +99,7 @@ reports=calibrate_trip_distribution.rpt
 ~+|3.21|1|y|md4|n|0|||y|3751,4000||2|q
 ~/
 ~/ ...adjust trip distribution
-~<macros\calibration\caligrav.mac 26.273 mo4 md4 mf18 mf11
+~<macros\calibration\caligrav.mac 26.2 mo4 md4 mf18 mf11
 ~!ren caligrav.rep hbw4.rpt
 ~/
 ~/ ...exit emme

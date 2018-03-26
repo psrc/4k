@@ -20,8 +20,8 @@ if not os.path.exists(output_directory):
     os.makedirs(output_directory)
 
 # Person, Household, Parcel and Block Level input files
-hh_person = input_directory+'/hh_and_persons_'+str(model_year)+'.h5'
-parcel_file = input_directory+'/parcels_urbansim_'+str(model_year)+'.txt'
+hh_person = input_directory+'/hh_and_persons_2014_lodes.h5'
+parcel_file = input_directory+'/parcels_urbansim_2014_lodes.txt'
 model_files = input_directory+'/travel_model_inputs.db'
 heavy_truck_internal_file = input_directory+'/atri__heavy_trucks_internals.csv'
 heavy_truck_external_file = input_directory+'/atri__heavy_trucks_externals.csv'
