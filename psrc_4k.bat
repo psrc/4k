@@ -50,31 +50,37 @@ REM Model Setup and Free-Flow Iteration
 set iternum=0
 call batchfiles\setup\model_setup.bat
 call batchfiles\reports\report_rename.bat %iternum%
+call batchfiles\nan\nan_check.bat
 
 REM Initial Iteration
 set iternum=1
 call batchfiles\model\initial_iteration.bat
 call batchfiles\reports\report_rename.bat %iternum%
+call batchfiles\nan\nan_check.bat
 
 REM Feedback Iteration
 set iternum=2
 call batchfiles\model\feedback_iteration.bat
 call batchfiles\reports\report_rename.bat %iternum%
+call batchfiles\nan\nan_check.bat
 
 REM Feedback Iteration
 set iternum=3
 call batchfiles\model\feedback_iteration.bat
 call batchfiles\reports\report_rename.bat %iternum%
+call batchfiles\nan\nan_check.bat
 
 REM Feedback Iteration
 set iternum=4
 call batchfiles\model\feedback_iteration.bat
 call batchfiles\reports\report_rename.bat %iternum%
+call batchfiles\nan\nan_check.bat
 
 REM Final Iteration
 set iternum=5
 call batchfiles\model\final_iteration.bat
 call batchfiles\reports\report_rename.bat f
+call batchfiles\nan\nan_check.bat
 
 REM Create the Summary Bank if called for and populate
 if %SummaryBank% == Yes (
