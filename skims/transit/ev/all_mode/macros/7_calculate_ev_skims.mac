@@ -1,0 +1,20 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=7_calculate_ev_skims.rpt
+~/
+~/
+~/begin: 7_calculate_ev_skims.mac
+~/ ...call module 3.21: matrix calculations
+3.21
+~/ ...calculate total walk access time
+~+|1|y|mf"walkac"|n|(mo"walkac"+md"walkac")*(p.ne.q)|||n|2
+~#~+|1|y|mf"eauxwa"|n|mf"eauxwa"+mf"walkac"|||n|2
+~/ ...calculate total transfer time (total wait time - initial wait time)
+~+|1|y|mf"exfrwa"|n|(mf"etwtwa"-mf"eiwtwa").max.0|||n|2
+q
+~#
+~/end: 7_calculate_ev_skims.mac
+~/exit emme
+~/
+q

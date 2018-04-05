@@ -18,10 +18,6 @@ reports=assign.rpt
 ~+|2|3|3|mf"%1%mdtrk"|mf"%1%mdtrk"|n|y
 ~+|2|3|3|mf"%1%hvtrk"|mf"%1%hvtrk"|n|y
 q
-~?x=1003
-~$NoTransit
-~?x=1005
-~$NoTransit
 ~?x=1006
 ~$NoTransit
 1.31

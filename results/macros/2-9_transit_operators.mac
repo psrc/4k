@@ -71,6 +71,76 @@ s=1004
 ~+|1|n|board||mod=f|&ut3=5||*|5|4|ms1355|mfbdwf|MD Ferry Boardings WSF|1
 ~+|1|n|board||mod=f|&ut3=6||*|5|4|ms1356|mfbdst|MD Ferry Boardings ST|1
 q
+~/ ---------------------------------------------------------------
+~/ --- PM Peak Period Boardings by Mode and Operator
+~/ ---------------------------------------------------------------
+s=1003
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Light Rail
+~+|1|n|board||mod=r|&ut3=1||*|5|4|ms5500|prbdkc|PM LRail Boardings KCM|1
+~+|1|n|board||mod=r|&ut3=2||*|5|4|ms5501|prbdpt|PM LRail Boardings PT|1
+~+|1|n|board||mod=r|&ut3=3||*|5|4|ms5502|prbdct|PM LRail Boardings CT|1
+~+|1|n|board||mod=r|&ut3=4||*|5|4|ms5503|prbdkt|PM LRail Boardings KT|1
+~+|1|n|board||mod=r|&ut3=5||*|5|4|ms5504|prbdwf|PM LRail Boardings WSF|1
+~+|1|n|board||mod=r|&ut3=6||*|5|4|ms5505|prbdst|PM LRail Boardings ST|1
+~/ --- Commuter Rail
+~+|1|n|board||mod=c|&ut3=1||*|5|4|ms5506|pcbdkc|PM CRail Boardings KCM|1
+~+|1|n|board||mod=c|&ut3=2||*|5|4|ms5507|pcbdpt|PM CRail Boardings PT|1
+~+|1|n|board||mod=c|&ut3=3||*|5|4|ms5508|pcbdct|PM CRail Boardings CT|1
+~+|1|n|board||mod=c|&ut3=4||*|5|4|ms5509|pcbdkt|PM CRail Boardings KT|1
+~+|1|n|board||mod=c|&ut3=5||*|5|4|ms5510|pcbdwf|PM CRail Boardings WSF|1
+~+|1|n|board||mod=c|&ut3=6||*|5|4|ms5511|pcbdst|PM CRail Boardings ST|1
+~/ --- Buses
+~+|1|n|board||mod=b,p|&ut3=1||*|5|4|ms5512|pbbdkc|PM Bus Boardings KCM|1
+~+|1|n|board||mod=b,p|&ut3=2||*|5|4|ms5513|pbbdpt|PM Bus Boardings PT|1
+~+|1|n|board||mod=b,p|&ut3=3||*|5|4|ms5514|pbbdct|PM Bus Boardings CT|1
+~+|1|n|board||mod=b,p|&ut3=4||*|5|4|ms5515|pbbdkt|PM Bus Boardings KT|1
+~+|1|n|board||mod=b,p|&ut3=5||*|5|4|ms5516|pbbdwf|PM Bus Boardings WSF|1
+~+|1|n|board||mod=b,p|&ut3=6||*|5|4|ms5517|pbbdst|PM Bus Boardings ST|1
+~/ --- Ferry
+~+|1|n|board||mod=f|&ut3=1||*|5|4|ms5518|pfbdkc|PM Ferry Boardings KCM|1
+~+|1|n|board||mod=f|&ut3=2||*|5|4|ms5519|pfbdpt|PM Ferry Boardings PT|1
+~+|1|n|board||mod=f|&ut3=3||*|5|4|ms5520|pfbdct|PM Ferry Boardings CT|1
+~+|1|n|board||mod=f|&ut3=4||*|5|4|ms5521|pfbdkt|PM Ferry Boardings KT|1
+~+|1|n|board||mod=f|&ut3=5||*|5|4|ms5522|pfbdwf|PM Ferry Boardings WSF|1
+~+|1|n|board||mod=f|&ut3=6||*|5|4|ms5523|pfbdst|PM Ferry Boardings ST|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Evening Period Boardings by Mode and Operator
+~/ ---------------------------------------------------------------
+s=1005
+~/ --- Store the Results in Scalars for Summary
+2.41
+~/ --- Light Rail
+~+|1|n|board||mod=r|&ut3=1||*|5|4|ms5524|erbdkc|EV LRail Boardings KCM|1
+~+|1|n|board||mod=r|&ut3=2||*|5|4|ms5525|erbdpt|EV LRail Boardings PT|1
+~+|1|n|board||mod=r|&ut3=3||*|5|4|ms5526|erbdct|EV LRail Boardings CT|1
+~+|1|n|board||mod=r|&ut3=4||*|5|4|ms5527|erbdkt|EV LRail Boardings KT|1
+~+|1|n|board||mod=r|&ut3=5||*|5|4|ms5528|erbdwf|EV LRail Boardings WSF|1
+~+|1|n|board||mod=r|&ut3=6||*|5|4|ms5529|erbdst|EV LRail Boardings ST|1
+~/ --- Commuter Rail
+~+|1|n|board||mod=c|&ut3=1||*|5|4|ms5530|ecbdkc|Ev CRail Boardings KCM|1
+~+|1|n|board||mod=c|&ut3=2||*|5|4|ms5531|ecbdpt|EV CRail Boardings PT|1
+~+|1|n|board||mod=c|&ut3=3||*|5|4|ms5532|ecbdct|EV CRail Boardings CT|1
+~+|1|n|board||mod=c|&ut3=4||*|5|4|ms5533|ecbdkt|EV CRail Boardings KT|1
+~+|1|n|board||mod=c|&ut3=5||*|5|4|ms5534|ecbdwf|EV CRail Boardings WSF|1
+~+|1|n|board||mod=c|&ut3=6||*|5|4|ms5535|ecbdst|EV CRail Boardings ST|1
+~/ --- Buses
+~+|1|n|board||mod=b,p|&ut3=1||*|5|4|ms5536|ebbdkc|EV Bus Boardings KCM|1
+~+|1|n|board||mod=b,p|&ut3=2||*|5|4|ms5537|ebbdpt|EV Bus Boardings PT|1
+~+|1|n|board||mod=b,p|&ut3=3||*|5|4|ms5538|ebbdct|EV Bus Boardings CT|1
+~+|1|n|board||mod=b,p|&ut3=4||*|5|4|ms5539|ebbdkt|EV Bus Boardings KT|1
+~+|1|n|board||mod=b,p|&ut3=5||*|5|4|ms5540|ebbdwf|EV Bus Boardings WSF|1
+~+|1|n|board||mod=b,p|&ut3=6||*|5|4|ms5541|ebbdst|EV Bus Boardings ST|1
+~/ --- Ferry
+~+|1|n|board||mod=f|&ut3=1||*|5|4|ms5542|efbdkc|EV Ferry Boardings KCM|1
+~+|1|n|board||mod=f|&ut3=2||*|5|4|ms5543|efbdpt|EV Ferry Boardings PT|1
+~+|1|n|board||mod=f|&ut3=3||*|5|4|ms5544|efbdct|EV Ferry Boardings CT|1
+~+|1|n|board||mod=f|&ut3=4||*|5|4|ms5545|efbdkt|EV Ferry Boardings KT|1
+~+|1|n|board||mod=f|&ut3=5||*|5|4|ms5546|efbdwf|EV Ferry Boardings WSF|1
+~+|1|n|board||mod=f|&ut3=6||*|5|4|ms5547|efbdst|EV Ferry Boardings ST|1
+q
 ~/
 ~/end: 2-9_transit_operators.mac
 ~/exit emme

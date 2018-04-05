@@ -24,6 +24,7 @@ reports=trip_distribution.rpt
 ~+|3.11|..\..\tripgen\output\%1%\wtopro.in|2|
 ~+|3.11|..\..\tripgen\output\%1%\mtkpro.in|2|
 ~+|3.11|..\..\tripgen\output\%1%\htkpro.in|2|
+~+|3.11|..\..\tripgen\output\%1%\cvhpro.in|2|
 ~/ ... input attraction trip ends
 ~+|3.11|..\..\tripgen\output\%1%\colatt.in|2|
 ~+|3.11|..\..\tripgen\output\%1%\hboatt.in|2|
@@ -37,6 +38,7 @@ reports=trip_distribution.rpt
 ~+|3.11|..\..\tripgen\output\%1%\wtoatt.in|2|
 ~+|3.11|..\..\tripgen\output\%1%\mtkatt.in|2|
 ~+|3.11|..\..\tripgen\output\%1%\htkatt.in|2|
+~+|3.11|..\..\tripgen\output\%1%\cvhatt.in|2|
 ~/ ... input airport od trip table
 ~+|3.11|..\..\tripgen\output\%1%\airport.in|2|
 ~/

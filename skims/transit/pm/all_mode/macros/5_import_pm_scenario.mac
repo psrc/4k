@@ -1,0 +1,29 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=5_import_pm_scenario.rpt
+~/
+~/
+~/begin: 5_import_pm_scenario.mac
+~/ ...set active scenario to 9999
+s=9999
+~/ ...call module 1.22: scenario manipulations
+1.22
+~/ ...delete existing scenario 1003
+~+|2|1003|~?!e|y|~?q=0|
+q
+~/ ...call module 1.31: import data from external database
+1.31
+~/ ...open pm all mode transit assignment emmebank
+~+|1
+..\..\..\..\Assignments\PM\emmebank
+~/ ...import pm network scenario (1003)
+~+|2|1|3|1003||n
+q
+~/ ...set active scenario to 1003
+s=1003
+~#
+~/end: 5_import_pm_scenario.mac
+~/exit emme
+~/
+q

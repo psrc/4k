@@ -17,6 +17,9 @@ reports=nhb.rpt
 ~+|1|y|mf"dabct"|n|0|||n|2
 ~+|1|y|mf"s2bct"|n|0|||n|2
 ~+|1|y|mf"s3bct"|n|0|||n|2
+~+|1|y|mf"dabctnhb"|n|0|||n|2
+~+|1|y|mf"s2bctnhb"|n|0|||n|2
+~+|1|y|mf"s3bctnhb"|n|0|||n|2
 q
 ~/ ----------------------------------------
 ~/ --- Input Data
@@ -193,13 +196,21 @@ q
 ~/ --- Calculate Mode Shares
 ~/ ----------------------------------------
 3.21
-~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eubk"+mf"euwk"|||n|2 
+~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eubk"+mf"euwk"|||n|2
 ~+|1|y|mf"nhshda"|n|mf"euda"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nhshs2"|n|mf"eus2"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nhshs3"|n|mf"eus3"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nhshtw"|n|mf"eutw"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nhshbk"|n|mf"eubk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nhshwk"|n|mf"euwk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+q
+~/ ----------------------------------------
+~/ --- Save Cost Skims
+~/ ----------------------------------------
+3.21
+~+|1|y|mf"dabctnhb"|n|mf"dabct"|||n|2
+~+|1|y|mf"s2bctnhb"|n|mf"s2bct"|||n|2
+~+|1|y|mf"s3bctnhb"|n|mf"s3bct"|||n|2
 q
 ~/
 ~/exit emme

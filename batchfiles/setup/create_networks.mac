@@ -21,7 +21,11 @@ s=%2%
 ~+|2.11|%3%\input\networks\fixes\ferries\%1%_FerryLinkMods.in|2
 ~?x=1002
 ~+|2.21|%3%\input\networks\%1%\%1%_transit.in|2
+~?x=1003
+~+|2.21|%3%\input\networks\%1%\%1%_transit.in|2
 ~?x=1004
+~+|2.21|%3%\input\networks\%1%\%1%_transit.in|2
+~?x=1005
 ~+|2.21|%3%\input\networks\%1%\%1%_transit.in|2
 ~+|1.22|2|9999|y|q
 ~:CentroidOnly

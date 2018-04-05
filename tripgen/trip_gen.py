@@ -428,6 +428,8 @@ df_parcels['Education'] = 0
 df_parcels['Education'] = df_parcels['K-8'] + df_parcels['High-School']
 df_parcels['mtkpro'] = 0
 df_parcels['mtkatt'] = 0
+df_parcels['cvhpro'] = 0
+df_parcels['cvhatt'] = 0
 
 # Trip Attractions based on Employment and Student Inputs by parcel
 for purpose in trip_attraction_rates:

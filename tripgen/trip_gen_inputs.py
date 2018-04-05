@@ -20,8 +20,8 @@ if not os.path.exists(output_directory):
     os.makedirs(output_directory)
 
 # Person, Household, Parcel and Block Level input files
-hh_person = input_directory+'/hh_and_persons_2014_lodes.h5'
-parcel_file = input_directory+'/parcels_urbansim_2014_lodes.txt'
+hh_person = input_directory+'/hh_and_persons_'+str(model_year)+'.h5'
+parcel_file = input_directory+'/parcels_urbansim_'+str(model_year)+'.txt'
 model_files = input_directory+'/travel_model_inputs.db'
 heavy_truck_internal_file = input_directory+'/atri__heavy_trucks_internals.csv'
 heavy_truck_external_file = input_directory+'/atri__heavy_trucks_externals.csv'
@@ -169,6 +169,29 @@ medium_truck_pro = [('Retail', 0.15),
             ('Other', 0.04),
             ('Total-HHs',0.04)]
 
+commerical_vehicle_att = [('Retail', 0.05),
+            ('Food-Services', 0.05),
+            ('Government', 0.10),
+            ('Office', 0.16),
+            ('Services', 0.16),
+            ('Industrial', 0.15),
+            ('Education', 0.10),
+            ('Medical', 0.10),
+            ('Other', 0.05),
+            ('Total-HHs',0.15)]
+
+
+commerical_vehicle_pro = [('Retail', 0.33),
+            ('Food-Services', 0.33),
+            ('Government', 0.16),
+            ('Office', 0.16),
+            ('Services', 0.16),
+            ('Industrial', 0.25),
+            ('Education', 0.16),
+            ('Medical', 0.15),
+            ('Other', 0.05),
+            ('Total-HHs',0.10)]
+
 trip_attraction_rates = [('hbw1att',hbw1_att),
                          ('hbw2att',hbw2_att),
                          ('hbw3att',hbw3_att),
@@ -180,7 +203,9 @@ trip_attraction_rates = [('hbw1att',hbw1_att),
                          ('otoatt', oto_att),
                          ('wtoatt', wto_att),
                          ('mtkatt',medium_truck_att),
-                         ('mtkpro',medium_truck_pro)]
+                         ('mtkpro',medium_truck_pro),
+                         ('cvhatt',commerical_vehicle_att),
+                         ('cvhpro',commerical_vehicle_pro)]
 
 productions_4k = [('hbw1pro','work income #1 productions'),
                    ('hbw2pro','work income #2 productions'),
@@ -193,7 +218,8 @@ productions_4k = [('hbw1pro','work income #1 productions'),
                    ('otopro','other to other productions'),
                    ('wtopro','work to other productions'),
                    ('mtkpro','medium truck productions'),
-                   ('htkpro','heavy truck productions')]
+                   ('htkpro','heavy truck productions'),
+                   ('cvhpro','commercial vehicle productions')]
 
 attractions_4k = [('hbw1att','work income #1 attractions'),
                    ('hbw2att','work income #2 attractions'),
@@ -206,11 +232,12 @@ attractions_4k = [('hbw1att','work income #1 attractions'),
                    ('otoatt','other to other attractions'),
                    ('wtoatt','work to other attractions'),
                    ('mtkatt','medium truck attractions'),
-                   ('htkatt','heavy truck attractions')]
+                   ('htkatt','heavy truck attractions'),
+                   ('cvhatt','commercial vehicle attractions')]
 
 airport_4k = [('airport','SeaTac Airport Trips')]
 
-balance_to_productions = ['hbw1','hbw2','hbw3','hbw4','hsp','hbo','oto','wto','mtk','htk']
+balance_to_productions = ['hbw1','hbw2','hbw3','hbw4','hsp','hbo','oto','wto','mtk','htk','cvh']
 balance_to_attractions = ['col','sch']
 
 regional_attraction_adjustments = [('hbw1att',1.0),
@@ -224,7 +251,8 @@ regional_attraction_adjustments = [('hbw1att',1.0),
                          ('otoatt', 1.0),
                          ('wtoatt', 1.0),
                          ('mtkatt', 0.75),
-                         ('htkatt', 1.0)]
+                         ('htkatt', 1.0),
+                         ('cvhatt', 1.0)]
 
 kitsap_attraction_adjustments = [('hbw1att',0.05),
                          ('hbw2att',0.05),
@@ -237,7 +265,8 @@ kitsap_attraction_adjustments = [('hbw1att',0.05),
                          ('otoatt', 0.0),
                          ('wtoatt', 0.0),
                          ('mtkatt', 0.0),
-                         ('htkatt', 0.0)]
+                         ('htkatt', 0.0),
+                         ('cvhatt', 0.0)]
 
 regional_production_adjustments = [('hbw1pro',1.0),
                          ('hbw2pro',1.0),
@@ -250,7 +279,8 @@ regional_production_adjustments = [('hbw1pro',1.0),
                          ('otopro', 1.0),
                          ('wtopro', 1.0),
                          ('mtkpro', 0.75),
-                         ('htkpro', 1.0)]
+                         ('htkpro', 1.0),
+                         ('cvhpro', 1.0)]
 
 kitsap_production_adjustments = [('hbw1pro',-0.05),
                          ('hbw2pro',-0.05),
@@ -263,7 +293,8 @@ kitsap_production_adjustments = [('hbw1pro',-0.05),
                          ('otopro',-0.05),
                          ('wtopro',-0.05),
                          ('mtkpro', 0.0),
-                         ('htkpro', 0.0)]
+                         ('htkpro', 0.0),
+                         ('cvhpro', 0.0)]
 
 
 

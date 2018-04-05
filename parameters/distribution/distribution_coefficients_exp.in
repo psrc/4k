@@ -1,32 +1,32 @@
 c Trip Distribution Gravity Model Parameters
 c Calibrated from 2014 Household Travel Survey
-c Calibrated for Model on March 26, 2018
+c Calibrated for Model on April 3, 2018
 t matrices
 c hb college exp coefficient
 m matrix=ms"colexp"
  all all: -0.1199
 c hb other exp coefficient
 m matrix=ms"hboexp"
- all all: -0.2
+ all all: -0.32
 c hb school exp coefficient
 m matrix=ms"schexp"
  all all: -0.1896
 c sov hbw income 1 exp coefficient
 m matrix=ms"hbwex1"
- all all: -0.28
+ all all: -0.135
 c sov hbw income 2 exp coefficient
 m matrix=ms"hbwex2"
- all all: -0.2173
+ all all: -0.0964
 c sov hbw income 3 exp coefficient
 m matrix=ms"hbwex3"
- all all: -0.1604
+ all all: -0.0691
 c sov hbw income 4 exp coefficient
 m matrix=ms"hbwex4"
- all all: -0.1403
+ all all: -0.074
 c nhb other exp coefficient
 m matrix=ms"otoexp"
- all all: -0.3538
+ all all: -0.32
 c nhb work exp coefficient
 m matrix=ms"wkoexp"
- all all: -0.35
+ all all: -0.32
 

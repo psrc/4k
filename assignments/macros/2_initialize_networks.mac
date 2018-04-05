@@ -33,7 +33,8 @@ s=%2%
 ~+|2.42|2|2|@red|signal red time (minutes)|0|q
 ~+|2.42|2|2|@rdly|intersection delay factor|0|q
 ~/ ...create transit equivalent extra attribute(s)
-~+|2.42|2|2|@trnv3|3hr auto bus equivalent (for am)|0|q
+~+|2.42|2|2|@trnv3|3hr auto bus equivalent (for am, pm)|0|q
+~+|2.42|2|2|@trnv4|4hr auto bus equivalent (for ev)|0|q
 ~+|2.42|2|2|@trnv6|6hr auto bus equivalent (for md)|0|q
 ~+|2.42|2|2|@trrv3|reverse of '@trnv3' (for pm)|0|q
 ~/ ...create other extra attribute(s)

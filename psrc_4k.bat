@@ -50,37 +50,36 @@ REM Model Setup and Free-Flow Iteration
 set iternum=0
 call batchfiles\setup\model_setup.bat
 call batchfiles\reports\report_rename.bat %iternum%
-call batchfiles\nan\nan_check.bat
 
 REM Initial Iteration
 set iternum=1
 call batchfiles\model\initial_iteration.bat
-call batchfiles\reports\report_rename.bat %iternum%
 call batchfiles\nan\nan_check.bat
+call batchfiles\reports\report_rename.bat %iternum%
 
 REM Feedback Iteration
 set iternum=2
 call batchfiles\model\feedback_iteration.bat
-call batchfiles\reports\report_rename.bat %iternum%
 call batchfiles\nan\nan_check.bat
+call batchfiles\reports\report_rename.bat %iternum%
 
 REM Feedback Iteration
 set iternum=3
 call batchfiles\model\feedback_iteration.bat
-call batchfiles\reports\report_rename.bat %iternum%
 call batchfiles\nan\nan_check.bat
+call batchfiles\reports\report_rename.bat %iternum%
 
 REM Feedback Iteration
 set iternum=4
 call batchfiles\model\feedback_iteration.bat
-call batchfiles\reports\report_rename.bat %iternum%
 call batchfiles\nan\nan_check.bat
+call batchfiles\reports\report_rename.bat %iternum%
 
 REM Final Iteration
 set iternum=5
 call batchfiles\model\final_iteration.bat
-call batchfiles\reports\report_rename.bat f
 call batchfiles\nan\nan_check.bat
+call batchfiles\reports\report_rename.bat f
 
 REM Create the Summary Bank if called for and populate
 if %SummaryBank% == Yes (
@@ -115,7 +114,7 @@ if %SummaryBank% == Yes (
 	 call emme -ng 000 -m macros\2-12_accident_costs.mac
 	 call emme -ng 000 -m macros\2-13_emission_costs.mac
 	 call emme -ng 000 -m macros\2-14_noise_costs.mac
-	 call emme -ng 000 -m macros\2-15_input_summary.mac 
+	 call emme -ng 000 -m macros\2-15_input_summary.mac %LUYear%
 	 call emme -ng 000 -m macros\2-16_daily_count.mac 
 	 
 	 REM Create macro, input and error list files

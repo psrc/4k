@@ -17,6 +17,9 @@ reports=hb_college.rpt
 ~+|1|y|mf"dabct"|n|0|||n|2
 ~+|1|y|mf"s2bct"|n|0|||n|2
 ~+|1|y|mf"s3bct"|n|0|||n|2
+~+|1|y|mf"dabctcol"|n|0|||n|2
+~+|1|y|mf"s2bctcol"|n|0|||n|2
+~+|1|y|mf"s3bctcol"|n|0|||n|2
 q
 ~/ ----------------------------------------
 ~/ --- Input Data
@@ -190,13 +193,21 @@ q
 ~/ --- Calculate Mode Shares
 ~/ ----------------------------------------
 3.21
-~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eubk"+mf"euwk"|||n|2 
+~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eubk"+mf"euwk"|||n|2
 ~+|1|y|mf"coshda"|n|mf"euda"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"coshs2"|n|mf"eus2"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"coshs3"|n|mf"eus3"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"coshtw"|n|mf"eutw"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"coshbk"|n|mf"eubk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"coshwk"|n|mf"euwk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+q
+~/ ----------------------------------------
+~/ --- Save Cost Skims
+~/ ----------------------------------------
+3.21
+~+|1|y|mf"dabctcol"|n|mf"dabct"|||n|2
+~+|1|y|mf"s2bctcol"|n|mf"s2bct"|||n|2
+~+|1|y|mf"s3bctcol"|n|mf"s3bct"|||n|2
 q
 ~/
 ~/exit emme

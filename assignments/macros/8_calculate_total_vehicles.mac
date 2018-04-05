@@ -16,8 +16,12 @@ s=%1%
 ~/ --- Bus vehicles on Links
 ~?x=1002
 ~+|2.41|1|y|@bveh|n|@trnv3/2||*|2|2|q
+~?x=1003
+~+|2.41|1|y|@bveh|n|@trnv3/2||*|2|2|q
 ~?x=1004
 ~+|2.41|1|y|@bveh|n|@trnv6/2||*|2|2|q
+~?x=1005
+~+|2.41|1|y|@bveh|n|@trnv4/2||*|2|2|q
 ~/
 ~/ --- Total vehicles on links
 ~+|2.41|1|y|@tveh|n|@sov+@sovw+@hov2+@hov3+@mveh+@hveh+@bveh||*|2|2|q

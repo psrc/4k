@@ -1,7 +1,7 @@
 ~?!i&32768
 ~o|295
 batchin=?
-reports=initilization.rpt
+reports=initialization.rpt
 ~/ ----------------------------------------------------
 ~/ --- Initialize matrix directory
 ~/ ----------------------------------------------------
@@ -115,6 +115,7 @@ reports=initilization.rpt
 ~+|1|ms103|avot2v|am sov hbw income 2 vot|0
 ~+|1|ms104|avot3v|am sov hbw income 3 vot|0
 ~+|1|ms105|avot4v|am sov hbw income 4 vot|0
+~+|1|ms117|avotlt|am light truck vot|0
 ~+|1|ms106|avotmd|am medium truck vot|0
 ~+|1|ms107|avothv|am heavy truck vot|0
 ~+|1|ms108|mvotda|md sov non-work vot|0
@@ -124,8 +125,13 @@ reports=initilization.rpt
 ~+|1|ms112|mvot2v|md sov hbw income 2 vot|0
 ~+|1|ms113|mvot3v|md sov hbw income 3 vot|0
 ~+|1|ms114|mvot4v|md sov hbw income 4 vot|0
+~+|1|ms118|mvotlt|md light truck vot|0
 ~+|1|ms115|mvotmd|md medium truck vot|0
 ~+|1|ms116|mvothv|md heavy truck vot|0
+~+|1|ms119|emdnwb|emp density walk/bike coeff|0
+~+|1|ms120|emdntr|emp density transit coeff|0
+~+|1|ms121|rsemwb|res/emp density walk/bike coeff|0
+~+|1|ms122|rsemtr|res/emp density transit coeff|0
 ~/ ----------------------------------------------------
 ~/ --- Initialize Origin Matrices
 ~/ ----------------------------------------------------
@@ -137,6 +143,8 @@ reports=initilization.rpt
 ~+|1|mo06|colleg|parking cost - hb college trips|0
 ~+|1|mo07|hourly|hourly parking cost - non-work trips|0
 ~+|1|mo08|daily|daily parking cost - hb work trips|0
+~+|1|mo09|empden|employment density - orig zone|0
+~+|1|mo10|rsemdn|res/emp wt1 density - orig zone|0
 ~/ ----------------------------------------------------
 ~/ --- Initialize Destination Matrices
 ~/ ----------------------------------------------------
@@ -149,6 +157,8 @@ reports=initilization.rpt
 ~+|1|md07|hourly|hourly parking cost - non-work trips|0
 ~+|1|md08|daily|daily parking cost - hb work trips|0
 ~+|1|md09|pnrchg|pnr lot parking cost|0
+~+|1|md10|empden|employment density - dest zone|0
+~+|1|md11|rsemdn|res/emp wt1 density - dest zone|0
 ~/ ----------------------------------------------------
 ~/ --- Initialize Full Matrices
 ~/ ----------------------------------------------------
@@ -266,6 +276,35 @@ reports=initilization.rpt
 ~+|1|mf97|lsum2|hb work income 2 mode choice log sum|0
 ~+|1|mf98|lsum3|hb work income 3 mode choice log sum|0
 ~+|1|mf99|lsum4|hb work income 4 mode choice log sum|0
+~/ ... cost skims
+~+|1|mf100|dabctcol|SOV bi-directional cost col  |0
+~+|1|mf101|s2bctcol|HOV2 bi-directional cost col |0
+~+|1|mf102|s3bctcol|HOV3+ bi-directional cost col|0
+~+|1|mf103|dabcthbo|SOV bi-directional cost hbo  |0
+~+|1|mf104|s2bcthbo|HOV2 bi-directional cost hbo |0
+~+|1|mf105|s3bcthbo|HOV3+ bi-directional cost hbo|0
+~+|1|mf106|dabctsch|SOV bi-directional cost sch  |0
+~+|1|mf107|s2bctsch|HOV2 bi-directional cost sch |0
+~+|1|mf108|s3bctsch|HOV3+ bi-directional cost sch|0
+~+|1|mf109|dabctnhb|SOV bi-directional cost nhb  |0
+~+|1|mf110|s2bctnhb|HOV2 bi-directional cost nhb |0
+~+|1|mf111|s3bctnhb|HOV3+ bi-directional cost nhb|0
+~+|1|mf112|dabcthbw1|SOV bi-directional cost hbw1    |0
+~+|1|mf113|dapcthbw1|SOV total cost to P&R lot hbw1|0
+~+|1|mf114|s2bcthbw1|HOV2 bi-directional cost hbw1   |0
+~+|1|mf115|s3bcthbw1|HOV3+ bi-directional cost hbw1  |0
+~+|1|mf116|dabcthbw2|SOV bi-directional cost hbw2    |0
+~+|1|mf117|dapcthbw2|SOV total cost to P&R lot hbw2|0
+~+|1|mf118|s2bcthbw2|HOV2 bi-directional cost hbw2   |0
+~+|1|mf119|s3bcthbw2|HOV3+ bi-directional cost hbw2  |0
+~+|1|mf120|dabcthbw3|SOV bi-directional cost hbw3    |0
+~+|1|mf121|dapcthbw3|SOV total cost to P&R lot hbw3|0
+~+|1|mf122|s2bcthbw3|HOV2 bi-directional cost hbw3   |0
+~+|1|mf123|s3bcthbw3|HOV3+ bi-directional cost hbw3  |0
+~+|1|mf124|dabcthbw4|SOV bi-directional cost hbw4    |0
+~+|1|mf125|dapcthbw4|SOV total cost to P&R lot hbw4|0
+~+|1|mf126|s2bcthbw4|HOV2 bi-directional cost hbw4   |0
+~+|1|mf127|s3bcthbw4|HOV3+ bi-directional cost hbw4  |0
 q
 ~/
 ~/exit emme

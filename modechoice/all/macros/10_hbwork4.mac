@@ -17,6 +17,10 @@ reports=hbw4.rpt
 ~+|1|y|mf"dabct"|n|0|||n|2
 ~+|1|y|mf"s2bct"|n|0|||n|2
 ~+|1|y|mf"s3bct"|n|0|||n|2
+~+|1|y|mf"dabcthbw4"|n|0|||n|2
+~+|1|y|mf"dapcthbw4"|n|0|||n|2
+~+|1|y|mf"s2bcthbw4"|n|0|||n|2
+~+|1|y|mf"s3bcthbw4"|n|0|||n|2
 q
 ~/ ----------------------------------------
 ~/ --- Input Data
@@ -30,6 +34,33 @@ q
 ~+|3.11|..\..\input\Parking\daily_parking_costs.in|2|
 ~+|3.11|..\..\input\PnR\pnr_lot_charges.in|2|
 ~+|3.11|..\..\parameters\vot\am_vot_parameters.in|2|
+~+|3.11|..\..\parameters\ModeChoice\res_emp_density_orig.in|2|
+~+|3.11|..\..\parameters\ModeChoice\res_emp_density_dest.in|2|
+~+|3.11|..\..\parameters\ModeChoice\empden_orig.in|2|
+~+|3.11|..\..\parameters\ModeChoice\empden_dest.in|2|
+~/ ----------------------------------------
+~/ --- Hardcode alternative specific constants and time/cost coefficients
+~/ ----------------------------------------
+3.21
+~+|1|y|ms"asccs2"|n|-2.4646|||2
+~+|1|y|ms"asccs3"|n|-3.5900|||2
+~+|1|y|ms"ascctw"|n|-4.8424|||2
+~+|1|y|ms"ascctd"|n|-4.0661|||2
+~+|1|y|ms"asccbk"|n|-5.4778|||2
+~+|1|y|ms"asccwk"|n|-3.3963|||2
+~+|1|y|ms"autivt"|n|-0.0561|||2
+~+|1|y|ms"walktm"|n|-0.0561|||2
+~+|1|y|ms"biketm"|n|-0.0561|||2
+~+|1|y|ms"autcos"|n|-0.0007|||2
+~+|1|y|ms"trwcos"|n|-0.0007|||2
+~+|1|y|ms"trwivt"|n|-0.0561|||2
+~+|1|y|ms"trwovt"|n|-0.0116|||2
+~+|1|y|ms"trdcos"|n|-0.0007|||2
+~+|1|y|ms"trdivt"|n|-0.0561|||2
+~+|1|y|ms"trdovt"|n|-0.0116|||2
+~+|1|y|ms"emdnwb"|n| 0.4435|||2
+~+|1|y|ms"emdntr"|n| 0.4435|||2
+q
 ~/ ----------------------------------------
 ~/ --- Bi-directional skims
 ~/ ----------------------------------------
@@ -179,8 +210,10 @@ ms"trwivt"*mf"ivtwa"
 ms"trwovt"*(mf"auxwa"+mf"iwtwa"+mf"xfrwa")
 +
 ms"trwcos"*mf"farwa"
++
+ms"emdntr"*ln((mo"empden"+md"empden").max.1)
 )
-~+|||y|1,%1%||1,%1%||2
+~+||mf"ivtwa"|0,1000,in|y|1,%1%||1,%1%||2
 q
 ~/ ----------------------------------------
 ~/ --- Calculate Drive to Transit Utility
@@ -196,8 +229,10 @@ ms"trdivt"*(mf"pnrtm"+mf"ivtda")
 ms"trdovt"*(mf"wlkda"+mf"iwtda"+mf"xfrda")
 +
 ms"trdcos"*(mf"dapct"+mf"farda")
++
+ms"emdntr"*ln((mo"empden"+md"empden").max.1)
 )
-~+|||y|1,%1%||1,%1%||2
+~+||mf"ivtda"|0,1000,in|y|1,%1%||1,%1%||2
 q
 ~/ ----------------------------------------
 ~/ --- Calculate Bike Utility
@@ -209,6 +244,8 @@ exp
 ms"asccbk"
 +
 ms"biketm"*mf"bketm"
++
+ms"emdnwb"*ln((mo"empden"+md"empden").max.1)
 )
 ~+|||y|1,%1%||1,%1%||2
 q
@@ -222,6 +259,8 @@ exp
 ms"asccwk"
 +
 ms"walktm"*mf"wlktm"
++
+ms"emdnwb"*ln((mo"empden"+md"empden").max.1)
 )
 ~+|||y|1,%1%||1,%1%||2
 q
@@ -235,7 +274,7 @@ q
 ~/ --- Calculate Mode Shares
 ~/ ----------------------------------------
 3.21
-~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eutd"+mf"eubk"+mf"euwk"|||n|2 
+~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eutd"+mf"eubk"+mf"euwk"|||n|2
 ~+|1|y|mf"w4shda"|n|mf"euda"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"w4shs2"|n|mf"eus2"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"w4shs3"|n|mf"eus3"/mf"eusm"||mf"eusm"|0,0,ex|n|2
@@ -243,6 +282,15 @@ q
 ~+|1|y|mf"w4shtd"|n|mf"eutd"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"w4shbk"|n|mf"eubk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"w4shwk"|n|mf"euwk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+q
+~/ ----------------------------------------
+~/ --- Save Cost Skims
+~/ ----------------------------------------
+3.21
+~+|1|y|mf"dabcthbw4"|n|mf"dabct"|||n|2
+~+|1|y|mf"dapcthbw4"|n|mf"dapct"|||n|2
+~+|1|y|mf"s2bcthbw4"|n|mf"s2bct"|||n|2
+~+|1|y|mf"s3bcthbw4"|n|mf"s3bct"|||n|2
 q
 ~/
 ~/exit emme

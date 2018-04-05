@@ -17,6 +17,9 @@ reports=hbo.rpt
 ~+|1|y|mf"dabct"|n|0|||n|2
 ~+|1|y|mf"s2bct"|n|0|||n|2
 ~+|1|y|mf"s3bct"|n|0|||n|2
+~+|1|y|mf"dabcthbo"|n|0|||n|2
+~+|1|y|mf"s2bcthbo"|n|0|||n|2
+~+|1|y|mf"s3bcthbo"|n|0|||n|2
 q
 ~/ ----------------------------------------
 ~/ --- Input Data
@@ -29,6 +32,29 @@ q
 ~+|3.11|..\..\parameters\ModeChoice\retailfar.in|2|
 ~+|3.11|..\..\input\Parking\hourly_parking_costs.in|2|
 ~+|3.11|..\..\parameters\vot\md_vot_parameters.in|2|
+~+|3.11|..\..\parameters\ModeChoice\res_emp_density_orig.in|2|
+~+|3.11|..\..\parameters\ModeChoice\res_emp_density_dest.in|2|
+~+|3.11|..\..\parameters\ModeChoice\empden_orig.in|2|
+~+|3.11|..\..\parameters\ModeChoice\empden_dest.in|2|
+~/ ----------------------------------------
+~/ --- Hardcode alternative specific constants and time/cost coefficients
+~/ ----------------------------------------
+3.21
+~+|1|y|ms"asccs2"|n|-0.5248|||2
+~+|1|y|ms"asccs3"|n|-1.2181|||2
+~+|1|y|ms"ascctw"|n|-8.2917|||2
+~+|1|y|ms"asccbk"|n|-4.3162|||2
+~+|1|y|ms"asccwk"|n|-0.0113|||2
+~+|1|y|ms"autivt"|n|-0.1000|||2
+~+|1|y|ms"walktm"|n|-0.1024|||2
+~+|1|y|ms"biketm"|n|-0.1024|||2
+~+|1|y|ms"autcos"|n|-0.0009|||2
+~+|1|y|ms"trwcos"|n|-0.0103|||2
+~+|1|y|ms"trwivt"|n|-0.0281|||2
+~+|1|y|ms"trwovt"|n|-0.0296|||2
+~+|1|y|ms"rsemtr"|n| 0.8671|||2
+~+|1|y|ms"rsemwb"|n| 0.1770|||2
+q
 ~/ ----------------------------------------
 ~/ --- Import bi-directional skims
 ~/ ----------------------------------------
@@ -159,9 +185,11 @@ ms"trwivt"*mf"ivtwa"
 +
 ms"trwovt"*(mf"auxwa"+mf"iwtwa"+mf"xfrwa")
 +
-ms"trwcos"*mf"farwa"
+ms"trwcos"*(mf"farwa")
++
+ms"rsemtr"*ln(mo"empden"+md"empden"+mo"rsemdn"+md"rsemdn")
 )
-~+|||y|1,%1%||1,%1%||2
+~+||mf"ivtwa"|0,1000,in|y|1,%1%||1,%1%||2
 q
 ~/ ----------------------------------------
 ~/ --- Calculate Bike Utility
@@ -173,6 +201,8 @@ exp
 ms"asccbk"
 +
 ms"biketm"*mf"bketm"
++
+ms"rsemwb"*ln(mo"empden"+md"empden"+mo"rsemdn"+md"rsemdn")
 )
 ~+|||y|1,%1%||1,%1%||2
 q
@@ -186,20 +216,30 @@ exp
 ms"asccwk"
 +
 ms"walktm"*mf"wlktm"
++
+ms"rsemwb"*ln(mo"empden"+md"empden"+mo"rsemdn"+md"rsemdn")
 )
-~+|||y|1,%1%||1,%1%||2
+~+||mf"ivtda"|0,1000,in|y|1,%1%||1,%1%||2
 q
 ~/ ----------------------------------------
 ~/ --- Calculate Mode Shares
 ~/ ----------------------------------------
 3.21
-~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eubk"+mf"euwk"|||n|2 
+~+|1|y|mf"eusm"|n|mf"euda"+mf"eus2"+mf"eus3"+mf"eutw"+mf"eubk"+mf"euwk"|||n|2
 ~+|1|y|mf"nwshda"|n|mf"euda"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nwshs2"|n|mf"eus2"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nwshs3"|n|mf"eus3"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nwshtw"|n|mf"eutw"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nwshbk"|n|mf"eubk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
 ~+|1|y|mf"nwshwk"|n|mf"euwk"/mf"eusm"||mf"eusm"|0,0,ex|n|2
+q
+~/ ----------------------------------------
+~/ --- Save Cost Skims
+~/ ----------------------------------------
+3.21
+~+|1|y|mf"dabcthbo"|n|mf"dabct"|||n|2
+~+|1|y|mf"s2bcthbo"|n|mf"s2bct"|||n|2
+~+|1|y|mf"s3bcthbo"|n|mf"s3bct"|||n|2
 q
 ~/
 ~/exit emme

@@ -44,7 +44,7 @@ if %SummaryBank% == Yes (
 	 call emme -ng 000 -m macros\2-12_accident_costs.mac
 	 call emme -ng 000 -m macros\2-13_emission_costs.mac
 	 call emme -ng 000 -m macros\2-14_noise_costs.mac
-	 call emme -ng 000 -m macros\2-15_input_summary.mac 
+	 call emme -ng 000 -m macros\2-15_input_summary.mac %LUYear%
 	 call emme -ng 000 -m macros\2-16_daily_count.mac 
 	 
 	 REM Create macro, input and error list files

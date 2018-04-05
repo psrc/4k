@@ -14,8 +14,12 @@ el1=@rdly
 el2=0
 ~?y=1002
 el2=@trnv3
+~?y=1003
+el2=@trnv3
 ~?y=1004
 el2=@trnv6
+~?y=1005
+el2=@trnv4
 ~/ ...call module 5.25: path-based traffic assignment
 5.25
 ~/ ...assignment set-up and execution: new set-up
@@ -52,8 +56,12 @@ el1=@rdly
 el2=0
 ~?y=1002
 el2=@trnv3
+~?y=1003
+el2=@trnv3
 ~?y=1004
 el2=@trnv6
+~?y=1005
+el2=@trnv4
 ~/ ...call module 5.25: path-based traffic assignment
 5.25
 ~/ ...controlled rounding for small demand

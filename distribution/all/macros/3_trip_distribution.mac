@@ -16,6 +16,11 @@ reports=trip_distribution.rpt
 ~+|3.21|1|y|mo"hbopro"|n|mo"hbopro"+mo"hsppro"|||n|2|q
 ~+|3.21|1|y|md"hboatt"|n|md"hboatt"+md"hspatt"|||n|2|q
 ~/ ----------------------------------------------------------------------------------
+~/ --- Combine Commercial Vehicle and Work to Other Productions and Attractions together
+~/ ----------------------------------------------------------------------------------
+~+|3.21|1|y|mo"wtopro"|n|mo"wtopro"+mo"cvhpro"|||n|2|q
+~+|3.21|1|y|md"wtoatt"|n|md"wtoatt"+md"cvhatt"|||n|2|q
+~/ ----------------------------------------------------------------------------------
 ~/ --- Import am bi-directional cost and distance skims for sov nonwork
 ~/ ----------------------------------------------------------------------------------
 ~+|1.31|1|..\..\Skims\BiDirectional\all\emmebank|2|3|3|mf"au1bcs"|mf"cost"|n|y|q

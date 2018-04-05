@@ -6,6 +6,8 @@ skims\auto\pm
 skims\nonmotorized\am
 skims\transit\am\all_mode
 skims\transit\md\all_mode
+skims\transit\pm\all_mode
+skims\transit\ev\all_mode
 distribution\all
 modechoice\all
 skims\iz_tt

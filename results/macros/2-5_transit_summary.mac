@@ -9,30 +9,30 @@ s=1002
 2.41
 ~+|1|y|ut1|1||*|4
 ~/ --- Central Link Light Rail
-~+|1|n|board||mod=r|&hdwy=8,12|&not hdwy=10||*|5|4|ms713|alrbds|AM LRT Boardings Seattle|1
-~+|1|n|timtr||mod=r|&hdwy=8,12|&not hdwy=10||*|5|4|ms714|alrtms|AM LRT Time Seattle|1
-~+|1|n|(len*ut1/ut1)||mod=r|&not hdwy=10,12|&hdwy=8||*|5|4|ms715|alrlns|AM LRT Length Seattle|1
-~+|1|n|ut1||mod=r|&hdwy=8,12|&not hdwy=10||5|4|ms716|alrlis|AM LRT Lines Seattle|1
+~+|1|n|board||mod=r|&ut1=6996||*|5|4|ms713|alrbds|AM LRT Boardings Seattle|1
+~+|1|n|timtr||mod=r|&ut1=6996||*|5|4|ms714|alrtms|AM LRT Time Seattle|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=6996||*|5|4|ms715|alrlns|AM LRT Length Seattle|1
+~+|1|n|ut1||mod=r|&ut1=6996||5|4|ms716|alrlis|AM LRT Lines Seattle|1
 ~/ --- Tacoma Link Light Rail
-~+|1|n|board||mod=r|&hdwy=10||*|5|4|ms717|alrbdt|AM LRT Boardings Tacoma|1
-~+|1|n|timtr||mod=r|&hdwy=10||*|5|4|ms718|alrtmt|AM LRT Time Tacoma|1
-~+|1|n|(len*ut1/ut1)||mod=r|&hdwy=10||*|5|4|ms719|alrlnt|AM LRT Length Tacoma|1
-~+|1|n|ut1||mod=r|&hdwy=10||5|4|ms720|alrlit|AM LRT Lines Tacoma|1
+~+|1|n|board||mod=r|&ut1=6995||*|5|4|ms717|alrbdt|AM LRT Boardings Tacoma|1
+~+|1|n|timtr||mod=r|&ut1=6996||*|5|4|ms718|alrtmt|AM LRT Time Tacoma|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=6995||*|5|4|ms719|alrlnt|AM LRT Length Tacoma|1
+~+|1|n|ut1||mod=r|&ut1=6995||5|4|ms720|alrlit|AM LRT Lines Tacoma|1
 ~/ --- Everett Commuter Rail
-~+|1|n|board||mod=c|&hdwy=60,180|&not hdwy=45|&not hdwy=90||*|5|4|ms721|acrbde|AM CRT Boardings Everett|1
-~+|1|n|timtr||mod=c|&hdwy=60,180|&not hdwy=45|&not hdwy=90||*|5|4|ms722|acrtme|AM CRT Time Everett|1
-~+|1|n|(len*ut1/ut1)||mod=c|&hdwy=60,180|&not hdwy=45|&not hdwy=90||*|5|4|ms723|acrlne|AM CRT Length Everett|1
-~+|1|n|ut1||mod=c|&hdwy=60,180|&not hdwy=45|&not hdwy=90||5|4|ms724|acrlie|AM CRT Lines Everett|1
+~+|1|n|board||mod=c|&ut1=6999||*|5|4|ms721|acrbde|AM CRT Boardings Everett|1
+~+|1|n|timtr||mod=c|&ut1=6999||*|5|4|ms722|acrtme|AM CRT Time Everett|1
+~+|1|n|(len*ut1/ut1)||mod=c|&ut1=6999||*|5|4|ms723|acrlne|AM CRT Length Everett|1
+~+|1|n|ut1||mod=c|&ut1=6999||5|4|ms724|acrlie|AM CRT Lines Everett|1
 ~/ --- Tacoma Commuter Rail
-~+|1|n|board||mod=c|&hdwy=18,90|&not hdwy=60||*|5|4|ms725|acrbdt|AM CRT Boardings Tacoma|1
-~+|1|n|timtr||mod=c|&hdwy=18,90|&not hdwy=60||*|5|4|ms726|acrtmt|AM CRT Time Tacoma|1
-~+|1|n|(len*ut1/ut1)||mod=c|&hdwy=18,90|&not hdwy=60||*|5|4|ms727|acrlnt|AM CRT Length Tacoma|1
-~+|1|n|ut1||mod=c|&hdwy=18,90|&not hdwy=60||5|4|ms728|acrlit|AM CRT Lines Tacoma|1
+~+|1|n|board||mod=c|&ut1=6998||*|5|4|ms725|acrbdt|AM CRT Boardings Tacoma|1
+~+|1|n|timtr||mod=c|&ut1=6998||*|5|4|ms726|acrtmt|AM CRT Time Tacoma|1
+~+|1|n|(len*ut1/ut1)||mod=c|&ut1=6998||*|5|4|ms727|acrlnt|AM CRT Length Tacoma|1
+~+|1|n|ut1||mod=c|&ut1=6998||5|4|ms728|acrlit|AM CRT Lines Tacoma|1
 ~/ --- Seattle Center Monorail
-~+|1|n|board||mod=r|&hdwy=15||*|5|4|ms729|amrbds|AM Monorail Boardings|1
-~+|1|n|timtr||mod=r|&hdwy=15||*|5|4|ms730|amrtms|AM Monorail Time|1
-~+|1|n|(len*ut1/ut1)||mod=r|&hdwy=15||*|5|4|ms731|amrlns|AM Monorail Length|1
-~+|1|n|ut1||mod=r|&hdwy=15||5|4|ms732|amrlis|AM Monorail Lines|1
+~+|1|n|board||mod=r|&ut1=1999||*|5|4|ms729|amrbds|AM Monorail Boardings|1
+~+|1|n|timtr||mod=r|&ut1=1999||*|5|4|ms730|amrtms|AM Monorail Time|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=1999||*|5|4|ms731|amrlns|AM Monorail Length|1
+~+|1|n|ut1||mod=r|&ut1=1999||5|4|ms732|amrlis|AM Monorail Lines|1
 ~/ --- Buses
 ~+|1|n|board||mod=b,p||*|5|4|ms733|absbda|AM Bus Boardings|1
 ~+|1|n|timtr||mod=b,p||*|5|4|ms734|abstma|AM Bus Time|1
@@ -54,20 +54,20 @@ s=1004
 2.41
 ~+|1|y|ut1|1||*|4
 ~/ --- Central Link Light Rail
-~+|1|n|board||mod=r|&hdwy=8,12|&not hdwy=10||*|5|4|ms741|mlrbds|MD LRT Boardings Seattle|1
-~+|1|n|timtr||mod=r|&hdwy=8,12|&not hdwy=10||*|5|4|ms742|mlrtms|MD LRT Time Seattle|1
-~+|1|n|(len*ut1/ut1)||mod=r|&hdwy=8,12|&not hdwy=10||*|5|4|ms743|mlrlns|MD LRT Length Seattle|1
-~+|1|n|ut1||mod=r|&hdwy=8,12|&not hdwy=10||5|4|ms744|mlrlis|MD LRT Lines Seattle|1
+~+|1|n|board||mod=r|&ut1=6996||*|5|4|ms741|mlrbds|MD LRT Boardings Seattle|1
+~+|1|n|timtr||mod=r|&ut1=6996||*|5|4|ms742|mlrtms|MD LRT Time Seattle|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=6996||*|5|4|ms743|mlrlns|MD LRT Length Seattle|1
+~+|1|n|ut1||mod=r|&ut1=6996||5|4|ms744|mlrlis|MD LRT Lines Seattle|1
 ~/ --- Tacoma Link Light Rail
-~+|1|n|board||mod=r|&hdwy=10||*|5|4|ms745|mlrbdt|MD LRT Boardings Tacoma|1
-~+|1|n|timtr||mod=r|&hdwy=10||*|5|4|ms746|mlrtmt|MD LRT Time Tacoma|1
-~+|1|n|(len*ut1/ut1)||mod=r|&hdwy=10||*|5|4|ms747|mlrlnt|MD LRT Length Tacoma|1
-~+|1|n|ut1||mod=r|&hdwy=10||5|4|ms748|mlrlit|MD LRT Lines Tacoma|1
+~+|1|n|board||mod=r|&ut1=6995||*|5|4|ms745|mlrbdt|MD LRT Boardings Tacoma|1
+~+|1|n|timtr||mod=r|&ut1=6995||*|5|4|ms746|mlrtmt|MD LRT Time Tacoma|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=6995||*|5|4|ms747|mlrlnt|MD LRT Length Tacoma|1
+~+|1|n|ut1||mod=r|&ut1=6995||5|4|ms748|mlrlit|MD LRT Lines Tacoma|1
 ~/ --- Seattle Center Monorail
-~+|1|n|board||mod=r|&hdwy=15||*|5|4|ms749|mmrbds|MD Monorail Boardings|1
-~+|1|n|timtr||mod=r|&hdwy=15||*|5|4|ms750|mmrtms|MD Monorail Time|1
-~+|1|n|(len*ut1/ut1)||mod=r|&hdwy=15||*|5|4|ms751|mmrlns|MD Monorail Length|1
-~+|1|n|ut1||mod=r|&hdwy=15||5|4|ms752|mmrlis|MD Monorail Lines|1
+~+|1|n|board||mod=r|&ut1=1999||*|5|4|ms749|mmrbds|MD Monorail Boardings|1
+~+|1|n|timtr||mod=r|&ut1=1999||*|5|4|ms750|mmrtms|MD Monorail Time|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=1999||*|5|4|ms751|mmrlns|MD Monorail Length|1
+~+|1|n|ut1||mod=r|&ut1=1999||5|4|ms752|mmrlis|MD Monorail Lines|1
 ~/ --- Buses
 ~+|1|n|board||mod=b,p||*|5|4|ms753|mbsbda|MD Bus Boardings|1
 ~+|1|n|timtr||mod=b,p||*|5|4|ms754|mbstma|MD Bus Time|1
@@ -78,6 +78,91 @@ s=1004
 ~+|1|n|timtr||mod=f||*|5|4|ms758|mfytma|MD Ferry Time|1
 ~+|1|n|(len*ut1/ut1)||mod=f||*|5|4|ms759|mfylna|MD Ferry Length|1
 ~+|1|n|ut1||mod=f||5|4|ms760|mfylia|MD Ferry Lines|1
+~/ --- Reset ut1 to zero
+~+|1|y|ut1|0||*|4
+q
+~/ ---------------------------------------------------------------
+~/ --- PM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1003
+~/ --- Store the Results in Scalars for Summary
+2.41
+~+|1|y|ut1|1||*|4
+~/ --- Central Link Light Rail
+~+|1|n|board||mod=r|&ut1=6996||*|5|4|ms5548|plrbds|PM LRT Boardings Seattle|1
+~+|1|n|timtr||mod=r|&ut1=6996||*|5|4|ms5549|plrtms|PM LRT Time Seattle|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=6996||*|5|4|ms5550|plrlns|PM LRT Length Seattle|1
+~+|1|n|ut1||mod=r|&ut1=6996||5|4|ms5551|plrlis|PM LRT Lines Seattle|1
+~/ --- Tacoma Link Light Rail
+~+|1|n|board||mod=r|&ut1=6995||*|5|4|ms5552|plrbdt|PM LRT Boardings Tacoma|1
+~+|1|n|timtr||mod=r|&ut1=6995||*|5|4|ms5553|plrtmt|PM LRT Time Tacoma|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=6995||*|5|4|ms5554|plrlnt|PM LRT Length Tacoma|1
+~+|1|n|ut1||mod=r|&ut1=6995||5|4|ms5555|plrlit|PM LRT Lines Tacoma|1
+~/ --- Everett Commuter Rail
+~+|1|n|board||mod=c|&ut1=6999||*|5|4|ms5556|pcrbde|PM CRT Boardings Everett|1
+~+|1|n|timtr||mod=c|&ut1=6999||*|5|4|ms5557|pcrtme|PM CRT Time Everett|1
+~+|1|n|(len*ut1/ut1)||mod=c|&ut1=6999||*|5|4|ms5558|pcrlne|PM CRT Length Everett|1
+~+|1|n|ut1||mod=c|&ut1=6999||5|4|ms5559|pcrlie|PM CRT Lines Everett|1
+~/ --- Tacoma Commuter Rail
+~+|1|n|board||mod=c|&ut1=6998||*|5|4|ms5560|pcrbdt|PM CRT Boardings Tacoma|1
+~+|1|n|timtr||mod=c|&ut1=6998||*|5|4|ms5561|pcrtmt|PM CRT Time Tacoma|1
+~+|1|n|(len*ut1/ut1)||mod=c|&ut1=6998||*|5|4|ms5562|pcrlnt|PM CRT Length Tacoma|1
+~+|1|n|ut1||mod=c|&ut1=6998||5|4|ms5563|pcrlit|PM CRT Lines Tacoma|1
+~/ --- Seattle Center Monorail
+~+|1|n|board||mod=r|&ut1=1999||*|5|4|ms5564|pmrbds|PM Monorail Boardings|1
+~+|1|n|timtr||mod=r|&ut1=1999||*|5|4|ms5565|pmrtms|PM Monorail Time|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=1999||*|5|4|ms5566|pmrlns|PM Monorail Length|1
+~+|1|n|ut1||mod=r|&ut1=1999||5|4|ms5567|pmrlis|PM Monorail Lines|1
+~/ --- Buses
+~+|1|n|board||mod=b,p||*|5|4|ms5568|pbsbda|PM Bus Boardings|1
+~+|1|n|timtr||mod=b,p||*|5|4|ms5569|pbstma|PM Bus Time|1
+~+|1|n|(len*ut1/ut1)||mod=b,p||*|5|4|ms5570|pbslna|PM Bus Length|1
+~+|1|n|ut1||mod=b,p||5|4|ms5571|pbslia|PM Bus Lines|1
+~/ --- Ferries
+~+|1|n|board||mod=f||*|5|4|ms5572|pfybda|PM Ferry Boardings|1
+~+|1|n|timtr||mod=f||*|5|4|ms5573|pfytma|PM Ferry Time|1
+~+|1|n|(len*ut1/ut1)||mod=f||*|5|4|ms5574|pfylna|PM Ferry Length|1
+~+|1|n|ut1||mod=f||5|4|ms5575|pfylia|PM Ferry Lines|1
+~/ --- Reset ut1 to zero
+~+|1|y|ut1|0||*|4
+q
+~/ ---------------------------------------------------------------
+~/ --- Evening Period Summary
+~/ ---------------------------------------------------------------
+s=1005
+~/ --- Store the Results in Scalars for Summary
+2.41
+~+|1|y|ut1|1||*|4
+~/ --- Central Link Light Rail
+~+|1|n|board||mod=r|&ut1=6996||*|5|4|ms5576|elrbds|EV LRT Boardings Seattle|1
+~+|1|n|timtr||mod=r|&ut1=6996||*|5|4|ms5577|elrtms|EV LRT Time Seattle|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=6996||*|5|4|ms5578|elrlns|EV LRT Length Seattle|1
+~+|1|n|ut1||mod=r|&ut1=6996||5|4|ms5579|elrlis|EV LRT Lines Seattle|1
+~/ --- Tacoma Link Light Rail
+~+|1|n|board||mod=r|&ut1=6995||*|5|4|ms5580|elrbdt|EV LRT Boardings Tacoma|1
+~+|1|n|timtr||mod=r|&ut1=6995||*|5|4|ms5581|elrtmt|EV LRT Time Tacoma|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=6995||*|5|4|ms5582|elrlnt|EV LRT Length Tacoma|1
+~+|1|n|ut1||mod=r|&ut1=6995||5|4|ms5583|elrlit|EV LRT Lines Tacoma|1
+~/ --- Tacoma Commuter Rail
+~+|1|n|board||mod=c|&ut1=6998||*|5|4|ms5600|ecrbdt|EV CRT Boardings Tacoma|1
+~+|1|n|timtr||mod=c|&ut1=6998||*|5|4|ms5601|ecrtmt|EV CRT Time Tacoma|1
+~+|1|n|(len*ut1/ut1)||mod=c|&ut1=6998||*|5|4|ms5602|ecrlnt|EV CRT Length Tacoma|1
+~+|1|n|ut1||mod=c|&ut1=6998||5|4|ms5603|ecrlit|EV CRT Lines Tacoma|1
+~/ --- Seattle Center Monorail
+~+|1|n|board||mod=r|&ut1=1999||*|5|4|ms5584|emrbds|EV Monorail Boardings|1
+~+|1|n|timtr||mod=r|&ut1=1999||*|5|4|ms5585|emrtms|EV Monorail Time|1
+~+|1|n|(len*ut1/ut1)||mod=r|&ut1=1999||*|5|4|ms5586|emrlns|EV Monorail Length|1
+~+|1|n|ut1||mod=r|&ut1=1999||5|4|ms5587|emrlis|EV Monorail Lines|1
+~/ --- Buses
+~+|1|n|board||mod=b,p||*|5|4|ms5588|ebsbda|EV Bus Boardings|1
+~+|1|n|timtr||mod=b,p||*|5|4|ms5589|ebstma|EV Bus Time|1
+~+|1|n|(len*ut1/ut1)||mod=b,p||*|5|4|ms5590|ebslna|EV Bus Length|1
+~+|1|n|ut1||mod=b,p||5|4|ms5591|ebslia|EV Bus Lines|1
+~/ --- Ferries
+~+|1|n|board||mod=f||*|5|4|ms5592|efybda|EV Ferry Boardings|1
+~+|1|n|timtr||mod=f||*|5|4|ms5593|efytma|EV Ferry Time|1
+~+|1|n|(len*ut1/ut1)||mod=f||*|5|4|ms5594|efylna|EV Ferry Length|1
+~+|1|n|ut1||mod=f||5|4|ms5595|efylia|EV Ferry Lines|1
 ~/ --- Reset ut1 to zero
 ~+|1|y|ut1|0||*|4
 q

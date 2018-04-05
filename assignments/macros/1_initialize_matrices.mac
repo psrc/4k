@@ -33,10 +33,6 @@ q
 ~+|1|mf08|%1%mdtrk|medium truck trip table|0
 ~+|1|mf09|%1%hvtrk|heavy truck trip table|0
 q
-~?x=1003
-~$NoTransit
-~?x=1005
-~$NoTransit
 ~?x=1006
 ~$NoTransit
 3.12
