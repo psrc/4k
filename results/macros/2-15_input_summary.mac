@@ -35,7 +35,6 @@ reports=summary.rpt
 ~+|3.11|..\tripgen\output\%1%\hbopro.in|2|
 ~+|3.11|..\tripgen\output\%1%\hsppro.in|2|
 ~+|3.11|..\tripgen\output\%1%\schpro.in|2|
-~+|3.11|..\tripgen\output\%1%\hsppro.in|2|
 ~+|3.11|..\tripgen\output\%1%\hbw1pro.in|2|
 ~+|3.11|..\tripgen\output\%1%\hbw2pro.in|2|
 ~+|3.11|..\tripgen\output\%1%\hbw3pro.in|2|
@@ -52,7 +51,6 @@ reports=summary.rpt
 ~+|3.11|..\tripgen\output\%1%\hboatt.in|2|
 ~+|3.11|..\tripgen\output\%1%\hspatt.in|2|
 ~+|3.11|..\tripgen\output\%1%\schatt.in|2|
-~+|3.11|..\tripgen\output\%1%\hspatt.in|2|
 ~+|3.11|..\tripgen\output\%1%\hbw1att.in|2|
 ~+|3.11|..\tripgen\output\%1%\hbw2att.in|2|
 ~+|3.11|..\tripgen\output\%1%\hbw3att.in|2|

@@ -40,11 +40,11 @@ q
 ~/ --- Hardcode alternative specific constants and time/cost coefficients
 ~/ ----------------------------------------
 3.21
-~+|1|y|ms"asccs2"|n|-0.5248|||2
-~+|1|y|ms"asccs3"|n|-1.2181|||2
-~+|1|y|ms"ascctw"|n|-8.2917|||2
-~+|1|y|ms"asccbk"|n|-4.3162|||2
-~+|1|y|ms"asccwk"|n|-0.0113|||2
+~+|1|y|ms"asccs2"|n|-0.4260|||2
+~+|1|y|ms"asccs3"|n|-0.7519|||2
+~+|1|y|ms"ascctw"|n|-8.7852|||2
+~+|1|y|ms"asccbk"|n|-4.2652|||2
+~+|1|y|ms"asccwk"|n| 0.6449|||2
 ~+|1|y|ms"autivt"|n|-0.1000|||2
 ~+|1|y|ms"walktm"|n|-0.1024|||2
 ~+|1|y|ms"biketm"|n|-0.1024|||2
@@ -52,8 +52,8 @@ q
 ~+|1|y|ms"trwcos"|n|-0.0103|||2
 ~+|1|y|ms"trwivt"|n|-0.0281|||2
 ~+|1|y|ms"trwovt"|n|-0.0296|||2
-~+|1|y|ms"rsemtr"|n| 0.8671|||2
-~+|1|y|ms"rsemwb"|n| 0.1770|||2
+~+|1|y|ms"rsdntr"|n| 0.8671|||2
+~+|1|y|ms"rsdnwb"|n| 0.1770|||2
 q
 ~/ ----------------------------------------
 ~/ --- Import bi-directional skims
@@ -187,7 +187,7 @@ ms"trwovt"*(mf"auxwa"+mf"iwtwa"+mf"xfrwa")
 +
 ms"trwcos"*(mf"farwa")
 +
-ms"rsemtr"*ln(mo"empden"+md"empden"+mo"rsemdn"+md"rsemdn")
+ms"rsdntr"*ln(mo"empden"+md"empden"+mo"resden"+md"resden"+1)
 )
 ~+||mf"ivtwa"|0,1000,in|y|1,%1%||1,%1%||2
 q
@@ -202,7 +202,7 @@ ms"asccbk"
 +
 ms"biketm"*mf"bketm"
 +
-ms"rsemwb"*ln(mo"empden"+md"empden"+mo"rsemdn"+md"rsemdn")
+ms"rsdnwb"*ln(mo"empden"+md"empden"+mo"resden"+md"resden"+1)
 )
 ~+|||y|1,%1%||1,%1%||2
 q
@@ -217,9 +217,9 @@ ms"asccwk"
 +
 ms"walktm"*mf"wlktm"
 +
-ms"rsemwb"*ln(mo"empden"+md"empden"+mo"rsemdn"+md"rsemdn")
+ms"rsdnwb"*ln(mo"empden"+md"empden"+mo"resden"+md"resden"+1)
 )
-~+||mf"ivtda"|0,1000,in|y|1,%1%||1,%1%||2
+~+|||y|1,%1%||1,%1%||2
 q
 ~/ ----------------------------------------
 ~/ --- Calculate Mode Shares

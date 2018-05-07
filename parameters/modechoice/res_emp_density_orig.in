@@ -1,7 +1,7 @@
 c Year 2014
 c res/emp wt1 avg (origin) - for bike/walk/transit utility calc
 t matrices
-m matrix=mo"rsemdn"
+m matrix=mo"resden"
  1       all:        331.3027771
  2       all:        1045.504896
  3       all:        1239.671943

@@ -9,10 +9,10 @@ m matrix=ms"avots2"
   all all: 0.0144
 c hov3+ vehicle class
 m matrix=ms"avots3"
-  all all: 0.0115 
-c vanpool vehicle class
-m matrix=ms"avotvp"
-  all all: 0.0043
+  all all: 0.0115
+c---------- vanpool vehicle class
+c----------m matrix=ms"avotvp"
+c----------  all all: 0.0043
 c sov hbw income 1 vehicle class
 m matrix=ms"avot1v"
   all all: 0.0455
@@ -25,9 +25,9 @@ m matrix=ms"avot3v"
 c sov hbw income 4 vehicle class
 m matrix=ms"avot4v"
   all all: 0.0130
-c light truck vehicle class
-m matrix=ms"avotlt"
-  all all: 0.0109
+c---------- light truck vehicle class
+c----------m matrix=ms"avotlt"
+c----------  all all: 0.0109
 c medium truck vehicle class
 m matrix=ms"avotmd"
   all all: 0.0096

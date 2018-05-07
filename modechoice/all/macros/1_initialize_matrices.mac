@@ -130,8 +130,8 @@ reports=initialization.rpt
 ~+|1|ms116|mvothv|md heavy truck vot|0
 ~+|1|ms119|emdnwb|emp density walk/bike coeff|0
 ~+|1|ms120|emdntr|emp density transit coeff|0
-~+|1|ms121|rsemwb|res/emp density walk/bike coeff|0
-~+|1|ms122|rsemtr|res/emp density transit coeff|0
+~+|1|ms121|rsdnwb|res/emp density walk/bike coeff|0
+~+|1|ms122|rsdntr|res/emp density transit coeff|0
 ~/ ----------------------------------------------------
 ~/ --- Initialize Origin Matrices
 ~/ ----------------------------------------------------
@@ -144,7 +144,7 @@ reports=initialization.rpt
 ~+|1|mo07|hourly|hourly parking cost - non-work trips|0
 ~+|1|mo08|daily|daily parking cost - hb work trips|0
 ~+|1|mo09|empden|employment density - orig zone|0
-~+|1|mo10|rsemdn|res/emp wt1 density - orig zone|0
+~+|1|mo10|resden|res/emp wt1 density - orig zone|0
 ~/ ----------------------------------------------------
 ~/ --- Initialize Destination Matrices
 ~/ ----------------------------------------------------
@@ -158,7 +158,7 @@ reports=initialization.rpt
 ~+|1|md08|daily|daily parking cost - hb work trips|0
 ~+|1|md09|pnrchg|pnr lot parking cost|0
 ~+|1|md10|empden|employment density - dest zone|0
-~+|1|md11|rsemdn|res/emp wt1 density - dest zone|0
+~+|1|md11|resden|res/emp wt1 density - dest zone|0
 ~/ ----------------------------------------------------
 ~/ --- Initialize Full Matrices
 ~/ ----------------------------------------------------

@@ -1,7 +1,7 @@
 c Year 2014
 c res/emp wt1 avg (destination) - for bike/walk/transit utility calc
 t matrices
-m matrix=md"rsemdn"
+m matrix=md"resden"
  all  1:              331.3027771
  all  2:              1045.504896
  all  3:              1239.671943

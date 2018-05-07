@@ -119,9 +119,10 @@ if %SummaryBank% == Yes (
 	 
 	 REM Create macro, input and error list files
 	 if %SummaryBank% == Yes (
-      dir *.mac /s > results\macro_list.txt
-      dir input /s > results\input_list.txt
-      dir errors/s > results\error_list.txt
+      dir ..\*.mac /s > macro_list.txt
+      dir ..\*.bat /s > macro_list.txt
+      dir ..\input /s > input_list.txt
+      dir ..\errors/s > error_list.txt
 	)
 
 	 call emme -ng 000 -m macros\3-0_output_results.mac

@@ -42,27 +42,27 @@ q
 ~/ --- Hardcode alternative specific constants and time/cost coefficients
 ~/ ----------------------------------------
 3.21
-~+|1|y|ms"asccs2"|n|-2.7155|||2
-~+|1|y|ms"asccs3"|n|-3.7029|||2
-~+|1|y|ms"ascctw"|n|-5.0067|||2
-~+|1|y|ms"ascctd"|n|-5.1103|||2
-~+|1|y|ms"asccbk"|n|-6.0163|||2
-~+|1|y|ms"asccwk"|n|-3.5732|||2
-~+|1|y|ms"autivt"|n|-0.0648|||2
-~+|1|y|ms"walktm"|n|-0.0648|||2
-~+|1|y|ms"biketm"|n|-0.0648|||2
+~+|1|y|ms"asccs2"|n|-2.8923|||2
+~+|1|y|ms"asccs3"|n|-3.9375|||2
+~+|1|y|ms"ascctw"|n|-2.5084|||2
+~+|1|y|ms"ascctd"|n|-6.7559|||2
+~+|1|y|ms"asccbk"|n|-3.9490|||2
+~+|1|y|ms"asccwk"|n|-2.8565|||2
+~+|1|y|ms"autivt"|n|-0.7229|||2
+~+|1|y|ms"walktm"|n|-0.7229|||2
+~+|1|y|ms"biketm"|n|-0.7229|||2
 ~+|1|y|ms"autcos"|n|-0.0008|||2
-~+|1|y|ms"trwcos"|n|-0.0008|||2
-~+|1|y|ms"trwivt"|n|-0.0648|||2
-~+|1|y|ms"trwovt"|n|-0.0137|||2
-~+|1|y|ms"trdcos"|n|-0.0008|||2
-~+|1|y|ms"trdivt"|n|-0.0648|||2
-~+|1|y|ms"trdovt"|n|-0.0137|||2
-~+|1|y|ms"emdnwb"|n| 0.4796|||2
-~+|1|y|ms"emdntr"|n| 0.4796|||2
+~+|1|y|ms"trwcos"|n| 0.0033|||2
+~+|1|y|ms"trwivt"|n|-0.7229|||2
+~+|1|y|ms"trwovt"|n|-0.4130|||2
+~+|1|y|ms"trdcos"|n| 0.0008|||2
+~+|1|y|ms"trdivt"|n|-0.7229|||2
+~+|1|y|ms"trdovt"|n| 0.1498|||2
+~+|1|y|ms"emdnwb"|n|0.00004387|||2
+~+|1|y|ms"emdntr"|n|0.00004501|||2
 q
 ~/ ----------------------------------------
-~/ --- Bi-directional skims
+~/ --- Open bi-directional cost emmebank
 ~/ ----------------------------------------
 1.31
 ~+|1
@@ -143,7 +143,7 @@ q
 exp
 (
 ms"autivt"*
-mf"dabtm"
+ln(mf"dabtm")
 ~#(mf"dabtm"-mf"termtm")
 ~#+
 ~#ms"autovt"*
@@ -164,7 +164,7 @@ exp
 ms"asccs2"
 +
 ms"autivt"*
-mf"s2btm"
+ln(mf"s2btm")
 ~#(mf"s2btm"-mf"termtm")
 ~#+
 ~#ms"autovt"*
@@ -185,7 +185,7 @@ exp
 ms"asccs3"
 +
 ms"autivt"*
-mf"s3btm"
+ln(mf"s3btm")
 ~#(mf"s3btm"-mf"termtm")
 ~#+
 ~#ms"autovt"*
@@ -205,15 +205,15 @@ exp
 (
 ms"ascctw"
 +
-ms"trwivt"*mf"ivtwa"
+ms"trwivt"*ln(mf"ivtwa")
 +
-ms"trwovt"*(mf"auxwa"+mf"iwtwa"+mf"xfrwa")
+ms"trwovt"*ln((mf"auxwa"+mf"iwtwa"+mf"xfrwa").min.300)
 +
-ms"trwcos"*mf"farwa"
+ms"trwcos"*(mf"farwa".min.5000)
 +
-ms"emdntr"*ln((mo"empden"+md"empden").max.1)
+ms"emdntr"*(mo"empden"+md"empden")
 )
-~+||mf"ivtwa"|0,1000,in|y|1,%1%||1,%1%||2
+~+||mf"ivtwa"|1,1000,in|y|1,%1%||1,%1%||2
 q
 ~/ ----------------------------------------
 ~/ --- Calculate Drive to Transit Utility
@@ -224,13 +224,13 @@ exp
 (
 ms"ascctd"
 +
-ms"trdivt"*(mf"pnrtm"+mf"ivtda")
+ms"trdivt"*ln((mf"pnrtm"+mf"ivtda"))
 +
-ms"trdovt"*(mf"wlkda"+mf"iwtda"+mf"xfrda")
+ms"trdovt"*ln((mf"wlkda"+mf"iwtda"+mf"xfrda"))
 +
 ms"trdcos"*(mf"dapct"+mf"farda")
 +
-ms"emdntr"*ln((mo"empden"+md"empden").max.1)
+ms"emdntr"*(mo"empden"+md"empden")
 )
 ~+||mf"ivtda"|0,1000,in|y|1,%1%||1,%1%||2
 q
@@ -243,9 +243,9 @@ exp
 (
 ms"asccbk"
 +
-ms"biketm"*mf"bketm"
+ms"biketm"*ln(mf"bketm")
 +
-ms"emdnwb"*ln((mo"empden"+md"empden").max.1)
+ms"emdnwb"*(mo"empden"+md"empden")
 )
 ~+|||y|1,%1%||1,%1%||2
 q
@@ -258,9 +258,9 @@ exp
 (
 ms"asccwk"
 +
-ms"walktm"*mf"wlktm"
+ms"walktm"*ln(mf"wlktm")
 +
-ms"emdnwb"*ln((mo"empden"+md"empden").max.1)
+ms"emdnwb"*(mo"empden"+md"empden")
 )
 ~+|||y|1,%1%||1,%1%||2
 q
