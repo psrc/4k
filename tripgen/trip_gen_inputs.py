@@ -1,6 +1,6 @@
 # Inputs for the Trip Generation by Parcel and Households
 # Created by Puget Sound Regional Council Staff
-# March 2018
+# June 2018
 
 import os
 
@@ -39,6 +39,7 @@ gq_rates = model_directory+'/rates/gq_rates.csv'
 enlisted_rates = model_directory+'/rates/enlisted_rates.csv'
 employment_based_production_rates = model_directory+'/rates/job_productions.csv'
 employment_based_attraction_rates = model_directory+'/rates/job_attractions.csv'
+trip_rate_adjustments = model_directory+'/rates/rate_adjustments.csv'
 
 # Break points for classifications
 # Income in 2014 $'s
@@ -97,62 +98,3 @@ airport_4k = [('airport','SeaTac Airport Trips')]
 
 balance_to_productions = ['hbw1','hbw2','hbw3','hbw4','hsp','hbo','oto','wto','mtk','htk','cvh']
 balance_to_attractions = ['col','sch']
-
-regional_attraction_adjustments = [('hbw1att',1.10),
-                         ('hbw2att',1.10),
-                         ('hbw3att',1.10),
-                         ('hbw4att', 1.10),
-                         ('colatt',1.10),
-                         ('hspatt',1.10),
-                         ('schatt', 1.10),
-                         ('hboatt', 1.10),
-                         ('otoatt', 1.10),
-                         ('wtoatt', 1.10),
-                         ('mtkatt', 0.75),
-                         ('htkatt', 1.0),
-                         ('cvhatt', 1.0)]
-
-kitsap_attraction_adjustments = [('hbw1att',0.15),
-                         ('hbw2att',0.15),
-                         ('hbw3att',0.15),
-                         ('hbw4att', 0.15),
-                         ('colatt',0.0),
-                         ('hspatt',0.15),
-                         ('schatt', 0.0),
-                         ('hboatt', 0.15),
-                         ('otoatt', 0.15),
-                         ('wtoatt', 0.15),
-                         ('mtkatt', 0.0),
-                         ('htkatt', 0.0),
-                         ('cvhatt', 0.0)]
-
-regional_production_adjustments = [('hbw1pro',1.10),
-                         ('hbw2pro',1.10),
-                         ('hbw3pro',1.10),
-                         ('hbw4pro', 1.10),
-                         ('colpro',1.10),
-                         ('hsppro',1.10),
-                         ('schpro', 1.10),
-                         ('hbopro', 1.10),
-                         ('otopro', 1.10),
-                         ('wtopro', 1.10),
-                         ('mtkpro', 0.75),
-                         ('htkpro', 1.0),
-                         ('cvhpro', 1.0)]
-
-kitsap_production_adjustments = [('hbw1pro', 0.0),
-                         ('hbw2pro', 0.0),
-                         ('hbw3pro', 0.0),
-                         ('hbw4pro', 0.0),
-                         ('colpro', 0.0),
-                         ('hsppro', 0.0),
-                         ('schpro', 0.0),
-                         ('hbopro', 0.0),
-                         ('otopro', 0.0),
-                         ('wtopro', 0.0),
-                         ('mtkpro', 0.0),
-                         ('htkpro', 0.0),
-                         ('cvhpro', 0.0)]
-
-
-

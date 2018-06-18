@@ -18,17 +18,6 @@ def create_df_from_h5(h5_file, h5_table, h5_variables):
     
     return pd.DataFrame(h5_data)
 
-# Function to adjust trips using a set of adjustment factors
-def adjust_trips(working_df, regional_adjustments, kitsap_adjustments):
-        
-    for purposes in regional_adjustments:
-        working_df[purposes[0]] = working_df[purposes[0]] * purposes[1]
-        
-    for purposes in kitsap_adjustments:
-        working_df[purposes[0]] = working_df[purposes[0]] + (working_df[purposes[0]] * purposes[1] * working_df['kitsap'])
-    
-    return working_df
-
 # Function to balance trips to either productions or attractions
 def balance_trips(working_df, trip_purposes, balanced_to):
     
@@ -533,18 +522,25 @@ for purposes in jblm_purposes:
     df_taz.loc[df_taz['jblm'] == 1, purposes] = 0
 
 # Adjust the taz level data based on trip rate adjustments
-adjusted_df = adjust_trips(df_taz, regional_attraction_adjustments, kitsap_attraction_adjustments)
-adjusted_df = adjust_trips(df_taz, regional_production_adjustments, kitsap_production_adjustments)
-adjusted_df.to_csv(output_directory+'/6_adjust_trip_ends.csv',index=True)
+df_rate_adjustments = pd.read_csv(trip_rate_adjustments,header=0)
+df_rate_adjustments.set_index('trip-purpose', inplace=True)
+all_purposes = trip_productions + ['cvhpro','mtkpro','htkpro'] + trip_attractions + ['cvhatt','mtkatt','htkatt']
+
+# Adjust Productions and Attractions by Adjustment Factors
+for purpose in all_purposes:
+    df_taz[purpose] = df_taz[purpose] * [df_rate_adjustments.loc[purpose,'regional']]
+    df_taz[purpose] = df_taz[purpose] + (df_taz[purpose] * [df_rate_adjustments.loc[purpose,'kitsap']]*df_taz['kitsap'])
+
+df_taz.to_csv(output_directory+'/6_adjust_trip_ends.csv',index=True)
 
 # Balance the taz dataframe
-balanced_df = balance_trips(adjusted_df, balance_to_productions, 'pro')
-balanced_df = balance_trips(adjusted_df, balance_to_attractions, 'att')
+balanced_df = balance_trips(df_taz, balance_to_productions, 'pro')
+balanced_df = balance_trips(df_taz, balance_to_attractions, 'att')
 balanced_df.to_csv(output_directory+'/7_balance_trip_ends.csv',index=True)
 
 ###########################################################
 ###########################################################
-### Create Emme Input File
+### Create Emme Input Files
 ###########################################################
 ###########################################################
 balanced_df = balanced_df.reset_index()
