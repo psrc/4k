@@ -37,6 +37,8 @@ sch_rates = model_directory+'/rates/school_rates.csv'
 coll_rates = model_directory+'/rates/college_rates.csv'
 gq_rates = model_directory+'/rates/gq_rates.csv'
 enlisted_rates = model_directory+'/rates/enlisted_rates.csv'
+employment_based_production_rates = model_directory+'/rates/job_productions.csv'
+employment_based_attraction_rates = model_directory+'/rates/job_attractions.csv'
 
 # Break points for classifications
 # Income in 2014 $'s
@@ -57,143 +59,11 @@ updated_parcel_columns = ['parcel-id','xcoord','ycoord','taz','education','food-
 # Lists for Group Quarters
 trip_productions = ['hbw1pro','hbw2pro','hbw3pro','hbw4pro','colpro','hsppro','hbopro','schpro','otopro','wtopro']
 trip_attractions = ['hbw1att','hbw2att','hbw3att','hbw4att','colatt','hspatt','hboatt','schatt','otoatt','wtoatt']
+employment_categories = ['retail','food-services','government','office','services','industrial','education','medical','other','university','total-hh','total-jobs','total-people']
 
 # Lists for HH and Person Files
 hh_variables=['hhno','hhsize','hhparcel','hhincome']
 person_variables=['pno','hhno','pptyp']
-
-# Dictionaries of Trip Attraction Rates 
-hbw1_att = [('retail', 0.2140),
-            ('food-services', 0.2140),
-            ('government', 0.1900),
-            ('office', 0.1870),
-            ('services', 0.1870),
-            ('industrial', 0.0580),
-            ('education', 0.1940),
-            ('medical', 0.1870),
-            ('other', 0.1870)]
-
-hbw2_att = [('retail', 0.2982),
-            ('food-services', 0.2980),
-            ('government', 0.1770),
-            ('office', 0.2430),
-            ('services', 0.2430),
-            ('industrial', 0.1170),
-            ('education', 0.2650),
-            ('medical', 0.2430),
-            ('other', 0.2430)]
-
-hbw3_att = [('retail', 0.4460),
-            ('food-services', 0.4460),
-            ('government', 0.2450),
-            ('office', 0.3460),
-            ('services', 0.3460),
-            ('industrial', 0.2280),
-            ('education', 0.4480),
-            ('medical', 0.3460),
-            ('other', 0.3460)]
-
-hbw4_att = [('retail', 0.5020),
-            ('food-services', 0.5020),
-            ('government', 0.3060),
-            ('office', 0.4860),
-            ('services', 0.4860),
-            ('industrial', 0.3060),
-            ('education', 0.6010),
-            ('medical', 0.4860),
-            ('other',  0.4860)]
-
-college_att = [('university', 0.8800)]
-
-shopping_att = [('retail', 3.6400),
-            ('food-services', 3.6400)]
-
-school_att = [('education', 2.0000)]
-
-hbo_att = [('retail', 3.7620),
-            ('food-services', 3.7620),
-            ('government', 0.0000),
-            ('office', 0.0320),
-            ('services', 0.0320),
-            ('medical', 0.0320),
-            ('other', 0.0320)]
-
-oto_att = [('retail', 3.5500),
-            ('food-services', 3.5500),
-            ('government', 0.0000),
-            ('office', 0.0000),
-            ('services', 0.0000),
-            ('medical', 0.0000),
-            ('other', 0.0000)]
-
-wto_att = [('retail', 1.6490),
-            ('food-services', 1.6490),
-            ('government', 0.2820),
-            ('office', 0.7930),
-            ('services', 0.7930),
-            ('medical', 0.7930),
-            ('other', 0.7930)]
-
-medium_truck_att = [('retail', 0.02),
-            ('food-services', 0.02),
-            ('government', 0.02),
-            ('office', 0.04),
-            ('services', 0.04),
-            ('industrial', 0.15),
-            ('education', 0.02),
-            ('medical', 0.02),
-            ('other', 0.04),
-            ('total-hh',0.04)]
-
-
-medium_truck_pro = [('retail', 0.15),
-            ('food-services', 0.15),
-            ('government', 0.04),
-            ('office', 0.04),
-            ('services', 0.04),
-            ('industrial', 0.25),
-            ('education', 0.04),
-            ('medical', 0.04),
-            ('other', 0.04),
-            ('total-hh',0.04)]
-
-commerical_vehicle_att = [('retail', 0.05),
-            ('food-services', 0.05),
-            ('government', 0.10),
-            ('office', 0.16),
-            ('services', 0.16),
-            ('industrial', 0.15),
-            ('education', 0.10),
-            ('medical', 0.10),
-            ('other', 0.05),
-            ('total-hh',0.15)]
-
-
-commerical_vehicle_pro = [('retail', 0.33),
-            ('food-services', 0.33),
-            ('government', 0.16),
-            ('office', 0.16),
-            ('services', 0.16),
-            ('industrial', 0.25),
-            ('education', 0.16),
-            ('medical', 0.15),
-            ('other', 0.05),
-            ('total-hh',0.10)]
-
-trip_attraction_rates = [('hbw1att',hbw1_att),
-                         ('hbw2att',hbw2_att),
-                         ('hbw3att',hbw3_att),
-                         ('hbw4att', hbw4_att),
-                         ('colatt',college_att),
-                         ('hspatt',shopping_att),
-                         ('schatt', school_att),
-                         ('hboatt', hbo_att),
-                         ('otoatt', oto_att),
-                         ('wtoatt', wto_att),
-                         ('mtkatt',medium_truck_att),
-                         ('mtkpro',medium_truck_pro),
-                         ('cvhatt',commerical_vehicle_att),
-                         ('cvhpro',commerical_vehicle_pro)]
 
 productions_4k = [('hbw1pro','work income #1 productions'),
                    ('hbw2pro','work income #2 productions'),

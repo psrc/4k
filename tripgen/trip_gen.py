@@ -428,7 +428,7 @@ df_hh['total-hh'] = 1
 print 'Place HH Trip Productions on parcels'
 df_parcel_hh_pa = df_hh.groupby('hhparcel').sum()
 df_parcel_hh_pa = df_parcel_hh_pa.reset_index()
-df_parcel_hh_pa.rename(columns={'hhparcel': 'parcel-id','people': 'population'}, inplace=True)
+df_parcel_hh_pa.rename(columns={'hhparcel': 'parcel-id','people': 'total-people'}, inplace=True)
 
 ###########################################################
 ###########################################################
@@ -446,10 +446,25 @@ df_parcels['mtkatt'] = 0
 df_parcels['cvhpro'] = 0
 df_parcels['cvhatt'] = 0
 
-for purpose in trip_attraction_rates:
-                 
-    for jobs in purpose[1]:
-        df_parcels[purpose[0]] = df_parcels[purpose[0]] + (df_parcels[jobs[0]] * jobs[1])
+# Trip Attractions based on employment categories
+df_job_attraction_rates = pd.read_csv(employment_based_attraction_rates,header=0)
+df_job_attraction_rates.set_index('employment-type', inplace=True)
+attraction_purposes = trip_attractions + ['cvhatt','mtkatt']
+
+for purpose in attraction_purposes:
+    
+    for jobs in employment_categories:
+        df_parcels[purpose] = df_parcels[purpose] + (df_parcels[jobs] * df_job_attraction_rates.loc[jobs,purpose])
+
+# Trip Productions based on employment categories
+df_job_production_rates = pd.read_csv(employment_based_production_rates,header=0)
+df_job_production_rates.set_index('employment-type', inplace=True)
+productions_purposes = trip_productions + ['cvhpro','mtkpro']
+
+for purpose in productions_purposes:
+    
+    for jobs in employment_categories:
+        df_parcels[purpose] = df_parcels[purpose] + (df_parcels[jobs] * df_job_production_rates.loc[jobs,purpose])
          
 ###########################################################
 ###########################################################
@@ -457,7 +472,7 @@ for purpose in trip_attraction_rates:
 ###########################################################
 ###########################################################
 print 'Calculate SeaTac Airport trips by parcels'
-df_parcels['airport'] = (df_parcels['total-jobs']*air_jobs) + (df_parcels['population']*air_people)
+df_parcels['airport'] = (df_parcels['total-jobs']*air_jobs) + (df_parcels['total-people']*air_people)
 aiport_balancing = seatac_enplanements / sum(df_parcels['airport'])
 df_parcels['airport'] = df_parcels['airport']*aiport_balancing
           
