@@ -41,6 +41,8 @@ reports=trip_distribution.rpt
 ~+|3.11|..\..\tripgen\output\%1%\cvhatt.in|2|
 ~/ ... input airport od trip table
 ~+|3.11|..\..\tripgen\output\%1%\airport.in|2|
+~/ ... input jblm od trip table
+~+|3.11|..\..\tripgen\output\%1%\jblm.in|2|
 ~/
 ~/exit emme
 ~/
