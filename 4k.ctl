@@ -2,7 +2,7 @@ Puget Sound 4k Trip Based Model Control File
 
 Network and Land Use Source and Year
 LUYear=2014
-InputPath=K:\INPUTS\T2040_Update\Network\2014_T2040_aug2017
+InputPath=R:\KRIS\GDB_Networks\2018_NETWORKS\POST\2014\input
 
 TAZ values for the zone system for this model version
 hightaz=3700

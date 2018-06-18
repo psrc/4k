@@ -1,17 +1,11 @@
-﻿# This script completes trip generation using a parcel input for aggregation to any zone system
-# Spatial joins for block, taz and parcel inputs are all performed programatically using geopandas
+﻿# This script completes trip generation using a parcel input for PSRC's 3700 zone system
 # Created by Puget Sound Regional Council Staff
-# March 2018
+# June 2018
 
-import ast
 import h5py
 import pandas as pd
-from pandas import *
 import time
-import numpy as np
 from trip_gen_inputs import *
-from shapely.geometry import Point
-import geopandas as gp
 import sqlite3
 
 # Function to create a datframe from the H5 files from Urbansim
@@ -31,7 +25,7 @@ def adjust_trips(working_df, regional_adjustments, kitsap_adjustments):
         working_df[purposes[0]] = working_df[purposes[0]] * purposes[1]
         
     for purposes in kitsap_adjustments:
-        working_df[purposes[0]] = working_df[purposes[0]] + (working_df[purposes[0]] * purposes[1] * working_df['Kitsap-Flag'])
+        working_df[purposes[0]] = working_df[purposes[0]] + (working_df[purposes[0]] * purposes[1] * working_df['kitsap'])
     
     return working_df
 
@@ -66,7 +60,7 @@ def create_emme_vectors(working_df, trip_types, matrix_type):
         
         for rows in range(0, (len(working_df))):
             
-            current_zone = int(working_df['TAZ'][rows])
+            current_zone = int(working_df['taz'][rows])
             
             if matrix_type == 'mo':
                 working_file.write(' '+str(current_zone) + ' all: ' + str(working_df[purposes[0]][rows]) + '\n')
@@ -77,90 +71,104 @@ def create_emme_vectors(working_df, trip_types, matrix_type):
         working_file.close()
         matrix_start += 1
 
-def gp_join(target_layer,join_shapefile,coord_sys,keep_columns):
-    
-    # open join shapefile as a geodataframe
-    join_layer = gp.GeoDataFrame.from_file(join_shapefile)
-    join_layer.crs = {'init' :coord_sys}
-
-    # spatial join
-    merged = gp.sjoin(target_layer, join_layer, how = "inner", op='intersects')
-    merged = pd.DataFrame(merged)
-    merged = merged[keep_columns]
-    
-    return merged
-
-def create_point_from_polygon(polygon_shape,coord_sys):
-    poly = gp.read_file(polygon_shape)
-    points = poly.copy()
-    points.geometry = points['geometry'].centroid
-    points.crs = {'init' :coord_sys}
-    
-    # create a geodataframe for points and return
-    geo_layer = gp.GeoDataFrame(points, geometry='geometry')
-    geo_layer.crs = {'init' :coord_sys}
-    
-    return geo_layer
-
-def create_point_from_table(current_df,x_coord,y_coord,coord_sys):
-    current_df['geometry'] = current_df.apply(lambda x: Point((float(x[x_coord]), float(x[y_coord]))), axis=1)
-    geo_layer = gp.GeoDataFrame(current_df, geometry='geometry')
-    geo_layer.crs = {'init' :coord_sys}
-    
-    return geo_layer
-
 start_of_production = time.time()
 
 ###########################################################
 ###########################################################
-### General File Opening and Spatial Connections
+### Connect to the Trip Generation Database of input files
 ###########################################################
 ###########################################################
-
-# Connect to the Trip Generation Database of input files
 model_inputs_db = sqlite3.connect(model_files)
 
-# Spatial Join Blocks and TAZ Layers to create a block/taz equivalency
-keep_columns = ['GEOID10','TAZ']
-block_layer = create_point_from_polygon(block_shapefile,state_plane)
-merged_blocks = gp_join(block_layer,taz_shapefile,state_plane,keep_columns)
+###########################################################
+###########################################################
+### PSRC Zone System for TAZ joing
+###########################################################
+###########################################################
+print 'Creating psrc zone system dataframe'
+df_psrc = pd.read_sql_query("SELECT * FROM psrc_zones", model_inputs_db)
+df_psrc['taz'] = df_psrc['taz'].astype(int)
+df_psrc = df_psrc.loc[:,['taz','county','jblm','external']]
 
-# Setup Parcel file and remove unwanted columns for trip generation usage
-# Since titels can case, just make sure things are all caps
-parcels = pd.read_csv(parcel_file, sep = ' ')
-parcels.columns = parcels.columns.str.upper()
-parcels = parcels.loc[:,original_parcel_columns]
-parcels.columns = updated_parcel_columns
+###########################################################
+###########################################################
+### Auto External Stations
+###########################################################
+###########################################################
+print 'Creating auto external data by taz'
+df_external = pd.read_sql_query("SELECT * FROM auto_externals", model_inputs_db)
+df_external['taz'] = df_external['taz'].astype(int)
+df_external = df_external.loc[:,['taz','year'] + trip_productions + trip_attractions]
+data_year = int(df_external['year'][0])
 
-# Add the TAZ Field to the Parcel Records and merge with the employment inputs
-keep_columns = ['Parcel-ID','TAZ']
-parcels_layer = create_point_from_table(parcels,'XCoord','YCoord',state_plane)
-taz_parcels = gp_join(parcels_layer,taz_shapefile,state_plane,keep_columns)
-df_parcels = pd.merge(taz_parcels,parcels,on='Parcel-ID',suffixes=('_x','_y'),how='left')
-df_parcels = df_parcels.drop('geometry',axis=1)
+# Join to full TAZ file to ensure final merging works
+df_external = pd.merge(df_psrc, df_external, on='taz', suffixes=('_x','_y'), how='left')
+df_external.fillna(0,inplace=True)
+df_external.set_index('taz', inplace=True)
+df_external = df_external.loc[:,['year'] + trip_productions + trip_attractions]
+df_external = df_external.astype(float)
 
-# Open HH and Person H5 file and create dataframes from them
-hh_people = h5py.File(hh_person,'r+') 
-hh_df = create_df_from_h5(hh_people, 'Household', hh_variables)
-person_df = create_df_from_h5(hh_people, 'Person', person_variables)
+# Calculate the Inputs for the Year of the model      
+if model_year > data_year:   
+    growth_rate = (1+(external_rate*(model_year-data_year)))
+    df_external = df_external * growth_rate
+
+external_taz = df_external.loc[:,trip_productions + trip_attractions]
+
+###########################################################
+###########################################################
+### Enlisted Personnel
+###########################################################
+###########################################################
+print 'Creating enlisted personnel data by taz'
+df_enlisted = pd.read_sql_query("SELECT * FROM enlisted_personnel", model_inputs_db)
+
+# Calculate the Inputs for the Year of the model
+data_years = df_enlisted.columns[df_enlisted.columns.str.isnumeric()]
+max_input_year = int(max(data_years))
+
+if model_year <= max_input_year:
+    
+    df_enlisted['model-year'] = df_enlisted[str(model_year)]
+    df_enlisted['model-year'] = df_enlisted['model-year'].apply(float)
+        
+elif model_year > max_input_year:
+    df_enlisted['model-year'] = df_enlisted[str(max_input_year)]
+    df_enlisted['model-year'] = df_enlisted['model-year'].apply(float)    
+    df_enlisted['model-year'] = df_enlisted['model-year'] * (1+(enlisted_personnel_rate*(model_year-max_input_year)))
+
+# Trim Down the Dataframe to only include 
+keep_columns = ['taz','model-year']
+df_enlisted = df_enlisted.loc[:,keep_columns]
+
+# Read in rates and calculate Enlisted Personnel related trips by Purpose
+df_enlisted_rates = pd.read_csv(enlisted_rates,header=0)
+df_enlisted_rates.set_index('Trips', inplace=True)
+
+for purpose in trip_attractions:
+    df_enlisted[purpose] = df_enlisted['model-year'] * df_enlisted_rates[purpose]['Enlisted']
+
+# Consolidate Enlisted Personnel data to TAZ
+enlisted_taz = df_enlisted.groupby('taz').sum()
+enlisted_taz = enlisted_taz.reset_index()
+enlisted_taz['taz'] = enlisted_taz['taz'].apply(int)
+
+# Join to full TAZ file to ensure final merging works
+enlisted_taz = pd.merge(df_psrc, enlisted_taz, on='taz', suffixes=('_x','_y'), how='left')
+enlisted_taz.fillna(0,inplace=True)
+enlisted_taz.set_index('taz', inplace=True)
+enlisted_taz = enlisted_taz.loc[:,trip_attractions]
 
 ###########################################################
 ###########################################################
 ### Group Quarters
 ###########################################################
 ###########################################################
-
-# Open Group Quarters tables from the Input DB into dataframes
-total_gq_df = pd.read_sql_query("SELECT * FROM total_gq", model_inputs_db)
-dorm_share_df = pd.read_sql_query("SELECT * FROM dorm_shares", model_inputs_db)
-dorm_share_df.rename(columns={'Share': 'Dorm-Shares'}, inplace=True)
-military_share_df = pd.read_sql_query("SELECT * FROM military_shares", model_inputs_db)
-military_share_df.rename(columns={'Share': 'Military-Shares'}, inplace=True)
-
-# Merge the dataframes to create one working dataframe
-total_gq_df = total_gq_df.merge(dorm_share_df,on='GEOID10').merge(military_share_df,on='GEOID10')
-total_gq_df['Dorm-Shares'] = total_gq_df['Dorm-Shares'].apply(float)
-total_gq_df['Military-Shares'] = total_gq_df['Military-Shares'].apply(float)
+print 'Creating group quarter data by taz'
+total_gq_df = pd.read_sql_query("SELECT * FROM group_quarters", model_inputs_db)
+total_gq_df['dorm_share'] = total_gq_df['dorm_share'].apply(float)
+total_gq_df['military_share'] = total_gq_df['military_share'].apply(float)
+total_gq_df['other_share'] = total_gq_df['other_share'].apply(float)
 
 # Calculate the Inputs for the Year of the model
 data_years = total_gq_df.columns[total_gq_df.columns.str.isnumeric()]
@@ -168,197 +176,193 @@ max_input_year = int(max(data_years))
 
 if model_year <= max_input_year:
     
-    total_gq_df['Model-Year'] = total_gq_df[str(model_year)]
-    total_gq_df['Model-Year'] = total_gq_df['Model-Year'].apply(float)
-    total_gq_df['Dorms'] = total_gq_df['Model-Year'] * total_gq_df['Dorm-Shares']
-    total_gq_df['Military'] = total_gq_df['Model-Year'] * total_gq_df['Military-Shares']
-    total_gq_df['Other'] = total_gq_df['Model-Year'] - total_gq_df['Dorms'] - total_gq_df['Military']
+    total_gq_df['group-quarters'] = total_gq_df[str(model_year)]
+    total_gq_df['group-quarters'] = total_gq_df['group-quarters'].apply(float)
         
 elif model_year > max_input_year:
-    total_gq_df['Model-Year'] = total_gq_df[str(max_input_year)]
-    total_gq_df['Model-Year'] = total_gq_df['Model-Year'].apply(float)    
-    total_gq_df['Model-Year'] = total_gq_df['Model-Year'] * (1+(group_quarters_rate*(model_year-max_input_year)))
-    total_gq_df['Dorms'] = total_gq_df['Model-Year'] * total_gq_df['Dorm-Shares']
-    total_gq_df['Military'] = total_gq_df['Model-Year'] * total_gq_df['Military-Shares']
-    total_gq_df['Other'] = total_gq_df['Model-Year'] - total_gq_df['Dorms'] - total_gq_df['Military']
-    
-# Merge with the Block/Taz dataframe and trim down the columns
-keep_columns = ['GEOID10','TAZ','Dorms','Military','Other']
-total_gq_df['GEOID10'] = total_gq_df['GEOID10'].apply(str)
-gq_blocks = pd.merge(merged_blocks,total_gq_df,on='GEOID10',suffixes=('_x','_y'),how='left')
-gq_blocks = gq_blocks.loc[:,keep_columns]
+    total_gq_df['group-quarters'] = total_gq_df[str(max_input_year)]
+    total_gq_df['group-quarters'] = total_gq_df['group-quarters'].apply(float)    
+    total_gq_df['group-quarters'] = total_gq_df['group-quarters'] * (1+(group_quarters_rate*(model_year-max_input_year)))
 
-# Read in rates and calculate Total Group Quarters related trips
+keep_columns = ['taz', 'dorm_share', 'military_share', 'other_share', 'group-quarters']
+total_gq_df = total_gq_df.loc[:,keep_columns]
+
+total_gq_df['dorms'] = total_gq_df['group-quarters'] * total_gq_df['dorm_share']
+total_gq_df['military'] = total_gq_df['group-quarters'] * total_gq_df['military_share']
+total_gq_df['other'] = total_gq_df['group-quarters'] * total_gq_df['other_share']
+   
+# Merge with the Block/Taz dataframe and trim down the columns
+keep_columns = ['taz','dorms','military','other']
+total_gq_df = total_gq_df.loc[:,keep_columns]
+
+# Read in rates and calculate total Group Quarters related trips
 df_gq_rates = pd.read_csv(gq_rates,header=0)
 df_gq_rates.set_index('GQ-Category', inplace=True)
 
 for purpose in trip_productions:
-    gq_blocks[purpose] = gq_blocks['Dorms'] * df_gq_rates.loc['Dorms',purpose] + gq_blocks['Military'] * df_gq_rates.loc['Military',purpose] + gq_blocks['Other'] * df_gq_rates.loc['Other',purpose]
+    total_gq_df[purpose] = total_gq_df['dorms'] * df_gq_rates.loc['Dorms',purpose] + total_gq_df['military'] * df_gq_rates.loc['Military',purpose] + total_gq_df['other'] * df_gq_rates.loc['Other',purpose]
 
 # Consolidate Group Quarters data to TAZ for output to travel model
-df_gq_taz = gq_blocks.groupby('TAZ').sum()
-df_gq_taz = df_gq_taz.reset_index()
-df_gq_taz.set_index('TAZ', inplace=True)
-df_gq_taz = df_gq_taz.loc[:,trip_productions]
+group_quarters_taz = total_gq_df.groupby('taz').sum()
+group_quarters_taz = group_quarters_taz.reset_index()
+group_quarters_taz['taz'] = group_quarters_taz['taz'].apply(int)
+
+# Join to full TAZ file to ensure final merging works
+group_quarters_taz = pd.merge(df_psrc, group_quarters_taz, on='taz', suffixes=('_x','_y'), how='left')
+group_quarters_taz.fillna(0,inplace=True)
+group_quarters_taz.set_index('taz', inplace=True)
+group_quarters_taz = group_quarters_taz.loc[:,trip_productions]
 
 ###########################################################
 ###########################################################
-### Enlisted Personnel
+### Heavy Trucks
 ###########################################################
 ###########################################################
-
-# Open Group Quarters tables from the Input DB into dataframe
-df_enlisted = pd.read_sql_query("SELECT * FROM enlisted_personnel", model_inputs_db)
-df_enlisted['GEOID10'] = df_enlisted['GEOID10'].apply(str)
-enlisted_blocks = pd.merge(merged_blocks,df_enlisted,on='GEOID10',suffixes=('_x','_y'),how='left')
-enlisted_blocks.fillna(0,inplace=True)
+print 'Creating heavy truck data by taz'
+heavy_trucks = pd.read_sql_query("SELECT * FROM heavy_trucks", model_inputs_db)
+keep_columns = ['taz','year','htkpro','htkatt']
+heavy_trucks = heavy_trucks.loc[:,keep_columns]
 
 # Calculate the Inputs for the Year of the model
-data_years = enlisted_blocks.columns[enlisted_blocks.columns.str.isnumeric()]
-max_input_year = int(max(data_years))
+data_year = int(heavy_trucks['year'][1])
+heavy_trucks = heavy_trucks.drop('year',axis=1)
+heavy_trucks['htkpro'] = heavy_trucks['htkpro'].apply(float)
+heavy_trucks['htkatt'] = heavy_trucks['htkatt'].apply(float)
+       
+if model_year > data_year:   
+    growth_rate = (1+(truck_rate*(model_year-data_year)))
+    heavy_trucks['htkpro'] = heavy_trucks['htkpro'] * growth_rate
+    heavy_trucks['htkatt'] = heavy_trucks['htkatt'] * growth_rate
 
-if model_year <= max_input_year:
+# Make the TAZ field the index
+heavy_trucks_taz = heavy_trucks.groupby('taz').sum()
+heavy_trucks_taz = heavy_trucks_taz.reset_index()
+heavy_trucks_taz['taz'] = heavy_trucks_taz['taz'].apply(int)
+
+# Join to full TAZ file to ensure final merging works
+heavy_trucks_taz = pd.merge(df_psrc, heavy_trucks_taz, on='taz', suffixes=('_x','_y'), how='left')
+heavy_trucks_taz.fillna(0,inplace=True)
+heavy_trucks_taz = heavy_trucks_taz.loc[:,['taz','htkpro','htkatt']]
+ 
+###########################################################
+###########################################################
+### Joint Base Lewis McChord
+###########################################################
+###########################################################
+print 'Creating jblm data by taz'
+jblm_df = pd.read_sql_query("SELECT * FROM jblm_trips", model_inputs_db)
+jblm_matrix = int(jblm_df['matrix_id'][0])
+data_year = int(jblm_df['year'][0])
+
+keep_columns = ['origin_zone','destination_zone','trips',]
+jblm_df = jblm_df.loc[:,keep_columns]
+jblm_df['trips'] = jblm_df['trips'].apply(float)
+       
+if model_year > data_year:   
+    growth_rate = (1+(jblm_rate*(model_year-data_year)))
+    jblm_df['trips'] = jblm_df['trips'] * growth_rate
     
-    enlisted_blocks['Model-Year'] = enlisted_blocks[str(model_year)]
-    enlisted_blocks['Model-Year'] = enlisted_blocks['Model-Year'].apply(float)
+# Create JBLM Input File for use in Emme
+working_file = open(output_directory+'/jblm.in', "w")
+working_file.write('c ' + str(model_year) + ' Trip Generation' + '\n')
+working_file.write('c Trip Generation is based on '+ land_use_product + ' using the '+ taz_system + '\n')
+working_file.write('c JBLM trips are based on gate counts, blue tooth and zipcode survey data' + '\n')
+working_file.write('t matrices' + '\n')
+working_file.write('a matrix=mf' + str(jblm_matrix) + ' jblm ' + '0 JBLM Trips' + '\n')
         
-elif model_year > max_input_year:
-    enlisted_blocks['Model-Year'] = enlisted_blocks[str(max_input_year)]
-    enlisted_blocks['Model-Year'] = enlisted_blocks['Model-Year'].apply(float)    
-    enlisted_blocks['Model-Year'] = enlisted_blocks['Model-Year'] * (1+(enlisted_personnel_rate*(model_year-max_input_year)))
+for rows in range(0, (len(jblm_df))):
+            
+    origin_zone = jblm_df['origin_zone'][rows]
+    destination_zone = jblm_df['destination_zone'][rows]
+    working_file.write(' '+str(origin_zone) + ' ' + str(destination_zone) + ' : ' + str(jblm_df['trips'][rows]) + '\n')
 
-# Trim Down the Dataframe to only include 
-keep_columns = ['GEOID10','TAZ','Model-Year']
-enlisted_blocks = enlisted_blocks.loc[:,keep_columns]
+working_file.close()
 
-# Read in rates and calculate Enlisted Personnel related trips by Purpose
-df_enlisted_rates = pd.read_csv(enlisted_rates,header=0)
-df_enlisted_rates.set_index('Trips', inplace=True)
-
-for purpose in trip_attractions:
-    enlisted_blocks[purpose] = enlisted_blocks['Model-Year'] * df_enlisted_rates.get_value('Enlisted',purpose)
-
-# Consolidate Enlisted Personnel data to TAZ
-enlisted_blocks_taz = enlisted_blocks.groupby('TAZ').sum()
-enlisted_blocks_taz = enlisted_blocks_taz.reset_index()
-enlisted_blocks_taz.set_index('TAZ', inplace=True)
-enlisted_blocks_taz = enlisted_blocks_taz.loc[:,trip_attractions]
+###########################################################
+###########################################################
+### SeaTac Airport 
+###########################################################
+###########################################################
+print 'Reading in SeaTac aiport data'
+df_seatac = pd.read_sql_query("SELECT * FROM seatac", model_inputs_db)
+seatac_zone = int(df_seatac['taz'][0])
+airport_matrix = int(df_seatac['matrix_id'][0])
+seatac_enplanements = int(df_seatac[str(model_year)])
 
 ###########################################################
 ###########################################################
 ### Special Generators
 ###########################################################
 ###########################################################
-
-# Open Special Generator table from the Input DB into dataframe
+print 'Creating special generator data by taz'
 df_special = pd.read_sql_query("SELECT * FROM special_generators", model_inputs_db)
-df_special['GEOID10'] = df_special['GEOID10'].apply(str)
-special_blocks = pd.merge(merged_blocks,df_special,on='GEOID10',suffixes=('_x','_y'),how='left')
-special_blocks.fillna(0,inplace=True)
 
 # Calculate the Inputs for the Year of the model
-data_years = special_blocks.columns[special_blocks.columns.str.isnumeric()]
+data_years = df_special.columns[df_special.columns.str.isnumeric()]
 max_input_year = int(max(data_years))
 
 if model_year <= max_input_year:
     
-    special_blocks['Model-Year'] = special_blocks[str(model_year)]
-    special_blocks['Model-Year'] = special_blocks['Model-Year'].apply(float)
+    df_special['hboatt'] = df_special[str(model_year)]
+    df_special['hboatt'] = df_special['hboatt'].apply(float)
         
 elif model_year > max_input_year:
-    special_blocks['Model-Year'] = special_blocks[str(max_input_year)]
-    special_blocks['Model-Year'] = special_blocks['Model-Year'].apply(float)    
-    special_blocks['Model-Year'] = special_blocks['Model-Year'] * (1+(special_generator_rate*(model_year-max_input_year)))
+    df_special['hboatt'] = df_special[str(max_input_year)]
+    df_special['hboatt'] = df_special['hboatt'].apply(float)    
+    df_special['hboatt'] = df_special['hboatt'] * (1+(special_generator_rate*(model_year-max_input_year)))
 
 # Trim Down the Dataframe to only include 
-keep_columns = ['GEOID10','TAZ','Model-Year']
-special_blocks = special_blocks.loc[:,keep_columns]
+keep_columns = ['taz','hboatt']
+df_special = df_special.loc[:,keep_columns]
 
 # Consolidate Special Generator data to TAZ
-special_blocks_taz = special_blocks.groupby('TAZ').sum()
-special_blocks_taz = special_blocks_taz.reset_index()
-special_blocks_taz.set_index('TAZ', inplace=True)
-updated_columns = ['hboatt']
-special_blocks_taz.columns = updated_columns
+special_generators_taz = df_special.groupby('taz').sum()
+special_generators_taz = special_generators_taz.reset_index()
+special_generators_taz['taz'] = special_generators_taz['taz'].apply(int)
+
+# Join to full TAZ file to ensure final merging works
+special_generators_taz = pd.merge(df_psrc, special_generators_taz, on='taz', suffixes=('_x','_y'), how='left')
+special_generators_taz.fillna(0,inplace=True)
+special_generators_taz.set_index('taz', inplace=True)
+special_generators_taz = special_generators_taz.loc[:,['hboatt']]
 
 ###########################################################
 ###########################################################
-### External Stations
+### Load Household, Person and Parcel files 
 ###########################################################
 ###########################################################
+print 'Loading HH and Parcel file'
+hh_people = h5py.File(hh_person,'r+') 
+hh_df = create_df_from_h5(hh_people, 'Household', hh_variables)
+person_df = create_df_from_h5(hh_people, 'Person', person_variables)
 
-# Open External table from the Input DB into dataframe
-df_external = pd.read_sql_query("SELECT * FROM externals", model_inputs_db)
-df_external.set_index('TAZ', inplace=True)
-df_external = df_external.astype(float)
-
-# Calculate the Inputs for the Year of the model
-data_year = int(df_external['year'][0])
-       
-if model_year > data_year:   
-    growth_rate = (1+(external_rate*(model_year-data_year)))
-    df_external = df_external * growth_rate
-
-# Trim out the year Column
-df_external = df_external.drop('year',axis=1)
+parcels = pd.read_csv(parcel_file, sep = ' ')
+parcels.columns = parcels.columns.str.lower()
+parcels = parcels.loc[:,original_parcel_columns]
+parcels.columns = updated_parcel_columns
 
 ###########################################################
 ###########################################################
-### ATRI Heavy Trucks
+### Create a Household file with cross classifications
+### using the person and household file
 ###########################################################
 ###########################################################
-heavy_trucks = pd.read_csv(heavy_truck_internal_file, sep = ',')
-external_trucks = pd.read_csv(heavy_truck_external_file, sep = ',')
-
-# Spatial Join ATRI Zones and TAZ Layers to create a atri/taz equivalency
-keep_columns = ['ATRI_Zone','TAZ']
-atri_layer = create_point_from_polygon(atri_shapefile,state_plane)
-merged_atri = gp_join(atri_layer,taz_shapefile,state_plane,keep_columns)
-
-df_heavy_trucks = pd.merge(heavy_trucks,merged_atri,on='ATRI_Zone',suffixes=('_x','_y'),how='left')
-df_heavy_trucks = df_heavy_trucks.groupby('TAZ').sum()
-
-# Make the TAZ field the index
-external_trucks.set_index('TAZ', inplace=True)
-
-# Calculate the Inputs for the Year of the model
-data_year = int(df_heavy_trucks['year'][1])
-       
-if model_year > data_year:   
-    growth_rate = (1+(truck_rate*(model_year-data_year)))
-    df_heavy_trucks = df_heavy_trucks * growth_rate
-    external_trucks = external_trucks * growth_rate
-
-# Trim down the columns
-remove_columns=['ATRI_Zone','year']
-df_heavy_trucks = df_heavy_trucks.drop(remove_columns,axis=1)
-external_trucks = external_trucks.drop(remove_columns,axis=1)
-
-# Combine Internal and External ATRI Truck Trips
-df_heavy_trucks = df_heavy_trucks.append(external_trucks)
-
-###########################################################
-###########################################################
-### Household Trip Generation
-###########################################################
-###########################################################
-
-# Create Person Classifications and group by Houshold ID
-person_df['People'] = 1
+print 'Creating HH cross-classification file'
+person_df['people'] = 1
 
 # Flag if the person has a full or part-time job
-person_df['Workers'] = 0
-person_df.loc[person_df['pptyp'] == 1, 'Workers'] = 1
-person_df.loc[person_df['pptyp'] == 2, 'Workers'] = 1 
+person_df['workers'] = 0
+person_df.loc[person_df['pptyp'] == 1, 'workers'] = 1
+person_df.loc[person_df['pptyp'] == 2, 'workers'] = 1 
 
 # Flag if the person is a school age kid
-person_df['School-Age'] = 0
-person_df.loc[person_df['pptyp'] == 6, 'School-Age'] = 1
-person_df.loc[person_df['pptyp'] == 7, 'School-Age'] = 1   
+person_df['school-age'] = 0
+person_df.loc[person_df['pptyp'] == 6, 'school-age'] = 1
+person_df.loc[person_df['pptyp'] == 7, 'school-age'] = 1   
 
 # Flag if the person is a college student
-person_df['College-Student'] = 0
-person_df.loc[person_df['pptyp'] == 5, 'College-Student'] = 1
+person_df['college-student'] = 0
+person_df.loc[person_df['pptyp'] == 5, 'college-student'] = 1
              
 # Remove a couple columns
 fields_to_remove=['pno','pptyp']
@@ -372,73 +376,88 @@ df_hh = df_hh.reset_index()
 df_hh = pd.merge(df_hh,hh_df,on='hhno',suffixes=('_x','_y'),how='left')
 
 # Create a Column for Household sizes 1, 2, 3 or 4+
-df_hh['Household-Class'] = df_hh['hhsize']
-df_hh.loc[df_hh['Household-Class'] > 4, 'Household-Class'] = 4
+df_hh['household-class'] = df_hh['hhsize']
+df_hh.loc[df_hh['household-class'] > 4, 'household-class'] = 4
          
 # Create a Column for workers 0, 1, 2 or 3+
-df_hh['Worker-Class'] = df_hh['Workers']
-df_hh.loc[df_hh['Worker-Class'] > 3, 'Worker-Class'] = 3       
+df_hh['worker-class'] = df_hh['workers']
+df_hh.loc[df_hh['worker-class'] > 3, 'worker-class'] = 3       
 
-# Create a Column for Income 
-df_hh['Income-Class'] = 0
-df_hh.loc[df_hh['hhincome'] <= low_income, 'Income-Class'] = 1 
-df_hh.loc[(df_hh['hhincome'] > low_income) & (df_hh['hhincome'] <= medium_income), 'Income-Class'] = 2 
-df_hh.loc[(df_hh['hhincome'] > medium_income) & (df_hh['hhincome'] <= high_income), 'Income-Class'] = 3         
-df_hh.loc[df_hh['hhincome'] > high_income, 'Income-Class'] = 4
+# Create a Column for Income 1, 2 ,3 or 4
+df_hh['income-class'] = 0
+df_hh.loc[df_hh['hhincome'] <= low_income, 'income-class'] = 1 
+df_hh.loc[(df_hh['hhincome'] > low_income) & (df_hh['hhincome'] <= medium_income), 'income-class'] = 2 
+df_hh.loc[(df_hh['hhincome'] > medium_income) & (df_hh['hhincome'] <= high_income), 'income-class'] = 3         
+df_hh.loc[df_hh['hhincome'] > high_income, 'income-class'] = 4
          
 # Create a Column for school age children 0, 1, 2 or 3+
-df_hh['School-Class'] = df_hh['School-Age']
-df_hh.loc[df_hh['School-Class'] > 3, 'School-Class'] = 3          
+df_hh['school-class'] = df_hh['school-age']
+df_hh.loc[df_hh['school-class'] > 3, 'school-class'] = 3          
 
 # Create a Column for college age persons 0, 1, 2+ 
-df_hh['College-Class'] = df_hh['College-Student']
-df_hh.loc[df_hh['College-Class'] > 2, 'College-Class'] = 2          
+df_hh['college-class'] = df_hh['college-student']
+df_hh.loc[df_hh['college-class'] > 2, 'college-class'] = 2          
          
 # Create a Columns for Household - Work - Income Cross-Classification, Income & School and Income and College
-df_hh['HWI'] = 'H'+ df_hh['Household-Class'].apply(str) + 'W' + df_hh['Worker-Class'].apply(str) + 'I' + df_hh['Income-Class'].apply(str)
-df_hh['SI'] = 'S'+ df_hh['School-Class'].apply(str) + 'I' + df_hh['Income-Class'].apply(str)
-df_hh['CI'] = 'C'+ df_hh['College-Class'].apply(str) + 'I' + df_hh['Income-Class'].apply(str)
+df_hh['hwi'] = 'h'+ df_hh['household-class'].apply(str) + 'w' + df_hh['worker-class'].apply(str) + 'i' + df_hh['income-class'].apply(str)
+df_hh['si'] = 's'+ df_hh['school-class'].apply(str) + 'i' + df_hh['income-class'].apply(str)
+df_hh['ci'] = 'c'+ df_hh['college-class'].apply(str) + 'i' + df_hh['income-class'].apply(str)
 
-# Load HH Trip Rates into dataframes from csv input files
+###########################################################
+###########################################################
+### Household trip production
+###########################################################
+###########################################################
+print 'Calculating HH Trip Productions'
 df_hh_rates = pd.read_csv(hh_rates,header=0)
 df_sch_rates = pd.read_csv(sch_rates,header=0)
 df_coll_rates = pd.read_csv(coll_rates,header=0)
 
 # Merge Rates with Households by Cross-Classification so we end up with total household productions
-df_hh = pd.merge(df_hh,df_hh_rates,on='HWI',suffixes=('_x','_y'),how='left')
-df_hh = pd.merge(df_hh,df_sch_rates,on='SI',suffixes=('_x','_y'),how='left')
-df_hh = pd.merge(df_hh,df_coll_rates,on='CI',suffixes=('_x','_y'),how='left')
+df_hh = pd.merge(df_hh,df_hh_rates,on='hwi',suffixes=('_x','_y'),how='left')
+df_hh = pd.merge(df_hh,df_sch_rates,on='si',suffixes=('_x','_y'),how='left')
+df_hh = pd.merge(df_hh,df_coll_rates,on='ci',suffixes=('_x','_y'),how='left')
+df_hh = df_hh.loc[:,trip_productions + trip_attractions + ['hhparcel','people']]
+df_hh['total-hh'] = 1
 
-columns_to_keep = ['hbw1pro','hbw2pro','hbw3pro','hbw4pro','colpro','hsppro','schpro','hbopro','otopro','wtopro',
-                   'hbw1att','hbw2att','hbw3att','hbw4att','colatt','hspatt','schatt','hboatt','otoatt','wtoatt',
-                   'hhparcel','People']
-
-df_hh = df_hh.loc[:,columns_to_keep]
-df_hh['Total-HHs'] = 1
-
-# Create a Parcel file by grouping the hh file by parcel ID 
+###########################################################
+###########################################################
+### Combine HH Trip Generation with Parcels
+###########################################################
+###########################################################
+print 'Place HH Trip Productions on parcels'
 df_parcel_hh_pa = df_hh.groupby('hhparcel').sum()
 df_parcel_hh_pa = df_parcel_hh_pa.reset_index()
-df_parcel_hh_pa.rename(columns={'hhparcel': 'Parcel-ID','People': 'Population'}, inplace=True)
+df_parcel_hh_pa.rename(columns={'hhparcel': 'parcel-id','people': 'population'}, inplace=True)
 
-# Merge the Full Parcel File with Employment inputs with the parcel file from the HH's with P's & A's
-df_parcels = pd.merge(df_parcels,df_parcel_hh_pa,on='Parcel-ID',suffixes=('_x','_y'),how='left')
+###########################################################
+###########################################################
+### Parcel trip attractions
+###########################################################
+###########################################################
+print 'Calculating Parcel Trip Attractions'
+df_parcels = pd.merge(parcels, df_parcel_hh_pa, on='parcel-id', suffixes=('_x','_y'), how='left')
 df_parcels.fillna(0,inplace=True)
-df_parcels['Education'] = 0
-df_parcels['Education'] = df_parcels['K-8'] + df_parcels['High-School']
+
+# Create a couple columns for trip attractions for parcels
+df_parcels['education'] = df_parcels['k-8'] + df_parcels['high-school']
 df_parcels['mtkpro'] = 0
 df_parcels['mtkatt'] = 0
 df_parcels['cvhpro'] = 0
 df_parcels['cvhatt'] = 0
 
-# Trip Attractions based on Employment and Student Inputs by parcel
 for purpose in trip_attraction_rates:
                  
     for jobs in purpose[1]:
         df_parcels[purpose[0]] = df_parcels[purpose[0]] + (df_parcels[jobs[0]] * jobs[1])
          
-# Sea-Tac Airport Trip Productions and Attractions - based on total population and total jobs
-df_parcels['airport'] = (df_parcels['Total-Jobs']*air_jobs) + (df_parcels['Population']*air_people)
+###########################################################
+###########################################################
+### SeaTac Airport trip generation
+###########################################################
+###########################################################
+print 'Calculate SeaTac Airport trips by parcels'
+df_parcels['airport'] = (df_parcels['total-jobs']*air_jobs) + (df_parcels['population']*air_people)
 aiport_balancing = seatac_enplanements / sum(df_parcels['airport'])
 df_parcels['airport'] = df_parcels['airport']*aiport_balancing
           
@@ -447,67 +466,66 @@ df_parcels['airport'] = df_parcels['airport']*aiport_balancing
 ### Create TAZ Input files
 ###########################################################
 ###########################################################
-
-# Create a TAZ File for Productions and Attractions
-df_taz = df_parcels.groupby('TAZ').sum()
+print 'Creating Trip Productions and Attractions by TAZ'
+df_taz = df_parcels.groupby('taz').sum()
 df_taz = df_taz.reset_index()
 df_taz.fillna(0,inplace=True)
-fields_to_remove = ['Parcel-ID','XCoord','YCoord','Education','Food-Services','Government','Industrial','Medical','Office','Retail','Resources','Services','Other','K-8','High-School','University','Population','Total-Jobs','Total-HHs']
-df_taz = df_taz.drop(fields_to_remove,axis=1)
+df_taz['taz'] = df_taz['taz'].apply(int)
 
-# Add the County Name to the TAZ Dataframe. 
-keep_columns = ['TAZ','COUNTY_NM']
-taz_layer = create_point_from_polygon(taz_shapefile,state_plane)
-merged_taz = gp_join(taz_layer,county_shapefile,state_plane,keep_columns)
-merged_taz.rename(columns={'COUNTY_NM': 'County'}, inplace=True)
+# Join to full TAZ file to ensure final merging works
+df_taz = pd.merge(df_psrc, df_taz, on='taz', suffixes=('_x','_y'), how='left')
+df_taz.fillna(0,inplace=True)
 
-# Now merge County name into the TAZ dataframe
-df_taz = pd.merge(df_taz,merged_taz,on='TAZ',suffixes=('_x','_y'),how='left')
+# Create a Kitsap County flag for use in Kitsap Adjustments
+df_taz['kitsap']=0
+df_taz.loc[df_taz['county'] == 'Kitsap', 'kitsap'] = 1
 
-# Create a Kitsap County flag
-df_taz['Kitsap-Flag']=0
-df_taz.loc[df_taz['County'] == 'Kitsap', 'Kitsap-Flag'] = 1
-df_taz.set_index('TAZ', inplace=True)
+# Add in Heavy Truck Productions and Attractions
+df_taz = pd.merge(df_taz, heavy_trucks_taz, on='taz', suffixes=('_x','_y'), how='left')
+df_taz.fillna(0,inplace=True)
+
+# Clean up dataframe for further calculations as well as output
+df_taz.set_index('taz', inplace=True)
+df_taz = df_taz.loc[:,trip_productions + ['cvhpro','mtkpro','htkpro'] + trip_attractions + ['cvhatt','mtkatt','htkatt','airport','kitsap','jblm']]
 df_taz.to_csv(output_directory+'/1_unadjusted_unbalanced.csv',index=True)
 
 # Add in the Group Quarters to Trip Productions   
 for purpose in trip_productions:
-    df_taz[purpose] = df_taz[purpose] + df_gq_taz[purpose]
+    df_taz[purpose] = df_taz[purpose] + group_quarters_taz[purpose]
 df_taz.to_csv(output_directory+'/2_add_group_quarters.csv',index=True)
 
 # Add in the Enlisted Personnel to Trip Attractions
 for purpose in trip_attractions:
-    df_taz[purpose] = df_taz[purpose] + enlisted_blocks_taz[purpose]
+    df_taz[purpose] = df_taz[purpose] + enlisted_taz[purpose]
 df_taz.to_csv(output_directory+'/3_add_enlisted_personnel.csv',index=True)
 
 # Add in the Special Generators to Trip Attractions
-df_taz['hboatt'] = df_taz['hboatt'] + special_blocks_taz['hboatt']
+df_taz['hboatt'] = df_taz['hboatt'] + special_generators_taz['hboatt']
 df_taz.to_csv(output_directory+'/4_add_special_generators.csv',index=True)
 
 # Add in the External Trips
-df_taz = df_taz.append(df_external)
+all_purposes = trip_productions + trip_attractions
+for purpose in all_purposes:
+    df_taz[purpose] = df_taz[purpose] + external_taz[purpose]
 df_taz.to_csv(output_directory+'/5_add_externals.csv',index=True)
 
-# Add in Heavy Truck Trips
-df_taz = df_taz.reset_index()
-df_taz.fillna(0,inplace=True)
-df_taz['TAZ'] = df_taz['TAZ'].apply(int)
-df_heavy_trucks = df_heavy_trucks.reset_index()
-df_heavy_trucks.fillna(0,inplace=True)
-df_taz = pd.merge(df_taz,df_heavy_trucks,on='TAZ',suffixes=('_x','_y'),how='left')
-df_taz.fillna(0,inplace=True)
-df_taz.set_index('TAZ', inplace=True)
-df_taz.to_csv(output_directory+'/6_add_atri_heavy_trucks.csv',index=True)
+# Zero out JBLM trips that were generated above (so only inlcude Shopping, HBO, OtO and WtO)
+df_taz['jblm'] = df_taz['jblm'].apply(int)
+jblm_purposes = ['hbw1pro','hbw2pro','hbw3pro','hbw4pro','colpro','schpro','cvhpro','mtkpro','htkpro',
+                 'hbw1att','hbw2att','hbw3att','hbw4att','colatt','schatt','cvhatt','mtkatt','htkatt']
+
+for purposes in jblm_purposes:
+    df_taz.loc[df_taz['jblm'] == 1, purposes] = 0
 
 # Adjust the taz level data based on trip rate adjustments
 adjusted_df = adjust_trips(df_taz, regional_attraction_adjustments, kitsap_attraction_adjustments)
 adjusted_df = adjust_trips(df_taz, regional_production_adjustments, kitsap_production_adjustments)
-adjusted_df.to_csv(output_directory+'/7_adjust_trip_ends.csv',index=True)
+adjusted_df.to_csv(output_directory+'/6_adjust_trip_ends.csv',index=True)
 
 # Balance the taz dataframe
 balanced_df = balance_trips(adjusted_df, balance_to_productions, 'pro')
 balanced_df = balance_trips(adjusted_df, balance_to_attractions, 'att')
-balanced_df.to_csv(output_directory+'/8_balance_trip_ends.csv',index=True)
+balanced_df.to_csv(output_directory+'/7_balance_trip_ends.csv',index=True)
 
 ###########################################################
 ###########################################################
@@ -530,7 +548,7 @@ working_file.write('a matrix=mf' + str(airport_matrix) + ' airport ' + '0 SeaTac
         
 for rows in range(0, (len(balanced_df))):
             
-    current_zone = balanced_df['TAZ'][rows]
+    current_zone = balanced_df['taz'][rows]
     working_file.write(' '+str(current_zone) + ' ' + str(seatac_zone) + ' : ' + str((balanced_df['airport'][rows])/2) + '\n')
     working_file.write(' '+str(seatac_zone) + ' ' + str(current_zone) + ' : ' + str((balanced_df['airport'][rows])/2) + '\n')         
 

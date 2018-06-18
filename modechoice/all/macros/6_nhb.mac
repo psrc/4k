@@ -36,11 +36,11 @@ q
 ~/ --- Hardcode alternative specific constants and time/cost coefficients
 ~/ ----------------------------------------
 3.21
-~+|1|y|ms"asccs2"|n|-0.8752|||2
-~+|1|y|ms"asccs3"|n|-1.5365|||2
-~+|1|y|ms"ascctw"|n|-0.9638|||2
-~+|1|y|ms"asccbk"|n|-3.7233|||2
-~+|1|y|ms"asccwk"|n| 2.5076|||2
+~+|1|y|ms"asccs2"|n|-0.8705|||2
+~+|1|y|ms"asccs3"|n|-1.5317|||2
+~+|1|y|ms"ascctw"|n|-1.9307|||2
+~+|1|y|ms"asccbk"|n|-3.7374|||2
+~+|1|y|ms"asccwk"|n| 2.4872|||2
 q
 ~/ ----------------------------------------
 ~/ --- Bi-directional skims

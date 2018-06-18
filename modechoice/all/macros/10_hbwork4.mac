@@ -42,12 +42,12 @@ q
 ~/ --- Hardcode alternative specific constants and time/cost coefficients
 ~/ ----------------------------------------
 3.21
-~+|1|y|ms"asccs2"|n|-2.3864|||2
-~+|1|y|ms"asccs3"|n|-3.4894|||2
-~+|1|y|ms"ascctw"|n|-2.1312|||2
-~+|1|y|ms"ascctd"|n|-7.2164|||2
-~+|1|y|ms"asccbk"|n|-2.8374|||2
-~+|1|y|ms"asccwk"|n|-2.3367|||2
+~+|1|y|ms"asccs2"|n|-2.3939|||2
+~+|1|y|ms"asccs3"|n|-3.5021|||2
+~+|1|y|ms"ascctw"|n|-3.0328|||2
+~+|1|y|ms"ascctd"|n|-5.3093|||2
+~+|1|y|ms"asccbk"|n|-2.9173|||2
+~+|1|y|ms"asccwk"|n|-2.4094|||2
 ~+|1|y|ms"autivt"|n|-0.8846|||2
 ~+|1|y|ms"walktm"|n|-0.8846|||2
 ~+|1|y|ms"biketm"|n|-0.8846|||2
