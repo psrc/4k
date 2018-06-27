@@ -9,6 +9,15 @@ model_year = 2040
 taz_system = 'PSRC 3700 Zone System'
 land_use_product = 'Land Use Vision 2.0 LODES'
 
+# Zone system Inputs
+hightaz=3700
+lowstation=3733
+highstation=3750
+lowpnr=3751
+highpnr=4000
+
+i5_station = 3733
+
 # Input Files
 model_directory = 'C:/coding/trip-generation'
 input_directory = model_directory+'/input/'+str(model_year)

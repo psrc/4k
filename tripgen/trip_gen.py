@@ -269,6 +269,46 @@ working_file.close()
 
 ###########################################################
 ###########################################################
+### Remove JBLM Externals from the Externals dataframe 
+###########################################################
+###########################################################
+
+# Calculate amount of JBLM traffic that is from/to an external and remove it from the External Station df
+jblm_df['origin_zone'] = jblm_df['origin_zone'].apply(int)
+jblm_df['destination_zone'] = jblm_df['destination_zone'].apply(int)
+
+jblm_external = jblm_df[(jblm_df['origin_zone'] >=lowstation)]
+jblm_ext_productions = sum(jblm_external['trips'])
+
+jblm_external = jblm_df[(jblm_df['destination_zone'] >=lowstation)]
+jblm_ext_attractions = sum(jblm_external['trips'])
+
+# Calculate the total trip productions and attractions for the I-5 Zone
+i5_ext_productions = 0
+for purposes in trip_productions:
+    i5_ext_productions = i5_ext_productions + external_taz[purposes][i5_station]
+
+i5_ext_attractions = 0
+for purposes in trip_attractions:
+    i5_ext_attractions = i5_ext_attractions + external_taz[purposes][i5_station]
+
+# Scale the I-5 station volumes by purpose
+i5_revised_productions = i5_ext_productions - jblm_ext_productions
+i5_revised_attractions = i5_ext_attractions - jblm_ext_attractions
+
+revised_external_taz = external_taz
+for purposes in trip_productions:
+    
+    ratio = revised_external_taz[purposes][i5_station] / i5_ext_productions
+    revised_external_taz[purposes][i5_station] = i5_revised_productions * ratio
+
+for purposes in trip_attractions:
+    
+    ratio = revised_external_taz[purposes][i5_station] / i5_ext_attractions
+    revised_external_taz[purposes][i5_station] = i5_revised_attractions * ratio
+
+###########################################################
+###########################################################
 ### SeaTac Airport 
 ###########################################################
 ###########################################################
@@ -510,7 +550,7 @@ df_taz.to_csv(output_directory+'/4_add_special_generators.csv',index=True)
 # Add in the External Trips
 all_purposes = trip_productions + trip_attractions
 for purpose in all_purposes:
-    df_taz[purpose] = df_taz[purpose] + external_taz[purpose]
+    df_taz[purpose] = df_taz[purpose] + revised_external_taz[purpose]
 df_taz.to_csv(output_directory+'/5_add_externals.csv',index=True)
 
 # Zero out JBLM trips that were generated above (so only inlcude Shopping, HBO, OtO and WtO)
