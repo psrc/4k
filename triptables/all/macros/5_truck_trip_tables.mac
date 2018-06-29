@@ -9,6 +9,7 @@ reports=trucks.rpt
 ~/ ---------------------------------------------------------------------
 ~/ --- Transpose daily p-a truck distribution to o-d format
 ~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mf"cvhod"|n|0.5*mf"cvhdis"+0.5*mf"cvhdis"'|||n|2|q
 ~+|3.21|1|y|mf"medod"|n|0.5*mf"meddis"+0.5*mf"meddis"'|||n|2|q
 ~+|3.21|1|y|mf"hvyod"|n|0.5*mf"hvydis"+0.5*mf"hvydis"'|||n|2|q
 ~/ ---------------------------------------------------------------------
@@ -19,26 +20,31 @@ reports=trucks.rpt
 ~/ ---------------------------------------------------------------------
 ~/ --- AM Peak Period Truck Trip Table
 ~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mf"acomvh"|n|mf"cvhod"*ms"cveham"|||n|2|q
 ~+|3.21|1|y|mf"amdtrk"|n|mf"medod"*ms"mtrkam"|||n|2|q
 ~+|3.21|1|y|mf"ahvtrk"|n|mf"hvyod"*ms"htrkam"|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- Midday Truck Trip Table
 ~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mf"mcomvh"|n|mf"cvhod"*ms"cvehmd"|||n|2|q
 ~+|3.21|1|y|mf"mmdtrk"|n|mf"medod"*ms"mtrkmd"|||n|2|q
 ~+|3.21|1|y|mf"mhvtrk"|n|mf"hvyod"*ms"htrkmd"|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- PM Peak Period Truck Trip Table
 ~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mf"pcomvh"|n|mf"cvhod"*ms"cvehpm"|||n|2|q
 ~+|3.21|1|y|mf"pmdtrk"|n|mf"medod"*ms"mtrkpm"|||n|2|q
 ~+|3.21|1|y|mf"phvtrk"|n|mf"hvyod"*ms"htrkpm"|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- Late Evening Truck Trip Table
 ~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mf"ecomvh"|n|mf"cvhod"*ms"cvehev"|||n|2|q
 ~+|3.21|1|y|mf"emdtrk"|n|mf"medod"*ms"mtrkev"|||n|2|q
 ~+|3.21|1|y|mf"ehvtrk"|n|mf"hvyod"*ms"htrkev"|||n|2|q
 ~/ ---------------------------------------------------------------------
 ~/ --- Overnight Truck Trip Table
 ~/ ---------------------------------------------------------------------
+~+|3.21|1|y|mf"ncomvh"|n|mf"cvhod"*ms"cvehni"|||n|2|q
 ~+|3.21|1|y|mf"nmdtrk"|n|mf"medod"*ms"mtrkni"|||n|2|q
 ~+|3.21|1|y|mf"nhvtrk"|n|mf"hvyod"*ms"htrkni"|||n|2|q
 ~/ ---------------------------------------------------------------------

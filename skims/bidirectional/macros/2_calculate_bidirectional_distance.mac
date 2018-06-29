@@ -15,6 +15,7 @@ reports=2_calculate_bidirectional_distance.rpt
 ~+|2|3|3|mf"aa1ds2"|mf"aa2"|n|y
 ~+|2|3|3|mf"aa1ds3"|mf"aa3"|n|y
 ~+|2|3|3|mf"aa1ds4"|mf"aa4"|n|y
+~+|2|3|3|mf"acvhds"|mf"acvh"|n|y
 ~+|2|3|3|mf"amedds"|mf"amed"|n|y
 ~+|2|3|3|mf"ahvyds"|mf"ahvy"|n|y
 q
@@ -28,6 +29,7 @@ q
 ~+|2|3|3|mf"pa1ds2"|mf"pa2"|n|y
 ~+|2|3|3|mf"pa1ds3"|mf"pa3"|n|y
 ~+|2|3|3|mf"pa1ds4"|mf"pa4"|n|y
+~+|2|3|3|mf"pcvhds"|mf"pcvh"|n|y
 ~+|2|3|3|mf"pmedds"|mf"pmed"|n|y
 ~+|2|3|3|mf"phvyds"|mf"phvy"|n|y
 q
@@ -53,6 +55,7 @@ q
 ~+|1|y|mf"ah2bds"|n|(mf"aa2"+mf"pa2"')/2|||n|2
 ~+|1|y|mf"ah3bds"|n|(mf"aa3"+mf"pa3"')/2|||n|2
 ~+|1|y|mf"ah4bds"|n|(mf"aa4"+mf"pa4"')/2|||n|2
+~+|1|y|mf"bcvhds"|n|(mf"acvh"+mf"pcvh"')/2|||n|2
 ~+|1|y|mf"bmedds"|n|(mf"amed"+mf"pmed"')/2|||n|2
 ~+|1|y|mf"bhvyds"|n|(mf"ahvy"+mf"phvy"')/2|||n|2
 ~+|1|y|mf"mu1bds"|n|(mf"mau1"+mf"mau1"')/2|||n|2

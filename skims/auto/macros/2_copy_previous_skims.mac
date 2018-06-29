@@ -16,6 +16,7 @@ reports=2_copy_previous_skims.rpt
 ~+|4|1|%1%a1tm2|%1%a1tp2|n|n
 ~+|4|1|%1%a1tm3|%1%a1tp3|n|n
 ~+|4|1|%1%a1tm4|%1%a1tp4|n|n
+~+|4|1|%1%cvhtm|%1%cvhtp|n|n
 ~+|4|1|%1%medtm|%1%medtp|n|n
 ~+|4|1|%1%hvytm|%1%hvytp|n|n
 ~/ ------------------------------------------
@@ -28,6 +29,7 @@ reports=2_copy_previous_skims.rpt
 ~+|4|1|%1%a1cs2|%1%a1cp2|n|n
 ~+|4|1|%1%a1cs3|%1%a1cp3|n|n
 ~+|4|1|%1%a1cs4|%1%a1cp4|n|n
+~+|4|1|%1%cvhcs|%1%cvhcp|n|n
 ~+|4|1|%1%medcs|%1%medcp|n|n
 ~+|4|1|%1%hvycs|%1%hvycp|n|n
 ~/ ------------------------------------------
@@ -40,6 +42,7 @@ reports=2_copy_previous_skims.rpt
 ~+|4|1|%1%a1ds2|%1%a1dp2|n|n
 ~+|4|1|%1%a1ds3|%1%a1dp3|n|n
 ~+|4|1|%1%a1ds4|%1%a1dp4|n|n
+~+|4|1|%1%cvhds|%1%cvhdp|n|n
 ~+|4|1|%1%medds|%1%meddp|n|n
 ~+|4|1|%1%hvyds|%1%hvydp|n|n
 q

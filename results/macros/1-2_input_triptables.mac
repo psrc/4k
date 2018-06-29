@@ -50,19 +50,19 @@ reports=summary.rpt
 ~+|2|3|3|mf"nhbw3v"|mf"nhbw3v"|n|y
 ~+|2|3|3|mf"nhbw4v"|mf"nhbw4v"|n|y
 ~/ --- Truck Trip Tables
-~/+|2|3|3|mf"alttrk"|mf"alttrk"|n|y
+~+|2|3|3|mf"acomvh"|mf"acomvh"|n|y
 ~+|2|3|3|mf"amdtrk"|mf"amdtrk"|n|y
 ~+|2|3|3|mf"ahvtrk"|mf"ahvtrk"|n|y
-~/+|2|3|3|mf"mlttrk"|mf"mlttrk"|n|y
+~+|2|3|3|mf"mcomvh"|mf"mcomvh"|n|y
 ~+|2|3|3|mf"mmdtrk"|mf"mmdtrk"|n|y
 ~+|2|3|3|mf"mhvtrk"|mf"mhvtrk"|n|y
-~/+|2|3|3|mf"plttrk"|mf"plttrk"|n|y
+~+|2|3|3|mf"pcomvh"|mf"pcomvh"|n|y
 ~+|2|3|3|mf"pmdtrk"|mf"pmdtrk"|n|y
 ~+|2|3|3|mf"phvtrk"|mf"phvtrk"|n|y
-~/+|2|3|3|mf"elttrk"|mf"elttrk"|n|y
+~+|2|3|3|mf"ecomvh"|mf"ecomvh"|n|y
 ~+|2|3|3|mf"emdtrk"|mf"emdtrk"|n|y
 ~+|2|3|3|mf"ehvtrk"|mf"ehvtrk"|n|y
-~/+|2|3|3|mf"nlttrk"|mf"nlttrk"|n|y
+~+|2|3|3|mf"ncomvh"|mf"ncomvh"|n|y
 ~+|2|3|3|mf"nmdtrk"|mf"nmdtrk"|n|y
 ~+|2|3|3|mf"nhvtrk"|mf"nhvtrk"|n|y
 ~/ --- Transit Trip Tables

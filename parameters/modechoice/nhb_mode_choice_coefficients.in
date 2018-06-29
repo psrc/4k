@@ -4,19 +4,19 @@ c nhb mode choice coefficients and parameters
 c
 c nhb asc for shared ride 2
 m matrix=ms"asccs2"
-  all all: -0.7953
+  all all: -0.8872
 c nhb asc for shared ride 3+
 m matrix=ms"asccs3"
-  all all: -1.0424
+  all all: -1.5513
 c nhb asc for transit walk
 m matrix=ms"ascctw"
-  all all: -2.2680
+  all all: -1.9151
 c nhb asc for walk
 m matrix=ms"asccwk"
-  all all:  2.2288
+  all all:  2.5857
 c nhb asc for bike
 m matrix=ms"asccbk"
-  all all: -4.3570
+  all all: -3.6974
 c nhb auto iv-time coeff
 m matrix=ms"autivt"
   all all: -0.0250

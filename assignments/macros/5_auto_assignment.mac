@@ -32,8 +32,9 @@ el2=@trnv4
 ~+|s|@toll1|%ms05%|mf"%5%hbw2v" /class 6: hbw income 2 sov
 ~+|s|@toll1|%ms06%|mf"%5%hbw3v" /class 7: hbw income 3 sov
 ~+|s|@toll1|%ms07%|mf"%5%hbw4v" /class 8: hbw income 4 sov
-~+|u|@trkc2|%ms08%|mf"%5%mdtrk" /class 10: medium truck
-~+|t|@trkc3|%ms09%|mf"%5%hvtrk" /class 11: heavy truck
+~+|v|@toll1|%ms08%|mf"%5%comvh" /class 9: commercial vehicle
+~+|u|@trkc2|%ms09%|mf"%5%mdtrk" /class 10: medium truck
+~+|t|@trkc3|%ms10%|mf"%5%hvtrk" /class 11: heavy truck
 /
 ~/ ...enter assignment options/parameters
 4000      /maximum memory for paths
@@ -46,7 +47,7 @@ el2=@trnv4
 0.0001    /stopping criterion for relative gap
 0.001     /stopping criterion for normalized pap (excess average cost)
 ~/ ...run path based assignment
-2         
+2
 ~/ ...write report file
 ~$FreeFlow
 ~:WarmStart
@@ -72,6 +73,7 @@ el2=@trnv4
 ~+|1|mf"%5%hbw2v"|1|1|mf"%5%hbw2v"|n|2
 ~+|1|mf"%5%hbw3v"|1|1|mf"%5%hbw3v"|n|2
 ~+|1|mf"%5%hbw4v"|1|1|mf"%5%hbw4v"|n|2
+~+|1|mf"%5%comvh"|1|1|mf"%5%comvh"|n|2
 ~+|1|mf"%5%mdtrk"|1|1|mf"%5%mdtrk"|n|2
 ~+|1|mf"%5%hvtrk"|1|1|mf"%5%hvtrk"|n|2
 ~/ ...assignment set-up and execution
@@ -87,7 +89,7 @@ el2=@trnv4
 0.001     /stopping criterion for normalized pap (excess average cost)
 ~#
 ~/ ...run path based assignment
-2         
+2
 ~/ ...write report file
 ~#
 ~:FreeFlow
@@ -102,11 +104,12 @@ el2=@trnv4
 ~+|@hbw2|n|  /class 6: hbw income 2 sov
 ~+|@hbw3|n|  /class 7: hbw income 3 sov
 ~+|@hbw4|n|  /class 7: hbw income 3 sov
+~+|@comvh|n| /class 9: commercial vehicle
 ~+|@mediu|n| /class 10: medium truck
 ~+|@heavy|n| /class 11: heavy truck
 2
 ~/ ...write report file
-q  
+q
 ~/
 ~/end: 5_auto_assignment.mac
 ~/exit emme

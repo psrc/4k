@@ -26,6 +26,7 @@ s=%2%
 ~+|2.42|2|2|@hbw2|hbw2 sov volume|0|q
 ~+|2.42|2|2|@hbw3|hbw3 sov volume|0|q
 ~+|2.42|2|2|@hbw4|hbw4 sov volume|0|q
+~+|2.42|2|2|@comvh|commercial vehicle volume|0|q
 ~+|2.42|2|2|@mediu|medium truck volume|0|q
 ~+|2.42|2|2|@heavy|heavy truck volume|0|q
 ~/ ...create intersection delay extra attribute(s)

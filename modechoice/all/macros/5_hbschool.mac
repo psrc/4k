@@ -33,16 +33,6 @@ q
 ~+|3.11|..\..\input\Parking\hourly_parking_costs.in|2|
 ~+|3.11|..\..\parameters\vot\md_vot_parameters.in|2|
 ~/ ----------------------------------------
-~/ --- Hardcode alternative specific constants and time/cost coefficients
-~/ ----------------------------------------
-3.21
-~+|1|y|ms"asccs2"|n| 0.7517|||2
-~+|1|y|ms"asccs3"|n| 0.8487|||2
-~+|1|y|ms"ascctw"|n| 0.4971|||2
-~+|1|y|ms"asccbk"|n|-0.2537|||2
-~+|1|y|ms"asccwk"|n| 2.6986|||2
-q
-~/ ----------------------------------------
 ~/ --- Bi-directional skims
 ~/ ----------------------------------------
 1.31

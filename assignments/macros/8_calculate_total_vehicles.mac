@@ -7,7 +7,7 @@ reports=assign.rpt
 s=%1%
 ~/
 ~/ --- Total sov work vehicles
-~+|2.41|1|y|@sovw|n|@hbw1+@hbw2+@hbw3+@hbw4||*|2|2|q
+~+|2.41|1|y|@sovw|n|@hbw1+@hbw2+@hbw3+@hbw4+@comvh||*|2|2|q
 ~/
 ~/ --- Medium and heavy truck vehicles on links
 ~+|2.41|1|y|@mveh|n|@mediu/1.5||*|2|2|q

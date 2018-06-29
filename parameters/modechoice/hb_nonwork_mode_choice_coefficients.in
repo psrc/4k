@@ -4,19 +4,19 @@ c hb non-work mode choice coefficients and parameters
 c
 c hb non-work asc for shared ride 2
 m matrix=ms"asccs2"
-  all all: -0.5248
+  all all: -0.4237
 c hb non-work asc for shared ride 3+
 m matrix=ms"asccs3"
-  all all: -1.2181
+  all all: -0.7492
 c hb non-work asc for transit walk
 m matrix=ms"ascctw"
-  all all: -8.2917
+  all all: -9.8937
 c hb non-work asc for walk
 m matrix=ms"asccwk"
-  all all: -0.0113
+  all all:  0.6332
 c hb non-work asc for bike
 m matrix=ms"asccbk"
-  all all: -4.3162
+  all all: -4.2772
 c hb non-work auto iv-time coeff
 m matrix=ms"autivt"
   all all: -0.1000

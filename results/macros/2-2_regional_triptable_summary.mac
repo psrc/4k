@@ -15,7 +15,7 @@ reports=summary.rpt
 ~+|1|y|ms268|y|asw2rv|AM HBW #2 Regional Vehicles|0|mf"ahbw2v"|||n|||2
 ~+|1|y|ms269|y|asw3rv|AM HBW #3 Regional Vehicles|0|mf"ahbw3v"|||n|||2
 ~+|1|y|ms270|y|asw4rv|AM HBW #4 Regional Vehicles|0|mf"ahbw4v"|||n|||2
-~/+|1|y|ms271|y|altrv|AM Light Truck Regional Vehicles|0|mf"alttrk"|||n|||2
+~+|1|y|ms271|y|acmvv|AM Commercial Regional Vehicles|0|mf"acomvh"|||n|||2
 ~+|1|y|ms272|y|amtrv|AM Medium Truck Regional Vehicles|0|mf"amdtrk"|||n|||2
 ~+|1|y|ms273|y|ahtrv|AM Heavy Truck Regional Vehicles|0|mf"ahvtrk"|||n|||2
 ~/ --- AM Peak Period Person Volumes
@@ -27,7 +27,7 @@ reports=summary.rpt
 ~+|1|y|ms279|y|asw2rp|AM HBW #2 Regional Persons|0|mf"ahbw2v"|||n|||2
 ~+|1|y|ms280|y|asw3rp|AM HBW #3 Regional Persons|0|mf"ahbw3v"|||n|||2
 ~+|1|y|ms281|y|asw4rp|AM HBW #4 Regional Persons|0|mf"ahbw4v"|||n|||2
-~/+|1|y|ms282|y|altrp|AM Light Truck Regional Persons|0|mf"alttrk"|||n|||2
+~+|1|y|ms282|y|acmvp|AM Commercial Regional Persons|0|mf"acomvh"|||n|||2
 ~+|1|y|ms283|y|amtrp|AM Medium Truck Regional Persons|0|mf"amdtrk"|||n|||2
 ~+|1|y|ms284|y|ahtrp|AM Heavy Truck Regional Persons|0|mf"ahvtrk"|||n|||2
 ~+|1|y|ms285|y|awkrp|AM Walk Regional Persons|0|mf"awalk"|||n|||2
@@ -42,7 +42,7 @@ reports=summary.rpt
 ~+|1|y|ms293|y|msw2rv|MD HBW #2 Regional Vehicles|0|mf"mhbw2v"|||n|||2
 ~+|1|y|ms294|y|msw3rv|MD HBW #3 Regional Vehicles|0|mf"mhbw3v"|||n|||2
 ~+|1|y|ms295|y|msw4rv|MD HBW #4 Regional Vehicles|0|mf"mhbw4v"|||n|||2
-~/+|1|y|ms296|y|mltrv|MD Light Truck Regional Vehicles|0|mf"mlttrk"|||n|||2
+~+|1|y|ms296|y|mcmvv|MD Commercial Regional Vehicles|0|mf"mcomvh"|||n|||2
 ~+|1|y|ms297|y|mmtrv|MD Medium Truck Regional Vehicles|0|mf"mmdtrk"|||n|||2
 ~+|1|y|ms298|y|mhtrv|MD Heavy Truck Regional Vehicles|0|mf"mhvtrk"|||n|||2
 ~/ --- MD Peak Period Person Volumes
@@ -54,7 +54,7 @@ reports=summary.rpt
 ~+|1|y|ms304|y|msw2rp|MD HBW #2 Regional Persons|0|mf"mhbw2v"|||n|||2
 ~+|1|y|ms305|y|msw3rp|MD HBW #3 Regional Persons|0|mf"mhbw3v"|||n|||2
 ~+|1|y|ms306|y|msw4rp|MD HBW #4 Regional Persons|0|mf"mhbw4v"|||n|||2
-~/+|1|y|ms307|y|mltrp|MD Light Truck Regional Persons|0|mf"mlttrk"|||n|||2
+~+|1|y|ms307|y|mcmvp|MD Commercial Regional Persons|0|mf"mcomvh"|||n|||2
 ~+|1|y|ms308|y|mmtrp|MD Medium Truck Regional Persons|0|mf"mmdtrk"|||n|||2
 ~+|1|y|ms309|y|mhtrp|MD Heavy Truck Regional Persons|0|mf"mhvtrk"|||n|||2
 ~+|1|y|ms310|y|mwkrp|MD Walk Regional Persons|0|mf"mwalk"|||n|||2
@@ -69,7 +69,7 @@ reports=summary.rpt
 ~+|1|y|ms318|y|psw2rv|PM HBW #2 Regional Vehicles|0|mf"phbw2v"|||n|||2
 ~+|1|y|ms319|y|psw3rv|PM HBW #3 Regional Vehicles|0|mf"phbw3v"|||n|||2
 ~+|1|y|ms320|y|psw4rv|PM HBW #4 Regional Vehicles|0|mf"phbw4v"|||n|||2
-~/+|1|y|ms321|y|pltrv|PM Light Truck Regional Vehicles|0|mf"plttrk"|||n|||2
+~+|1|y|ms321|y|pcmvv|PM Commercial Regional Vehicles|0|mf"pcomvh"|||n|||2
 ~+|1|y|ms322|y|pmtrv|PM Medium Truck Regional Vehicles|0|mf"pmdtrk"|||n|||2
 ~+|1|y|ms323|y|phtrv|PM Heavy Truck Regional Vehicles|0|mf"phvtrk"|||n|||2
 ~/ --- PM Peak Period Person Volumes
@@ -81,7 +81,7 @@ reports=summary.rpt
 ~+|1|y|ms329|y|psw2rp|PM HBW #2 Regional Persons|0|mf"phbw2v"|||n|||2
 ~+|1|y|ms330|y|psw3rp|PM HBW #3 Regional Persons|0|mf"phbw3v"|||n|||2
 ~+|1|y|ms331|y|psw4rp|PM HBW #4 Regional Persons|0|mf"phbw4v"|||n|||2
-~/+|1|y|ms332|y|pltrp|PM Light Truck Regional Persons|0|mf"plttrk"|||n|||2
+~+|1|y|ms332|y|pcmvp|PM Commercial Regional Persons|0|mf"pcomvh"|||n|||2
 ~+|1|y|ms333|y|pmtrp|PM Medium Truck Regional Persons|0|mf"pmdtrk"|||n|||2
 ~+|1|y|ms334|y|phtrp|PM Heavy Truck Regional Persons|0|mf"phvtrk"|||n|||2
 ~+|1|y|ms335|y|pwkrp|PM Walk Regional Persons|0|mf"pwalk"|||n|||2
@@ -96,7 +96,7 @@ reports=summary.rpt
 ~+|1|y|ms343|y|esw2rv|EV HBW #2 Regional Vehicles|0|mf"ehbw2v"|||n|||2
 ~+|1|y|ms344|y|esw3rv|EV HBW #3 Regional Vehicles|0|mf"ehbw3v"|||n|||2
 ~+|1|y|ms345|y|esw4rv|EV HBW #4 Regional Vehicles|0|mf"ehbw4v"|||n|||2
-~/+|1|y|ms346|y|eltrv|EV Light Truck Regional Vehicles|0|mf"elttrk"|||n|||2
+~+|1|y|ms346|y|ecmvv|EV Commercial Regional Vehicles|0|mf"ecomvh"|||n|||2
 ~+|1|y|ms347|y|emtrv|EV Medium Truck Regional Vehicles|0|mf"emdtrk"|||n|||2
 ~+|1|y|ms348|y|ehtrv|EV Heavy Truck Regional Vehicles|0|mf"ehvtrk"|||n|||2
 ~/ --- EV Peak Period Person Volumes
@@ -108,7 +108,7 @@ reports=summary.rpt
 ~+|1|y|ms354|y|esw2rp|EV HBW #2 Regional Persons|0|mf"ehbw2v"|||n|||2
 ~+|1|y|ms355|y|esw3rp|EV HBW #3 Regional Persons|0|mf"ehbw3v"|||n|||2
 ~+|1|y|ms356|y|esw4rp|EV HBW #4 Regional Persons|0|mf"ehbw4v"|||n|||2
-~/+|1|y|ms357|y|eltrp|EV Light Truck Regional Persons|0|mf"elttrk"|||n|||2
+~+|1|y|ms357|y|ecmvp|EV Commercial Regional Persons|0|mf"ecomvh"|||n|||2
 ~+|1|y|ms358|y|emtrp|EV Medium Truck Regional Persons|0|mf"emdtrk"|||n|||2
 ~+|1|y|ms359|y|ehtrp|EV Heavy Truck Regional Persons|0|mf"ehvtrk"|||n|||2
 ~+|1|y|ms360|y|ewkrp|EV Walk Regional Persons|0|mf"ewalk"|||n|||2
@@ -123,7 +123,7 @@ reports=summary.rpt
 ~+|1|y|ms368|y|nsw2rv|NI HBW #2 Regional Vehicles|0|mf"nhbw2v"|||n|||2
 ~+|1|y|ms369|y|nsw3rv|NI HBW #3 Regional Vehicles|0|mf"nhbw3v"|||n|||2
 ~+|1|y|ms370|y|nsw4rv|NI HBW #4 Regional Vehicles|0|mf"nhbw4v"|||n|||2
-~/+|1|y|ms371|y|nltrv|NI Light Truck Regional Vehicles|0|mf"nlttrk"|||n|||2
+~+|1|y|ms371|y|ncmvv|NI Commercial Regional Vehicles|0|mf"ncomvh"|||n|||2
 ~+|1|y|ms372|y|nmtrv|NI Medium Truck Regional Vehicles|0|mf"nmdtrk"|||n|||2
 ~+|1|y|ms373|y|nhtrv|NI Heavy Truck Regional Vehicles|0|mf"nhvtrk"|||n|||2
 ~/ --- NI Peak Period Person Volumes
@@ -135,7 +135,7 @@ reports=summary.rpt
 ~+|1|y|ms379|y|nsw2rp|NI HBW #2 Regional Persons|0|mf"nhbw2v"|||n|||2
 ~+|1|y|ms380|y|nsw3rp|NI HBW #3 Regional Persons|0|mf"nhbw3v"|||n|||2
 ~+|1|y|ms381|y|nsw4rp|NI HBW #4 Regional Persons|0|mf"nhbw4v"|||n|||2
-~/+|1|y|ms382|y|nltrp|NI Light Truck Regional Persons|0|mf"nlttrk"|||n|||2
+~+|1|y|ms382|y|ncmvp|NI Commercial Regional Persons|0|mf"ncomvh"|||n|||2
 ~+|1|y|ms383|y|nmtrp|NI Medium Truck Regional Persons|0|mf"nmdtrk"|||n|||2
 ~+|1|y|ms384|y|nhtrp|NI Heavy Truck Regional Persons|0|mf"nhvtrk"|||n|||2
 ~+|1|y|ms385|y|nwkrp|NI Walk Regional Persons|0|mf"nwalk"|||n|||2

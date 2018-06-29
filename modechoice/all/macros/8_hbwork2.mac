@@ -39,29 +39,6 @@ q
 ~+|3.11|..\..\parameters\ModeChoice\empden_orig.in|2|
 ~+|3.11|..\..\parameters\ModeChoice\empden_dest.in|2|
 ~/ ----------------------------------------
-~/ --- Hardcode alternative specific constants and time/cost coefficients
-~/ ----------------------------------------
-3.21
-~+|1|y|ms"asccs2"|n|-2.3595|||2
-~+|1|y|ms"asccs3"|n|-3.7521|||2
-~+|1|y|ms"ascctw"|n|-2.9033|||2
-~+|1|y|ms"ascctd"|n|-5.9374|||2
-~+|1|y|ms"asccbk"|n|-3.9689|||2
-~+|1|y|ms"asccwk"|n|-3.0986|||2
-~+|1|y|ms"autivt"|n|-0.6889|||2
-~+|1|y|ms"walktm"|n|-0.6889|||2
-~+|1|y|ms"biketm"|n|-0.6889|||2
-~+|1|y|ms"autcos"|n|-0.0008|||2
-~+|1|y|ms"trwcos"|n| 0.0017|||2
-~+|1|y|ms"trwivt"|n|-0.6889|||2
-~+|1|y|ms"trwovt"|n|-0.3143|||2
-~+|1|y|ms"trdcos"|n| 0.0044|||2
-~+|1|y|ms"trdivt"|n|-0.6889|||2
-~+|1|y|ms"trdovt"|n| 0.2011|||2
-~+|1|y|ms"emdnwb"|n|0.00004685|||2
-~+|1|y|ms"emdntr"|n|0.00004368|||2
-q
-~/ ----------------------------------------
 ~/ --- Open bi-directional cost emmebank
 ~/ ----------------------------------------
 1.31

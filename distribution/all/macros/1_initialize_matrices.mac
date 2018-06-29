@@ -20,29 +20,32 @@ reports=trip_distribution.rpt
 ~+|1|ms05|avot2v|am sov hbw income 2 vot|0
 ~+|1|ms06|avot3v|am sov hbw income 3 vot|0
 ~+|1|ms07|avot4v|am sov hbw income 4 vot|0
-~+|1|ms08|avotmd|am medium truck vot|0
-~+|1|ms09|avothv|am heavy truck vot|0
-~+|1|ms10|autoop|auto operating cost (cents/mile)|0
-~+|1|ms11|colexp|hb college exp coefficient|0
-~+|1|ms12|hboexp|hb other exp coefficient|0
-~+|1|ms13|schexp|hb school exp coefficient|0
-~+|1|ms14|hbwex1|sov hbw income 1 exp coefficient|0
-~+|1|ms15|hbwex2|sov hbw income 2 exp coefficient|0
-~+|1|ms16|hbwex3|sov hbw income 3 exp coefficient|0
-~+|1|ms17|hbwex4|sov hbw income 4 exp coefficient|0
-~+|1|ms18|otoexp|nhb other exp coefficient|0
-~+|1|ms19|wkoexp|nhb work exp coefficient|0
-~+|1|ms20|mvotda|md sov non-work vot|0
-~+|1|ms21|mvots2|md hov 2 vot|0
-~+|1|ms22|mvots3|md hov 3+ vot|0
-~+|1|ms23|mvot1v|md sov hbw income 1 vot|0
-~+|1|ms24|mvot2v|md sov hbw income 2 vot|0
-~+|1|ms25|mvot3v|md sov hbw income 3 vot|0
-~+|1|ms26|mvot4v|md sov hbw income 4 vot|0
-~+|1|ms27|mvotmd|md medium truck vot|0
-~+|1|ms28|mvothv|md heavy truck vot|0
-~+|1|ms29|medop|medium truck op cost (cents/mile)|0
-~+|1|ms30|hvyop|heavy truck op cost (cents/mile)|0
+~+|1|ms08|avotcv|am commercial veh vot|0
+~+|1|ms09|avotmd|am medium truck vot|0
+~+|1|ms10|avothv|am heavy truck vot|0
+~+|1|ms11|autoop|auto operating cost (cents/mile)|0
+~+|1|ms12|colexp|hb college exp coefficient|0
+~+|1|ms13|hboexp|hb other exp coefficient|0
+~+|1|ms14|schexp|hb school exp coefficient|0
+~+|1|ms15|hbwex1|sov hbw income 1 exp coefficient|0
+~+|1|ms16|hbwex2|sov hbw income 2 exp coefficient|0
+~+|1|ms17|hbwex3|sov hbw income 3 exp coefficient|0
+~+|1|ms18|hbwex4|sov hbw income 4 exp coefficient|0
+~+|1|ms19|otoexp|nhb other exp coefficient|0
+~+|1|ms20|wkoexp|nhb work exp coefficient|0
+~+|1|ms21|mvotda|md sov non-work vot|0
+~+|1|ms22|mvots2|md hov 2 vot|0
+~+|1|ms23|mvots3|md hov 3+ vot|0
+~+|1|ms24|mvot1v|md sov hbw income 1 vot|0
+~+|1|ms25|mvot2v|md sov hbw income 2 vot|0
+~+|1|ms26|mvot3v|md sov hbw income 3 vot|0
+~+|1|ms27|mvot4v|md sov hbw income 4 vot|0
+~+|1|ms28|mvotcv|md commercial veh vot|0
+~+|1|ms29|mvotmd|md medium truck vot|0
+~+|1|ms30|mvothv|md heavy truck vot|0
+~+|1|ms31|cvhop|commercial veh op cost (cents/mile)|0
+~+|1|ms32|medop|medium truck op cost (cents/mile)|0
+~+|1|ms33|hvyop|heavy truck op cost (cents/mile)|0
 ~+|1|ms98|avgtm|average time|0
 ~/ ----------------------------------------------------
 ~/ --- Full Matrices
@@ -59,10 +62,11 @@ reports=trip_distribution.rpt
 ~+|1|mf10|hbwds4|hb work income 4 distribution|0
 ~+|1|mf11|otodst|nhb other/other distribution|0
 ~+|1|mf12|wkodst|nhb work/other distribution|0
-~+|1|mf13|meddis|medium truck distribution|0
-~+|1|mf14|hvydis|heavy truck distribution|0
-~+|1|mf15|intflg|flag=1 for non ext-ext od pairs|1
-~+|1|mf16|brdg|flag=1 for TNB or Crosslake|0
+~+|1|mf13|cvhdis|commercial vehicle distribution|0
+~+|1|mf14|meddis|medium truck distribution|0
+~+|1|mf15|hvydis|heavy truck distribution|0
+~+|1|mf16|intflg|flag=1 for non ext-ext od pairs|1
+~+|1|mf17|brdg|flag=1 for TNB or Crosslake|0
 q
 ~/
 ~/exit emme

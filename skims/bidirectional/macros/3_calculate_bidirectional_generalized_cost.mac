@@ -15,6 +15,7 @@ reports=3_calculate_bidirectional_cost.rpt
 ~+|2|3|3|mf"aa1cs2"|mf"aa2"|n|y
 ~+|2|3|3|mf"aa1cs3"|mf"aa3"|n|y
 ~+|2|3|3|mf"aa1cs4"|mf"aa4"|n|y
+~+|2|3|3|mf"acvhcs"|mf"acvh"|n|y
 ~+|2|3|3|mf"amedcs"|mf"amed"|n|y
 ~+|2|3|3|mf"ahvycs"|mf"ahvy"|n|y
 q
@@ -28,6 +29,7 @@ q
 ~+|2|3|3|mf"pa1cs2"|mf"pa2"|n|y
 ~+|2|3|3|mf"pa1cs3"|mf"pa3"|n|y
 ~+|2|3|3|mf"pa1cs4"|mf"pa4"|n|y
+~+|2|3|3|mf"pcvhcs"|mf"pcvh"|n|y
 ~+|2|3|3|mf"pmedcs"|mf"pmed"|n|y
 ~+|2|3|3|mf"phvycs"|mf"phvy"|n|y
 q
@@ -53,6 +55,7 @@ q
 ~+|1|y|mf"ah2bcs"|n|(mf"aa2"+mf"pa2"')/2|||n|2
 ~+|1|y|mf"ah3bcs"|n|(mf"aa3"+mf"pa3"')/2|||n|2
 ~+|1|y|mf"ah4bcs"|n|(mf"aa4"+mf"pa4"')/2|||n|2
+~+|1|y|mf"bcvhcs"|n|(mf"acvh"+mf"pcvh"')/2|||n|2
 ~+|1|y|mf"bmedcs"|n|(mf"amed"+mf"pmed"')/2|||n|2
 ~+|1|y|mf"bhvycs"|n|(mf"ahvy"+mf"phvy"')/2|||n|2
 ~+|1|y|mf"mu1bcs"|n|(mf"mau1"+mf"mau1"')/2|||n|2

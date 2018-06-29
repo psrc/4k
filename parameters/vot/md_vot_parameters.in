@@ -10,9 +10,6 @@ m matrix=ms"mvots2"
 c hov3+ vehicle class
 m matrix=ms"mvots3"
   all all: 0.0205
-c---------- vanpool vehicle class
-c----------m matrix=ms"mvotvp"
-c----------  all all: 0.0043
 c sov hbw income 1 vehicle class
 m matrix=ms"mvot1v"
   all all: 0.0455
@@ -25,9 +22,9 @@ m matrix=ms"mvot3v"
 c sov hbw income 4 vehicle class
 m matrix=ms"mvot4v"
   all all: 0.0130
-c---------- light truck vehicle class
-c----------m matrix=ms"mvotlt"
-c----------  all all: 0.0109
+c commercial vehicle class
+m matrix=ms"mvotcv"
+  all all: 0.0109
 c medium truck vehicle class
 m matrix=ms"mvotmd"
   all all: 0.0096

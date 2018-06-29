@@ -11,21 +11,18 @@ m matrix=ms"hboexp"
 c hb school exp coefficient
 m matrix=ms"schexp"
  all all: -0.1896
-c hb shop exp coefficient
-m matrix=ms"hspexp"
- all all: -0.135
 c sov hbw income 1 exp coefficient
 m matrix=ms"hbwex1"
- all all: -0.097
+ all all: -0.135
 c sov hbw income 2 exp coefficient
 m matrix=ms"hbwex2"
- all all: -0.0779
+ all all: -0.0964
 c sov hbw income 3 exp coefficient
 m matrix=ms"hbwex3"
- all all: -0.0618
+ all all: -0.0691
 c sov hbw income 4 exp coefficient
 m matrix=ms"hbwex4"
- all all: -0.0627
+ all all: -0.074
 c nhb other exp coefficient
 m matrix=ms"otoexp"
  all all: -0.3

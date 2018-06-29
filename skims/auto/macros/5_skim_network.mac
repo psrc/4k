@@ -20,6 +20,7 @@ s=%2%
 ~+|mf"%1%a1cs2"|n 
 ~+|mf"%1%a1cs3"|n 
 ~+|mf"%1%a1cs4"|n 
+~+|mf"%1%cvhcs"|n 
 ~+|mf"%1%medcs"|n 
 ~+|mf"%1%hvycs"|n 
 2
@@ -46,6 +47,7 @@ s=%2%
 ~+||mf"%1%a1tm2"|n||| 
 ~+||mf"%1%a1tm3"|n||| 
 ~+||mf"%1%a1tm4"|n||| 
+~+||mf"%1%cvhtm"|n||| 
 ~+||mf"%1%medtm"|n||| 
 ~+||mf"%1%hvytm"|n|||        
 2
@@ -72,6 +74,7 @@ length
 ~+||mf"%1%a1ds2"|n||| 
 ~+||mf"%1%a1ds3"|n||| 
 ~+||mf"%1%a1ds4"|n||| 
+~+||mf"%1%cvhds"|n||| 
 ~+||mf"%1%medds"|n||| 
 ~+||mf"%1%hvyds"|n|||      
 2
@@ -98,6 +101,7 @@ length
 ~+||mf"brhbw2"|n||| 
 ~+||mf"brhbw3"|n||| 
 ~+||mf"brhbw4"|n||| 
+~+|||||             /commercial vehicles not skimmed
 ~+|||||             /medium truck not skimmed
 ~+|||||             /heavy truck not skimmed    
 2

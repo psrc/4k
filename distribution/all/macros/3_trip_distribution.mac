@@ -16,11 +16,6 @@ reports=trip_distribution.rpt
 ~+|3.21|1|y|mo"hbopro"|n|mo"hbopro"+mo"hsppro"|||n|2|q
 ~+|3.21|1|y|md"hboatt"|n|md"hboatt"+md"hspatt"|||n|2|q
 ~/ ----------------------------------------------------------------------------------
-~/ --- Combine Commercial Vehicle and Work to Other Productions and Attractions together
-~/ ----------------------------------------------------------------------------------
-~+|3.21|1|y|mo"wtopro"|n|mo"wtopro"+mo"cvhpro"|||n|2|q
-~+|3.21|1|y|md"wtoatt"|n|md"wtoatt"+md"cvhatt"|||n|2|q
-~/ ----------------------------------------------------------------------------------
 ~/ --- Import am bi-directional cost and distance skims for sov nonwork
 ~/ ----------------------------------------------------------------------------------
 ~+|1.31|1|..\..\Skims\BiDirectional\all\emmebank|2|3|3|mf"au1bcs"|mf"cost"|n|y|q
@@ -114,6 +109,17 @@ reports=trip_distribution.rpt
 ~+|3.21|1|y|mf"fri"|n|exp(ms"wkoexp"*(mf"cost"+(mf"dist"*ms"autoop"*ms"mvotda")+0*mf"brdg"))|||y|1,%3%||1,%3%||2|q
 ~+|3.21|1|y|mf"fri"|n|0|||y|%2%,%3%||%2%,%3%||2|q
 ~+|3.22|1|mf"fri"|mo"wtopro"|md"wtoatt"|y|1,%3%||1,%3%|||2|1|mf"wkodst"|n|2|q
+~/ ----------------------------------------------------------------------------------
+~/ --- Import commercial vehicle cost and distance skims
+~/ ----------------------------------------------------------------------------------
+~+|1.31|1|..\..\Skims\BiDirectional\all\emmebank|2|3|3|mf"bcvhcs"|mf"cost"|n|y|q
+~+|1.31|1|..\..\Skims\BiDirectional\all\emmebank|2|3|3|mf"bcvhds"|mf"dist"|n|y|q
+~/ ----------------------------------------------------------------------------------
+~/ --- Calculate Commercial Vehicle Trip Distribution
+~/ ----------------------------------------------------------------------------------
+~+|3.21|1|y|mf"fri"|n|0|||n|2|q
+~+|3.21|1|y|mf"fri"|n|exp(-0.04585*(mf"cost"+(mf"dist"*ms"cvhop"*.0150)))*mf"intflg"|||y|1,%3%||1,%3%||2|q
+~+|3.22|1|mf"fri"|mo"cvhpro"|md"cvhatt"|y|1,%3%||1,%3%||~?q=3|2||2|1|mf"cvhdis"|n|2|q
 ~/ ----------------------------------------------------------------------------------
 ~/ --- Import medium truck cost and distance skims
 ~/ ----------------------------------------------------------------------------------

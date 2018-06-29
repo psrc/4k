@@ -15,6 +15,7 @@ reports=assign.rpt
 ~+|2|3|3|mf"%1%hbw2v"|mf"%1%hbw2v"|n|y
 ~+|2|3|3|mf"%1%hbw3v"|mf"%1%hbw3v"|n|y
 ~+|2|3|3|mf"%1%hbw4v"|mf"%1%hbw4v"|n|y
+~+|2|3|3|mf"%1%comvh"|mf"%1%comvh"|n|y
 ~+|2|3|3|mf"%1%mdtrk"|mf"%1%mdtrk"|n|y
 ~+|2|3|3|mf"%1%hvtrk"|mf"%1%hvtrk"|n|y
 q
