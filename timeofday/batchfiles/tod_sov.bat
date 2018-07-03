@@ -6,12 +6,7 @@ REM Runs the Time of Day Choice for the SOV Modes for HBShop, HBO and HBW
 cd sov
 
 REM Initialize the Bank
-call emme -ng 000 -m macros\initial\1_initialize_matrices.mac
-call emme -ng 000 -m macros\initial\2_initialize_origin_matrices.mac
-call emme -ng 000 -m macros\initial\3_initialize_destination_matrices.mac
-call emme -ng 000 -m macros\initial\4_initialize_full_matrices.mac
-call emme -ng 000 -m macros\initial\5_import_data.mac
-call emme -ng 000 -m macros\initial\6_calculate_hh_size.mac
+call emme -ng 000 -m macros\initial\1_initialization.mac
 
 REM Home Based Other
 call emme -ng 000 -m macros\hbother\1_import_matrices.mac
@@ -19,13 +14,6 @@ call emme -ng 000 -m macros\hbother\2_calculate_adjusted_delay.mac
 call emme -ng 000 -m macros\hbother\3_calculate_adjusted_bridge_flag.mac
 call emme -ng 000 -m macros\hbother\4_calculate_hbother_sov_a-p_tod_shares.mac
 call emme -ng 000 -m macros\hbother\5_calculate_hbother_sov_p-a_tod_shares.mac
-
-REM Home Based Shopping
-call emme -ng 000 -m macros\hbshop\1_import_matrices.mac
-call emme -ng 000 -m macros\hbshop\2_calculate_adjusted_delay.mac
-call emme -ng 000 -m macros\hbshop\3_calculate_adjusted_bridge_flag.mac
-call emme -ng 000 -m macros\hbshop\4_calculate_hbshop_sov_a-p_tod_shares.mac
-call emme -ng 000 -m macros\hbshop\5_calculate_hbshop_sov_p-a_tod_shares.mac
 
 REM Home Based Work Income #1
 call emme -ng 000 -m macros\income1\1_import_matrices.mac

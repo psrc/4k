@@ -1,0 +1,185 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=tod_sov.rpt
+~/ ----------------------------------------------------
+~/ --- Initialize matrix directory
+~/ ----------------------------------------------------
+~+|3.12|7|y|q
+~/ ----------------------------------------------------
+~/ --- Initialize Matrices
+~/ ----------------------------------------------------
+3.12
+~/ ----------------------------------------------------
+~/ --- Origin Matrices
+~/ ----------------------------------------------------
+~+|1|mo01|hhsiz1|1 person hhs|0
+~+|1|mo02|hhsiz2|2 person hhs|0
+~+|1|mo03|hhsiz3|3 person hhs|0
+~+|1|mo04|hhsiz4|4+ person hhs|0
+~+|1|mo05|hhtot|total hhs|0
+~+|1|mo06|hhsize|average hh size|0
+~/ ----------------------------------------------------
+~/ --- Destination Matrices
+~/ ----------------------------------------------------
+~+|1|md01|hhsize|average hh size|0
+~/ ----------------------------------------------------
+~/ --- Full Matrices
+~/ ----------------------------------------------------
+~/ ... Bridge Flags
+~/ ----------------------------------------------------
+~+|1|mf05|brdg|bridge flag|0
+~/ ----------------------------------------------------
+~/ --- Original Delay
+~/ ----------------------------------------------------
+~+|1|mf06|adly|am delay|0
+~+|1|mf07|mdly|md delay|0
+~+|1|mf08|pdly|pm delay|0
+~+|1|mf09|edly|ev delay|0
+~/ ----------------------------------------------------
+~/ -- Adjusted Delay
+~/ ----------------------------------------------------
+~+|1|mf10|aadly|am delay - adjusted|0
+~+|1|mf11|madly|md delay - adjusted|0
+~+|1|mf12|padly|pm delay - adjusted|0
+~+|1|mf13|eadly|ev delay - adjusted|0
+~/ ----------------------------------------------------
+~/ -- Utilities
+~/ ----------------------------------------------------
+~+|1|mf14|util01|utility - time period interval 01|0
+~+|1|mf15|util02|utility - time period interval 02|0
+~+|1|mf16|util03|utility - time period interval 03|0
+~+|1|mf17|util04|utility - time period interval 04|0
+~+|1|mf18|util05|utility - time period interval 05|0
+~+|1|mf19|util06|utility - time period interval 06|0
+~+|1|mf20|util07|utility - time period interval 07|0
+~+|1|mf21|util08|utility - time period interval 08|0
+~+|1|mf22|util09|utility - time period interval 09|0
+~+|1|mf23|util10|utility - time period interval 10|0
+~+|1|mf24|util11|utility - time period interval 11|0
+~+|1|mf25|util12|utility - time period interval 12|0
+~+|1|mf26|util13|utility - time period interval 13|0
+~+|1|mf27|util14|utility - time period interval 14|0
+~+|1|mf28|util15|utility - time period interval 15|0
+~+|1|mf29|util16|utility - time period interval 16|0
+~+|1|mf30|util17|utility - time period interval 17|0
+~+|1|mf31|util18|utility - time period interval 18|0
+~+|1|mf32|util19|utility - time period interval 19|0
+~+|1|mf33|util20|utility - time period interval 20|0
+~+|1|mf34|util21|utility - time period interval 21|0
+~+|1|mf35|util22|utility - time period interval 22|0
+~+|1|mf36|util23|utility - time period interval 23|0
+~+|1|mf37|util24|utility - time period interval 24|0
+~+|1|mf38|util25|utility - time period interval 25|0
+~+|1|mf39|util26|utility - time period interval 26|0
+~+|1|mf40|util27|utility - time period interval 27|0
+~+|1|mf41|util28|utility - time period interval 28|0
+~+|1|mf42|util29|utility - time period interval 29|0
+~+|1|mf43|util30|utility - time period interval 30|0
+~+|1|mf44|util31|utility - time period interval 31|0
+~+|1|mf45|util32|utility - time period interval 32|0
+~+|1|mf46|utils|sum of utilities|0
+~/ ----------------------------------------------------
+~/ --- Time of Day Share
+~/ ----------------------------------------------------
+~+|1|mf47|am1ns1|sov am a-p tod share - hbwork 1|0
+~+|1|mf48|md1ns1|sov md a-p tod share - hbwork 1|0
+~+|1|mf49|pm1ns1|sov pm a-p tod share - hbwork 1|0
+~+|1|mf50|ev1ns1|sov ev a-p tod share - hbwork 1|0
+~+|1|mf51|ni1ns1|sov ni a-p tod share - hbwork 1|0
+~+|1|mf52|am2ns1|sov am p-a tod share - hbwork 1|0
+~+|1|mf53|md2ns1|sov md p-a tod share - hbwork 1|0
+~+|1|mf54|pm2ns1|sov pm p-a tod share - hbwork 1|0
+~+|1|mf55|ev2ns1|sov ev p-a tod share - hbwork 1|0
+~+|1|mf56|ni2ns1|sov ni p-a tod share - hbwork 1|0
+~+|1|mf57|am1ns2|sov am a-p tod share - hbwork 2|0
+~+|1|mf58|md1ns2|sov md a-p tod share - hbwork 2|0
+~+|1|mf59|pm1ns2|sov pm a-p tod share - hbwork 2|0
+~+|1|mf60|ev1ns2|sov ev a-p tod share - hbwork 2|0
+~+|1|mf61|ni1ns2|sov ni a-p tod share - hbwork 2|0
+~+|1|mf62|am2ns2|sov am p-a tod share - hbwork 2|0
+~+|1|mf63|md2ns2|sov md p-a tod share - hbwork 2|0
+~+|1|mf64|pm2ns2|sov pm p-a tod share - hbwork 2|0
+~+|1|mf65|ev2ns2|sov ev p-a tod share - hbwork 2|0
+~+|1|mf66|ni2ns2|sov ni p-a tod share - hbwork 2|0
+~+|1|mf67|am1ns3|sov am a-p tod share - hbwork 3|0
+~+|1|mf68|md1ns3|sov md a-p tod share - hbwork 3|0
+~+|1|mf69|pm1ns3|sov pm a-p tod share - hbwork 3|0
+~+|1|mf70|ev1ns3|sov ev a-p tod share - hbwork 3|0
+~+|1|mf71|ni1ns3|sov ni a-p tod share - hbwork 3|0
+~+|1|mf72|am2ns3|sov am p-a tod share - hbwork 3|0
+~+|1|mf73|md2ns3|sov md p-a tod share - hbwork 3|0
+~+|1|mf74|pm2ns3|sov pm p-a tod share - hbwork 3|0
+~+|1|mf75|ev2ns3|sov ev p-a tod share - hbwork 3|0
+~+|1|mf76|ni2ns3|sov ni p-a tod share - hbwork 3|0
+~+|1|mf77|am1ns4|sov am a-p tod share - hbwork 4|0
+~+|1|mf78|md1ns4|sov md a-p tod share - hbwork 4|0
+~+|1|mf79|pm1ns4|sov pm a-p tod share - hbwork 4|0
+~+|1|mf80|ev1ns4|sov ev a-p tod share - hbwork 4|0
+~+|1|mf81|ni1ns4|sov ni a-p tod share - hbwork 4|0
+~+|1|mf82|am2ns4|sov am p-a tod share - hbwork 4|0
+~+|1|mf83|md2ns4|sov md p-a tod share - hbwork 4|0
+~+|1|mf84|pm2ns4|sov pm p-a tod share - hbwork 4|0
+~+|1|mf85|ev2ns4|sov ev p-a tod share - hbwork 4|0
+~+|1|mf86|ni2ns4|sov ni p-a tod share - hbwork 4|0
+~+|1|mf87|am5ns|sov am a-p tod share - hbother|0
+~+|1|mf88|md5ns|sov md a-p tod share - hbother|0
+~+|1|mf89|pm5ns|sov pm a-p tod share - hbother|0
+~+|1|mf90|ev5ns|sov ev a-p tod share - hbother|0
+~+|1|mf91|ni5ns|sov ni a-p tod share - hbother|0
+~+|1|mf92|am6ns|sov am p-a tod share - hbother|0
+~+|1|mf93|md6ns|sov md p-a tod share - hbother|0
+~+|1|mf94|pm6ns|sov pm p-a tod share - hbother|0
+~+|1|mf95|ev6ns|sov ev p-a tod share - hbother|0
+~+|1|mf96|ni6ns|sov ni p-a tod share - hbother|0
+q
+~/ ----------------------------------------------------
+~/ --- Import Vehicle Availability Data
+~/ ----------------------------------------------------
+~+|3.11|..\..\input\vehicleavailability\vehmtx.in|2|
+~/ ----------------------------------------------------
+~/ --- Calculate HH Size
+~/ ----------------------------------------------------
+~/ ...tabulate number of hhs by size catergory in zonal origin vector
+3.21
+~/ ...1 person households
+~+|1|y|mo"hhsiz1"|n|mf"vehmtx"|||y|all
+~+|1,16
+~+|65,80
+~+|129,144
+~+|193,208|||2
+~/ ...2 person households
+~+|1|y|mo"hhsiz2"|n|mf"vehmtx"|||y|all
+~+|17,32
+~+|81,96
+~+|145,160
+~+|209,224|||2
+~/ ... 3person households
+~+|1|y|mo"hhsiz3"|n|mf"vehmtx"|||y|all
+~+|33,48
+~+|97,112
+~+|161,176
+~+|225,240|||2
+~/ ... 4+ person household
+~+|1|y|mo"hhsiz4"|n|mf"vehmtx"|||y|all
+~+|49,64
+~+|113,128
+~+|177,192
+~+|241,256|||2
+~/ ...sum total households in origin vector
+~+|1|y|mo"hhtot"|n|mo"hhsiz1"+mo"hhsiz2"+mo"hhsiz3"+mo"hhsiz4"|||n|2
+~/ ...calculate average hh size in in origin vector
+~+|1|y|mo"hhsize"|n|((mo"hhsiz1"*1)+(mo"hhsiz2"*2)+(mo"hhsiz3"*3)+
+~+|(mo"hhsiz4"*4.5))/mo"hhtot"||mo"hhtot"|0,0,ex|n|2
+~/ ...zero out hhsize for calculated values exceeding 99
+~+|1|y|mo"hhsize"|n|0||mo"hhsize"|0,99,exclude|n|2
+q
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...transpose origin vector of average hh size to destination vector
+3.12
+~+|4|3|mo"hhsize"|md"hhsize"|n
+q
+~/ ----------------------------------------------------
+~/ --- Exit Emme
+~/ ----------------------------------------------------
+q

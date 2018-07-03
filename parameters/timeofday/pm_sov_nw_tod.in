@@ -1,0 +1,46 @@
+c Time of Day Factors for SOV Nonwork
+c PM Peak Period (3pm to 6pm)
+t matrices
+c Share of Trips: Production to Attractions
+m matrix=ms"coltpa"
+  all all: 0.514
+m matrix=ms"hbotpa"
+  all all: 0.479
+m matrix=ms"schtpa"
+  all all: 0.556
+m matrix=ms"ototpa"
+  all all: 0.500
+m matrix=ms"wtotpa"
+  all all: 0.500
+c Share of Trips: Attractions to Productions
+m matrix=ms"coltap"
+  all all: 0.486
+m matrix=ms"hbotap"
+  all all: 0.521
+m matrix=ms"schtap"
+  all all: 0.444
+m matrix=ms"ototap"
+  all all: 0.500
+m matrix=ms"wtotap"
+  all all: 0.500
+c Time of Day Factors: Production to Attractions
+m matrix=ms"colpa"
+  all all: 0.123
+m matrix=ms"schpa"
+  all all: 0.039
+m matrix=ms"otopa"
+  all all: 0.229
+m matrix=ms"wtopa"
+  all all: 0.298
+c Time of Day Factors: Attractions to Productions
+m matrix=ms"colap"
+  all all: 0.190
+m matrix=ms"schap"
+  all all: 0.202
+m matrix=ms"otoap"
+  all all: 0.229
+m matrix=ms"wtoap"
+  all all: 0.298
+c Time of Day Factors: Thru Trips
+m matrix=ms"thru"
+  all all: 0.220

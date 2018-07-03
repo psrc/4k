@@ -1,0 +1,79 @@
+c Time of Day Factors for Walk
+c Late Evening Period (6pm to 10pm)
+t matrices
+c Share of Trips: Production to Attractions
+m matrix=ms"coltpa"
+  all all: 0.453
+m matrix=ms"hbotpa"
+  all all: 0.501
+m matrix=ms"schtpa"
+  all all: 0.437
+m matrix=ms"ototpa"
+  all all: 0.500
+m matrix=ms"wtotpa"
+  all all: 0.500
+m matrix=ms"wk1tpa"
+  all all: 0.488
+m matrix=ms"wk2tpa"
+  all all: 0.496
+m matrix=ms"wk3tpa"
+  all all: 0.486
+m matrix=ms"wk4tpa"
+  all all: 0.493
+c Share of Trips: Attractions to Productions
+m matrix=ms"coltap"
+  all all: 0.547
+m matrix=ms"hbotap"
+  all all: 0.499
+m matrix=ms"schtap"
+  all all: 0.563
+m matrix=ms"ototap"
+  all all: 0.500
+m matrix=ms"wtotap"
+  all all: 0.500
+m matrix=ms"wk1tap"
+  all all: 0.512
+m matrix=ms"wk2tap"
+  all all: 0.504
+m matrix=ms"wk3tap"
+  all all: 0.514
+m matrix=ms"wk4tap"
+  all all: 0.507
+c Time of Day Factors: Production to Attractions
+m matrix=ms"colpa"
+  all all: 0.000
+m matrix=ms"hbopa"
+  all all: 0.181
+m matrix=ms"schpa"
+  all all: 0.011
+m matrix=ms"otopa"
+  all all: 0.164
+m matrix=ms"wtopa"
+  all all: 0.051
+m matrix=ms"wk1pa"
+  all all: 0.000
+m matrix=ms"wk2pa"
+  all all: 0.010
+m matrix=ms"wk3pa"
+  all all: 0.039
+m matrix=ms"wk4pa"
+  all all: 0.027
+c Time of Day Factors: Attractions to Productions
+m matrix=ms"colap"
+  all all: 0.208
+m matrix=ms"hboap"
+  all all: 0.297
+m matrix=ms"schap"
+  all all: 0.002
+m matrix=ms"otoap"
+  all all: 0.164
+m matrix=ms"wtoap"
+  all all: 0.051
+m matrix=ms"wk1ap"
+  all all: 0.186
+m matrix=ms"wk2ap"
+  all all: 0.237
+m matrix=ms"wk3ap"
+  all all: 0.271
+m matrix=ms"wk4ap"
+  all all: 0.322

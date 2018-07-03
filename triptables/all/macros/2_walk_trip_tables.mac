@@ -34,7 +34,7 @@ q
 q
 ~/
 ~/ ...Input %%x%% walk time of day factors
-~+|3.11|..\..\input\model\timeofday\%%x%%_walk_tod.in|2|
+~+|3.11|..\..\parameters\timeofday\%%x%%_walk_tod.in|2|
 ~/
 ~/ ...Construct %%x%%  p-a walk person trip tables
 ~+|3.21|1|y|mf"pa"|n
@@ -43,7 +43,6 @@ mf"schdst"*mf"sch"*ms"schtpa"*ms"schpa"
 ~+|||n|2|q
 ~+|3.21|1|y|mf"pa"|n|mf"pa"+
 mf"hbodst"*mf"hbo"*ms"hbotpa"*ms"hbopa"+
-mf"hspdst"*mf"hbo"*ms"hsptpa"*ms"hsppa"+
 mf"otodst"*mf"nhb"*ms"ototpa"*ms"otopa"+
 mf"wkodst"*mf"nhb"*ms"wtotpa"*ms"wtopa"
 ~+|||n|2|q
@@ -60,7 +59,6 @@ mf"schdst"*mf"sch"*ms"schtap"*ms"schap"
 ~+|||n|2|q
 ~+|3.21|1|y|mf"ap"|n|mf"ap"+
 mf"hbodst"*mf"hbo"*ms"hbotap"*ms"hboap"+
-mf"hspdst"*mf"hbo"*ms"hsptap"*ms"hspap"+
 mf"otodst"*mf"nhb"*ms"ototap"*ms"otoap"+
 mf"wkodst"*mf"nhb"*ms"wtotap"*ms"wtoap"
 ~+|||n|2|q

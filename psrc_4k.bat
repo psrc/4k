@@ -25,6 +25,22 @@ if Not exist %modeldir%\assignments\pm mkdir %modeldir%\assignments\pm
 if Not exist %modeldir%\assignments\ev mkdir %modeldir%\assignments\ev
 if Not exist %modeldir%\assignments\ni mkdir %modeldir%\assignments\ni
 
+REM Check for the Auto Skim Folders and Add if they do not exist
+if Not exist %modeldir%\skims\auto\am mkdir %modeldir%\skims\auto\am
+if Not exist %modeldir%\skims\auto\md mkdir %modeldir%\skims\auto\md
+if Not exist %modeldir%\skims\auto\pm mkdir %modeldir%\skims\auto\pm
+if Not exist %modeldir%\skims\auto\ev mkdir %modeldir%\skims\auto\ev
+if Not exist %modeldir%\skims\auto\ni mkdir %modeldir%\skims\auto\ni
+
+REM Check for the Bi-Directional Skim Folders and Add if it does not exist
+if Not exist %modeldir%\skims\bidirectional\all mkdir %modeldir%\skims\bidirectional\all
+
+REM Check for the PnR Skim Folders and Add if they do not exist
+if Not exist %modeldir%\skims\pnr\income1 mkdir %modeldir%\skims\pnr\income1
+if Not exist %modeldir%\skims\pnr\income2 mkdir %modeldir%\skims\pnr\income2
+if Not exist %modeldir%\skims\pnr\income3 mkdir %modeldir%\skims\pnr\income3
+if Not exist %modeldir%\skims\pnr\income4 mkdir %modeldir%\skims\pnr\income4
+
 REM Copy the inputs to the local directory
 cd input
 xcopy "%InputPath%\*" /s /i /y
@@ -38,35 +54,32 @@ call batchfiles\reports\report_rename.bat %iternum%
 REM Initial Iteration
 set iternum=1
 call batchfiles\model\initial_iteration.bat
+call batchfiles\nan\nan_check.bat
 call batchfiles\reports\report_rename.bat %iternum%
 
 REM Feedback Iteration
 set iternum=2
 call batchfiles\model\feedback_iteration.bat
+call batchfiles\nan\nan_check.bat
 call batchfiles\reports\report_rename.bat %iternum%
 
 REM Feedback Iteration
 set iternum=3
 call batchfiles\model\feedback_iteration.bat
+call batchfiles\nan\nan_check.bat
 call batchfiles\reports\report_rename.bat %iternum%
 
 REM Feedback Iteration
 set iternum=4
 call batchfiles\model\feedback_iteration.bat
+call batchfiles\nan\nan_check.bat
 call batchfiles\reports\report_rename.bat %iternum%
 
 REM Final Iteration
 set iternum=5
 call batchfiles\model\final_iteration.bat
+call batchfiles\nan\nan_check.bat
 call batchfiles\reports\report_rename.bat f
-
-REM Save Toll Skim Matrices if User Selected
-if %TollSkim% == Yes (  
-	 cd skims\auto
-     call batchfiles\toll_skims\toll_skims.bat
-     call batchfiles\toll_skims\toll_skim_completion_check.bat
-)
-cd ..\..
 
 REM Create the Summary Bank if called for and populate
 if %SummaryBank% == Yes (
@@ -84,7 +97,9 @@ if %SummaryBank% == Yes (
 	 if %USim% == Yes call emme -ng 000 -m macros\1-1a_initialize_usim_matrices.mac
 	 call emme -ng 000 -m macros\1-2_input_triptables.mac
 	 if %USim% == Yes call emme -ng 000 -m macros\1-2a_input_usim_triptables.mac
-     call emme -ng 000 -m macros\2-0_regional_link_summary.mac
+     
+	 REM Summary Results
+	 call emme -ng 000 -m macros\2-0_regional_link_summary.mac
 	 call emme -ng 000 -m macros\2-1_screenline_summary.mac
 	 call emme -ng 000 -m macros\2-2_regional_triptable_summary.mac
 	 call emme -ng 000 -m macros\2-3_trip_distribution_summary.mac %hightaz%
@@ -94,7 +109,25 @@ if %SummaryBank% == Yes (
 	 call emme -ng 000 -m macros\2-7_work_modechoice_centers.mac %hightaz%
 	 call emme -ng 000 -m macros\2-8_nonwork_modechoice_centers.mac %hightaz%
 	 call emme -ng 000 -m macros\2-9_transit_operators.mac
+	 call emme -ng 000 -m macros\2-10_arterial_travel_times.mac
+	 call emme -ng 000 -m macros\2-11_freeway_travel_times.mac
+	 call emme -ng 000 -m macros\2-12_accident_costs.mac
+	 call emme -ng 000 -m macros\2-13_emission_costs.mac
+	 call emme -ng 000 -m macros\2-14_noise_costs.mac
+	 call emme -ng 000 -m macros\2-15_input_summary.mac %LUYear%
+	 call emme -ng 000 -m macros\2-16_daily_count.mac 
+	 
+	 REM Create macro, input and error list files
+	 if %SummaryBank% == Yes (
+      dir ..\*.mac /s > macro_list.txt
+      dir ..\*.bat /s > macro_list.txt
+      dir ..\input /s > input_list.txt
+      dir ..\errors/s > error_list.txt
+	)
+
 	 call emme -ng 000 -m macros\3-0_output_results.mac
+	 
+	 
 )
 cd ..
 

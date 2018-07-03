@@ -1,0 +1,930 @@
+~/------------------------------------------------------------------------------
+~/ Sum up @tveh from all five time periods = daily vehicle volumes on MD network (@dyveh)
+~/------------------------------------------------------------------------------
+~?!i&32768
+~o|295
+reports=summary.rpt
+s=1004
+~/
+~/ delete extra attributes for am-pm-md-ev-nt and daily total vehicle volumes if exist
+2.42
+~+|3|@amveh|~?!e|y|~?q=0|
+~+|3|@mdveh|~?!e|y|~?q=0|
+~+|3|@pmveh|~?!e|y|~?q=0|
+~+|3|@evveh|~?!e|y|~?q=0|
+~+|3|@ntveh|~?!e|y|~?q=0|
+~+|3|@dyveh|~?!e|y|~?q=0||q
+~/
+~/ create extra attributes for am-md-pm-ev-nt and daily total vehicle volumes
+2.42
+~+|2|2|@amveh|am total vehicles|0
+~+|2|2|@mdveh|md total vehicles|0
+~+|2|2|@pmveh|pm total vehicles|0
+~+|2|2|@evveh|ev total vehicles|0
+~+|2|2|@ntveh|nt total vehicles|0
+~+|2|2|@dyveh|daily total vehicles|0|q
+~/
+~/ import am-pm-ev-nt total vehicle volumes from respective scenarios
+2.41
+~+|2|1002|@tveh|@amveh|n|*
+~+|2|1003|@tveh|@pmveh|n|*
+~+|2|1005|@tveh|@evveh|n|*
+~+|2|1006|@tveh|@ntveh|n|*|q
+~/
+~/ copy md total vehicle volumes from @tveh
+2.41
+~+|1|y|@mdveh|n|@tveh||*|2|1|q
+~/
+~/ aggregate time of day vehicle volumes into daily vehicle volume attribute
+2.41
+~+|1|y|@dyveh|n|@amveh+@mdveh+@pmveh+@evveh+@ntveh||*|2|1||q
+~/
+~/------------------------------------------------------------------------------
+~/ Sum up @comvh from all five time periods = daily commercial vehicle volumes on MD network (@dycmv)
+~/------------------------------------------------------------------------------
+~/
+~/ delete extra attributes for am-pm-md-ev-nt and daily commercial vehicle volumes if exist
+2.42
+~+|3|@amcmv|~?!e|y|~?q=0|
+~+|3|@mdcmv|~?!e|y|~?q=0|
+~+|3|@pmcmv|~?!e|y|~?q=0|
+~+|3|@evcmv|~?!e|y|~?q=0|
+~+|3|@ntcmv|~?!e|y|~?q=0|
+~+|3|@dycmv|~?!e|y|~?q=0||q
+~/
+~/ create extra attributes for am-md-pm-ev-nt and daily commercial vehicle volumes
+2.42
+~+|2|2|@amcmv|am commercial vehicles|0
+~+|2|2|@mdcmv|md commercial vehicles|0
+~+|2|2|@pmcmv|pm commercial vehicles|0
+~+|2|2|@evcmv|ev commercial vehicles|0
+~+|2|2|@ntcmv|nt commercial vehicles|0
+~+|2|2|@dycmv|daily commercial vehicles|0|q
+~/
+~/ import am-pm-ev-nt commercial vehicle volumes from respective scenarios
+2.41
+~+|2|1002|@comvh|@amcmv|n|*
+~+|2|1003|@comvh|@pmcmv|n|*
+~+|2|1005|@comvh|@evcmv|n|*
+~+|2|1006|@comvh|@ntcmv|n|*|q
+~/
+~/ copy md commercial vehicle volumes from @comvh
+2.41
+~+|1|y|@mdcmv|n|@comvh||*|2|1|q
+~/
+~/ aggregate time of day vehicle volumes into daily vehicle volume attribute
+2.41
+~+|1|y|@dycmv|n|@amcmv+@mdcmv+@pmcmv+@evcmv+@ntcmv||*|2|1||q
+~/
+~/ delete extra attributes for time-of-day commercial vehicle volumes
+2.42
+~+|3|@amcmv|~?!e|y|~?q=0|
+~+|3|@mdcmv|~?!e|y|~?q=0|
+~+|3|@pmcmv|~?!e|y|~?q=0|
+~+|3|@evcmv|~?!e|y|~?q=0|
+~+|3|@ntcmv|~?!e|y|~?q=0||q
+~/
+~/------------------------------------------------------------------------------
+~/ Sum up @mveh from all five time periods = daily medium truck vehicle volumes on MD network (@dymtk)
+~/------------------------------------------------------------------------------
+~/
+~/ delete extra attributes for am-pm-md-ev-nt and daily medium truck vehicle volumes if exist
+2.42
+~+|3|@ammtk|~?!e|y|~?q=0|
+~+|3|@mdmtk|~?!e|y|~?q=0|
+~+|3|@pmmtk|~?!e|y|~?q=0|
+~+|3|@evmtk|~?!e|y|~?q=0|
+~+|3|@ntmtk|~?!e|y|~?q=0|
+~+|3|@dymtk|~?!e|y|~?q=0||q
+~/
+~/ create extra attributes for am-md-pm-ev-nt and daily medium truck vehicle volumes
+2.42
+~+|2|2|@ammtk|am medium truck vehicles|0
+~+|2|2|@mdmtk|md medium truck vehicles|0
+~+|2|2|@pmmtk|pm medium truck vehicles|0
+~+|2|2|@evmtk|ev medium truck vehicles|0
+~+|2|2|@ntmtk|nt medium truck vehicles|0
+~+|2|2|@dymtk|daily medium truck vehicles|0|q
+~/
+~/ import am-pm-ev-nt medium truck vehicle volumes from respective scenarios
+2.41
+~+|2|1002|@mveh|@ammtk|n|*
+~+|2|1003|@mveh|@pmmtk|n|*
+~+|2|1005|@mveh|@evmtk|n|*
+~+|2|1006|@mveh|@ntmtk|n|*|q
+~/
+~/ copy md medium truck vehicle volumes from @mveh
+2.41
+~+|1|y|@mdmtk|n|@mveh||*|2|1|q
+~/
+~/ aggregate time of day vehicle volumes into daily vehicle volume attribute
+2.41
+~+|1|y|@dymtk|n|@ammtk+@mdmtk+@pmmtk+@evmtk+@ntmtk||*|2|1||q
+~/
+~/ delete extra attributes for time-of-day medium truck vehicle volumes
+2.42
+~+|3|@ammtk|~?!e|y|~?q=0|
+~+|3|@mdmtk|~?!e|y|~?q=0|
+~+|3|@pmmtk|~?!e|y|~?q=0|
+~+|3|@evmtk|~?!e|y|~?q=0|
+~+|3|@ntmtk|~?!e|y|~?q=0||q
+~/
+~/------------------------------------------------------------------------------
+~/ Sum up @hveh from all five time periods = daily heavy truck vehicle volumes on MD network (@dyhtk)
+~/------------------------------------------------------------------------------
+~/
+~/ delete extra attributes for am-pm-md-ev-nt and daily heavy truck vehicle volumes if exist
+2.42
+~+|3|@amhtk|~?!e|y|~?q=0|
+~+|3|@mdhtk|~?!e|y|~?q=0|
+~+|3|@pmhtk|~?!e|y|~?q=0|
+~+|3|@evhtk|~?!e|y|~?q=0|
+~+|3|@nthtk|~?!e|y|~?q=0|
+~+|3|@dyhtk|~?!e|y|~?q=0||q
+~/
+~/ create extra attributes for am-md-pm-ev-nt and daily heavy truck vehicle volumes
+2.42
+~+|2|2|@amhtk|am heavy truck vehicles|0
+~+|2|2|@mdhtk|md heavy truck vehicles|0
+~+|2|2|@pmhtk|pm heavy truck vehicles|0
+~+|2|2|@evhtk|ev heavy truck vehicles|0
+~+|2|2|@nthtk|nt heavy truck vehicles|0
+~+|2|2|@dyhtk|daily heavy truck vehicles|0|q
+~/
+~/ import am-pm-ev-nt heavy truck vehicle volumes from respective scenarios
+2.41
+~+|2|1002|@hveh|@amhtk|n|*
+~+|2|1003|@hveh|@pmhtk|n|*
+~+|2|1005|@hveh|@evhtk|n|*
+~+|2|1006|@hveh|@nthtk|n|*|q
+~/
+~/ copy md heavy truck vehicle volumes from @hveh
+2.41
+~+|1|y|@mdhtk|n|@hveh||*|2|1|q
+~/
+~/ aggregate time of day vehicle volumes into daily vehicle volume attribute
+2.41
+~+|1|y|@dyhtk|n|@amhtk+@mdhtk+@pmhtk+@evhtk+@nthtk||*|2|1||q
+~/
+~/ delete extra attributes for time-of-day heavy truck vehicle volumes
+2.42
+~+|3|@amhtk|~?!e|y|~?q=0|
+~+|3|@mdhtk|~?!e|y|~?q=0|
+~+|3|@pmhtk|~?!e|y|~?q=0|
+~+|3|@evhtk|~?!e|y|~?q=0|
+~+|3|@nthtk|~?!e|y|~?q=0||q
+~/------------------------------------------------------------------------------
+~/******************************************************************************
+~/******************************************************************************
+~/******************************************************************************
+~/******************************************************************************
+~/~?!i&32768
+~/~o|295
+~/reports=summary.rpt
+~/ ---------------------------------------------------------------
+~/ --- AM Peak Period Summary
+~/ ---------------------------------------------------------------
+s=1004
+~/ ---------------------------------------------------------------
+~/ ...Delete @count extra attribute if exist
+2.42
+~+|3|@count|~?!e|y|~?q=0||q
+~/ ...Initialize extra attribute for counts
+~+|2.42|2|2|@count|Daily Count Flags|0|q
+~/ ---------------------------------------------------------------
+~/ --- Input Travel Time Corridor Flags
+~/ ---------------------------------------------------------------
+~+|2.41|3|@count|n|*|1,2,3|..\input\corridors\count_daily.in|y|2|y|q
+~/ ---------------------------------------------------------------
+~/ --- Store Daily Vehicle Volumes in Scalars for Summary
+~/ ---------------------------------------------------------------
+2.41
+~/ --- Daily Vehicle Volumes
+~+|1|n|@dyveh||@count=1||5|4|ms4501|dvl001|Daily Vehicle Vol - 001|1
+~+|1|n|@dyveh||@count=2||5|4|ms4502|dvl002|Daily Vehicle Vol - 002|1
+~+|1|n|@dyveh||@count=3||5|4|ms4503|dvl003|Daily Vehicle Vol - 003|1
+~+|1|n|@dyveh||@count=4||5|4|ms4504|dvl004|Daily Vehicle Vol - 004|1
+~+|1|n|@dyveh||@count=5||5|4|ms4505|dvl005|Daily Vehicle Vol - 005|1
+~+|1|n|@dyveh||@count=6||5|4|ms4506|dvl006|Daily Vehicle Vol - 006|1
+~+|1|n|@dyveh||@count=7||5|4|ms4507|dvl007|Daily Vehicle Vol - 007|1
+~+|1|n|@dyveh||@count=8||5|4|ms4508|dvl008|Daily Vehicle Vol - 008|1
+~+|1|n|@dyveh||@count=9||5|4|ms4509|dvl009|Daily Vehicle Vol - 009|1
+~+|1|n|@dyveh||@count=10||5|4|ms4510|dvl010|Daily Vehicle Vol - 010|1
+~+|1|n|@dyveh||@count=11||5|4|ms4511|dvl011|Daily Vehicle Vol - 011|1
+~+|1|n|@dyveh||@count=12||5|4|ms4512|dvl012|Daily Vehicle Vol - 012|1
+~+|1|n|@dyveh||@count=13||5|4|ms4513|dvl013|Daily Vehicle Vol - 013|1
+~+|1|n|@dyveh||@count=14||5|4|ms4514|dvl014|Daily Vehicle Vol - 014|1
+~+|1|n|@dyveh||@count=15||5|4|ms4515|dvl015|Daily Vehicle Vol - 015|1
+~+|1|n|@dyveh||@count=16||5|4|ms4516|dvl016|Daily Vehicle Vol - 016|1
+~+|1|n|@dyveh||@count=17||5|4|ms4517|dvl017|Daily Vehicle Vol - 017|1
+~+|1|n|@dyveh||@count=18||5|4|ms4518|dvl018|Daily Vehicle Vol - 018|1
+~+|1|n|@dyveh||@count=19||5|4|ms4519|dvl019|Daily Vehicle Vol - 019|1
+~+|1|n|@dyveh||@count=20||5|4|ms4520|dvl020|Daily Vehicle Vol - 020|1
+~+|1|n|@dyveh||@count=21||5|4|ms4521|dvl021|Daily Vehicle Vol - 021|1
+~+|1|n|@dyveh||@count=22||5|4|ms4522|dvl022|Daily Vehicle Vol - 022|1
+~+|1|n|@dyveh||@count=23||5|4|ms4523|dvl023|Daily Vehicle Vol - 023|1
+~+|1|n|@dyveh||@count=24||5|4|ms4524|dvl024|Daily Vehicle Vol - 024|1
+~+|1|n|@dyveh||@count=25||5|4|ms4525|dvl025|Daily Vehicle Vol - 025|1
+~+|1|n|@dyveh||@count=26||5|4|ms4526|dvl026|Daily Vehicle Vol - 026|1
+~+|1|n|@dyveh||@count=27||5|4|ms4527|dvl027|Daily Vehicle Vol - 027|1
+~+|1|n|@dyveh||@count=28||5|4|ms4528|dvl028|Daily Vehicle Vol - 028|1
+~+|1|n|@dyveh||@count=29||5|4|ms4529|dvl029|Daily Vehicle Vol - 029|1
+~+|1|n|@dyveh||@count=30||5|4|ms4530|dvl030|Daily Vehicle Vol - 030|1
+~+|1|n|@dyveh||@count=31||5|4|ms4531|dvl031|Daily Vehicle Vol - 031|1
+~+|1|n|@dyveh||@count=32||5|4|ms4532|dvl032|Daily Vehicle Vol - 032|1
+~+|1|n|@dyveh||@count=33||5|4|ms4533|dvl033|Daily Vehicle Vol - 033|1
+~+|1|n|@dyveh||@count=34||5|4|ms4534|dvl034|Daily Vehicle Vol - 034|1
+~+|1|n|@dyveh||@count=35||5|4|ms4535|dvl035|Daily Vehicle Vol - 035|1
+~+|1|n|@dyveh||@count=36||5|4|ms4536|dvl036|Daily Vehicle Vol - 036|1
+~+|1|n|@dyveh||@count=37||5|4|ms4537|dvl037|Daily Vehicle Vol - 037|1
+~+|1|n|@dyveh||@count=38||5|4|ms4538|dvl038|Daily Vehicle Vol - 038|1
+~+|1|n|@dyveh||@count=39||5|4|ms4539|dvl039|Daily Vehicle Vol - 039|1
+~+|1|n|@dyveh||@count=40||5|4|ms4540|dvl040|Daily Vehicle Vol - 040|1
+~+|1|n|@dyveh||@count=41||5|4|ms4541|dvl041|Daily Vehicle Vol - 041|1
+~+|1|n|@dyveh||@count=42||5|4|ms4542|dvl042|Daily Vehicle Vol - 042|1
+~+|1|n|@dyveh||@count=43||5|4|ms4543|dvl043|Daily Vehicle Vol - 043|1
+~+|1|n|@dyveh||@count=44||5|4|ms4544|dvl044|Daily Vehicle Vol - 044|1
+~+|1|n|@dyveh||@count=45||5|4|ms4545|dvl045|Daily Vehicle Vol - 045|1
+~+|1|n|@dyveh||@count=46||5|4|ms4546|dvl046|Daily Vehicle Vol - 046|1
+~+|1|n|@dyveh||@count=47||5|4|ms4547|dvl047|Daily Vehicle Vol - 047|1
+~+|1|n|@dyveh||@count=48||5|4|ms4548|dvl048|Daily Vehicle Vol - 048|1
+~+|1|n|@dyveh||@count=49||5|4|ms4549|dvl049|Daily Vehicle Vol - 049|1
+~+|1|n|@dyveh||@count=50||5|4|ms4550|dvl050|Daily Vehicle Vol - 050|1
+~+|1|n|@dyveh||@count=51||5|4|ms4551|dvl051|Daily Vehicle Vol - 051|1
+~+|1|n|@dyveh||@count=52||5|4|ms4552|dvl052|Daily Vehicle Vol - 052|1
+~+|1|n|@dyveh||@count=53||5|4|ms4553|dvl053|Daily Vehicle Vol - 053|1
+~+|1|n|@dyveh||@count=54||5|4|ms4554|dvl054|Daily Vehicle Vol - 054|1
+~+|1|n|@dyveh||@count=55||5|4|ms4555|dvl055|Daily Vehicle Vol - 055|1
+~+|1|n|@dyveh||@count=56||5|4|ms4556|dvl056|Daily Vehicle Vol - 056|1
+~+|1|n|@dyveh||@count=57||5|4|ms4557|dvl057|Daily Vehicle Vol - 057|1
+~+|1|n|@dyveh||@count=58||5|4|ms4558|dvl058|Daily Vehicle Vol - 058|1
+~+|1|n|@dyveh||@count=59||5|4|ms4559|dvl059|Daily Vehicle Vol - 059|1
+~+|1|n|@dyveh||@count=60||5|4|ms4560|dvl060|Daily Vehicle Vol - 060|1
+~+|1|n|@dyveh||@count=61||5|4|ms4561|dvl061|Daily Vehicle Vol - 061|1
+~+|1|n|@dyveh||@count=62||5|4|ms4562|dvl062|Daily Vehicle Vol - 062|1
+~+|1|n|@dyveh||@count=63||5|4|ms4563|dvl063|Daily Vehicle Vol - 063|1
+~+|1|n|@dyveh||@count=64||5|4|ms4564|dvl064|Daily Vehicle Vol - 064|1
+~+|1|n|@dyveh||@count=65||5|4|ms4565|dvl065|Daily Vehicle Vol - 065|1
+~+|1|n|@dyveh||@count=66||5|4|ms4566|dvl066|Daily Vehicle Vol - 066|1
+~+|1|n|@dyveh||@count=67||5|4|ms4567|dvl067|Daily Vehicle Vol - 067|1
+~+|1|n|@dyveh||@count=68||5|4|ms4568|dvl068|Daily Vehicle Vol - 068|1
+~+|1|n|@dyveh||@count=69||5|4|ms4569|dvl069|Daily Vehicle Vol - 069|1
+~+|1|n|@dyveh||@count=70||5|4|ms4570|dvl070|Daily Vehicle Vol - 070|1
+~+|1|n|@dyveh||@count=71||5|4|ms4571|dvl071|Daily Vehicle Vol - 071|1
+~+|1|n|@dyveh||@count=72||5|4|ms4572|dvl072|Daily Vehicle Vol - 072|1
+~+|1|n|@dyveh||@count=73||5|4|ms4573|dvl073|Daily Vehicle Vol - 073|1
+~+|1|n|@dyveh||@count=74||5|4|ms4574|dvl074|Daily Vehicle Vol - 074|1
+~+|1|n|@dyveh||@count=75||5|4|ms4575|dvl075|Daily Vehicle Vol - 075|1
+~+|1|n|@dyveh||@count=76||5|4|ms4576|dvl076|Daily Vehicle Vol - 076|1
+~+|1|n|@dyveh||@count=77||5|4|ms4577|dvl077|Daily Vehicle Vol - 077|1
+~+|1|n|@dyveh||@count=78||5|4|ms4578|dvl078|Daily Vehicle Vol - 078|1
+~+|1|n|@dyveh||@count=79||5|4|ms4579|dvl079|Daily Vehicle Vol - 079|1
+~+|1|n|@dyveh||@count=80||5|4|ms4580|dvl080|Daily Vehicle Vol - 080|1
+~+|1|n|@dyveh||@count=81||5|4|ms4581|dvl081|Daily Vehicle Vol - 081|1
+~+|1|n|@dyveh||@count=82||5|4|ms4582|dvl082|Daily Vehicle Vol - 082|1
+~+|1|n|@dyveh||@count=83||5|4|ms4583|dvl083|Daily Vehicle Vol - 083|1
+~+|1|n|@dyveh||@count=84||5|4|ms4584|dvl084|Daily Vehicle Vol - 084|1
+~+|1|n|@dyveh||@count=85||5|4|ms4585|dvl085|Daily Vehicle Vol - 085|1
+~+|1|n|@dyveh||@count=86||5|4|ms4586|dvl086|Daily Vehicle Vol - 086|1
+~+|1|n|@dyveh||@count=87||5|4|ms4587|dvl087|Daily Vehicle Vol - 087|1
+~+|1|n|@dyveh||@count=88||5|4|ms4588|dvl088|Daily Vehicle Vol - 088|1
+~+|1|n|@dyveh||@count=89||5|4|ms4589|dvl089|Daily Vehicle Vol - 089|1
+~+|1|n|@dyveh||@count=90||5|4|ms4590|dvl090|Daily Vehicle Vol - 090|1
+~+|1|n|@dyveh||@count=91||5|4|ms4591|dvl091|Daily Vehicle Vol - 091|1
+~+|1|n|@dyveh||@count=92||5|4|ms4592|dvl092|Daily Vehicle Vol - 092|1
+~+|1|n|@dyveh||@count=93||5|4|ms4593|dvl093|Daily Vehicle Vol - 093|1
+~+|1|n|@dyveh||@count=94||5|4|ms4594|dvl094|Daily Vehicle Vol - 094|1
+~+|1|n|@dyveh||@count=95||5|4|ms4595|dvl095|Daily Vehicle Vol - 095|1
+~+|1|n|@dyveh||@count=96||5|4|ms4596|dvl096|Daily Vehicle Vol - 096|1
+~+|1|n|@dyveh||@count=97||5|4|ms4597|dvl097|Daily Vehicle Vol - 097|1
+~+|1|n|@dyveh||@count=98||5|4|ms4598|dvl098|Daily Vehicle Vol - 098|1
+~+|1|n|@dyveh||@count=99||5|4|ms4599|dvl099|Daily Vehicle Vol - 099|1
+~+|1|n|@dyveh||@count=100||5|4|ms4600|dvl100|Daily Vehicle Vol - 100|1
+~+|1|n|@dyveh||@count=101||5|4|ms4601|dvl101|Daily Vehicle Vol - 101|1
+~+|1|n|@dyveh||@count=102||5|4|ms4602|dvl102|Daily Vehicle Vol - 102|1
+~+|1|n|@dyveh||@count=103||5|4|ms4603|dvl103|Daily Vehicle Vol - 103|1
+~+|1|n|@dyveh||@count=104||5|4|ms4604|dvl104|Daily Vehicle Vol - 104|1
+~+|1|n|@dyveh||@count=105||5|4|ms4605|dvl105|Daily Vehicle Vol - 105|1
+~+|1|n|@dyveh||@count=106||5|4|ms4606|dvl106|Daily Vehicle Vol - 106|1
+~+|1|n|@dyveh||@count=107||5|4|ms4607|dvl107|Daily Vehicle Vol - 107|1
+~+|1|n|@dyveh||@count=108||5|4|ms4608|dvl108|Daily Vehicle Vol - 108|1
+~+|1|n|@dyveh||@count=109||5|4|ms4609|dvl109|Daily Vehicle Vol - 109|1
+~+|1|n|@dyveh||@count=110||5|4|ms4610|dvl110|Daily Vehicle Vol - 110|1
+~+|1|n|@dyveh||@count=111||5|4|ms4611|dvl111|Daily Vehicle Vol - 111|1
+~+|1|n|@dyveh||@count=112||5|4|ms4612|dvl112|Daily Vehicle Vol - 112|1
+~+|1|n|@dyveh||@count=113||5|4|ms4613|dvl113|Daily Vehicle Vol - 113|1
+~+|1|n|@dyveh||@count=114||5|4|ms4614|dvl114|Daily Vehicle Vol - 114|1
+~+|1|n|@dyveh||@count=115||5|4|ms4615|dvl115|Daily Vehicle Vol - 115|1
+~+|1|n|@dyveh||@count=116||5|4|ms4616|dvl116|Daily Vehicle Vol - 116|1
+~+|1|n|@dyveh||@count=117||5|4|ms4617|dvl117|Daily Vehicle Vol - 117|1
+~+|1|n|@dyveh||@count=118||5|4|ms4618|dvl118|Daily Vehicle Vol - 118|1
+~+|1|n|@dyveh||@count=119||5|4|ms4619|dvl119|Daily Vehicle Vol - 119|1
+~+|1|n|@dyveh||@count=120||5|4|ms4620|dvl120|Daily Vehicle Vol - 120|1
+~+|1|n|@dyveh||@count=121||5|4|ms4621|dvl121|Daily Vehicle Vol - 121|1
+~+|1|n|@dyveh||@count=122||5|4|ms4622|dvl122|Daily Vehicle Vol - 122|1
+~+|1|n|@dyveh||@count=123||5|4|ms4623|dvl123|Daily Vehicle Vol - 123|1
+~+|1|n|@dyveh||@count=124||5|4|ms4624|dvl124|Daily Vehicle Vol - 124|1
+~+|1|n|@dyveh||@count=125||5|4|ms4625|dvl125|Daily Vehicle Vol - 125|1
+~+|1|n|@dyveh||@count=126||5|4|ms4626|dvl126|Daily Vehicle Vol - 126|1
+~+|1|n|@dyveh||@count=127||5|4|ms4627|dvl127|Daily Vehicle Vol - 127|1
+~+|1|n|@dyveh||@count=128||5|4|ms4628|dvl128|Daily Vehicle Vol - 128|1
+~+|1|n|@dyveh||@count=129||5|4|ms4629|dvl129|Daily Vehicle Vol - 129|1
+~+|1|n|@dyveh||@count=130||5|4|ms4630|dvl130|Daily Vehicle Vol - 130|1
+~+|1|n|@dyveh||@count=131||5|4|ms4631|dvl131|Daily Vehicle Vol - 131|1
+~+|1|n|@dyveh||@count=132||5|4|ms4632|dvl132|Daily Vehicle Vol - 132|1
+~+|1|n|@dyveh||@count=133||5|4|ms4633|dvl133|Daily Vehicle Vol - 133|1
+~+|1|n|@dyveh||@count=134||5|4|ms4634|dvl134|Daily Vehicle Vol - 134|1
+~+|1|n|@dyveh||@count=135||5|4|ms4635|dvl135|Daily Vehicle Vol - 135|1
+~+|1|n|@dyveh||@count=136||5|4|ms4636|dvl136|Daily Vehicle Vol - 136|1
+~+|1|n|@dyveh||@count=137||5|4|ms4637|dvl137|Daily Vehicle Vol - 137|1
+~+|1|n|@dyveh||@count=138||5|4|ms4638|dvl138|Daily Vehicle Vol - 138|1
+~+|1|n|@dyveh||@count=139||5|4|ms4639|dvl139|Daily Vehicle Vol - 139|1
+~+|1|n|@dyveh||@count=140||5|4|ms4640|dvl140|Daily Vehicle Vol - 140|1
+~+|1|n|@dyveh||@count=141||5|4|ms4641|dvl141|Daily Vehicle Vol - 141|1
+~+|1|n|@dyveh||@count=142||5|4|ms4642|dvl142|Daily Vehicle Vol - 142|1
+~+|1|n|@dyveh||@count=143||5|4|ms4643|dvl143|Daily Vehicle Vol - 143|1
+~+|1|n|@dyveh||@count=144||5|4|ms4644|dvl144|Daily Vehicle Vol - 144|1
+~+|1|n|@dyveh||@count=145||5|4|ms4645|dvl145|Daily Vehicle Vol - 145|1
+~+|1|n|@dyveh||@count=146||5|4|ms4646|dvl146|Daily Vehicle Vol - 146|1
+~+|1|n|@dyveh||@count=147||5|4|ms4647|dvl147|Daily Vehicle Vol - 147|1
+~+|1|n|@dyveh||@count=148||5|4|ms4648|dvl148|Daily Vehicle Vol - 148|1
+~+|1|n|@dyveh||@count=149||5|4|ms4649|dvl149|Daily Vehicle Vol - 149|1
+~+|1|n|@dyveh||@count=150||5|4|ms4650|dvl150|Daily Vehicle Vol - 150|1
+~+|1|n|@dyveh||@count=151||5|4|ms4651|dvl151|Daily Vehicle Vol - 151|1
+~+|1|n|@dyveh||@count=152||5|4|ms4652|dvl152|Daily Vehicle Vol - 152|1
+~+|1|n|@dyveh||@count=153||5|4|ms4653|dvl153|Daily Vehicle Vol - 153|1
+~+|1|n|@dyveh||@count=154||5|4|ms4654|dvl154|Daily Vehicle Vol - 154|1
+~+|1|n|@dyveh||@count=155||5|4|ms4655|dvl155|Daily Vehicle Vol - 155|1
+~+|1|n|@dyveh||@count=156||5|4|ms4656|dvl156|Daily Vehicle Vol - 156|1
+~+|1|n|@dyveh||@count=157||5|4|ms4657|dvl157|Daily Vehicle Vol - 157|1
+~+|1|n|@dyveh||@count=158||5|4|ms4658|dvl158|Daily Vehicle Vol - 158|1
+~+|1|n|@dyveh||@count=159||5|4|ms4659|dvl159|Daily Vehicle Vol - 159|1
+~+|1|n|@dyveh||@count=160||5|4|ms4660|dvl160|Daily Vehicle Vol - 160|1
+~+|1|n|@dyveh||@count=161||5|4|ms4661|dvl161|Daily Vehicle Vol - 161|1
+~+|1|n|@dyveh||@count=162||5|4|ms4662|dvl162|Daily Vehicle Vol - 162|1
+~+|1|n|@dyveh||@count=163||5|4|ms4663|dvl163|Daily Vehicle Vol - 163|1
+~+|1|n|@dyveh||@count=164||5|4|ms4664|dvl164|Daily Vehicle Vol - 164|1
+~+|1|n|@dyveh||@count=165||5|4|ms4665|dvl165|Daily Vehicle Vol - 165|1
+~+|1|n|@dyveh||@count=166||5|4|ms4666|dvl166|Daily Vehicle Vol - 166|1
+~+|1|n|@dyveh||@count=167||5|4|ms4667|dvl167|Daily Vehicle Vol - 167|1
+~+|1|n|@dyveh||@count=168||5|4|ms4668|dvl168|Daily Vehicle Vol - 168|1
+~+|1|n|@dyveh||@count=169||5|4|ms4669|dvl169|Daily Vehicle Vol - 169|1
+~+|1|n|@dyveh||@count=170||5|4|ms4670|dvl170|Daily Vehicle Vol - 170|1
+~+|1|n|@dyveh||@count=171||5|4|ms4671|dvl171|Daily Vehicle Vol - 171|1
+~+|1|n|@dyveh||@count=172||5|4|ms4672|dvl172|Daily Vehicle Vol - 172|1
+~+|1|n|@dyveh||@count=173||5|4|ms4673|dvl173|Daily Vehicle Vol - 173|1
+~+|1|n|@dyveh||@count=174||5|4|ms4674|dvl174|Daily Vehicle Vol - 174|1
+~+|1|n|@dyveh||@count=175||5|4|ms4675|dvl175|Daily Vehicle Vol - 175|1
+~+|1|n|@dyveh||@count=176||5|4|ms4676|dvl176|Daily Vehicle Vol - 176|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Store Heavy Truck Volumes in Scalars for Summary
+~/ ---------------------------------------------------------------
+2.41
+~/ --- Daily Heavy Truck Volumes
+~+|1|n|@dyhtk||@count=1||5|4|ms4677|hvl001|Heavy Vehicle Vol - 001|1
+~+|1|n|@dyhtk||@count=2||5|4|ms4678|hvl002|Heavy Vehicle Vol - 002|1
+~+|1|n|@dyhtk||@count=3||5|4|ms4679|hvl003|Heavy Vehicle Vol - 003|1
+~+|1|n|@dyhtk||@count=4||5|4|ms4680|hvl004|Heavy Vehicle Vol - 004|1
+~+|1|n|@dyhtk||@count=5||5|4|ms4681|hvl005|Heavy Vehicle Vol - 005|1
+~+|1|n|@dyhtk||@count=6||5|4|ms4682|hvl006|Heavy Vehicle Vol - 006|1
+~+|1|n|@dyhtk||@count=7||5|4|ms4683|hvl007|Heavy Vehicle Vol - 007|1
+~+|1|n|@dyhtk||@count=8||5|4|ms4684|hvl008|Heavy Vehicle Vol - 008|1
+~+|1|n|@dyhtk||@count=9||5|4|ms4685|hvl009|Heavy Vehicle Vol - 009|1
+~+|1|n|@dyhtk||@count=10||5|4|ms4686|hvl010|Heavy Vehicle Vol - 010|1
+~+|1|n|@dyhtk||@count=11||5|4|ms4687|hvl011|Heavy Vehicle Vol - 011|1
+~+|1|n|@dyhtk||@count=12||5|4|ms4688|hvl012|Heavy Vehicle Vol - 012|1
+~+|1|n|@dyhtk||@count=13||5|4|ms4689|hvl013|Heavy Vehicle Vol - 013|1
+~+|1|n|@dyhtk||@count=14||5|4|ms4690|hvl014|Heavy Vehicle Vol - 014|1
+~+|1|n|@dyhtk||@count=15||5|4|ms4691|hvl015|Heavy Vehicle Vol - 015|1
+~+|1|n|@dyhtk||@count=16||5|4|ms4692|hvl016|Heavy Vehicle Vol - 016|1
+~+|1|n|@dyhtk||@count=17||5|4|ms4693|hvl017|Heavy Vehicle Vol - 017|1
+~+|1|n|@dyhtk||@count=18||5|4|ms4694|hvl018|Heavy Vehicle Vol - 018|1
+~+|1|n|@dyhtk||@count=19||5|4|ms4695|hvl019|Heavy Vehicle Vol - 019|1
+~+|1|n|@dyhtk||@count=20||5|4|ms4696|hvl020|Heavy Vehicle Vol - 020|1
+~+|1|n|@dyhtk||@count=21||5|4|ms4697|hvl021|Heavy Vehicle Vol - 021|1
+~+|1|n|@dyhtk||@count=22||5|4|ms4698|hvl022|Heavy Vehicle Vol - 022|1
+~+|1|n|@dyhtk||@count=23||5|4|ms4699|hvl023|Heavy Vehicle Vol - 023|1
+~+|1|n|@dyhtk||@count=24||5|4|ms4700|hvl024|Heavy Vehicle Vol - 024|1
+~+|1|n|@dyhtk||@count=25||5|4|ms4701|hvl025|Heavy Vehicle Vol - 025|1
+~+|1|n|@dyhtk||@count=26||5|4|ms4702|hvl026|Heavy Vehicle Vol - 026|1
+~+|1|n|@dyhtk||@count=27||5|4|ms4703|hvl027|Heavy Vehicle Vol - 027|1
+~+|1|n|@dyhtk||@count=28||5|4|ms4704|hvl028|Heavy Vehicle Vol - 028|1
+~+|1|n|@dyhtk||@count=29||5|4|ms4705|hvl029|Heavy Vehicle Vol - 029|1
+~+|1|n|@dyhtk||@count=30||5|4|ms4706|hvl030|Heavy Vehicle Vol - 030|1
+~+|1|n|@dyhtk||@count=31||5|4|ms4707|hvl031|Heavy Vehicle Vol - 031|1
+~+|1|n|@dyhtk||@count=32||5|4|ms4708|hvl032|Heavy Vehicle Vol - 032|1
+~+|1|n|@dyhtk||@count=33||5|4|ms4709|hvl033|Heavy Vehicle Vol - 033|1
+~+|1|n|@dyhtk||@count=34||5|4|ms4710|hvl034|Heavy Vehicle Vol - 034|1
+~+|1|n|@dyhtk||@count=35||5|4|ms4711|hvl035|Heavy Vehicle Vol - 035|1
+~+|1|n|@dyhtk||@count=36||5|4|ms4712|hvl036|Heavy Vehicle Vol - 036|1
+~+|1|n|@dyhtk||@count=37||5|4|ms4713|hvl037|Heavy Vehicle Vol - 037|1
+~+|1|n|@dyhtk||@count=38||5|4|ms4714|hvl038|Heavy Vehicle Vol - 038|1
+~+|1|n|@dyhtk||@count=39||5|4|ms4715|hvl039|Heavy Vehicle Vol - 039|1
+~+|1|n|@dyhtk||@count=40||5|4|ms4716|hvl040|Heavy Vehicle Vol - 040|1
+~+|1|n|@dyhtk||@count=41||5|4|ms4717|hvl041|Heavy Vehicle Vol - 041|1
+~+|1|n|@dyhtk||@count=42||5|4|ms4718|hvl042|Heavy Vehicle Vol - 042|1
+~+|1|n|@dyhtk||@count=43||5|4|ms4719|hvl043|Heavy Vehicle Vol - 043|1
+~+|1|n|@dyhtk||@count=44||5|4|ms4720|hvl044|Heavy Vehicle Vol - 044|1
+~+|1|n|@dyhtk||@count=45||5|4|ms4721|hvl045|Heavy Vehicle Vol - 045|1
+~+|1|n|@dyhtk||@count=46||5|4|ms4722|hvl046|Heavy Vehicle Vol - 046|1
+~+|1|n|@dyhtk||@count=47||5|4|ms4723|hvl047|Heavy Vehicle Vol - 047|1
+~+|1|n|@dyhtk||@count=48||5|4|ms4724|hvl048|Heavy Vehicle Vol - 048|1
+~+|1|n|@dyhtk||@count=49||5|4|ms4725|hvl049|Heavy Vehicle Vol - 049|1
+~+|1|n|@dyhtk||@count=50||5|4|ms4726|hvl050|Heavy Vehicle Vol - 050|1
+~+|1|n|@dyhtk||@count=51||5|4|ms4727|hvl051|Heavy Vehicle Vol - 051|1
+~+|1|n|@dyhtk||@count=52||5|4|ms4728|hvl052|Heavy Vehicle Vol - 052|1
+~+|1|n|@dyhtk||@count=53||5|4|ms4729|hvl053|Heavy Vehicle Vol - 053|1
+~+|1|n|@dyhtk||@count=54||5|4|ms4730|hvl054|Heavy Vehicle Vol - 054|1
+~+|1|n|@dyhtk||@count=55||5|4|ms4731|hvl055|Heavy Vehicle Vol - 055|1
+~+|1|n|@dyhtk||@count=56||5|4|ms4732|hvl056|Heavy Vehicle Vol - 056|1
+~+|1|n|@dyhtk||@count=57||5|4|ms4733|hvl057|Heavy Vehicle Vol - 057|1
+~+|1|n|@dyhtk||@count=58||5|4|ms4734|hvl058|Heavy Vehicle Vol - 058|1
+~+|1|n|@dyhtk||@count=59||5|4|ms4735|hvl059|Heavy Vehicle Vol - 059|1
+~+|1|n|@dyhtk||@count=60||5|4|ms4736|hvl060|Heavy Vehicle Vol - 060|1
+~+|1|n|@dyhtk||@count=61||5|4|ms4737|hvl061|Heavy Vehicle Vol - 061|1
+~+|1|n|@dyhtk||@count=62||5|4|ms4738|hvl062|Heavy Vehicle Vol - 062|1
+~+|1|n|@dyhtk||@count=63||5|4|ms4739|hvl063|Heavy Vehicle Vol - 063|1
+~+|1|n|@dyhtk||@count=64||5|4|ms4740|hvl064|Heavy Vehicle Vol - 064|1
+~+|1|n|@dyhtk||@count=65||5|4|ms4741|hvl065|Heavy Vehicle Vol - 065|1
+~+|1|n|@dyhtk||@count=66||5|4|ms4742|hvl066|Heavy Vehicle Vol - 066|1
+~+|1|n|@dyhtk||@count=67||5|4|ms4743|hvl067|Heavy Vehicle Vol - 067|1
+~+|1|n|@dyhtk||@count=68||5|4|ms4744|hvl068|Heavy Vehicle Vol - 068|1
+~+|1|n|@dyhtk||@count=69||5|4|ms4745|hvl069|Heavy Vehicle Vol - 069|1
+~+|1|n|@dyhtk||@count=70||5|4|ms4746|hvl070|Heavy Vehicle Vol - 070|1
+~+|1|n|@dyhtk||@count=71||5|4|ms4747|hvl071|Heavy Vehicle Vol - 071|1
+~+|1|n|@dyhtk||@count=72||5|4|ms4748|hvl072|Heavy Vehicle Vol - 072|1
+~+|1|n|@dyhtk||@count=73||5|4|ms4749|hvl073|Heavy Vehicle Vol - 073|1
+~+|1|n|@dyhtk||@count=74||5|4|ms4750|hvl074|Heavy Vehicle Vol - 074|1
+~+|1|n|@dyhtk||@count=75||5|4|ms4751|hvl075|Heavy Vehicle Vol - 075|1
+~+|1|n|@dyhtk||@count=76||5|4|ms4752|hvl076|Heavy Vehicle Vol - 076|1
+~+|1|n|@dyhtk||@count=77||5|4|ms4753|hvl077|Heavy Vehicle Vol - 077|1
+~+|1|n|@dyhtk||@count=78||5|4|ms4754|hvl078|Heavy Vehicle Vol - 078|1
+~+|1|n|@dyhtk||@count=79||5|4|ms4755|hvl079|Heavy Vehicle Vol - 079|1
+~+|1|n|@dyhtk||@count=80||5|4|ms4756|hvl080|Heavy Vehicle Vol - 080|1
+~+|1|n|@dyhtk||@count=81||5|4|ms4757|hvl081|Heavy Vehicle Vol - 081|1
+~+|1|n|@dyhtk||@count=82||5|4|ms4758|hvl082|Heavy Vehicle Vol - 082|1
+~+|1|n|@dyhtk||@count=83||5|4|ms4759|hvl083|Heavy Vehicle Vol - 083|1
+~+|1|n|@dyhtk||@count=84||5|4|ms4760|hvl084|Heavy Vehicle Vol - 084|1
+~+|1|n|@dyhtk||@count=85||5|4|ms4761|hvl085|Heavy Vehicle Vol - 085|1
+~+|1|n|@dyhtk||@count=86||5|4|ms4762|hvl086|Heavy Vehicle Vol - 086|1
+~+|1|n|@dyhtk||@count=87||5|4|ms4763|hvl087|Heavy Vehicle Vol - 087|1
+~+|1|n|@dyhtk||@count=88||5|4|ms4764|hvl088|Heavy Vehicle Vol - 088|1
+~+|1|n|@dyhtk||@count=89||5|4|ms4765|hvl089|Heavy Vehicle Vol - 089|1
+~+|1|n|@dyhtk||@count=90||5|4|ms4766|hvl090|Heavy Vehicle Vol - 090|1
+~+|1|n|@dyhtk||@count=91||5|4|ms4767|hvl091|Heavy Vehicle Vol - 091|1
+~+|1|n|@dyhtk||@count=92||5|4|ms4768|hvl092|Heavy Vehicle Vol - 092|1
+~+|1|n|@dyhtk||@count=93||5|4|ms4769|hvl093|Heavy Vehicle Vol - 093|1
+~+|1|n|@dyhtk||@count=94||5|4|ms4770|hvl094|Heavy Vehicle Vol - 094|1
+~+|1|n|@dyhtk||@count=95||5|4|ms4771|hvl095|Heavy Vehicle Vol - 095|1
+~+|1|n|@dyhtk||@count=96||5|4|ms4772|hvl096|Heavy Vehicle Vol - 096|1
+~+|1|n|@dyhtk||@count=97||5|4|ms4773|hvl097|Heavy Vehicle Vol - 097|1
+~+|1|n|@dyhtk||@count=98||5|4|ms4774|hvl098|Heavy Vehicle Vol - 098|1
+~+|1|n|@dyhtk||@count=99||5|4|ms4775|hvl099|Heavy Vehicle Vol - 099|1
+~+|1|n|@dyhtk||@count=100||5|4|ms4776|hvl100|Heavy Vehicle Vol - 100|1
+~+|1|n|@dyhtk||@count=101||5|4|ms4777|hvl101|Heavy Vehicle Vol - 101|1
+~+|1|n|@dyhtk||@count=102||5|4|ms4778|hvl102|Heavy Vehicle Vol - 102|1
+~+|1|n|@dyhtk||@count=103||5|4|ms4779|hvl103|Heavy Vehicle Vol - 103|1
+~+|1|n|@dyhtk||@count=104||5|4|ms4780|hvl104|Heavy Vehicle Vol - 104|1
+~+|1|n|@dyhtk||@count=105||5|4|ms4781|hvl105|Heavy Vehicle Vol - 105|1
+~+|1|n|@dyhtk||@count=106||5|4|ms4782|hvl106|Heavy Vehicle Vol - 106|1
+~+|1|n|@dyhtk||@count=107||5|4|ms4783|hvl107|Heavy Vehicle Vol - 107|1
+~+|1|n|@dyhtk||@count=108||5|4|ms4784|hvl108|Heavy Vehicle Vol - 108|1
+~+|1|n|@dyhtk||@count=109||5|4|ms4785|hvl109|Heavy Vehicle Vol - 109|1
+~+|1|n|@dyhtk||@count=110||5|4|ms4786|hvl110|Heavy Vehicle Vol - 110|1
+~+|1|n|@dyhtk||@count=111||5|4|ms4787|hvl111|Heavy Vehicle Vol - 111|1
+~+|1|n|@dyhtk||@count=112||5|4|ms4788|hvl112|Heavy Vehicle Vol - 112|1
+~+|1|n|@dyhtk||@count=113||5|4|ms4789|hvl113|Heavy Vehicle Vol - 113|1
+~+|1|n|@dyhtk||@count=114||5|4|ms4790|hvl114|Heavy Vehicle Vol - 114|1
+~+|1|n|@dyhtk||@count=115||5|4|ms4791|hvl115|Heavy Vehicle Vol - 115|1
+~+|1|n|@dyhtk||@count=116||5|4|ms4792|hvl116|Heavy Vehicle Vol - 116|1
+~+|1|n|@dyhtk||@count=117||5|4|ms4793|hvl117|Heavy Vehicle Vol - 117|1
+~+|1|n|@dyhtk||@count=118||5|4|ms4794|hvl118|Heavy Vehicle Vol - 118|1
+~+|1|n|@dyhtk||@count=119||5|4|ms4795|hvl119|Heavy Vehicle Vol - 119|1
+~+|1|n|@dyhtk||@count=120||5|4|ms4796|hvl120|Heavy Vehicle Vol - 120|1
+~+|1|n|@dyhtk||@count=121||5|4|ms4797|hvl121|Heavy Vehicle Vol - 121|1
+~+|1|n|@dyhtk||@count=122||5|4|ms4798|hvl122|Heavy Vehicle Vol - 122|1
+~+|1|n|@dyhtk||@count=123||5|4|ms4799|hvl123|Heavy Vehicle Vol - 123|1
+~+|1|n|@dyhtk||@count=124||5|4|ms4800|hvl124|Heavy Vehicle Vol - 124|1
+~+|1|n|@dyhtk||@count=125||5|4|ms4801|hvl125|Heavy Vehicle Vol - 125|1
+~+|1|n|@dyhtk||@count=126||5|4|ms4802|hvl126|Heavy Vehicle Vol - 126|1
+~+|1|n|@dyhtk||@count=127||5|4|ms4803|hvl127|Heavy Vehicle Vol - 127|1
+~+|1|n|@dyhtk||@count=128||5|4|ms4804|hvl128|Heavy Vehicle Vol - 128|1
+~+|1|n|@dyhtk||@count=129||5|4|ms4805|hvl129|Heavy Vehicle Vol - 129|1
+~+|1|n|@dyhtk||@count=130||5|4|ms4806|hvl130|Heavy Vehicle Vol - 130|1
+~+|1|n|@dyhtk||@count=131||5|4|ms4807|hvl131|Heavy Vehicle Vol - 131|1
+~+|1|n|@dyhtk||@count=132||5|4|ms4808|hvl132|Heavy Vehicle Vol - 132|1
+~+|1|n|@dyhtk||@count=133||5|4|ms4809|hvl133|Heavy Vehicle Vol - 133|1
+~+|1|n|@dyhtk||@count=134||5|4|ms4810|hvl134|Heavy Vehicle Vol - 134|1
+~+|1|n|@dyhtk||@count=135||5|4|ms4811|hvl135|Heavy Vehicle Vol - 135|1
+~+|1|n|@dyhtk||@count=136||5|4|ms4812|hvl136|Heavy Vehicle Vol - 136|1
+~+|1|n|@dyhtk||@count=137||5|4|ms4813|hvl137|Heavy Vehicle Vol - 137|1
+~+|1|n|@dyhtk||@count=138||5|4|ms4814|hvl138|Heavy Vehicle Vol - 138|1
+~+|1|n|@dyhtk||@count=139||5|4|ms4815|hvl139|Heavy Vehicle Vol - 139|1
+~+|1|n|@dyhtk||@count=140||5|4|ms4816|hvl140|Heavy Vehicle Vol - 140|1
+~+|1|n|@dyhtk||@count=141||5|4|ms4817|hvl141|Heavy Vehicle Vol - 141|1
+~+|1|n|@dyhtk||@count=142||5|4|ms4818|hvl142|Heavy Vehicle Vol - 142|1
+~+|1|n|@dyhtk||@count=143||5|4|ms4819|hvl143|Heavy Vehicle Vol - 143|1
+~+|1|n|@dyhtk||@count=144||5|4|ms4820|hvl144|Heavy Vehicle Vol - 144|1
+~+|1|n|@dyhtk||@count=145||5|4|ms4821|hvl145|Heavy Vehicle Vol - 145|1
+~+|1|n|@dyhtk||@count=146||5|4|ms4822|hvl146|Heavy Vehicle Vol - 146|1
+~+|1|n|@dyhtk||@count=147||5|4|ms4823|hvl147|Heavy Vehicle Vol - 147|1
+~+|1|n|@dyhtk||@count=148||5|4|ms4824|hvl148|Heavy Vehicle Vol - 148|1
+~+|1|n|@dyhtk||@count=149||5|4|ms4825|hvl149|Heavy Vehicle Vol - 149|1
+~+|1|n|@dyhtk||@count=150||5|4|ms4826|hvl150|Heavy Vehicle Vol - 150|1
+~+|1|n|@dyhtk||@count=151||5|4|ms4827|hvl151|Heavy Vehicle Vol - 151|1
+~+|1|n|@dyhtk||@count=152||5|4|ms4828|hvl152|Heavy Vehicle Vol - 152|1
+~+|1|n|@dyhtk||@count=153||5|4|ms4829|hvl153|Heavy Vehicle Vol - 153|1
+~+|1|n|@dyhtk||@count=154||5|4|ms4830|hvl154|Heavy Vehicle Vol - 154|1
+~+|1|n|@dyhtk||@count=155||5|4|ms4831|hvl155|Heavy Vehicle Vol - 155|1
+~+|1|n|@dyhtk||@count=156||5|4|ms4832|hvl156|Heavy Vehicle Vol - 156|1
+~+|1|n|@dyhtk||@count=157||5|4|ms4833|hvl157|Heavy Vehicle Vol - 157|1
+~+|1|n|@dyhtk||@count=158||5|4|ms4834|hvl158|Heavy Vehicle Vol - 158|1
+~+|1|n|@dyhtk||@count=159||5|4|ms4835|hvl159|Heavy Vehicle Vol - 159|1
+~+|1|n|@dyhtk||@count=160||5|4|ms4836|hvl160|Heavy Vehicle Vol - 160|1
+~+|1|n|@dyhtk||@count=161||5|4|ms4837|hvl161|Heavy Vehicle Vol - 161|1
+~+|1|n|@dyhtk||@count=162||5|4|ms4838|hvl162|Heavy Vehicle Vol - 162|1
+~+|1|n|@dyhtk||@count=163||5|4|ms4839|hvl163|Heavy Vehicle Vol - 163|1
+~+|1|n|@dyhtk||@count=164||5|4|ms4840|hvl164|Heavy Vehicle Vol - 164|1
+~+|1|n|@dyhtk||@count=165||5|4|ms4841|hvl165|Heavy Vehicle Vol - 165|1
+~+|1|n|@dyhtk||@count=166||5|4|ms4842|hvl166|Heavy Vehicle Vol - 166|1
+~+|1|n|@dyhtk||@count=167||5|4|ms4843|hvl167|Heavy Vehicle Vol - 167|1
+~+|1|n|@dyhtk||@count=168||5|4|ms4844|hvl168|Heavy Vehicle Vol - 168|1
+~+|1|n|@dyhtk||@count=169||5|4|ms4845|hvl169|Heavy Vehicle Vol - 169|1
+~+|1|n|@dyhtk||@count=170||5|4|ms4846|hvl170|Heavy Vehicle Vol - 170|1
+~+|1|n|@dyhtk||@count=171||5|4|ms4847|hvl171|Heavy Vehicle Vol - 171|1
+~+|1|n|@dyhtk||@count=172||5|4|ms4848|hvl172|Heavy Vehicle Vol - 172|1
+~+|1|n|@dyhtk||@count=173||5|4|ms4849|hvl173|Heavy Vehicle Vol - 173|1
+~+|1|n|@dyhtk||@count=174||5|4|ms4850|hvl174|Heavy Vehicle Vol - 174|1
+~+|1|n|@dyhtk||@count=175||5|4|ms4851|hvl175|Heavy Vehicle Vol - 175|1
+~+|1|n|@dyhtk||@count=176||5|4|ms4852|hvl176|Heavy Vehicle Vol - 176|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Store Medium Truck Volumes in Scalars for Summary
+~/ ---------------------------------------------------------------
+2.41
+~/ --- Daily Medium Truck Volumes
+~+|1|n|@dymtk||@count=001||5|4|ms4853|mvl001|Medium Vehicle Vol - 001|1
+~+|1|n|@dymtk||@count=002||5|4|ms4854|mvl002|Medium Vehicle Vol - 002|1
+~+|1|n|@dymtk||@count=003||5|4|ms4855|mvl003|Medium Vehicle Vol - 003|1
+~+|1|n|@dymtk||@count=004||5|4|ms4856|mvl004|Medium Vehicle Vol - 004|1
+~+|1|n|@dymtk||@count=005||5|4|ms4857|mvl005|Medium Vehicle Vol - 005|1
+~+|1|n|@dymtk||@count=006||5|4|ms4858|mvl006|Medium Vehicle Vol - 006|1
+~+|1|n|@dymtk||@count=007||5|4|ms4859|mvl007|Medium Vehicle Vol - 007|1
+~+|1|n|@dymtk||@count=008||5|4|ms4860|mvl008|Medium Vehicle Vol - 008|1
+~+|1|n|@dymtk||@count=009||5|4|ms4861|mvl009|Medium Vehicle Vol - 009|1
+~+|1|n|@dymtk||@count=010||5|4|ms4862|mvl010|Medium Vehicle Vol - 010|1
+~+|1|n|@dymtk||@count=011||5|4|ms4863|mvl011|Medium Vehicle Vol - 011|1
+~+|1|n|@dymtk||@count=012||5|4|ms4864|mvl012|Medium Vehicle Vol - 012|1
+~+|1|n|@dymtk||@count=013||5|4|ms4865|mvl013|Medium Vehicle Vol - 013|1
+~+|1|n|@dymtk||@count=014||5|4|ms4866|mvl014|Medium Vehicle Vol - 014|1
+~+|1|n|@dymtk||@count=015||5|4|ms4867|mvl015|Medium Vehicle Vol - 015|1
+~+|1|n|@dymtk||@count=016||5|4|ms4868|mvl016|Medium Vehicle Vol - 016|1
+~+|1|n|@dymtk||@count=017||5|4|ms4869|mvl017|Medium Vehicle Vol - 017|1
+~+|1|n|@dymtk||@count=018||5|4|ms4870|mvl018|Medium Vehicle Vol - 018|1
+~+|1|n|@dymtk||@count=019||5|4|ms4871|mvl019|Medium Vehicle Vol - 019|1
+~+|1|n|@dymtk||@count=020||5|4|ms4872|mvl020|Medium Vehicle Vol - 020|1
+~+|1|n|@dymtk||@count=021||5|4|ms4873|mvl021|Medium Vehicle Vol - 021|1
+~+|1|n|@dymtk||@count=022||5|4|ms4874|mvl022|Medium Vehicle Vol - 022|1
+~+|1|n|@dymtk||@count=023||5|4|ms4875|mvl023|Medium Vehicle Vol - 023|1
+~+|1|n|@dymtk||@count=024||5|4|ms4876|mvl024|Medium Vehicle Vol - 024|1
+~+|1|n|@dymtk||@count=025||5|4|ms4877|mvl025|Medium Vehicle Vol - 025|1
+~+|1|n|@dymtk||@count=026||5|4|ms4878|mvl026|Medium Vehicle Vol - 026|1
+~+|1|n|@dymtk||@count=027||5|4|ms4879|mvl027|Medium Vehicle Vol - 027|1
+~+|1|n|@dymtk||@count=028||5|4|ms4880|mvl028|Medium Vehicle Vol - 028|1
+~+|1|n|@dymtk||@count=029||5|4|ms4881|mvl029|Medium Vehicle Vol - 029|1
+~+|1|n|@dymtk||@count=030||5|4|ms4882|mvl030|Medium Vehicle Vol - 030|1
+~+|1|n|@dymtk||@count=031||5|4|ms4883|mvl031|Medium Vehicle Vol - 031|1
+~+|1|n|@dymtk||@count=032||5|4|ms4884|mvl032|Medium Vehicle Vol - 032|1
+~+|1|n|@dymtk||@count=033||5|4|ms4885|mvl033|Medium Vehicle Vol - 033|1
+~+|1|n|@dymtk||@count=034||5|4|ms4886|mvl034|Medium Vehicle Vol - 034|1
+~+|1|n|@dymtk||@count=035||5|4|ms4887|mvl035|Medium Vehicle Vol - 035|1
+~+|1|n|@dymtk||@count=036||5|4|ms4888|mvl036|Medium Vehicle Vol - 036|1
+~+|1|n|@dymtk||@count=037||5|4|ms4889|mvl037|Medium Vehicle Vol - 037|1
+~+|1|n|@dymtk||@count=038||5|4|ms4890|mvl038|Medium Vehicle Vol - 038|1
+~+|1|n|@dymtk||@count=039||5|4|ms4891|mvl039|Medium Vehicle Vol - 039|1
+~+|1|n|@dymtk||@count=040||5|4|ms4892|mvl040|Medium Vehicle Vol - 040|1
+~+|1|n|@dymtk||@count=041||5|4|ms4893|mvl041|Medium Vehicle Vol - 041|1
+~+|1|n|@dymtk||@count=042||5|4|ms4894|mvl042|Medium Vehicle Vol - 042|1
+~+|1|n|@dymtk||@count=043||5|4|ms4895|mvl043|Medium Vehicle Vol - 043|1
+~+|1|n|@dymtk||@count=044||5|4|ms4896|mvl044|Medium Vehicle Vol - 044|1
+~+|1|n|@dymtk||@count=045||5|4|ms4897|mvl045|Medium Vehicle Vol - 045|1
+~+|1|n|@dymtk||@count=046||5|4|ms4898|mvl046|Medium Vehicle Vol - 046|1
+~+|1|n|@dymtk||@count=047||5|4|ms4899|mvl047|Medium Vehicle Vol - 047|1
+~+|1|n|@dymtk||@count=048||5|4|ms4900|mvl048|Medium Vehicle Vol - 048|1
+~+|1|n|@dymtk||@count=049||5|4|ms4901|mvl049|Medium Vehicle Vol - 049|1
+~+|1|n|@dymtk||@count=050||5|4|ms4902|mvl050|Medium Vehicle Vol - 050|1
+~+|1|n|@dymtk||@count=051||5|4|ms4903|mvl051|Medium Vehicle Vol - 051|1
+~+|1|n|@dymtk||@count=052||5|4|ms4904|mvl052|Medium Vehicle Vol - 052|1
+~+|1|n|@dymtk||@count=053||5|4|ms4905|mvl053|Medium Vehicle Vol - 053|1
+~+|1|n|@dymtk||@count=054||5|4|ms4906|mvl054|Medium Vehicle Vol - 054|1
+~+|1|n|@dymtk||@count=055||5|4|ms4907|mvl055|Medium Vehicle Vol - 055|1
+~+|1|n|@dymtk||@count=056||5|4|ms4908|mvl056|Medium Vehicle Vol - 056|1
+~+|1|n|@dymtk||@count=057||5|4|ms4909|mvl057|Medium Vehicle Vol - 057|1
+~+|1|n|@dymtk||@count=058||5|4|ms4910|mvl058|Medium Vehicle Vol - 058|1
+~+|1|n|@dymtk||@count=059||5|4|ms4911|mvl059|Medium Vehicle Vol - 059|1
+~+|1|n|@dymtk||@count=060||5|4|ms4912|mvl060|Medium Vehicle Vol - 060|1
+~+|1|n|@dymtk||@count=061||5|4|ms4913|mvl061|Medium Vehicle Vol - 061|1
+~+|1|n|@dymtk||@count=062||5|4|ms4914|mvl062|Medium Vehicle Vol - 062|1
+~+|1|n|@dymtk||@count=063||5|4|ms4915|mvl063|Medium Vehicle Vol - 063|1
+~+|1|n|@dymtk||@count=064||5|4|ms4916|mvl064|Medium Vehicle Vol - 064|1
+~+|1|n|@dymtk||@count=065||5|4|ms4917|mvl065|Medium Vehicle Vol - 065|1
+~+|1|n|@dymtk||@count=066||5|4|ms4918|mvl066|Medium Vehicle Vol - 066|1
+~+|1|n|@dymtk||@count=067||5|4|ms4919|mvl067|Medium Vehicle Vol - 067|1
+~+|1|n|@dymtk||@count=068||5|4|ms4920|mvl068|Medium Vehicle Vol - 068|1
+~+|1|n|@dymtk||@count=069||5|4|ms4921|mvl069|Medium Vehicle Vol - 069|1
+~+|1|n|@dymtk||@count=070||5|4|ms4922|mvl070|Medium Vehicle Vol - 070|1
+~+|1|n|@dymtk||@count=071||5|4|ms4923|mvl071|Medium Vehicle Vol - 071|1
+~+|1|n|@dymtk||@count=072||5|4|ms4924|mvl072|Medium Vehicle Vol - 072|1
+~+|1|n|@dymtk||@count=073||5|4|ms4925|mvl073|Medium Vehicle Vol - 073|1
+~+|1|n|@dymtk||@count=074||5|4|ms4926|mvl074|Medium Vehicle Vol - 074|1
+~+|1|n|@dymtk||@count=075||5|4|ms4927|mvl075|Medium Vehicle Vol - 075|1
+~+|1|n|@dymtk||@count=076||5|4|ms4928|mvl076|Medium Vehicle Vol - 076|1
+~+|1|n|@dymtk||@count=077||5|4|ms4929|mvl077|Medium Vehicle Vol - 077|1
+~+|1|n|@dymtk||@count=078||5|4|ms4930|mvl078|Medium Vehicle Vol - 078|1
+~+|1|n|@dymtk||@count=079||5|4|ms4931|mvl079|Medium Vehicle Vol - 079|1
+~+|1|n|@dymtk||@count=080||5|4|ms4932|mvl080|Medium Vehicle Vol - 080|1
+~+|1|n|@dymtk||@count=081||5|4|ms4933|mvl081|Medium Vehicle Vol - 081|1
+~+|1|n|@dymtk||@count=082||5|4|ms4934|mvl082|Medium Vehicle Vol - 082|1
+~+|1|n|@dymtk||@count=083||5|4|ms4935|mvl083|Medium Vehicle Vol - 083|1
+~+|1|n|@dymtk||@count=084||5|4|ms4936|mvl084|Medium Vehicle Vol - 084|1
+~+|1|n|@dymtk||@count=085||5|4|ms4937|mvl085|Medium Vehicle Vol - 085|1
+~+|1|n|@dymtk||@count=086||5|4|ms4938|mvl086|Medium Vehicle Vol - 086|1
+~+|1|n|@dymtk||@count=087||5|4|ms4939|mvl087|Medium Vehicle Vol - 087|1
+~+|1|n|@dymtk||@count=088||5|4|ms4940|mvl088|Medium Vehicle Vol - 088|1
+~+|1|n|@dymtk||@count=089||5|4|ms4941|mvl089|Medium Vehicle Vol - 089|1
+~+|1|n|@dymtk||@count=090||5|4|ms4942|mvl090|Medium Vehicle Vol - 090|1
+~+|1|n|@dymtk||@count=091||5|4|ms4943|mvl091|Medium Vehicle Vol - 091|1
+~+|1|n|@dymtk||@count=092||5|4|ms4944|mvl092|Medium Vehicle Vol - 092|1
+~+|1|n|@dymtk||@count=093||5|4|ms4945|mvl093|Medium Vehicle Vol - 093|1
+~+|1|n|@dymtk||@count=094||5|4|ms4946|mvl094|Medium Vehicle Vol - 094|1
+~+|1|n|@dymtk||@count=095||5|4|ms4947|mvl095|Medium Vehicle Vol - 095|1
+~+|1|n|@dymtk||@count=096||5|4|ms4948|mvl096|Medium Vehicle Vol - 096|1
+~+|1|n|@dymtk||@count=097||5|4|ms4949|mvl097|Medium Vehicle Vol - 097|1
+~+|1|n|@dymtk||@count=098||5|4|ms4950|mvl098|Medium Vehicle Vol - 098|1
+~+|1|n|@dymtk||@count=099||5|4|ms4951|mvl099|Medium Vehicle Vol - 099|1
+~+|1|n|@dymtk||@count=100||5|4|ms4952|mvl100|Medium Vehicle Vol - 100|1
+~+|1|n|@dymtk||@count=101||5|4|ms4953|mvl101|Medium Vehicle Vol - 101|1
+~+|1|n|@dymtk||@count=102||5|4|ms4954|mvl102|Medium Vehicle Vol - 102|1
+~+|1|n|@dymtk||@count=103||5|4|ms4955|mvl103|Medium Vehicle Vol - 103|1
+~+|1|n|@dymtk||@count=104||5|4|ms4956|mvl104|Medium Vehicle Vol - 104|1
+~+|1|n|@dymtk||@count=105||5|4|ms4957|mvl105|Medium Vehicle Vol - 105|1
+~+|1|n|@dymtk||@count=106||5|4|ms4958|mvl106|Medium Vehicle Vol - 106|1
+~+|1|n|@dymtk||@count=107||5|4|ms4959|mvl107|Medium Vehicle Vol - 107|1
+~+|1|n|@dymtk||@count=108||5|4|ms4960|mvl108|Medium Vehicle Vol - 108|1
+~+|1|n|@dymtk||@count=109||5|4|ms4961|mvl109|Medium Vehicle Vol - 109|1
+~+|1|n|@dymtk||@count=110||5|4|ms4962|mvl110|Medium Vehicle Vol - 110|1
+~+|1|n|@dymtk||@count=111||5|4|ms4963|mvl111|Medium Vehicle Vol - 111|1
+~+|1|n|@dymtk||@count=112||5|4|ms4964|mvl112|Medium Vehicle Vol - 112|1
+~+|1|n|@dymtk||@count=113||5|4|ms4965|mvl113|Medium Vehicle Vol - 113|1
+~+|1|n|@dymtk||@count=114||5|4|ms4966|mvl114|Medium Vehicle Vol - 114|1
+~+|1|n|@dymtk||@count=115||5|4|ms4967|mvl115|Medium Vehicle Vol - 115|1
+~+|1|n|@dymtk||@count=116||5|4|ms4968|mvl116|Medium Vehicle Vol - 116|1
+~+|1|n|@dymtk||@count=117||5|4|ms4969|mvl117|Medium Vehicle Vol - 117|1
+~+|1|n|@dymtk||@count=118||5|4|ms4970|mvl118|Medium Vehicle Vol - 118|1
+~+|1|n|@dymtk||@count=119||5|4|ms4971|mvl119|Medium Vehicle Vol - 119|1
+~+|1|n|@dymtk||@count=120||5|4|ms4972|mvl120|Medium Vehicle Vol - 120|1
+~+|1|n|@dymtk||@count=121||5|4|ms4973|mvl121|Medium Vehicle Vol - 121|1
+~+|1|n|@dymtk||@count=122||5|4|ms4974|mvl122|Medium Vehicle Vol - 122|1
+~+|1|n|@dymtk||@count=123||5|4|ms4975|mvl123|Medium Vehicle Vol - 123|1
+~+|1|n|@dymtk||@count=124||5|4|ms4976|mvl124|Medium Vehicle Vol - 124|1
+~+|1|n|@dymtk||@count=125||5|4|ms4977|mvl125|Medium Vehicle Vol - 125|1
+~+|1|n|@dymtk||@count=126||5|4|ms4978|mvl126|Medium Vehicle Vol - 126|1
+~+|1|n|@dymtk||@count=127||5|4|ms4979|mvl127|Medium Vehicle Vol - 127|1
+~+|1|n|@dymtk||@count=128||5|4|ms4980|mvl128|Medium Vehicle Vol - 128|1
+~+|1|n|@dymtk||@count=129||5|4|ms4981|mvl129|Medium Vehicle Vol - 129|1
+~+|1|n|@dymtk||@count=130||5|4|ms4982|mvl130|Medium Vehicle Vol - 130|1
+~+|1|n|@dymtk||@count=131||5|4|ms4983|mvl131|Medium Vehicle Vol - 131|1
+~+|1|n|@dymtk||@count=132||5|4|ms4984|mvl132|Medium Vehicle Vol - 132|1
+~+|1|n|@dymtk||@count=133||5|4|ms4985|mvl133|Medium Vehicle Vol - 133|1
+~+|1|n|@dymtk||@count=134||5|4|ms4986|mvl134|Medium Vehicle Vol - 134|1
+~+|1|n|@dymtk||@count=135||5|4|ms4987|mvl135|Medium Vehicle Vol - 135|1
+~+|1|n|@dymtk||@count=136||5|4|ms4988|mvl136|Medium Vehicle Vol - 136|1
+~+|1|n|@dymtk||@count=137||5|4|ms4989|mvl137|Medium Vehicle Vol - 137|1
+~+|1|n|@dymtk||@count=138||5|4|ms4990|mvl138|Medium Vehicle Vol - 138|1
+~+|1|n|@dymtk||@count=139||5|4|ms4991|mvl139|Medium Vehicle Vol - 139|1
+~+|1|n|@dymtk||@count=140||5|4|ms4992|mvl140|Medium Vehicle Vol - 140|1
+~+|1|n|@dymtk||@count=141||5|4|ms4993|mvl141|Medium Vehicle Vol - 141|1
+~+|1|n|@dymtk||@count=142||5|4|ms4994|mvl142|Medium Vehicle Vol - 142|1
+~+|1|n|@dymtk||@count=143||5|4|ms4995|mvl143|Medium Vehicle Vol - 143|1
+~+|1|n|@dymtk||@count=144||5|4|ms4996|mvl144|Medium Vehicle Vol - 144|1
+~+|1|n|@dymtk||@count=145||5|4|ms4997|mvl145|Medium Vehicle Vol - 145|1
+~+|1|n|@dymtk||@count=146||5|4|ms4998|mvl146|Medium Vehicle Vol - 146|1
+~+|1|n|@dymtk||@count=147||5|4|ms4999|mvl147|Medium Vehicle Vol - 147|1
+~+|1|n|@dymtk||@count=148||5|4|ms5000|mvl148|Medium Vehicle Vol - 148|1
+~+|1|n|@dymtk||@count=149||5|4|ms5001|mvl149|Medium Vehicle Vol - 149|1
+~+|1|n|@dymtk||@count=150||5|4|ms5002|mvl150|Medium Vehicle Vol - 150|1
+~+|1|n|@dymtk||@count=151||5|4|ms5003|mvl151|Medium Vehicle Vol - 151|1
+~+|1|n|@dymtk||@count=152||5|4|ms5004|mvl152|Medium Vehicle Vol - 152|1
+~+|1|n|@dymtk||@count=153||5|4|ms5005|mvl153|Medium Vehicle Vol - 153|1
+~+|1|n|@dymtk||@count=154||5|4|ms5006|mvl154|Medium Vehicle Vol - 154|1
+~+|1|n|@dymtk||@count=155||5|4|ms5007|mvl155|Medium Vehicle Vol - 155|1
+~+|1|n|@dymtk||@count=156||5|4|ms5008|mvl156|Medium Vehicle Vol - 156|1
+~+|1|n|@dymtk||@count=157||5|4|ms5009|mvl157|Medium Vehicle Vol - 157|1
+~+|1|n|@dymtk||@count=158||5|4|ms5010|mvl158|Medium Vehicle Vol - 158|1
+~+|1|n|@dymtk||@count=159||5|4|ms5011|mvl159|Medium Vehicle Vol - 159|1
+~+|1|n|@dymtk||@count=160||5|4|ms5012|mvl160|Medium Vehicle Vol - 160|1
+~+|1|n|@dymtk||@count=161||5|4|ms5013|mvl161|Medium Vehicle Vol - 161|1
+~+|1|n|@dymtk||@count=162||5|4|ms5014|mvl162|Medium Vehicle Vol - 162|1
+~+|1|n|@dymtk||@count=163||5|4|ms5015|mvl163|Medium Vehicle Vol - 163|1
+~+|1|n|@dymtk||@count=164||5|4|ms5016|mvl164|Medium Vehicle Vol - 164|1
+~+|1|n|@dymtk||@count=165||5|4|ms5017|mvl165|Medium Vehicle Vol - 165|1
+~+|1|n|@dymtk||@count=166||5|4|ms5018|mvl166|Medium Vehicle Vol - 166|1
+~+|1|n|@dymtk||@count=167||5|4|ms5019|mvl167|Medium Vehicle Vol - 167|1
+~+|1|n|@dymtk||@count=168||5|4|ms5020|mvl168|Medium Vehicle Vol - 168|1
+~+|1|n|@dymtk||@count=169||5|4|ms5021|mvl169|Medium Vehicle Vol - 169|1
+~+|1|n|@dymtk||@count=170||5|4|ms5022|mvl170|Medium Vehicle Vol - 170|1
+~+|1|n|@dymtk||@count=171||5|4|ms5023|mvl171|Medium Vehicle Vol - 171|1
+~+|1|n|@dymtk||@count=172||5|4|ms5024|mvl172|Medium Vehicle Vol - 172|1
+~+|1|n|@dymtk||@count=173||5|4|ms5025|mvl173|Medium Vehicle Vol - 173|1
+~+|1|n|@dymtk||@count=174||5|4|ms5026|mvl174|Medium Vehicle Vol - 174|1
+~+|1|n|@dymtk||@count=175||5|4|ms5027|mvl175|Medium Vehicle Vol - 175|1
+~+|1|n|@dymtk||@count=176||5|4|ms5028|mvl176|Medium Vehicle Vol - 176|1
+q
+~/ ---------------------------------------------------------------
+~/ --- Store Commercial Vehicle Volumes in Scalars for Summary
+~/ ---------------------------------------------------------------
+~/2.41
+~/ --- Daily Commercial Vehicle Volumes
+~/+|1|n|@dycmv||@count=001||5|4|ms5029|cvl001|Commercial Vehicle Vol - 001|1
+~/+|1|n|@dycmv||@count=002||5|4|ms5030|cvl002|Commercial Vehicle Vol - 002|1
+~/+|1|n|@dycmv||@count=003||5|4|ms5031|cvl003|Commercial Vehicle Vol - 003|1
+~/+|1|n|@dycmv||@count=004||5|4|ms5032|cvl004|Commercial Vehicle Vol - 004|1
+~/+|1|n|@dycmv||@count=005||5|4|ms5033|cvl005|Commercial Vehicle Vol - 005|1
+~/+|1|n|@dycmv||@count=006||5|4|ms5034|cvl006|Commercial Vehicle Vol - 006|1
+~/+|1|n|@dycmv||@count=007||5|4|ms5035|cvl007|Commercial Vehicle Vol - 007|1
+~/+|1|n|@dycmv||@count=008||5|4|ms5036|cvl008|Commercial Vehicle Vol - 008|1
+~/+|1|n|@dycmv||@count=009||5|4|ms5037|cvl009|Commercial Vehicle Vol - 009|1
+~/+|1|n|@dycmv||@count=010||5|4|ms5038|cvl010|Commercial Vehicle Vol - 010|1
+~/+|1|n|@dycmv||@count=011||5|4|ms5039|cvl011|Commercial Vehicle Vol - 011|1
+~/+|1|n|@dycmv||@count=012||5|4|ms5040|cvl012|Commercial Vehicle Vol - 012|1
+~/+|1|n|@dycmv||@count=013||5|4|ms5041|cvl013|Commercial Vehicle Vol - 013|1
+~/+|1|n|@dycmv||@count=014||5|4|ms5042|cvl014|Commercial Vehicle Vol - 014|1
+~/+|1|n|@dycmv||@count=015||5|4|ms5043|cvl015|Commercial Vehicle Vol - 015|1
+~/+|1|n|@dycmv||@count=016||5|4|ms5044|cvl016|Commercial Vehicle Vol - 016|1
+~/+|1|n|@dycmv||@count=017||5|4|ms5045|cvl017|Commercial Vehicle Vol - 017|1
+~/+|1|n|@dycmv||@count=018||5|4|ms5046|cvl018|Commercial Vehicle Vol - 018|1
+~/+|1|n|@dycmv||@count=019||5|4|ms5047|cvl019|Commercial Vehicle Vol - 019|1
+~/+|1|n|@dycmv||@count=020||5|4|ms5048|cvl020|Commercial Vehicle Vol - 020|1
+~/+|1|n|@dycmv||@count=021||5|4|ms5049|cvl021|Commercial Vehicle Vol - 021|1
+~/+|1|n|@dycmv||@count=022||5|4|ms5050|cvl022|Commercial Vehicle Vol - 022|1
+~/+|1|n|@dycmv||@count=023||5|4|ms5051|cvl023|Commercial Vehicle Vol - 023|1
+~/+|1|n|@dycmv||@count=024||5|4|ms5052|cvl024|Commercial Vehicle Vol - 024|1
+~/+|1|n|@dycmv||@count=025||5|4|ms5053|cvl025|Commercial Vehicle Vol - 025|1
+~/+|1|n|@dycmv||@count=026||5|4|ms5054|cvl026|Commercial Vehicle Vol - 026|1
+~/+|1|n|@dycmv||@count=027||5|4|ms5055|cvl027|Commercial Vehicle Vol - 027|1
+~/+|1|n|@dycmv||@count=028||5|4|ms5056|cvl028|Commercial Vehicle Vol - 028|1
+~/+|1|n|@dycmv||@count=029||5|4|ms5057|cvl029|Commercial Vehicle Vol - 029|1
+~/+|1|n|@dycmv||@count=030||5|4|ms5058|cvl030|Commercial Vehicle Vol - 030|1
+~/+|1|n|@dycmv||@count=031||5|4|ms5059|cvl031|Commercial Vehicle Vol - 031|1
+~/+|1|n|@dycmv||@count=032||5|4|ms5060|cvl032|Commercial Vehicle Vol - 032|1
+~/+|1|n|@dycmv||@count=033||5|4|ms5061|cvl033|Commercial Vehicle Vol - 033|1
+~/+|1|n|@dycmv||@count=034||5|4|ms5062|cvl034|Commercial Vehicle Vol - 034|1
+~/+|1|n|@dycmv||@count=035||5|4|ms5063|cvl035|Commercial Vehicle Vol - 035|1
+~/+|1|n|@dycmv||@count=036||5|4|ms5064|cvl036|Commercial Vehicle Vol - 036|1
+~/+|1|n|@dycmv||@count=037||5|4|ms5065|cvl037|Commercial Vehicle Vol - 037|1
+~/+|1|n|@dycmv||@count=038||5|4|ms5066|cvl038|Commercial Vehicle Vol - 038|1
+~/+|1|n|@dycmv||@count=039||5|4|ms5067|cvl039|Commercial Vehicle Vol - 039|1
+~/+|1|n|@dycmv||@count=040||5|4|ms5068|cvl040|Commercial Vehicle Vol - 040|1
+~/+|1|n|@dycmv||@count=041||5|4|ms5069|cvl041|Commercial Vehicle Vol - 041|1
+~/+|1|n|@dycmv||@count=042||5|4|ms5070|cvl042|Commercial Vehicle Vol - 042|1
+~/+|1|n|@dycmv||@count=043||5|4|ms5071|cvl043|Commercial Vehicle Vol - 043|1
+~/+|1|n|@dycmv||@count=044||5|4|ms5072|cvl044|Commercial Vehicle Vol - 044|1
+~/+|1|n|@dycmv||@count=045||5|4|ms5073|cvl045|Commercial Vehicle Vol - 045|1
+~/+|1|n|@dycmv||@count=046||5|4|ms5074|cvl046|Commercial Vehicle Vol - 046|1
+~/+|1|n|@dycmv||@count=047||5|4|ms5075|cvl047|Commercial Vehicle Vol - 047|1
+~/+|1|n|@dycmv||@count=048||5|4|ms5076|cvl048|Commercial Vehicle Vol - 048|1
+~/+|1|n|@dycmv||@count=049||5|4|ms5077|cvl049|Commercial Vehicle Vol - 049|1
+~/+|1|n|@dycmv||@count=050||5|4|ms5078|cvl050|Commercial Vehicle Vol - 050|1
+~/+|1|n|@dycmv||@count=051||5|4|ms5079|cvl051|Commercial Vehicle Vol - 051|1
+~/+|1|n|@dycmv||@count=052||5|4|ms5080|cvl052|Commercial Vehicle Vol - 052|1
+~/+|1|n|@dycmv||@count=053||5|4|ms5081|cvl053|Commercial Vehicle Vol - 053|1
+~/+|1|n|@dycmv||@count=054||5|4|ms5082|cvl054|Commercial Vehicle Vol - 054|1
+~/+|1|n|@dycmv||@count=055||5|4|ms5083|cvl055|Commercial Vehicle Vol - 055|1
+~/+|1|n|@dycmv||@count=056||5|4|ms5084|cvl056|Commercial Vehicle Vol - 056|1
+~/+|1|n|@dycmv||@count=057||5|4|ms5085|cvl057|Commercial Vehicle Vol - 057|1
+~/+|1|n|@dycmv||@count=058||5|4|ms5086|cvl058|Commercial Vehicle Vol - 058|1
+~/+|1|n|@dycmv||@count=059||5|4|ms5087|cvl059|Commercial Vehicle Vol - 059|1
+~/+|1|n|@dycmv||@count=060||5|4|ms5088|cvl060|Commercial Vehicle Vol - 060|1
+~/+|1|n|@dycmv||@count=061||5|4|ms5089|cvl061|Commercial Vehicle Vol - 061|1
+~/+|1|n|@dycmv||@count=062||5|4|ms5090|cvl062|Commercial Vehicle Vol - 062|1
+~/+|1|n|@dycmv||@count=063||5|4|ms5091|cvl063|Commercial Vehicle Vol - 063|1
+~/+|1|n|@dycmv||@count=064||5|4|ms5092|cvl064|Commercial Vehicle Vol - 064|1
+~/+|1|n|@dycmv||@count=065||5|4|ms5093|cvl065|Commercial Vehicle Vol - 065|1
+~/+|1|n|@dycmv||@count=066||5|4|ms5094|cvl066|Commercial Vehicle Vol - 066|1
+~/+|1|n|@dycmv||@count=067||5|4|ms5095|cvl067|Commercial Vehicle Vol - 067|1
+~/+|1|n|@dycmv||@count=068||5|4|ms5096|cvl068|Commercial Vehicle Vol - 068|1
+~/+|1|n|@dycmv||@count=069||5|4|ms5097|cvl069|Commercial Vehicle Vol - 069|1
+~/+|1|n|@dycmv||@count=070||5|4|ms5098|cvl070|Commercial Vehicle Vol - 070|1
+~/+|1|n|@dycmv||@count=071||5|4|ms5099|cvl071|Commercial Vehicle Vol - 071|1
+~/+|1|n|@dycmv||@count=072||5|4|ms5100|cvl072|Commercial Vehicle Vol - 072|1
+~/+|1|n|@dycmv||@count=073||5|4|ms5101|cvl073|Commercial Vehicle Vol - 073|1
+~/+|1|n|@dycmv||@count=074||5|4|ms5102|cvl074|Commercial Vehicle Vol - 074|1
+~/+|1|n|@dycmv||@count=075||5|4|ms5103|cvl075|Commercial Vehicle Vol - 075|1
+~/+|1|n|@dycmv||@count=076||5|4|ms5104|cvl076|Commercial Vehicle Vol - 076|1
+~/+|1|n|@dycmv||@count=077||5|4|ms5105|cvl077|Commercial Vehicle Vol - 077|1
+~/+|1|n|@dycmv||@count=078||5|4|ms5106|cvl078|Commercial Vehicle Vol - 078|1
+~/+|1|n|@dycmv||@count=079||5|4|ms5107|cvl079|Commercial Vehicle Vol - 079|1
+~/+|1|n|@dycmv||@count=080||5|4|ms5108|cvl080|Commercial Vehicle Vol - 080|1
+~/+|1|n|@dycmv||@count=081||5|4|ms5109|cvl081|Commercial Vehicle Vol - 081|1
+~/+|1|n|@dycmv||@count=082||5|4|ms5110|cvl082|Commercial Vehicle Vol - 082|1
+~/+|1|n|@dycmv||@count=083||5|4|ms5111|cvl083|Commercial Vehicle Vol - 083|1
+~/+|1|n|@dycmv||@count=084||5|4|ms5112|cvl084|Commercial Vehicle Vol - 084|1
+~/+|1|n|@dycmv||@count=085||5|4|ms5113|cvl085|Commercial Vehicle Vol - 085|1
+~/+|1|n|@dycmv||@count=086||5|4|ms5114|cvl086|Commercial Vehicle Vol - 086|1
+~/+|1|n|@dycmv||@count=087||5|4|ms5115|cvl087|Commercial Vehicle Vol - 087|1
+~/+|1|n|@dycmv||@count=088||5|4|ms5116|cvl088|Commercial Vehicle Vol - 088|1
+~/+|1|n|@dycmv||@count=089||5|4|ms5117|cvl089|Commercial Vehicle Vol - 089|1
+~/+|1|n|@dycmv||@count=090||5|4|ms5118|cvl090|Commercial Vehicle Vol - 090|1
+~/+|1|n|@dycmv||@count=091||5|4|ms5119|cvl091|Commercial Vehicle Vol - 091|1
+~/+|1|n|@dycmv||@count=092||5|4|ms5120|cvl092|Commercial Vehicle Vol - 092|1
+~/+|1|n|@dycmv||@count=093||5|4|ms5121|cvl093|Commercial Vehicle Vol - 093|1
+~/+|1|n|@dycmv||@count=094||5|4|ms5122|cvl094|Commercial Vehicle Vol - 094|1
+~/+|1|n|@dycmv||@count=095||5|4|ms5123|cvl095|Commercial Vehicle Vol - 095|1
+~/+|1|n|@dycmv||@count=096||5|4|ms5124|cvl096|Commercial Vehicle Vol - 096|1
+~/+|1|n|@dycmv||@count=097||5|4|ms5125|cvl097|Commercial Vehicle Vol - 097|1
+~/+|1|n|@dycmv||@count=098||5|4|ms5126|cvl098|Commercial Vehicle Vol - 098|1
+~/+|1|n|@dycmv||@count=099||5|4|ms5127|cvl099|Commercial Vehicle Vol - 099|1
+~/+|1|n|@dycmv||@count=100||5|4|ms5128|cvl100|Commercial Vehicle Vol - 100|1
+~/+|1|n|@dycmv||@count=101||5|4|ms5129|cvl101|Commercial Vehicle Vol - 101|1
+~/+|1|n|@dycmv||@count=102||5|4|ms5130|cvl102|Commercial Vehicle Vol - 102|1
+~/+|1|n|@dycmv||@count=103||5|4|ms5131|cvl103|Commercial Vehicle Vol - 103|1
+~/+|1|n|@dycmv||@count=104||5|4|ms5132|cvl104|Commercial Vehicle Vol - 104|1
+~/+|1|n|@dycmv||@count=105||5|4|ms5133|cvl105|Commercial Vehicle Vol - 105|1
+~/+|1|n|@dycmv||@count=106||5|4|ms5134|cvl106|Commercial Vehicle Vol - 106|1
+~/+|1|n|@dycmv||@count=107||5|4|ms5135|cvl107|Commercial Vehicle Vol - 107|1
+~/+|1|n|@dycmv||@count=108||5|4|ms5136|cvl108|Commercial Vehicle Vol - 108|1
+~/+|1|n|@dycmv||@count=109||5|4|ms5137|cvl109|Commercial Vehicle Vol - 109|1
+~/+|1|n|@dycmv||@count=110||5|4|ms5138|cvl110|Commercial Vehicle Vol - 110|1
+~/+|1|n|@dycmv||@count=111||5|4|ms5139|cvl111|Commercial Vehicle Vol - 111|1
+~/+|1|n|@dycmv||@count=112||5|4|ms5140|cvl112|Commercial Vehicle Vol - 112|1
+~/+|1|n|@dycmv||@count=113||5|4|ms5141|cvl113|Commercial Vehicle Vol - 113|1
+~/+|1|n|@dycmv||@count=114||5|4|ms5142|cvl114|Commercial Vehicle Vol - 114|1
+~/+|1|n|@dycmv||@count=115||5|4|ms5143|cvl115|Commercial Vehicle Vol - 115|1
+~/+|1|n|@dycmv||@count=116||5|4|ms5144|cvl116|Commercial Vehicle Vol - 116|1
+~/+|1|n|@dycmv||@count=117||5|4|ms5145|cvl117|Commercial Vehicle Vol - 117|1
+~/+|1|n|@dycmv||@count=118||5|4|ms5146|cvl118|Commercial Vehicle Vol - 118|1
+~/+|1|n|@dycmv||@count=119||5|4|ms5147|cvl119|Commercial Vehicle Vol - 119|1
+~/+|1|n|@dycmv||@count=120||5|4|ms5148|cvl120|Commercial Vehicle Vol - 120|1
+~/+|1|n|@dycmv||@count=121||5|4|ms5149|cvl121|Commercial Vehicle Vol - 121|1
+~/+|1|n|@dycmv||@count=122||5|4|ms5150|cvl122|Commercial Vehicle Vol - 122|1
+~/+|1|n|@dycmv||@count=123||5|4|ms5151|cvl123|Commercial Vehicle Vol - 123|1
+~/+|1|n|@dycmv||@count=124||5|4|ms5152|cvl124|Commercial Vehicle Vol - 124|1
+~/+|1|n|@dycmv||@count=125||5|4|ms5153|cvl125|Commercial Vehicle Vol - 125|1
+~/+|1|n|@dycmv||@count=126||5|4|ms5154|cvl126|Commercial Vehicle Vol - 126|1
+~/+|1|n|@dycmv||@count=127||5|4|ms5155|cvl127|Commercial Vehicle Vol - 127|1
+~/+|1|n|@dycmv||@count=128||5|4|ms5156|cvl128|Commercial Vehicle Vol - 128|1
+~/+|1|n|@dycmv||@count=129||5|4|ms5157|cvl129|Commercial Vehicle Vol - 129|1
+~/+|1|n|@dycmv||@count=130||5|4|ms5158|cvl130|Commercial Vehicle Vol - 130|1
+~/+|1|n|@dycmv||@count=131||5|4|ms5159|cvl131|Commercial Vehicle Vol - 131|1
+~/+|1|n|@dycmv||@count=132||5|4|ms5160|cvl132|Commercial Vehicle Vol - 132|1
+~/+|1|n|@dycmv||@count=133||5|4|ms5161|cvl133|Commercial Vehicle Vol - 133|1
+~/+|1|n|@dycmv||@count=134||5|4|ms5162|cvl134|Commercial Vehicle Vol - 134|1
+~/+|1|n|@dycmv||@count=135||5|4|ms5163|cvl135|Commercial Vehicle Vol - 135|1
+~/+|1|n|@dycmv||@count=136||5|4|ms5164|cvl136|Commercial Vehicle Vol - 136|1
+~/+|1|n|@dycmv||@count=137||5|4|ms5165|cvl137|Commercial Vehicle Vol - 137|1
+~/+|1|n|@dycmv||@count=138||5|4|ms5166|cvl138|Commercial Vehicle Vol - 138|1
+~/+|1|n|@dycmv||@count=139||5|4|ms5167|cvl139|Commercial Vehicle Vol - 139|1
+~/+|1|n|@dycmv||@count=140||5|4|ms5168|cvl140|Commercial Vehicle Vol - 140|1
+~/+|1|n|@dycmv||@count=141||5|4|ms5169|cvl141|Commercial Vehicle Vol - 141|1
+~/+|1|n|@dycmv||@count=142||5|4|ms5170|cvl142|Commercial Vehicle Vol - 142|1
+~/+|1|n|@dycmv||@count=143||5|4|ms5171|cvl143|Commercial Vehicle Vol - 143|1
+~/+|1|n|@dycmv||@count=144||5|4|ms5172|cvl144|Commercial Vehicle Vol - 144|1
+~/+|1|n|@dycmv||@count=145||5|4|ms5173|cvl145|Commercial Vehicle Vol - 145|1
+~/+|1|n|@dycmv||@count=146||5|4|ms5174|cvl146|Commercial Vehicle Vol - 146|1
+~/+|1|n|@dycmv||@count=147||5|4|ms5175|cvl147|Commercial Vehicle Vol - 147|1
+~/+|1|n|@dycmv||@count=148||5|4|ms5176|cvl148|Commercial Vehicle Vol - 148|1
+~/+|1|n|@dycmv||@count=149||5|4|ms5177|cvl149|Commercial Vehicle Vol - 149|1
+~/+|1|n|@dycmv||@count=150||5|4|ms5178|cvl150|Commercial Vehicle Vol - 150|1
+~/+|1|n|@dycmv||@count=151||5|4|ms5179|cvl151|Commercial Vehicle Vol - 151|1
+~/+|1|n|@dycmv||@count=152||5|4|ms5180|cvl152|Commercial Vehicle Vol - 152|1
+~/+|1|n|@dycmv||@count=153||5|4|ms5181|cvl153|Commercial Vehicle Vol - 153|1
+~/+|1|n|@dycmv||@count=154||5|4|ms5182|cvl154|Commercial Vehicle Vol - 154|1
+~/+|1|n|@dycmv||@count=155||5|4|ms5183|cvl155|Commercial Vehicle Vol - 155|1
+~/+|1|n|@dycmv||@count=156||5|4|ms5184|cvl156|Commercial Vehicle Vol - 156|1
+~/+|1|n|@dycmv||@count=157||5|4|ms5185|cvl157|Commercial Vehicle Vol - 157|1
+~/+|1|n|@dycmv||@count=158||5|4|ms5186|cvl158|Commercial Vehicle Vol - 158|1
+~/+|1|n|@dycmv||@count=159||5|4|ms5187|cvl159|Commercial Vehicle Vol - 159|1
+~/+|1|n|@dycmv||@count=160||5|4|ms5188|cvl160|Commercial Vehicle Vol - 160|1
+~/+|1|n|@dycmv||@count=161||5|4|ms5189|cvl161|Commercial Vehicle Vol - 161|1
+~/+|1|n|@dycmv||@count=162||5|4|ms5190|cvl162|Commercial Vehicle Vol - 162|1
+~/+|1|n|@dycmv||@count=163||5|4|ms5191|cvl163|Commercial Vehicle Vol - 163|1
+~/+|1|n|@dycmv||@count=164||5|4|ms5192|cvl164|Commercial Vehicle Vol - 164|1
+~/+|1|n|@dycmv||@count=165||5|4|ms5193|cvl165|Commercial Vehicle Vol - 165|1
+~/+|1|n|@dycmv||@count=166||5|4|ms5194|cvl166|Commercial Vehicle Vol - 166|1
+~/+|1|n|@dycmv||@count=167||5|4|ms5195|cvl167|Commercial Vehicle Vol - 167|1
+~/+|1|n|@dycmv||@count=168||5|4|ms5196|cvl168|Commercial Vehicle Vol - 168|1
+~/+|1|n|@dycmv||@count=169||5|4|ms5197|cvl169|Commercial Vehicle Vol - 169|1
+~/+|1|n|@dycmv||@count=170||5|4|ms5198|cvl170|Commercial Vehicle Vol - 170|1
+~/+|1|n|@dycmv||@count=171||5|4|ms5199|cvl171|Commercial Vehicle Vol - 171|1
+~/+|1|n|@dycmv||@count=172||5|4|ms5200|cvl172|Commercial Vehicle Vol - 172|1
+~/+|1|n|@dycmv||@count=173||5|4|ms5201|cvl173|Commercial Vehicle Vol - 173|1
+~/+|1|n|@dycmv||@count=174||5|4|ms5202|cvl174|Commercial Vehicle Vol - 174|1
+~/+|1|n|@dycmv||@count=175||5|4|ms5203|cvl175|Commercial Vehicle Vol - 175|1
+~/+|1|n|@dycmv||@count=176||5|4|ms5204|cvl176|Commercial Vehicle Vol - 176|1
+q
+~/ ---------------------------------------------------------------
+~/
+~/end: 2-xx_daily_count.mac
+~/exit emme
+q

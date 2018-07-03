@@ -14,8 +14,12 @@ el1=@rdly
 el2=0
 ~?y=1002
 el2=@trnv3
+~?y=1003
+el2=@trnv3
 ~?y=1004
 el2=@trnv6
+~?y=1005
+el2=@trnv4
 ~/ ...call module 5.25: path-based traffic assignment
 5.25
 ~/ ...assignment set-up and execution: new set-up
@@ -24,14 +28,13 @@ el2=@trnv6
 ~+|s|@toll1|%ms01%|mf"%5%vehda" /class 1: non-work sov
 ~+|h|@toll2|%ms02%|mf"%5%vehs2" /class 2: hov 2
 ~+|i|@toll3|%ms03%|mf"%5%vehs3" /class 3: hov 3+
-~+|j|@toll3|%ms04%|mf"%5%vpool" /class 4: vanpool
-~+|s|@toll1|%ms05%|mf"%5%hbw1v" /class 5: hbw income 1 sov
-~+|s|@toll1|%ms06%|mf"%5%hbw2v" /class 6: hbw income 2 sov
-~+|s|@toll1|%ms07%|mf"%5%hbw3v" /class 7: hbw income 3 sov
-~+|s|@toll1|%ms08%|mf"%5%hbw4v" /class 8: hbw income 4 sov
-~+|v|@trkc1|%ms09%|mf"%5%lttrk" /class 9: light truck
-~+|u|@trkc2|%ms10%|mf"%5%mdtrk" /class 10: medium truck
-~+|t|@trkc3|%ms11%|mf"%5%hvtrk" /class 11: heavy truck
+~+|s|@toll1|%ms04%|mf"%5%hbw1v" /class 5: hbw income 1 sov
+~+|s|@toll1|%ms05%|mf"%5%hbw2v" /class 6: hbw income 2 sov
+~+|s|@toll1|%ms06%|mf"%5%hbw3v" /class 7: hbw income 3 sov
+~+|s|@toll1|%ms07%|mf"%5%hbw4v" /class 8: hbw income 4 sov
+~+|v|@toll1|%ms08%|mf"%5%comvh" /class 9: commercial vehicle
+~+|u|@trkc2|%ms09%|mf"%5%mdtrk" /class 10: medium truck
+~+|t|@trkc3|%ms10%|mf"%5%hvtrk" /class 11: heavy truck
 /
 ~/ ...enter assignment options/parameters
 4000      /maximum memory for paths
@@ -44,7 +47,7 @@ el2=@trnv6
 0.0001    /stopping criterion for relative gap
 0.001     /stopping criterion for normalized pap (excess average cost)
 ~/ ...run path based assignment
-2         
+2
 ~/ ...write report file
 ~$FreeFlow
 ~:WarmStart
@@ -54,8 +57,12 @@ el1=@rdly
 el2=0
 ~?y=1002
 el2=@trnv3
+~?y=1003
+el2=@trnv3
 ~?y=1004
 el2=@trnv6
+~?y=1005
+el2=@trnv4
 ~/ ...call module 5.25: path-based traffic assignment
 5.25
 ~/ ...controlled rounding for small demand
@@ -66,7 +73,7 @@ el2=@trnv6
 ~+|1|mf"%5%hbw2v"|1|1|mf"%5%hbw2v"|n|2
 ~+|1|mf"%5%hbw3v"|1|1|mf"%5%hbw3v"|n|2
 ~+|1|mf"%5%hbw4v"|1|1|mf"%5%hbw4v"|n|2
-~+|1|mf"%5%lttrk"|1|1|mf"%5%lttrk"|n|2
+~+|1|mf"%5%comvh"|1|1|mf"%5%comvh"|n|2
 ~+|1|mf"%5%mdtrk"|1|1|mf"%5%mdtrk"|n|2
 ~+|1|mf"%5%hvtrk"|1|1|mf"%5%hvtrk"|n|2
 ~/ ...assignment set-up and execution
@@ -82,7 +89,7 @@ el2=@trnv6
 0.001     /stopping criterion for normalized pap (excess average cost)
 ~#
 ~/ ...run path based assignment
-2         
+2
 ~/ ...write report file
 ~#
 ~:FreeFlow
@@ -93,17 +100,16 @@ el2=@trnv6
 ~+|@sov|n|   /class 1: non-work sov
 ~+|@hov2|n|  /class 2: hov 2
 ~+|@hov3|n|  /class 3: hov 3+
-~+|@vpool|n| /class 4: vanpool
 ~+|@hbw1|n|  /class 5: hbw income 1 sov
 ~+|@hbw2|n|  /class 6: hbw income 2 sov
 ~+|@hbw3|n|  /class 7: hbw income 3 sov
 ~+|@hbw4|n|  /class 7: hbw income 3 sov
-~+|@light|n| /class 9: light truck
+~+|@comvh|n| /class 9: commercial vehicle
 ~+|@mediu|n| /class 10: medium truck
 ~+|@heavy|n| /class 11: heavy truck
 2
 ~/ ...write report file
-q  
+q
 ~/
 ~/end: 5_auto_assignment.mac
 ~/exit emme

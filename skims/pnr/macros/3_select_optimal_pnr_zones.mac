@@ -1,0 +1,95 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3_select_optimal_pnr_zones.rpt
+~/ -------------------------------------------------------------
+~/ --- compute product of utilities for auto legs
+~/ --- determine optimal pnr zone based on product of utilities
+~/ -------------------------------------------------------------
+3.23
+~# ...compute triple-index operation
+1
+~# ...first operand matrix
+mf"autil%1%"
+~# ...matrix combination operator
+*
+~# ...second operand matrix
+mf"tutil%1%"
+~# ...transpose of second operand matrix
+n
+~# ...masking operator/function  1 (optional)
+
+~# ...contraction operator
+.max.
+~# ...result matrix
+mf"utprd%1%"
+n
+~# ...matrix to hold argmax intermediate zones
+mf"prdzn%1%"
+n
+~# ...submatrix
+y
+~# ...origin zones
+1,%2%
+
+~# ...intermediate zones
+%3%,%4%
+
+~# ...destination zones
+1,%2%
+
+~# ...constraint matrix
+
+~# ...generate summary repport
+y
+~/ ...write report
+2
+~/ ...compute sum of utilities for auto and transit legs
+~/ ...determine optimal pnr zone based on sum of utilities
+~# ...compute triple-index operation
+1
+~# ...first operand matrix
+mf"autil%1%"
+~# ...matrix combination operator
++
+~# ...second operand matrix
+mf"tutil%1%"
+~# ...transpose of second operand matrix
+n
+~# ...masking operator/function  1 (optional)
+
+~# ...contraction operator
+.max.
+~# ...result matrix
+mf"utsum%1%"
+n
+~# ...matrix to hold argmax intermediate zones
+mf"sumzn%1%"
+n
+~# ...submatrix
+y
+~# ...origin zones
+1,%2%
+
+~# ...intermediate zones
+%3%,%4%
+
+~# ...destination zones
+1,%2%
+
+~# ...constraint matrix
+
+~# ...generate summary repport
+y
+~/ ...write report
+2
+q
+~/ ------------------------------------------
+~/ --- for zonal interchanges where the product of the utilities = 0
+~/ --- set optimal pnr matrix (based on utility sums) = 0
+~/ ------------------------------------------
+~+|3.21|1|y|mf"sumzn%1%"|n|0||mf"utprd%1%"|0,0,in|n|2|q
+~/ ------------------------------------------
+~/ --- Exit Emme
+~/ ------------------------------------------
+q

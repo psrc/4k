@@ -45,8 +45,8 @@ echo Final Iteration Auto Assignments completed on %date% at %time%. >> psrc_4k_
 
 REM Create Auto Skims (No Skim Averaging occurs in this Iteration)
 cd skims\auto
-call batchfiles\basic\auto_skims.bat
-call batchfiles\check\auto_skim_completion_check.bat
+call batchfiles\auto_skims.bat
+call batchfiles\auto_skim_completion_check.bat
 cd ..\..
 echo Final Iteration Auto Skims completed on %date% at %time%. >> psrc_4k_log.txt
 

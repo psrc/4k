@@ -1,0 +1,16 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=2_calculate_pnr_utilities.rpt
+~/ ------------------------------------------
+~/ --- Calculate utility of auto leg to pnr lot (max = 60 minutes)
+~/ ------------------------------------------
+~+|3.21|1|y|mf"autil%1%"|n|exp(-0.199*(mf"ah%1%bcs"))||mf"ah%1%bcs"|0,60,in|y|1,%2%||%3%,%4%||2|q
+~/ ------------------------------------------
+~/ --- Calculate utility of transit leg from pnr lot (max = 180 minutes)
+~/ ------------------------------------------
+~+|3.21|1|y|mf"tutil%1%"|n|exp(-0.034*(mf"atrtwa".min.180))||mf"atrtwa"|0,0,ex|y|%3%,%4%||1,%2%||2|q
+~/ ------------------------------------------
+~/ --- Exit Emme
+~/ ------------------------------------------
+q

@@ -11,17 +11,17 @@ reports=8_calculate_md_fares.rpt
 ~# ...input/modify zone groups (using batch entry)
 1
 ~# ...enter file name for batch input
-..\..\..\..\input\model\ensembles\transit_fare_zones.ens
+..\..\..\..\parameters\ensembles\transit_fare_zones.ens
 ~/ ...write report file
 2
 1
 ~# ...enter file name for batch input
-..\..\..\..\input\model\ensembles\uw_gu.ens
+..\..\..\..\parameters\ensembles\uw_gu.ens
 ~/ ...write report file
 2
 1
 ~# ...enter file name for batch input
-..\..\..\..\input\model\ensembles\bellevuecbd_gv.ens
+..\..\..\..\parameters\ensembles\bellevuecbd_gv.ens
 ~/ ...write report file
 2
 q

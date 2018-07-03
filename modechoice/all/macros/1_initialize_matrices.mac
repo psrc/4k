@@ -1,0 +1,312 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/ ----------------------------------------------------
+~/ --- Initialize matrix directory
+~/ ----------------------------------------------------
+~+|3.12|7|y|q
+~/ ----------------------------------------------------
+~/ --- Initialize Scalar Matrices
+~/ ----------------------------------------------------
+3.12
+~+|1|ms01|autoop|auto operating cost (cents/mile)|0
+~+|1|ms02|asccs2|asc for shared ride 2|0
+~+|1|ms03|asccs3|asc for shared ride 3+|0
+~+|1|ms04|ascctw|asc for transit walk|0
+~+|1|ms05|asccbk|asc for bike|0
+~+|1|ms06|asccwk|asc for walk|0
+~+|1|ms07|autivt|auto iv-time coeff|0
+~+|1|ms08|trwivt|tw iv-time coeff|0
+~+|1|ms09|biketm|bike time coeff|0
+~+|1|ms10|walktm|walk time coeff|0
+~+|1|ms11|autovt|auto ov-time coeff|0
+~+|1|ms12|trwovt|tw ov-time coeff|0
+~+|1|ms13|trwaux|tw aux-time coeff|0
+~+|1|ms14|trwiwt|tw iw-time coeff|0
+~+|1|ms15|trwxfr|tw xfr-time coeff|0
+~+|1|ms16|trwbrd|tw brd-time coeff|0
+~+|1|ms17|trwnbd|tw nbd coeff|0
+~+|1|ms18|autcos|auto cost coefficient|0
+~+|1|ms19|trwcos|tw cost coeff|0
+~+|1|ms20|bdsovo|cbd coeff for sov (mo)|0
+~+|1|ms21|bdsovd|cbd coeff for sov (md)|0
+~+|1|ms22|bdsr2o|cbd coeff for sr2 (mo)|0
+~+|1|ms23|bdsr2d|cbd coeff for sr2 (md)|0
+~+|1|ms24|bdsr3o|cbd coeff for sr3 (mo)|0
+~+|1|ms25|bdsr3d|cbd coeff for sr3 (md)|0
+~+|1|ms26|bdtrwo|cbd coeff for tw (mo)|0
+~+|1|ms27|bdtrwd|cbd coeff for tw (md)|0
+~+|1|ms28|bdbiko|cbd coeff for bike (mo)|0
+~+|1|ms29|bdbikd|cbd coeff for bike (md)|0
+~+|1|ms30|bdwlko|cbd coeff for walk (mo)|0
+~+|1|ms31|bdwlkd|cbd coeff for walk (md)|0
+~+|1|ms32|uidsvo|uf coeff for sov (mo) - int density|0
+~+|1|ms33|uidsvd|uf coeff for sov (md) - int density|0
+~+|1|ms34|umxsvo|uf coeff for sov (mo) - lu mix|0
+~+|1|ms35|umxsvd|uf coeff for sov (md) - lu mix|0
+~+|1|ms36|unmsvo|uf coeff for sov (mo) - non motorized|0
+~+|1|ms37|unmsvd|uf coeff for sov (md) - non motorized|0
+~+|1|ms38|uresvo|uf coeff for sov (mo) - retail far|0
+~+|1|ms39|uresvd|uf coeff for sov (md) - retail far|0
+~+|1|ms40|uids2o|uf coeff for sr2 (mo) - int density|0
+~+|1|ms41|uids2d|uf coeff for sr2 (md) - int density|0
+~+|1|ms42|umxs2o|uf coeff for sr2 (mo) - lu mix|0
+~+|1|ms43|umxs2d|uf coeff for sr2 (md) - lu mix|0
+~+|1|ms44|unms2o|uf coeff for sr2 (mo) - non motorized|0
+~+|1|ms45|unms2d|uf coeff for sr2 (md) - non motorized|0
+~+|1|ms46|ures2o|uf coeff for sr2 (mo) - retail far|0
+~+|1|ms47|ures2d|uf coeff for sr2 (md) - retail far|0
+~+|1|ms48|uids3o|uf coeff for sr3 (mo) - int density|0
+~+|1|ms49|uids3d|uf coeff for sr3 (md) - int density|0
+~+|1|ms50|umxs3o|uf coeff for sr3 (mo) - lu mix|0
+~+|1|ms51|umxs3d|uf coeff for sr3 (md) - lu mix|0
+~+|1|ms52|unms3o|uf coeff for sr3 (mo) - non motorized|0
+~+|1|ms53|unms3d|uf coeff for sr3 (md) - non motorized|0
+~+|1|ms54|ures3o|uf coeff for sr3 (mo) - retail far|0
+~+|1|ms55|ures3d|uf coeff for sr3 (md) - retail far|0
+~+|1|ms56|uidtwo|uf coeff for tw (mo) - int density|0
+~+|1|ms57|uidtwd|uf coeff for tw (md) - int density|0
+~+|1|ms58|umxtwo|uf coeff for tw (mo) - lu mix|0
+~+|1|ms59|umxtwd|uf coeff for tw (md) - lu mix|0
+~+|1|ms60|unmtwo|uf coeff for tw (mo) - non motorized|0
+~+|1|ms61|unmtwd|uf coeff for tw (md) - non motorized|0
+~+|1|ms62|uretwo|uf coeff for tw (mo) - retail far|0
+~+|1|ms63|uretwd|uf coeff for tw (md) - retail far|0
+~+|1|ms64|uidbko|uf coeff for bike (mo) - int density|0
+~+|1|ms65|uidbkd|uf coeff for bike (md) - int density|0
+~+|1|ms66|umxbko|uf coeff for bike (mo) - lu mix|0
+~+|1|ms67|umxbkd|uf coeff for bike (md) - lu mix|0
+~+|1|ms68|unmbko|uf coeff for bike (mo) - non motorized|0
+~+|1|ms69|unmbkd|uf coeff for bike (md) - non motorized|0
+~+|1|ms70|urebko|uf coeff for bike (mo) - retail far|0
+~+|1|ms71|urebkd|uf coeff for bike (md) - retail far|0
+~+|1|ms72|uidwko|uf coeff for walk (mo) - int density|0
+~+|1|ms73|uidwkd|uf coeff for walk (md) - int density|0
+~+|1|ms74|umxwko|uf coeff for walk (mo) - lu mix|0
+~+|1|ms75|umxwkd|uf coeff for walk (md) - lu mix|0
+~+|1|ms76|unmwko|uf coeff for walk (mo) - non motorized|0
+~+|1|ms77|unmwkd|uf coeff for walk (md) - non motorized|0
+~+|1|ms78|urewko|uf coeff for walk (mo) - retail far|0
+~+|1|ms79|urewkd|uf coeff for walk (md) - retail far|0
+~+|1|ms80|ascctd|hb work-inc1 asc for transit walk|0
+~+|1|ms81|trdivt|hb work-inc1 td iv-time coeff|0
+~+|1|ms82|trdovt|hb work-inc1 td ov-time coeff|0
+~+|1|ms83|trdcos|hb work-inc1 td cost coeff|0
+~+|1|ms84|trdaux|hb work-inc1 td aux-time coeff|0
+~+|1|ms85|trdiwt|hb work-inc1 td iw-time coeff|0
+~+|1|ms86|trdxfr|hb work-inc1 td xfr-time coeff|0
+~+|1|ms87|trdbrd|hb work-inc1 td brd-time coeff|0
+~+|1|ms88|trdnbd|hb work-inc1 td nbd coeff|0
+~+|1|ms89|bdtrdo|hb work-inc1 cbd coeff for td (mo)|0
+~+|1|ms90|bdtrdd|hb work-inc1 cbd coeff for td (md)|0
+~+|1|ms91|uidtdo|uf coeff for td (mo) - int density|0
+~+|1|ms92|uidtdd|uf coeff for td (md) - int density|0
+~+|1|ms93|umxtdo|uf coeff for td (mo) - lu mix|0
+~+|1|ms94|umxtdd|uf coeff for td (md) - lu mix|0
+~+|1|ms95|unmtdo|uf coeff for td (mo) - non motorized|0
+~+|1|ms96|unmtdd|uf coeff for td (md) - non motorized|0
+~+|1|ms97|uretdo|uf coeff for td (mo) - retail far|0
+~+|1|ms98|uretdd|uf coeff for td (md) - retail far|0
+~+|1|ms99|avotda|am sov non-work vot|0
+~+|1|ms100|avots2|am hov 2 vot|0
+~+|1|ms101|avots3|am hov 3+ vot|0
+~+|1|ms102|avot1v|am sov hbw income 1 vot|0
+~+|1|ms103|avot2v|am sov hbw income 2 vot|0
+~+|1|ms104|avot3v|am sov hbw income 3 vot|0
+~+|1|ms105|avot4v|am sov hbw income 4 vot|0
+~+|1|ms117|avotcv|am commercial vehicle vot|0
+~+|1|ms106|avotmd|am medium truck vot|0
+~+|1|ms107|avothv|am heavy truck vot|0
+~+|1|ms108|mvotda|md sov non-work vot|0
+~+|1|ms109|mvots2|md hov 2 vot|0
+~+|1|ms110|mvots3|md hov 3+ vot|0
+~+|1|ms111|mvot1v|md sov hbw income 1 vot|0
+~+|1|ms112|mvot2v|md sov hbw income 2 vot|0
+~+|1|ms113|mvot3v|md sov hbw income 3 vot|0
+~+|1|ms114|mvot4v|md sov hbw income 4 vot|0
+~+|1|ms118|mvotcv|md commercial vehicle vot|0
+~+|1|ms115|mvotmd|md medium truck vot|0
+~+|1|ms116|mvothv|md heavy truck vot|0
+~+|1|ms119|emdnwb|emp density walk/bike coeff|0
+~+|1|ms120|emdntr|emp density transit coeff|0
+~+|1|ms121|rsdnwb|res/emp density walk/bike coeff|0
+~+|1|ms122|rsdntr|res/emp density transit coeff|0
+~/ ----------------------------------------------------
+~/ --- Initialize Origin Matrices
+~/ ----------------------------------------------------
+~+|1|mo01|intden|uf variable: intersections/sq km|0
+~+|1|mo02|usemix|uf variable: land use mix|0
+~+|1|mo03|nonmot|uf variable: non-motorized ratio|0
+~+|1|mo04|retfar|uf variable: retail far|0
+~+|1|mo05|bdflag|cbd zone flag|0
+~+|1|mo06|colleg|parking cost - hb college trips|0
+~+|1|mo07|hourly|hourly parking cost - non-work trips|0
+~+|1|mo08|daily|daily parking cost - hb work trips|0
+~+|1|mo09|empden|employment density - orig zone|0
+~+|1|mo10|resden|res/emp wt1 density - orig zone|0
+~/ ----------------------------------------------------
+~/ --- Initialize Destination Matrices
+~/ ----------------------------------------------------
+~+|1|md01|intden|uf variable: intersections/sq km|0
+~+|1|md02|usemix|uf variable: land use mix|0
+~+|1|md03|nonmot|uf variable: non-motorized ratio|0
+~+|1|md04|retfar|uf variable: retail far|0
+~+|1|md05|bdflag|cbd zone flag|0
+~+|1|md06|colleg|parking cost - hb college trips|0
+~+|1|md07|hourly|hourly parking cost - non-work trips|0
+~+|1|md08|daily|daily parking cost - hb work trips|0
+~+|1|md09|pnrchg|pnr lot parking cost|0
+~+|1|md10|empden|employment density - dest zone|0
+~+|1|md11|resden|res/emp wt1 density - dest zone|0
+~/ ----------------------------------------------------
+~/ --- Initialize Full Matrices
+~/ ----------------------------------------------------
+~/ ... utilities
+~+|1|mf01|euda|da exponentiated utility|0
+~+|1|mf02|eus2|sr 2 exponentiated utility|0
+~+|1|mf03|eus3|sr 3+ exponentiated utility|0
+~+|1|mf04|eutw|tw exponentiated utility|0
+~+|1|mf05|eutd|tw exponentiated utility|0
+~+|1|mf06|eubk|bike exponentiated utility|0
+~+|1|mf07|euwk|walk exponentiated utility|0
+~+|1|mf08|eusm|exponentiated utility sum|0
+~/ ... auto Skims
+~+|1|mf09|dabcs|sov bi-directional gc|0
+~+|1|mf10|dabtm|sov bi-directional time|0
+~+|1|mf11|dabct|sov bi-directional cost|0
+~+|1|mf12|dabds|sov bi-directional dist|0
+~+|1|mf13|s2bcs|sr 2 bi-directional gc|0
+~+|1|mf14|s2btm|sr 2 bi-directional time|0
+~+|1|mf15|s2bct|sr 2 bi-directional cost|0
+~+|1|mf16|s2bds|sr 2 bi-directional dist|0
+~+|1|mf17|s3bcs|sr 3+ bi-directional gc|0
+~+|1|mf18|s3btm|sr 3+ bi-directional time|0
+~+|1|mf19|s3bct|sr 3+ bi-directional cost|0
+~+|1|mf20|s3bds|sr 3+ bi-directional dist|0
+~/ ... terminal time
+~+|1|mf21|termtm|auto mode terminal time|0
+~/ ... transit Skims
+~+|1|mf22|ivtwa|transit in-vehicle time|0
+~+|1|mf23|auxwa|auxiliary transit time|0
+~+|1|mf24|iwtwa|initial wait time|0
+~+|1|mf25|brdwa|boarding time|0
+~+|1|mf26|nbdwa|average number of boardings|0
+~+|1|mf27|xfrwa|total transfer time|0
+~+|1|mf28|farbx|transit fare - farebox|0
+~+|1|mf29|farwa|transit fare - average|0
+~/ ... park and ride skims
+~+|1|mf30|auxda|gc to pnr lot|0
+~+|1|mf31|pnrds|distance to pnr lot|0
+~+|1|mf32|pnrtm|time to pnr lot|0
+~+|1|mf33|pnrch|parking cost at pnr lot|0
+~+|1|mf34|dapct|total cost to pnr lot|0
+~+|1|mf35|ivtda|transit in-vehicle time - drive access|0
+~+|1|mf36|wlkda|total walk time - drive access|0
+~+|1|mf37|iwtda|initial wait time - drive access|0
+~+|1|mf38|brdda|boarding time - drive access|0
+~+|1|mf39|nbdda|average # of boardings - drive access|0
+~+|1|mf40|xfrda|total transfer time - drive access|0
+~+|1|mf41|farda|transit fare - drive access|0
+~/ ... walk and bike skims
+~+|1|mf42|bketm|bike time|0
+~+|1|mf43|wlktm|walk time|0
+~/ ... home based college mode shares
+~+|1|mf44|coshda|hb college sov mode share|0
+~+|1|mf45|coshs2|hb college shared ride 2 mode share|0
+~+|1|mf46|coshs3|hb college shared ride 3+ mode share|0
+~+|1|mf47|coshtw|hb college tw mode share|0
+~+|1|mf48|coshbk|hb college bike mode share|0
+~+|1|mf49|coshwk|hb college walk mode share|0
+~/ ... home based other mode shares
+~+|1|mf50|nwshda|hb non-work sov mode share|0
+~+|1|mf51|nwshs2|hb non-work shared ride 2 mode share|0
+~+|1|mf52|nwshs3|hb non-work shared ride 3+ mode share|0
+~+|1|mf53|nwshtw|hb non-work tw mode share|0
+~+|1|mf54|nwshbk|hb non-work bike mode share|0
+~+|1|mf55|nwshwk|hb non-work walk mode share|0
+~/ ... home based school mode shares
+~+|1|mf56|scshda|hb school sov mode share|0
+~+|1|mf57|scshs2|hb school shared ride 2 mode share|0
+~+|1|mf58|scshs3|hb school shared ride 3+ mode share|0
+~+|1|mf59|scshtw|hb school tw mode share|0
+~+|1|mf60|scshbk|hb school bike mode share|0
+~+|1|mf61|scshwk|hb school walk mode share|0
+~/ ... non-home based mode shares
+~+|1|mf62|nhshda|nhb sov mode share|0
+~+|1|mf63|nhshs2|nhb shared ride 2 mode share|0
+~+|1|mf64|nhshs3|nhb shared ride 3+ mode share|0
+~+|1|mf65|nhshtw|nhb transit-walk mode share|0
+~+|1|mf66|nhshbk|nhb bike mode share|0
+~+|1|mf67|nhshwk|nhb walk mode share|0
+~/ ... home based work income #1 mode shares
+~+|1|mf68|w1shda|hb work-inc1 sov mode share|0
+~+|1|mf69|w1shs2|hb work-inc1 shared ride 2 mode share|0
+~+|1|mf70|w1shs3|hb work-inc1 shared ride 3+ mode share|0
+~+|1|mf71|w1shtw|hb work-inc1 tw mode share|0
+~+|1|mf72|w1shtd|hb work-inc1 td mode share|0
+~+|1|mf73|w1shbk|hb work-inc1 bike mode share|0
+~+|1|mf74|w1shwk|hb work-inc1 walk mode share|0
+~/ ... home based work income #2 mode shares
+~+|1|mf75|w2shda|hb work-inc2 sov mode share|0
+~+|1|mf76|w2shs2|hb work-inc2 shared ride 2 mode share|0
+~+|1|mf77|w2shs3|hb work-inc2 shared ride 3+ mode share|0
+~+|1|mf78|w2shtw|hb work-inc2 tw mode share|0
+~+|1|mf79|w2shtd|hb work-inc2 td mode share|0
+~+|1|mf80|w2shbk|hb work-inc2 bike mode share|0
+~+|1|mf81|w2shwk|hb work-inc2 walk mode share|0
+~/ ... home based work income #3 mode shares
+~+|1|mf82|w3shda|hb work-inc3 sov mode share|0
+~+|1|mf83|w3shs2|hb work-inc3 shared ride 2 mode share|0
+~+|1|mf84|w3shs3|hb work-inc3 shared ride 3+ mode share|0
+~+|1|mf85|w3shtw|hb work-inc3 tw mode share|0
+~+|1|mf86|w3shtd|hb work-inc3 td mode share|0
+~+|1|mf87|w3shbk|hb work-inc3 bike mode share|0
+~+|1|mf88|w3shwk|hb work-inc3 walk mode share|0
+~/ ... home based work income #4 mode shares
+~+|1|mf89|w4shda|hb work-inc4 sov mode share|0
+~+|1|mf90|w4shs2|hb work-inc4 shared ride 2 mode share|0
+~+|1|mf91|w4shs3|hb work-inc4 shared ride 3+ mode share|0
+~+|1|mf92|w4shtw|hb work-inc4 tw mode share|0
+~+|1|mf93|w4shtd|hb work-inc4 td mode share|0
+~+|1|mf94|w4shbk|hb work-inc4 bike mode share|0
+~+|1|mf95|w4shwk|hb work-inc4 walk mode share|0
+~/ ... logsums
+~+|1|mf96|lsum1|hb work income 1 mode choice log sum|0
+~+|1|mf97|lsum2|hb work income 2 mode choice log sum|0
+~+|1|mf98|lsum3|hb work income 3 mode choice log sum|0
+~+|1|mf99|lsum4|hb work income 4 mode choice log sum|0
+~/ ... cost skims
+~+|1|mf100|dabctcol|SOV bi-directional cost col  |0
+~+|1|mf101|s2bctcol|HOV2 bi-directional cost col |0
+~+|1|mf102|s3bctcol|HOV3+ bi-directional cost col|0
+~+|1|mf103|dabcthbo|SOV bi-directional cost hbo  |0
+~+|1|mf104|s2bcthbo|HOV2 bi-directional cost hbo |0
+~+|1|mf105|s3bcthbo|HOV3+ bi-directional cost hbo|0
+~+|1|mf106|dabctsch|SOV bi-directional cost sch  |0
+~+|1|mf107|s2bctsch|HOV2 bi-directional cost sch |0
+~+|1|mf108|s3bctsch|HOV3+ bi-directional cost sch|0
+~+|1|mf109|dabctnhb|SOV bi-directional cost nhb  |0
+~+|1|mf110|s2bctnhb|HOV2 bi-directional cost nhb |0
+~+|1|mf111|s3bctnhb|HOV3+ bi-directional cost nhb|0
+~+|1|mf112|dabcthbw1|SOV bi-directional cost hbw1    |0
+~+|1|mf113|dapcthbw1|SOV total cost to P&R lot hbw1|0
+~+|1|mf114|s2bcthbw1|HOV2 bi-directional cost hbw1   |0
+~+|1|mf115|s3bcthbw1|HOV3+ bi-directional cost hbw1  |0
+~+|1|mf116|dabcthbw2|SOV bi-directional cost hbw2    |0
+~+|1|mf117|dapcthbw2|SOV total cost to P&R lot hbw2|0
+~+|1|mf118|s2bcthbw2|HOV2 bi-directional cost hbw2   |0
+~+|1|mf119|s3bcthbw2|HOV3+ bi-directional cost hbw2  |0
+~+|1|mf120|dabcthbw3|SOV bi-directional cost hbw3    |0
+~+|1|mf121|dapcthbw3|SOV total cost to P&R lot hbw3|0
+~+|1|mf122|s2bcthbw3|HOV2 bi-directional cost hbw3   |0
+~+|1|mf123|s3bcthbw3|HOV3+ bi-directional cost hbw3  |0
+~+|1|mf124|dabcthbw4|SOV bi-directional cost hbw4    |0
+~+|1|mf125|dapcthbw4|SOV total cost to P&R lot hbw4|0
+~+|1|mf126|s2bcthbw4|HOV2 bi-directional cost hbw4   |0
+~+|1|mf127|s3bcthbw4|HOV3+ bi-directional cost hbw4  |0
+q
+~/
+~/exit emme
+~/
+q

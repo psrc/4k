@@ -1,0 +1,39 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4_initialize_pm_full_matrices.rpt
+~/
+~/
+~/begin: 4_initialize_pm_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|ptrnwa|pm transit person trip table|0
+~+|1|mf02|ptrtwa|pm total transit time|0
+~+|1|mf03|pivtwa|pm transit in-vehicle time|0
+~+|1|mf04|pauxwa|pm auxiliary transit time|0
+~+|1|mf05|ptwtwa|pm total wait time|0
+~+|1|mf06|piwtwa|pm initial wait time|0
+~+|1|mf07|pbrdwa|pm boarding time|0
+~+|1|mf08|pnbdwa|pm average number of boardings|0
+~+|1|mf09|pxfrwa|pm total transfer time|0
+~+|1|mf10|walkac|total walk access time|0
+~+|1|mf11|pfarps|pm transit fare - monthly pass|0
+~+|1|mf12|pfarbx|pm transit fare - fare box|0
+~+|1|mf13|pfarwa|pm transit fare - average|0
+~#
+~+|1|mf14|ptrtwp|pm total transit previous time|0
+~+|1|mf15|pivtwp|pm transit previous iv time|0
+~+|1|mf16|pauxwp|pm previous aux transit time|0
+~+|1|mf17|ptwtwp|pm previous total wait time|0
+~+|1|mf18|piwtwp|pm previous initial wait time|0
+~+|1|mf19|pbrdwp|pm previous boarding time|0
+~+|1|mf20|pnbdwp|pm previous ave boardings|0
+~+|1|mf21|pxfrwp|pm previous total xfer time|0
+~#
+q
+~#
+~/end: 4_initialize_pm_full_matrices.mac
+~/exit emme
+~/
+q

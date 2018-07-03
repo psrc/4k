@@ -1,8 +1,8 @@
 Puget Sound 4k Trip Based Model Control File
 
 Network and Land Use Source and Year
-LUYear=2010
-InputPath=K:\4K\Inputs\Network\2010LUV
+LUYear=2014
+InputPath=R:\KRIS\GDB_Networks\2018_NETWORKS\POST\2014\input
 
 TAZ values for the zone system for this model version
 hightaz=3700
@@ -26,7 +26,7 @@ DeleteReports=No
 DeleteBank=No
 
 Toll Matrices for use in BCA, UrbanSim and other Applications
-TollSkim=Yes
+TollSkim=No
 
 Flag to Determine if you want to run the model to be compatible with Benefit Cost Analysis tool
 Running for BCA increases the storage requirements of the model.
@@ -36,4 +36,4 @@ Create Summary Bank
 SummaryBank=Yes
 
 Flag to Determine if you want to save UrbanSim Matrices to the Results Databank
-USim=Yes
+USim=No

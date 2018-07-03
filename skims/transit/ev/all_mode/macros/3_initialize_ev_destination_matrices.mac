@@ -1,0 +1,17 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=3_initialize_ev_destination_matrices.rpt
+~/
+~/
+~/begin: 3_initialize_ev_destination_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|md01|walkac|walk access time at attraction end|0
+q
+~#
+~/end: 3_initialize_ev_destination_matrices.mac
+~/exit emme
+~/
+q

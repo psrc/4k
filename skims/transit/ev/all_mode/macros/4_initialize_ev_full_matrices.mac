@@ -1,0 +1,39 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=4_initialize_ev_full_matrices.rpt
+~/
+~/
+~/begin: 4_initialize_ev_full_matrices.mac
+~/ ...call module 3.12: input/modify matrices interactively
+~/ ...initialize full matrices
+3.12
+~+|1|mf01|etrnwa|ev transit person trip table|0
+~+|1|mf02|etrtwa|ev total transit time|0
+~+|1|mf03|eivtwa|ev transit in-vehicle time|0
+~+|1|mf04|eauxwa|ev auxiliary transit time|0
+~+|1|mf05|etwtwa|ev total wait time|0
+~+|1|mf06|eiwtwa|ev initial wait time|0
+~+|1|mf07|ebrdwa|ev boarding time|0
+~+|1|mf08|enbdwa|ev average number of boardings|0
+~+|1|mf09|exfrwa|ev total transfer time|0
+~+|1|mf10|walkac|total walk access time|0
+~+|1|mf11|efarps|ev transit fare - monthly pass|0
+~+|1|mf12|efarbx|ev transit fare - fare box|0
+~+|1|mf13|efarwa|ev transit fare - average|0
+~#
+~+|1|mf14|etrtwp|ev total transit previous time|0
+~+|1|mf15|eivtwp|ev transit previous iv time|0
+~+|1|mf16|eauxwp|ev previous aux transit time|0
+~+|1|mf17|etwtwp|ev previous total wait time|0
+~+|1|mf18|eiwtwp|ev previous initial wait time|0
+~+|1|mf19|ebrdwp|ev previous boarding time|0
+~+|1|mf20|enbdwp|ev previous ave boardings|0
+~+|1|mf21|exfrwp|ev previous total xfer time|0
+~#
+q
+~#
+~/end: 4_initialize_ev_full_matrices.mac
+~/exit emme
+~/
+q

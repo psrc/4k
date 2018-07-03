@@ -1,0 +1,231 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=delay.rpt
+~/ ----------------------------------------------------
+~/ --- Initialize matrix directory
+~/ ----------------------------------------------------
+~+|3.12|7|y|q
+~/ ----------------------------------------------------
+~/ --- Initialize Full Matrices
+~/ ----------------------------------------------------
+3.12
+~/ ----------------------------------------------------
+~/ --- AM Skim Matrices
+~/ ----------------------------------------------------
+~+|1|mf01|aau1cs|am non-hbw sov gc|0
+~+|1|mf02|aau2cs|am hov 2 gc|0
+~+|1|mf03|aau3cs|am hov 3+ gc|0
+~+|1|mf04|aa1cs1|am hbw income 1 sov gc|0
+~+|1|mf05|aa1cs2|am hbw income 2 sov gc|0
+~+|1|mf06|aa1cs3|am hbw income 3 sov gc|0
+~+|1|mf07|aa1cs4|am hbw income 4 sov gc|0
+~/ ----------------------------------------------------
+~/ --- MD Skim Matrices
+~/ ----------------------------------------------------
+~+|1|mf08|mau1cs|md non-hbw sov gc|0
+~+|1|mf09|mau2cs|md hov 2 gc|0
+~+|1|mf10|mau3cs|md hov 3+ gc|0
+~+|1|mf11|ma1cs1|md hbw income 1 sov gc|0
+~+|1|mf12|ma1cs2|md hbw income 2 sov gc|0
+~+|1|mf13|ma1cs3|md hbw income 3 sov gc|0
+~+|1|mf14|ma1cs4|md hbw income 4 sov gc|0
+~/ ----------------------------------------------------
+~/ --- PM Skim Matrices
+~/ ----------------------------------------------------
+~+|1|mf15|pau1cs|pm non-hbw sov gc|0
+~+|1|mf16|pau2cs|pm hov 2 gc|0
+~+|1|mf17|pau3cs|pm hov 3+ gc|0
+~+|1|mf18|pa1cs1|pm hbw income 1 sov gc|0
+~+|1|mf19|pa1cs2|pm hbw income 2 sov gc|0
+~+|1|mf20|pa1cs3|pm hbw income 3 sov gc|0
+~+|1|mf21|pa1cs4|pm hbw income 4 sov gc|0
+~/ ----------------------------------------------------
+~/ --- EV Skim Matrices
+~/ ----------------------------------------------------
+~+|1|mf22|eau1cs|ev non-hbw sov gc|0
+~+|1|mf23|eau2cs|ev hov 2 gc|0
+~+|1|mf24|eau3cs|ev hov 3+ gc|0
+~+|1|mf25|ea1cs1|ev hbw income 1 sov gc|0
+~+|1|mf26|ea1cs2|ev hbw income 2 sov gc|0
+~+|1|mf27|ea1cs3|ev hbw income 3 sov gc|0
+~+|1|mf28|ea1cs4|ev hbw income 4 sov gc|0
+~/ ----------------------------------------------------
+~/ --- NI Skim Matrices
+~/ ----------------------------------------------------
+~+|1|mf29|nau1cs|ni non-hbw sov gc|0
+~+|1|mf30|nau2cs|ni hov 2 gc|0
+~+|1|mf31|nau3cs|ni hov 3+ gc|0
+~+|1|mf32|na1cs1|ni hbw income 1 sov gc|0
+~+|1|mf33|na1cs2|ni hbw income 2 sov gc|0
+~+|1|mf34|na1cs3|ni hbw income 3 sov gc|0
+~+|1|mf35|na1cs4|ni hbw income 4 sov gc|0
+~/ ----------------------------------------------------
+~/ --- AM Delay
+~/ ----------------------------------------------------
+~+|1|mf36|aau1dl|am non-hbw sov delay|0
+~+|1|mf37|aau2dl|am hov 2 delay|0
+~+|1|mf38|aau3dl|am hov 3+ delay|0
+~+|1|mf39|aa1dl1|am hbw income 1 sov delay|0
+~+|1|mf40|aa1dl2|am hbw income 2 sov delay|0
+~+|1|mf41|aa1dl3|am hbw income 3 sov delay|0
+~+|1|mf42|aa1dl4|am hbw income 4 sov delay|0
+~/ ----------------------------------------------------
+~/ --- MD Delay
+~/ ----------------------------------------------------
+~+|1|mf43|mau1dl|md non-hbw sov delay|0
+~+|1|mf44|mau2dl|md hov 2 delay|0
+~+|1|mf45|mau3dl|md hov 3+ delay|0
+~+|1|mf46|ma1dl1|md hbw income 1 sov delay|0
+~+|1|mf47|ma1dl2|md hbw income 2 sov delay|0
+~+|1|mf48|ma1dl3|md hbw income 3 sov delay|0
+~+|1|mf49|ma1dl4|md hbw income 4 sov delay|0
+~/ ----------------------------------------------------
+~/ --- PM Delay
+~/ ----------------------------------------------------
+~+|1|mf50|pau1dl|pm non-hbw sov delay|0
+~+|1|mf51|pau2dl|pm hov 2 delay|0
+~+|1|mf52|pau3dl|pm hov 3+ delay|0
+~+|1|mf53|pa1dl1|pm hbw income 1 sov delay|0
+~+|1|mf54|pa1dl2|pm hbw income 2 sov delay|0
+~+|1|mf55|pa1dl3|pm hbw income 3 sov delay|0
+~+|1|mf56|pa1dl4|pm hbw income 4 sov delay|0
+~/ ----------------------------------------------------
+~/ --- EV Delay
+~/ ----------------------------------------------------
+~+|1|mf57|eau1dl|ev non-hbw sov delay|0
+~+|1|mf58|eau2dl|ev hov 2 delay|0
+~+|1|mf59|eau3dl|ev hov 3+ delay|0
+~+|1|mf60|ea1dl1|ev hbw income 1 sov delay|0
+~+|1|mf61|ea1dl2|ev hbw income 2 sov delay|0
+~+|1|mf62|ea1dl3|ev hbw income 3 sov delay|0
+~+|1|mf63|ea1dl4|ev hbw income 4 sov delay|0
+q
+~/ ----------------------------------------------------
+~/ --- Import AM Matrices
+~/ ----------------------------------------------------
+1.31
+~+|1
+..\..\skims\auto\am\emmebank
+~+|2|3|3|mf"aau1cs"|mf"aau1cs"|n|y
+~+|2|3|3|mf"aau2cs"|mf"aau2cs"|n|y
+~+|2|3|3|mf"aau3cs"|mf"aau3cs"|n|y
+~+|2|3|3|mf"aa1cs1"|mf"aa1cs1"|n|y
+~+|2|3|3|mf"aa1cs2"|mf"aa1cs2"|n|y
+~+|2|3|3|mf"aa1cs3"|mf"aa1cs3"|n|y
+~+|2|3|3|mf"aa1cs4"|mf"aa1cs4"|n|y
+q
+~/ ----------------------------------------------------
+~/ --- Import MD Matrices
+~/ ----------------------------------------------------
+1.31
+~+|1
+..\..\skims\auto\md\emmebank
+~+|2|3|3|mf"mau1cs"|mf"mau1cs"|n|y
+~+|2|3|3|mf"mau2cs"|mf"mau2cs"|n|y
+~+|2|3|3|mf"mau3cs"|mf"mau3cs"|n|y
+~+|2|3|3|mf"ma1cs1"|mf"ma1cs1"|n|y
+~+|2|3|3|mf"ma1cs2"|mf"ma1cs2"|n|y
+~+|2|3|3|mf"ma1cs3"|mf"ma1cs3"|n|y
+~+|2|3|3|mf"ma1cs4"|mf"ma1cs4"|n|y
+q
+~/ ----------------------------------------------------
+~/ --- Import PM Matrices
+~/ ----------------------------------------------------
+1.31
+~+|1
+..\..\skims\auto\pm\emmebank
+~+|2|3|3|mf"pau1cs"|mf"pau1cs"|n|y
+~+|2|3|3|mf"pau2cs"|mf"pau2cs"|n|y
+~+|2|3|3|mf"pau3cs"|mf"pau3cs"|n|y
+~+|2|3|3|mf"pa1cs1"|mf"pa1cs1"|n|y
+~+|2|3|3|mf"pa1cs2"|mf"pa1cs2"|n|y
+~+|2|3|3|mf"pa1cs3"|mf"pa1cs3"|n|y
+~+|2|3|3|mf"pa1cs4"|mf"pa1cs4"|n|y
+q
+~/ ----------------------------------------------------
+~/ --- Import EV Matrices
+~/ ----------------------------------------------------
+1.31
+~+|1
+..\..\skims\auto\ev\emmebank
+~+|2|3|3|mf"eau1cs"|mf"eau1cs"|n|y
+~+|2|3|3|mf"eau2cs"|mf"eau2cs"|n|y
+~+|2|3|3|mf"eau3cs"|mf"eau3cs"|n|y
+~+|2|3|3|mf"ea1cs1"|mf"ea1cs1"|n|y
+~+|2|3|3|mf"ea1cs2"|mf"ea1cs2"|n|y
+~+|2|3|3|mf"ea1cs3"|mf"ea1cs3"|n|y
+~+|2|3|3|mf"ea1cs4"|mf"ea1cs4"|n|y
+q
+~/ ----------------------------------------------------
+~/ --- Import NI Matrices
+~/ ----------------------------------------------------
+1.31
+~+|1
+..\..\skims\auto\ni\emmebank
+~+|2|3|3|mf"nau1cs"|mf"nau1cs"|n|y
+~+|2|3|3|mf"nau2cs"|mf"nau2cs"|n|y
+~+|2|3|3|mf"nau3cs"|mf"nau3cs"|n|y
+~+|2|3|3|mf"na1cs1"|mf"na1cs1"|n|y
+~+|2|3|3|mf"na1cs2"|mf"na1cs2"|n|y
+~+|2|3|3|mf"na1cs3"|mf"na1cs3"|n|y
+~+|2|3|3|mf"na1cs4"|mf"na1cs4"|n|y
+q
+~/ ----------------------------------------------------
+~/ --- Calculate Delay Matrices
+~/ ----------------------------------------------------
+3.21
+~/ ----------------------------------------------------
+~/ --- sov non-work
+~/ ----------------------------------------------------
+~+|1|y|mf"aau1dl"|n|(mf"aau1cs"-mf"nau1cs").max.0|||n|2
+~+|1|y|mf"mau1dl"|n|(mf"mau1cs"-mf"nau1cs").max.0|||n|2
+~+|1|y|mf"pau1dl"|n|(mf"pau1cs"-mf"nau1cs").max.0|||n|2
+~+|1|y|mf"eau1dl"|n|(mf"eau1cs"-mf"nau1cs").max.0|||n|2
+~/ ----------------------------------------------------
+~/ --- hov 2
+~/ ----------------------------------------------------
+~+|1|y|mf"aau2dl"|n|(mf"aau2cs"-mf"nau2cs").max.0|||n|2
+~+|1|y|mf"mau2dl"|n|(mf"mau2cs"-mf"nau2cs").max.0|||n|2
+~+|1|y|mf"pau2dl"|n|(mf"pau2cs"-mf"nau2cs").max.0|||n|2
+~+|1|y|mf"eau2dl"|n|(mf"eau2cs"-mf"nau2cs").max.0|||n|2
+~/ ----------------------------------------------------
+~/ --- hov 3+
+~/ ----------------------------------------------------
+~+|1|y|mf"aau3dl"|n|(mf"aau3cs"-mf"nau3cs").max.0|||n|2
+~+|1|y|mf"mau3dl"|n|(mf"mau3cs"-mf"nau3cs").max.0|||n|2
+~+|1|y|mf"pau3dl"|n|(mf"pau3cs"-mf"nau3cs").max.0|||n|2
+~+|1|y|mf"eau3dl"|n|(mf"eau3cs"-mf"nau3cs").max.0|||n|2
+~/ ----------------------------------------------------
+~/ --- hbw sov income 1
+~/ ----------------------------------------------------
+~+|1|y|mf"aa1dl1"|n|(mf"aa1cs1"-mf"na1cs1").max.0|||n|2
+~+|1|y|mf"ma1dl1"|n|(mf"ma1cs1"-mf"na1cs1").max.0|||n|2
+~+|1|y|mf"pa1dl1"|n|(mf"pa1cs1"-mf"na1cs1").max.0|||n|2
+~+|1|y|mf"ea1dl1"|n|(mf"ea1cs1"-mf"na1cs1").max.0|||n|2
+~/ ----------------------------------------------------
+~/ --- hbw sov income 2
+~/ ----------------------------------------------------
+~+|1|y|mf"aa1dl2"|n|(mf"aa1cs2"-mf"na1cs2").max.0|||n|2
+~+|1|y|mf"ma1dl2"|n|(mf"ma1cs2"-mf"na1cs2").max.0|||n|2
+~+|1|y|mf"pa1dl2"|n|(mf"pa1cs2"-mf"na1cs2").max.0|||n|2
+~+|1|y|mf"ea1dl2"|n|(mf"ea1cs2"-mf"na1cs2").max.0|||n|2
+~/ ----------------------------------------------------
+~/ --- hbw sov income 3
+~/ ----------------------------------------------------
+~+|1|y|mf"aa1dl3"|n|(mf"aa1cs3"-mf"na1cs3").max.0|||n|2
+~+|1|y|mf"ma1dl3"|n|(mf"ma1cs3"-mf"na1cs3").max.0|||n|2
+~+|1|y|mf"pa1dl3"|n|(mf"pa1cs3"-mf"na1cs3").max.0|||n|2
+~+|1|y|mf"ea1dl3"|n|(mf"ea1cs3"-mf"na1cs3").max.0|||n|2
+~/ ----------------------------------------------------
+~/ --- hbw sov income 4
+~/ ----------------------------------------------------
+~+|1|y|mf"aa1dl4"|n|(mf"aa1cs4"-mf"na1cs4").max.0|||n|2
+~+|1|y|mf"ma1dl4"|n|(mf"ma1cs4"-mf"na1cs4").max.0|||n|2
+~+|1|y|mf"pa1dl4"|n|(mf"pa1cs4"-mf"na1cs4").max.0|||n|2
+~+|1|y|mf"ea1dl4"|n|(mf"ea1cs4"-mf"na1cs4").max.0|||n|2
+q
+~/ ----------------------------------------------------
+~/ --- Exit Emme
+~/ ----------------------------------------------------
+q

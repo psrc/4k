@@ -34,6 +34,60 @@ s=1002
 ~+|1|n|@tveh||type=60||5|4|ms104|avsl60|AM Screenline #60 - Vehicle|1
 ~+|1|n|@tveh||type=66||5|4|ms105|avsl66|AM Screenline #66 - Vehicle|1
 ~+|1|n|@tveh||type=71||5|4|ms106|avsl71|AM Screenline #71 - Vehicle|1
+~/ --- Freeway Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&ul3=1,2||5|4|ms1357|afsl2|AM Screenline #2 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=3|&ul3=1,2||5|4|ms1358|afsl3|AM Screenline #3 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=4|&ul3=1,2||5|4|ms1359|afsl4|AM Screenline #4 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=7|&ul3=1,2||5|4|ms1360|afsl7|AM Screenline #7 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=14|&ul3=1,2||5|4|ms1361|afsl14|AM Screenline #14 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=15|&ul3=1,2||5|4|ms1362|afsl15|AM Screenline #15 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=18|&ul3=1,2||5|4|ms1364|afsl18|AM Screenline #18 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=19|&ul3=1,2||5|4|ms1365|afsl19|AM Screenline #19 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=20|&ul3=1,2||5|4|ms1366|afsl20|AM Screenline #20 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=22|&ul3=1,2||5|4|ms1367|afsl22|AM Screenline #22 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=23|&ul3=1,2||5|4|ms1368|afsl23|AM Screenline #23 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=29|&ul3=1,2||5|4|ms1369|afsl29|AM Screenline #29 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=30|&ul3=1,2||5|4|ms1370|afsl30|AM Screenline #30 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=32|&ul3=1,2||5|4|ms1371|afsl32|AM Screenline #32 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=35|&ul3=1,2||5|4|ms1372|afsl35|AM Screenline #35 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=37|&ul3=1,2||5|4|ms1373|afsl37|AM Screenline #37 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=41|&ul3=1,2||5|4|ms1374|afsl41|AM Screenline #41 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=43|&ul3=1,2||5|4|ms1375|afsl43|AM Screenline #43 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=44|&ul3=1,2||5|4|ms1376|afsl44|AM Screenline #44 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=46|&ul3=1,2||5|4|ms1377|afsl46|AM Screenline #46 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=54|&ul3=1,2||5|4|ms1378|afsl54|AM Screenline #54 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=57|&ul3=1,2||5|4|ms1379|afsl57|AM Screenline #57 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=58|&ul3=1,2||5|4|ms1380|afsl58|AM Screenline #58 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=60|&ul3=1,2||5|4|ms1381|afsl60|AM Screenline #60 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=66|&ul3=1,2||5|4|ms1382|afsl66|AM Screenline #66 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=71|&ul3=1,2||5|4|ms1383|afsl71|AM Screenline #71 - Vehicle (Fwy)|1
+~/ --- Arterial Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&not ul3=1|&not ul3=2||5|4|ms1384|aasl2|AM Screenline #2 - Vehicle (Art)|1
+~+|1|n|@tveh||type=3|&not ul3=1|&not ul3=2||5|4|ms1385|aasl3|AM Screenline #3 - Vehicle (Art)|1
+~+|1|n|@tveh||type=4|&not ul3=1|&not ul3=2||5|4|ms1386|aasl4|AM Screenline #4 - Vehicle (Art)|1
+~+|1|n|@tveh||type=7|&not ul3=1|&not ul3=2||5|4|ms1387|aasl7|AM Screenline #7 - Vehicle (Art)|1
+~+|1|n|@tveh||type=14|&not ul3=1|&not ul3=2||5|4|ms1388|aasl14|AM Screenline #14 - Vehicle (Art)|1
+~+|1|n|@tveh||type=15|&not ul3=1|&not ul3=2||5|4|ms1389|aasl15|AM Screenline #15 - Vehicle (Art)|1
+~+|1|n|@tveh||type=18|&not ul3=1|&not ul3=2||5|4|ms1390|aasl18|AM Screenline #18 - Vehicle (Art)|1
+~+|1|n|@tveh||type=19|&not ul3=1|&not ul3=2||5|4|ms1391|aasl19|AM Screenline #19 - Vehicle (Art)|1
+~+|1|n|@tveh||type=20|&not ul3=1|&not ul3=2||5|4|ms1392|aasl20|AM Screenline #20 - Vehicle (Art)|1
+~+|1|n|@tveh||type=22|&not ul3=1|&not ul3=2||5|4|ms1393|aasl22|AM Screenline #22 - Vehicle (Art)|1
+~+|1|n|@tveh||type=23|&not ul3=1|&not ul3=2||5|4|ms1394|aasl23|AM Screenline #23 - Vehicle (Art)|1
+~+|1|n|@tveh||type=29|&not ul3=1|&not ul3=2||5|4|ms1395|aasl29|AM Screenline #29 - Vehicle (Art)|1
+~+|1|n|@tveh||type=30|&not ul3=1|&not ul3=2||5|4|ms1396|aasl30|AM Screenline #30 - Vehicle (Art)|1
+~+|1|n|@tveh||type=32|&not ul3=1|&not ul3=2||5|4|ms1397|aasl32|AM Screenline #32 - Vehicle (Art)|1
+~+|1|n|@tveh||type=35|&not ul3=1|&not ul3=2||5|4|ms1398|aasl35|AM Screenline #35 - Vehicle (Art)|1
+~+|1|n|@tveh||type=37|&not ul3=1|&not ul3=2||5|4|ms1399|aasl37|AM Screenline #37 - Vehicle (Art)|1
+~+|1|n|@tveh||type=41|&not ul3=1|&not ul3=2||5|4|ms1400|aasl41|AM Screenline #41 - Vehicle (Art)|1
+~+|1|n|@tveh||type=43|&not ul3=1|&not ul3=2||5|4|ms1401|aasl43|AM Screenline #43 - Vehicle (Art)|1
+~+|1|n|@tveh||type=44|&not ul3=1|&not ul3=2||5|4|ms1402|aasl44|AM Screenline #44 - Vehicle (Art)|1
+~+|1|n|@tveh||type=46|&not ul3=1|&not ul3=2||5|4|ms1403|aasl46|AM Screenline #46 - Vehicle (Art)|1
+~+|1|n|@tveh||type=54|&not ul3=1|&not ul3=2||5|4|ms1404|aasl54|AM Screenline #54 - Vehicle (Art)|1
+~+|1|n|@tveh||type=57|&not ul3=1|&not ul3=2||5|4|ms1405|aasl57|AM Screenline #57 - Vehicle (Art)|1
+~+|1|n|@tveh||type=58|&not ul3=1|&not ul3=2||5|4|ms1406|aasl58|AM Screenline #58 - Vehicle (Art)|1
+~+|1|n|@tveh||type=60|&not ul3=1|&not ul3=2||5|4|ms1407|aasl60|AM Screenline #60 - Vehicle (Art)|1
+~+|1|n|@tveh||type=66|&not ul3=1|&not ul3=2||5|4|ms1408|aasl66|AM Screenline #66 - Vehicle (Art)|1
+~+|1|n|@tveh||type=71|&not ul3=1|&not ul3=2||5|4|ms1409|aasl71|AM Screenline #71 - Vehicle (Art)|1
 ~/ --- Transit Volume by Screenline
 ~+|1|n|voltr||*|type=2||5|4|ms107|atsl2|AM Screenline #2 - Transit|1
 ~+|1|n|voltr||*|type=3||5|4|ms108|atsl3|AM Screenline #3 - Transit|1
@@ -95,6 +149,60 @@ s=1004
 ~+|1|n|@tveh||type=60||5|4|ms156|mvsl60|MD Screenline #60 - Vehicle|1
 ~+|1|n|@tveh||type=66||5|4|ms157|mvsl66|MD Screenline #66 - Vehicle|1
 ~+|1|n|@tveh||type=71||5|4|ms158|mvsl71|MD Screenline #71 - Vehicle|1
+~/ --- Freeway Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&ul3=1,2||5|4|ms1410|mfsl2|MD Screenline #2 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=3|&ul3=1,2||5|4|ms1411|mfsl3|MD Screenline #3 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=4|&ul3=1,2||5|4|ms1412|mfsl4|MD Screenline #4 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=7|&ul3=1,2||5|4|ms1413|mfsl7|MD Screenline #7 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=14|&ul3=1,2||5|4|ms1414|mfsl14|MD Screenline #14 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=15|&ul3=1,2||5|4|ms1415|mfsl15|MD Screenline #15 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=18|&ul3=1,2||5|4|ms1416|mfsl18|MD Screenline #18 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=19|&ul3=1,2||5|4|ms1417|mfsl19|MD Screenline #19 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=20|&ul3=1,2||5|4|ms1418|mfsl20|MD Screenline #20 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=22|&ul3=1,2||5|4|ms1419|mfsl22|MD Screenline #22 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=23|&ul3=1,2||5|4|ms1420|mfsl23|MD Screenline #23 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=29|&ul3=1,2||5|4|ms1421|mfsl29|MD Screenline #29 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=30|&ul3=1,2||5|4|ms1422|mfsl30|MD Screenline #30 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=32|&ul3=1,2||5|4|ms1423|mfsl32|MD Screenline #32 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=35|&ul3=1,2||5|4|ms1424|mfsl35|MD Screenline #35 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=37|&ul3=1,2||5|4|ms1425|mfsl37|MD Screenline #37 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=41|&ul3=1,2||5|4|ms1426|mfsl41|MD Screenline #41 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=43|&ul3=1,2||5|4|ms1427|mfsl43|MD Screenline #43 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=44|&ul3=1,2||5|4|ms1428|mfsl44|MD Screenline #44 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=46|&ul3=1,2||5|4|ms1429|mfsl46|MD Screenline #46 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=54|&ul3=1,2||5|4|ms1430|mfsl54|MD Screenline #54 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=57|&ul3=1,2||5|4|ms1431|mfsl57|MD Screenline #57 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=58|&ul3=1,2||5|4|ms1432|mfsl58|MD Screenline #58 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=60|&ul3=1,2||5|4|ms1433|mfsl60|MD Screenline #60 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=66|&ul3=1,2||5|4|ms1434|mfsl66|MD Screenline #66 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=71|&ul3=1,2||5|4|ms1435|mfsl71|MD Screenline #71 - Vehicle (Fwy)|1
+~/ --- Arterial Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&not ul3=1|&not ul3=2||5|4|ms1436|masl2|MD Screenline #2 - Vehicle (Art)|1
+~+|1|n|@tveh||type=3|&not ul3=1|&not ul3=2||5|4|ms1437|masl3|MD Screenline #3 - Vehicle (Art)|1
+~+|1|n|@tveh||type=4|&not ul3=1|&not ul3=2||5|4|ms1438|masl4|MD Screenline #4 - Vehicle (Art)|1
+~+|1|n|@tveh||type=7|&not ul3=1|&not ul3=2||5|4|ms1439|masl7|MD Screenline #7 - Vehicle (Art)|1
+~+|1|n|@tveh||type=14|&not ul3=1|&not ul3=2||5|4|ms1440|masl14|MD Screenline #14 - Vehicle (Art)|1
+~+|1|n|@tveh||type=15|&not ul3=1|&not ul3=2||5|4|ms1441|masl15|MD Screenline #15 - Vehicle (Art)|1
+~+|1|n|@tveh||type=18|&not ul3=1|&not ul3=2||5|4|ms1442|masl18|MD Screenline #18 - Vehicle (Art)|1
+~+|1|n|@tveh||type=19|&not ul3=1|&not ul3=2||5|4|ms1443|masl19|MD Screenline #19 - Vehicle (Art)|1
+~+|1|n|@tveh||type=20|&not ul3=1|&not ul3=2||5|4|ms1444|masl20|MD Screenline #20 - Vehicle (Art)|1
+~+|1|n|@tveh||type=22|&not ul3=1|&not ul3=2||5|4|ms1445|masl22|MD Screenline #22 - Vehicle (Art)|1
+~+|1|n|@tveh||type=23|&not ul3=1|&not ul3=2||5|4|ms1446|masl23|MD Screenline #23 - Vehicle (Art)|1
+~+|1|n|@tveh||type=29|&not ul3=1|&not ul3=2||5|4|ms1447|masl29|MD Screenline #29 - Vehicle (Art)|1
+~+|1|n|@tveh||type=30|&not ul3=1|&not ul3=2||5|4|ms1448|masl30|MD Screenline #30 - Vehicle (Art)|1
+~+|1|n|@tveh||type=32|&not ul3=1|&not ul3=2||5|4|ms1449|masl32|MD Screenline #32 - Vehicle (Art)|1
+~+|1|n|@tveh||type=35|&not ul3=1|&not ul3=2||5|4|ms1450|masl35|MD Screenline #35 - Vehicle (Art)|1
+~+|1|n|@tveh||type=37|&not ul3=1|&not ul3=2||5|4|ms1451|masl37|MD Screenline #37 - Vehicle (Art)|1
+~+|1|n|@tveh||type=41|&not ul3=1|&not ul3=2||5|4|ms1452|masl41|MD Screenline #41 - Vehicle (Art)|1
+~+|1|n|@tveh||type=43|&not ul3=1|&not ul3=2||5|4|ms1453|masl43|MD Screenline #43 - Vehicle (Art)|1
+~+|1|n|@tveh||type=44|&not ul3=1|&not ul3=2||5|4|ms1454|masl44|MD Screenline #44 - Vehicle (Art)|1
+~+|1|n|@tveh||type=46|&not ul3=1|&not ul3=2||5|4|ms1455|masl46|MD Screenline #46 - Vehicle (Art)|1
+~+|1|n|@tveh||type=54|&not ul3=1|&not ul3=2||5|4|ms1456|masl54|MD Screenline #54 - Vehicle (Art)|1
+~+|1|n|@tveh||type=57|&not ul3=1|&not ul3=2||5|4|ms1457|masl57|MD Screenline #57 - Vehicle (Art)|1
+~+|1|n|@tveh||type=58|&not ul3=1|&not ul3=2||5|4|ms1458|masl58|MD Screenline #58 - Vehicle (Art)|1
+~+|1|n|@tveh||type=60|&not ul3=1|&not ul3=2||5|4|ms1459|masl60|MD Screenline #60 - Vehicle (Art)|1
+~+|1|n|@tveh||type=66|&not ul3=1|&not ul3=2||5|4|ms1460|masl66|MD Screenline #66 - Vehicle (Art)|1
+~+|1|n|@tveh||type=71|&not ul3=1|&not ul3=2||5|4|ms1461|masl71|MD Screenline #71 - Vehicle (Art)|1
 ~/ --- Transit Volume by Screenline
 ~+|1|n|voltr||*|type=2||5|4|ms159|mtsl2|MD Screenline #2 - Transit|1
 ~+|1|n|voltr||*|type=3||5|4|ms160|mtsl3|MD Screenline #3 - Transit|1
@@ -156,6 +264,60 @@ s=1003
 ~+|1|n|@tveh||type=60||5|4|ms208|pvsl60|PM Screenline #60 - Vehicle|1
 ~+|1|n|@tveh||type=66||5|4|ms209|pvsl66|PM Screenline #66 - Vehicle|1
 ~+|1|n|@tveh||type=71||5|4|ms210|pvsl71|PM Screenline #71 - Vehicle|1
+~/ --- Freeway Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&ul3=1,2||5|4|ms1462|pfsl2|PM Screenline #2 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=3|&ul3=1,2||5|4|ms1463|pfsl3|PM Screenline #3 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=4|&ul3=1,2||5|4|ms1464|pfsl4|PM Screenline #4 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=7|&ul3=1,2||5|4|ms1465|pfsl7|PM Screenline #7 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=14|&ul3=1,2||5|4|ms1466|pfsl14|PM Screenline #14 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=15|&ul3=1,2||5|4|ms1467|pfsl15|PM Screenline #15 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=18|&ul3=1,2||5|4|ms1468|pfsl18|PM Screenline #18 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=19|&ul3=1,2||5|4|ms1469|pfsl19|PM Screenline #19 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=20|&ul3=1,2||5|4|ms1470|pfsl20|PM Screenline #20 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=22|&ul3=1,2||5|4|ms1471|pfsl22|PM Screenline #22 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=23|&ul3=1,2||5|4|ms1472|pfsl23|PM Screenline #23 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=29|&ul3=1,2||5|4|ms1473|pfsl29|PM Screenline #29 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=30|&ul3=1,2||5|4|ms1474|pfsl30|PM Screenline #30 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=32|&ul3=1,2||5|4|ms1475|pfsl32|PM Screenline #32 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=35|&ul3=1,2||5|4|ms1476|pfsl35|PM Screenline #35 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=37|&ul3=1,2||5|4|ms1477|pfsl37|PM Screenline #37 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=41|&ul3=1,2||5|4|ms1478|pfsl41|PM Screenline #41 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=43|&ul3=1,2||5|4|ms1479|pfsl43|PM Screenline #43 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=44|&ul3=1,2||5|4|ms1480|pfsl44|PM Screenline #44 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=46|&ul3=1,2||5|4|ms1481|pfsl46|PM Screenline #46 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=54|&ul3=1,2||5|4|ms1482|pfsl54|PM Screenline #54 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=57|&ul3=1,2||5|4|ms1483|pfsl57|PM Screenline #57 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=58|&ul3=1,2||5|4|ms1484|pfsl58|PM Screenline #58 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=60|&ul3=1,2||5|4|ms1485|pfsl60|PM Screenline #60 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=66|&ul3=1,2||5|4|ms1486|pfsl66|PM Screenline #66 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=71|&ul3=1,2||5|4|ms1487|pfsl71|PM Screenline #71 - Vehicle (Fwy)|1
+~/ --- Arterial Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&not ul3=1|&not ul3=2||5|4|ms1488|pasl2|PM Screenline #2 - Vehicle (Art)|1
+~+|1|n|@tveh||type=3|&not ul3=1|&not ul3=2||5|4|ms1489|pasl3|PM Screenline #3 - Vehicle (Art)|1
+~+|1|n|@tveh||type=4|&not ul3=1|&not ul3=2||5|4|ms1490|pasl4|PM Screenline #4 - Vehicle (Art)|1
+~+|1|n|@tveh||type=7|&not ul3=1|&not ul3=2||5|4|ms1491|pasl7|PM Screenline #7 - Vehicle (Art)|1
+~+|1|n|@tveh||type=14|&not ul3=1|&not ul3=2||5|4|ms1492|pasl14|PM Screenline #14 - Vehicle (Art)|1
+~+|1|n|@tveh||type=15|&not ul3=1|&not ul3=2||5|4|ms1493|pasl15|PM Screenline #15 - Vehicle (Art)|1
+~+|1|n|@tveh||type=18|&not ul3=1|&not ul3=2||5|4|ms1494|pasl18|PM Screenline #18 - Vehicle (Art)|1
+~+|1|n|@tveh||type=19|&not ul3=1|&not ul3=2||5|4|ms1495|pasl19|PM Screenline #19 - Vehicle (Art)|1
+~+|1|n|@tveh||type=20|&not ul3=1|&not ul3=2||5|4|ms1496|pasl20|PM Screenline #20 - Vehicle (Art)|1
+~+|1|n|@tveh||type=22|&not ul3=1|&not ul3=2||5|4|ms1497|pasl22|PM Screenline #22 - Vehicle (Art)|1
+~+|1|n|@tveh||type=23|&not ul3=1|&not ul3=2||5|4|ms1498|pasl23|PM Screenline #23 - Vehicle (Art)|1
+~+|1|n|@tveh||type=29|&not ul3=1|&not ul3=2||5|4|ms1499|pasl29|PM Screenline #29 - Vehicle (Art)|1
+~+|1|n|@tveh||type=30|&not ul3=1|&not ul3=2||5|4|ms1500|pasl30|PM Screenline #30 - Vehicle (Art)|1
+~+|1|n|@tveh||type=32|&not ul3=1|&not ul3=2||5|4|ms1501|pasl32|PM Screenline #32 - Vehicle (Art)|1
+~+|1|n|@tveh||type=35|&not ul3=1|&not ul3=2||5|4|ms1502|pasl35|PM Screenline #35 - Vehicle (Art)|1
+~+|1|n|@tveh||type=37|&not ul3=1|&not ul3=2||5|4|ms1503|pasl37|PM Screenline #37 - Vehicle (Art)|1
+~+|1|n|@tveh||type=41|&not ul3=1|&not ul3=2||5|4|ms1504|pasl41|PM Screenline #41 - Vehicle (Art)|1
+~+|1|n|@tveh||type=43|&not ul3=1|&not ul3=2||5|4|ms1505|pasl43|PM Screenline #43 - Vehicle (Art)|1
+~+|1|n|@tveh||type=44|&not ul3=1|&not ul3=2||5|4|ms1506|pasl44|PM Screenline #44 - Vehicle (Art)|1
+~+|1|n|@tveh||type=46|&not ul3=1|&not ul3=2||5|4|ms1507|pasl46|PM Screenline #46 - Vehicle (Art)|1
+~+|1|n|@tveh||type=54|&not ul3=1|&not ul3=2||5|4|ms1508|pasl54|PM Screenline #54 - Vehicle (Art)|1
+~+|1|n|@tveh||type=57|&not ul3=1|&not ul3=2||5|4|ms1509|pasl57|PM Screenline #57 - Vehicle (Art)|1
+~+|1|n|@tveh||type=58|&not ul3=1|&not ul3=2||5|4|ms1510|pasl58|PM Screenline #58 - Vehicle (Art)|1
+~+|1|n|@tveh||type=60|&not ul3=1|&not ul3=2||5|4|ms1511|pasl60|PM Screenline #60 - Vehicle (Art)|1
+~+|1|n|@tveh||type=66|&not ul3=1|&not ul3=2||5|4|ms1512|pasl66|PM Screenline #66 - Vehicle (Art)|1
+~+|1|n|@tveh||type=71|&not ul3=1|&not ul3=2||5|4|ms1513|pasl71|PM Screenline #71 - Vehicle (Art)|1
 q
 ~/ ---------------------------------------------------------------
 ~/ --- Late Evening Period Summary
@@ -190,6 +352,60 @@ s=1005
 ~+|1|n|@tveh||type=60||5|4|ms234|evsl60|EV Screenline #60 - Vehicle|1
 ~+|1|n|@tveh||type=66||5|4|ms235|evsl66|EV Screenline #66 - Vehicle|1
 ~+|1|n|@tveh||type=71||5|4|ms236|evsl71|EV Screenline #71 - Vehicle|1
+~/ --- Freeway Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&ul3=1,2||5|4|ms1514|efsl2|EV Screenline #2 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=3|&ul3=1,2||5|4|ms1515|efsl3|EV Screenline #3 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=4|&ul3=1,2||5|4|ms1516|efsl4|EV Screenline #4 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=7|&ul3=1,2||5|4|ms1517|efsl7|EV Screenline #7 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=14|&ul3=1,2||5|4|ms1518|efsl14|EV Screenline #14 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=15|&ul3=1,2||5|4|ms1519|efsl15|EV Screenline #15 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=18|&ul3=1,2||5|4|ms1520|efsl18|EV Screenline #18 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=19|&ul3=1,2||5|4|ms1521|efsl19|EV Screenline #19 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=20|&ul3=1,2||5|4|ms1522|efsl20|EV Screenline #20 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=22|&ul3=1,2||5|4|ms1523|efsl22|EV Screenline #22 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=23|&ul3=1,2||5|4|ms1524|efsl23|EV Screenline #23 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=29|&ul3=1,2||5|4|ms1525|efsl29|EV Screenline #29 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=30|&ul3=1,2||5|4|ms1526|efsl30|EV Screenline #30 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=32|&ul3=1,2||5|4|ms1527|efsl32|EV Screenline #32 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=35|&ul3=1,2||5|4|ms1528|efsl35|EV Screenline #35 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=37|&ul3=1,2||5|4|ms1529|efsl37|EV Screenline #37 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=41|&ul3=1,2||5|4|ms1530|efsl41|EV Screenline #41 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=43|&ul3=1,2||5|4|ms1531|efsl43|EV Screenline #43 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=44|&ul3=1,2||5|4|ms1532|efsl44|EV Screenline #44 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=46|&ul3=1,2||5|4|ms1533|efsl46|EV Screenline #46 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=54|&ul3=1,2||5|4|ms1534|efsl54|EV Screenline #54 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=57|&ul3=1,2||5|4|ms1535|efsl57|EV Screenline #57 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=58|&ul3=1,2||5|4|ms1536|efsl58|EV Screenline #58 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=60|&ul3=1,2||5|4|ms1537|efsl60|EV Screenline #60 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=66|&ul3=1,2||5|4|ms1538|efsl66|EV Screenline #66 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=71|&ul3=1,2||5|4|ms1539|efsl71|EV Screenline #71 - Vehicle (Fwy)|1
+~/ --- Arterial Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&not ul3=1|&not ul3=2||5|4|ms1540|easl2|EV Screenline #2 - Vehicle (Art)|1
+~+|1|n|@tveh||type=3|&not ul3=1|&not ul3=2||5|4|ms1541|easl3|EV Screenline #3 - Vehicle (Art)|1
+~+|1|n|@tveh||type=4|&not ul3=1|&not ul3=2||5|4|ms1542|easl4|EV Screenline #4 - Vehicle (Art)|1
+~+|1|n|@tveh||type=7|&not ul3=1|&not ul3=2||5|4|ms1543|easl7|EV Screenline #7 - Vehicle (Art)|1
+~+|1|n|@tveh||type=14|&not ul3=1|&not ul3=2||5|4|ms1544|easl14|EV Screenline #14 - Vehicle (Art)|1
+~+|1|n|@tveh||type=15|&not ul3=1|&not ul3=2||5|4|ms1545|easl15|EV Screenline #15 - Vehicle (Art)|1
+~+|1|n|@tveh||type=18|&not ul3=1|&not ul3=2||5|4|ms1546|easl18|EV Screenline #18 - Vehicle (Art)|1
+~+|1|n|@tveh||type=19|&not ul3=1|&not ul3=2||5|4|ms1547|easl19|EV Screenline #19 - Vehicle (Art)|1
+~+|1|n|@tveh||type=20|&not ul3=1|&not ul3=2||5|4|ms1548|easl20|EV Screenline #20 - Vehicle (Art)|1
+~+|1|n|@tveh||type=22|&not ul3=1|&not ul3=2||5|4|ms1549|easl22|EV Screenline #22 - Vehicle (Art)|1
+~+|1|n|@tveh||type=23|&not ul3=1|&not ul3=2||5|4|ms1550|easl23|EV Screenline #23 - Vehicle (Art)|1
+~+|1|n|@tveh||type=29|&not ul3=1|&not ul3=2||5|4|ms1551|easl29|EV Screenline #29 - Vehicle (Art)|1
+~+|1|n|@tveh||type=30|&not ul3=1|&not ul3=2||5|4|ms1552|easl30|EV Screenline #30 - Vehicle (Art)|1
+~+|1|n|@tveh||type=32|&not ul3=1|&not ul3=2||5|4|ms1553|easl32|EV Screenline #32 - Vehicle (Art)|1
+~+|1|n|@tveh||type=35|&not ul3=1|&not ul3=2||5|4|ms1554|easl35|EV Screenline #35 - Vehicle (Art)|1
+~+|1|n|@tveh||type=37|&not ul3=1|&not ul3=2||5|4|ms1555|easl37|EV Screenline #37 - Vehicle (Art)|1
+~+|1|n|@tveh||type=41|&not ul3=1|&not ul3=2||5|4|ms1556|easl41|EV Screenline #41 - Vehicle (Art)|1
+~+|1|n|@tveh||type=43|&not ul3=1|&not ul3=2||5|4|ms1557|easl43|EV Screenline #43 - Vehicle (Art)|1
+~+|1|n|@tveh||type=44|&not ul3=1|&not ul3=2||5|4|ms1558|easl44|EV Screenline #44 - Vehicle (Art)|1
+~+|1|n|@tveh||type=46|&not ul3=1|&not ul3=2||5|4|ms1559|easl46|EV Screenline #46 - Vehicle (Art)|1
+~+|1|n|@tveh||type=54|&not ul3=1|&not ul3=2||5|4|ms1560|easl54|EV Screenline #54 - Vehicle (Art)|1
+~+|1|n|@tveh||type=57|&not ul3=1|&not ul3=2||5|4|ms1561|easl57|EV Screenline #57 - Vehicle (Art)|1
+~+|1|n|@tveh||type=58|&not ul3=1|&not ul3=2||5|4|ms1562|easl58|EV Screenline #58 - Vehicle (Art)|1
+~+|1|n|@tveh||type=60|&not ul3=1|&not ul3=2||5|4|ms1563|easl60|EV Screenline #60 - Vehicle (Art)|1
+~+|1|n|@tveh||type=66|&not ul3=1|&not ul3=2||5|4|ms1564|easl66|EV Screenline #66 - Vehicle (Art)|1
+~+|1|n|@tveh||type=71|&not ul3=1|&not ul3=2||5|4|ms1565|easl71|EV Screenline #71 - Vehicle (Art)|1
 q
 ~/ ---------------------------------------------------------------
 ~/ --- Overnight Period Summary
@@ -223,6 +439,60 @@ s=1006
 ~+|1|n|@tveh||type=60||5|4|ms260|nvsl60|NI Screenline #60 - Vehicle|1
 ~+|1|n|@tveh||type=66||5|4|ms261|nvsl66|NI Screenline #66 - Vehicle|1
 ~+|1|n|@tveh||type=71||5|4|ms262|nvsl71|NI Screenline #71 - Vehicle|1
+~/ --- Freeway Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&ul3=1,2||5|4|ms1566|nfsl2|NI Screenline #2 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=3|&ul3=1,2||5|4|ms1567|nfsl3|NI Screenline #3 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=4|&ul3=1,2||5|4|ms1568|nfsl4|NI Screenline #4 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=7|&ul3=1,2||5|4|ms1569|nfsl7|NI Screenline #7 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=14|&ul3=1,2||5|4|ms1570|nfsl14|NI Screenline #14 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=15|&ul3=1,2||5|4|ms1571|nfsl15|NI Screenline #15 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=18|&ul3=1,2||5|4|ms1572|nfsl18|NI Screenline #18 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=19|&ul3=1,2||5|4|ms1573|nfsl19|NI Screenline #19 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=20|&ul3=1,2||5|4|ms1574|nfsl20|NI Screenline #20 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=22|&ul3=1,2||5|4|ms1575|nfsl22|NI Screenline #22 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=23|&ul3=1,2||5|4|ms1576|nfsl23|NI Screenline #23 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=29|&ul3=1,2||5|4|ms1577|nfsl29|NI Screenline #29 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=30|&ul3=1,2||5|4|ms1578|nfsl30|NI Screenline #30 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=32|&ul3=1,2||5|4|ms1579|nfsl32|NI Screenline #32 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=35|&ul3=1,2||5|4|ms1580|nfsl35|NI Screenline #35 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=37|&ul3=1,2||5|4|ms1581|nfsl37|NI Screenline #37 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=41|&ul3=1,2||5|4|ms1582|nfsl41|NI Screenline #41 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=43|&ul3=1,2||5|4|ms1583|nfsl43|NI Screenline #43 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=44|&ul3=1,2||5|4|ms1584|nfsl44|NI Screenline #44 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=46|&ul3=1,2||5|4|ms1585|nfsl46|NI Screenline #46 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=54|&ul3=1,2||5|4|ms1586|nfsl54|NI Screenline #54 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=57|&ul3=1,2||5|4|ms1587|nfsl57|NI Screenline #57 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=58|&ul3=1,2||5|4|ms1588|nfsl58|NI Screenline #58 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=60|&ul3=1,2||5|4|ms1589|nfsl60|NI Screenline #60 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=66|&ul3=1,2||5|4|ms1590|nfsl66|NI Screenline #66 - Vehicle (Fwy)|1
+~+|1|n|@tveh||type=71|&ul3=1,2||5|4|ms1591|nfsl71|NI Screenline #71 - Vehicle (Fwy)|1
+~/ --- Arterial Auto Volume by Screenline
+~+|1|n|@tveh||type=2|&not ul3=1|&not ul3=2||5|4|ms1592|nasl2|NI Screenline #2 - Vehicle (Art)|1
+~+|1|n|@tveh||type=3|&not ul3=1|&not ul3=2||5|4|ms1593|nasl3|NI Screenline #3 - Vehicle (Art)|1
+~+|1|n|@tveh||type=4|&not ul3=1|&not ul3=2||5|4|ms1594|nasl4|NI Screenline #4 - Vehicle (Art)|1
+~+|1|n|@tveh||type=7|&not ul3=1|&not ul3=2||5|4|ms1595|nasl7|NI Screenline #7 - Vehicle (Art)|1
+~+|1|n|@tveh||type=14|&not ul3=1|&not ul3=2||5|4|ms1596|nasl14|NI Screenline #14 - Vehicle (Art)|1
+~+|1|n|@tveh||type=15|&not ul3=1|&not ul3=2||5|4|ms1597|nasl15|NI Screenline #15 - Vehicle (Art)|1
+~+|1|n|@tveh||type=18|&not ul3=1|&not ul3=2||5|4|ms1598|nasl18|NI Screenline #18 - Vehicle (Art)|1
+~+|1|n|@tveh||type=19|&not ul3=1|&not ul3=2||5|4|ms1599|nasl19|NI Screenline #19 - Vehicle (Art)|1
+~+|1|n|@tveh||type=20|&not ul3=1|&not ul3=2||5|4|ms1600|nasl20|NI Screenline #20 - Vehicle (Art)|1
+~+|1|n|@tveh||type=22|&not ul3=1|&not ul3=2||5|4|ms1601|nasl22|NI Screenline #22 - Vehicle (Art)|1
+~+|1|n|@tveh||type=23|&not ul3=1|&not ul3=2||5|4|ms1602|nasl23|NI Screenline #23 - Vehicle (Art)|1
+~+|1|n|@tveh||type=29|&not ul3=1|&not ul3=2||5|4|ms1603|nasl29|NI Screenline #29 - Vehicle (Art)|1
+~+|1|n|@tveh||type=30|&not ul3=1|&not ul3=2||5|4|ms1604|nasl30|NI Screenline #30 - Vehicle (Art)|1
+~+|1|n|@tveh||type=32|&not ul3=1|&not ul3=2||5|4|ms1605|nasl32|NI Screenline #32 - Vehicle (Art)|1
+~+|1|n|@tveh||type=35|&not ul3=1|&not ul3=2||5|4|ms1606|nasl35|NI Screenline #35 - Vehicle (Art)|1
+~+|1|n|@tveh||type=37|&not ul3=1|&not ul3=2||5|4|ms1607|nasl37|NI Screenline #37 - Vehicle (Art)|1
+~+|1|n|@tveh||type=41|&not ul3=1|&not ul3=2||5|4|ms1608|nasl41|NI Screenline #41 - Vehicle (Art)|1
+~+|1|n|@tveh||type=43|&not ul3=1|&not ul3=2||5|4|ms1609|nasl43|NI Screenline #43 - Vehicle (Art)|1
+~+|1|n|@tveh||type=44|&not ul3=1|&not ul3=2||5|4|ms1610|nasl44|NI Screenline #44 - Vehicle (Art)|1
+~+|1|n|@tveh||type=46|&not ul3=1|&not ul3=2||5|4|ms1611|nasl46|NI Screenline #46 - Vehicle (Art)|1
+~+|1|n|@tveh||type=54|&not ul3=1|&not ul3=2||5|4|ms1612|nasl54|NI Screenline #54 - Vehicle (Art)|1
+~+|1|n|@tveh||type=57|&not ul3=1|&not ul3=2||5|4|ms1613|nasl57|NI Screenline #57 - Vehicle (Art)|1
+~+|1|n|@tveh||type=58|&not ul3=1|&not ul3=2||5|4|ms1614|nasl58|NI Screenline #58 - Vehicle (Art)|1
+~+|1|n|@tveh||type=60|&not ul3=1|&not ul3=2||5|4|ms1615|nasl60|NI Screenline #60 - Vehicle (Art)|1
+~+|1|n|@tveh||type=66|&not ul3=1|&not ul3=2||5|4|ms1616|nasl66|NI Screenline #66 - Vehicle (Art)|1
+~+|1|n|@tveh||type=71|&not ul3=1|&not ul3=2||5|4|ms1617|nasl71|NI Screenline #71 - Vehicle (Art)|1
 q
 ~/
 ~/end: 2-1_screenline_summary.mac

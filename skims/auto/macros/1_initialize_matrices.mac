@@ -1,0 +1,111 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=initialization.rpt
+~/ ------------------------------------------
+~/ --- Initialize matrix directory
+~/ ------------------------------------------
+~+|3.12|7|y|q
+~/ ------------------------------------------
+~/ --- Initialize Full Matrices
+~/ ------------------------------------------
+3.12
+~/ ------------------------------------------
+~/ --- Current Iteration Travel Time
+~/ ------------------------------------------
+~+|1|mf01|%1%au1tm|non-hbw sov time|0
+~+|1|mf02|%1%au2tm|hov 2 time|0
+~+|1|mf03|%1%au3tm|hov 3+ time|0
+~+|1|mf04|%1%a1tm1|hbw income 1 sov time|0
+~+|1|mf05|%1%a1tm2|hbw income 2 sov time|0
+~+|1|mf06|%1%a1tm3|hbw income 3 sov time|0
+~+|1|mf07|%1%a1tm4|hbw income 4 sov time|0
+~+|1|mf08|%1%cvhtm|commercial vehicle time|0
+~+|1|mf09|%1%medtm|medium truck time|0
+~+|1|mf10|%1%hvytm|heavy truck time|0
+~/ ------------------------------------------
+~/ --- Current Iteration Generalized Cost
+~/ ------------------------------------------
+~+|1|mf11|%1%au1cs|non-hbw sov generalized cost|0
+~+|1|mf12|%1%au2cs|hov 2 generalized cost|0
+~+|1|mf13|%1%au3cs|hov 3+ generalized cost|0
+~+|1|mf14|%1%a1cs1|hbw income 1 sov generalized cost|0
+~+|1|mf15|%1%a1cs2|hbw income 2 sov generalized cost|0
+~+|1|mf16|%1%a1cs3|hbw income 3 sov generalized cost|0
+~+|1|mf17|%1%a1cs4|hbw income 4 sov generalized cost|0
+~+|1|mf18|%1%cvhcs|commercial vehicle cost|0
+~+|1|mf19|%1%medcs|medium truck cost|0
+~+|1|mf20|%1%hvycs|heavy truck cost|0
+~/ ------------------------------------------
+~/ --- Current Iteration Distance
+~/ ------------------------------------------
+~+|1|mf21|%1%au1ds|non-hbw sov distance|0
+~+|1|mf22|%1%au2ds|hov 2 distance|0
+~+|1|mf23|%1%au3ds|hov 3+ distance|0
+~+|1|mf24|%1%a1ds1|hbw income 1 sov distance|0
+~+|1|mf25|%1%a1ds2|hbw income 2 sov distance|0
+~+|1|mf26|%1%a1ds3|hbw income 3 sov distance|0
+~+|1|mf27|%1%a1ds4|hbw income 4 sov distance|0
+~+|1|mf28|%1%cvhds|commercial vehicle distance|0
+~+|1|mf29|%1%medds|medium truck distance|0
+~+|1|mf30|%1%hvyds|heavy truck distance|0
+~/ ------------------------------------------
+~/ --- Previous Iteration Travel Time
+~/ ------------------------------------------
+~+|1|mf31|%1%au1tp|non-hbw sov time|0
+~+|1|mf32|%1%au2tp|hov 2 time|0
+~+|1|mf33|%1%au3tp|hov 3+ time|0
+~+|1|mf34|%1%a1tp1|hbw income 1 sov time|0
+~+|1|mf35|%1%a1tp2|hbw income 2 sov time|0
+~+|1|mf36|%1%a1tp3|hbw income 3 sov time|0
+~+|1|mf37|%1%a1tp4|hbw income 4 sov time|0
+~+|1|mf38|%1%cvhtp|commercial vehicle time|0
+~+|1|mf39|%1%medtp|medium truck time|0
+~+|1|mf40|%1%hvytp|heavy truck time|0
+~/ ------------------------------------------
+~/ --- Previous Iteration Generalized Cost
+~/ ------------------------------------------
+~+|1|mf41|%1%au1cp|non-hbw sov generalized cost|0
+~+|1|mf42|%1%au2cp|hov 2 generalized cost|0
+~+|1|mf43|%1%au3cp|hov 3+ generalized cost|0
+~+|1|mf44|%1%a1cp1|hbw income 1 sov generalized cost|0
+~+|1|mf45|%1%a1cp2|hbw income 2 sov generalized cost|0
+~+|1|mf46|%1%a1cp3|hbw income 3 sov generalized cost|0
+~+|1|mf47|%1%a1cp4|hbw income 4 sov generalized cost|0
+~+|1|mf48|%1%cvhcp|commercial vehicle cost|0
+~+|1|mf49|%1%medcp|medium truck cost|0
+~+|1|mf50|%1%hvycp|heavy truck cost|0
+~/ ------------------------------------------
+~/ --- Previous Iteration Distance
+~/ ------------------------------------------
+~+|1|mf51|%1%au1dp|non-hbw sov distance|0
+~+|1|mf52|%1%au2dp|hov 2 distance|0
+~+|1|mf53|%1%au3dp|hov 3+ distance|0
+~+|1|mf54|%1%a1dp1|hbw income 1 sov distance|0
+~+|1|mf55|%1%a1dp2|hbw income 2 sov distance|0
+~+|1|mf56|%1%a1dp3|hbw income 3 sov distance|0
+~+|1|mf57|%1%a1dp4|hbw income 4 sov distance|0
+~+|1|mf58|%1%cvhdp|commercial vehicle distance|0
+~+|1|mf59|%1%meddp|medium truck distance|0
+~+|1|mf60|%1%hvydp|heavy truck distance|0
+~/ ------------------------------------------
+~/ --- Bridge Flags
+~/ ------------------------------------------
+~+|1|mf61|brsov|bridge flag - sov nonwork|0
+~+|1|mf62|brhov2|bridge flag - hov 2|0
+~+|1|mf63|brhov3|bridge flag - hov 3+|0
+~+|1|mf64|brhbw1|bridge flag - hbwork inc 1|0
+~+|1|mf65|brhbw2|bridge flag - hbwork inc 2|0
+~+|1|mf66|brhbw3|bridge flag - hbwork inc 3|0
+~+|1|mf67|brhbw4|bridge flag - hbwork inc 4|0
+~/ ------------------------------------------
+~/ --- Intrazonal
+~/ ------------------------------------------
+~+|1|mf68|izdist|intrazonal distance|0
+~+|1|mf69|izatim|intrazonal time (auto) @ 15 mph|0
+~+|1|mf70|termtm|total terminal time|0
+q
+~/ ------------------------------------------
+~/ --- Exit Emme
+~/ ------------------------------------------
+q

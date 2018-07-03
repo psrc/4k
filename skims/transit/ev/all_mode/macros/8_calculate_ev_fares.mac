@@ -1,0 +1,61 @@
+~?!i&32768
+~o|295
+batchin=?
+reports=8_calculate_ev_fares.rpt
+~/
+~/
+~/begin: 8_calculate_ev_fares.mac
+~/ ...call module 3.01: input / modify / output zone groups
+3.01
+~/ ...input transit fare zone ensembles
+~# ...input/modify zone groups (using batch entry)
+1
+~# ...enter file name for batch input
+..\..\..\..\parameters\ensembles\transit_fare_zones.ens
+~/ ...write report file
+2
+1
+~# ...enter file name for batch input
+..\..\..\..\parameters\ensembles\uw_gu.ens
+~/ ...write report file
+2
+1
+~# ...enter file name for batch input
+..\..\..\..\parameters\ensembles\bellevuecbd_gv.ens
+~/ ...write report file
+2
+q
+~/ ...call module 3.11: input matrices using batch entry
+3.11
+~/ ...input ev fares - monthly pass
+~# ...enter file name for batch input
+..\..\..\..\input\fares\ev_fares_monthly_pass.in
+~/ ...write report file
+2
+3.11
+~/ ...input ev fares - farebox
+~# ...enter file name for batch input
+..\..\..\..\input\fares\ev_fares_farebox.in
+~/ ...write report file
+2
+~/ ...call module 3.21: matrix calculations
+3.21
+~/ ...adjust farebox fares from everett and snohomish county to uw
+~+|1|y|mf"efarbx"|n|1.10|||y|gt4|gt5||gu1||2
+~/ ...adjust farebox fares from everett and snohomish county to bellevue cbd
+~+|1|y|mf"efarbx"|n|1.35|||y|gt4|gt5||gv1||2
+~/ ...adjust monthly pass fares from everett and snohomish county to uw
+~+|1|y|mf"efarps"|n|39.25|||y|gt4|gt5||gu1||2
+~/ ...adjust monthly pass fares from everett and snohomish county to bellevue cbd
+~+|1|y|mf"efarps"|n|51.00|||y|gt4|gt5||gv1||2
+~/ ...calculate weighted average per-trip walk-access fare in cents
+~+|1|y|mf"efarwa"|n|100*(.299*mf"efarbx"+.701*mf"efarps"/50)|||n|2
+~/ ...adjust farebox fares to cents
+~+|1|y|mf"efarbx"|n|mf"efarbx"*100|||n|2
+q
+~#
+~/end: 8_calculate_ev_fares.mac
+~/exit emme
+~/
+q
+

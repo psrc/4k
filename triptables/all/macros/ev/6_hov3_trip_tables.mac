@@ -26,8 +26,6 @@ q
 ..\..\timeofday\hov\emmebank
 ~+|2|3|3|mf"ev5sr3"|mf"tod5"|n|y
 ~+|2|3|3|mf"ev6sr3"|mf"tod6"|n|y
-~+|2|3|3|mf"ev3sr3"|mf"tod3"|n|y
-~+|2|3|3|mf"ev4sr3"|mf"tod4"|n|y
 ~+|2|3|3|mf"ev1sr3"|mf"tod1"|n|y
 ~+|2|3|3|mf"ev2sr3"|mf"tod2"|n|y
 q
@@ -36,9 +34,8 @@ q
 3.21
 ~+|1|y|mf"pa"|n
 mf"coldst"*mf"coll"*0.013*0.669+
-mf"hbodst"*mf"hbo"*mf"tod4"*0.488+
+mf"hbodst"*mf"hbo"*mf"tod6"*0.488+
 mf"schdst"*0.676*mf"sch"*0.011*0.569+
-mf"hspdst"*mf"hbo"*mf"tod6"*0.408+
 mf"otodst"*mf"nhb"*0.215/2+
 mf"wkodst"*mf"nhb"*0.071/2
 ~+|||n|2
@@ -54,9 +51,8 @@ q
 3.21
 ~+|1|y|mf"ap"|n
 mf"coldst"*mf"coll"*0.688*0.331+
-mf"hbodst"*mf"hbo"*mf"tod3"*0.512+
+mf"hbodst"*mf"hbo"*mf"tod5"*0.512+
 mf"schdst"*0.676*mf"sch"*0.057*0.431+
-mf"hspdst"*mf"hbo"*mf"tod5"*0.592+
 mf"otodst"*mf"nhb"*0.215/2+
 mf"wkodst"*mf"nhb"*0.071/2
 ~+|||n|2

@@ -10,14 +10,13 @@ reports=initialization.rpt
 ~+|1|mf01|coldst|hb college distribution|0
 ~+|1|mf02|hbodst|hb other distribution|0
 ~+|1|mf03|schdst|hb school distribution|0
-~+|1|mf04|hspdst|hb shop distribution|0
 ~+|1|mf05|hbwds1|hb work income 1 distribution|0
 ~+|1|mf06|hbwds2|hb work income 2 distribution|0
 ~+|1|mf07|hbwds3|hb work income 3 distribution|0
 ~+|1|mf08|hbwds4|hb work income 4 distribution|0
 ~+|1|mf09|otodst|nhb other/other distribution|0
 ~+|1|mf10|wkodst|nhb work/other distribution|0
-~+|1|mf11|lgtdis|light truck distribution|0
+~+|1|mf11|cvhdis|commercial veh distribution|0
 ~+|1|mf12|meddis|medium truck distribution|0
 ~+|1|mf13|hvydis|heavy truck distribution|0
 ~/ ... mode choice
@@ -31,11 +30,9 @@ reports=initialization.rpt
 ~+|1|mf21|nhb|nhb mode share|0
 ~/ ... time of day shares
 ~+|1|mf22|tod1|a-p tod share - hbwork|0
-~+|1|mf23|tod3|a-p tod share - hbshop|0
 ~+|1|mf24|tod5|a-p tod share - hbother|0
 ~/ ... production to attraction
 ~+|1|mf25|tod2|p-a tod share - hbwork|0
-~+|1|mf26|tod4|p-a tod share - hbshop|0
 ~+|1|mf27|tod6|p-a tod share - hbother|0
 ~/ ... park and ride
 ~+|1|mf28|daleg|auto portion of pnr trip|0
@@ -46,25 +43,20 @@ reports=initialization.rpt
 ~/ ... interim trip tables in p-a and a-p formats
 ~+|1|mf33|ap|a-p trip table|0
 ~+|1|mf34|pa|p-a trip table|0
-~+|1|mf35|lgtod|light truck daily o-d trips|0
+~+|1|mf35|cvhod|commercial veh o-d trips|0
 ~+|1|mf36|medod|medium truck daily o-d trips|0
 ~+|1|mf37|hvyod|heavy truck daily o-d trips|0
 ~/ ... misc input files
-~+|1|mf38|reebee|heavy truck ext-ext trips|0
-~+|1|mf39|reebei|heavy truck ext-int trips|0
-~+|1|mf40|reebie|heavy truck int-ext trips|0
-~+|1|mf41|dvpool|daily vanpool demand|0
 ~+|1|mf42|thru|daily sov e-e vehicle trips|0
 ~/ ... am peak period final trip tables
 ~+|1|mf43|avehda|non-hbw sov vehicle trip table|0
 ~+|1|mf44|avehs2|hov 2 vehicle trip table|0
 ~+|1|mf45|avehs3|hov 3+ vehicle trip table|0
-~+|1|mf46|avpool|vanpool trip table|0
 ~+|1|mf47|ahbw1v|hbw income 1 sov vehicle trip table|0
 ~+|1|mf48|ahbw2v|hbw income 2 sov vehicle trip table|0
 ~+|1|mf49|ahbw3v|hbw income 3 sov vehicle trip table|0
 ~+|1|mf50|ahbw4v|hbw income 4 sov vehicle trip table|0
-~+|1|mf51|alttrk|light truck o-d trip table|0
+~+|1|mf51|acomvh|commercial veh o-d trip table|0
 ~+|1|mf52|amdtrk|medium truck o-d trip table|0
 ~+|1|mf53|ahvtrk|heavy truck o-d trip table|0
 ~+|1|mf54|awalk|walk person trip table|0
@@ -74,12 +66,11 @@ reports=initialization.rpt
 ~+|1|mf57|mvehda|non-hbw sov vehicle trip table|0
 ~+|1|mf58|mvehs2|hov 2 vehicle trip table|0
 ~+|1|mf59|mvehs3|hov 3+ vehicle trip table|0
-~+|1|mf60|mvpool|vanpool trip table|0
 ~+|1|mf61|mhbw1v|hbw income 1 sov vehicle trip table|0
 ~+|1|mf62|mhbw2v|hbw income 2 sov vehicle trip table|0
 ~+|1|mf63|mhbw3v|hbw income 3 sov vehicle trip table|0
 ~+|1|mf64|mhbw4v|hbw income 4 sov vehicle trip table|0
-~+|1|mf65|mlttrk|light truck o-d trip table|0
+~+|1|mf65|mcomvh|commercial veh o-d trip table|0
 ~+|1|mf66|mmdtrk|medium truck o-d trip table|0
 ~+|1|mf67|mhvtrk|heavy truck o-d trip table|0
 ~+|1|mf68|mwalk|walk person trip table|0
@@ -89,12 +80,11 @@ reports=initialization.rpt
 ~+|1|mf71|pvehda|non-hbw sov vehicle trip table|0
 ~+|1|mf72|pvehs2|hov 2 vehicle trip table|0
 ~+|1|mf73|pvehs3|hov 3+ vehicle trip table|0
-~+|1|mf74|pvpool|vanpool trip table|0
 ~+|1|mf75|phbw1v|hbw income 1 sov vehicle trip table|0
 ~+|1|mf76|phbw2v|hbw income 2 sov vehicle trip table|0
 ~+|1|mf77|phbw3v|hbw income 3 sov vehicle trip table|0
 ~+|1|mf78|phbw4v|hbw income 4 sov vehicle trip table|0
-~+|1|mf79|plttrk|light truck o-d trip table|0
+~+|1|mf79|pcomvh|commercial veh o-d trip table|0
 ~+|1|mf80|pmdtrk|medium truck o-d trip table|0
 ~+|1|mf81|phvtrk|heavy truck o-d trip table|0
 ~+|1|mf82|pwalk|walk person trip table|0
@@ -104,12 +94,11 @@ reports=initialization.rpt
 ~+|1|mf85|evehda|non-hbw sov vehicle trip table|0
 ~+|1|mf86|evehs2|hov 2 vehicle trip table|0
 ~+|1|mf87|evehs3|hov 3+ vehicle trip table|0
-~+|1|mf88|evpool|vanpool trip table|0
 ~+|1|mf89|ehbw1v|hbw income 1 sov vehicle trip table|0
 ~+|1|mf90|ehbw2v|hbw income 2 sov vehicle trip table|0
 ~+|1|mf91|ehbw3v|hbw income 3 sov vehicle trip table|0
 ~+|1|mf92|ehbw4v|hbw income 4 sov vehicle trip table|0
-~+|1|mf93|elttrk|light truck o-d trip table|0
+~+|1|mf93|ecomvh|commercial veh o-d trip table|0
 ~+|1|mf94|emdtrk|medium truck o-d trip table|0
 ~+|1|mf95|ehvtrk|heavy truck o-d trip table|0
 ~+|1|mf96|ewalk|walk person trip table|0
@@ -119,12 +108,11 @@ reports=initialization.rpt
 ~+|1|mf99|nvehda|non-hbw sov vehicle trip table|0
 ~+|1|mf100|nvehs2|hov 2 vehicle trip table|0
 ~+|1|mf101|nvehs3|hov 3+ vehicle trip table|0
-~+|1|mf102|nvpool|vanpool trip table|0
 ~+|1|mf103|nhbw1v|hbw income 1 sov vehicle trip table|0
 ~+|1|mf104|nhbw2v|hbw income 2 sov vehicle trip table|0
 ~+|1|mf105|nhbw3v|hbw income 3 sov vehicle trip table|0
 ~+|1|mf106|nhbw4v|hbw income 4 sov vehicle trip table|0
-~+|1|mf107|nlttrk|light truck o-d trip table|0
+~+|1|mf107|ncomvh|commercial veh o-d trip table|0
 ~+|1|mf108|nmdtrk|medium truck o-d trip table|0
 ~+|1|mf109|nhvtrk|heavy truck o-d trip table|0
 ~+|1|mf110|nwalk|walk person trip table|0
@@ -137,7 +125,6 @@ reports=initialization.rpt
 ~+|1|ms01|coltpa|College Trip P-A|0
 ~+|1|ms02|hbotpa|HBO Trip P-A|0
 ~+|1|ms03|schtpa|School Trip P-A|0
-~+|1|ms04|hsptpa|Shopping Trip P-A|0
 ~+|1|ms05|ototpa|Other to Other Trip P-A|0
 ~+|1|ms06|wtotpa|Work to Other Trip P-A|0
 ~+|1|ms07|wk1tpa|Work #1 Trip P-A|0
@@ -152,7 +139,6 @@ reports=initialization.rpt
 ~+|1|ms15|coltap|College Trip A-P|0
 ~+|1|ms16|hbotap|HBO Trip A-P|0
 ~+|1|ms17|schtap|School Trip A-P|0
-~+|1|ms18|hsptap|Shopping Trip A-P|0
 ~+|1|ms19|ototap|Other to Other Trip A-P|0
 ~+|1|ms20|wtotap|Work to Other Trip A-P|0
 ~+|1|ms21|wk1tap|Work #1 Trip A-P|0
@@ -167,7 +153,6 @@ reports=initialization.rpt
 ~+|1|ms29|colpa|College TOD P-A|0
 ~+|1|ms30|hbopa|HBO TOD P-A|0
 ~+|1|ms31|schpa|School TOD P-A|0
-~+|1|ms32|hsppa|Shopping TOD P-A|0
 ~+|1|ms33|otopa|Other to Other TOD P-A|0
 ~+|1|ms34|wtopa|Work to Other TOD P-A|0
 ~+|1|ms35|wk1pa|Work #1 TOD P-A|0
@@ -182,7 +167,6 @@ reports=initialization.rpt
 ~+|1|ms43|colap|College TOD A-P|0
 ~+|1|ms44|hboap|HBO TOD A-P|0
 ~+|1|ms45|schap|School TOD A-P|0
-~+|1|ms46|hspap|Shopping TOD A-P|0
 ~+|1|ms47|otoap|Other to Other TOD A-P|0
 ~+|1|ms48|wtoap|Work to Other TOD A-P|0
 ~+|1|ms49|wk1ap|Work #1 TOD A-P|0
@@ -193,12 +177,12 @@ reports=initialization.rpt
 ~+|1|ms54|tw2ap|PnR #2 TOD A-P|0
 ~+|1|ms55|tw3ap|PnR #3 TOD A-P|0
 ~+|1|ms56|tw4ap|PnR #4 TOD A-P|0
-~/ ... Time of Day Factors - Light Trucks
-~+|1|ms57|ltrkam|Light Trucks - AM|0
-~+|1|ms58|ltrkmd|Light Trucks - MD|0
-~+|1|ms59|ltrkpm|Light Trucks - PM|0
-~+|1|ms60|ltrkev|Light Trucks - EV|0
-~+|1|ms61|ltrkni|Light Trucks - NI|0
+~/ ... Time of Day Factors - Commercial Vehicles
+~+|1|ms57|cveham|Commercial Veh - AM|0
+~+|1|ms58|cvehmd|Commercial Veh - MD|0
+~+|1|ms59|cvehpm|Commercial Veh - PM|0
+~+|1|ms60|cvehev|Commercial Veh - EV|0
+~+|1|ms61|cvehni|Commercial Veh - NI|0
 ~/ ... Time of Day Factors - Medium Trucks
 ~+|1|ms62|mtrkam|Medium Trucks - AM|0
 ~+|1|ms63|mtrkmd|Medium Trucks - MD|0

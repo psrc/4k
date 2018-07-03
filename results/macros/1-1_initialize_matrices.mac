@@ -20,7 +20,7 @@ q
 ~+|1|mf06|ahbw2v|AM hbw income 2 sov vehicle trip table|0
 ~+|1|mf07|ahbw3v|AM hbw income 3 sov vehicle trip table|0
 ~+|1|mf08|ahbw4v|AM hbw income 4 sov vehicle trip table|0
-~+|1|mf09|alttrk|AM light truck trip table|0
+~+|1|mf09|acomvh|AM commercial vehicle trip table|0
 ~+|1|mf10|amdtrk|AM medium truck trip table|0
 ~+|1|mf11|ahvtrk|AM heavy truck trip table|0
 ~+|1|mf12|awalk|AM walk person trip table|0
@@ -35,7 +35,7 @@ q
 ~+|1|mf20|mhbw2v|MD hbw income 2 sov vehicle trip table|0
 ~+|1|mf21|mhbw3v|MD hbw income 3 sov vehicle trip table|0
 ~+|1|mf22|mhbw4v|MD hbw income 4 sov vehicle trip table|0
-~+|1|mf23|mlttrk|MD light truck trip table|0
+~+|1|mf23|mcomvh|MD commercial vehicle trip table|0
 ~+|1|mf24|mmdtrk|MD medium truck trip table|0
 ~+|1|mf25|mhvtrk|MD heavy truck trip table|0
 ~+|1|mf26|mwalk|MD walk person trip table|0
@@ -50,7 +50,7 @@ q
 ~+|1|mf34|phbw2v|PM hbw income 2 sov vehicle trip table|0
 ~+|1|mf35|phbw3v|PM hbw income 3 sov vehicle trip table|0
 ~+|1|mf36|phbw4v|PM hbw income 4 sov vehicle trip table|0
-~+|1|mf37|plttrk|PM light truck trip table|0
+~+|1|mf37|pcomvh|PM commercial vehicle trip table|0
 ~+|1|mf38|pmdtrk|PM medium truck trip table|0
 ~+|1|mf39|phvtrk|PM heavy truck trip table|0
 ~+|1|mf40|pwalk|PM walk person trip table|0
@@ -65,7 +65,7 @@ q
 ~+|1|mf48|ehbw2v|EV hbw income 2 sov vehicle trip table|0
 ~+|1|mf49|ehbw3v|EV hbw income 3 sov vehicle trip table|0
 ~+|1|mf50|ehbw4v|EV hbw income 4 sov vehicle trip table|0
-~+|1|mf51|elttrk|EV light truck trip table|0
+~+|1|mf51|ecomvh|EV commercial vehicle trip table|0
 ~+|1|mf52|emdtrk|EV medium truck trip table|0
 ~+|1|mf53|ehvtrk|EV heavy truck trip table|0
 ~+|1|mf54|ewalk|EV walk person trip table|0
@@ -80,7 +80,7 @@ q
 ~+|1|mf62|nhbw2v|NI hbw income 2 sov vehicle trip table|0
 ~+|1|mf63|nhbw3v|NI hbw income 3 sov vehicle trip table|0
 ~+|1|mf64|nhbw4v|NI hbw income 4 sov vehicle trip table|0
-~+|1|mf65|nlttrk|NI light truck trip table|0
+~+|1|mf65|ncomvh|NI commercial vehicle trip table|0
 ~+|1|mf66|nmdtrk|NI medium truck trip table|0
 ~+|1|mf67|nhvtrk|NI heavy truck trip table|0
 ~+|1|mf68|nwalk|NI walk person trip table|0
@@ -107,6 +107,25 @@ q
 ~+|1|mf97|temp08|Temporary Matrix #8|0
 ~+|1|mf98|temp09|Temporary Matrix #9|0
 ~+|1|mf99|temp10|Temporary Matrix #10|0
+~/ ----------------------------------------------------
+~/ --- Initialize Origin Matrices
+~/ --- Keep Matrices 1-35 reserved for Trip Ends
+~/ ----------------------------------------------------
+~+|1|mo36|intden|uf variable: intersections/sq km|0
+~+|1|mo37|usemix|uf variable: land use mix|0
+~+|1|mo38|nonmot|uf variable: non-motorized ratio|0
+~+|1|mo39|retfar|uf variable: retail far|0
+~+|1|mo40|walkac|walk access time at production end|0
+~/ ----------------------------------------------------
+~/ --- Initialize Destination Matrices
+~/ --- Keep Matrices 1-35 reserved for Trip Ends
+~/ ----------------------------------------------------
+~+|1|md36|colleg|parking cost - hb college trips|0
+~+|1|md37|hourly|hourly parking cost - non-work trips|0
+~+|1|md38|daily|daily parking cost - hb work trips|0
+~+|1|md39|pnrcap|pnr lot capacity|0
+~+|1|md40|pnrchg|pnr lot parking cost|0
+~+|1|md41|walkac|walk access time at attraction end|0
 q
 ~/
 ~/end: 1-1_initialize_matrices.mac

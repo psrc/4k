@@ -6,23 +6,47 @@ reports=assign.rpt
 ~x=%1%
 s=%1%
 ~/
-~/ ...sum total sov work vehicles
-~+|2.41|1|y|@sovw|n|@hbw1+@hbw2+@hbw3+@hbw4||*|2|2|q
+~/ --- Total sov work vehicles
+~+|2.41|1|y|@sovw|n|@hbw1+@hbw2+@hbw3+@hbw4+@comvh||*|2|2|q
 ~/
-~/ ...calculate medium and heavy truck vehicles
+~/ --- Medium and heavy truck vehicles on links
 ~+|2.41|1|y|@mveh|n|@mediu/1.5||*|2|2|q
 ~+|2.41|1|y|@hveh|n|@heavy/2||*|2|2|q
 ~/
-~/ ...calculate bus vehicles
+~/ --- Bus vehicles on Links
 ~?x=1002
+~+|2.41|1|y|@bveh|n|@trnv3/2||*|2|2|q
+~?x=1003
 ~+|2.41|1|y|@bveh|n|@trnv3/2||*|2|2|q
 ~?x=1004
 ~+|2.41|1|y|@bveh|n|@trnv6/2||*|2|2|q
+~?x=1005
+~+|2.41|1|y|@bveh|n|@trnv4/2||*|2|2|q
 ~/
-~/ ...sum total vehicles on links
-~+|2.41|1|y|@tveh|n|@sov+@sovw+@hov2+@hov3+@vpool+@light+@mveh+@hveh+@bveh||*|2|2|q
+~/ --- Total vehicles on links
+~+|2.41|1|y|@tveh|n|@sov+@sovw+@hov2+@hov3+@mveh+@hveh+@bveh||*|2|2|q
 ~/
-~/end: 8_calculate_total_vehicles.mac
+~/ --- Total Cars on Links
+~+|2.41|1|y|@cars|n|@sov+@sovw+@hov2+@hov3||*|4|q
+~/
+~/ --- Total Trucks on Links
+~+|2.41|1|y|@truck|n|@mveh+@hveh||*|4|q
+~/
+~/ --- Congested Speed on Links
+~+|2.41|1|y|@speed|n|(len/timau)*60||timau=0.01,999999||4|q
+~/
+~/ --- Volume to Capacity Ratio on Links
+~?x=1002
+~+|2.41|1|y|@vc|n|volau/(ul1*3)||ul1=0.001,999999||4|q
+~?x=1003
+~+|2.41|1|y|@vc|n|volau/(ul1*3)||ul1=0.001,999999||4|q
+~?x=1004
+~+|2.41|1|y|@vc|n|volau/(ul1*6)||ul1=0.001,999999||4|q
+~?x=1005
+~+|2.41|1|y|@vc|n|volau/(ul1*4)||ul1=0.001,999999||4|q
+~?x=1006
+~+|2.41|1|y|@vc|n|volau/(ul1*8)||ul1=0.001,999999||4|q
+~/
 ~/exit emme
 ~/
 q

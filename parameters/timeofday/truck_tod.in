@@ -1,0 +1,35 @@
+c Time of Day Factors for Trucks
+t matrices
+c Commercial Factors
+m matrix=ms"cveham"
+  all all: 0.194
+m matrix=ms"cvehmd"
+  all all: 0.346
+m matrix=ms"cvehpm"
+  all all: 0.240
+m matrix=ms"cvehev"
+  all all: 0.126
+m matrix=ms"cvehni"
+  all all: 0.094
+c Medium Truck Factors
+m matrix=ms"mtrkam"
+  all all: 0.208
+m matrix=ms"mtrkmd"
+  all all: 0.417
+m matrix=ms"mtrkpm"
+  all all: 0.204
+m matrix=ms"mtrkev"
+  all all: 0.095
+m matrix=ms"mtrkni"
+  all all: 0.076
+c Heavy Truck Factors
+m matrix=ms"htrkam"
+  all all: 0.209
+m matrix=ms"htrkmd"
+  all all: 0.468
+m matrix=ms"htrkpm"
+  all all: 0.189
+m matrix=ms"htrkev"
+  all all: 0.071
+m matrix=ms"htrkni"
+  all all: 0.063

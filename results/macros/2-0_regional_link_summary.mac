@@ -12,16 +12,43 @@ s=1002
 ~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms02|avmarr|AM Regional VMT - Arterials|1
 ~+|1|n|@tveh*len||ul3=5||5|4|ms03|avmcnr|AM Regional VMT - Connectors|1
 ~+|1|n|@tveh*len||ul3=1,6||5|4|ms04|avmalr|AM Regional VMT - All Facilities|1
+~/     --- VMT by Mode
+~+|1|n|(@sov+@sovw)*len||ul3=1,6||5|4|ms2400|avmsov|AM Regional VMT - SOV|1
+~+|1|n|@hov2*len||ul3=1,6||5|4|ms2401|avmhv2|AM Regional VMT - HOV2|1
+~+|1|n|@hov3*len||ul3=1,6||5|4|ms2402|avmhv3|AM Regional VMT - HOV3|1
+~/+|1|n|@vpool*len||ul3=1,6||5|4|ms2403|avmvan|AM Regional VMT - Van|1
+~/+|1|n|@comvh*len||ul3=1,6||5|4|ms2404|avmcmv|AM Regional VMT - Com Veh|1
+~+|1|n|@mveh*len||ul3=1,6||5|4|ms2405|avmmtk|AM Regional VMT - Md Trk|1
+~+|1|n|@hveh*len||ul3=1,6||5|4|ms2406|avmhtk|AM Regional VMT - Hv Trk|1
+~+|1|n|@bveh*len||ul3=1,6||5|4|ms2407|avmbus|AM Regional VMT - Bus|1
 ~/ --- Vehicle Hours Traveled
 ~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms05|avhfwr|AM Regional VHT - Freeways|1
 ~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms06|avharr|AM Regional VHT - Arterials|1
 ~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms07|avhcnr|AM Regional VHT - Connectors|1
 ~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms08|avhalr|AM Regional VHT - All Facilities|1
-~/ --- Vehicle Hours of Delay 
+~/     --- VHT by Mode
+~+|1|n|(@sov+@sovw)*timau/60||ul3=1,6||5|4|ms2440|avhsov|AM Regional VHT - SOV|1
+~+|1|n|@hov2*timau/60||ul3=1,6||5|4|ms2441|avhhv2|AM Regional VHT - HOV2|1
+~+|1|n|@hov3*timau/60||ul3=1,6||5|4|ms2442|avhhv3|AM Regional VHT - HOV3|1
+~/+|1|n|@vpool*timau/60||ul3=1,6||5|4|ms2443|avhvan|AM Regional VHT - Van|1
+~/+|1|n|@comvh*timau/60||ul3=1,6||5|4|ms2444|avhcmv|AM Regional VHT - Com Veh|1
+~+|1|n|@mveh*timau/60||ul3=1,6||5|4|ms2445|avhmtk|AM Regional VHT - Md Trk|1
+~+|1|n|@hveh*timau/60||ul3=1,6||5|4|ms2446|avhhtk|AM Regional VHT - Hv Trk|1
+~+|1|n|@bveh*timau/60||ul3=1,6||5|4|ms2447|avhbus|AM Regional VHT - Bus|1
+~/ --- Vehicle Hours of Delay
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms09|avdfwr|AM Regional VHD - Freeways|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms10|avdarr|AM Regional VHD - Arterials|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms11|avdcnr|AM Regional VHD - Connectors|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms12|avdalr|AM Regional VHD - All Facilities|1
+~/     --- Delay by Mode
+~+|1|n|((@sov+@sovw)*timau)/60-((@sov+@sovw)*(len/ul2))||ul3=1,6||5|4|ms2480|avdsov|AM Regional VHD - SOV|1
+~+|1|n|(@hov2*timau)/60-(@hov2*(len/ul2))||ul3=1,6||5|4|ms2481|avdhv2|AM Regional VHD - HOV2|1
+~+|1|n|(@hov3*timau)/60-(@hov3*(len/ul2))||ul3=1,6||5|4|ms2482|avdhv3|AM Regional VHD - HOV3|1
+~/+|1|n|(@vpool*timau)/60-(@vpool*(len/ul2))||ul3=1,6||5|4|ms2483|avdvan|AM Regional VHD - Van|1
+~/+|1|n|(@comvh*timau)/60-(@comvh*(len/ul2))||ul3=1,6||5|4|ms2484|avdcmv|AM Regional VHD - Com Veh|1
+~+|1|n|(@mveh*timau)/60-(@mveh*(len/ul2))||ul3=1,6||5|4|ms2485|avdmtk|AM Regional VHD - Md Trk|1
+~+|1|n|(@hveh*timau)/60-(@hveh*(len/ul2))||ul3=1,6||5|4|ms2486|avdhtk|AM Regional VHD - Hv Trk|1
+~+|1|n|(@bveh*timau)/60-(@bveh*(len/ul2))||ul3=1,6||5|4|ms2487|avdbus|AM Regional VHD - Bus|1
 ~/ --- Lane Miles
 ~+|1|n|lanes*len||ul3=1,2||5|4|ms13|almfwr|AM Regional Lane Miles - Freeways|1
 ~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms14|almarr|AM Regional Lane Miles - Arterials|1
@@ -39,16 +66,43 @@ s=1004
 ~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms18|mvmarr|MD Regional VMT - Arterials|1
 ~+|1|n|@tveh*len||ul3=5||5|4|ms19|mvmcnr|MD Regional VMT - Connectors|1
 ~+|1|n|@tveh*len||ul3=1,6||5|4|ms20|mvmalr|MD Regional VMT - All Facilities|1
+~/     --- VMT by Mode
+~+|1|n|(@sov+@sovw)*len||ul3=1,6||5|4|ms2408|mvmsov|MD Regional VMT - SOV|1
+~+|1|n|@hov2*len||ul3=1,6||5|4|ms2409|mvmhv2|MD Regional VMT - HOV2|1
+~+|1|n|@hov3*len||ul3=1,6||5|4|ms2410|mvmhv3|MD Regional VMT - HOV3|1
+~/+|1|n|@vpool*len||ul3=1,6||5|4|ms2411|mvmvan|MD Regional VMT - Van|1
+~/+|1|n|@comvh*len||ul3=1,6||5|4|ms2412|mvmcmv|MD Regional VMT - Com Veh|1
+~+|1|n|@mveh*len||ul3=1,6||5|4|ms2413|mvmmtk|MD Regional VMT - Md Trk|1
+~+|1|n|@hveh*len||ul3=1,6||5|4|ms2414|mvmhtk|MD Regional VMT - Hv Trk|1
+~+|1|n|@bveh*len||ul3=1,6||5|4|ms2415|mvmbus|MD Regional VMT - Bus|1
 ~/ --- Vehicle Hours Traveled
 ~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms21|mvhfwr|MD Regional VHT - Freeways|1
 ~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms22|mvharr|MD Regional VHT - Arterials|1
 ~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms23|mvhcnr|MD Regional VHT - Connectors|1
 ~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms24|mvhalr|MD Regional VHT - All Facilities|1
-~/ --- Vehicle Hours of Delay 
+~/     --- VHT by Mode
+~+|1|n|(@sov+@sovw)*timau/60||ul3=1,6||5|4|ms2448|mvhsov|MD Regional VHT - SOV|1
+~+|1|n|@hov2*timau/60||ul3=1,6||5|4|ms2449|mvhhv2|MD Regional VHT - HOV2|1
+~+|1|n|@hov3*timau/60||ul3=1,6||5|4|ms2450|mvhhv3|MD Regional VHT - HOV3|1
+~/+|1|n|@vpool*timau/60||ul3=1,6||5|4|ms2451|mvhvan|MD Regional VHT - Van|1
+~/+|1|n|@comvh*timau/60||ul3=1,6||5|4|ms2452|mvhcmv|MD Regional VHT - Com Veh|1
+~+|1|n|@mveh*timau/60||ul3=1,6||5|4|ms2453|mvhmtk|MD Regional VHT - Md Trk|1
+~+|1|n|@hveh*timau/60||ul3=1,6||5|4|ms2454|mvhhtk|MD Regional VHT - Hv Trk|1
+~+|1|n|@bveh*timau/60||ul3=1,6||5|4|ms2455|mvhbus|MD Regional VHT - Bus|1
+~/ --- Vehicle Hours of Delay
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms25|mvdfwr|MD Regional VHD - Freeways|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms26|mvdarr|MD Regional VHD - Arterials|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms27|mvdcnr|MD Regional VHD - Connectors|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms28|mvdalr|MD Regional VHD - All Facilities|1
+~/     --- Delay by Mode
+~+|1|n|((@sov+@sovw)*timau)/60-((@sov+@sovw)*(len/ul2))||ul3=1,6||5|4|ms2488|mvdsov|MD Regional VHD - SOV|1
+~+|1|n|(@hov2*timau)/60-(@hov2*(len/ul2))||ul3=1,6||5|4|ms2489|mvdhv2|MD Regional VHD - HOV2|1
+~+|1|n|(@hov3*timau)/60-(@hov3*(len/ul2))||ul3=1,6||5|4|ms2490|mvdhv3|MD Regional VHD - HOV3|1
+~/+|1|n|(@vpool*timau)/60-(@vpool*(len/ul2))||ul3=1,6||5|4|ms2491|mvdvan|MD Regional VHD - Van|1
+~/+|1|n|(@comvh*timau)/60-(@comvh*(len/ul2))||ul3=1,6||5|4|ms2492|mvdcmv|MD Regional VHD - Com Veh|1
+~+|1|n|(@mveh*timau)/60-(@mveh*(len/ul2))||ul3=1,6||5|4|ms2493|mvdmtk|MD Regional VHD - Md Trk|1
+~+|1|n|(@hveh*timau)/60-(@hveh*(len/ul2))||ul3=1,6||5|4|ms2494|mvdhtk|MD Regional VHD - Hv Trk|1
+~+|1|n|(@bveh*timau)/60-(@bveh*(len/ul2))||ul3=1,6||5|4|ms2495|mvdbus|MD Regional VHD - Bus|1
 ~/ --- Lane Miles
 ~+|1|n|lanes*len||ul3=1,2||5|4|ms29|mlmfwr|MD Regional Lane Miles - Freeways|1
 ~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms30|mlmarr|MD Regional Lane Miles - Arterials|1
@@ -66,16 +120,43 @@ s=1003
 ~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms34|pvmarr|PM Regional VMT - Arterials|1
 ~+|1|n|@tveh*len||ul3=5||5|4|ms35|pvmcnr|PM Regional VMT - Connectors|1
 ~+|1|n|@tveh*len||ul3=1,6||5|4|ms36|pvmalr|PM Regional VMT - All Facilities|1
+~/     --- VMT by Mode
+~+|1|n|(@sov+@sovw)*len||ul3=1,6||5|4|ms2416|pvmsov|PM Regional VMT - SOV|1
+~+|1|n|@hov2*len||ul3=1,6||5|4|ms2417|pvmhv2|PM Regional VMT - HOV2|1
+~+|1|n|@hov3*len||ul3=1,6||5|4|ms2418|pvmhv3|PM Regional VMT - HOV3|1
+~/+|1|n|@vpool*len||ul3=1,6||5|4|ms2419|pvmvan|PM Regional VMT - Van|1
+~/+|1|n|@comvh*len||ul3=1,6||5|4|ms2420|pvmcmv|PM Regional VMT - Com Veh|1
+~+|1|n|@mveh*len||ul3=1,6||5|4|ms2421|pvmmtk|PM Regional VMT - Md Trk|1
+~+|1|n|@hveh*len||ul3=1,6||5|4|ms2422|pvmhtk|PM Regional VMT - Hv Trk|1
+~+|1|n|@bveh*len||ul3=1,6||5|4|ms2423|pvmbus|PM Regional VMT - Bus|1
 ~/ --- Vehicle Hours Traveled
 ~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms37|pvhfwr|PM Regional VHT - Freeways|1
 ~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms38|pvharr|PM Regional VHT - Arterials|1
 ~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms39|pvhcnr|PM Regional VHT - Connectors|1
 ~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms40|pvhalr|PM Regional VHT - All Facilities|1
-~/ --- Vehicle Hours of Delay 
+~/     --- VHT by Mode
+~+|1|n|(@sov+@sovw)*timau/60||ul3=1,6||5|4|ms2456|pvhsov|PM Regional VHT - SOV|1
+~+|1|n|@hov2*timau/60||ul3=1,6||5|4|ms2457|pvhhv2|PM Regional VHT - HOV2|1
+~+|1|n|@hov3*timau/60||ul3=1,6||5|4|ms2458|pvhhv3|PM Regional VHT - HOV3|1
+~/+|1|n|@vpool*timau/60||ul3=1,6||5|4|ms2459|pvhvan|PM Regional VHT - Van|1
+~/+|1|n|@comvh*timau/60||ul3=1,6||5|4|ms2460|pvhcmv|PM Regional VHT - Com Veh|1
+~+|1|n|@mveh*timau/60||ul3=1,6||5|4|ms2461|pvhmtk|PM Regional VHT - Md Trk|1
+~+|1|n|@hveh*timau/60||ul3=1,6||5|4|ms2462|pvhhtk|PM Regional VHT - Hv Trk|1
+~+|1|n|@bveh*timau/60||ul3=1,6||5|4|ms2463|pvhbus|PM Regional VHT - Bus|1
+~/ --- Vehicle Hours of Delay
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms41|pvdfwr|PM Regional VHD - Freeways|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms42|pvdarr|PM Regional VHD - Arterials|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms43|pvdcnr|PM Regional VHD - Connectors|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms44|pvdalr|PM Regional VHD - All Facilities|1
+~/     --- Delay by Mode
+~+|1|n|((@sov+@sovw)*timau)/60-((@sov+@sovw)*(len/ul2))||ul3=1,6||5|4|ms2496|pvdsov|PM Regional VHD - SOV|1
+~+|1|n|(@hov2*timau)/60-(@hov2*(len/ul2))||ul3=1,6||5|4|ms2497|pvdhv2|PM Regional VHD - HOV2|1
+~+|1|n|(@hov3*timau)/60-(@hov3*(len/ul2))||ul3=1,6||5|4|ms2498|pvdhv3|PM Regional VHD - HOV3|1
+~/+|1|n|(@vpool*timau)/60-(@vpool*(len/ul2))||ul3=1,6||5|4|ms2499|pvdvan|PM Regional VHD - Van|1
+~/+|1|n|(@comvh*timau)/60-(@comvh*(len/ul2))||ul3=1,6||5|4|ms2500|pvdcmv|PM Regional VHD - Com Veh|1
+~+|1|n|(@mveh*timau)/60-(@mveh*(len/ul2))||ul3=1,6||5|4|ms2501|pvdmtk|PM Regional VHD - Md Trk|1
+~+|1|n|(@hveh*timau)/60-(@hveh*(len/ul2))||ul3=1,6||5|4|ms2502|pvdhtk|PM Regional VHD - Hv Trk|1
+~+|1|n|(@bveh*timau)/60-(@bveh*(len/ul2))||ul3=1,6||5|4|ms2503|pvdbus|PM Regional VHD - Bus|1
 ~/ --- Lane Miles
 ~+|1|n|lanes*len||ul3=1,2||5|4|ms45|plmfwr|PM Regional Lane Miles - Freeways|1
 ~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms46|plmarr|PM Regional Lane Miles - Arterials|1
@@ -86,23 +167,49 @@ q
 ~/ --- Late Evening Period Summary
 ~/ ---------------------------------------------------------------
 s=1005
-~/ --- Store the Results in Scalars for Summary
 2.41
 ~/ --- Vehicle Miles Traveled
 ~+|1|n|@tveh*len||ul3=1,2||5|4|ms49|evmfwr|EV Regional VMT - Freeways|1
 ~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms50|evmarr|EV Regional VMT - Arterials|1
 ~+|1|n|@tveh*len||ul3=5||5|4|ms51|evmcnr|EV Regional VMT - Connectors|1
 ~+|1|n|@tveh*len||ul3=1,6||5|4|ms52|evmalr|EV Regional VMT - All Facilities|1
+~/     --- VMT by Mode
+~+|1|n|(@sov+@sovw)*len||ul3=1,6||5|4|ms2424|evmsov|EV Regional VMT - SOV|1
+~+|1|n|@hov2*len||ul3=1,6||5|4|ms2425|evmhv2|EV Regional VMT - HOV2|1
+~+|1|n|@hov3*len||ul3=1,6||5|4|ms2426|evmhv3|EV Regional VMT - HOV3|1
+~/+|1|n|@vpool*len||ul3=1,6||5|4|ms2427|evmvan|EV Regional VMT - Van|1
+~/+|1|n|@comvh*len||ul3=1,6||5|4|ms2428|evmcmv|EV Regional VMT - Com Veh|1
+~+|1|n|@mveh*len||ul3=1,6||5|4|ms2429|evmmtk|EV Regional VMT - Md Trk|1
+~+|1|n|@hveh*len||ul3=1,6||5|4|ms2430|evmhtk|EV Regional VMT - Hv Trk|1
+~+|1|n|@bveh*len||ul3=1,6||5|4|ms2431|evmbus|EV Regional VMT - Bus|1
 ~/ --- Vehicle Hours Traveled
 ~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms53|evhfwr|EV Regional VHT - Freeways|1
 ~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms54|evharr|EV Regional VHT - Arterials|1
 ~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms55|evhcnr|EV Regional VHT - Connectors|1
 ~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms56|evhalr|EV Regional VHT - All Facilities|1
-~/ --- Vehicle Hours of Delay 
+~/     --- VHT by Mode
+~+|1|n|(@sov+@sovw)*timau/60||ul3=1,6||5|4|ms2464|evhsov|EV Regional VHT - SOV|1
+~+|1|n|@hov2*timau/60||ul3=1,6||5|4|ms2465|evhhv2|EV Regional VHT - HOV2|1
+~+|1|n|@hov3*timau/60||ul3=1,6||5|4|ms2466|evhhv3|EV Regional VHT - HOV3|1
+~/+|1|n|@vpool*timau/60||ul3=1,6||5|4|ms2467|evhvan|EV Regional VHT - Van|1
+~/+|1|n|@comvh*timau/60||ul3=1,6||5|4|ms2468|evhcmv|EV Regional VHT - Com Veh|1
+~+|1|n|@mveh*timau/60||ul3=1,6||5|4|ms2469|evhmtk|EV Regional VHT - Md Trk|1
+~+|1|n|@hveh*timau/60||ul3=1,6||5|4|ms2470|evhhtk|EV Regional VHT - Hv Trk|1
+~+|1|n|@bveh*timau/60||ul3=1,6||5|4|ms2471|evhbus|EV Regional VHT - Bus|1
+~/ --- Vehicle Hours of Delay
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms57|evdfwr|EV Regional VHD - Freeways|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms58|evdarr|EV Regional VHD - Arterials|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms59|evdcnr|EV Regional VHD - Connectors|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms60|evdalr|EV Regional VHD - All Facilities|1
+~/     --- Delay by Mode
+~+|1|n|((@sov+@sovw)*timau)/60-((@sov+@sovw)*(len/ul2))||ul3=1,6||5|4|ms2504|evdsov|EV Regional VHD - SOV|1
+~+|1|n|(@hov2*timau)/60-(@hov2*(len/ul2))||ul3=1,6||5|4|ms2505|evdhv2|EV Regional VHD - HOV2|1
+~+|1|n|(@hov3*timau)/60-(@hov3*(len/ul2))||ul3=1,6||5|4|ms2506|evdhv3|EV Regional VHD - HOV3|1
+~/+|1|n|(@vpool*timau)/60-(@vpool*(len/ul2))||ul3=1,6||5|4|ms2507|evdvan|EV Regional VHD - Van|1
+~/+|1|n|(@comvh*timau)/60-(@comvh*(len/ul2))||ul3=1,6||5|4|ms2508|evdcmv|EV Regional VHD - Com Veh|1
+~+|1|n|(@mveh*timau)/60-(@mveh*(len/ul2))||ul3=1,6||5|4|ms2509|evdmtk|EV Regional VHD - Md Trk|1
+~+|1|n|(@hveh*timau)/60-(@hveh*(len/ul2))||ul3=1,6||5|4|ms2510|evdhtk|EV Regional VHD - Hv Trk|1
+~+|1|n|(@bveh*timau)/60-(@bveh*(len/ul2))||ul3=1,6||5|4|ms2511|evdbus|EV Regional VHD - Bus|1
 ~/ --- Lane Miles
 ~+|1|n|lanes*len||ul3=1,2||5|4|ms61|elmfwr|EV Regional Lane Miles - Freeways|1
 ~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms62|elmarr|EV Regional Lane Miles - Arterials|1
@@ -113,22 +220,50 @@ q
 ~/ --- Overnight Period Summary
 ~/ ---------------------------------------------------------------
 s=1006
+~/ --- Store the Results in Scalars for Summary
 2.41
 ~/ --- Vehicle Miles Traveled
 ~+|1|n|@tveh*len||ul3=1,2||5|4|ms65|nvmfwr|NI Regional VMT - Freeways|1
 ~+|1|n|@tveh*len||ul3=3,4|ul3=6||5|4|ms66|nvmarr|NI Regional VMT - Arterials|1
 ~+|1|n|@tveh*len||ul3=5||5|4|ms67|nvmcnr|NI Regional VMT - Connectors|1
 ~+|1|n|@tveh*len||ul3=1,6||5|4|ms68|nvmalr|NI Regional VMT - All Facilities|1
+~/     --- VMT by Mode
+~+|1|n|(@sov+@sovw)*len||ul3=1,6||5|4|ms2432|nvmsov|NI Regional VMT - SOV|1
+~+|1|n|@hov2*len||ul3=1,6||5|4|ms2433|nvmhv2|NI Regional VMT - HOV2|1
+~+|1|n|@hov3*len||ul3=1,6||5|4|ms2434|nvmhv3|NI Regional VMT - HOV3|1
+~/+|1|n|@vpool*len||ul3=1,6||5|4|ms2435|nvmvan|NI Regional VMT - Van|1
+~/+|1|n|@comvh*len||ul3=1,6||5|4|ms2436|nvmcmv|NI Regional VMT - Com Veh|1
+~+|1|n|@mveh*len||ul3=1,6||5|4|ms2437|nvmmtk|NI Regional VMT - Md Trk|1
+~+|1|n|@hveh*len||ul3=1,6||5|4|ms2438|nvmhtk|NI Regional VMT - Hv Trk|1
+~+|1|n|@bveh*len||ul3=1,6||5|4|ms2439|nvmbus|NI Regional VMT - Bus|1
 ~/ --- Vehicle Hours Traveled
 ~+|1|n|(@tveh*timau)/60||ul3=1,2||5|4|ms69|nvhfwr|NI Regional VHT - Freeways|1
 ~+|1|n|(@tveh*timau)/60||ul3=3,4|ul3=6||5|4|ms70|nvharr|NI Regional VHT - Arterials|1
 ~+|1|n|(@tveh*timau)/60||ul3=5||5|4|ms71|nvhcnr|NI Regional VHT - Connectors|1
 ~+|1|n|(@tveh*timau)/60||ul3=1,6||5|4|ms72|nvhalr|NI Regional VHT - All Facilities|1
-~/ --- Vehicle Hours of Delay 
+~/     --- VHT by Mode
+~+|1|n|(@sov+@sovw)*timau/60||ul3=1,6||5|4|ms2472|nvhsov|NI Regional VHT - SOV|1
+~+|1|n|@hov2*timau/60||ul3=1,6||5|4|ms2473|nvhhv2|NI Regional VHT - HOV2|1
+~+|1|n|@hov3*timau/60||ul3=1,6||5|4|ms2474|nvhhv3|NI Regional VHT - HOV3|1
+~/+|1|n|@vpool*timau/60||ul3=1,6||5|4|ms2475|nvhvan|NI Regional VHT - Van|1
+~/+|1|n|@comvh*timau/60||ul3=1,6||5|4|ms2476|nvhcmv|NI Regional VHT - Com Veh|1
+~+|1|n|@mveh*timau/60||ul3=1,6||5|4|ms2477|nvhmtk|NI Regional VHT - Md Trk|1
+~+|1|n|@hveh*timau/60||ul3=1,6||5|4|ms2478|nvhhtk|NI Regional VHT - Hv Trk|1
+~+|1|n|@bveh*timau/60||ul3=1,6||5|4|ms2479|nvhbus|NI Regional VHT - Bus|1
+~/ --- Vehicle Hours of Delay
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,2||5|4|ms73|nvdfwr|NI Regional VHD - Freeways|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=3,4|ul3=6||5|4|ms74|nvdarr|NI Regional VHD - Arterials|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=5||5|4|ms75|nvdcnr|NI Regional VHD - Connectors|1
 ~+|1|n|(@tveh*timau)/60-(@tveh*(len/ul2))||ul3=1,6||5|4|ms76|nvdalr|NI Regional VHD - All Facilities|1
+~/     --- Delay by Mode
+~+|1|n|((@sov+@sovw)*timau)/60-((@sov+@sovw)*(len/ul2))||ul3=1,6||5|4|ms2512|nvdsov|NI Regional VHD - SOV|1
+~+|1|n|(@hov2*timau)/60-(@hov2*(len/ul2))||ul3=1,6||5|4|ms2513|nvdhv2|NI Regional VHD - HOV2|1
+~+|1|n|(@hov3*timau)/60-(@hov3*(len/ul2))||ul3=1,6||5|4|ms2514|nvdhv3|NI Regional VHD - HOV3|1
+~/+|1|n|(@vpool*timau)/60-(@vpool*(len/ul2))||ul3=1,6||5|4|ms2515|nvdvan|NI Regional VHD - Van|1
+~/+|1|n|(@comvh*timau)/60-(@comvh*(len/ul2))||ul3=1,6||5|4|ms2516|nvdcmv|NI Regional VHD - Com Veh|1
+~+|1|n|(@mveh*timau)/60-(@mveh*(len/ul2))||ul3=1,6||5|4|ms2517|nvdmtk|NI Regional VHD - Md Trk|1
+~+|1|n|(@hveh*timau)/60-(@hveh*(len/ul2))||ul3=1,6||5|4|ms2518|nvdhtk|NI Regional VHD - Hv Trk|1
+~+|1|n|(@bveh*timau)/60-(@bveh*(len/ul2))||ul3=1,6||5|4|ms2519|nvdbus|NI Regional VHD - Bus|1
 ~/ --- Lane Miles
 ~+|1|n|lanes*len||ul3=1,2||5|4|ms77|nlmfwr|NI Regional Lane Miles - Freeways|1
 ~+|1|n|lanes*len||ul3=3,4|ul3=6||5|4|ms78|nlmarr|NI Regional Lane Miles - Arterials|1
