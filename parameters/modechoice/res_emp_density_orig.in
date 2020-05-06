@@ -1,5 +1,5 @@
-c Year 2014
-c res/emp wt1 avg (origin) - for bike/walk/transit utility calc
+c Year 2014 (updated with revised LODES, 10/21/19) - Coe 3/17/20
+c res wt1 avg (origin) - for bike/walk/transit utility calc
 t matrices
 m matrix=mo"resden"
  1       all:        331.3027771
@@ -2170,7 +2170,7 @@ m matrix=mo"resden"
  2166    all:        195.8561302
  2167    all:        153.1862777
  2168    all:        108.9378432
- 2169    all:        78.62619237
+ 2169    all:        78.62619238
  2170    all:        84.53546822
  2171    all:        32.21765167
  2172    all:        76.89625549
@@ -2540,7 +2540,7 @@ m matrix=mo"resden"
  2536    all:        257.5198499
  2537    all:        393.0566351
  2538    all:        172.097349
- 2539    all:        75.94042301
+ 2539    all:        75.94042302
  2540    all:        38.19187486
  2541    all:        45.00630684
  2542    all:        68.71443128

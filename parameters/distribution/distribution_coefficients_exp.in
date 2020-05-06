@@ -1,6 +1,6 @@
 c Trip Distribution Gravity Model Parameters
-c Calibrated from 2006 Household Travel Survey
-c Calibrated for Model on July 15, 2015
+c Calibrated from 2014 Household Travel Survey
+c Calibrated for Model in Spring 2018
 t matrices
 c hb college exp coefficient
 m matrix=ms"colexp"
