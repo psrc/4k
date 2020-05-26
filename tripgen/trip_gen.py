@@ -5,7 +5,7 @@
 import h5py
 import pandas as pd
 import time
-from trip_gen_inputs_kent import *
+from trip_gen_inputs import *
 import sqlite3
 from shapely.geometry import Point
 import geopandas as gp
@@ -226,7 +226,7 @@ df_enlisted_rates = pd.read_csv(enlisted_rates,header=0)
 df_enlisted_rates.set_index('Trips', inplace=True)
 
 for purpose in trip_attractions:
-    enlisted_blocks[purpose] = enlisted_blocks['model-year'] * df_enlisted_rates.get_value('Enlisted',purpose)
+    enlisted_blocks[purpose] = enlisted_blocks['model-year'] * df_enlisted_rates[purpose].iloc[0]
 
 # Consolidate Enlisted Personnel data to TAZ
 working = enlisted_blocks.groupby('taz').sum()
@@ -641,7 +641,7 @@ print ('Calculate SeaTac Airport trips by parcels')
 df_parcels['airport'] = (df_parcels['total-jobs']*air_jobs) + (df_parcels['total-people']*air_people)
 aiport_balancing = seatac_enplanements / sum(df_parcels['airport'])
 df_parcels['airport'] = df_parcels['airport']*aiport_balancing
-df_parcels.to_csv(r'd:/kent_parcels.csv')
+df_parcels.to_csv(output_directory+'parcels.csv',index=True)
           
 ###########################################################
 ###########################################################
@@ -756,5 +756,3 @@ working_file.close()
 
 end_of_production = time.time()
 print ('The Total Time for all processes took', (end_of_production-start_of_production)/60, 'minutes to execute.')
-exit()
-             

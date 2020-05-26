@@ -61,7 +61,7 @@ jblm_ids = {3061:3061,
 model_directory = os.getcwd()
 input_directory = os.path.join(model_directory, 'input',str(model_year))
 output_directory = os.path.join(model_directory, 'output',str(model_year))
-gis_directory = 'W:\\geodata'
+gis_directory = r'W:\geodata'
 rates_directory = os.path.join(model_directory, 'rates')
 
 # GIS layers for spatial joins
