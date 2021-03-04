@@ -14,13 +14,20 @@ import pyodbc
 
 model_base_year = 2018
 model_year = 2050
-no_zones = 3700
-overlay_zones = 'no'
+
+zone_system_name = 'snohomish_maz2020'
+
+psrc_zones = 'no'
+overlay_zones = 'yes'
 
 # Basic Inputs
-model_outputs_folder = 'C:\\model-outputs'
-project_directory = 'C:\\projects\\snohomish-county'
+model_outputs_folder = os.path.join('C:/model-outputs')
+project_directory = os.path.join('X:/DSA/Data-Requests/snohomish-county')
 spn = 'epsg:2285'
+
+# Only need the followng if you are using a non-PSRC zone system
+non_psrc_zone = os.path.join(project_directory, 'maz','SnoCo_SubMAZs2021.shp')
+zone_id = 'SubMAZ2020'
 
 geoelmer_connection = 'mssql+pyodbc://AWS-PROD-SQL\Sockeye/ElmerGeo?driver=SQL Server?Trusted_Connection=yes'
 elmer_connection = "DRIVER={ODBC Driver 17 for SQL Server}; SERVER=AWS-PROD-SQL\Sockeye; DATABASE=Elmer; trusted_connection=yes"
@@ -83,11 +90,23 @@ def create_point_from_polygon(polygon_shape,coord_sys):
 ##########################################################################################################################
 ##########################################################################################################################
 
-print('Loading TAZ shapefile')
-zones = read_from_sde(geoelmer_connection, 'taz2010')
-cols = ['taz','geometry']
-zones = zones[cols]
+if psrc_zones == 'yes':
+    print('Loading PSRC TAZ shapefile')
+    zones = read_from_sde(geoelmer_connection, 'taz2010')
+    cols = ['taz','geometry']
+    zones = zones[cols]
+    tazdata = pd.DataFrame(zones['taz'])
+    tazdata  = tazdata.rename(columns={'taz':'TAZ'})
 
+else:
+    print('Loading other TAZ shapefile')
+    zones = gp.GeoDataFrame.from_file(non_psrc_zone)
+    cols = [zone_id,'geometry']
+    zones = zones[cols]
+    zones  = zones.rename(columns={zone_id:'taz'})
+    tazdata = pd.DataFrame(zones['taz'])
+    tazdata  = tazdata.rename(columns={'taz':'TAZ'})
+    
 print('Loading Block shapefile')
 blocks = read_from_sde(geoelmer_connection, 'block2010')
 cols = ['geoid10','geometry']
@@ -141,7 +160,7 @@ cols = ['block_geoid','group_quarters_population']
 gq = gq[cols]
 
 print('Breaking out GQ shares to dorms, military and other using gq shares from 2010 census')
-gq_shares = pd.read_csv(os.path.join(project_directory,'input','gq_shares.csv'))
+gq_shares = pd.read_csv(os.path.join(model_outputs_folder,'gq_shares.csv'))
 gq_shares['geoid10'] = gq_shares['geoid10'].astype(str)
 gq = pd.merge(gq, gq_shares, left_on = 'block_geoid', right_on = 'geoid10', suffixes=('_x','_y'), how='left')
 gq.fillna(0,inplace=True)
@@ -220,12 +239,13 @@ parcels.fillna(0,inplace=True)
 ##########################################################################################################################
 
 print('Creating TAZ Level Data')
-tazdata = pd.DataFrame(data=list(range(1,no_zones+1)), columns=['TAZ'])
 working = parcels.groupby('TAZ').sum().reset_index()
 fcols = ['TAZ','HH1','HH2', 'HH3', 'HH4', 'Population', 'Retail', 'Office', 'Services', 'Food Services','Medical Services', 'Other Services', 'Government', 'Education', 'Industrial', 'Resources', 'Total Jobs', 'University Students'] 
 working = working[fcols]
 tazdata = pd.merge(tazdata, working, on = 'TAZ', suffixes=('_x','_y'), how='left' )
 tazdata = pd.merge(tazdata, gq_taz, on = 'TAZ', suffixes=('_x','_y'), how='left' )
 tazdata.fillna(0,inplace=True)
-tazdata.to_csv(os.path.join(project_directory,'tazdata' + str(model_year) + '.csv'), index=False)
+tazdata['Population'] = tazdata['Population'] + tazdata['Group Quarters']
+tazdata = tazdata.sort_values(by=['TAZ'])
+tazdata.to_csv(os.path.join(project_directory,'tazdata_' + zone_system_name + '_' + str(model_year) +'.csv'), index=False)
              
